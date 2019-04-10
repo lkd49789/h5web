@@ -1,0 +1,32 @@
+var vm = new Vue({
+	el:'.wrapper',
+	data:{
+		options:[1,5,2,6,3,7,8],
+		txt:['冠军队完赛用时','冠军单项成绩','冠军队完赛用时','冠军总环数','决赛用时','横杆掉落次数','第一次缩圈淘汰人数']
+	},
+	filters:{
+		img:function(_id){
+			return 'img-champion/option'+_id+'.png'
+		}
+	},
+	methods: {
+		
+	    gotoGame:function(_game){
+	    	console.log(_game)
+	    	//window.web.gotoPage("recharge/detail");
+	    },
+	    closePop:function(){//关闭弹框
+	    	vm.showpop = 0;
+	    }
+	}
+
+})
+
+//getChampionList()
+function getChampionList(){
+	main.getChampionList(function(dt){
+		if(dt.status == 200){
+			vm.options = dt.content.sportProList;
+		}
+	})
+}

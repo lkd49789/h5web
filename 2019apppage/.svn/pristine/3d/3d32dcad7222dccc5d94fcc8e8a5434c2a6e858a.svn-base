@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>吐槽实例化</title>
+    <link href="common/css/common.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/forecast.css">
+</head>
+<body>
+    <div id='app' class='forecast'>
+        <div class='forecast_top'> 
+            <div class='forecast_title'>
+                <img src="img-speak/page/forecast_title.png" alt="标题">
+            </div>
+            <div class='forecast_name'>
+                <img src="img-speak/head_bg.png" alt="头像">
+            </div>
+            <p class='selectIdol'><span>请选择一位偶像</span></p>
+            <div class='forecast_tags'>
+                <ul class='forecast_tagsUl' v-for='(item,index) in tagsList' :key='index'>
+                    <li v-for='(ite,ind) in item' :class='{li:arr.indexOf(ite)>=0}' :key='ind' @click='tagsClick(ite)'></li>
+                </ul>
+            </div>
+            <div class="forecast_rule">
+                <img src="img-speak/page/forecast_rule.png" alt="规则">
+            </div>
+            <div class='forecast_num'>
+                <div class='forecast_num_left'>当前选择所需鸡腿:<span v-text='num'></span></div>
+                <div class='forecast_num_right'>我的鸡腿:<span>22222</span><span class='topUp'>充值</span></div>
+            </div>
+            <div class="forecast_btn">
+                <button></button>  
+            </div>
+        </div>
+</body>
+<script src="../../common/js/vue.js"></script>
+<script src="js/forecast.js"></script>
+</html>

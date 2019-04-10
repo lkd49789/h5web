@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>留言板</title>
+	<link href="../../common/css/common.css" rel="stylesheet" />
+	<link href="css/mui.min.css" rel="stylesheet" />
+	<link href="css/msglist.css" rel="stylesheet" />
+</head>
+<body>
+
+	<section id="wrapper" v-cloak>
+		<!-- menu-box -->
+		<div class="menu-box">
+			<img class="btn1" v-on:click="gotoMenu(1)" v-bind:src = "menu | menu1">
+			<img class="btn2" v-on:click="gotoMenu(2)" v-bind:src = "menu | menu2">
+			<img class="btn3" v-on:click="gotoMenu(3)" v-bind:src = "menu | menu3">
+		</div>
+		<!-- 消息列表 -->
+		
+		<div v-show="menu === 1" id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<img v-if="listA.length == 0" class="empty" src="img/empty.png">
+					<ul class="mui-table-view mui-table-view-chevron lists">
+						<li v-for='(item,index) in listA'>
+							<p class="u-info">
+								<img v-bind:src="item.commentResult.avatar">
+								{{item.commentResult.nicker}}对<span class="m-name">{{item.commentResult.memberName}}</span>说<span class="like-content"><img v-on:click="like(index,1)" :src="item.commentResult.status | likeimg">{{item.commentResult.praise}}</span>
+							</p>
+							<p class="msg">{{item.commentResult.comment}}</p>
+						</li>
+						<!-- <li>
+							<p class="u-info">
+								<img src="img/head.png">
+								粉丝对<span class="m-name">小偶像</span>说
+							</p>
+							<p class="msg">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+						</li>
+						<li>
+							<p class="u-info">
+								<img src="img/head.png">
+								粉丝对<span class="m-name">小偶像</span>说
+							</p>
+							<p class="msg">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+						</li>
+						<li>
+							<p class="u-info">
+								<img src="img/head.png">
+								粉丝对<span class="m-name">小偶像</span>说
+							</p>
+							<p class="msg">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+						</li>
+						<li>
+							<p class="u-info">
+								<img src="img/head.png">
+								粉丝对<span class="m-name">小偶像</span>说
+							</p>
+							<p class="msg">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+						</li> -->
+					</ul>
+			</div>
+			<img class="icon-gotomsg" v-on:click="gotomemberlist()" src="img/icon-gotomember.png">
+		</div>
+		<!-- 根据成员查看消息 -->
+		<div v-show="menu === 2" class="msg-box">
+			<ul>
+				<li v-for='(item,index) in listB'  v-on:click="gotomsg(index)">
+					<div class="avatar">
+						<img  v-bind:src="item.avatar">
+					</div>
+					<p class="msg-num">{{item.count}}<img src="img/icon-msg.png"></p>
+					<p class="msg-m-name">{{item.memberName}}</p>
+				</li>
+				<!-- <li>
+					<div class="avatar">
+						<img src="http://www.snh48.com/images/member/zp_10087.jpg?ram=1541160880293">
+					</div>
+					<p class="msg-num">1235<img src="img/icon-msg.png"></p>
+					<p class="msg-m-name">谢蕾蕾</p>
+				</li>
+				<li>
+					<div class="avatar">
+						<img src="http://www.snh48.com/images/member/zp_10087.jpg?ram=1541160880293">
+					</div>
+					<p class="msg-num">1235<img src="img/icon-msg.png"></p>
+					<p class="msg-m-name">谢蕾蕾</p>
+				</li>
+				<li>
+					<div class="avatar">
+						<img src="http://www.snh48.com/images/member/zp_10087.jpg?ram=1541160880293">
+					</div>
+					<p class="msg-num">1235<img src="img/icon-msg.png"></p>
+					<p class="msg-m-name">谢蕾蕾</p>
+				</li> -->
+			</ul>
+		</div>
+		<!-- 根据成员查看消息 -->
+		<div v-show="menu === 3" class="msg-toplist">
+			<img v-if="listC.length == 0" class="empty" src="img/empty.png">
+			<ul class="lists">
+				<li v-for='(item,index) in listC'>
+					<p class="u-info">
+						<img class="top-index" :src="item.rank | index">
+						<img v-bind:src="item.commentResult.avatar">
+						{{item.commentResult.nicker}}对<span class="m-name">{{item.commentResult.memberName}}</span>说<span class="like-content"><img v-on:click="like(index,2)" :src="item.commentResult.status | likeimg">{{item.commentResult.praise}}</span>
+					</p>
+					<p class="msg">{{item.commentResult.comment}}</p>
+				</li>
+				<!-- <li>
+					<p class="u-info">
+						<img class="top-index" src="img/top/2.png">
+						<img src="img/head.png">
+						粉丝对<span class="m-name">小偶像</span>说
+					</p>
+					<p class="msg">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+				</li>
+				<li>
+					<p class="u-info">
+						<img class="top-index" src="img/top/3.png">
+						<img src="img/head.png">
+						粉丝对<span class="m-name">小偶像</span>说
+					</p>
+					<p class="msg">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+				</li>
+				<li>
+					<p class="u-info">
+						<img class="top-index" src="img/top/4.png">
+						<img src="img/head.png">
+						粉丝对<span class="m-name">小偶像</span>说
+					</p>
+					<p class="msg">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+				</li>
+				<li>
+					<p class="u-info">
+						<img class="top-index" src="img/top/5.png">
+						<img src="img/head.png">
+						粉丝对<span class="m-name">小偶像</span>说
+					</p>
+					<p class="msg">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+				</li> -->
+			</ul>
+			<img class="icon-gotomsg" v-on:click="gotomemberlist()" src="img/icon-gotomember.png">
+		</div>
+	</section>
+
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="../../common/js/common.js"></script>
+<script src="../../common/js/vue.js"></script>
+<script src="js/mui.min.js"></script>
+<script src="js/mui.pullToRefresh.js" ></script>
+<script src="js/mui.pullToRefresh.material.js" ></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/msglist.js"></script>
+</html>

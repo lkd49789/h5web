@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<title>应援力说明</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+	<meta http-equiv="Cache-Control" content="max-age=0">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<link rel="stylesheet" href="https://h5.48.cn/common/css/common_mobile_v1.css">
+	<link rel="stylesheet" href="css/index.css">	
+</head>
+<body>
+	<section class="wrapper">
+		<section class="info">
+			<h1>什么是应援力？</h1>
+			<p>在口袋48中通过各种互动可以相应的应援力，粉丝可以使用应援力兑换鸡腿、礼物道具、各类选票以及异业权益。</p>
+			<h1>应援力的获取：</h1>
+			<img src="images/user_guide_sup_pt_1.png">
+			<h2>提示：</h2>
+			<p>*这些项目每天最多获得1次应援力。</p>
+			<p>**该项目小数点将以向下取整计算，例如：等级7的用户消费了2鸡腿，2x1.2取整后获得2点应援力。等级11的用于消费了9个鸡腿，9x1.3取整后获得11点应援力。</p>
+
+		</section>
+
+	</section>
+</body>
+
+</html>
+

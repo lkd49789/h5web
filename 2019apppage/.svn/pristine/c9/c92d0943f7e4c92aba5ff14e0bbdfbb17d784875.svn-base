@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>公演MVP投票</title>
+	<link href="css/common.css" rel="stylesheet" />
+	<link href="css/list.css" rel="stylesheet" />
+</head>
+<body>
+	<section class="secList">
+		<div class="topbox">
+			<p class="toptit">1个剧场公演MVP网络投票权</p>
+			<p class="zhu">注：1个网络投票权将作为0.1票计算到公演MVP榜单中</p>
+		</div>
+		<p class="titlebox"><span></span>请选择成员投票，请于公演当日24:00前投票</p>
+		<ul class="memberList">
+			<!-- <li>
+				<span class="avatar"></span>
+				<p class="mer_name">许杨玉琢玉琢<em>SII</em></p>
+				<p class="givebtn"><span>为她投票</span></p>
+			</li> -->
+		</ul>
+	</section>
+	<!-- 弹窗 -->
+	<div class="mask">
+		<div class="giftinfo">
+			<span class="gphead"></span>
+			<p class="gpname"></p>
+			<p class="gp">是否为她投票？</p>
+			<div class="giftbtn">
+				<button class="cancel">取消</button>
+				<button class="right">确定</button>
+			</div>
+		</div>
+	</div>
+	<!-- 已投过的票的显示 -->
+	<section class="secbox">
+		<div class="headbox">
+			<p class="gptext">您已为以下成员投票</p>
+			<span class="headimg"></span>
+			<p class="headname"></p>
+			<p class="sectitle"></p>
+			<p class="zhu">注：1个网络投票权将作为0.1票计算到公演MVP榜单中</p>
+		</div>
+	</section>
+</body>
+<script src="https://h5.48.cn/common/js/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/list.js"></script>
+</html>

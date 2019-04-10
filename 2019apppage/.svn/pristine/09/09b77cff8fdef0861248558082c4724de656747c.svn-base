@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>跳高</title>
+	<link href="../../common/css/common.css" rel="stylesheet" />
+	<link href="css/popbox.css" rel="stylesheet" />
+	<link href="css/seer_common.css" rel="stylesheet" />
+	<link href="css/seer4.css" rel="stylesheet" />
+</head>
+<body>
+	<section class="wrapper" v-cloak>
+		<!-- 输入 -->
+		<div class="status-input" v-if="issubmit==false">
+			<img class="tip-top" src="img-seer/tip-top.png">
+			<img class="title" src="img-seer/game6-title.png">
+			<ul class="options">
+				<li>
+					<img src="img-seer/game1-option1.png">
+					<div>
+						<input type="tel"  pattern="[0-9]*" maxlength="2" oninput="javascript:this.value=this.value.replace(/[^\d]/g,'')"   v-model="input_1_1">
+						<span>下</span>
+					</div>
+						
+				</li>
+				<li>
+					<img src="img-seer/game1-option-tip.png">
+					<div>
+						<input type="tel"  pattern="[0-9]*" maxlength="2" oninput="javascript:this.value=this.value.replace(/[^\d]/g,'')"   v-model="input_2_1">
+						<span>下</span>
+					</div>
+				</li>
+				<li>
+					<img src="img-seer/game1-option-tip.png">
+					<div>
+						<input type="tel"  pattern="[0-9]*" maxlength="2" oninput="javascript:this.value=this.value.replace(/[^\d]/g,'')"   v-model="input_3_1">
+						<span>下</span>
+					</div>
+				</li>
+			</ul>
+			
+			<img class="tip-bottom" src="img-seer/game2-tip.png">
+			<p class="money">我的鸡腿：{{money}} <span v-on:click="recharge()">充值</span></p>
+			<img :class="timeover | enabled" v-on:click="check()" src="img-seer/btn-submit.png">
+			
+		</div>
+		<!-- 已提交 -->
+		<div v-if="issubmit==true && result==false">
+			<img class="tip-top" src="img-seer/tip-top.png">
+			<img class="title" src="img-seer/game6-title.png">
+			<ul class="options">
+				<li v-for="(item,index) in guessInfo.sportFableList">
+					<img :src="index | img">
+					<div>
+						<em>{{item.first}}</em>
+						<span>下</span>
+					</div>
+				</li>
+				<!-- <li>
+					<img src="img-seer/game1-option2.png">
+					<div>
+						<em>2</em>
+						<span>分</span>
+						<em>2</em>
+						<span>秒</span>
+						<em>2</em>
+						<span>毫秒</span>
+					</div>
+				</li>
+				<li>
+					<img src="img-seer/game1-option3.png">
+					<div>
+						<em>2</em>
+						<span>分</span>
+						<em>2</em>
+						<span>秒</span>
+						<em>2</em>
+						<span>毫秒</span>
+					</div>
+				</li> -->
+			</ul>
+			<img class="img-issubmit" src="img-seer/game1-issubmit.png">
+		</div>
+		<!-- 结果 -->
+		<div v-if="result==true && issubmit==true">
+			<img v-if="prize==true" class="tip-top" src="img-seer/tip-top-2.png">
+			<img class="title" src="img-seer/game6-title.png">
+			<ul class="options">
+				<li v-for="(item,index) in guessInfo.sportFableList">
+					<img :src="index | img">
+					<div :class='item | guess'>
+						<em>{{item.first}}</em>
+						<span>下</span>
+					</div>
+				</li>
+				<!-- <li>
+					<img src="img-seer/game1-option2.png">
+					<div :class='guessresult | guess'>
+						<em>2</em>
+						<span>分</span>
+						<em>2</em>
+						<span>秒</span>
+						<em>2</em>
+						<span>毫秒</span>
+					</div>
+				</li>
+				<li>
+					<img src="img-seer/game1-option3.png">
+					<div :class='guessresult | guess'>
+						<em>2</em>
+						<span>分</span>
+						<em>2</em>
+						<span>秒</span>
+						<em>2</em>
+						<span>毫秒</span>
+					</div>
+				</li> -->
+			</ul>
+			<!-- 正确答案 -->
+			<div class="success">
+				<img src="img-seer/title-success-4.png">
+				<div>
+					<em>{{guessInfo.firstResult}}</em>
+					<span>下</span>
+					
+				</div>
+			</div>
+			<img v-if="prize==true" class="img-issubmit" src="img-seer/game-tip-success.png">
+			<img v-if="prize==false" class="img-issubmit" src="img-seer/game-tip-fail.png">
+		</div>
+		<div class="mask" v-if="showpop!=0">
+			<!-- no money -->
+			<div class="no-money" v-if="showpop == 1">
+				<p>{{tips}}</p>
+				<span v-on:click="closePop()">知道了</span>
+			</div>
+			<div class="submit-box" v-if="showpop == 2">
+				<p>是否提交预测结果？<br><span>当前选择所需鸡腿：{{needmoney}}</span></p>
+				<span v-on:click="closePop()">再想想</span>
+				<span v-on:click="submit()">确定提交</span>
+			</div>
+			<div class="no-money" v-if="showpop == 3">
+				<p>鸡腿不足</p>
+				<span v-on:click="recharge()">去充值</span>
+				<span v-on:click="closePop()">知道了</span>
+			</div>
+		</div>
+	</section>
+
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<script src="../../common/js/vue.js"></script>
+<script src="../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/seer4.js"></script>
+</html>

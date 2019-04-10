@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第六届年度总决选宣言视频拍摄报名</title>
+    <link href="../../common/css/common.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/popbox.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div id='app'>
+        <div class='already' v-if='alreadyShow'>
+            <div class='imgWrap'>
+                <img src="img/nike.png" alt="对勾">
+            </div>
+            <div class='textWrap'>
+                <p class='p1'><b>已成功报名！</b></p>
+                <p class='p2'>已成功报名2019-4-18日拍摄</p>
+            </div>
+        </div>
+        <div class='top'>  
+            <p class="top_title">第六届年度总决选宣言视频拍摄报名</p>
+            <p>
+                <b>4月11日至4月30日，</b>成员可以通过口袋48预约4月15日~5月19日的摄。每周（周一~周日）有20个预约名额，<b>每天最多4个预约名额，先先得。</b>   
+            </p>
+            <p>
+                未预约或预约失败的成员，将统一在5月20日~5月31日于<b class="text_bg">生活中心白色摄影棚内拍摄</b>（形式参考第三届总决选宣言视频）。
+            </p>
+            <p>
+                <b>预约拍摄时间不得与已定的外务通告时间重合，</b>否则将统一安在5月日~5月31日于生活中心白色摄影棚内拍摄；如预约拍摄时间与新通告时间（剧场公演除外）冲突，则由公司另行安排时间。
+            </p>
+            <p>
+                如预约拍摄时间内无故缺席的成员，<b>将统一安排在5月20日~5月30日生活中心白色摄影棚内拍摄。</b>
+            </p>
+            <p><b class="text_bg">希望各位成员踊跃报名积极配合，谢谢！</b></p>
+            <div class='top_btnWrap'>
+                <button class='top_btn' @click='go'>查看详细介绍</button>
+            </div>
+        </div> 
+
+        <div class="bottom">
+            <p class="bttom_title">报名日期选择</p>
+            <ul>
+                <li class="bottom_dayWrap April" ></li>
+                <li class="bottom_dayWrap" v-for='(item,index) in AprilList' :key='item.day+Math.random()' @click='dayClick(item,4)' >
+                    <p class="bottom_day"><b v-text='item.day'></b></p>
+                    <p v-color='item.num' class='bottom_day_num'><span v-text='item.num'></span>人报名</p>
+                    <img class="pithOn" v-if='alreadyShow' src="img/pitchOn.png" alt="预约">
+                </li>
+                <li class="bottom_dayWrap May" ></li>
+                <li class="bottom_dayWrap" v-for='(item,index) in MayList' :key='item.day+Math.random()' @click='dayClick(item,5)' >
+                    <p class="bottom_day"><b v-text='item.day'></b></p>
+                    <p v-color='item.num' class='bottom_day_num'><span v-text='item.num'></span>人报名</p>
+                </li>
+            </ul>
+        </div>
+        <div class="mask" v-if='showpop != 0'>
+                <!-- no money -->
+                <div class="no-money" v-if="showpop == 1">
+                    <p><b>{{tips}}</b></p>
+                    <span v-on:click="closePop()">知道了</span>
+                </div>
+                <div class="submit-box" v-if="showpop == 2">
+                    <p><b>是否报名参加<b>{{month}}</b>月<b>{{day}}</b>日的拍摄？</b></p>
+                    <span class='nospan' v-on:click="closePop()">再想想</span>
+                    <span v-on:click="submit()">确定参加</span>
+                </div>
+        </div>
+    </div>
+
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<!-- <script src="../../common/js/vue.js"></script> -->
+<script src='https://cdn.bootcss.com/vue/2.6.10/vue.js'></script>
+<script src="../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/index.js"></script>
+</html>

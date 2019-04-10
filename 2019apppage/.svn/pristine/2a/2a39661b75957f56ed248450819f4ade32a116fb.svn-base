@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>发送留言</title>
+    <link rel="stylesheet" href="css/common.css" />
+	<style type="text/css">
+		html,body{background-color: #5950b1;overflow: scroll;font-size: 14px;margin: 0;}
+		section{padding:  3%;}
+		section img{
+			width: 100%;
+		}
+		section p{color: #fff;}
+		section span{color: #ffb252;}
+	</style>
+</head>
+<body>
+	<section>
+		<img src="img/guide-title.png" class="ac_img">
+		<p>1.在PC平台浏览器进入塞纳河公社投稿平台<span>http://h5.snh48.com/communeCMS/login.html</span></p>
+		<p>2.选择适合自己作品的投稿类型：图文、图片、视频、音频</p>
+		<p>3.填写相关投稿内容</p>
+		<p>4.在“相关活动”一栏中选择<span>“重新认识一下”</span>然后选择要把作品交给哪个成员。</p>
+		<!-- <p>5.每个账号最多可提交<span>3</span>次投稿。</p> -->
+	</section>
+</body>
+</html>

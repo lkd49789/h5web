@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>VIP专属直播间</title>
+	<link href="common/css/common.css" rel="stylesheet" />
+	<link href="css/popbox.css" rel="stylesheet" />
+	<link href="css/vip.css" rel="stylesheet" />
+</head>
+<body>
+	<section class="wrapper" v-cloak>
+		<img src="img-champion/title.png" class="title" >
+		
+		<div>
+			<p>独特的视角，全程近距离追踪小偶像在运动场和替补席上的分分秒秒，更有袋王小姐姐带你探访偶像们在运动会期间的点点滴滴。</p>
+			<p>开始：4月10日14：00</p>
+			<p>截止：运动会结束</p>
+			<p>收看渠道：口袋48运动会VIP专属直播间</p>
+		</div>
+		<div class="btns">
+			<button v-on:click="gotoRoom()">前往观看</button>
+			<button v-on:click="gotoVip()">立即成为口袋VIP</button>
+		</div>
+		<div class="mask" v-if="showpop != 0">
+			<!-- no money -->
+			<div class="no-money" v-if="showpop == 1">
+				<p>你还不是VIP，现在可以马上加入体验更多服务</p>
+				<span v-on:click="closePop()">知道了</span>
+				<span v-on:click="gotoVip()">成为口袋VIP</span>
+			</div>
+		</div>
+	</section>
+
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<script src="../../common/js/vue.js"></script>
+<script src="../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/vip.js"></script>
+</html>

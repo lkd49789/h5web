@@ -1,0 +1,36 @@
+section{
+	min-height: 100%;
+	background: url(../img-seer/bg.jpg)no-repeat center bottom;
+	background-size: cover;
+	position: relative;
+	padding: 0 5%;
+}
+[v-cloak]{
+    display: none;
+}
+
+/*已提交*/
+.options li em{
+	margin-left: 4%;
+	color: #fff;
+	margin: 0 5%;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+.img-issubmit{width: 100%;margin-top: 5%;}
+
+/*截止*/
+.enabled{opacity: .5;}
+
+/*结果*/
+.right span,.right em{color: #99ffc8 !important;}
+.wrong span,.wrong em{color: #f66868 !important;}
+.success span,.success em{color: #fff !important;}
+.success em{
+	margin-left: 4%;
+	color: #fff;
+	margin: 0 5%;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+.success > img{width: 50%;}

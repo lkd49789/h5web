@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>2019偶像运动会线上互动</title>
+	<link href="common/css/common.css" rel="stylesheet" />
+	<link href="css/index.css" rel="stylesheet" />
+</head>
+<body>
+	<section class='wrapper' v-cloak>
+		<img src="img/slogan.png" class="slogan">
+		<ul class="homelist">
+			<li class="listLi" v-on:click="gotoRule(1)"><img src="img/btn1.png"></li>
+			<li class="listLi" v-on:click="gotoRule(2)"><img src="img/btn2.png"></li>
+			<li class="listLi" v-on:click="gotoPage(3)"><img src="img/btn3.png"></li>
+			<li class="listLi" v-on:click="gotoPage(4)"><img src="img/btn4.png"></li>
+			<li class="listLi" v-on:click="gotoRule(5)"><img src="img/btn5.png"></li>
+			<li class="listLi" v-on:click="gotoRule(6)"><img src="img/btn6.png"></li>
+			<li class="listLi" v-on:click="gotoPage(7)"><img src="img/btn7.png"></li>
+		</ul>
+		<!-- 弹窗 -->
+		<div class="mask" v-if="showpop != 0">
+			<!-- 全场指定预言家 -->
+			<div class="seerbox divbox3"  v-if="showpop == 1">
+				<img src="img/title_seer.png" class="title_seer">
+				<p>预测项目</p>
+				<table class="table-seer1">
+					<tr>
+						<td>花式投篮</td>
+						<td>获胜队决赛时长<br>（精确到毫秒）</td>
+					</tr>
+					<tr>
+						<td>折返跑</td>
+						<td>获胜队决赛用时<br>（精确到毫秒）</td>
+					</tr>
+					<tr>
+						<td>拔河</td>
+						<td>决赛时长<br>（精确到毫秒）</td>
+					</tr>
+					<tr>
+						<td>三项全能</td>
+						<td>获胜者踢毽子的个数、呼啦圈圈数、跳绳次数</td>
+					</tr>
+					<tr>
+						<td>射箭</td>
+						<td>获胜者的总环数</td>
+					</tr>
+					<tr>
+						<td>跳高</td>
+						<td>横杆掉下来的次数</td>
+					</tr>
+					<tr>
+						<td>踩气球</td>
+						<td>第一次缩圈结束后，淘汰掉的人数</td>
+					</tr>
+
+				</table>
+				<p class="seer2-title">50鸡腿参加预测，成功后可获得500鸡腿</p>
+				<table class="table-seer2">
+					<tr>
+						<td>开      始：</td>
+						<td>4月8日<span class="c-blue">10：00</span></td>
+					</tr>
+					<tr>
+						<td>截      止：</td>
+						<td>运动会当天<span class="c-blue">14：00</span></td>
+					</tr>
+					<tr>
+						<td>投票渠道：</td>
+						<td class="c-blue">口袋48运动会互动专题</td>
+					</tr>
+					
+				</table>
+				<img src="img/go_seer.png" class="go_seer" v-on:click="gotoPage(1)">
+				<img src="img/close.png" class="btn-close" v-on:click="closePop()">
+			</div>
+			<!-- 吐槽实体化 -->
+			<div class="talkbox"  v-if="showpop == 2">
+				<img src="img/title_talk.png" class="title_talk">
+				<p class="title">全场唯一定制胸牌</p>
+				<p>粉丝可以竞价选择一名偶像贴上自己定制的留言胸牌，并且署上自己口袋48的昵称ID。</p>
+				<span class="c-red">注：留言内容必须文明、合法，如中标内容违规官方将有权不使用，并将顺延使用第二名。</span>
+				<p class="title">个性贴纸</p>
+				<p>由粉丝投票从每个比赛项目中选出一名偶像，为她选择佩戴一个个性贴纸。</p>
+				<p>50鸡腿参加投票（1个贴纸），每名偶像最多可以贴3个胸牌，没增加1个贴纸20鸡腿。</p>
+				<table>
+					<tr>
+						<td>开      始：</td>
+						<td>4月8日<span class="c-green">10：00</span></td>
+					</tr>
+					<tr>
+						<td>截      止：</td>
+						<td>4月10日<span class="c-green">23：59</span></td>
+					</tr>
+					<tr>
+						<td>投票渠道：</td>
+						<td class="c-green">口袋48运动会互动专题</td>
+					</tr>
+					
+				</table>
+				<p class="title">每个口袋账号有3次出价机会参加竞价</p>
+				<img src="img/fans_btn.png" class="fans_btn"  v-on:click="gotoPage(2)">
+				<img src="img/close.png" class="btn-close" v-on:click="closePop()">
+			</div>
+			<!-- 粉丝应援挑战计划 -->
+			<div class="fansbox divbox1"  v-if="showpop == 5">
+				<img src="img/title_fans.png" class="title_fans">
+				<p>届时会有3条预热视频，分别由三地姐妹团的人气成员录制运动会现场表演歌曲打Call教学视频。</p>
+				<p>由粉丝使用鸡腿或者积分为团队投票，<span>SNH48\BEJ48\GNZ48，</span></p>
+				<p>根据歌曲线上获得的投票数目，<span>评选出运动会现场本环节的金、银、铜牌，</span>并计入各团体所有队伍奖牌数，在颁奖仪式上进行颁奖</p>
+				<table>
+					<tr>
+						<td>投票资格：</td>
+						<td>每票 <span class="c-yellow">50鸡腿/50积分</span></td>
+					</tr>
+					<tr>
+						<td>开      始：</td>
+						<td>运动会当天<span class="c-yellow">12：00</span></td>
+					</tr>
+					<tr>
+						<td>截      止：</td>
+						<td>运动会当天<span class="c-yellow">19：00</span></td>
+					</tr>
+					<tr>
+						<td>投票渠道：</td>
+						<td class="c-yellow">口袋48运动会互动专题</td>
+					</tr>
+					
+				</table>
+				<img src="img/fans_btn.png" class="fans_btn"  v-on:click="gotoPage(3)">
+				<img src="img/close.png" class="btn-close" v-on:click="closePop()">
+			</div>
+			<!-- 冠军竞猜 -->
+			<div class="championbox divbox2"  v-if="showpop == 6">
+				<img src="img/title_champion.png" class="title_champion">
+				<p>粉丝预测单项比赛冠军【共4项】，团体比赛冠军+总冠军【共4项】，<span>全部预测正确的粉丝均分10万鸡腿</span></p>
+				<table>
+					<tr>
+						<td>参加竞猜资格</td>
+						<td class="c-green">50鸡腿/50积分</td>
+					</tr>
+					<tr>
+						<td>奖品</td>
+						<td>预测准确的粉丝均分<br><span class="c-green">10万分鸡腿</span></td>
+					</tr>
+					<tr>
+						<td>开始</td>
+						<td>口袋48运动会宣传专题上线</td>
+					</tr>
+					<tr>
+						<td>截止</td>
+						<td>运动会当天12：00</td>
+					</tr>
+					<tr>
+						<td>预测渠道</td>
+						<td>口袋48运动会互动专题</td>
+					</tr>
+					<tr>
+						<td>限制</td>
+						<td class="c-red">每个口袋账号只能预测一次</td>
+					</tr>
+				</table>
+				<img src="img/go_champion.png" class="go_champion" v-on:click="gotoPage(4)">
+				<img src="img/close.png" class="btn-close" v-on:click="closePop()">
+			</div>
+		</div>
+		
+	</section>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<script src="../../common/js/vue.js"></script>
+<script src="../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/index.js"></script>
+</html>

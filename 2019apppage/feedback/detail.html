@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>我的反馈</title>
+    <link rel="stylesheet" type="text/css" href="css/common_mobile.css"/>
+    <link href="../../common/css/mui.min.css" rel="stylesheet"/>
+    <link href="../../common/css/imageview.css" rel="stylesheet"/>
+    <link href="css/faultSearch.css" rel="stylesheet"/>
+</head>
+    
+<body>
+	<div class="wrapper" v-cloak>
+		<div class="title">
+			<p>我的疑问</p>
+			<span class="icon-done" v-if="info.failureStatus!='UNHANDLED'" v-cloak>已处理</span>
+			<span class="icon-not" v-if="info.failureStatus=='UNHANDLED'" v-cloak>未处理</span>
+		</div>
+		<div class="info">
+			<p>{{info.questionContent}}</p>
+			<div>
+				<!-- <img v-for="img in imgs"  data-preview-src="img" v-bind:src="img | path"> -->
+				<!-- <img data-preview-src="images/thumb.jpg" src="images/thumb.jpg">
+				<img data-preview-src="images/thumb.jpg" src="images/thumb.jpg">
+				<img data-preview-src="images/thumb.jpg" src="images/thumb.jpg"> -->
+			</div>
+		</div>
+		<div class="reply">
+			<p>回复内容</p>
+			<div>{{info.feedbackContent | str}}</div>
+		</div>
+		<!-- <ul>
+			<li>
+				<div class="li-top">
+					<p>反馈时间：2018-12-19  18：00</p>
+					<span>已处理</span>
+				</div>
+				<div class="li-bottom">
+					<p>社区上传图片，提交时提示：图片显示异常</p>
+					<img src="images/arrow.png">
+				</div>
+			</li>
+			<li>
+				<div class="li-top">
+					<p>反馈时间：2018-12-19  18：00</p>
+					<em>未处理</em>
+				</div>
+				<div class="li-bottom">
+					<p>社区上传图片，提交时提示：图片显示异常</p>
+					<img src="images/arrow.png">
+				</div>
+			</li>
+		</ul> -->
+		
+	</div>
+			
+</body>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="../../common/js/mui.min.js"></script>
+	<script src="../../common/js/mui.previewimage.js"></script>
+	<script src="../../common/js/mui.zoom.js"></script>
+	<script src="https://h5.48.cn/common/js/dsbridge.js"> </script>
+	<script type="text/javascript" src="../../common/js/vue.js"></script>
+  	<script type="text/javascript" src="../../common/js/common_v1.js"></script>
+	<script src="js/config.js" type="text/javascript" charset="utf-8"></script>	
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/detail.js"></script>
+</html>
+
+

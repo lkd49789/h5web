@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>意见和反馈</title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+   	<link rel="stylesheet" type="text/css" href="css/common_mobile.css"/>
+   	 <link rel="stylesheet" type="text/css" href="css/fileuploader.css">
+   	 <link rel="stylesheet" href="css/postinfo.css">
+    <link href="css/faultApply.css" rel="stylesheet"/>
+</head>
+    
+<body>
+	<div class="layer">
+		<!--<img src="images/loading.gif" alt="" />-->
+		<p></p>
+	</div>
+	
+	<section>
+			<div class="fault-option">
+				<!-- <h3>故障类型</h3>
+				<select class="mui-btn mui-btn-block" id="selected">
+					<option value="投票券激活流程中故障">投票券激活流程中故障</option>
+                    <option value="投票流程中故障">投票流程中故障</option>
+                    <option value="购买电子券流程中故障">购买电子券流程中故障</option>
+                    <option value="其他故障" selected="selected">其他故障</option>
+				</select> -->
+					
+				<div class="reason">
+					<textarea id="textarea" rows="10" placeholder="请在这里写下您的建议和问题（必须填）" class="content" maxlength="500"></textarea>
+					<p class="count-content"><span>0</span>/500</p>
+				</div>
+			</div>
+			<!-- <input type="number" name="" id="" placeholder="请输入您的联系电话" class="tel"/> -->
+			
+				
+		<form method="POST" action="" id="postform" enctype="multipart/form-data" name="upload_form">
+			<div class="newinfocontrols"> 
+				<h3>增加图片帮助描述</h3>
+				<div id="preview" class="bug_img_list"></div>
+                <div id="addimg" class="bug_addimg">
+                	<input class="tempimg_file" type="file" onchange="previewImage(this)" style="opacity:0;width:80px;height:80px;" />
+                </div>
+			</div>
+		</form>
+	
+		<input type="button" name="" id="" value="提交" class="applyBtn"/>
+		
+		
+	</section>
+			
+			
+</body>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="../../common/js/common_v1.js"></script>
+	<script src="https://h5.48.cn/common/js/dsbridge.js"> </script>
+	<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/config.js" type="text/javascript" charset="utf-8"></script>	
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/bugreport.js"></script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

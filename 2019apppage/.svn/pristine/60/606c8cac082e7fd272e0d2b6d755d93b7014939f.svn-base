@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>生日公演节目申请表</title>
+    <link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/zongxuan.css"/>
+</head>
+	<body>
+		<!-- 灯光展示层 -->
+		<div class="pop-img">
+			<div class="img-msk"></div>
+			<p>静止演讲灯光</p>
+			<img src="images/light1.jpg">
+		</div>
+		<!-- 页面填写层 -->
+		<section class="wrapper wrapper-submit">
+			<h1>生日公演节目申请表</h1>
+			<ul class="timu-list">
+				
+<!-- 				<li class="timu1">
+					<p><span class="num n1"></span><span>环节形式</span><span class="tip">（单选）</span></p>
+					<div class="choose-single">
+						<p class="choose-S-no" value="歌舞类 6分钟">歌舞类 6分钟</p>
+						<p class="choose-S-no" value="音乐类 8分钟">音乐类 8分钟</p>
+						<p class="choose-S-no" value="情景剧 10分钟">情景剧 10分钟</p>
+						<p class="choose-S-no" value="曲艺类 10分钟">曲艺类 10分钟</p>
+						<p class="choose-S-no" value="其他种类 10分钟">其他种类 10分钟</p>
+					</div>
+					<span class="tips">此项未选择</span>
+				</li>
+ -->				
+ 				<li class="timu1">
+					<p><span class="num n1"></span><span>表演曲目名称</span><span class="tip"></span></p>
+					<div class="choose-input">
+						<input type="text" placeholder="在这里写下曲目名称">
+					</div>
+					<span class="tips">此项未填写</span>
+				</li>
+				<li class="timu2">
+					<p><span class="num n2"></span><span>表演启动方式</span><span class="tip"></span></p>
+					<div class="choose-single">
+						<p class="choose-S-no" value="先起音乐">A  先起音乐</p>
+						<p class="choose-S-no" value="站定起音">B  站定起音</p>
+					</div>
+					<span class="tips">此项未填写</span>
+				</li>
+				<li class="timu3">
+					<p><span class="num n3"></span><span>环节参与成员</span><span class="tip">（单选）</span></p>
+					<div class="choose-single">
+						<p class="choose-S-no" value="是">A  有<input type="text" placeholder="在这里写下成员名字或昵称"></p>
+						<p class="choose-S-no" value="没有">B  没有</p>
+					</div>
+					<span class="tips">此项未选择</span>
+				</li>
+				<li class="timu4">
+					<p><span class="num n4"></span><span>是否有跨队成员参与</span><span class="tip">（单选）</span></p>
+					<div class="choose-single">
+						<p class="choose-S-no" value="是">A  有<input type="text" placeholder="在这里写下成员名字或昵称"></p>
+						<p class="choose-S-no" value="没有">B  没有</p>
+					</div>
+					<span class="tips">此项未选择</span>
+				</li>
+				<li class="timu5">
+					<p><span class="num n5"></span><span>现场是否使用乐器</span><span class="tip">（单选）</span></p>
+					<div class="choose-single">
+						<p class="choose-S-no" value="是">A  是<input type="text" placeholder="在这里写下所需乐器"></p>
+						<p class="choose-S-no" value="否">B  否</p>
+					</div>
+					<span class="tips">此项未选择</span>
+				</li>
+				<li class="timu6">
+					<p><span class="num n6"></span><span>现场是否使用道具</span><span class="tip">（单选）</span></p>
+					<div class="choose-single">
+						<p class="choose-S-no" value="是">A  是<input type="text" placeholder="在这里写下所需道具"></p>
+						<p class="choose-S-no" value="否">B  否</p>
+					</div>
+					<span class="tips">此项未选择</span>
+				</li>
+				<li class="timu7">
+					<p><span class="num n7"></span><span>现场道具是否需要STF协助搬运</span><span class="tip">（单选）</span></p>
+					<div class="choose-single">
+						<p class="choose-S-no" value="是">A  是<input type="text" placeholder="在这里写下备注"></p>
+						<p class="choose-S-no" value="否">B  否</p>
+					</div>
+					<span class="tips">此项未选择</span>
+				</li>
+				<li class="timu8">
+					<p><span class="num n8"></span><span>现场是否使用LED大屏幕{素材格式MOV}</span><span class="tip">（单选）</span></p>
+					<div class="choose-single">
+						<p class="choose-S-no" value="是">A  是<input type="text" placeholder="在这里写下备注"></p>
+						<p class="choose-S-no" value="否">B  否</p>
+					</div>
+					<span class="tips">此项未选择</span>
+				</li>
+				<li class="timu9">
+					<p><span class="num n9"></span><span>现场是否使用升降平台{阐述启动停止时间}</span><span class="tip">（单选）</span></p>
+					<div class="choose-single">
+						<p class="choose-S-no" value="是">A  是<input type="text" placeholder="在这里写下备注"></p>
+						<p class="choose-S-no" value="否">B  否</p>
+					</div>
+					<span class="tips">此项未选择</span>
+				</li>
+				<li class="timu10">
+					<p><span class="num n10"></span><span>使用麦克风类型</span><span class="tip">（多选）</span></p>
+					<div class="choose-muti">
+						<span class="choose-M-no" value="手持话筒">A  手持话筒</span>
+						<span class="choose-M-no" value="头带话筒">B  头带话筒</span>
+					</div>
+					<span class="tips">此项未选择</span>
+				</li>
+				<li class="timu11">
+					<p><span class="num n11"></span><span>现场是否使用入耳式返送耳机</span><span class="tip">（单选）</span></p>
+					<div class="choose-single">
+						<p class="choose-S-no" value="是">A  是</p>
+						<p class="choose-S-no" value="否">B  否</p>
+					</div>
+					<span class="tips">此项未选择</span>
+				</li>
+				<li class="timu12">
+					<p><span class="num n12"></span><span>现场灯光要求</span><span class="tip"></span></p>
+					<div class="choose-textarea">
+						<textarea type="text" placeholder="在这里写下对灯光的要求"></textarea>
+					</div>
+					<span class="tips">此项未填写</span>
+				</li>
+				<li class="timu13">
+					<p><span class="num n13"></span><span>现场摄像要求</span><span class="tip"></span></p>
+					<div class="choose-textarea">
+						<textarea type="text" placeholder="在这里写下对摄像机位的切换要求"></textarea>
+					</div>
+					<span class="tips">此项未填写</span>
+				</li>
+
+			</ul>
+			<div class="btn-wrapper-preview">
+				<button class="btn-preview">预览</button>
+			</div>
+			
+		</section>
+
+		<!-- wrapper-preview -->
+		<!-- 确认页面 -->
+		<section class="wrapper wrapper-preview">
+			<h1>生日公演节目申请表预览</h1>
+			<ul class="timu-list">
+				<li class="timu1">
+					<p><span class="num n1"></span><span>表演曲目名称</span><span class="tip"></span></p>
+					<div class="choose-input">
+						<p></p>
+					</div>
+				</li>
+				<li class="timu2">
+					<p><span class="num n2"></span><span>表演启动方式</span><span class="tip"></span></p>
+					<div class="choose-single">
+						<p></p>
+					</div>
+				</li>
+				<li class="timu3">
+					<p><span class="num n3"></span><span>环节参与成员</span><span class="tip">（单选）</span></p>
+					<div class="choose-single">
+						<p></p>
+					</div>
+				</li>
+				<li class="timu4">
+					<p><span class="num n4"></span><span>是否有跨队成员参与</span><span class="tip">（单选）</span></p>
+					<div class="choose-single">
+						<p></p>
+					</div>
+				</li>
+				<li class="timu5">
+					<p><span class="num n5"></span><span>现场是否使用乐器</span><span class="tip">（单选）</span></p>
+					<div class="choose-single">
+						<p></p>
+					</div>
+				</li>
+				<li class="timu6">
+					<p><span class="num n6"></span><span>现场是否使用道具</span><span class="tip">（单选）</span></p>
+					<div class="choose-single">
+						<p></p>
+					</div>
+				</li>
+				<li class="timu7">
+					<p><span class="num n7"></span><span>现场道具是否需要STF协助搬运</span><span class="tip">（单选）</span></p>
+					<div class="choose-single">
+						<p></p>
+					</div>
+				</li>
+				<li class="timu8">
+					<p><span class="num n8"></span><span>现场是否使用LED大屏幕{素材格式MOV}</span><span class="tip">（单选）</span></p>
+					<div class="choose-single">
+						<p></p>
+					</div>
+				</li>
+				<li class="timu9">
+					<p><span class="num n9"></span><span>现场是否使用升降平台{阐述启动停止时间}</span><span class="tip">（单选）</span></p>
+					<div class="choose-single">
+						<p></p>
+					</div>
+				</li>
+				<li class="timu10">
+					<p><span class="num n10"></span><span>使用麦克风类型</span><span class="tip">（多选）</span></p>
+					<div class="choose-muti">
+						<p></p>
+					</div>
+				</li>
+				<li class="timu11">
+					<p><span class="num n11"></span><span>现场是否使用入耳式返送耳机</span><span class="tip">（单选）</span></p>
+					<div class="choose-single">
+						<p></p>
+					</div>
+				</li>
+				<li class="timu12">
+					<p><span class="num n12"></span><span>现场灯光要求</span><span class="tip"></span></p>
+					<div class="choose-textarea">
+						<p></p>
+					</div>
+				</li>
+				<li class="timu13">
+					<p><span class="num n13"></span><span>现场摄像要求</span><span class="tip"></span></p>
+					<div class="choose-textarea">
+						<p></p>
+					</div>
+				</li>
+			</ul>
+			<div class="btn-wrapper-submit">
+				<button class="btn-edit">返回编辑</button>
+				<button class="btn-submit">确认提交</button>
+			</div>
+			<p class="tip-succ">您的申请表已成功提交给STAFF</p>
+		</section>
+		
+	</body>
+	<script type="text/javascript" src="../../common/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../common/js/common.js"></script>
+	<script type="text/javascript" src="js/messageAlert.js"></script>
+	<script type="text/javascript" src="js/config.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript">
+		main.init(13)
+	</script>
+</html>

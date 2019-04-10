@@ -1,0 +1,80 @@
+body{
+	overflow: hidden;
+
+}
+
+section{
+	padding: 5%;
+}
+section li{
+	margin-top: 1rem;
+}
+section li p{
+	margin-bottom: .5rem;
+}
+h1{
+	font-size: 1.2rem;
+	font-weight: 500;
+	color: #363d4d;
+}
+ul span{
+	color: #999;
+}
+
+input{
+	width: 95%;
+	height: 3rem;
+	line-height: 3rem;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	padding-left: 5%;
+	font-size: 1rem;
+}
+
+.btn-preview{
+	width: 80%;
+	border: none;
+	margin-left: 10%;
+	background-color: #5c6bc2;
+	height: 3rem;
+	border-radius: 6px;
+	color: #fff;
+	background: linear-gradient(to right top,#31a2f5,#0986e2);
+	border-radius: 20px;
+}
+
+.btn-wrapper-preview{
+	margin-top: 20%;
+}
+.wrapper-submit{
+	display: none;
+}
+
+.wrapper-preview{
+	display: none;
+}
+
+
+.btn-wrapper-submit button{
+	margin-top: 1rem;
+}
+.btn-wrapper-submit{
+	margin-top: 20%;
+	text-align: center;
+}
+.btn-edit,.btn-submit{
+
+	border: none!important;
+    width: 40%;
+    height: 3.5rem;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #839de6;
+    margin: 0 2%;
+    background: linear-gradient(to right top,#31a2f5,#0986e2);
+	border-radius: 20px;
+}
+
+.info4{
+	font-size: 1rem;
+}

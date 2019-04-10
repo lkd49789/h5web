@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>吐槽实例化</title>
+    <link href="../../common/css/common.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/popbox.css">
+    <link rel="stylesheet" href="css/forecast.css">
+</head>
+<body>
+    <div id='app' class='forecast'>
+        <div class='forecast_top' v-cloak> 
+            <div class='forecast_title'>
+                <img :src="'img-speak/page/forecast_title'+proId+'.png'" alt="标题">
+            </div>
+            <div class='forecast_name' @click='selectIdol'>
+                <div class='headWrap'>
+                    <img :src="headUrl" alt="头像">
+                </div>
+            </div>
+            <p class='selectIdolp'><span :class='{"span":idolName!="请选择一位偶像"}'  v-text='idolName'></span></p>
+            <div class='forecast_tags'>
+                <ul class='forecast_tagsUl'>
+                    <li v-for='(item,index) in tagsList' :key='index' >
+                        <div class='iconWrap' @click='tagsClick(item.stickerId)'>
+                            <img class='bg' src="img-speak/page/tag_bg.png" alt="">
+                            <img class='icon' :src="item.path" alt="">
+                            <div class='pos' v-show='arr.indexOf(item.stickerId)>=0'>
+                                <img src="img-speak/page/nike.png" alt="对勾">
+                            </div>
+                        </div>
+                        <p class="forecast_tagsUl_title" v-text='item.title'></p>
+                        <button class='iconBtn' @click="preview(item.path,item.title)">预览</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="forecast_rule">
+                <img src="img-speak/page/forecast_rule.png" alt="规则">
+            </div>
+            <div class='forecast_num'>
+                <div class='forecast_num_left'>当前选择所需鸡腿:<span v-text='needmoney'></span></div>
+                <div class='forecast_num_right'>我的鸡腿:<span v-text='money'></span><span class='topUp' @click='recharge'>充值</span></div>
+            </div>
+            <div class="forecast_btn" @click='upTags'>
+                <button></button>  
+            </div>
+            <selectidol v-if='selectIdolShow' @idol='idolClick' :list='idolList'  @idolclose='selectIdolShow = 0'></selectidol>
+        </div>
+
+        <!--弹框-->
+        <div class="mask" v-if="showpop!=0" v-cloak>
+                <!-- no money -->
+                <div class="no-money" v-if="showpop == 1">
+                    <p>{{tips}}</p>
+                    <span v-on:click="closePop()">知道了</span>
+                </div>
+                <div class="submit-box" v-if="showpop == 2">
+                    <p>是否提交预测结果？<br><span>当前选择所需鸡腿：{{needmoney}}</span></p>
+                    <span v-on:click="closePop()">再想想</span>
+                    <span v-on:click="submit()">确定提交</span>
+                </div>
+                <div class="no-money" v-if="showpop == 3">
+                    <p>鸡腿不足</p>
+                    <span v-on:click="recharge()">去充值</span>
+                    <span v-on:click="closePop()">知道了</span>
+                </div>
+                <div class='previewWrap' v-if="showpop == 4">
+                    <img class="previewImg" :src="previewUrl" alt="预览图">
+                    <p v-text='previewText'></p>
+                    <img class="previewClose" src="img-speak/page/preview_close.png" alt="关闭" v-on:click="closePop()" >
+                </div>
+        </div>
+    </div>
+    <template id='selectIdol'>
+            <div class='selectIdol'>
+                <div class='contentWrap'>
+                    <img src="img/close.png" alt="close" class='btn-close' @click='close'>
+                    <div class='content'>
+                        <div class='idolwrap' v-for='(item,index) in list' @click='idolClick(item)'>
+                            <div class='idol'>
+                                <span v-text='item.realName'></span>
+                                <img :src="item.teamLogon" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<script src="../../common/js/vue.js"></script>
+<script src="../../common/js/common_v1.js"></script>
+<!-- <script src='https://cdn.bootcss.com/vue/2.6.10/vue.js'></script> -->
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/forecast.js"></script>
+</html>

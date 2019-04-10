@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="common/css/common.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/index.css">
+    <title>投稿说明</title>
+</head>
+<body>
+    <div class='bg'>
+        <img src="img/bg_text.png" alt="">
+        <div class='content'>
+            <div class='content_box'>
+                <div class='title'><b>欢迎来到口袋48新版投稿(*^▽^*)你知道袋王等了你多久吗？</b></div>
+                <div><b>1.新版投稿更加快捷、方便、人性化，除了登入pc端进行投稿操作，在手机端也可以投稿啦！</b></div>
+
+                <div>
+                    <b>2.</b>从app首页投稿专题页进入投稿，投稿成功后即可在投稿作品列表内看到投递的稿件，并可评论、点赞、送礼、分享，邀请更多的好友来欣赏你的作品啦。<b>优秀的作品将会获得袋王的推荐，被小偶像眼熟，成为被钦羡的焦点！</b><br/>请注意，为了能让稿件顺利进入投稿作品列表，请各位聚聚在稿件内添加至少一张精美配图，这样还能吸引更多人来看你的作品哦！
+                </div>
+
+                <div><b>3.</b>投稿内容可为原创、转载、代发。转载及代发内容需出示授权说明及注明作者，<b>出处不明的内容需写明来源待考。</b></div>
+
+                <div>
+                    <b>4.</b>
+                    在展示才华的同时，袋王严禁以下内容和行为：
+                    <p>（1）反动、色情、低俗、暴力、血腥、赌博等
+                            违法内容；</p>
+                    <p>（2）宣扬邪教、封建迷信；</p>
+                    <p>（3）扰乱社会秩序，破坏民族团结；</p>
+                    <p>（4）违反公序良俗等不良导向内容；</p>
+                    <p>（5）人身攻击，侮辱、诽谤他人；</p>
+                    <p>（6）恶意引战，煽动对立、散播仇恨情绪；</p>
+                    <p>（7）危害未成年人身心健康成长；</p>
+                    <p>（8）侵犯网络版权及其他知识产权以及用户权益；</p>
+                    <p>（9）猎奇恶心等严重影响观感体验的内容；</p>
+                    <p>（10）有关法律、行政法规和国家规定禁止的其他内容；</p>
+                </div>
+                <div>
+                    <b>如有违反以上条款，袋王有权将该稿件下架删除，</b>并视情节严重程度，进行相应级别封禁。聚聚们也可以通过举报按钮对相关违反规定的稿件进行举报，袋王将尽快处理。
+                </div>
+                <div><b>请注意，投稿内容需主题明确，不要投递无意义灌水稿件，袋王有权将灌水稿件下架删除</b></div>
+                <div class='red'>*视频投稿需实名认证后方可投稿。暂不支持音频投稿，将在不远的将来开放，敬请期待哦~</div>
+                <div><b>现在就来投递你的创作吧！</b></div>
+            </div>
+            <div class='btn'>
+                <b>马上投稿</b>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

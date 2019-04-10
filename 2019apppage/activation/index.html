@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>免流相关</title>
+	<link href="css/common.css" rel="stylesheet" />
+	<link href="css/index.css" rel="stylesheet" />
+</head>
+<body>
+	<section>
+		<div class="textbox">
+			当你的手机插入星沃卡/丝芭乐享卡/丝芭畅享卡，并且口袋48中成功绑定对应的手机号码后，直接获得免流特权的内容：公演直播、视听中的视频和音频内容。
+		</div>
+		<p class="title">成员直播免流激活</p>
+		<div class="subbox">
+			<div class="firebox">
+				<input type="tel" name="userphone" value placeholder="在这里输入手机号" class="userphone" />
+				<div class="tokenbox">
+					<input type="text" name="token" value placeholder="输入验证码" class="token">
+					<button class="tokenbtn">发送验证码</button>
+				</div>
+				<p class="notice">验证码不正确，请重试/手机号码格式不正确</p>
+				<button class="activatedbtn">激活成员直播免流特权</button>
+			</div>
+		</div>
+		<!-- 激活成功 -->
+		<div class="box-success">
+			<div class="sucessbox">
+				<div class="sucediv">
+					<img src="img/icon_success.png" class="icon_success">
+					<p class="p1">18721430090</p>
+					<p class="p2">已经成功激活成员直播免流服务</p>
+				</div>
+			</div>
+			<button class="otherbtn">使用其他卡激活免流服务</button>
+		</div>
+		<div class="textsbox">
+			<p>提示：</p>
+			<ul>
+				<li>• 如不使用星沃卡/丝芭乐享卡/丝芭畅享卡号码激活将不享受成员直播免流服务</li>
+				<li>• 激活后如要将该张卡用于其他手机，请在新手机中安装口袋48 APP后再次激活免流服务，否则将无法继续获得免流服务。</li>
+				<li>• 曾经使用星沃卡/丝芭乐享卡/丝芭畅享卡激活过的手机，在没有删除口袋48的前提下，装回同一张卡后无需重新激活免流服务。</li>
+				<li>• 如在激活免流服务后手机更换其他SIM卡会导致免流服务失效。</li>
+				<li>• 如重新安装口袋48 APP,需要重新激活星沃卡/丝芭乐享卡/丝芭畅享卡免流。</li>
+			</ul>
+		</div>
+		<!-- 弹窗 -->
+		<div class="mask">
+			<!-- 非丝芭卡号码 -->
+			<div class="notphone">
+				<p class="phonetit">该号码非丝芭卡号码</p>
+				<div class="btns">
+					<button class="cancel">取消</button>
+					<button class="right">确认</button>
+				</div>
+			</div>
+			<!-- 激活成功 -->
+			<div class="phonesuces">
+				<p class="phonetit">激活成功</p>
+				<button class="konwbtn">知道了</button>
+			</div>
+		</div>
+	</section>
+</body>
+<script src="https://h5.48.cn/common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"> </script>
+<script src="js/main.js"></script>
+<script src="js/index.js"></script>
+</html>

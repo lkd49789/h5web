@@ -1,0 +1,46 @@
+section{
+	width: 100%;
+	height: 100%;
+	background: url(../img/bg-votemusic.jpg)no-repeat center bottom;
+	background-size: cover;
+	position: relative;
+	overflow-y: scroll;
+}
+[v-cloak]{
+    display: none;
+}
+.music{padding: 5% 5% 5% 8%;}
+section > img{width: 100%;}
+.music li{position: relative;background-color: #fff;border-radius: 8px;margin-top: 2rem;height: 6rem;}
+.team-logo{height: 6.5rem;position: absolute;left: -1rem;bottom: 0;}
+.music li div{padding-left: 9rem;padding-top: 1rem;}
+.music li div p{height: 2rem;color: #005aba;font-size: 1.3rem;}
+.music li div p:nth-child(2){font-size: 1.1rem;color: #adadad;}
+.choose{width: 2rem;height: 2rem; position: absolute;top: 2rem;right: 1rem;}
+.time-box{text-align: center;color: #fff;margin-top: .5rem;}
+.time-box span{font-size: 1.1rem;background-color: rgba(0,0,0,.2);padding: 5px 1.5rem;border-radius: 1rem;}
+.time-box img{width: 100%;margin-bottom: 1rem;}
+
+.btns{text-align: center; margin-top: 10%;margin-bottom: 10%;padding-left: 1%;}
+.btns > div{display: inline-block;margin: 0 auto;width: 45%;position: relative;}
+.btns > div img{width: 100%;}
+.btns div p{color: #fff;font-size: 1.2rem;position: absolute;width: 100%;top: 20%;}
+.btns div span{font-size: 1rem;}
+
+.mask{position: fixed;width: 100%;height: 100%;text-align: center;background-color: rgba(0,0,0,.5);top: 0;left: 0;z-index: 100;}
+.mask div{
+	width: 75%;
+	background-color: #fff;
+	border-radius: 1rem;
+	position: absolute;
+	top:45%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    /*display: none;*/
+}
+.mask div p{padding: 12% 5%;border-bottom: 1px solid #f0f0f0;font-size: 1.3rem;}
+.mask div > span{padding: 1rem 0;display: inline-block;color: #2774ff;font-size: 1.2rem;width:48%;}
+.mask > div span:nth-child(3){border-left: 1px solid #f0f0f0;}
+.submit-box p span{color: #999;font-size: 1rem;}
+.prize{position: absolute;right: -2%;bottom:0;width: 30%;z-index: 100;}
+

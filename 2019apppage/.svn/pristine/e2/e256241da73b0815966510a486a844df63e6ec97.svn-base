@@ -1,0 +1,110 @@
+
+.newinfocontrols{
+	/*height:40px;*/
+	clear:both;
+	line-height:40px;
+}
+.newinfocontrols button{
+	margin:0px 2px 0px 6px;
+	background-color:transparent;
+	width:60px;
+	height:30px;
+	border:0px;
+	color:white;
+}
+.newinfocontrols button img{
+	max-height:30px;
+}
+.linkinfodiv{
+	padding: 3px; 
+	display: block; 
+	background-color: rgb(255, 255, 255);
+}
+.forindiv{
+	padding:3px 3px 0px 3px;
+	line-height:33px;
+	font-size:12px;
+}
+.newinfo .updiv{
+	float: left;
+	background-size:100% 100%;
+	margin:0px;
+	background-image:url(../img/pyqlink.png);
+	border:1px solid #fafafa;
+	width:30px;
+	height:30px;
+}
+.updiv span a{
+	color:rgb(69,69,236);
+}
+.lastfodiv{
+	width:300px;
+	margin:10px auto 0px auto;
+}
+.lastfodiv button:last-child{
+	background:#FAFAFA;
+	color:black;
+	margin-top:10px;
+}
+
+.selwinbgdiv,.seldiv{
+	display: none;
+}
+.replywinbgdiv,.replywindiv{
+	display: none;
+}
+
+.fadeInright{
+	animation:fadeInRight 0.1s 1 linear;
+	-webkit-animation:fadeInRight 0.1s 1 linear;
+}
+.fadeInUpbig{
+	animation:fadeInUpBig 0.2s 1 linear;
+	-webkit-animation:fadeInUpBig 0.2s 1 linear;
+}
+
+.topimg{
+	width: 100%;
+}
+.mui-scroll-wrapper{
+	overflow: auto;
+}
+.topimg{
+	width: 100%;
+	height: 240px;
+	background: url() no-repeat center center;
+	background-size:100%;
+}
+.mediacontent span{
+	display: inline-block;
+	width: 30%;
+	height: 15rem;
+}
+.mediacontent span img{
+	width: 100%;
+	height:100%;
+}
+.mediacontent{
+	margin-left: 48px;
+}
+.color_USER{
+	background:#fff;
+}
+.color_ADMIN{
+	background:#FAEFFF;
+}
+.color_MEMBER{
+	background:#EFF2FF;
+}
+.thumb{
+	width:29%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: inline-block;
+	vertical-align: middle;
+	margin:0 10px 10px 0;
+	/*margin-top: 20px;*/
+	background-color: green
+}
+

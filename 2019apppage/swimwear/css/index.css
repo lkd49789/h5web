@@ -1,0 +1,194 @@
+*{
+	margin:0;
+	padding: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+body{
+	max-width: 640px;
+	margin:0 auto;
+	background-color: #fff;
+	-webkit-overflow-scrolling: touch; 
+}
+section{
+	background:url(../img/bg.jpg) center top;
+	background-size: cover;
+	text-align: center;
+	padding-bottom: 5%;
+	-webkit-overflow-scrolling: touch; 
+	    min-height: 100%;
+}
+section  img{
+	width:100%;
+}
+.middle{
+	position: relative;
+	margin-bottom: 10%;
+	margin-top: 40%;
+}
+.middle img{
+	position: absolute;
+	bottom: -15%;
+	left: 0;
+	pointer-events: none;
+}
+.rule-box{
+	width: 70%;
+	padding: 5%;
+	margin: 0 auto;
+	background-color: #fff;
+	border-radius: 10px;
+}
+.rule-box p{
+	font-size: 1.2rem;
+	color:#3e3f42;
+	line-height: 2rem;
+	margin-bottom: .5rem;
+	text-align: left;
+}
+.rule-box a{
+	font-size: 1.4rem;
+	color:#f19149;
+}
+.member-list li p{
+    color: #3e3f42;
+    font-size: 1rem;
+    width: 100%;
+    margin: 5px 0;
+}
+.memberbox{
+	background-color: #fff;
+	width: 80%;
+	margin: 0 auto;
+	padding: 5%;
+	border-radius: 10px;
+	padding-bottom: 2rem;
+}
+.memberbox > div{
+	margin-bottom: 5%;
+}
+.member-list span{
+	margin-left: 1%;
+}
+ul{
+	width: 100%;
+	text-align: left;
+	position: relative;
+}
+.member-list li{
+	display: inline-block;
+	width: 25%;
+	margin:4% 4%;
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+	position: relative;
+	text-align: center;
+}
+.photo{
+	width: 6rem;
+	height: 6rem;
+	overflow: hidden;
+	border-radius: 100%;
+	position: relative;
+	border:1px solid #edf5fe;
+}
+.photo img{
+	position: relative;
+	margin-top: -15%;
+}
+.member-list .index{
+	position: absolute;
+    left: 0;
+    width: 1.8rem;
+    z-index: 1;
+}
+.member-list .mername{
+	width: 100%;
+	margin-left: 0;
+}
+.icon-team{
+	width: 25%;
+	margin-top: -3px;
+}
+.icon{
+	font-size: .7rem;
+	background-color: #ccc;
+	margin-left: 5px;
+	padding: 0 5px;
+	border-radius: 5px;
+	color: #fff;
+}
+.btns img{
+	width: 49%;
+	text-align: center;
+}
+
+.btns{
+	margin-bottom: 0;
+}
+
+.member-top{
+	text-align: left;
+}
+.member-top li{
+	
+	background-color: #f5f;
+	background-color: #f5f5f5;
+	border-radius: 5px;
+	padding: 10px;
+	margin-bottom: 1rem;
+}
+.rankLeft {
+	width: 60%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.rankLeft p{
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 3%;
+}
+.avatar {
+	width: 4rem;
+	height: 4rem;
+	border:1px solid #fff;
+	border-radius: 100%;
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: middle;
+}
+.mername{
+	display: inline-block;
+	width: 25%;
+	border: none;
+	background: linear-gradient(to right top,#31a2f5,#0986e2);
+	background-size: 100% 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 1.2rem;
+	border-radius: 20px;
+	padding: 5px 0;
+	vertical-align: middle;
+	margin-left: 10%;
+}
+.mername img{width: 1rem;    margin-top: -.3rem;}
+[v-cloak]{
+    display: none;
+}
+
+.index{
+	width: 10%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.icon-team2{
+	width: 2rem;
+}
+.tip{
+
+}

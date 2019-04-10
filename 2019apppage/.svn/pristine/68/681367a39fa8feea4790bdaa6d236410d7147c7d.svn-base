@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<title>应援值说明</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+	<meta http-equiv="Cache-Control" content="max-age=0">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<link rel="stylesheet" href="https://h5.48.cn/common/css/common_mobile_v1.css">	
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<section class="wrapper">
+		<section class="info">
+			<h1>什么是应援值？</h1>
+			<p>应援值是为所有偶像设置的特有属性，这个数值了偶像人气的一种体现。</p>
+			<h1>偶像如何获得应援值？</h1>
+			<ul>
+				<li>• 生日祝福弹幕：每次生日公演，大家都可以通过口袋48给生日公演的寿星送上祝福，收到祝福的偶像会获得相应的应援值。</li>
+				<li>• 赠送礼物：在公演直播、偶像直播间、聚聚房间、偶像动态帖子这些场合赠送的礼物也可以使对应的偶像获得应援值。</li>
+				<li>• 偶像翻牌：使用偶像翻牌和偶像超近距离互动的同时也会为该偶像增加应援值。</li>				
+			</ul>
+			<h1>应援值排行榜</h1>
+			<p>应援值周排行榜在每周二10:00点自动更新上一周的数据，该榜单不仅会统计上一周内获得应援值最高的前32名成员，还会展示出一周以来，为每个成员贡献应援值最多的粉丝，授予其“最拼支持者”的称号。</p>
+			<p>应援值年度榜单则是记录上一年的最终应援值总和。</p>
+
+		</section>
+
+	</section>
+</body>
+
+</html>
+

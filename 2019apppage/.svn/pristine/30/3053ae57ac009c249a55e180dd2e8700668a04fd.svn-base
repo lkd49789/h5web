@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>福利内容</title>
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+	<style>
+		.packagebox{padding: 5%;position: relative;}
+		.packagebox h4{font-size: 18px;color: #62707e;margin-bottom: 10px;}
+		.apx{margin-bottom: 5px;padding-left: 8px;color: #55588a}
+		ul{padding: 2%;border-radius: 5px;background-color: #f4f2e9;}
+		li{color:#62707e;font-size: 15px;margin-bottom: 5px;}
+		.btns{width: 100%;height: 40px;border:0;font-size: 15px;background-color: #e8e8e8;margin-top: 20px;border-radius: 5px;color: #888282;outline: none;}
+		.active{background-color: #5c6bc2;color:#fff;}
+		.giftbox{margin-top: 12%;}
+		.lemask{width: 100%;height: 100%;max-width:640px;background-color: rgba(0,0,0,.5);position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);-moz-transform: translate(-50%, -50%);-o-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);display: none;}
+		.lemaskbox{width: 70%;position: absolute;left: 15%;background-color: #fff;border-radius: 7px;padding:7% 0%;top:30%;}
+		.txt{font-size: 17px;margin-bottom: 10%;text-align: center;}
+		.konw{width: 70%;margin-left: 15%;height: 40px;border: 0;font-size: 15px;background-color:#8f94ed;color: #fff; border-radius: 7px;}
+		.activabtn,.receivebtn{display: none;}
+		.texts{padding:10px 0;}
+		.texts h4{font-size: 16px;}
+		.texts p{font-size: 14px;color: #808080;}
+		.tishi{font-size: 14px;margin-top:4%; color: #62707e;}
+	</style>
+</head>
+<body>
+	<section class="packagebox">
+		<div class="activationbox">
+			<h4>丝芭畅享卡48元套餐</h4>
+			<p class="apx">激活后：</p>
+			<ul>
+				<li>1、次月开始每月赠送48个鸡腿，可在本页面领取</li>
+				<li>2、获得专属徽章</li>
+			</ul>
+			<button type="button" class="btns activabtn">点击激活</button>
+			<button type="button" class="btns receivebtn">领取48个鸡腿</button>
+		</div>
+		<div class="giftbox">
+			<h4>首充大礼包</h4>
+			<ul>
+				<li>1、480鸡腿</li>
+				<li>2、8折鸡腿券1张</li>
+				<li>3、大型活动投票权1张</li>
+				<li>3、48狼人杀专属礼包1份<br/>（金币*888 ，延时卡*5，柠檬船*3）<br/></li>
+			</ul>
+			<button type="button" class="btns giftbtn">领取首充大礼包</button>
+		</div>
+		<p class="tishi">提示：消费获得1.1倍积分以及签到1.5倍经验加速只在口袋账号绑定畅享卡手机号后生效，绑定前产生的积分补领不享受该福利，解绑后该手机号后也不再享受该福利。在口袋48 APP中购买鸡腿、 总选EP网络版可获得1.1倍积分，在口袋48商城消费暂时不能获得1.1倍积分。</p>
+		<div class="texts">
+			<h4>腾讯视频免流激活方法</h4>
+			<p>通常情况腾讯视频APP会自动开通免流，如果未成功请按如下步骤：打开腾讯视频APP，点击我的-在线看视频，免流量套餐（联通）-WO+联通免流包-我已开通免流包，立即激活 - 输入手机号码和验证码激活。激活后播放视频会显示“正在使用联通免流模式”。</p>
+		</div>
+	</section>
+	<div class="lemask">
+		<div class="lemaskbox">
+			<p class="txt">请先激活</p>
+			<button class="konw">知道了</button>
+		</div>	
+	</div>
+</body>
+<script type="text/javascript" src="../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<script type="text/javascript" src="../../common/js/common_v1.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">
+	//检测是否可激活领取
+	init()
+	function init(){
+		main.getifSure(6,function(dt){//6代表48元，5代表18元
+			if(dt.status==200){
+				console.log(dt)
+				if(dt.content.starWoUser == true){//是乐享卡用户
+					if(dt.content.activate == false){//没有激活
+						console.log('没有激活');
+						$('.activabtn').show().addClass('active');
+						$('.receivebtn').hide().removeClass('active');
+						$('.giftbtn').removeClass('active').html("领取首充大礼包");
+					}else{//已经激活
+						console.log('激活');
+						$('.activabtn').hide().removeClass('active');
+						if(dt.content.monthWelfare == 0){//可以领取每月48个鸡腿
+							$('.receivebtn').show().addClass('active');
+						}else if(dt.content.monthWelfare == 2){//
+							$('.receivebtn').show().removeClass('active').html("下个月后即可领取48个鸡腿");
+						}else if(dt.content.monthWelfare == 3){
+							$('.receivebtn').show().removeClass('active').html("本月已领取过48个鸡腿");
+						}else{}
+						if(dt.content.frWelfare == 0){//可领取首充大礼包
+							$('.giftbtn').addClass('active').html("领取首充大礼包");
+						}else if(dt.content.frWelfare == 2){//不可领取首充大礼包
+							$('.giftbtn').removeClass('active').html("没有查询到首次充值");
+						}else if(dt.content.frWelfare == 3){
+							$('.giftbtn').removeClass('active').html("首充大礼包已领取");
+						}else{}
+					}
+				}else{//不是乐享卡用户
+					$('.activabtn').show().removeClass('active');
+					$('.receivebtn').hide().removeClass('active');
+					$('.giftbtn').removeClass('active').html("领取首充大礼包");
+				}
+			}else{
+				main.alert(dt.message);
+			}
+		})
+	}
+
+	//点击激活
+	$('.activabtn').click(function(){
+		if($(this).hasClass('active')){
+			main.activated(function(dt){
+				if(dt.status==200){
+					init()
+					//激活后 保存信息到本地
+					var params = {
+				        phone : main.getAppUserInfo.bindInfo.uniqueId,
+				        type: 3,//1、星沃卡  2、丝芭卡  3、畅享卡
+				        isBind: true
+				    }
+				    dsBridge.call("snhOnActionPhone", params, function(v) {
+	                  //alert(v);
+	                });
+				}else{
+					main.alert(dt.message);
+				}
+			})
+		}
+	})
+
+	//每月鸡腿返还领取
+	$('.receivebtn').click(function(){
+		if($(this).hasClass('active')){
+			main.monthlyReceive(function(dt){
+				if(dt.status==200){
+					init()
+				}else{
+					main.alert(dt.message);
+				}
+			})
+		}
+	})
+
+	//领取首充大礼包
+	$('.giftbtn').click(function(){
+		if($(this).hasClass('active')){
+			main.firstReceive(function(dt){
+				if(dt.status==200){
+					init()
+				}else{
+					main.alert(dt.message);
+				}
+			})
+		}
+	})
+
+</script>
+</html>

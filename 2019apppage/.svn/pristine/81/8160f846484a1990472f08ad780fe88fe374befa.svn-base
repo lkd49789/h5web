@@ -1,0 +1,198 @@
+(function(data) {
+
+    //web端测试（用户信息）
+    var webUserInfo = {
+        "appid":"27422",                                //用户ID
+        "apptoken":"5fgAZwUouZBV6FzSVs/TxnYAltVYpdmEgGsmsgcK1HWQ5W5+Iw0i+ky0njxZOvHeDtf5jOWVPrE+snAnoVtvBg==",                          //验证Token
+        "uname":"嘟嘟宝",                                 //用户昵称
+        "avata":"https://source2.48.cn/mediasource/avatar/87333.jpg",                                    //头像地址
+        "dev_cd":"test",                        //设备号
+        "browser":"WEB"
+    }
+    
+//--------------------------------------------------------------------------------------------------------------------
+    //正式
+    //var appUserInfo
+    if(checkFromApp()){
+        var u_info = JSON.parse(dsBridge.call("snhUserInfo"))
+        var app_info = JSON.parse(dsBridge.call("snhUserInfo"))
+        var appUserInfo = {
+            "appid":u_info.userInfo.bigSmallInfo.bigUserInfo.userId,                                       //用户ID
+            "apptoken":u_info.token,                                                                       //验证Token
+            "uname":u_info.userInfo.bigSmallInfo.bigUserInfo.nickname,                                      //用户昵称
+            "avata":u_info.userInfo.bigSmallInfo.bigUserInfo.avatar,                                        //头像地址
+            "dev_cd":app_info.phoneSystemVersion+";"+app_info.phoneName+";"+app_info.version                //设备号
+        }
+    }
+    
+//--------------------------------------------------------------------------------------------------------------------
+    data.getAppUserInfo = function(){
+        if(checkFromApp()){
+            return appUserInfo;
+        }else{
+            return webUserInfo;
+        }
+        
+    }
+    //获取系统类型  ios   安卓
+    data.getSysType = function(){
+        if(checkFromApp()){
+            if(isFromIphone()){
+                return "IOS";
+            }else{
+                return "ANDROID";
+            }
+        }else{
+            return "IOS";//测试 默认iOS 
+        }
+    }
+    //获取列表
+    data.getList = function(succ){
+        $.ajax({
+            url:  CONFIG.getJK()+"api/v1/feedback/query/user",
+            type: "POST", 
+            dataType: "json",
+            beforeSend: function (request) {
+                 request.setRequestHeader("token", main.getAppUserInfo().apptoken);
+            },
+            data:{},
+            success: function (data) { 
+                succ(data)
+            }, 
+            error: function (jqXHR, textStatus, errorThrown) { 
+                // alert("eee");
+            } 
+        });
+    }
+    //获取详情
+    data.getDetail = function(_id,succ){
+        $.ajax({
+            url:  CONFIG.getJK()+"api/v1/feedback/query/id",
+            type: "POST", 
+            dataType: "json",
+            beforeSend: function (request) {
+                 request.setRequestHeader("token", main.getAppUserInfo().apptoken);
+            },
+            contentType: 'application/json',
+            data:JSON.stringify({
+                "id":_id
+            }),
+            success: function (data) { 
+                succ(data)
+            }, 
+            error: function (jqXHR, textStatus, errorThrown) { 
+                // alert("eee");
+            } 
+        });
+    }
+    //提交反馈
+    data.submitReport = function(_pic,_info,succ){
+        console.log(main.getAppUserInfo().avata)
+        $.ajax({
+            url:  CONFIG.getJK()+"api/v1/feedback",
+            type: "POST", 
+            dataType: "json",
+            beforeSend: function (request) {
+                 request.setRequestHeader("token", main.getAppUserInfo().apptoken);
+            },
+            contentType: 'application/json',
+            data:JSON.stringify({
+                "avatar": main.getAppUserInfo().avata,
+                "deviceInfo": main.getAppUserInfo().dev_cd,
+                "faultScreenshots": _pic,//故障截图
+                "nickName": main.getAppUserInfo().uname,
+                "phoneNumber": "",
+                "questionContent": _info
+            }),
+            success: function (data) { 
+                succ(data)
+            }, 
+            error: function (jqXHR, textStatus, errorThrown) { 
+                // alert("eee");
+            } 
+        });
+    }
+    //故障申告
+    data.bugReport = function(phone,pic,submit_info,succ,error){
+        $.ajax({
+            url:CONFIG.getPhpJK()+"api_feedback.php",
+            type: "GET", 
+            async:true,
+            data: { appid:main.getAppUserInfo().appid,                          //用户ID（WEB场合：丝瓜账号，APP场合：APPID）
+                    token_vote: main.getAppUserInfo().token_vote,                                
+                    uname:main.getAppUserInfo().uname,                            //用户昵称
+                    phone:phone,                            //联系电话
+                    //type:type,                              //故障类型
+                    pic_url:pic,                                //故障截图
+                    browser:main.getAppUserInfo().browser,                          //浏览器（APP，WX，官网）
+                    submit_info:submit_info,  
+                    //devVer:'1.0',                                            //故障内容
+                    dev_cd:main.getAppUserInfo().dev_cd                           //设备号
+            },
+            timeout: 5000, 
+            dataType:"jsonp",
+            success: function (data) { 
+
+                succ(data)
+                
+            }, 
+            error: function (jqXHR, textStatus, errorThrown) { 
+                // alert("eee>"+textStatus);
+                error(data)
+            } 
+        });
+       
+    };
+    
+    //故障申告记录获得
+    data.feedback = function(offset,_limit,succ,error){
+        $.ajax({
+            url: CONFIG.getPhpJK()+ "api_feedback_log.php",
+            type: "GET", 
+            async:true,
+            data: { appid:main.getAppUserInfo().appid,                          //用户ID（WEB场合：丝瓜账号，APP场合：APPID）
+                    uname:main.getAppUserInfo().uname,                            //用户昵称
+                    token_vote: main.getAppUserInfo().token_vote,  
+                    // order_from:"2",                 //报告途径（1 WEB 2 APP 3 微信）
+                    offset:offset,
+                    limit:_limit,                            //记录条数
+                    browser:main.getAppUserInfo().browser 
+                 
+            },
+            timeout: 5000, 
+            dataType:"jsonp",
+            success: function (data) { 
+
+                succ(data)
+                
+            }, 
+            error: function (jqXHR, textStatus, errorThrown) { 
+//               alert("eee");
+                error()
+            } 
+        });
+       
+    };
+
+    //显示错误信息
+    data.showTip = function(info){
+        $('.tip').css('opacity',1);
+        $('.tip').html(info);
+    }
+
+    //弹框
+    data.alert = function(name){
+        // var iframe = document.createElement("IFRAME");
+        // iframe.style.display="none";
+        // iframe.setAttribute("src", 'data:text/plain,');
+        // document.documentElement.appendChild(iframe);
+        // window.frames[0].window.alert(name);
+        // iframe.parentNode.removeChild(iframe);
+        mui.alert(name, '', function() {
+            
+        });
+    }
+
+
+}(window.main = {}));
+

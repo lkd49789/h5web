@@ -1,0 +1,137 @@
+
+@-webkit-keyframes rotateOutUpRight {
+  from {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate3d(0, 0, 1, 90deg);
+    transform: rotate3d(0, 0, 1, 90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateOutUpRight {
+  from {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate3d(0, 0, 1, 90deg);
+    transform: rotate3d(0, 0, 1, 90deg);
+    opacity: 0;
+  }
+}
+
+.rotateOutUpRight {
+  -webkit-animation: rotateOutUpRight 0.5s 1 both;
+  animation-name: rotateOutUpRight 0.5s 1 both;
+}
+
+
+
+
+
+@-webkit-keyframes move{
+    from{
+      opacity: 1;
+      -webkit-transform: scale3d(.9, .9, .9);
+      transform: scale3d(.9, .9,.9);
+    }
+    to{
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+      opacity: 1;
+      bottom: 58%;
+    }
+}
+
+@keyframes move{
+    from{
+      opacity: 1;
+      -webkit-transform: scale3d(.9, .9, .9);
+      transform: scale3d(.9, .9,.9);
+    }
+    to{
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+      opacity: 1;
+      bottom: 58%;
+    }
+}
+.move{
+  -webkit-animation: move 0.8s 1 both;
+  animation: move 0.8s 1 both;
+}
+
+
+
+
+@-webkit-keyframes movea{
+    0%{
+      opacity: 0.5;
+      bottom: 31%;
+    }
+    100%{
+      -webkit-transform: scale3d(.8, .8, .8);
+      transform: scale3d(.8, .8, .8);
+      opacity: 0.7;
+      bottom: 44%;
+    }
+}
+
+@keyframes movea{
+    0%{
+      opacity: 0.5;
+      bottom: 31%;
+    }
+    100%{
+      -webkit-transform: scale3d(.8, .8, .8);
+      transform: scale3d(.8, .8, .8);
+      opacity: 0.7;
+      bottom: 44%;
+    }
+}
+.movea{
+  -webkit-animation: movea 0.8s 1 both;
+  animation: movea 0.8s 1 both;
+}
+
+
+
+@-webkit-keyframes moveb{
+    0%{
+      opacity: 0.3;
+      bottom: 19%
+    }
+    100%{
+      -webkit-transform: scale3d(.7, .7, .7);
+      transform: scale3d(.7, .7, .7);
+      opacity: 0.5;
+      bottom: 31%;
+    }
+}
+
+@keyframes moveb{
+  0%{
+      opacity: 0.3;
+    }
+    100%{
+      -webkit-transform: scale3d(.7, .7, .7);
+      transform: scale3d(.7, .7, .7);
+      opacity: 0.5;
+      bottom: 31%;
+    }
+}
+.moveb{
+  -webkit-animation: moveb 0.8s 1 both;
+  animation: moveb 0.8s 1 both;
+}

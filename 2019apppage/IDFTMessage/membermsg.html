@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>留言板</title>
+	<link href="../../common/css/common.css" rel="stylesheet" />
+	<link href="css/mui.min.css" rel="stylesheet" />
+	<link href="css/membermsg.css" rel="stylesheet" />
+</head>
+<body>
+
+	<section id="wrapper" v-cloak>
+		<!-- 消息列表 -->
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+
+			<div class="mui-scroll">
+				<div class="member-info">
+					<div class="photo">
+						<img v-bind:src="curMember.avatar">
+					</div>
+					<span>{{curMember.memberName}}的留言板</span>
+					<span class="like-box">{{curMember.count}}<img src="img/icon-msg.png"></span>
+				</div>
+				<img v-if="listA.length == 0" class="empty" src="img/empty.png">
+					<ul  class="mui-table-view mui-table-view-chevron lists">
+						<li v-for='(item,index) in listA'>
+							<p class="u-info">
+								<img v-bind:src="item.avatar">
+								{{item.nicker}}对<span class="m-name">{{item.memberName}}</span>说<span v-on:click="like(index)" class="like-content"><img :src="item.status | likeimg">{{item.praise}}</span>
+							</p>
+							<p class="msg">{{item.comment}}</p>
+						</li>
+						<!-- <li>
+							<p class="u-info">
+								<img src="img/head.png">
+								粉丝对<span class="m-name">小偶像</span>说
+							</p>
+							<p class="msg">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+						</li>
+						<li>
+							<p class="u-info">
+								<img src="img/head.png">
+								粉丝对<span class="m-name">小偶像</span>说
+							</p>
+							<p class="msg">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+						</li>
+						<li>
+							<p class="u-info">
+								<img src="img/head.png">
+								粉丝对<span class="m-name">小偶像</span>说
+							</p>
+							<p class="msg">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+						</li>
+						<li>
+							<p class="u-info">
+								<img src="img/head.png">
+								粉丝对<span class="m-name">小偶像</span>说
+							</p>
+							<p class="msg">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+						</li> -->
+					</ul>
+					
+			</div>
+		</div>
+		<img class="icon-gotomsg" v-on:click="gotoSendMsg()" src="img/icon-gotomember.png">
+	</section>
+
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="../../common/js/common.js"></script>
+<script src="../../common/js/vue.js"></script>
+<script src="js/mui.min.js"></script>
+<script src="js/mui.pullToRefresh.js" ></script>
+<script src="js/mui.pullToRefresh.material.js" ></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/membermsg.js"></script>
+</html>

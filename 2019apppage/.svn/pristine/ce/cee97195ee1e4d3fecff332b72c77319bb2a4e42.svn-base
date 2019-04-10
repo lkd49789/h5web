@@ -1,0 +1,69 @@
+section,aside,header,footer,hgroup,article{display:block}
+
+
+html { font-size:1em;-webkit-tap-highlight-color:rgba(0,0,0,0); -webkit-tap-highlight:rgba(0,0,0,0);-webkit-text-size-adjust:none;}
+
+
+html,body { width: 100%; font-family: "微软雅黑",Helvetica,sans-serif;background: transparent;}
+
+html{font-size:10px}
+@media screen and (min-width:321px) and (max-width:374px){html{font-size:11px}}
+@media screen and (min-width:375px) and (max-width:413px){html{font-size:12px}}
+@media screen and (min-width:414px) and (max-width:499px){html{font-size:13px}}
+@media screen and (min-width:500px) and (max-width:549px){html{font-size:15px}}
+@media screen and (min-width:550px) and (max-width:600px){html{font-size:17px}}
+@media screen and (min-width:601px) and (max-width:719px){html{font-size:20px}}
+@media screen and (min-width:720px) and (max-width:749px){html{font-size:21.5px}}
+@media screen and (min-width:750px) and (max-width:799px){html{font-size:22.5px}}
+@media screen and (min-width:800px){html{font-size:24px}}
+@media screen and (max-height:480px){html{font-size:9px;}}
+
+
+
+/*各队边框颜色*/
+.SII-bd{border:solid 1px #91CCEA;color:#91CCEA;}
+.NII-bd{border:solid 1px #AD85BA;color:#AD85BA;}
+.HII-bd{border:solid 1px #F29600;color:#F29600;}
+.X-bd{border:solid 1px #b1d61b;color:#b1d61b;}
+.XII-bd{border:solid 1px #00BE6E;color:#00BE6E;}
+.B-bd{border:solid 1px #ff2471;color:#ff2471;}
+.E-bd{border:solid 1px #0cc8c3;color:#0cc8c3;}
+.J-bd{border:solid 1px #006ab6;color:#006ab6;}
+.G-bd{border:solid 1px #aac913;color:#aac913;}
+.NIII-bd{border:solid 1px #ffd700;color:#ffd700;}
+.Z-bd{border:solid 1px #ea617b;color:#ea617b;}
+.SIII-bd{border:solid 1px #e70095;color:#e70095;}
+.HIII-bd{border:solid 1px #4f008c;color:#4f008c;}
+
+ /*各队字体颜色*/
+.team-font-SII{color: rgb(145,205,235);}
+.team-font-NII{color: rgb(174,134,187);}
+.team-font-HII{color: rgb(243,151,0);}
+.team-font-X{color: rgb(181,209,0);}
+.team-font-XII{color: rgb(177,214,27,1);}
+.team-font-B{color: #ff2471;}
+.team-font-E{color: #0CC8C3;}
+.team-font-J{color: #006ab7;}
+.team-font-G{color: #aac913;}
+.team-font-NIII{color: #ffd700;}
+.team-font-Z{color: #ea617b;}
+.team-font-SIII{color: #fa4ac1;}
+.team-font-HIII{color: #8618c2;}
+
+
+/*各队背景颜色*/
+.team-bg-SII{background-color:rgb(145,205,235);}
+.team-bg-NII{background-color:rgb(174,134,187);}
+.team-bg-HII{background-color:rgb(243,151,0);}
+.team-bg-X{background-color:rgb(181,209,0);}
+.team-bg-XII{background-color:rgb(3,192,112);}
+.team-bg-B{background-color:#ff2471;}
+.team-bg-E{background-color:#0CC8C3;}
+.team-bg-J{background-color:#006ab7;}
+.team-bg-G{background-color:#aac913;}
+.team-bg-NIII{background-color:#ffd700;}
+.team-bg-Z{background-color:#ea617b;}
+.team-bg-SIII{background-color:#fa4ac1;}
+.team-bg-HIII{background-color:#8618c2;}
+
+

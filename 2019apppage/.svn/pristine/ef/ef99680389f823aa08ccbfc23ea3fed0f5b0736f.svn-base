@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>我的反馈</title>
+    <link rel="stylesheet" type="text/css" href="css/common_mobile.css"/>
+    <link href="css/faultSearch.css" rel="stylesheet"/>
+</head>
+    
+<body>
+	<div class="wrapper" v-cloak>
+	
+		<img v-if="list.length == 0" src="../../common/images/tip.png" v-cloak>
+		<ul>
+			<li v-for="item in list" v-on:click='gotoDetail(item.id)'>
+				<div class="li-top">
+					<p>提交时间：{{item.submitTime | time}}</p>
+					<span v-if="item.failureStatus!='UNHANDLED'" class="icon-done">已处理</span>
+					<span v-if="item.failureStatus=='UNHANDLED'" class="icon-not">未处理</span>
+				</div>
+				<div class="li-bottom">
+					<p>{{item.questionContent}}</p>
+					<img src="images/arrow.png">
+				</div>
+			</li>
+			<!-- <li>
+				<div class="li-top">
+					<p>反馈时间：2018-12-19  18：00</p>
+					<em class="icon-not">未处理</em>
+				</div>
+				<div class="li-bottom">
+					<p>社区上传图片，提交时提示：图片显示异常</p>
+					<img src="images/arrow.png">
+				</div>
+			</li> -->
+		</ul>
+
+		<div class="btn-bottom" v-on:click='gotoSubmit()'>
+			<img src="../apphelp/images/icon-submit.png">
+			<p>期待您的意见反馈</p>
+		</div>
+	</div>
+			
+</body>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://h5.48.cn/common/js/dsbridge.js"> </script>
+	<script type="text/javascript" src="../../common/js/vue.js"></script>
+  	<script type="text/javascript" src="../../common/js/common_v1.js"></script>
+	<script src="js/config.js" type="text/javascript" charset="utf-8"></script>	
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</html>
+
+

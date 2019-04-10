@@ -1,0 +1,54 @@
+/*各队背景色*/
+.SII-bg{background-color:#91CCEA;color:#fff;}
+.NII-bg{background-color:#AD85BA;color:#fff;}
+.HII-bg{background-color:#F29600;color:#fff;}
+.X-bg{background-color:#b1d61b ;color:#fff;}
+.FT-bg{background-color:#E10164;color:#fff;}
+.B-bg{background-color:#ff2471;color:#fff;}
+.E-bg{background-color:#0cc8c3;color:#fff;}
+.J-bg{background-color:#006ab6;color:#fff;}
+.G-bg{background-color:#aac913;color:#fff;}
+.NIII-bg{background-color:#ffd700;color:#fff;}
+.Z-bg{background-color:#ea617b;color:#fff;}
+.SIII-bg{background-color:#e70095;color:#fff;}
+.HIII-bg{background-color:#4f008c;color:#fff;}
+.C-bg{background-color:#9e6124;color:#fff;}
+.K-bg{background-color:#ff5043;color:#fff;}
+.YBS-bg{background-color:#a7b0ba;color:#fff;}
+
+/*各队字体颜色*/
+.SII-c{color:#91CCEA;}
+.NII-c{color:#AD85BA;}
+.HII-c{color:#F29600;}
+.X-c{color:#b1d61b;}
+.FT-c{color:#E10164;}
+.B-c{color:#ff2471;}
+.E-c{color:#0cc8c3;}
+.J-c{color:#006ab6;}
+.G-c{color:#aac913;}
+.NIII-c{color:#ffd700;}
+.Z-c{color:#ea617b;}
+.SIII-c{color:#e70095;}
+.HIII-c{color:#4f008c;}
+.C-c{color:#9e6124;}
+.K-c{color:#ff5043;}
+.YBS-c{color:#a7b0ba;}
+
+/*各队边框颜色*/
+.SII-bd{border:solid 1px #91CCEA;}
+.NII-bd{border:solid 1px #AD85BA;}
+.HII-bd{border:solid 1px #F29600;}
+.X-bd{border:solid 1px #b1d61b;}
+.FT-bd{border:solid 1px #E10164;}
+.B-bd{border:solid 1px #ff2471;}
+.E-bd{border:solid 1px #0cc8c3;}
+.J-bd{border:solid 1px #006ab6;}
+.G-bd{border:solid 1px #aac913;}
+.NIII-bd{border:solid 1px #ffd700;}
+.Z-bd{border:solid 1px #ea617b;}
+.SIII-bd{border:solid 1px #e70095;}
+.HIII-bd{border:solid 1px #4f008c;}
+.C-bd{border:solid 1px #9e6124;}
+.K-bd{border:solid 1px #ff5043;}
+.YBS-bd{border:solid 1px #a7b0ba;}
+

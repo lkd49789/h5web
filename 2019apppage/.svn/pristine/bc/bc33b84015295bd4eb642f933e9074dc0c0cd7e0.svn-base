@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>福利内容</title>
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+	<style type="text/css">
+		.detail_will_receive{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<section class="container">
+	<!-- 福利详情页 -->
+		<div class="detail_page">
+			<p class="content_text_title">沃钱包扭蛋机福利内容</p>
+			<ul class="content_list">
+				<!-- <li>1、「口袋48」APP 鸡腿 x48个</li>
+				<li>2、「口袋48」APP 免费扭蛋券 x10张</li>
+				<li>3、「口袋48」APP 8折鸡腿优惠券 x1张</li>
+				<li>4、「口袋48」APP 朵唯用户专属特别徽章 x1枚</li>
+				<li>5、「口袋48」APP 实名注册用户，账户经验+150</li>
+				<li>6、本礼包福利优惠与账号已有福利优惠可叠加</li>
+				<li>注：每个设备号仅限领取一次。</li> -->
+			</ul>
+			<div class="detail_bottom">
+				<div class="detail_did_receive">
+					<div class="detail_received_text">暂无鸡腿可领</div>
+				</div>
+				<div class="detail_will_receive">
+					<div class="detail_code_submit">领取鸡腿</div>
+				</div>
+			</div>
+		</div>
+	<!--弹框-->
+		<div class="mask">
+			<div class="prompt_box">
+				<div class="prompt">该兑换码无法验证<br/>请重新输入</div>
+				<div class="oktit">知道了</div>
+			</div>
+		</div>
+	</section>
+</body>
+<script type="text/javascript" src="https://h5.48.cn/common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<script type="text/javascript" src="https://h5.48.cn/common/js/common_v1.js"></script>
+<script type="text/javascript" src="js/config.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">
+
+
+init();
+function init(){
+	main.getWoPayList(function(dt){
+		//console.log(dt);
+		if(dt.status==200){
+			var html = "";
+			$.each(dt.content,function(i,info){
+				html += "<li>"+(i+1)+"、"+info.date + "     "+info.title;
+			})
+			$(".content_list").html(html);
+			if(dt.content.length == 0){
+				$(".detail_did_receive").show();
+				$(".detail_will_receive").hide();
+			}else{
+				$(".detail_will_receive").show();
+			}
+		}else{
+			main.alert(dt.message);
+		}
+	})
+}
+
+$('.detail_will_receive').click(function(){
+		main.getWoPayJT(function(dt){
+			if(dt.status==200){
+				main.alert("领取成功");
+				init();
+				
+			}else{
+				main.alert(dt.message);
+			}
+		})
+	})
+
+</script>
+</html>

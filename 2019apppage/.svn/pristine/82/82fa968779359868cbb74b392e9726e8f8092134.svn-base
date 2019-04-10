@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>偶像运动会线上互动</title>
+	<link href="common/css/common.css" rel="stylesheet" />
+	<link href="css/votemusic.css" rel="stylesheet" />
+</head>
+<body>
+	<section class="wrapper" v-cloak>
+		<img v-if="status == true" src="img-music/title.png" class="slogan">
+		<ul class="music">
+			<li v-for="item in mainData.aidGorups" v-on:click="chooseTeam(item.group)">
+				<img class="team-logo" v-bind:src="item.group|img">
+				<div>
+					<p>{{item.group}}48 {{item.song}}</p>
+					<p>当前得票 {{item.voteNum}}</p>
+				</div>
+				<img v-if="team==item.group" class="choose" src="img/icon-yes.png">
+				<img v-if="status == false && champion==item.group" class="prize" src="img-music/prize.png">
+			</li>
+			<!-- <li v-on:click="chooseTeam('BEJ')">
+				<img class="team-logo" src="img-music/team-bej.png">
+				<div>
+					<p>BEJ48《元气觉醒》</p>
+					<p>当前得票 {{mainData.aidGorups[1].voteNum}}</p>
+				</div>
+				<img v-if="team=='BEJ'" class="choose" src="img/icon-yes.png">
+				<img v-if="champion==2" class="prize" src="img-music/prize.png">
+			</li>
+			<li v-on:click="chooseTeam('GNZ')">
+				<img class="team-logo" src="img-music/team-gnz.png">
+				<div>
+					<p>GNZ48《抱紧处理》</p>
+					<p>当前得票 {{mainData.aidGorups[2].voteNum}}</p>
+				</div>
+				<img v-if="team=='GNZ'" class="choose" src="img/icon-yes.png">
+				<img v-if="champion==3" class="prize" src="img-music/prize.png">
+			</li> -->
+		</ul>
+		
+		<img src="img-music/timeout.png" v-if="status==false">
+		<div class="time-box" v-if="status==true">
+			<img src="img-music/subtitle.png">
+			<span>离截止时间还剩{{endtime}}</span>
+		</div>
+		<div class="btns" v-if="status==true">
+			<div v-on:click="gotoPay(2)">
+				<img src="img-music/btn-jf.png">
+				<p>使用50积分参加竞猜<br><span>我的积分：{{mainData.userAccount.integral}}</span></p>
+			</div>
+			<div v-on:click="gotoPay(1)">
+				<img src="img-music/btn-jt.png">
+				<p>使用50鸡腿参加竞猜<br><span>我的鸡腿：{{mainData.userAccount.money}}</span></p>
+			</div>
+		</div>
+		<!-- 弹窗 -->
+		<div class="mask" v-if="showpop != 0">
+			<div class="msg" v-if="showpop == 1">
+				<p>你还没有选择应援<br>的曲目哦</p>
+				<span v-on:click="closePop()">知道了</span>
+			</div>
+			<div class="submit-box" v-if="showpop == 2">
+				<p>是否使用50{{paytype | money}}参加竞猜？<br><br><span>提交后无法更改选择</span></p>
+				<span v-on:click="closePop()">返回修改</span>
+				<span v-on:click="submit()">确定</span>
+			</div>
+			<div class="no-money" v-if="showpop == 3">
+				<p>{{paytype | money}}不足</p>
+				<span v-on:click="recharge()">去充值</span>
+				<span v-on:click="closePop()">知道了</span>
+			</div>
+		</div>
+	</section>
+
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="../../common/js/dsbridge.js"></script>
+<script src="../../common/js/vue.js"></script>
+<script src="../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/votemusic.js"></script>
+</html>

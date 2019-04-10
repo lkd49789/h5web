@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<title>账号绑定问题相关</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+	<meta http-equiv="Cache-Control" content="max-age=0">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<link rel="stylesheet" href="https://h5.48.cn/common/css/common_mobile_v1.css">	
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<section class="wrapper">
+		<section class="info">
+			<h1>手机号绑定</h1>
+			<p>当尝试绑定一个手机号时显示“该手机号已经被其他口袋账号绑定”，可能是由于该手机号被用于注册口袋48。</p>
+			<h2>解决方法：</h2>
+			<p>使用这个手机号登录口袋48，选择至少1个社交账号（微博、微信、QQ、百度、丝瓜）绑定。绑定成功后，将手机号解绑。解绑成功后即可将该手机号用于绑定到其他口袋48账号。</p>
+			<h1>社交账号绑定</h1>
+			<p>当尝试绑定一个社交账号（微博、微信、QQ、百度、丝瓜）时显示“该账号已经被其他口袋账号绑定”，可能是由于该社交账号曾经被用来授权登录过口袋48。</p>
+			<h2>解决方法：</h2>
+			<p>使用这个社交账号授权登录口袋48，选择另外的社交账号（微博、微信、QQ、百度、丝瓜）或手机号进行绑定。绑定成功后，将原有的社交账号解绑。解绑成功后即可将该社交账号绑定到其他口袋48账号。</p>
+
+		</section>
+
+	</section>
+</body>
+
+</html>
+

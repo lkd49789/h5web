@@ -1,0 +1,65 @@
+body{
+    max-width: 640px;
+    margin:0 auto;
+    position: relative;
+}
+#app{
+    height: 100%;
+}
+.biddingPage{
+    height: 100%;
+    padding: 2.5rem .83rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background: url(../img-speak/page/biddingPage_bg.jpg) no-repeat;
+    background-size:100% 100%; 
+}
+.biddingPage_title{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 -0.83rem;
+    padding: 0 0.83rem;
+    position: relative;
+    margin-bottom: 2.37rem;
+}
+.biddingPage_title_head{
+    border-radius: 50%;
+    border: 1px solid #4ec1b0;
+    overflow: hidden;
+}
+.biddingPage_title .head{
+    width: 4.16rem;
+    height: 4.16rem;
+}
+.biddingPage_title_name{
+    color:#fff;
+    font-weight: bold;
+    line-height: 4.16rem;
+    margin-left: 1.16rem;
+}
+.biddingPage_title_num{
+    background: url(../img-speak/page/biddingNum_bg.png) no-repeat;
+    background-size:100% 100%;
+    min-width: 12.58rem;
+    position: absolute;
+    right: 0; 
+    height: 2.83rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    color: #fff;
+    line-height: 2.83rem;
+    padding-left: 1.66rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.biddingPage_title_num span{
+    font-weight: bold;
+    margin-right: 5px;
+}
+.biddingPage_content{
+    height: 17.5rem;
+    background: #fff;
+    border-radius: 0.58rem;
+}

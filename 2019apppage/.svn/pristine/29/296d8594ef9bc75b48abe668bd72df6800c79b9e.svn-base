@@ -1,0 +1,95 @@
+body{
+    max-width: 640px;
+    margin:0 auto;
+    position: relative;
+}
+#app{
+    height: 100%;
+}
+.realtime{
+    min-height: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background: url(../img-speak/page/realtime_bg.jpg) no-repeat;
+    background-size:100% 100%; 
+    padding: 1.16rem 1.08rem;
+}
+.title_img{
+    width: 6.66rem;
+    margin-bottom: .83rem;
+}
+.realtime_list{
+    height: 5rem;
+    margin-bottom: 1.16rem;
+    padding: .67rem 1.2rem 0 1.91rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.realtime_top .realtime_list:nth-of-type(1){
+    background: url(../img-speak/page/realtime_list_bg1.png) no-repeat;
+    background-size:100% 100%;
+}
+.realtime_top .realtime_list:nth-of-type(2){
+    background: url(../img-speak/page/realtime_list_bg2.png) no-repeat;
+    background-size:100% 100%;
+}
+.realtime_top .realtime_list:nth-of-type(3){
+    background: url(../img-speak/page/realtime_list_bg3.png) no-repeat;
+    background-size:100% 100%;
+}
+.realtime_list_left{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+}
+.realtime_list_left_img{
+    width: 3.33rem;
+    height: 3.33rem;
+    border-radius:50%; 
+    border: 1px solid #fff;
+}
+.realtime_list_left_name{
+    color: #fff;
+    line-height: 3.8rem;
+    margin-left: .5rem;
+}
+.realtime_list_right{
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: row-reverse;
+            flex-flow: row-reverse;
+}
+.realtime_list_right img{
+    width: 3.33rem;
+    height: 3.33rem;
+    margin-left: .66rem;
+}
+.line img{
+    width: calc(100% + 2.16rem);
+    margin: 0 -1.08rem;
+}
+.realtime_bottom{
+    margin-top: 2rem;
+}
+.realtime_bottom .realtime_list:nth-of-type(1){
+    background: url(../img-speak/page/realtime_list_bg4.png) no-repeat;
+    background-size:100% 100%;
+}
+.realtime_bottom .realtime_list:nth-of-type(2){
+    background: url(../img-speak/page/realtime_list_bg5.png) no-repeat;
+    background-size:100% 100%;
+}
+.realtime_bottom .realtime_list:nth-of-type(3){
+    background: url(../img-speak/page/realtime_list_bg6.png) no-repeat;
+    background-size:100% 100%;
+}

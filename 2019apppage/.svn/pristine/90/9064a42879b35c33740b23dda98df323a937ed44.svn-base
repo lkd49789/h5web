@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>实时榜</title>
+    <link href="common/css/common.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/realtime.css">
+</head>
+<body>
+    <div id='app'>
+        <div class="realtime">
+            <div class="realtime_top">
+                <p><img class="title_img" src="img-speak/page/realtime_title.png" alt=""></p>
+                <div class="realtime_list">
+                    <div class="realtime_list_left">
+                        <img class='realtime_list_left_img' src="img-speak/head_bg.png" alt="">
+                        <div class='realtime_list_left_name'>XXX</div>
+                    </div>
+                    <div class='realtime_list_right'>
+                        <img src="img-speak/page/tags2.png" alt="">
+                        <img src="img-speak/page/tags2.png" alt="">
+                        <img src="img-speak/page/tags2.png" alt="">
+                    </div>
+                </div>
+                <div class="realtime_list"></div>
+                <div class="realtime_list"></div>
+            </div>
+            <p class='line'><img src="img-speak/page/realtime_line.jpg" alt=""></p>
+            <div class="realtime_bottom">
+                <p><img class="title_img" src="img-speak/page/realtime_title.png" alt=""></p>
+                <div class="realtime_list"></div>
+                <div class="realtime_list"></div>
+                <div class="realtime_list"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

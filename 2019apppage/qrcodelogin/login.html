@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8" />
+    <title>确认登录</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="Cache-Control" content="max-age=0">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+    <div class="content">
+        <img src="../../common/images/logo-pocket48-2019.png">
+        <p>口袋48账号登录确认</p>
+        
+    </div>
+    <div class="btns">
+        <button class="btn-login" onclick="login()">确认登录</button>
+        <button class="btn-cancel" onclick="cancel()">取消登录</button>
+    </div>
+    
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<script src="../../common/js/common_v1.js"></script>
+<script type="text/javascript">
+    var token = JSON.parse(dsBridge.call("snhUserInfo")).token
+    function login(){
+        var code = GetQueryString("code")
+        $.ajax({
+            type: "POST",
+            contentType: 'application/json',
+            url: 'https://pocketapi.48.cn/user/api/v1/login/qrcode/appcomfirm',
+            dataType: 'json',
+            data: JSON.stringify({
+                "token": token,
+                "code": code
+            }),
+            success: function (data) {
+                console.log(data);
+                if(data.status == 200){
+                    cancel()
+                }
+                
+            }
+        });
+    }
+
+    function cancel(){
+        dsBridge.call("snhClosePage", "");
+    }
+    
+    </script>
+</html>
+

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>冠军竞猜</title>
+	<link href="../../common/css/common.css" rel="stylesheet" />
+	<link href="../../common/css/teamColor.css" rel="stylesheet" />
+	<link href="css/champion.css" rel="stylesheet" />
+</head>
+<body>
+	<section class="wrapper" v-cloak>
+		<img src="img-champion/title.png" class="title"  v-if="isGuess==false  && isOver==false">
+		<ul class="list">
+			<li v-for="(item,index) in options" v-on:click="chooseJoiner(index)">
+				<img class="team-logo" v-bind:src="item.id | img">
+				<div>
+					<p>{{item.selectWinner}}</p>
+				</div>
+				<img class="icon-result" v-if="item.result==1 && isOver==true" src="img/icon-yes.png">
+				<img class="icon-result" v-if="item.result==2 && isOver==true" src="img/icon-fail.png">
+			</li>
+		</ul>
+		<!-- 提交成功 -->
+		<div class="result-box" v-if="isGuess==true && isShow==false">
+			<img src="img-champion/tip-issubmit.png">
+		</div>
+		<!-- 时间截止 -->
+		<div class="result-box timeout-box" v-if="isGuess==false && isOver==true">
+			<img src="img-champion/tip-timeout.png">
+		</div>
+		<!-- 预测成功 -->
+		<div class="result-box success-box" v-if="isGuess==true && isShow==true && bonus>0">
+			<img src="img-champion/tip-success.png">
+			<span>+{{bonus}}鸡腿</span>
+			<img class="btn-show-success"  v-on:click='showPopBox(6)' src="img-champion/btn-show-success.png">
+		</div>
+		<!-- 预测失败 -->
+		<div class="result-box" v-if="isGuess==true && isShow==true && bonus == 0">
+			<img src="img-champion/tip-fail.png">
+			<img class="btn-show-success"  v-on:click='showPopBox(6)' src="img-champion/btn-show-success.png">
+		</div>
+		<!-- 底部按钮 -->
+		<div class="btns" v-if="isGuess==false && isOver==false">
+			<div v-on:click="showPopBox('jf',1)">
+				<img src="img-music/btn-jf.png">
+				<p>使用50积分参加竞猜<br><span>我的积分：{{money_jf}}</span></p>
+			</div>
+			<div v-on:click="showPopBox('jt',2)">
+				<img src="img-music/btn-jt.png">
+				<p>使用50鸡腿参加竞猜<br><span>我的鸡腿：{{money_jt}}</span></p>
+			</div>
+		</div>
+		<!-- 弹窗 v-on:click='closePop()'-->
+		<div class="mask" v-if="showpop != 0" >
+			<!-- message -->
+			<div class="msg" v-if="showpop == 1">
+				<p>{{tips}}</p>
+				<span v-on:click="closePop()">知道了</span>
+			</div>
+			<!-- 确认支付页 -->
+			<div class="submit-box" v-if="showpop == 2">
+				<p>是否使用50{{paytype | money}}参加竞猜？<br><br><span>提交后无法更改选择</span></p>
+				<span v-on:click="closePop()">返回修改</span>
+				<span v-on:click="submit()">确定</span>
+			</div>
+			<!-- no money -->
+			<div class="no-money" v-if="showpop == 3">
+				<p>{{paytype | money}}不足</p>
+				<span v-on:click="recharge()">去充值</span>
+				<span v-on:click="closePop()">知道了</span>
+			</div>
+			<!-- 选择成员 -->
+			<div class="chooseMember" v-if="showpop == 4">
+				<ul>
+					<li v-for="item in members" v-on:click="chooseMember(item.realName)">{{item.realName}}<img v-bind:src="item.teamLogon"></li>
+					<!-- <li>王欣妍天天</li>
+					<li>王欣妍天天</li>
+					<li>徐佳琪</li>
+					<li>徐佳琪</li>
+					<li>王欣妍天天</li>
+					<li>王欣妍天天</li>
+					<li>徐佳琪</li>
+					<li>徐佳琪</li>
+					<li>王欣妍天天</li> -->
+				</ul>
+			</div>
+			<!-- 选择队伍 -->
+			<div class="chooseTeam" v-if="showpop == 5">
+				<ul>
+					<li v-for="item in teams" :class="item.realName | teamcolor" v-on:click="chooseTeam(item.realName)">{{item.realName}}</li>
+					<!-- <li class="SII-bg">Team SII</li>
+					<li class="NII-bg">Team NII</li>
+					<li class="HII-bg">Team HII</li>
+					<li class="X-bg">Team X</li>
+					<li class="B-bg">Team B</li>
+					<li class="E-bg">Team E</li>
+					<li class="J-bg">Team J</li>
+					<li class="G-bg">Team G</li>
+					<li class="NIII-bg">Team NIII</li>
+					<li class="Z-bg">Team Z</li> -->
+				</ul>
+			</div>
+			<!-- 预测成功列表 -->
+			
+			<div class="success-list" v-if="showpop == 6">
+				<img src="img/close.png" class="btn-close" v-on:click="closePop()">
+				<div>
+					<ul>
+
+						<li v-for="item in teams">
+
+							<img  v-bind:src="item.avatar | avatar">
+							<div>
+								<p>{{item.nicker}}</p>
+								<p>预测时间:{{item.ctime | time}}</p>
+							</div>
+						</li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<script src="../../common/js/vue.js"></script>
+<script src="../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/champion.js"></script>
+</html>

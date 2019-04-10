@@ -1,0 +1,91 @@
+@charset "utf-8";
+/*reset */
+html,body,div,p,span,img,em,i,cite,pre,object,code,del,hr,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,frame,iframe,fieldset,form,table,caption,tbody,thead,tfoot,tr,td,th,label,legend{margin:0;padding:0; border:0; font:17px "Helvetica Neue",Helvetica,sans-serif;}
+input,select,textarea{margin:0;padding:0;color:#666; font-family:"Helvetica Neue",Helvetica,sans-serif; font-size:17px}
+ul,ul li,ol,ol li,dl,dl dd{ list-style:none;}
+table,tr,td{ border-collapse:collapse;}
+pre{white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap;word-wrap: break-word;white-space : normal ;}
+a:hover{ color:#333}
+select,img,input{ vertical-align:middle;}
+/*ClearFix */
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+*html .clearfix {height:1%;}
+*+html .clearfix{height:1%;}
+.clearfix{display:inline-block;}
+.clearfix {display:block;}
+.clear{ clear:both; overflow:hidden;_zoom:1;}
+
+a{color:#666; text-decoration:none}
+a {bblr:expression(this.onFocus=this.blur()); outline:none;}
+.mui-segmented-control .mui-control-item{
+	color: #5B6BC2!important;
+}
+/* scrollbar */
+/*::-webkit-scrollbar{width:6px;height:10px;}
+::-webkit-scrollbar-track-piece{-webkit-box-shadow:inset 2px 2px 6px rgba(0,0,0,.5);-webkit-border-radius:8px;}
+::-webkit-scrollbar-thumb:vertical{background-color:#333;-webkit-border-radius:8px; border:solid 1px #ccc}*/
+
+
+
+html,body { width: 100%; height: 100%; font-family: "微软雅黑",Helvetica,sans-serif;/*background: transparent;*/}
+
+html{font-size:10px}
+@media screen and (min-width:321px) and (max-width:374px){html{font-size:11px}}
+@media screen and (min-width:375px) and (max-width:413px){html{font-size:12px}}
+@media screen and (min-width:414px) and (max-width:499px){html{font-size:13px}}
+@media screen and (min-width:500px) and (max-width:549px){html{font-size:15px}}
+@media screen and (min-width:550px) and (max-width:600px){html{font-size:17px}}
+@media screen and (min-width:601px) and (max-width:719px){html{font-size:20px}}
+@media screen and (min-width:720px) and (max-width:749px){html{font-size:21.5px}}
+@media screen and (min-width:750px) and (max-width:799px){html{font-size:22.5px}}
+@media screen and (min-width:800px){html{font-size:24px}}
+@media screen and (max-height:480px){html{font-size:9px;}}
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+/*各队背景色*/
+.SII-bg{background-color:#91CCEA;color:#fff}
+.NII-bg{background-color:#AD85BA;color:#fff}
+.HII-bg{background-color:#F29600;color:#fff}
+.X-bg{background-color:#b1d61b ;color:#fff}
+.XII-bg{background-color:#00BE6E;color:#fff}
+.B-bg{background-color:#ff2471;color:#fff;}
+.E-bg{background-color:#0cc8c3;color:#fff;}
+.G-bg{background-color:#aac913;color:#fff;}
+.NIII-bg{background-color:#ffd700;color:#fff;}
+.YUBEI-bg{background-color: #a7b0ba;color: #fff;}
+.FT-bg{background-color: #e00063;color: #fff;}
+
+/*各队字体颜色*/
+.SNH-SII-c{color:#91CCEA;}
+.SNH-NII-c{color:#AD85BA;}
+.SNH-HII-c{color:#F29600;}
+.SNH-X-c{color:#b1d61b;}
+.SNH-XII-c{color:#00BE6E;}
+.BEJ-B-c{color:#ff2471;}
+.BEJ-E-c{color:#0cc8c3;}
+.GNZ-G-c{color:#aac913;}
+.GNZ-NIII-c{color:#ffd700;}
+
+/*各队边框颜色*/
+.SII-bd{border:solid 1px #91CCEA;color:#91CCEA;}
+.NII-bd{border:solid 1px #AD85BA;color:#AD85BA;}
+.HII-bd{border:solid 1px #F29600;color:#F29600;}
+.X-bd{border:solid 1px #b1d61b;color:#b1d61b;}
+.XII-bd{border:solid 1px #00BE6E;color:#00BE6E;}
+.B-bd{border:solid 1px #ff2471;color:#ff2471;}
+.E-bd{border:solid 1px #0cc8c3;color:#0cc8c3;}
+.G-bd{border:solid 1px #aac913;color:#aac913;}
+.NIII-bd{border:solid 1px #ffd700;color:#ffd700;}
+.YUBEI-bd{border:solid 1px #a7b0ba;}
+.FT-bd{border:solid 1px #e00063;}
+
+
+
+.SNH-s-bd-memberName::after{background-color:#91CCEA;}
+.SNH-n-bd-memberName::after{background-color:#AD85BA;}
+.SNH-h-bd-memberName::after{background-color:#F29600;}
+.SNH-x-bd-memberName::after{background-color:#00BE6E;}
+.SNH-x2-bg-memberName::after{background-color:#03c070;}
+.BEJ-b-bg-memberName::after{background-color:#ff2471;}
+.BEJ-e-bg-memberName::after{background-color:#0cc8c3;}
+.GNZ-g-bg-memberName::after{background-color:#aac913;}
+.GNZ-n-bg-memberName::after{background-color:#ffd700;}

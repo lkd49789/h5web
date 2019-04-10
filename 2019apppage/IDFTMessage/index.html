@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>发送留言</title>
+	<link href="../../common/css/common.css" rel="stylesheet" />
+	<link href="css/index.css" rel="stylesheet" />
+</head>
+<body>
+
+	<section id="wrapper">
+		<!-- 顶部banner -->
+		<div class="banner-box">
+			<img class="bg-top" src="img/bg-top.jpg">
+			<img class="title" src="img/title.png">
+			<img class="btn-go-msg"  v-on:click="gotomemberlist()" src="img/btn-go-msg.png">
+			<img class="btn-rule-1"  v-on:click="gotorule()" src="img/btn-rule-1.png">
+		</div>
+		<!-- top4信息 及最新信息 -->
+		<div class="msg-box">
+			<!-- 收到信息最多的成员 -->
+			<div v-if="newMsg4.length != 0" class="m-top4">
+
+				<li v-for='(item,index) in top4Member' v-on:click="gotosendmsg(index)">
+					<div class="avatar">
+						<img :src="item.avatar">
+					</div>
+					<p class="msg-num">{{item.count}}<img src="img/icon-msg.png"></p>
+					<p>{{item.memberName}}</p>
+				</li>
+				<!-- <li>
+					<div class="avatar">
+						<img src="http://www.snh48.com/images/member/zp_10087.jpg?ram=1541160880293">
+					</div>
+					<p class="msg-num">1235<img src="img/icon-msg.png"></p>
+					<p>谢蕾蕾</p>
+				</li>
+				<li>
+					<div class="avatar">
+						<img src="http://www.snh48.com/images/member/zp_10087.jpg?ram=1541160880293">
+					</div>
+					<p class="msg-num">1235<img src="img/icon-msg.png"></p>
+					<p>谢蕾蕾</p>
+				</li>
+				<li>
+					<div class="avatar">
+						<img src="http://www.snh48.com/images/member/zp_10087.jpg?ram=1541160880293">
+					</div>
+					<p class="msg-num">1235<img src="img/icon-msg.png"></p>
+					<p>谢蕾蕾</p>
+				</li> -->
+			</div>
+			<!-- 最新4条信息 -->
+			<div  class="msg-top4">
+				<div class='scroll-wrapper'>
+					<div  class="scroll-box">
+						<img v-if="newMsg4.length == 0" class="empty" src="img/empty.png">
+						<ul>
+							<li v-for='item in newMsg4'>
+								<p class="u-info">
+									<img v-bind:src="item.commentResult.avatar">
+									{{item.commentResult.nicker}}对<span class="m-name">{{item.commentResult.memberName}}</span>说
+								</p>
+								<p class="msg">{{item.commentResult.comment}}</p>
+							</li>
+							<!-- <li>
+								<p class="u-info">
+									<img src="img/head.png">
+									粉丝对<span class="m-name">小偶像</span>说
+								</p>
+								<p class="msg">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+							</li>
+							<li>
+								<p class="u-info">
+									<img src="img/head.png">
+									粉丝对<span class="m-name">小偶像</span>说
+								</p>
+								<p class="msg">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+							</li>
+							<li>
+								<p class="u-info">
+									<img src="img/head.png">
+									粉丝对<span class="m-name">小偶像</span>说
+								</p>
+								<p class="msg">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+							</li> -->
+						</ul>
+					</div>
+				</div>
+			</div>
+			<p class="tip"  v-on:click="gotomsglist()">查看更多留言</p>
+		</div>
+		<!-- 投稿banner -->
+		<div class="tg-banner">
+			<img src="img/bg-banner.png">
+			<div class="tg-banner-img">
+				<img class="title2" src="img/title2.png">
+				<img class="tg-txt" src="img/tg-txt.png">
+				<img class="btn-go-tg"  v-on:click="gototougao()" src="img/btn-go-tg.png">
+				<img class="btn-rule-2"  v-on:click="gotorule()" src="img/btn-rule-2.png">
+			</div>
+		</div>
+		<!-- 最新投稿 -->
+		<div class="tg-content">
+			<div class="tg-list">
+				<img v-if="top4tg.length == 0" class="empty" src="img/empty.png">
+				<ul>
+					<li v-for='item in top4tg' v-on:click="gototginfo(item.materialInfo.materialType,item.materialInfo.materialId)">
+						<div class="tg-top">
+							<img v-bind:src="item.materialInfo.avatar">
+							<span>{{item.materialInfo.nicker}}</span>
+							<span class="ctime">{{item.materialInfo.ctime}}</span>
+						</div>
+						<div class="tg-bottom">
+							<div class="cover"><img v-bind:src="item.materialInfo.previewPath"></div>
+							
+							<div class="cover-right">
+								<p>{{item.materialInfo.title}}</p>
+								<div class="like-num">
+									<span><img src="img/icon-like.png">{{item.materialInfo.hot}}</span>
+									<span><img src="img/icon-comment.png">{{item.materialInfo.comments}}</span>
+								</div>
+								<span class="tg-m-name">{{item.materialInfo.tag[0].name}}</span>
+							</div>
+						</div>
+					</li>
+					<!-- <li>
+						<div class="tg-top">
+							<img src="img/head.png">
+							<span>粉丝用户名</span>
+							<span class="ctime">发布时间</span>
+						</div>
+						<div class="tg-bottom">
+							<div class="cover"><img src="img/cover.png"></div>
+							
+							<div class="cover-right">
+								<p>投稿标题投稿标题投稿标题</p>
+								<div class="like-num">
+									<span><img src="img/icon-like.png">5656</span>
+									<span><img src="img/icon-comment.png">5656</span>
+								</div>
+								<span class="tg-m-name">谢蕾蕾</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="tg-top">
+							<img src="img/head.png">
+							<span>粉丝用户名</span>
+							<span class="ctime">发布时间</span>
+						</div>
+						<div class="tg-bottom">
+							<div class="cover"><img src="img/cover.png"></div>
+							
+							<div class="cover-right">
+								<p>投稿标题投稿标题投稿标题</p>
+								<div class="like-num">
+									<span><img src="img/icon-like.png">5656</span>
+									<span><img src="img/icon-comment.png">5656</span>
+								</div>
+								<span class="tg-m-name">谢蕾蕾</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="tg-top">
+							<img src="img/head.png">
+							<span>粉丝用户名</span>
+							<span class="ctime">发布时间</span>
+						</div>
+						<div class="tg-bottom">
+							<div class="cover"><img src="img/cover.png"></div>
+							
+							<div class="cover-right">
+								<p>投稿标题投稿标题投稿标题</p>
+								<div class="like-num">
+									<span><img src="img/icon-like.png">5656</span>
+									<span><img src="img/icon-comment.png">5656</span>
+								</div>
+								<span class="tg-m-name">谢蕾蕾</span>
+							</div>
+						</div>
+					</li> -->
+				</ul>
+			</div>
+			<p class="tip" v-on:click="gototougaolist()">查看更多投稿</p>
+		</div>
+
+	</section>
+
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="../../common/js/common.js"></script>
+<script src="../../common/js/vue.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/index.js"></script>
+</html>

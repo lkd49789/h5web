@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>福利内容</title>
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+	<style>
+		.detail_code_submit,.detail_code_sucess{display: none;margin-left: 5%;}
+		.detail_bottom{padding-bottom: 20%;}
+	</style>
+</head>
+<body>
+	<section class="container">
+	<!-- 福利详情页 -->
+		<div class="detail_page">
+			<p class="content_text_title">礼包内容</p>
+			<ul class="content_list">
+				<li>1.视频直播特权<p>专属徽章，上线通知</p></li>
+				<li>2.票务、周边订购通道<p>进行网上商城操作，将通过专属通道进行操作。速度更快，抢票更容易，每个手机号码仅限一次购买。</p></li>
+				<li>3.鸡腿返还优惠<p>年付1688元及488元且正常缴费用户，开卡次月10日前按套餐价格分别一次性返还1680个鸡腿或480个鸡腿，不再额外月度返还。</p><p>月付且正常缴费用户，连续在网第7个月起，每月10日前返还指定数量鸡腿</p></li>
+				<li>4.定向流量减免优惠<p>访问口袋48内置内容实行定向流量减免（点击到外部链接不减免）。</p></li>
+				<li>更多专属特权<div class="oli"></div></li>
+			</ul>
+			<img src="images/bt1_info1.png" class="bt1_info1">
+			<div class="detail_bottom">
+				<div class="detail_did_receive">
+					<div class="detail_received_text">该礼包已领取</div>
+				</div>
+				<div class="detail_will_receive">
+					<div class="detail_code_submit">领取礼包</div>
+					<div class="detail_code_sucess">领取礼包</div>
+				</div>
+			</div>
+		</div>
+	<!--弹框-->
+		<div class="mask">
+			<div class="prompt_box">
+				<div class="prompt">该兑换码无法验证<br/>请重新输入</div>
+				<div class="oktit">知道了</div>
+			</div>
+		</div>
+	</section>
+</body>
+<script type="text/javascript" src="https://h5.48.cn/common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<script type="text/javascript" src="https://h5.48.cn/common/js/common_v1.js"></script>
+<script type="text/javascript" src="js/config.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">
+init();
+function init(){
+	main.ifSure(function(dt){
+		//console.log(dt);
+		if(dt.status==200){
+			if(dt.content.starWoUser == true){//是星沃卡用户
+				if(dt.content.activate == false){//没领取
+					$('.detail_will_receive,.detail_code_sucess').show();
+					$('.detail_did_receive').hide();
+				}else{//已领取
+					$('.detail_will_receive,.detail_code_sucess').hide();
+					$('.detail_did_receive,.detail_code_submit').show();
+				}
+			}else{//不是星沃卡用户
+				$('.detail_will_receive,.detail_code_submit').show();
+				$('.detail_code_sucess').hide();
+			}
+		}else{
+			main.alert(dt.message);
+		}
+	})
+}
+	
+	$('.detail_will_receive').on('click','.detail_code_sucess',function(){
+		main.activated(function(dt){
+			if(dt.status==200){
+				main.alert("领取成功");
+				init();
+				// $('.detail_will_receive').hide();
+				// $('.detail_did_receive').show();
+				// window.web.tagAsXingWoCardUser("12345");
+			}else{
+				main.alert(dt.message);
+			}
+		})
+	})
+
+</script>
+</html>

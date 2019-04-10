@@ -1,0 +1,335 @@
+*{margin:0;padding: 0}
+[v-cloak]{
+    display: none
+}
+input{
+    border: 0px;
+    outline: none;
+}
+body{
+	max-width: 640px;
+	margin:0 auto;
+    position: relative;
+}
+[v-cloak]{
+    display: none;
+}
+.wrap{
+    background: url(../img-speak/bg.jpg) no-repeat;
+    background-size:cover; 
+    position: relative;
+    padding: 1.125rem .83rem 1.66rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.wrap_sole{
+    position: relative;
+}
+.wrap_sole>img{
+    margin: 0 -0.83rem;
+    width: calc(100% + 1.66rem);
+}
+.wrap_sole .sole_rule{
+    position: absolute;
+    top: 1.46rem;
+    right: 0;
+}
+.wrap_sole .bidding{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: column-reverse ;
+            flex-flow: column-reverse ;
+}
+.sole_rule img,.wrap_tags_img img{
+    width: 7rem;
+    height: 2.2rem;
+    display: block;
+    margin-bottom: 0.91rem;
+}
+.sole_rule .bidding_img{
+    display: none;
+}
+.wrap_sole .bidding .bidding_img{
+    display: block;
+}
+/*选择偶像，输入寄语*/
+.wrap_idol{
+    background: #fff;
+    border-radius: .83rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    height: 12.25rem;
+    margin-top: .83rem;
+    padding: 1.25rem 0.91rem 0 ;
+    font-size: 1.4rem;
+}
+.wrap_idol_top_head{
+    margin-bottom: 1rem;
+}
+.wrap_idol_top_head .head{
+    width: 4.16rem;
+    height: 4.16rem;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid #f3f3f3;
+}
+.wrap_idol_top_head .name{
+    margin-left: .83rem;
+    font-weight: bold;
+    color: #035ebd;
+}
+
+.wrap_idol_top_head .name2{
+    color: #4ec1b0;
+}
+
+.wrap_idol_bottom{
+    border-radius: .75rem; 
+}
+.wrap_idol_bottom input{
+    text-align: center;
+    background: #f6f6f6;
+    border-radius: .75rem; 
+    width: 100%;
+    height: 3.95rem;
+    border: 1px solid #f0f0f0;
+    line-height: 3.95rem;
+    font-size: 1.6rem;
+}
+.wrap_idol_bottom .sendWord{
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 500;
+}
+/*竞价*/
+.wrap_bidding{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: .83rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.wrap_bidding_left{
+    border-radius: .83rem;
+    /* width: 18rem; */
+    width: 68%;
+    height: 3.66rem;
+    line-height: 3.66rem;
+    background: #fff;
+    border-radius: .83rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.wrap_bidding_left input{
+    /* width: 18rem; */
+    width: 100%;
+    height: 3.66rem;
+    line-height: 3.66rem;
+    background: #fff;
+    border-radius: .83rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.wrap_bidding_right{
+    width: 30%;
+    /* width: 10.83rem; */
+    background: #ccc url(../img-speak/bidding_bg.png) no-repeat ;
+    background-size:100% 100%;
+    border-radius: .83rem;
+    color:#fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.wrap_bidding_right p,.wrap_bidding_right span{
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+
+}
+.wrap_bidding_right .p{
+    font-size: 1.5rem;
+}
+.wrap_bidding .disable{
+    background: #ccc;
+}
+/*个性化贴纸*/
+.wrap_tags{
+    background: url(../img-speak/tags_bg.png) no-repeat;
+    background-size:100% 100%; 
+    height: 8rem;
+    margin-top:.83rem; 
+    position: relative;
+}
+.wrap_tags .wrap_tags_img{
+    position: absolute;
+    right: 0;
+    top: .75rem;
+}
+.wrap_tags_img img{
+    display: block;
+    margin-top:.7rem;
+}
+/*运动项目*/
+.wrap_exercise{
+    margin-top: .7rem;
+}
+.wrap_exercise ul li{ 
+    height: 5rem;
+    margin-top: .58rem;
+    padding: .67rem 1.2rem 0 1.95rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.wrap_exercise ul li>div{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.wrap_exercise_li_left{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+}
+.wrap_exercise_li_left img{
+    border-radius: 50%;
+    border: 1px soli #fff;
+    width: 3.33rem;
+    height: 3.33rem;
+    margin-right: .54rem;
+}
+.wrap_exercise_li_left .idolName{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.wrap_exercise_li_left .items{
+    font-size: 1.2rem
+}
+.wrap_exercise_li_right{
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: row-reverse;
+            flex-flow: row-reverse;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+}
+.wrap_exercise_li_right img{
+    width: 3.25rem;
+    height: 3.25rem;
+    margin-left: .67rem;
+}
+.wrap_exercise_li_right img:nth-last-of-type(1){
+    margin-left: 0;
+}
+.wrap_exercise ul li:nth-child(1){
+    margin-top:0;
+}
+/*选中的背景图片*/
+.wrap_exercise ul .li:nth-child(1){
+    background: url(../img-speak/select_1.png) no-repeat !important;
+    background-size: 100% 100% !important;
+}
+.wrap_exercise ul .li:nth-child(2){
+    background: url(../img-speak/select_2.png) no-repeat !important;
+    background-size: 100% 100% !important;
+}
+.wrap_exercise ul .li:nth-child(3){
+    background: url(../img-speak/select_3.png) no-repeat !important;
+    background-size: 100% 100% !important;
+}
+.wrap_exercise ul .li:nth-child(4){
+    background: url(../img-speak/select_4.png) no-repeat !important;
+    background-size: 100% 100% !important;
+}
+.wrap_exercise ul .li:nth-child(5){
+    background: url(../img-speak/select_5.png) no-repeat !important;
+    background-size: 100% 100% !important;
+}
+.wrap_exercise ul .li:nth-child(6){
+    background: url(../img-speak/select_6.png) no-repeat !important;
+    background-size: 100% 100% !important;
+}
+.wrap_exercise ul .li:nth-child(7){
+    background: url(../img-speak/select_7.png) no-repeat !important;
+    background-size: 100% 100% !important;
+}
+
+
+/*全程唯一定制化贴纸选择偶像*/
+.selectIdol{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.6);
+    top: 0;
+    left:0;
+}
+.selectIdol .content{
+    width: 80%;
+    height: 25rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+    background: #fff;
+    border-radius: 1rem;
+    overflow-y: scroll;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 1.5rem;
+    -ms-flex-flow:wrap;
+        flex-flow:wrap; 
+    padding-top: 1.67rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.idolwrap{
+    width: calc(50% - .63rem);
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+.selectIdol .content .idol{
+    background: #f6f6f6;
+    border-radius: 2rem;
+    height: 2rem;
+    padding: 1rem 1.8rem;
+    margin-left: 1.25rem;
+    color: #585858;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+.selectIdol .content .idol img{
+    width:1.75rem;
+    height: 1rem;
+    margin-left: 3px;
+}

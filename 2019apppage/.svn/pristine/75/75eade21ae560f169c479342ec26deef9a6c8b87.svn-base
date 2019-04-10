@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+*{margin:0;padding:0}
+body{font-size:15px;font-family:arial;-webkit-text-size-adjust:none;line-height:1.62;}
+
+table{border-collapse:collapse;border-spacing:0}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+ul,ol,li{list-style:none;}
+em{font-style:normal}
+img{border:none;}
+input,img{vertical-align:middle;}
+q:before, q:after { content:'' }
+.fn-clear:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+.fn-clear{*zoom:1}
+a{color:#fff;;text-decoration:none;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+/*a:active{color:#333;-webkit-tap-highlight-color:rgba(0,0,0,0);}*/
+section,aside,header,footer,hgroup,article{display:block}
+
+
+html { font-size:1em;-webkit-tap-highlight-color:rgba(0,0,0,0); -webkit-tap-highlight:rgba(0,0,0,0);-webkit-text-size-adjust:none;}
+
+label { cursor:pointer}
+a:link, a:visited { text-decoration:none;background: transparent;}
+input,button,select,textarea{outline:none} textarea{resize:none;}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, blockquote, big, body, center, canvas, caption, cite, code, command, datalist, dd, del, details, dfn, dl, div, dt, em, embed, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, keygen, label, legend, li, meter, nav, menu, object, ol, output, p, pre, progress, q, s, samp, section, small, span, source, strike, strong, sub, sup, table, tbody, tfoot, thead, th, tr, tdvideo, tt,
+u, ul, var { margin:0; padding:0}
+
+article, aside, footer, header, hgroup, nav, section, figure, figcaption { display: block} 
+
+
+body, input, button, select, textarea, sub{font-family: "微软雅黑"; font-size: 14px;}
+em, cite, address, optgroup { font-style:normal}
+kbd, samp, code { font-family:monospace}
+
+img, input, button, select, textarea { vertical-align:middle}
+ul, ol { list-style:none}
+img, fieldset { border:0}
+abbr, acronym { cursor:help; border-bottom:1px dotted black}
+table {	width:100%; border-spacing:0; border:0}
+table th, table td { border:0}
+legend, hr { overflow:hidden; position:absolute; top:0; left:0}
+legend, hr, caption { visibility:hidden; font-size:0; width:0; height:0; line-height:0}
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+
+html,body { width: 100%; font-family: "微软雅黑",Helvetica,sans-serif;background: transparent;}
+
+
+html{font-size:10px}
+
+/*提示浮框*/
+.message-alert{
+	width: 300px;
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 30px 0;
+	text-align: center;
+	position: fixed;
+	left: 300px;
+	top: 300px;
+	z-index: 10000;
+}
+.message-alert p{
+	padding: 0 20px;
+	margin-bottom: 20px;
+}
+.message-alert .btn-close{
+	position: absolute;
+    right: -11px;
+    top: -10px;
+    z-index: 100;
+    cursor: pointer;
+}
+.message-alert .btn-ok{
+
+	margin-top: 30px;
+	background-color: #839cff;
+	padding: 5px 20px;
+	color: #fff;
+	border-radius: 7px;
+}
+.msk{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	background-color: rgba(0,0,0,.6);
+	z-index: 100;
+	display: none;
+}
+button{cursor: pointer;}
+
+
+
+@media screen and (min-width:321px) and (max-width:374px){html{font-size:11px}}
+@media screen and (min-width:375px) and (max-width:413px){html{font-size:12px}}
+@media screen and (min-width:414px) and (max-width:499px){html{font-size:13px}}
+@media screen and (min-width:500px) and (max-width:549px){html{font-size:15px}}
+@media screen and (min-width:550px) and (max-width:600px){html{font-size:17px}}
+@media screen and (min-width:601px) and (max-width:719px){html{font-size:20px}}
+@media screen and (min-width:720px) and (max-width:749px){html{font-size:21.5px}}
+@media screen and (min-width:750px) and (max-width:799px){html{font-size:22.5px}}
+@media screen and (min-width:800px){html{font-size:24px}}
+@media screen and (max-height:480px){html{font-size:9px;}}
+

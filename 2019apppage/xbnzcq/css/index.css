@@ -1,0 +1,10 @@
+body{-webkit-overflow-scrolling: touch;}
+section{
+	background:url(../img/bg.jpg) center top;
+	background-size: cover;
+	text-align: center;
+	padding-bottom: 5%;
+	-webkit-overflow-scrolling: touch; 
+	min-height: 100%;
+}
+.container img{width: 100%;}

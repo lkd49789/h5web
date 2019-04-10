@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<title>关于我们</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+	<meta http-equiv="Cache-Control" content="max-age=0">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<link rel="stylesheet" href="https://h5.48.cn/common/css/common_mobile_v1.css">
+	<link rel="stylesheet" href="css/index.css">	
+</head>
+<body>
+	<section class="wrapper">
+		<section class="info">
+			<h1>口袋48</h1>
+			<p>中国大型女子偶像团体SNH48 Group的官方APP。</p>
+			<p>这里为偶像们提供了一个展示自己的平台，包括公演直播、偶像直播间、偶像电台等内容。</p>
+			<p>同时粉丝们可以通过聚聚房间、偶像翻牌、直播弹幕等多种方式和偶像们进行近距离互动交流。</p>
+			<p>粉丝也可以在这里找到志同道合支持同一偶像、拥有相同兴趣爱好的小伙伴，和其他粉丝进行交流互动。</p>
+			<p>此外，口袋48还整合了视频、音乐、偶像动态、偶像行程等功能，让大家能更全面、快捷、方便地了解SNH48 Group的偶像们。</p>
+			<p>口袋48正在努力打造一个偶像、粉丝互相交流、一起玩游戏、自我展现的社交平台，让全世界各地粉丝打破地理位置的距离障碍，更好地聚在一起。</p>
+			<p>口袋48里更鲜活真实的SNH48 Group，等你来关注！</p>
+			<h1>SNH48 Group</h1>
+			<p>华语区大型女子偶像团体，隶属于上海丝芭文化传媒集团有限公司，是基于互联网思维和参与感精神、O2O构架和“可面对面偶像”运营理念的近距离养成式造星平台，其发展目标是在全球十四亿中国人中甄选优才，充分运用互联网和社交网络时代最具想象力，创新性和前瞻性的造星理念和技术手段, 积极培育兼具音乐舞蹈和影视表演才艺的全方位偶像艺人, 全力打造健康向上、充满青春活力、具备国际影响力的全球华语区第一女子偶像团体，并使之成为互联网和社交传媒时代中国偶像文化和粉丝经济产业的新标杆。 </p>
+
+		</section>
+
+	</section>
+</body>
+
+</html>
+

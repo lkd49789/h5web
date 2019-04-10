@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>吐槽实例化</title>
+    <link href="common/css/common.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/speak.css">
+</head>
+<body>
+    <div class="wrap">
+        <!--顶部全程唯一定制贴纸-->
+           <div class='wrap_sole'>
+                <img src="img-speak/sole.png" alt="banner">
+                <div class='sole_rule'>
+                    <img @click='speakRuleClick("rulePageOne")' src="img-speak/sole_rule.png" alt="详细规则">
+                    <img class='bidding_img' src="img-speak/bidding.png" alt="中标贴纸">
+                </div>
+           </div> 
+           <!--选择偶像，输入寄语-->
+           <div class='wrap_idol'>
+                <div class='wrap_idol_top'>
+                    <div class='wrap_idol_top_head'>
+                        <img class='head' src="img-speak/head_bg.png" alt="">
+                        <span :class='["name",{"name2":show}]'>请选择一个偶像</span>
+                    </div>
+                </div>
+                <div class='wrap_idol_bottom'>
+                    <input type="text" placeholder="在这里留下你的寄语，最多10个汉字。" v-model.trim='sendWord'>
+                    <!-- <p class='sendWord'>输入的寄语输入的寄语</p> -->
+                </div>
+           </div>
+           <!--竞价-->
+           <div class='wrap_bidding'>
+               <div class='wrap_bidding_left'>
+                   <input type="number" placeholder="输入你竞价的鸡腿" v-model.number.trim='num'>
+               </div>
+               <div class='wrap_bidding_right'>
+                   <img src="img-speak/bidding_text.png" alt="竞价图片">
+               </div>
+           </div>
+           <!--个性化贴纸-->
+           <div class='wrap_tags'>
+               <!-- <img src="img-speak/tags_bg.png" alt=""> -->
+               <div class='wrap_tags_img'>
+                    <img @click='speakRuleClick("rulePageTwo")' src="img-speak/sole_rule.png" alt="详细规则">
+                    <img @click='realtime' src="img-speak/ranking.png" alt="实时榜">
+                </div>
+           </div>
+           <!--运动项目-->
+           <div class='wrap_exercise'>
+               <ul>
+                   <li class='li'>
+                       <idolcontent name='姓名' item='项目' :imgnum='2'></idolcontent>
+                   </li>
+                   <li></li>
+                   <li></li>
+                   <li></li>
+                   <li></li>
+                   <li></li>
+                   <li></li>
+               </ul>
+           </div>
+    </div>
+</body>
+<!-- <script src="../../common/js/jquery.min.js"></script> -->
+<script src="../../common/js/vue.js"></script>
+<!-- <script src='https://cdn.bootcss.com/vue/2.6.10/vue.js'></script> -->
+<script src="js/speak.js"></script>
+</html>

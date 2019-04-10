@@ -1,0 +1,220 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+html,body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	max-width: 640px;
+	margin: 0 auto;
+	background-color: #f6f6f6;
+}
+
+ul li {
+	list-style: none;
+}
+
+img {
+	width:100%;
+	border-radius: 10px;
+}
+
+hr {
+	color: #e8e8e8;
+}
+
+.container{
+	width: 100%;
+	height: 100%;
+}
+
+.container > img{width: 50%;margin-left: 25%;margin-top: 50%;}
+/**
+  列表
+  */
+ .list {
+ 	width: 90%;
+ 	height: 90%;
+ 	padding: 5%;
+ 	text-align: center;
+ }
+ .list li{
+ 	position: relative;
+ }
+
+ .list_receive_button {
+ 	position: absolute;
+ 	left: 50%;
+ 	bottom: 35px;
+ 	margin-left: -50px;
+ 	width: 100px;
+ 	height: 25px;
+ 	background-color: #f2f2f2;
+ 	display: inline-block;
+ 	border-radius: 10px;
+ 	line-height: 2rem;
+ 	color: #00b98c;
+ 	line-height: 25px;
+ 	border:1px solid #00b98c;
+ 	font-size: 14px;
+ }
+
+/**
+福利详情页
+  */
+.detail_page {
+	width: 100%;
+	height: 100%;
+	/* display: none; */
+	position: absolute;
+	left: 0;
+	top:0;
+	background-color:#f6f6f6;
+}
+
+.content_text_title {
+	padding: 15px 0 15px 20px;
+	font-size: 17px;
+	border-bottom: 1px solid #e8e8e8;
+	color:#363d4d;
+}
+.content_list{
+	margin-top: 20px;
+	padding-left: 20px;
+	color:#363d4d;
+	font-size: 14px;
+}
+.content_list li{
+	margin-bottom: 6px;
+}
+
+.detail_bottom {
+	width: 100%;
+	position: relative;
+	margin: auto;
+	bottom: 40px;
+	text-align: center;
+	margin-top:60px;
+}
+
+.detail_received_text {
+	font-size: 15px;
+	color: #757474;
+	margin-bottom: 5px;
+}
+
+.detail_received_time {
+	font-size: 11px;
+	color: #c4c4c4;
+}
+
+.detail_code_input {
+	position: relative;
+	width: 90%;
+	height: 35px;
+	line-height: 35px;
+	border-radius: 5px;
+	border:1px solid #e8e8e8;
+	background-color: #fff;
+	color:#000;
+	text-align: center;
+	font-size: 15px;
+	border-radius:4px;
+	border:1px solid #DBDBDB ;
+	outline: none;
+}
+
+.detail_code_submit {
+	position: relative;
+	width: 90%;
+	height: 30px;
+	line-height: 30px;
+	top: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #7496f6;
+	display: inline-block;
+	border-radius: 5px;
+	color:#e8e8e8;
+}
+.detail_code_sucess{
+	position: relative;
+	width: 90%;
+	height: 30px;
+	line-height: 30px;
+	top: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #5c6bc2;
+	display: inline-block;
+	border-radius: 5px;
+	color:#fff;
+}
+.code_active{
+	background-color: #5c6bc2!important;
+	color:#fff!important;;
+}
+
+.detail_will_receive{
+	/* display: none; */
+}
+.detail_did_receive{
+	 display: none; 
+}
+.detail_page{
+	 /* display: none;  */
+}
+
+
+/* 弹框 */
+.mask{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color:rgba(0,0,0,.5);
+	display: none;
+}
+.prompt_box{
+	background-color: #fff;
+	text-align: center;
+	width: 70%;
+	left: 15%;
+	position: absolute;
+	border-radius: 8px;
+	top:30%;
+}
+.prompt{
+	padding: 25px 0;
+	font-size: 15px;
+	border-bottom: 1px solid #c4c4c4;
+}
+.oktit{
+	font-size: 15px;
+	color: #007aff;
+	padding: 15px 0;
+}
+
+.content_list li{
+	font-size: 16px;
+	width: 90%;
+}
+.content_list li p{
+	font-size: 14px;
+	margin-top: 5px;
+	width: 100%;
+}
+
+.welfareList li{
+	margin-bottom: 10px;
+}
+.bt1_info1{
+	width: 90%;
+	margin-left: 5%;
+	/* display: none; */
+}

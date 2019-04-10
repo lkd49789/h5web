@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>吐槽实例化</title>
+    <link href="../../common/css/common.css" rel="stylesheet" />
+    <link href="css/bidding.css" rel="stylesheet" />
+</head>
+<body>
+    <div id='app'>
+        <div class='biddingPage'>
+                <div class='biddingPage_title'>
+                    <div class='biddingPage_title_head'>
+                        <div class='headWrap'>
+                            <img class='head' :src="bidding.avatarMember" >
+                        </div>
+                    </div>
+                    <span class='biddingPage_title_name' v-text='bidding.nickerMember'></span>
+                    <div class='biddingPage_title_num'><span v-text='bidding.price'>}</span>中标鸡腿</div>
+                </div>
+                <div class='biddingPage_content'>
+                    <div class='biddingPage_content_user'>
+                        <img :src="bidding.avatar" alt="">
+                        <div class="userName" v-text='bidding.nicker'></div>
+                    </div>
+                    <p class='leaveText' v-text='bidding.content'></p>
+                </div>
+           </div>
+    </div>
+</body>
+<script src="../../common/js/vue.js"></script>
+<script>
+    var vm=new Vue({
+        el:"#app",
+        data:{
+            bidding:[]
+        },
+        created () {
+            this.bidding=JSON.parse(localStorage.getItem('bidding'))
+        }
+    })
+</script>
+</html>

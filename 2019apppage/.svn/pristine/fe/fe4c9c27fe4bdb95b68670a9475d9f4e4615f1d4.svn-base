@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>吐槽实例化</title>
+    <link href="common/css/common.css" rel="stylesheet" />
+    <link href="css/bidding.css" rel="stylesheet" />
+</head>
+<body>
+    <div id='app'>
+        <div class='biddingPage'>
+                <div class='biddingPage_title'>
+                    <div class='biddingPage_title_head'>
+                        <img class='head' src="img-speak/head_bg.png" >
+                    </div>
+                    <span class='biddingPage_title_name'>XXXXX</span>
+                    <div class='biddingPage_title_num'><span>{{num}}</span>中标鸡腿</div>
+                </div>
+                <div class='biddingPage_content'>
+                    <img src="" alt="">
+                </div>
+           </div>
+    </div>
+</body>
+<script src="../../common/js/vue.js"></script>
+<script>
+    var vm=new Vue({
+        el:"#app",
+        data:{
+            num:111
+        },
+        methods:{
+            /*获取url参数*/
+            getUrlParam(name) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+                var r = window.location.search.substr(1).match(reg); //匹配目标参数
+                if (r != null) return decodeURI(r[2]);
+                return null; //返回参数值
+            }
+        }
+    })
+</script>
+</html>

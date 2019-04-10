@@ -1,0 +1,44 @@
+var vm=new Vue({
+    el:'.wrap',
+    data:{
+        sendWord:'', /*寄语*/
+        num:'',  /*鸡腿数 */
+        show:0
+    },
+    methods:{
+        speakRuleClick(val){
+            window.location.href='./rulePage.html?whoRule='+val
+        },
+        realtime(){
+            window.location.href='./realtime.html'
+        }
+    },
+    watch:{
+        /*监听寄语长度 */
+        sendWord(n,o){
+            if(n.length>10)
+             this.sendWord=n.substr(0,10)
+        }
+    },
+    components:{
+        idolcontent:{
+            props:['name','item','imgnum'],
+            mounted () {
+                console.log(this.imgnum)  
+            },
+            template:`
+            <div>
+                <div class="wrap_exercise_li_left">
+                    <img src="img-speak/head_bg.png" alt="">
+                    <div>
+                        <p class='idolName' slot="idolName">{{name}}</p>
+                        <p class='items' slot="idolItem">{{item}}</p>
+                    </div>
+                </div>
+                <div class='wrap_exercise_li_right'>
+                    <img v-for='(item,index) in imgnum' src="img-speak/page/tags2.png" alt="贴纸">
+                </div>
+            </div>  `
+        }
+    }
+})

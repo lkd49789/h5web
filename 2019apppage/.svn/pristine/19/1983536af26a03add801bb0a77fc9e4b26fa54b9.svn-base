@@ -1,0 +1,181 @@
+html,body { width: 100%; height: 100%; font-family: "微软雅黑";background-color: #f0f0f0;}
+
+
+
+html{font-size:10px}
+
+@media screen and (max-width:320px){html{font-size:9px}}
+
+@media screen and (min-width:321px) and (max-width:375px){html{font-size:11px}}
+
+@media screen and (min-width:376px) and (max-width:414px){html{font-size:13px}}
+
+@media screen and (min-width:415px) and (max-width:639px){html{font-size:18px}}
+
+@media screen and (min-width:640px) and (max-width:719px){html{font-size:20px}}
+
+@media screen and (min-width:720px) and (max-width:749px){html{font-size:22.5px}}
+
+@media screen and (min-width:750px) and (max-width:799px){html{font-size:25.5px}}
+
+@media screen and (min-width:800px){html{font-size:25px}}
+
+section{
+	    padding-bottom: 30px;
+}
+
+
+
+.list_view {
+	/*min-height: 100%;*/
+	margin: 0 15px 0 70px;
+	padding-left: 20px;
+	border-left: solid 3px #C4C4C4;
+	padding-bottom: 25px;
+}
+
+.list_view li {
+	position: relative;
+	padding-top: 12px;
+}
+.bg-fault{
+	/*background:url(../images/bg-fault.png) no-repeat 0 0;
+	background-size: 100% 100%;*/
+	background-color: #fff;
+}
+.list_view li .card {
+	padding: 10px 10px 10px 20px;
+	border-radius: 5px;
+	/*overflow-y: scroll;*/
+	color: #808080;
+}
+
+.list_view li .card:hover {
+	background: #f3f3f3;
+}
+
+.list_view li .card .pic img {
+	width: 100%;
+}
+
+.list_view li .card h2 {
+	margin: 6px 0;
+	font-size: 1.4rem;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.list_view li .card .desc {
+	margin-top: 3px;
+	color: #999;
+	font-size: 1.3rem;
+	/*max-height: 75px;*/
+	/*overflow: scroll;*/
+}
+.circle{
+
+	position: absolute;
+
+	left: -30px;
+
+	top: 30px;
+
+	width:18px;
+
+	height:18px;	
+
+	color: #C5C5C5;
+
+	border-radius: 50%;
+
+	background: #5B6BC2;
+
+}
+.list_view li .date {
+	position: absolute;
+	left: -79px;
+	top:21px;
+	color: #C4C4C4;
+
+	text-align: center;
+}
+
+.list_view li .date strong {
+	font-weight: normal;
+	line-height: 14px;
+	color: #808080;
+	font-size: 1rem;
+}
+
+.list_view li .date p {
+	line-height:22px;
+	font-size: 1rem;
+	color: #808080;
+	white-space: nowrap;
+}
+.list_view li img{
+	width: 5px;
+    margin-left: -5px;
+    position: absolute;
+    margin-top: 10px;
+}
+.myscroll {
+	width: 100%;
+	height: 85%;
+	overflow: hidden;
+}
+
+.listDiv{
+	position: relative;
+	height: 100%;
+}
+.mui-scroll-wrapper{
+	height: 100%;
+    overflow-y: scroll;
+}
+#pullrefresh ul{
+	background-color: rgba(0,0,0,0);
+}
+.mui-table-view:before,.mui-table-view:after{
+	background-color: rgba(0,0,0,0);
+}
+.mui-scroll{
+	width: auto;
+}
+footer{
+	position: fixed;
+	bottom: 0;
+}
+
+
+[v-cloak]{
+    display: none;
+}
+/*首页列表*/
+p{margin: 0;}
+.wrapper{padding: 3%;position: relative;padding-bottom: 15%;}
+.wrapper > img{width: 50%;margin-left: 25%;}
+.wrapper li{background-color: #fff;border-radius: .8rem;padding: 1rem;margin-bottom: .7rem;}
+.li-top{color: #c4c4c4;position: relative;margin-bottom: .5rem;}
+.li-top p{font-size: 1rem;display: inline-block;}
+.icon-done,.icon-not{font-size: 1rem;color: #fff;padding: 3px 10px;float: right;background-color: #7966fa;border-radius: 1rem;}
+.icon-not{background-color:#c4c4c4; }
+.li-bottom{color: #1d1d1d;position: relative;}
+.li-bottom img{position: absolute;right: 3%;width: 2.2%;top: .5rem;bottom: 0;}
+.li-bottom p{width: 90%;overflow: hidden;text-overflow: ellipsis; white-space: nowrap; font-size: 1.5rem;display: inline-block;line-height: 2rem;}
+.btn-bottom{background-color: #fff;border-radius: .5rem;padding: 1rem;text-align: center;color: #949494;position: fixed;bottom: 2%;width: 88%;}
+.btn-bottom img{width: 1.3rem;display: inline-block;}
+.btn-bottom p{display: inline-block;}
+
+
+/*detail*/
+.title{margin: 1rem 0 2rem 0;}
+.info{padding: 3%;background-color: #fff;border-radius: .7rem;margin-top: 1rem;}
+.wrapper .title p{display: inline-block;font-size: 1.5rem;vertical-align: middle;font-weight: bold;color:#1d1d1d;}
+.wrapper .title span,.wrapper .title em{float: none;font-size: 1.1rem;}
+.info img{width: 20%;margin: .5rem;border-radius: .5rem;}
+.info p{color: #1d1d1d;font-size: 1.3rem;margin-bottom: 1rem;}
+
+.reply{margin-top: 2rem;}
+.reply p{font-size: 1.5rem; color:#1d1d1d;font-weight: bold; }
+.reply div{background-color: #fff;border-radius: .7rem;padding: 1rem;font-size: 1.2rem;margin-top: 1.5rem;}

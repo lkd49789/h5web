@@ -1,0 +1,98 @@
+body{
+    max-width: 640px;
+    margin:0 auto;
+    position: relative;
+}
+#app{
+    height: 100%;
+}
+.realtime{
+    min-height: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background: url(../img-speak/page/realtime_bg.jpg) no-repeat;
+    background-size:100% 100%; 
+    padding: 1.16rem 1.08rem;
+}
+.title_img{
+    height: 1.5rem;
+    margin-bottom: .83rem;
+}
+.realtime_list{
+    height: 5rem;
+    margin-bottom: 1.16rem;
+    padding: .8rem 1.2rem 0 1.91rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.realtime_list_left{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+}
+.realtime_list_left_img{
+    width: 3.33rem;
+    height: 3.33rem;
+    border-radius:50%; 
+    border: 1px solid #fff;
+}
+.realtime_list_left_name{
+    color: #fff;
+    line-height: 3.8rem;
+    margin-left: .5rem;
+}
+.realtime_list_right{
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: row-reverse;
+            flex-flow: row-reverse;
+}
+.realtime_list_right img{
+    width: 3.33rem;
+    height: 3.33rem;
+    margin-left: .66rem;
+    border-radius: .4rem;
+}
+.line img{
+    width: calc(100% + 2.16rem);
+    margin: 0 -1.08rem;
+    margin-bottom: 1rem;
+}
+.realtime_top:nth-of-type(1) .realtime_list{
+    background: url(../img-speak/select_1.png) no-repeat;
+    background-size:100% 100%;
+}
+.realtime_top:nth-of-type(2) .realtime_list{
+    background: url(../img-speak/select_2.png) no-repeat;
+    background-size:100% 100%;
+}
+.realtime_top:nth-of-type(3) .realtime_list{
+    background: url(../img-speak/select_3.png) no-repeat;
+    background-size:100% 100%;
+}
+.realtime_top:nth-of-type(4) .realtime_list{
+    background: url(../img-speak/select_4.png) no-repeat;
+    background-size:100% 100%;
+}
+.realtime_top:nth-of-type(5) .realtime_list{
+    background: url(../img-speak/select_5.png) no-repeat;
+    background-size:100% 100%;
+}
+.realtime_top:nth-of-type(6) .realtime_list{
+    background: url(../img-speak/select_6.png) no-repeat;
+    background-size:100% 100%;
+}
+.realtime_top:nth-of-type(7) .realtime_list{
+    background: url(../img-speak/select_7.png) no-repeat;
+    background-size:100% 100%;
+}

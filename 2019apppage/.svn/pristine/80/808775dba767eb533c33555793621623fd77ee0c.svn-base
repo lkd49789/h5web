@@ -1,0 +1,26 @@
+var vm = new Vue({
+	el:'.wrapper',
+	data:{
+		showpop:0 //提示框 0 不显示 1 显示
+		
+	},
+	filters:{
+		img:function(_img){
+			return ''
+		}
+	},
+	methods: {
+		gotoRoom:function(){//跳到直播间
+	    	vm.showpop = 0;
+	    	_openNativeModule("live/playdetail?id=xxx");
+	    },
+	    gotoVip:function(){//成为vip
+	    	vm.showpop = 0;
+	    	_openNativeModule("vip/detail");
+	    },
+	    closePop:function(){//关闭
+	    	vm.showpop = 0;
+	    }
+	}
+
+})

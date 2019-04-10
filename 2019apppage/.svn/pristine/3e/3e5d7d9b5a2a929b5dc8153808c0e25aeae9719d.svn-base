@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<title>聚聚功能使用协议</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+	<meta http-equiv="Cache-Control" content="max-age=0">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<link rel="stylesheet" href="https://h5.48.cn/common/css/common_mobile_v1.css">	
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<section class="wrapper">
+		<section class="info">
+			<p>欢迎使用口袋48聚聚版块，请您（以下统称为“用户”）仔细阅读本协议全部内容。若您使用口袋48，就代表您已经认同并接受遵守该协议全部内容。</p>
+			<h1>合法使用聚聚功能</h1>
+			<p>用户仅有权在法律规定及本协议约定的方式和范围内使用口袋48聚聚功能及其服务，并对其在口袋48中或通过其注册账号所进行的全部行为独立承担全部法律责任。</p>
+			<p>用户不得以任何目的通过使用口袋48以及聚聚功能直接或间接地实施任何侵犯或可能侵犯口袋48或第三方知识产权及相关利益的行为，由此产生的法律责任由用户独立承担。</p>
+			<p>用户不得直接或间接在口袋48的聚聚版块发布、分享、引用任何涉及黄色、暴力、侵犯他人隐私等违规违法内容。</p>
+			<p>用户发布的任何内容，都属于用户的个人行为，与口袋48及口袋48官方无关，不代表SNH48、口袋48官方的立场和态度。</p>
+			<h1>违规处理</h1>
+			<p>若用户在口袋48APP中，违反了本协议或违反了我国法律法规相关规定，口袋48官方工作人员将根据情况对用户实施禁言、封停账号等操作。</p>
+			<p>若收到用户的举报，口袋48相关工作人员也会依据实际情况，对被举报用户的账号进行封停等相关处理。</p>
+			<p><button class="btn">同意协议</button></p>
+
+
+		</section>
+
+	</section>
+</body>
+<script src="https://h5.48.cn/common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"> </script>
+<script type="text/javascript">
+$(".btn").click(function(){
+
+	dsBridge.call("snhAgreeProtocol", "JUJU");
+	dsBridge.call("snhClosePage",'');
+})
+</script>
+</html>
+

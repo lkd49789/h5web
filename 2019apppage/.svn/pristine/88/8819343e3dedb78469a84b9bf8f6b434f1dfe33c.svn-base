@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<title>VIP会员详情</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+	<meta http-equiv="Cache-Control" content="max-age=0">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<link rel="stylesheet" href="https://h5.48.cn/common/css/common_mobile_v1.css">	
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<section class="wrapper">
+		<section class="info">
+			<p>开启VIP可以获得更快的升级速度，获得更多优先特权，并且在口袋48社区中拥有特殊的标识让自己与众不同。</p>
+			<h2>VIP会员购买价格：</h2>
+			<img src="images/user_guide_vip_1.png">
+			<h2>VIP会员特权：</h2>
+			<img src="images/user_guide_vip_2.png">			
+			<h2>星沃卡、丝芭卡用户首充福利：</h2>
+			<img src="images/user_guide_vip_3.png">		
+		</section>
+
+	</section>
+</body>
+
+</html>
+

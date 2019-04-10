@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>吐槽实例化</title>
+    <link href="../../common/css/common.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/popbox.css">
+    <link rel="stylesheet" href="css/speak.css">
+</head>
+<body>
+    <div class="wrap">
+        <!--顶部全程唯一定制贴纸-->
+           <div class='wrap_sole'>
+                <img src="img-speak/sole.png" alt="banner">
+                <div :class='["sole_rule",{"bidding":showOnly}]'>
+                    <img @click='speakRuleClick("rulePageOne")' src="img-speak/sole_rule.png" alt="详细规则">
+                    <img @click='goBidding()' class='bidding_img' src="img-speak/bidding.png" alt="中标贴纸">
+                </div>
+           </div> 
+           <!--选择偶像，输入寄语-->
+           <div class='wrap_idol' v-cloak>
+                <div class='wrap_idol_top'>
+                    <div class='wrap_idol_top_head' @click='sendWordDis && selectIdol()'>
+                        <div class='headWrap'>
+                            <img class='head' :src="headUrl" alt="头像">
+                        </div>
+                        <span :class='["name",{"name2":idolTextshow}]' v-text='selectIdolText'></span>
+                    </div>
+                </div>
+                <div class='wrap_idol_bottom' v-cloak>
+                    <input v-if='sendWordDis' type="text" placeholder="在这里留下你的寄语，最多10个汉字。" v-model.trim='sendWord'>
+                    <p v-else class='sendWord' v-text='sendWord'></p>
+                </div>
+           </div>
+           <!--竞价-->
+           <div class='wrap_bidding'>
+               <div class='wrap_bidding_left'>
+                   <input type="number" v-if='!disable' placeholder="输入你竞价的鸡腿" v-model.number.trim='num'>
+                   <p v-text='num' v-else></p>
+               </div>
+               <div :class='["wrap_bidding_right",{"disable":disable}]' @click='!disable && upBidding()' v-cloak>
+                   <p v-if='disable' class='p'>竞价</p>
+                   <p v-else>竞价&nbsp;&nbsp;(<span v-text='biddingNum'></span>次机会)</p>
+                </div>
+           </div>
+           <!--个性化贴纸-->
+           <div class='wrap_tags'>
+               <!-- <img src="img-speak/tags_bg.png" alt=""> -->
+               <div class='wrap_tags_img'>
+                    <img @click='speakRuleClick("rulePageTwo")' src="img-speak/sole_rule.png" alt="详细规则">
+                    <img @click='realtime' src="img-speak/ranking.png" alt="实时榜">
+                </div>
+           </div>
+           <!--运动项目-->
+           <div class='wrap_exercise'>
+               <ul>
+                   <li v-for='(item,index) in soleList' :class='{"li":item.stickersMemberList}' :style="'background: url(img-speak/exercise_'+item.proId+'.png) no-repeat;background-size: 100% 100%;'" @click='!item.stickersMemberList && sportEvent(item.proId)'>
+                    <div class='wrap_exercise_li_left' v-if='item.stickersMemberList'>
+                        <div class="headWrap2">
+                            <img :src="item.stickersMemberList[0].avatar" alt="">
+                        </div>
+                        <div>
+                            <p class='idolName' v-text='item.stickersMemberList[0].nicker'></p>
+                            <p class='items' v-text='item.project'></p>
+                        </div>
+                    </div>
+                    <div class='wrap_exercise_li_right' v-if='item.stickersMemberList'>
+                        <img v-for='(icon,index) in item.stickersMemberList[0].dataSportStickerList' :key='index' :src="icon.path" :alt="icon.title">
+                    </div>
+                </li>
+               </ul>
+           </div>
+        <selectidol v-if='selectIdolShow' @idol='idolClick' :list='idolList'></selectidol>
+        <div class="mask" v-if="showpop!=0" v-cloak>>
+                <!-- no money -->
+                <div class="no-money" v-if="showpop == 1">
+                    <p>{{tips}}</p>
+                    <span v-on:click="closePop()">知道了</span>
+                </div>
+                <div class="submit-box" v-if="showpop == 2">
+                    <p>是否提交预测结果？<br><span>当前选择所需鸡腿：{{needmoney}}</span></p>
+                    <span v-on:click="closePop()">再想想</span>
+                    <span v-on:click="submit()">确定提交</span>
+                </div>
+                <div class="no-money" v-if="showpop == 3">
+                    <p>鸡腿不足</p>
+                    <span v-on:click="recharge()">去充值</span>
+                    <span v-on:click="closePop()">知道了</span>
+                </div>
+            </div>
+    </div>
+    <template id='selectIdol'>
+        <div class='selectIdol'>
+            <div class='content'>
+                <div class='idolwrap' v-for='(item,index) in list' @click='idolClick(item)'>
+                    <div class='idol'>
+                        <span v-text='item.realName'></span>
+                        <img :src="item.teamLogon" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<script src="../../common/js/vue.js"></script>
+<script src="../../common/js/common_v1.js"></script>
+<!-- <script src='https://cdn.bootcss.com/vue/2.6.10/vue.js'></script> -->
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/speak.js"></script>
+</html>

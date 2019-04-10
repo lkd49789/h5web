@@ -1,0 +1,66 @@
+section{
+	width: 100%;
+	min-height: 100%;
+	background: url(../img-champion/bg.jpg)no-repeat center bottom;
+	background-size: cover;
+	position: relative;
+}
+[v-cloak]{
+    display: none;
+}
+.title{margin-top: 3%;width:100%;}
+
+.list{padding: 0 3% 3% 3%;margin-top: 3%;}
+.list li{display: inline-block;width: 49%;position: relative;margin: 2% 0;}
+.team-logo{width: 100%;}
+.icon-result{width: 12%;position: absolute;right: 8%;bottom: 8%;}
+.list li div{position: absolute;width: 100%;bottom: 10%;left: 0;text-align: center;color: #005aba;}
+.list li div p{font-size: 1.2rem;}
+
+
+/*按钮*/
+.btns{text-align: center;width: 100%;padding-left: 1%;margin-top: 3%;}
+.btns > div{display: inline-block;margin: 0 auto;width: 45%;position: relative;}
+.btns > div img{width: 100%;}
+.btns div p{color: #fff;font-size: 1.2rem;position: absolute;width: 100%;top: 20%;}
+.btns div span{font-size: 1rem;}
+
+.mask{position: fixed;width: 100%;height: 100%;text-align: center;background-color: rgba(0,0,0,.5);top: 0;left: 0;z-index: 100;}
+.mask > div{
+	width: 75%;
+	background-color: #fff;
+	border-radius: 1rem;
+	position: absolute;
+	top:45%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    /*display: none;*/
+}
+.mask div p{padding: 12% 5%;border-bottom: 1px solid #f0f0f0;font-size: 1.3rem;}
+.mask div > span{padding: 1rem 0;display: inline-block;color: #2774ff;font-size: 1.2rem;width:48.5%;}
+.mask > div span:nth-child(3){border-left: 1px solid #f0f0f0;}
+.submit-box p span{color: #999;font-size: 1rem;}
+.btn-close{width: 10%;position: absolute;right: -4%;top: -4%;}
+/*chooseMember*/
+.chooseMember{text-align: center;padding: 3%;}
+.chooseMember ul li{display: inline-block;width: 40%;background-color:#f6f6f6;border-radius: 2rem; padding: .5rem 0;margin: 1rem 3%;color: #585858;font-size: 1.2rem;}
+/*chooseTeam*/
+.chooseTeam{text-align: center;padding: 3%;}
+.chooseTeam ul li{display: inline-block;width: 43%;border-radius: .8rem; padding: 1.5rem 0;margin: .5rem 3%;color: #fff;font-size: 1.5rem;}
+
+/*result-box*/
+.result-box{text-align: center;margin-top: 1rem;}
+.success-box{background:url(../img-champion/stars.png) no-repeat;background-size: 100%;}
+.result-box img{width: 100%;text-align: center;}
+.result-box span{padding: .5rem 1rem;color: #ffd42a;border:1px solid #4c66b3;border-radius: 2rem;font-weight: bold;font-size: 2rem;display: inline-block;min-width: 41%;margin: 1rem 0;font-style:italic;}
+.btn-show-success{width: 57% !important;margin-top: 1rem;}
+/*timeout-box*/
+.timeout-box img{width: 60%;}
+
+/*success-list*/
+.success-list{padding: 5%;text-align: left;min-height: 30%;max-height: 50%;}
+.success-list > div{width: 100%;max-height: 20rem; overflow: scroll;}
+.success-list li img{width: 20%;border-radius: 50%;border: 1px solid #d1e8ff;display: inline-block;vertical-align: middle;}
+.success-list li div{display: inline-block;vertical-align: middle;text-align: left;margin-left: .5rem;}
+.success-list li div p{font-size: 1.2rem; color: #1d1d1d;border: none; padding: .2rem;}
+.success-list li div p:nth-child(2){font-size: 1rem; color: #adadad;}

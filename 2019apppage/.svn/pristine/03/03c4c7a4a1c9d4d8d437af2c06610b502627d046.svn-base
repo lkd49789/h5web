@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<title>徽章说明</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+	<meta http-equiv="Cache-Control" content="max-age=0">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<link rel="stylesheet" href="https://h5.48.cn/common/css/common_mobile_v1.css">	
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<section class="wrapper">
+		<section class="info">
+			<h1>什么是徽章？</h1>
+			<p>徽章是口袋48中是粉丝身份的象征，每达到一个新的口袋等级或公社等级都会获得对应的徽章。同时在各个板块中的还能达成意想不到的成就，有机会拿到自己专属的成就徽章。</p>
+			<h1>
+我在哪里展示它们？</h1>
+			<p>其他粉丝几乎可以在口袋48里所有的场合看到你的徽章，比如直播、评论、弹幕、公社等等。通常情况下徽章会显示在你的昵称旁边。</p>
+			<h1>我怎么管理它们？</h1>
+			<p>通常情况下，每当你获得一个新的徽章，它就会出现在你的个人主页-徽章页面中。你可以挑出想展示給别人的徽章放置道徽章展示栏中，有一些特殊成就徽章无法选择，这种特别的徽章会在特定的场合自动显示来彰显你的身份。</p>
+			<h1>如何获得徽章？</h1>
+<table>
+	<tr>
+		<td colspan="2">等级徽章</td> 
+	</tr>
+	<tr>
+		<td>吃瓜聚聚</td> 
+		<td>用户等级达到Level 1</td>
+	</tr>
+	<tr>
+		<td>萌新聚聚</td> 
+		<td>用户等级达到Level 2</td>
+	</tr>		
+	<tr>
+		<td>DD聚聚</td> 
+		<td>用户等级达到Level 3</td>
+	</tr>
+	<tr>
+		<td>神龙聚聚</td> 
+		<td>用户等级达到Level 4</td>
+	</tr>
+	<tr>
+		<td>UG聚聚</td> 
+		<td>用户等级达到Level 5</td>
+	</tr>
+	<tr>
+		<td>TG聚聚</td> 
+		<td>用户等级达到Level 6</td>
+	</tr>		
+	<tr>
+		<td>神七聚聚</td> 
+		<td>用户等级达到Level 7</td>
+	</tr>
+	<tr>
+		<td>支柱聚聚</td> 
+		<td>用户等级达到Level 8</td>
+	</tr>
+	<tr>
+		<td>初心聚聚</td> 
+		<td>用户等级达到Level 9</td>
+	</tr>		
+</table>
+<br>
+<table>
+	<tr>
+		<td colspan="2">特殊成就徽章</td> 
+	</tr>
+	<tr>
+		<td>专属守护者</td> 
+		<td>累计连续3个月对某个成员直播礼物贡献度（不含投票）保持最高</td>
+	</tr>
+	<tr>
+		<td>守护者</td> 
+		<td>在所有成员直播中礼物贡献度（不含投票）达到10000</td>
+	</tr>		
+	<tr>
+		<td>万众瞩目</td> 
+		<td>在聚聚中被成员翻牌达到30次</td>
+	</tr>
+</table>
+
+
+		</section>
+
+	</section>
+</body>
+
+</html>
+

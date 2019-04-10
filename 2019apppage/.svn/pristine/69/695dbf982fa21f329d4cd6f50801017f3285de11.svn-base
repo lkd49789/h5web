@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>详细规则</title>
+    <link href="../../common/css/common.css" rel="stylesheet" />
+</head>
+<style>
+    body{
+        max-width: 640px;
+        margin:0 auto;
+        position: relative;
+    }
+    #app{
+        height: 100%;
+    }
+    .rulePage{
+        height: 100%;
+        padding: 3.4rem 2.1rem 0;
+        color: #fff;
+        box-sizing: border-box;
+        background:url(img-speak/Page/rulePage_bg.jpg) no-repeat;
+        background-size: cover;
+    }
+    .rulePage_title{
+        width: 18.58rem;
+        margin-bottom: 1.8rem;
+    }
+    .rulePage_content p{
+        margin-bottom: 1.2rem;
+        font-size: 1.4rem;
+    }
+    .rulePage_content .color{
+        color: #fffea4;
+    }
+    .rulePage_content img{
+        width: .41rem;
+        height:.41rem;
+    }
+</style>
+<body>
+    <div id='app'>
+        <component :is='who'></component>     
+    </div>
+     <!--规则页面组件-->
+     <!--全场唯一规则-->
+     <template id='rulePageOne'>
+            <div class='rulePage page'>
+                    <img class='rulePage_title' src="img-speak/Page/rule_title2.png" alt="标题">
+                    <div class='rulePage_content'>
+                        <p>
+                            <span><img src="img-speak/Page/dot.png" alt="圆点"></span>
+                            <span class="color">寄语内容提交后无法修改，</span>请确认好内容。
+                        </p>
+                        <p>
+                            <span><img src="img-speak/Page/dot.png" alt="圆点"></span>
+                            竞价价格填写3次，每次出价将覆盖上一次的价格，<span class="color">截止时将以最后填写的价格提交参与竞价。</span>
+                        </p>
+                        <p>
+                            <span><img src="img-speak/Page/dot.png" alt="圆点"></span>
+                            时间截止后会发布中标结果，所有参与竞价的粉丝中出价最高的中标，中标的粉丝头像、昵称、寄语将以贴纸的形式贴到该中标粉丝所选的成员身上。
+                        </p>
+                        <p>
+                            <span><img src="img-speak/Page/dot.png" alt="圆点"></span> 
+                            中标的粉丝头像和昵称将以提交竞价时的为准，提交后在口袋48 APP中更换头像和昵称将不会在定制贴纸中出现。
+                        </p>
+                        <p>
+                            <span><img src="img-speak/Page/dot.png" alt="圆点"></span>  
+                            <span class="color">如果中标的帮助建议中有违规内容（反动、色情、谩骂、可能对偶像造成负面影响），</span>该中标内容将被取消中标状态，同时将原本竞价第二名的内容作为第一名使用。
+                        </p>
+                        <p>
+                            <span><img src="img-speak/Page/dot.png" alt="圆点"></span>
+                            竞价价格相同时，以提交时间最早的竞价为中标结果。
+                        </p>
+                        <p>
+                            <span><img src="img-speak/Page/dot.png" alt="圆点"></span>
+                            <span class="color">没有中标的竞价将不会退还“鸡腿”。</span>
+                        </p>
+                    </div>
+                </div>
+       </template>
+    <!--个性化贴纸规则-->
+    <template id='rulePageTwo'>
+            <div class='rulePage page'>
+                    <img class='rulePage_title' src="img-speak/Page/rule_title.png" alt="标题">
+                    <div class='rulePage_content'>
+                        <p>
+                            <span><img src="img-speak/Page/dot.png" alt="圆点"></span>
+                            投票截止后，每个项目得票最多的偶像会贴上<span class="color">粉丝投票出的贴纸组合。</span>
+                        </p>
+                        <p>
+                            <span><img src="img-speak/Page/dot.png" alt="圆点"></span>
+                            <span class="color">可以为每个偶像选择最多3个贴纸，</span>第一个50鸡腿，每增加一个20鸡腿。
+                        </p>
+                        <p>
+                            <span><img src="img-speak/Page/dot.png" alt="圆点"></span>
+                            <span class="color"> 实时榜和最终结果排序优先级为：<br/>
+                            得票数多的偶像在前（选择该成员的人数）。</span>如票数相同，则收到贴纸数多的在前。如贴纸数量相同，则最先收到该数量贴纸的成员在前。
+                            例如：A和B都是得票100，收到200个贴纸，但B比A早10分钟收到200个贴纸，则B排名在前。
+                        </p>
+                        <p>
+                            <span><img src="img-speak/Page/dot.png" alt="圆点"></span> 
+                            每个偶像最终获得的贴纸组合（1个，2个，3个）<span class="color">将由每个组合选择的人数决定。</span><br/>
+                            例如：有10名粉丝选择偶像A贴1个贴纸，20名粉丝选择贴2个，100名粉丝选择贴3个，则该名偶像最终会贴上得票数最多的3个贴纸。
+                        </p>
+                    </div>
+                </div>
+       </template>
+    
+</body>
+<script src="../../common/js/vue.js"></script>
+<script> 
+    var vm=new Vue({
+        el:"#app",
+        data:{
+            who:'rulePageOne'  /*当前显示的组件页面*/
+        },
+        created () {
+            this.who=this.getUrlParam('whoRule');
+        },
+        methods:{
+            /*获取url参数*/
+            getUrlParam(name) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+                var r = window.location.search.substr(1).match(reg); //匹配目标参数
+                if (r != null) return decodeURI(r[2]);
+                return null; //返回参数值
+            }
+        },
+        components:{
+            /*规则页面组件*/
+            rulePageOne:{
+                template:'#rulePageOne'
+            },
+            rulePageTwo:{
+                template:'#rulePageTwo'
+            },
+        }
+    })
+</script>
+</html>

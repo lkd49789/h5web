@@ -1,0 +1,33 @@
+/*输入*/
+.tip-top{position: absolute;width: 42%; right: 0;top: 3%;}
+.title{margin-top: 15%;width: 100%;}
+
+.options li > img{width: 100%;margin: 1rem 0;}
+.options li{margin: 0 0 1rem 0;width: 48%;display: inline-block;}
+.options li input{
+	width: 65%;
+	display: inline-block;
+	vertical-align: middle;
+	background-color: #fff;
+	border: none;
+	border-radius: .5rem;
+	padding: .3rem;
+	font-size: 1rem;
+	line-height: 2rem;
+	text-align: center;
+	margin-left: 4%;
+	color: #000;
+}
+.options li span{color: #fff;display: inline-block;font-size: 1.3rem;}
+.tip-bottom{width: 100%;}
+.money{color: #fff;font-size: 1.1rem;padding-left: 4%;}
+.money span{color: #fbf886;font-size: 1.4rem;text-decoration: underline;}
+.btn-submit{width: 60%;margin-left: 20%;margin-top: 2rem;}
+
+.options li >div >div{
+	display: inline-block;
+	width: 30%;
+	text-align: center;
+	position: relative;
+}
+.options li >div >div span{display: block;margin-bottom: .5rem;}

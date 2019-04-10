@@ -1,0 +1,8 @@
+html,body{/*background-color: #f0f0f0;*/margin: 0;}
+.wrapper{background-color: #fff;padding: 5% 3%;}
+.wrapper div{background-color: #fff;}
+.wrapper li{line-height: 3rem;position: relative;font-size: 1.1rem;border-bottom: 1px solid #f5f5f5;}
+.wrapper li img{width: .5rem;float: right;vertical-align: bottom;margin-top: 1rem;}
+h1{font-size: 1.5rem;margin-bottom: .5rem;}
+.wrapper p{margin-top: 20%;color: #949494;text-align: center;}
+.wrapper p img{width: 1.2rem;vertical-align: bottom;}

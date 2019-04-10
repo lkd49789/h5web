@@ -1,0 +1,140 @@
+body{
+	margin:0 auto;
+	background-color: #fff;
+	/*-webkit-overflow-scrolling: touch; */
+	    background-color: #6741e9;
+}
+
+section{
+	background-color: #6741e9;
+	text-align: center;
+	/*padding-bottom: 5%;*/
+	/*-webkit-overflow-scrolling: touch; */
+	max-height: 90%;
+}
+
+[v-cloak]{
+    display: none;
+}
+
+
+#pullrefresh{
+	top: 3%;
+    padding: 3%;
+    width: 94%;
+    margin-left: 3%;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 40px #b0aeff inset;
+    margin-bottom: 5%;
+}
+.mui-pull-loading{
+	font-size: 1rem;
+}
+.mui-scroll{
+	width: 94%;
+}
+.mui-table-view:after,.mui-table-view:before{
+	display: none;
+}
+p{
+	 margin-bottom: 0px;
+}
+#pullrefresh li,.msg-toplist li{
+	margin-bottom: 3%;
+}
+.empty{width: 100%;margin-top: 2rem;}
+/*member-info*/
+.member-info{
+	text-align: left;
+	margin-bottom: 5%;
+}
+.member-info span{
+	line-height: 5rem;
+	vertical-align: middle;
+	color: #444444;
+	margin-right: 3%;
+}
+.photo{
+	display: inline-block;
+	width: 5rem;
+	height: 5rem;
+	overflow: hidden;
+	border-radius: 5rem;
+	vertical-align: middle;
+}
+.photo > img{
+	margin-bottom: -10%;
+	width: 100%;
+}
+.like-box{
+	float: right;
+	color: #808080 !important;
+}
+.like-box img{
+	width: 1.5rem;
+    margin-bottom: 2px;
+    margin-left: 5px;
+}
+.icon-gotomsg{
+	width: 24%;
+	position: fixed;
+	bottom: 1%;
+	left: 38%;
+	z-index: 10000;
+}
+/*msg-new*/
+.msg-new{
+	position: relative;
+	z-index: 2;
+	background-color: #fff;
+	border-radius: 10px;
+	-webkit-box-shadow: 0px 0px 40px #b0aeff inset;
+	box-shadow: 0px 0px 40px #b0aeff inset;
+	padding: 5%;
+	width: 84%;
+	margin: 0 auto;
+	margin-top: 5%;
+}
+.top-index{
+	width: 2rem !important;
+}
+.u-info{
+	text-align: left;
+	color: #808080;
+}
+.u-info img{
+	width: 3.5rem;
+	border-radius: 100%;
+}
+.m-name{
+	color: #656cf2;
+}
+.like-content{
+	float: right;
+	position: relative;
+	line-height: 3.5rem;
+	margin-right: 3%;
+	font-size: 1rem;
+	color: #c4c4c4;
+}
+.like-content img{
+	width: 1.3rem;
+    margin-right: 3px;
+    border-radius: 0;
+}
+.msg{
+	color: #666ab5;
+	background-color: #eeeffe;
+	padding: 1rem;
+	width: 82%;
+    margin-left: 15%;
+    border-radius: 7px;
+    text-align: left;
+    font-size: 1rem;
+}
+.msg-new li:not(:last-child){
+	margin-bottom: 5%;
+}
+
+
+

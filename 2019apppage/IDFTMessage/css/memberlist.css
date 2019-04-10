@@ -1,0 +1,86 @@
+body{
+	margin:0 auto;
+	background-color: #fff;
+	-webkit-overflow-scrolling: touch; 
+	background-color: #6741e9;
+}
+section{
+	text-align: center;
+	padding: 3%;
+	-webkit-overflow-scrolling: touch; 
+	min-height: 100%;
+
+}
+ul{
+	width: 100%;
+	text-align: left;
+	position: relative;
+}
+.member-list li{
+	display: inline-block;
+	width: 21%;
+	margin:4% 2%;
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+	position: relative;
+	text-align: center;
+}
+.member-list li p{
+    color: #3e3f42;
+    font-size: 1rem;
+    width: 100%;
+    margin: 5px 0;
+}
+.memberbox{
+	background-color: #fff;
+	/*width: 100%;*/
+	margin: 0 auto;
+	border-radius: 10px;
+	padding-bottom: 2rem;
+	-webkit-box-shadow: 0px 0px 40px #b0aeff inset;
+	box-shadow: 0px 0px 40px #b0aeff inset;
+	padding: 3%;
+}
+
+
+.photo{
+	width: 5rem;
+	height: 5rem;
+	overflow: hidden;
+	border-radius: 100%;
+	position: relative;
+	border:1px solid #edf5fe;
+	margin: 0 auto;
+}
+.photo img{
+	position: relative;
+	margin-top: -15%;
+	width: 100%;
+}
+
+.icon-team{
+	width: 20%;
+	margin-top: -3px;
+}
+
+.mername{
+	display: inline-block;
+	border: none;
+	/*background: linear-gradient(to right top,#31a2f5,#0986e2);*/
+	background-color: #656cf2;
+	background-size: 100% 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 1.2rem;
+	border-radius: 20px;
+	padding: 4px 0;
+	vertical-align: middle;
+	width: 100%;
+	margin-left: 0;
+}
+
+[v-cloak]{
+    display: none;
+}
+

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<title>公演MVP投票</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+	<meta http-equiv="Cache-Control" content="max-age=0">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<link rel="stylesheet" href="https://h5.48.cn/common/css/common_mobile_v1.css">
+	<link rel="stylesheet" href="css/index.css">	
+</head>
+<body>
+	<section class="wrapper">
+		<section class="info">
+			<h1>投票规则</h1>
+			<p>使用口袋48 APP的“二维码扫描”功能扫描公演门票上的二维码激活投票权后为参与该场公演的成员投票</p>
+			<table>
+				<tr>
+					<td colspan="4">周三、周四场次</td>
+				</tr>
+				<tr>
+					<td>坐席名称</td>
+					<td>每席票数</td>
+				</tr>
+				<tr>
+					<td>超V</td>
+					<td>15</td>
+				</tr>
+				<tr>
+					<td>VIP</td>
+					<td>6</td>
+				</tr>
+				<tr>
+					<td>普座</td>
+					<td>4.5</td>
+				</tr>
+				<tr>
+					<td>站席</td>
+					<td>3</td>
+				</tr>
+			</table>
+			<br>
+			<table>
+				<tr>
+					<td colspan="4">周五、周六、周日场次</td>
+				</tr>
+				<tr>
+					<td>坐席名称</td>
+					<td>每席票数</td>
+				</tr>
+				<tr>
+					<td>超V</td>
+					<td>15</td>
+				</tr>
+				<tr>
+					<td>VIP</td>
+					<td>3</td>
+				</tr>
+				<tr>
+					<td>普座</td>
+					<td>3</td>
+				</tr>
+				<tr>
+					<td>站席</td>
+					<td>3</td>
+				</tr>
+			</table>			
+
+			<ul>
+				<li>• 口袋48绑定的丝瓜账号必须和被扫描门票的购买丝瓜账号一致才能激活投票权</li>
+				<li>• 投票必须选择3位成员，每位成员至少需要投1票</li>
+				<li>• 提交投票时没有使用的票数将被作废</li>	
+				<li>• 每场公演的投票开始时间为：下午场18点，夜间场23点，截止时间为次日凌晨3点</li>
+				<li>• 已经投票过的公演门票二维码无法再次使用</li>
+				<li>• 每个口袋48账号只能在一场公演中使用一次门票二维码投票</li>
+				<li>• 生日成员不参加该场生日公演投票</li>	
+				<li>• 单场公演MVP投票排行结算时间为公演第二天中午12点</li>
+				<li>• 每场排名显示得票数TOP7的成员</li>
+			</ul>
+			<br>
+
+
+
+			<p>*以上规则解释权归口袋48所有</p>
+
+
+		</section>
+
+	</section>
+</body>
+
+</html>
+

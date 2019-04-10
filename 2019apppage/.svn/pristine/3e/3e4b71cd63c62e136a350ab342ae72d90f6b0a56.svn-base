@@ -1,0 +1,139 @@
+body{
+    max-width: 640px;
+    margin:0 auto;
+    position: relative;
+    font-size: 1.5rem;
+}
+#app{
+    background: url('../img/bg.jpg') no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    padding: 1.3rem;
+}
+button{
+    border: 0;
+}
+/*上半部分*/
+.top,.bottom,.rule,.already{
+    background: #fff;
+    border-radius: .5rem;
+    padding: 2.5rem 1.6rem 2.4rem;
+    box-sizing: border-box;
+}
+.top_title,.bttom_title{
+    color: #7966fa;
+    font-weight:bold;  
+    text-align: center;
+    font-size: 2rem;
+}
+.top>p{
+    margin-top: 1.1rem;
+}
+.top>p:first-of-type{
+    margin-top: 0;
+}
+.top>p:last-of-type{
+    margin-top: 2.2rem;
+}
+.top_btnWrap{
+    text-align: center;
+    margin-top: 2.6rem;
+}
+.top_btn{
+    background: url(../img/btn_bg.png) no-repeat;
+    background-size:100% 100%; 
+    color: #fff;
+    font-weight: bold;
+    line-height: 3.6rem;
+    height: 3.6rem;
+    width: 96%;
+    font-size: 1.6rem;
+}
+.text_bg{
+    background: url(../img/text_bg.png) no-repeat bottom/100% 40%;
+}
+/*下半部分*/
+.bottom{
+    margin-top:1.38rem;
+    text-align: center;
+    padding: 1.08rem .83rem;
+}
+.bttom_title{
+    color: #000;
+}
+.bottom ul{
+    display: flex;
+    flex-flow: row wrap;
+}
+.bottom_dayWrap{
+    background: #fbf8ff;
+    border-radius: .42rem;
+    height: 6.67rem;
+    width: 19%;
+    margin-right: 1.25%;
+    display: flex;
+    flex-flow:column nowrap;
+    justify-content: center; 
+    margin-bottom: 1.25%;
+    position: relative;
+}
+.bottom_dayWrap:nth-child(5n){
+    margin-right:0;
+}
+.bottom_day_num{
+    font-size: 1rem;
+    margin-top: .7rem;
+}
+.April{
+    background: url(../img/April.png) no-repeat;
+    background-size: 100% 100%;
+}
+.May{
+    background: url(../img/May.png) no-repeat;
+    background-size: 100% 100%;
+}
+.already{
+    display: flex;
+    align-items: center;
+    padding-left: 4.92rem;
+    margin-bottom: .67rem;
+}
+.textWrap{
+    margin-left: 1.2rem;
+}
+.already .p1{
+    font-size: 1.8rem;
+}
+.already .p2{
+    font-size: 1.2rem;
+    color: #828283;
+}
+.already .imgWrap img{
+    width: 2.92rem;
+    height: 2.92rem;
+}
+/*预约icon*/
+.pithOn{
+    width: 2.2rem;
+    height: 1.25rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+/*预约人数颜色*/
+.zero{
+    color: #6fd69f;
+}
+.noZero{
+    color: #caabff;
+}
+.four{
+    color: #c4c4c4;
+}
+/*规则页面*/
+.rule p{
+    margin-bottom:1.2rem;
+}
+.rule p:last-child{
+    margin-bottom: 0;
+}

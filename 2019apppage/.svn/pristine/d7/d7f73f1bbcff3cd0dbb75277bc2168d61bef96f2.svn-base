@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>支持她</title>
+	<link href="../../common/css/common.css" rel="stylesheet" />
+	<link href="css/sendmsg.css" rel="stylesheet" />
+</head>
+<body  >
+	<section id="box"  v-cloak>
+		<div class="avatar-box">
+			<span class="avatar"><img v-bind:src = "curMember.avatar"></span>
+			<span class="uinfo">{{curMember.realName || curMember.memberName}}<!-- <img class="icon-team" v-bind:src = "curMember.team"> --></span>
+		</div>
+		<textarea class="jt-input" type="text" name="" v-model="msg" placeholder="在这里写下你的留言，最多300个汉字" maxlength="300"></textarea>
+		<p class="tips">{{tips}}</p>
+		<button class="btn-pay" v-on:click="vote()">提交你的留言</button>
+		<p class="tip">友情提示：请不要发布过激、违规的言论</p>
+		
+		
+		<div v-show="showpop == true" class="pop">
+			<div>
+				<p>提交成功！</p>
+				<button class="btn-close" v-on:click="closePop()">确定</button>
+			</div>
+		</div>
+	</section>
+	
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="../../common/js/common.js"></script>
+<script src="../../common/js/vue.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/sendmsg.js"></script>
+</html>

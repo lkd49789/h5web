@@ -1,0 +1,230 @@
+*{margin:0;padding: 0;}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+body{
+	max-width: 640px;
+	margin:0 auto;
+	background-color: #fff;
+	position: relative;
+}
+.secList{
+	/* display: none; */
+}
+.topbox{
+	background-color: #afbaef;
+	padding: 3% 0;
+	text-align: center;
+	color:#fff;
+}
+.topbox p{
+	text-align:center;
+	color:#fff;
+}
+.toptit{
+	font-size: 1.5rem;
+}
+
+
+.memberList{
+	text-align: center;
+	padding-bottom: 1.5rem;
+	background-color: #fff;
+}
+.memberList li{
+	display: inline-block;
+	width:32%;
+	text-align: center;
+}
+.avatar{
+	display: block;
+	width: 70%;
+	/* border:1px solid #86d4f5; */
+	border-radius: 100%;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 100%;
+	margin:1.5rem 0 1rem 15%;
+}
+.mer_name{
+	font-size: 1rem;
+	margin-bottom: 0.7rem;
+}
+.mer_name em{
+	display: inline-block;
+	font-size: 1rem;
+	color: #fff;
+	/* background-color: #86d4f5; */
+	padding: 0 0.3rem;
+	border-radius: 3px;
+	margin-left: 0.2rem;
+}
+.givebtn{
+	text-align: center;
+}
+.givebtn span{
+	font-size: 1.2rem;
+	color: #5c6bc2;
+	border:1px solid #d5d6d7;
+	border-radius: 3px;
+	padding: 0.2rem 1rem;
+}
+
+
+
+/*弹窗*/
+.mask{
+	width: 100%;
+	height: 100%;
+	max-width: 640px;
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+	background-color: rgba(0,0,0,.4);
+	z-index: 1;
+	display: none;  
+}
+.giftinfo{
+	width: 80%;
+	position: absolute;
+	left:10%;
+	background-color: #fff;
+	border-radius: 10px;
+	padding-top: 4%;
+	top: 25%;
+}
+.gphead{
+	display: block;
+	width: 6rem;
+	height: 6rem;
+	border-radius: 100%;
+	border:1px solid #86d4f5;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	left:50%;
+	margin-left: -3rem;
+}
+.gpname{
+	text-align: center;
+	font-size: 1.2rem;
+	margin-top: 2%;
+	color: #363d4d;
+}
+.gp{
+	text-align: center;
+	color: #000;
+	font-size: 1.2rem;
+	margin-top: 2%;
+	margin-bottom: 8%;
+}
+.giftbtn{
+	text-align: center;
+	border-top: 1px solid #e8e8e8;
+	height: 3.5rem;
+}
+.giftbtn button{
+	border:0;
+	outline: none;
+	font-size: 1.3rem;
+	width: 49%;
+	height:3rem;
+	color: #007aff;
+	background-color: transparent;
+	float: left;
+	height: 3.5rem;
+}
+.giftbtn .cancel{
+	border-right: 1px solid #e8e8e8;
+}
+.giftbtn .right{
+
+
+}
+
+
+/*已投过票的显示页面*/
+.secbox{
+	width: 100%;
+	height: 100%;
+	max-width: 640px;
+	position: absolute;
+	z-index: 2;
+	background-color: #f6f6f6;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+	 display: none; 
+}
+.headbox{
+	width: 100%;
+    padding-top: 23%;
+}
+.headname{
+	text-align: center;
+	margin-top: 3%;
+	font-size: 1.3rem;
+	color: #363d4d;
+}
+.gptext{
+	font-size: 1.3rem;
+	text-align: center;
+	margin-bottom: 10%;
+}
+.headimg{
+	display: block;
+	width: 7rem;
+	height: 7rem;
+	border-radius: 100%;
+	border:1px solid #86d4f5;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	left:50%;
+	margin-left: -3.5rem;
+}
+.sectitle{
+	text-align: center;
+	font-size: 1.2rem;
+	color: #808080;
+	margin-top: 7%;
+}
+.zhu{
+	font-size: 1.2rem;
+	color: #808080;
+	text-align: center;
+	margin-top: 3%;
+}
+
+
+
+.titlebox{
+	font-size: 1.2rem;
+	position: relative;
+	height: 3rem;
+	line-height: 3rem;
+	background-color: #fff;
+	padding-left: 1.2rem;
+	border-bottom: 1px solid #e8e8e8;
+}
+.titlebox span{
+	display: block;
+	position: absolute;
+	width: 0.3rem;
+	height: 1.5rem;
+	background-color: #5f6bbc;
+	left: 0;
+	top: 0.75rem;
+}

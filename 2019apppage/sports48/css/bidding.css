@@ -1,0 +1,112 @@
+body{
+    max-width: 640px;
+    margin:0 auto;
+    position: relative;
+}
+#app{
+    height: 100%;
+}
+.biddingPage{
+    height: 100%;
+    padding: 2.5rem .83rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background: url(../img-speak/page/biddingPage_bg.jpg) no-repeat;
+    background-size:100% 100%; 
+}
+.biddingPage_title{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 -0.83rem;
+    padding: 0 0.83rem;
+    position: relative;
+    margin-bottom: 2.37rem;
+}
+.biddingPage_title_head{
+    border-radius: 50%;
+    border: 1px solid #4ec1b0;
+    overflow: hidden;
+}
+.headWrap{
+    border-radius: 50%;
+    width: 4.16rem;
+    height: 4.16rem;
+    overflow: hidden;
+    background: #fff;
+}
+.biddingPage_title .head{
+    width: 4.16rem;
+    margin-top: -5px;
+}
+.biddingPage_title_name{
+    color:#fff;
+    font-weight: bold;
+    line-height: 4.16rem;
+    margin-left: 1.16rem;
+    font-size: 1.4rem;
+}
+.biddingPage_title_num{
+    background: url(../img-speak/page/biddingNum_bg.png) no-repeat;
+    background-size:100% 100%;
+    min-width: 12.58rem;
+    position: absolute;
+    right: 0; 
+    height: 2.83rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    color: #fff;
+    line-height: 2.83rem;
+    padding-left: 1.66rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-size: 1.4rem;
+    max-width: 17rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.biddingPage_title_num span{
+    font-weight: bold;
+    margin-right: 5px;
+}
+.biddingPage_content{
+    height: 17.5rem;
+    background: #fff;
+    border-radius: 0.58rem;
+    background: url(../img-speak/page/bidding_user_bg.png) no-repeat;
+    background-size:100% 100%;
+}
+.biddingPage_content_user{
+    padding: 1.2rem 0 0 2.16rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.biddingPage_content_user img{
+    border-radius: 50%;
+    width: 4.75rem;
+    height: 4.75rem;
+    border: 1px solid #fff;
+}
+.userName{
+    font-size: 2.2rem;
+    text-shadow:0px 0px 1px #e6747b;
+    -webkit-text-stroke: 1px #e6747b;
+    line-height: 4.75rem;
+    color: #fff;
+    font-weight: bold;
+    margin-left: .8rem;
+}
+.leaveText{
+    padding:0 3.5rem;
+    font-size: 3.5rem;
+    font-weight: bolder;
+    color:#e6747b;
+    -webkit-text-stroke: 1px #fff;
+    text-shadow:0px 0px 1px #fff;
+    text-align: center;
+}

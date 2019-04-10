@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>投稿</title>
+	<link href="../../common/css/common.css" rel="stylesheet" />
+	<link href="css/mui.min.css" rel="stylesheet" />
+	<link href="css/tglist.css" rel="stylesheet" />
+</head>
+<body>
+
+	<section id="wrapper" v-cloak>
+		<!-- menu-box -->
+		<div class="menu-box">
+			<img class="btn1" v-on:click="gotoMenu(1)" v-bind:src = "menu | menu1">
+			<img class="btn2" v-on:click="gotoMenu(2)" v-bind:src = "menu | menu2">
+			<img class="btn3" v-on:click="gotoMenu(3)" v-bind:src = "menu | menu3">
+		</div>
+		<!-- 消息列表 -->
+		
+		<div v-show="menu === 1" id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<img v-if="listA.length == 0" class="empty" src="img/empty.png">
+				<ul class="mui-table-view mui-table-view-chevron lists">
+					<li v-for='(item,index) in listA'  v-on:click="gototginfo(item.materialInfo.materialType,item.materialInfo.materialId)">
+						<div class="tg-top">
+							<img v-bind:src="item.materialInfo.avatar">
+							<span>{{item.materialInfo.nicker}}</span>
+							<span class="ctime">{{item.materialInfo.ctime}}</span>
+						</div>
+						<div class="tg-bottom">
+							<div class="cover"><img v-bind:src="item.materialInfo.previewPath"></div>
+							
+							<div class="cover-right">
+								<p>{{item.materialInfo.title}}</p>
+								<div class="like-num">
+									<span><img src="img/icon-like.png">{{item.materialInfo.hot}}</span>
+									<span><img src="img/icon-comment.png">{{item.materialInfo.comments}}</span>
+								</div>
+								<span class="tg-m-name">{{item.materialInfo.tag[0].name}}</span>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<img class="icon-gotomsg" v-on:click="gotoguide()" src="img/icon-gototg.png">
+		</div>
+		<!-- 根据成员查看消息 -->
+		<div v-show="menu === 2" class="msg-box">
+			<div class="">
+				<li v-for='(item,index) in listB'  v-on:click="gotomembertg(index)">
+					<div class="avatar">
+						<img v-bind:src="item.avatar">
+					</div>
+					<p class="msg-num">{{item.count}}<img src="img/icon-tg.png"></p>
+					<p class="msg-m-name">{{item.memberName}}</p>
+				</li>
+				<!-- <li>
+					<div class="avatar">
+						<img src="http://www.snh48.com/images/member/zp_10087.jpg?ram=1541160880293">
+					</div>
+					<p class="msg-num">1235<img src="img/icon-msg.png"></p>
+					<p class="msg-m-name">谢蕾蕾</p>
+				</li>
+				<li>
+					<div class="avatar">
+						<img src="http://www.snh48.com/images/member/zp_10087.jpg?ram=1541160880293">
+					</div>
+					<p class="msg-num">1235<img src="img/icon-msg.png"></p>
+					<p class="msg-m-name">谢蕾蕾</p>
+				</li>
+				<li>
+					<div class="avatar">
+						<img src="http://www.snh48.com/images/member/zp_10087.jpg?ram=1541160880293">
+					</div>
+					<p class="msg-num">1235<img src="img/icon-msg.png"></p>
+					<p class="msg-m-name">谢蕾蕾</p>
+				</li> -->
+			</div>
+			
+		</div>
+		<!-- 投稿热度排行 -->
+		<div v-show="menu === 3" class="msg-toplist">
+			<img v-if="listC.length == 0" class="empty" src="img/empty.png">
+			<ul class="lists">
+					<li v-for='item in listC'  v-on:click="gototginfo(item.materialInfo.materialType,item.materialInfo.materialId)">
+						<div class="tg-top">
+							<img class="top-index" :src="item.rank | index">
+							<img v-bind:src="item.materialInfo.avatar">
+							<span>{{item.materialInfo.nicker}}</span>
+							<span class="ctime">{{item.materialInfo.ctime}}</span>
+						</div>
+						<div class="tg-bottom">
+							<div class="cover"><img v-bind:src="item.materialInfo.previewPath"></div>
+							
+							<div class="cover-right">
+								<p>{{item.materialInfo.title}}</p>
+								<div class="like-num">
+									<span><img src="img/icon-like.png">{{item.materialInfo.hot}}</span>
+									<span><img src="img/icon-comment.png">{{item.materialInfo.comments}}</span>
+								</div>
+								<span class="tg-m-name">{{item.materialInfo.tag[0].name}}</span>
+							</div>
+						</div>
+					</li>
+			</ul>
+			<img class="icon-gotomsg" v-on:click="gotoguide()" src="img/icon-gototg.png">
+		</div>
+	</section>
+
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="../../common/js/common.js"></script>
+<script src="../../common/js/vue.js"></script>
+<script src="js/mui.min.js"></script>
+<script src="js/mui.pullToRefresh.js" ></script>
+<script src="js/mui.pullToRefresh.material.js" ></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/tglist.js"></script>
+</html>

@@ -1,0 +1,116 @@
+(function(data) {
+    var interUrl = ""
+    //web端测试（用户信息）
+    var webUserInfo = {
+        "appid":"27422",                                //用户ID
+        "apptoken":"t0AIdfIDDRt5guu5cvq4gcA1wfh298yEGbU5GSTXcHxIG+kFNfFFYA=",                          //验证Token
+        "uname":"",                                 //用户昵称
+        "avata":"",                                    //头像地址
+        "dev_cd":"",                        //设备号
+    }
+    
+    //口袋用户信息
+    if(checkFromApp()){
+        var u_info = JSON.parse(dsBridge.call("snhUserInfo"))
+        var appUserInfo = {
+            "appid":u_info.userInfo.bigSmallInfo.bigUserInfo.userId,             //用户ID
+            "apptoken":u_info.token,                                             //验证Token
+            "uname":u_info.userInfo.bigSmallInfo.bigUserInfo.nickname,             //用户昵称
+            "avata":u_info.userInfo.bigSmallInfo.bigUserInfo.avatar,             //头像地址
+            "dev_cd":u_info.IMEI                                                //设备号
+        }
+    }
+    //获取用户信息
+    data.getAppUserInfo = function(){
+        if(checkFromApp()){
+            return appUserInfo;
+        }else{
+            return webUserInfo;
+        }
+        
+    }
+
+    //是否已经提交
+    data.ifSubmit = function(succ){
+        $.ajax({
+            url:  "https://pother.48.cn/othersystem/api/address/v1/personal/defaultAddress",
+            type: "POST", 
+            async:true,
+            contentType: "application/json; charset=utf-8",
+            beforeSend: function (request) {
+                request.setRequestHeader("token", main.getAppUserInfo().apptoken);
+            },
+            data: JSON.stringify({
+               
+            }),
+            timeout: 15000, 
+            dataType:"json",
+            success: function (data) { 
+                succ(data)
+            }, 
+            error: function (jqXHR, textStatus, errorThrown) { 
+                // alert("eee");
+            } 
+        });
+    }
+
+    //添加收货地址
+    data.addRess = function(_addressId,_security,_provinceNum,_cityNum,_countyNum,_specificAddress,_contactName,_contactPhone,succ){
+        $.ajax({
+            url:  "https://pother.48.cn/othersystem/api/address/v1/edit",
+            type: "POST", 
+            async:true,
+            contentType: "application/json; charset=utf-8",
+            beforeSend: function (request) {
+                request.setRequestHeader("token", main.getAppUserInfo().apptoken);
+            },
+            data: JSON.stringify({
+                addressId:_addressId,
+                security:_security,
+                provinceNum:_provinceNum,
+                cityNum:_cityNum,
+                countyNum:_countyNum,
+                specificAddress:_specificAddress,
+                contactName:_contactName,
+                contactPhone:_contactPhone,
+                postalCode:null,
+                defaultFlag:null
+            }),
+            timeout: 15000, 
+            dataType:"json",
+            success: function (data) { 
+                succ(data)
+            }, 
+            error: function (jqXHR, textStatus, errorThrown) { 
+                // alert("eee");
+            } 
+        });
+    }
+
+    
+    
+    // 无头像添加域名
+    data.formatAvata = function(avatar){
+        if(avatar.indexOf("http://")>=0 ||avatar.indexOf("https://")>=0){
+            return avatar
+        }else{
+            return picUrl+avatar;
+        }
+    }
+
+    //弹框
+    data.alert = function(name){
+        /*var iframe = document.createElement("IFRAME");
+        iframe.style.display="none";
+        iframe.setAttribute("src", 'data:text/plain,');
+        document.documentElement.appendChild(iframe);
+        window.frames[0].window.alert(name);
+        iframe.parentNode.removeChild(iframe);*/
+        mui.alert(name, '', function() {
+            
+        });
+    }
+   
+
+}(window.main = {}));
+

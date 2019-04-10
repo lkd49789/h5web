@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>送鸡腿，让小姐姐不穷游！</title>
+	<link href="../../common/css/common.css" rel="stylesheet" />
+	<link href="css/index.css" rel="stylesheet" />
+</head>
+<body>
+	<section id="wrapper">
+		<img src="img/title.png">
+		<div class="middle">
+			<div class="rule-box">
+				<p>小编即时剧透：<br>目前20位小姐姐已经准备好踏上普吉岛泳装MV拍摄之旅，而即将参加综艺拍摄的小姐姐可是有不少的额外“假日福利”啊！平常忙公演忙通告，终于可以在工作之余享受海岛假期了。既然是“假日福利”，就少不了吃喝玩乐“马杀鸡”，据了解导演组已经为她们规划好了一系列项目，等待她们的将是怎样的美食美景和超级享乐服务呢？在拍摄过程中又会发生怎样趣事呢？小姐姐们又会为“送鸡腿”的粉丝们准备怎样亲手制作充满爱意的礼物呢？一切就等待前7名小姐姐的诞生咯！</p>
+				<a v-on:click="gotoRule()" href="###">查看详情和规则>>></a>
+			</div>
+			<img src="img/icon.png">
+		</div>
+		<div class="memberbox">
+			<div v-if="over == true"><img class="title-over" src = "img/title-over.png"></div>
+			<div v-if="over == false" class="btns">
+				<span v-on:click="choosePage1()"><img v-bind:src = "page | menu1"></span>
+				<span v-on:click="choosePage2()"><img v-bind:src = "page | menu2"></span>
+			</div>
+			<ul v-show="page === 0" class="member-list" v-cloak style="display: none;">
+				<li v-if="over == true" v-for='(item, index) in listB'>
+					<img class="index" v-bind:src="item.rank | top">
+					<div class="photo"><img v-bind:src = "item.avatar"></div>
+					<p>{{item.realName}}<span><img class="icon-team" v-bind:src = "item.team"></span></p>
+					<button class="mername"><img src="img/icon-jt.png">{{item.money}}</button>
+				</li>
+			</ul>
+			<ul v-if="over == false" v-show="page === 0" class="member-list" v-cloak style="display: none;">
+				<li  v-for='(item, index) in listA'>
+					<div class="photo"><img v-bind:src = "item.avatar"></div>
+					<p>{{item.realName}}<span><img class="icon-team" v-bind:src = "item.team"></span></p>
+					<button class="mername" v-on:click="gotoVote(index)">支持她</button>
+				</li>
+				
+			</ul>
+			<ul v-if="over == false" v-show="page === 1" class="member-top" >
+				<li v-for='(item1, index) in listB'>
+					<div class="rankLeft">
+						<img class="index" v-bind:src="item1.rank | top">
+						<span class="avatar"><img v-bind:src = "item1.avatar"></span>
+						<p>{{item1.realName}}</p>
+						<span><img class="icon-team2" v-bind:src = "item1.team"></span>
+					</div>
+					<button v-if="over == false" class="mername"  v-on:click="gotoVote(index)">支持她</button>
+					<span v-else>鸡腿数：{{item1.money}}</span>
+					
+				</li>
+				<!-- <li>
+					<div class="rankLeft">
+						<img src="img/top/1.png">
+						<span class="avatar"></span>
+						<p>谢蕾蕾</p>
+						<span class="icon">SII</span>
+					</div>
+					<button class="mername">支持她</button>
+				</li> -->
+			</ul>
+			<p v-if="over == false && page === 0" class="tip">注：孙珍妮因学业安排无法参与该活动<br>李丽满因为个人原因，退出本次泳装MV拍摄，其位置将更换为彭嘉敏，为李丽满投送的鸡腿将全部返还</p>
+
+			<p v-if="over == false && page === 1" class="tip">排名更新于 {{date}}</p>
+			
+		</div>
+		
+	</section>
+
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="../../common/js/common.js"></script>
+<script src="../../common/js/vue.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/index.js"></script>
+</html>

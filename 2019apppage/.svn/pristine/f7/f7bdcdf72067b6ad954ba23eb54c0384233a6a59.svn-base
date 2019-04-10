@@ -1,0 +1,126 @@
+*{margin:0;padding: 0}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+body{
+	max-width: 640px;
+	margin:0 auto;
+	background-color: #71b6f4;
+	position: relative;
+}
+[v-cloak]{
+    display: none;
+}
+section{
+	width: 100%;
+	background: url(../img/bg.jpg)no-repeat center bottom;
+	background-size: cover;
+	position: relative;
+    padding-bottom: 8rem;
+}
+.slogan{
+	width: 100%;
+}
+.homelist li{
+	width: 100%;
+	position: relative;
+}
+.homelist li img{
+	width: 100%;
+}
+
+/*弹窗*/
+.mask{
+	width: 100%;
+	height: 100%;
+	max-width: 640px;
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+	background-color: rgba(0,0,0,.6);
+	/*display: none;*/
+}
+.divbox11,.divbox2,.divbox3{
+	/*display: none;*/
+}
+.fansbox,.championbox,.supportbox,.seerbox,.talkbox{
+	width: 70%;
+	position: absolute;
+	left:9%;
+	background-color: #fff;
+	border-radius: 5px;	
+	padding: 7% 6%;
+	color:#465df3;
+	top: 12%;
+}
+
+.title_fashion,.title_support{
+	width: 60%;
+	margin-left: 20%;
+	margin-bottom: 5%;
+}
+
+.fansbox p,.championbox p,.supportbox p{
+	font-size: 1.1rem;
+}
+/*粉丝应援挑战*/
+.title_fans,.fans_btn,.title_seer{
+	width: 100%;
+}
+.title_fans{margin-bottom: 1rem;}
+.fansbox table{background-color: #fff;border: none;}
+.fansbox tr td{border: none;padding: 5px 0;}
+.fansbox table tr td{text-align: left;}
+.c-yellow{color: #c3d355;}
+.fansbox table tr td:nth-child(1){width: 30%;}
+.fans_btn{margin-top: 1rem;}
+/*冠军竞猜 */
+.title_champion{width: 70%;margin-left: 15%;margin-bottom: 1rem;}
+.go_champion{width: 90%;margin-left: 5%;margin-top: 1rem;}
+.championbox p,.fansbox p{font-size: 1.2rem;color: #1d1d1d;margin-bottom: .7rem;}
+.championbox p span,.fansbox p span{font-size: 1.2rem;font-weight: bold;}
+table{color: #1d1d1d;background-color: #f1fffa;border-radius: 10px;border: 1px solid #fff;text-align: center;width: 100%;}
+table tr{padding: 1rem 0;}
+table tr td{border: 1px solid #d6f4e9;font-size: 1rem;padding: 10px 0;}
+table tr td:nth-child(1){color: #000;font-weight: bold;width: 40%;}
+table tr td span{font-size: 1rem;}
+.c-red{color: #fd4848;}
+.c-green{color: #27c28b;}
+.btn-close{position: absolute;width: 3rem;height: 3rem;right: -1.5rem;top: -1.5rem; }
+
+/*全场指定预言家*/
+.seerbox{top: 5%;}
+.seerbox p{font-size: 1rem;color: #000;font-weight: bold;margin: .5rem 0;}
+.table-seer1{background-color: #ecfcff;border: none;}
+.table-seer1 tr td{border: 1px solid #d4eeff;padding: 5px;}
+.table-seer1 table tr td{text-align: left;}
+
+.seer2-title{font-size: 1rem;color: #1d1d1d !important;font-weight: 500 !important;margin-top: 1rem;}
+.table-seer2 {background-color: #fff !important;border: none;}
+.table-seer2 tr td{border: none;padding: 5px;text-align: left;}
+.table-seer2 table tr td{text-align: left;}
+.c-blue{color: #31acfc;}
+.go_seer{width: 90%;margin-left: 5%;margin-top: 1rem;}
+/*百万应援墙*/
+.www{font-size: 2rem !important;color: #c3d355 !important;}
+/*吐槽实体化*/
+.title_talk{width: 100%;}
+.talkbox{margin-bottom: 1rem;}
+.talkbox p{color: #1d1d1d;font-size: 1rem;line-height: 1.7rem;}
+.talkbox span{font-size: .8rem;}
+.talkbox table{background-color: #fff;border: none;}
+.talkbox tr td{border: none;padding: 5px 0;}
+.talkbox table tr td{text-align: left;}
+.c-yellow{color: #c3d355;}
+.talkbox table tr td:nth-child(1){width: 30%;}
+.fans_btn{margin-top: 1rem;}
+.title{font-weight: bold;margin: .5rem 0;}
+.close{
+	position: absolute;
+    width: 10%;
+    top: -10%;
+    right: 6%;
+}

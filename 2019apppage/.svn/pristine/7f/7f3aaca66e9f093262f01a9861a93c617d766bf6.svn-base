@@ -1,0 +1,154 @@
+(function(data) {
+    //vip/detail 跳转vip短链接
+    //web端测试（用户信息）
+    var webUserInfo = {
+        "appid":"27422",                                //用户ID
+        "apptoken":"i/hg37V7xzn8FSs6iXpgUsR9Mhf89pQWglwBFpWWNLKcz+s4MIDEBsMe3oBCkS9p9qs4ComtGVwU5K/7pwgpNA==",                          //验证Token
+        "uname":"nicker",                                 //用户昵称
+        "avata":"avata",                                    //头像地址
+        "dev_cd":"dev_cd",                        //设备号
+        "bindInfo":"bindInfo"
+    }
+    
+    
+    //口袋用户信息
+    if(checkFromApp()){
+        var u_info = JSON.parse(dsBridge.call("snhUserInfo"))
+        var appUserInfo = {
+            "appid":u_info.userInfo.bigSmallInfo.bigUserInfo.userId,             //用户ID
+            "apptoken":u_info.token,                                             //验证Token
+            "uname":u_info.userInfo.bigSmallInfo.bigUserInfo.nickname,             //用户昵称
+            "avata":u_info.userInfo.bigSmallInfo.bigUserInfo.avatar,             //头像地址
+            "dev_cd":u_info.IMEI,                                                //设备号
+            "bindInfo":u_info.userInfo.bindInfo                                 //绑定信息
+        }
+    }
+    //获取用户信息
+    data.getAppUserInfo = function(){
+        if(checkFromApp()){
+            return appUserInfo;
+        }else{
+            
+            return webUserInfo;
+        }
+    }
+    //应援计划首页（截止后页面）
+    data.getList = function(succ){
+        $.ajax({
+            url:  CONFIG.getLink()+"api/activity/v1/aid/index",
+            type: "POST", 
+            dataType: "json",
+            beforeSend: function (request) {
+                 request.setRequestHeader("token", main.getAppUserInfo().apptoken);
+            },
+            data:{},
+            success: function (data) { 
+                succ(data)
+            }, 
+            error: function (jqXHR, textStatus, errorThrown) { 
+                // alert("eee");
+            } 
+        });
+    }
+    //应援计划投票
+    data.vote = function(_group,_type,succ){
+        $.ajax({
+            url:  CONFIG.getLink()+"api/activity/v1/aid/vote",
+            type: "POST", 
+            dataType: "json",
+            contentType: 'application/json',
+            beforeSend: function (request) {
+                 request.setRequestHeader("token", main.getAppUserInfo().apptoken);
+            },
+            data:JSON.stringify({
+              "aidAvatar": main.getAppUserInfo().avata,
+              "aidName": main.getAppUserInfo().uname,
+              "group": _group,
+              "type": _type
+            }),
+            success: function (data) { 
+                succ(data)
+            }, 
+            error: function (jqXHR, textStatus, errorThrown) { 
+                // alert("eee");
+            } 
+        });
+    }
+
+    //冠军竞猜首页
+    data.getChampionList = function(succ){
+        $.ajax({
+            url:  CONFIG.getLink()+"api/activity/v1/champion/index",
+            type: "POST", 
+            dataType: "json",
+            beforeSend: function (request) {
+                 request.setRequestHeader("token", main.getAppUserInfo().apptoken);
+            },
+            data:{},
+            success: function (data) { 
+                succ(data)
+            }, 
+            error: function (jqXHR, textStatus, errorThrown) { 
+                // alert("eee");
+            } 
+        });
+    }
+    //提交竞猜结果
+    data.submitGuess = function(_list,_type,succ){
+        $.ajax({
+            url:  CONFIG.getLink()+"api/activity/v1/champion/guess",
+            type: "POST", 
+            dataType: "json",
+            beforeSend: function (request) {
+                 request.setRequestHeader("token", main.getAppUserInfo().apptoken);
+            },
+            data:JSON.stringify({
+                  "aidAvatar": main.getAppUserInfo().avata,
+                  "aidName": main.getAppUserInfo().uname,
+                  "sportGuessList": _list,
+                  "type": _type//参与竞猜花费类型 1-鸡腿 2-积分
+            }),
+            contentType: 'application/json',
+            success: function (data) { 
+                succ(data)
+            }, 
+            error: function (jqXHR, textStatus, errorThrown) { 
+                // alert("eee");
+            } 
+        });
+    }
+    //获取猜中人员
+    data.getWinner = function(succ){
+        $.ajax({
+            url:  CONFIG.getLink()+"api/activity/v1/champion/success",
+            type: "POST", 
+            dataType: "json",
+            // beforeSend: function (request) {
+            //      request.setRequestHeader("token", main.getAppUserInfo().apptoken);
+            // },
+            data:{},
+            contentType: 'application/json',
+            success: function (data) { 
+                succ(data)
+            }, 
+            error: function (jqXHR, textStatus, errorThrown) { 
+                // alert("eee");
+            } 
+        });
+    }
+    //弹框
+    data.alert = function(name){
+        var iframe = document.createElement("IFRAME");
+        iframe.style.display="none";
+        iframe.setAttribute("src", 'data:text/plain,');
+        document.documentElement.appendChild(iframe);
+        window.frames[0].window.alert(name);
+        iframe.parentNode.removeChild(iframe);
+    }
+    
+
+}(window.main = {}));
+
+
+
+
