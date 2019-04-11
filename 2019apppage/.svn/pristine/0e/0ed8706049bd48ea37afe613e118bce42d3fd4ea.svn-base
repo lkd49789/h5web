@@ -71,9 +71,8 @@ var Vue=new Vue({
             }) 
         },
         dayClick(item,month){
-            var GMonth = new Date().getMonth() + 1
-            var GDay = new Date().getDate()
-            var ThisDate = new Date("2019/" + GMonth.toString().padStart(2, '0') + "/" + GDay.toString().padStart(2, '0') + " 00:00:00").getTime()
+            // var ThisDate = new Date("2019/04/14 00:00:00").getTime()
+            var ThisDate = new Date().getTime()
             var endDate = new Date("2019/" + month.toString().padStart(2, '0') + "/" + item.day.toString().padStart(2, '0')+" 00:00:00").getTime()
             if (this.alreadyShow){
                 this.tips = '你已经成功报名啦不用在选了～'

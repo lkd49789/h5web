@@ -71,7 +71,7 @@ button{
 .bottom_dayWrap{
     background: #fbf8ff;
     border-radius: .42rem;
-    height: 6.3rem;
+    height: 6.67rem;
     width: 19%;
     margin-right: 1.25%;
     display: flex;

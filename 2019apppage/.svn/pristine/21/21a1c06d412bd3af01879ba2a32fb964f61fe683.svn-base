@@ -70,23 +70,16 @@ var Vue=new Vue({
                 })
             }) 
         },
-        dayClick(item,month){
-            var GMonth = new Date().getMonth() + 1
-            var GDay = new Date().getDate()
-            var ThisDate = new Date("2019/" + GMonth.toString().padStart(2, '0') + "/" + GDay.toString().padStart(2, '0') + " 00:00:00").getTime()
-            var endDate = new Date("2019/" + month.toString().padStart(2, '0') + "/" + item.day.toString().padStart(2, '0')+" 00:00:00").getTime()
+        dayClick(item){
             if (this.alreadyShow){
                 this.tips = '你已经成功报名啦不用在选了～'
                 this.showpop = 1;  
             }else if(item.num == 4){
                 this.tips='当天已经报名满额，请换一天'
                 this.showpop=1;
-            } else if (parseInt((endDate - ThisDate) / (1000 * 60 * 60 * 24)) <= 1){
-                this.tips = '超过预约时间'
-                this.showpop=1;
             }else{
                 this.maskDate = item.date
-                this.showpop = 2;
+                this.showpop=2;
             }
         },
         async submit(){
