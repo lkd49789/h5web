@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>本周MC话题</title>
+    <link href="../../../common/css/common_mobile.css" rel="stylesheet"/>
+    <link href="css/comment_list.css" rel="stylesheet"/>
+</head>
+<body>
+	<div class="wrapper" id="wrapper">
+	   	<p class="title">{{topics.mcTitle}}已入围话题<span>（{{topics.fromDay}}-{{topics.toDay}}）</span></p>
+      <div class="content-choose">
+          <ul>
+             <!--  <li v-for="mc in topics">{{mc.words}}</li> -->
+              <li v-for="mc in topics.mcTopic">
+                <span class="user-tx">
+                    <img src="{{mc.avatar | Avata}}">
+                </span>
+                <span class="mc-info">
+                    <span class="user-info">{{mc.nickName}}<span>Lv{{mc.level}}</span></span>
+                    <p>{{mc.title}}</p>
+                </span>
+                <span class="lock  c0">
+                    <img src="images/lock0.png"/> 
+                    <p class="s0">{{mc.parseCount}}</p>
+                </span>
+              </li>
+              <!-- <li>
+                <span class="user-tx">
+                    <img src="{{mc.avatar | Avata}}">
+                </span>
+                <span class="mc-info">
+                    <span class="user-info">用户昵称<span>Lv3</span></span>
+                    <p>测试测试测试测试测试测试测试测试测试测试测试测试测试测试</p>
+                </span>
+                <span class="lock  c0">
+                    <img src="images/lock0.png"/> 
+                    <p class="s0">343</p>
+                </span>
+              </li>
+              <li>
+                <span class="user-tx">
+                    <img src="images/tx.png">
+                </span>
+                <span class="mc-info">
+                    <span class="user-info">用户昵称<span>Lv3</span></span>
+                    <p>测试测试测试测试测试测试测试测试测试测试测试测试测试测试</p>
+                </span>
+                <span class="lock  c0">
+                     <img src="{{mc.hasUnlocked | AvataLock}}"/> 
+                    <p class="s{{mc.hasUnlocked}}">{{mc.parseCount}}</p>
+                    <img src="images/lock0.png"/> 
+                    <p class="s0">343</p>
+                </span>
+              </li> -->
+          </ul>
+      </div>
+      <p class="title">{{topics.mcTitle}}待入围话题<span>（{{topics.fromDay}}-{{topics.toDay}}）</span></p>
+      <div class="content-choose">
+          <ul>
+            <li v-for="othermc in topics.otherTopic">
+                <span class="user-tx">
+                    <img src="{{othermc.avatar | Avata}}">
+                </span>
+                 <span class="mc-info">
+                    <span class="user-info">{{othermc.nickName}}<span>Lv{{othermc.level}}</span></span>
+                    <p class="c1">{{othermc.title}}</p>
+                </span>
+                <span class="lock  c1">
+                    <img src="images/lock1.png"/> 
+                    <p class="s1">{{othermc.parseCount}}</p>
+                </span>
+              </li>
+             <!--  <li v-for="mc in topics">{{mc.words}}</li> -->
+             <!--
+              <li>
+                <span class="user-tx">
+                    <img src="images/tx.png">
+                </span>
+                <span class="mc-info">
+                    <span class="user-info">用户昵称<span>Lv3</span></span>
+                    <p class="c1">测试测试测试测试测试测试测试测试测试测试测试测试测试测试</p>
+                </span>
+                <span class="lock  c1">
+                    <img src="images/lock1.png"/> 
+                    <p class="s1">343</p>
+                </span>
+              </li>
+              <li>
+                <span class="user-tx">
+                    <img src="images/tx.png">
+                </span>
+                <span class="mc-info">
+                    <span class="user-info">用户昵称<span>Lv3</span></span>
+                    <p class="c1">测试测试测试测试测试测试测试测试测试测试测试测试测试测试</p>
+                </span>
+                <span class="lock  c1">
+                    <img src="images/lock1.png"/> 
+                    <p class="s1">343</p>
+                </span>
+              </li>-->
+          </ul>
+      </div>
+	</div>
+  
+	<script src="../../../common/js/jquery.min.js"></script>
+  <script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+  <script type="text/javascript" src="../../common/js/common_v1.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/vue.js"></script>
+  <script src="js/topic.js"></script>
+  <script src="js/comment_list.js"></script>
+  
+</body>
+</html>

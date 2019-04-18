@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>提交MC话题</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	//mui.init();
+    </script>
+    <style type="text/css">
+        .mui-input-row{margin-top: 10px;}
+        ul.list_status li{color: #000;}
+        .mui-input-row{margin-top:0;}
+        .counter{left: 5px;right: initial;bottom: 10px;}
+        /*input textarea（placeholder的颜色） */
+        ::-webkit-input-placeholder { /* WebKit browsers */
+            color: #c4c4c4;
+            font-size: 16px;
+        }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color: #c4c4c4;
+            font-size: 16px;
+        }
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color: #c4c4c4;
+            font-size: 16px;
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10+ */
+            color: #c4c4c4;
+            font-size: 16px;
+        }
+        .upic{
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            right: 5px;
+            bottom: 15px;
+            text-align: center;
+            line-height: 80px;
+        }
+        .mui-input-row textarea{
+            margin-bottom: 0px;
+        }
+        #cover{
+          vertical-align: bottom;
+          width: 50px;
+          /* width: 100%;
+          height: 100%;
+          vertical-align: middle;
+          object-fit: cover; */
+        }
+        .prompt{
+          color:#adadad;
+          font-size: 12px;
+        }
+        .againload{
+            color: #fff;
+            background-color: #8699ff;
+            font-size: 12px;
+            width: 40px;
+            height: 18px;
+            line-height: 20px;
+            position: absolute;
+            bottom: 5px;
+            border-radius: 5px;
+            left: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+	<div class="mui-content">
+		
+    <div class="show_name" id="vue-thisMc" style="display:none;">
+          
+          <ul class="list_status">
+              <li>提交话题给{{teamName |Teamname}}</li>
+          </ul>
+    </div>  
+    <div class="comment_input">
+      <div class="mui-input-row">
+        <span class="counter" id="word-count">0/50</span>
+        <div class="drag-area upic" id="uploadBox">
+            <img src="images/icon_pic.png" id="cover">
+            <span class="againload">重传</span>
+            <input type="file" name="fileToUpload" id="fileToUpload" style="visibility:hidden;position:absolute;bottom:10px;width:0px"/>
+        </div>
+        <textarea id="topic-text" name="topic-text" rows="9" cols="" maxlength="50" placeholder="请输入一个完整的MC话题，如：SNH48整个团队里，最傲娇的人是谁？为什么？"></textarea>
+      </div>
+    </div>
+    <p class="prompt">提示：请勿上传包含不良信息的视频或图片以及文字内容</p>
+    
+    <a class="comment_submit" id="confirmBtn">提交</a>
+    
+    
+	</div>
+  
+  <script src="../../common/js/jquery.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/vue.js"></script>
+  <script src="js/topic.js"></script>
+  <script src="upload/uploadNewsCover.js"></script>
+
+  <script>
+    var issubmit = false;
+    var mcValue = localStorage.getItem("CUR_TEAM");
+		var thisMc = JSON.parse(mcValue);
+    
+		console.log("--"+JSON.stringify(thisMc.teamName));
+    //$(".list_status li").html("已选择队伍 TEAM "+thisMc.teamName)
+    var mcitemVM = new Vue({
+      el: '#vue-thisMc',
+      data: thisMc
+    });
+    H5UPLOAD.html5upload.init("uploadBox");
+    
+    //$(".mui-title").html(thisMc.title);
+    
+      $("#topic-text").bind("input",function () {
+    //$("#topic-text").keydown(function () {
+        setTimeout(function(){
+            countStrNum()
+
+        },10);
+
+    });
+    function countStrNum(){
+        var total = 50;
+          var len = Number($("#topic-text").val().length);
+            if (len > total) {
+                $("#topic-text").val($("#topic-text").substring(0, total));
+            }else{
+                $("#word-count").text(len + "/" + total);
+            }
+            console.log($("#topic-text").val().length)
+            
+    }
+    
+    $("#confirmBtn").click(function () {
+
+        var title = $("#topic-text").val();
+        if(title.length==0) {
+            mcTopic.muiAlert("内容不能为空");
+            return false;
+        }
+
+        if(!issubmit){
+          issubmit = true;
+          mcTopic.topicNew(title, thisMc.teamId,  thisMc.teamName, thisMc.location, function(msg){
+            //alert(msg);
+            issubmit = false;
+            mui.alert(msg, '', function() {
+              //window.web.backHome();
+              mcTopic.backTo()
+            });
+
+            //window.web.gotoDetail('http://h5.snh48.com/mc/comment_list.html');
+            
+          }, function(msg){
+            issubmit = false;
+            mcTopic.muiAlert(msg)
+          });
+        }
+    });
+    
+    
+  </script>    
+  
+</body>
+</html>

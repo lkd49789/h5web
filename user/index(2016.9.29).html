@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>个人中心</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+<style type="text/css">
+	*{margin:0;padding:0;}
+	html{width: 100%; height: 100%;font-size: 100%;}
+	html,body{overflow:hidden;overflow-y:auto;}
+	body{
+		 margin:0 auto; 
+		 width:100%; 
+		 height: 100%;
+		 background-size: auto;
+		 font-size: 62.5%;
+		 position: relative;
+	}
+	.page{
+		max-width: 660px;
+		width: 100%;
+		height: 100%;
+		margin: auto;
+		position: relative;
+		background: url('') no-repeat top center;
+		background-size: cover;
+	}
+	.topcon{
+		width: 6.6rem;
+		height: 2rem;
+		border: 1px solid #ddd;
+		border-radius: 15px;
+		line-height: 2rem;
+		position: absolute;
+		margin:0 auto;
+		top: 20px;
+		left: 50%;
+		margin-left: -3.3rem;
+		background: #D9EEFA;
+	}
+	.top1{
+		width: 1.5rem;
+		height: 1.2rem;
+		position: absolute;
+		top: 0.3rem;
+		left: 0.8rem;
+	}
+	.top1 img{width: 100%;height:100%;}
+	.top2{margin-left: 2.6rem;font-size: 14px;}
+	.topcontent{
+		width: 8.8rem;
+		height: 12rem;
+		background: url(img/title.png) no-repeat center center;
+		background-size: 100%;
+		position: absolute;
+		top: 5.5rem;
+		left: 50%;
+		margin-left: -4.2rem;
+	}
+	.meng{text-align: center;}
+	.headimg{
+		width: 6rem;
+		height: 6rem;
+		border: 5px solid #B7DFF5;
+		border-radius: 6rem;
+		margin-left: 1.2rem;
+		background: url('img/niming.jpg')no-repeat center center;
+		background-size: 100%;
+	}
+	.num,.tit,.listimg{display: inline-block;}
+	.num{
+		font-size: 2rem;
+		font-weight: bold;
+	}
+	.tit{
+		font-size: 1.2rem;
+		font-weight: bold;
+	}
+	.listimg{
+		display: inline-block;
+		width: 1.6rem;
+		height: 1.6rem;
+	}
+	.listimg img{width: 100%;height: 100%;}
+	.titname{text-align: center;margin-top: 0.5rem;}
+	.code{position: absolute;bottom: 2.2rem;left: 50%;margin-left: -3.5rem;}
+	.codeimg{
+		width: 7rem;
+		height: 7rem;
+		border: 5px solid #aaa;
+		border-radius: 10px;
+		background: url()no-repeat center center;
+		background-size: 100%;	
+	}
+	.code h4{margin-top: 1rem;padding-left: 0.7rem;font-size: 14px;}
+	.main{width: 100%;height: 100%;position: absolute;left: 0;top: 0;background: #D9EEFA;opacity: 0.7;}
+	.main1{width: 100%;height: 100%;position: absolute;left: 0;top: 0;}
+	.maintop{border-bottom: 1px solid #aaa;padding: 10px;font-size: 0.9rem;}
+	.close{float: right;display: inline-block;}
+	.ullist{margin:0 10px;}
+	.ullist li{padding: 15px 0;border-bottom: 1px solid #aaa;width: 100%;list-style: none;}
+	.ullist li span{display: inline-block;}
+	.ullist li span:first-child{width: 10%;}
+	.ullist li .text{width: 70%;}
+	.ullist li span:last-child{width: 15%;text-align: right;}
+	.main,.main1{display: none;}
+	.animate1{animation: fadeInUpBig 0.5s 1;-webkit-animation:fadeInUpBig 0.5s 1;}
+	.animate2{animation: fadeInDownBig 0.5s 1;-webkit-animation:fadeInDownBig 0.5s 1;}
+
+	.topcon a{text-decoration: none;display: block;width: 100%;height: 100%;}
+	.mebtn{display: block;text-decoration: none;width: 180px;height: 40px;border-radius: 5px;background: #FF7454;line-height: 40px;color:#fff;font-weight: bold;text-align: center;font-size: 16px;position: absolute;bottom: 3rem;left: 50%;margin-left: -90px;}
+</style>
+</head>
+<body>
+	<div class="page">
+		<div class="top">
+			<div class="topcon">
+				<a class="link" href="javascript:;">
+					<span class="top1"><img src="img/horn.png"></span>
+					<span class="top2">个人中心</span>
+				</a>
+			</div>
+		</div>
+		<div class="topcontent">
+			<div class="headimg"></div>
+			<div class="meng">
+				<span class="num"></span>
+				<span class="tit">梦想</span>
+				<!-- <span class="listimg"><img src="img/box.png"></span> -->
+			</div>
+			<h1 class="titname"></h1>
+		</div>
+		<!-- <div class="code">
+			<div class="codeimg"></div>
+			<h4>扫一扫 有惊喜</h4>
+		</div> -->
+		<a href="#" class="mebtn">我要抽奖</a>
+	</div>
+	<!-- <div class="main">
+	</div>
+	<div class="main1">
+		<div class="maintop">
+			<span class="listcont">积分明细</span>
+			<span class="close">关闭</span>
+		</div>
+		<ul class="ullist">
+			<li>
+				<span>4-1</span>
+				<span class="text">参与 星梦大转盘 抽奖</span>
+				<span>-10</span>
+			</li>
+		</ul>
+	</div> -->
+</body>
+<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://h5.snh48.com/common/js/common.js"></script>
+<script type="text/javascript">
+	if(common.getOauth("http://h5.snh48.com/snh48/user/")){
+
+    }else{
+        
+    }
+
+	function GetQueryString(name) 	{
+	var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); 
+	var r = window.location.search.substr(1).match(reg);
+		if(r!=null)
+			return  unescape(r[2]); 
+			return null; 	
+	}
+
+	
+
+	var group_id= GetQueryString("group_id");
+	var openid=GetQueryString("openid");
+	detailed();//明细页面打开关闭
+	loaduser();//调接口获取头像昵称等信息
+
+	//根据group_id改变背景、二维码
+    switch(group_id){
+		case 'SNH':
+		$('.page').css('background-image','url(img/bg2.jpg)');
+		$('.topcontent').css('background-image','url(img/title2.jpg)');
+		$('.link').attr('href','http://mp.weixin.qq.com/s?__biz=MjM5MjM2MjQ4MA==&mid=401808042&idx=1&sn=10f1af436ce4b8322d73ad6fa21a53a0#rd');
+		$('.mebtn').attr('href','http://h5.snh48.com/snh48/awardRotate/index.html?group_id='+group_id+'&openid='+openid);
+		break;
+		case 'BEJ':
+		$('.page').css('background-image','url(img/bg1.jpg)');
+		$('.topcontent').css('background-image','url(img/title1.jpg)');
+		$('.link').attr('href','http://mp.weixin.qq.com/s?__biz=MzIyMjE5MDY4Mg==&mid=504603535&idx=1&sn=45351ecdc18f8f1c021bc15a32a25d7a#rd');
+		$('.mebtn').attr('href','http://h5.snh48.com/snh48/awardRotate/index.html?group_id='+group_id+'&openid='+openid);
+		break;
+		case 'GNZ':
+		$('.page').css('background-image','url(img/bg3.jpg)');
+		$('.topcontent').css('background-image','url(img/title3.jpg)');
+		$('.link').attr('href','http://mp.weixin.qq.com/s?__biz=MzA4NjMwMDg0MA==&mid=510389155&idx=1&sn=870b0b08a660ed0f25b85821f07bf854#rd');
+		$('.mebtn').attr('href','http://h5.snh48.com/snh48/awardRotate/index.html?group_id='+group_id+'&openid='+openid);
+		break;
+	}
+
+	function loaduser(){
+		$.ajax({
+			type:'get',
+			url:"http://h5.snh48.com/wxapi/user_info.php?openid="+openid+"&group_id="+group_id,
+			success:function(data){
+
+				eval('rs='+data)
+				// console.log(data);
+				// console.log(rs.headimgurl);
+				$('.headimg').css('background-image',"url("+rs.headimgurl+")")
+				$('.num').html(rs.points);
+				$('.titname').html(rs.nickname);
+			},
+			error:function(){
+				alert("请求超时");
+			}
+		});
+	}
+
+	//明细页面打开关闭
+	function detailed(){
+		$('.listimg').click(function(){
+			$('.main,.main1').removeClass('animate2').addClass('animate1').show();
+		})
+		$('.close').click(function(){
+			$('.main,.main1').removeClass('animate1').addClass('animate2');
+			$('.main,.main1').hide();
+		})
+	}
+</script>
+</html>

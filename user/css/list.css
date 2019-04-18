@@ -1,0 +1,74 @@
+html,body,ul{
+    margin:0;
+    padding: 0;
+    color: #666666;
+  }
+  body{
+    padding: 0 3%;
+    font-size: 15px;
+  }
+  .page{
+    margin-bottom: 3rem;
+  }
+  li{
+    list-style: none;
+  }
+  .page .tips{
+    text-align:center;
+    display: none;
+  }
+  .intro{
+    display: none;
+    margin-top: 1rem;
+    text-align: center;
+  }
+  .page li{
+    position: relative;
+    margin-top: 2rem;
+  }
+  .page li div{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .page li div p{
+    margin: .4rem 0;
+  }
+  .part1{
+    width: 16%;
+  }
+  .part1 img{
+    width: 100%;
+  }
+  .part2{
+    margin-left: 1.5%;
+    width: 55%;
+  }
+  .part3{
+    width: 23%;
+    /* float: right; */
+    position: relative;
+    text-align: center;
+  }
+  .part3 p{
+    color: #fc4d38;
+  }
+  .part3 a{
+    display: block;
+    width: 100%;
+    /*background-color: #70cefe;*/
+    border-radius: 1rem;
+    padding: .2rem 0;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+  }
+  .part3 a{
+    width: 76%!important;
+    margin-left: 12%;
+  }
+  .sel{
+    background-color: #bbbbbb;
+  }
+  .choose{
+    background-color: #70cefe;
+  }

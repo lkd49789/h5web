@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>MC话题你来定</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+    <style type="text/css">
+      .mui-btn{width: 100%;margin-top:1rem;padding: 10px;}
+      .logo{width: 30%;padding-top: 5px;}
+      .logo img{width: 100%;border-radius: 7px;}
+      .mc-box div{
+          width: 32%;
+          display: inline-block;
+          
+          vertical-align: middle;
+      }
+      .list-info{margin-left: 1rem;text-align: left;}
+      .list-info p{margin-top: -5px; line-height: 2rem;} 
+      .mui-icon{text-align: right;color: #c5c5c5;    font-size: 1.8rem;}
+      .info img{width: .8rem;margin-right: 10px;    vertical-align: sub;}
+      .explain{position: relative;}
+      .explain b{width:10px;height:10px;position: absolute;right: -4px;top: -4px;background: #ff4c4c;border-radius: 100%;}
+    </style>
+</head>
+<body>
+
+	<div class="mui-content">
+		
+	   		<div class="top_hint">选择喜欢的队伍提交话题吧：<span class="explain">规则说明<b></b></span></div>
+        <div class="team-menu">
+          <ul>
+              <li city="10">SNH48</li>
+              <li city="11">BEJ48</li>
+              <li city="12">GNZ48</li>
+              <!-- <li city="13">SHY48</li>
+              <li city="14">CKG48</li> -->
+          </ul>
+        </div>
+        
+        <div class="mclist-wrapper">
+          <ul class="mui-table-view" id="vue-mclist">
+              <template v-for="mc in mcs" track-by="$index"> 
+                  <li city="{{mc.location}}" teamId="{{mc.teamId}}" class="mui-table-view-cell" @click="setCurrent(mc)">
+                      <a>
+                        <div class="mc-box">
+                              <div class="logo">
+                                  <img src="{{mc.teamPicPath | Avata}}">
+                              </div>
+                              <div class="list-info">
+                                  <p class="">{{mc.teamName | Teamname}}</p>
+                                  <p class="info"><img src="images/icon-like.png">{{mc.personCount}}<span>人参加</span></p>
+                              </div>
+                              
+                              
+                              <div class="mui-icon mui-icon-arrowright"></div>
+                        </div>
+                      </a>
+                  </li>
+              </template>
+          </ul>
+          
+      </div>
+      
+	</div>
+  
+	<script src="../../common/js/jquery.min.js"></script>
+  <script src="https://h5.48.cn/common/js/dsbridge.js"> </script>
+  <script type="text/javascript" src="../../common/js/common_v1.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/vue.js"></script>
+  <script src="js/topic.js"></script>
+
+  <script>
+    var mclistVM = new Vue({
+      el: '#vue-mclist',
+      data: {
+        mcs : []
+      },
+      methods: {
+        // 设置当前消息并打开消息详细页面
+        setCurrent: function (mc) {
+          localStorage.setItem("CUR_CITY", mc.location);
+
+          localStorage.setItem("CUR_TEAM", JSON.stringify(mc));
+          //alert(JSON.stringify(mc))
+          //alert(JSON.stringify(mc))
+          snhOpenWebUrl(CONFIG.getWebUrl()+'comment_list.html')
+        }
+      }
+    });
+    
+    $(function () {
+        
+        getCityInfo(10)
+
+        
+    });
+    $(".team-menu li").click(function(){
+        getCityInfo($(this).attr("city"))
+    })
+    function getCityInfo(city){
+        console.log("getCityInfo>"+city)
+        mcTopic.getTeamList(city ,function(mclist){
+          // console.log(JSON.stringify(mclist));
+          var tep_mc = [];
+          $.each(mclist,function(index,_list){
+            if(_list.teamId != 99 && _list.teamId != 1005 && _list.teamId != 1006 && _list.teamId != 1007 && _list.teamId != 1104 && _list.teamId != 1207){
+              tep_mc.push(_list)
+            }
+            
+          })
+          mclistVM.mcs = tep_mc;
+          //console.log(mclist)
+          
+        }, function(msg){
+            //alert(msg);
+            // mui.alert(msg, '', function() {
+                
+            // });
+            mcTopic.muiAlert(msg)
+        });
+
+        showCity(city)
+    }
+    function showCity(city){
+      console.log("---"+city)
+        $.each($(".team-menu li"),function(index,dt){
+            if($(this).attr("city") == city){
+                $(this).addClass("menu-choose")
+            }else{
+                $(this).removeClass("menu-choose")
+            }
+        })
+    }
+    function getCity(){
+          
+          //localStorage.setItem("CUR_CITY", city);
+          return 0;
+    }
+
+    function GetQueryString(name)
+    {
+         var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+         var r = window.location.search.substr(1).match(reg);
+         if(r!=null)return  unescape(r[2]); return null;
+    }
+  </script>
+  
+</body>
+</html>

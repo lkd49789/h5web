@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>修改头像</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="x5-fullscreen" content="true">
+	<meta name="full-screen" content="yes">
+	<link href="css/common.css" rel="stylesheet"/>
+	<link href="css/cropper.css" rel="stylesheet">
+	<link href="css/uploadHead.css" rel="stylesheet">
+	<style type="text/css">
+		.img-preview img{width: 100%;}
+	</style>
+</head>
+<body>
+	<div class="loading">
+		<div class="spinner">
+		  	<div class="spinner-container container1">
+			    <div class="circle1"></div>
+			    <div class="circle2"></div>
+			    <div class="circle3"></div>
+			    <div class="circle4"></div>
+		  	</div>
+		  	<div class="spinner-container container2">
+			    <div class="circle1"></div>
+			    <div class="circle2"></div>
+			    <div class="circle3"></div>
+			    <div class="circle4"></div>
+		  	</div>
+		  	<div class="spinner-container container3">
+			    <div class="circle1"></div>
+			    <div class="circle2"></div>
+			    <div class="circle3"></div>
+			    <div class="circle4"></div>
+		  	</div>
+		</div>
+	</div>
+	<section class="s1">
+		<div class="uploadbox">
+			<div class="img-preview" >
+				<img src="" id="img-preview">
+			</div>
+			<label class="btn-upload" for="inputImage" title="Upload image file">
+	            <input class="sr-only" id="inputImage" name="file" type="file" accept="image/*">
+	            <span class="docs-tooltip" data-toggle="tooltip" title="" data-original-title="Import image with Blob URLs"></span>
+	        </label>
+	        <span class="icon-upload"><img src="img/icon_upload.png"></span>
+        </div>
+        <div class="uploadbtns">
+			<button class="cancel">取消</button>
+			<button class="done">确定</button>
+        </div>
+	</section>
+	<section class="s2">
+		<div class="img-container">
+          	<img src="" alt="Picture">
+        </div>
+        <div class="donebtn">完成</div>
+	</section>
+</body>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="../../common/js/common.js"></script>
+<script src="js/config.js" ></script>
+<script src="js/main.js" ></script>
+<script src="js/cropper.js"></script>
+<script src="js/uploadHead.js"></script>
+</html>

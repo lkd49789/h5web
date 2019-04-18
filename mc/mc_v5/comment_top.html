@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>已入围话题</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+    <style type="text/css">
+        .top_hint{height: auto;line-height: 1.5rem;padding: 5px 0;}
+        ul.comlist li{height: auto;position: relative;padding:0;}
+        ul.comlist li span{max-width: 30%;display: inline-block;vertical-align: middle;padding: 5px 10px;border-radius: 5px;margin-right: .5rem;}
+        .words{color: #acacac;border: 1px solid #acacac;border-radius: 7px;}
+        
+        
+        ul.comlist li div p{color: #000;font-size: 1rem;margin-bottom: 5px;padding: .5rem 3%;}
+        ul.comlist li div{background-color: #f6f6f6;}
+        ul.comlist li div div{color: #acacac;font-size: .7rem;border-bottom:1px solid #ccc;padding-bottom: 10px;}
+        
+        
+
+        section{border-bottom: 1px solid #e8e8e8;padding: 1.5rem 0 1.5rem 3%;}
+        
+    </style>
+</head>
+<body>
+
+  <div class="mui-content">
+    <!-- <div class="top_hint">
+      <p>每场公演当天10:00<br>获得解锁次数最多的5条MC入围</p>
+    </div> -->
+    
+    <ul class="comlist" id="vue-topiclist">
+      <template v-for="mc in topics" track-by="$index"> 
+          <li class="mui-table-view-cell">
+              <div>
+                  <p>上期{{mc.mcTitle}}入围话题</p>
+                 <!-- <div>公演时间：{{mc.showTime | MCTime}}</div> -->
+              </div>
+                <template v-for="top in mc.topicList" track-by="$index"> 
+                    <section>
+                        <span class="words">{{top.keyWords[0][0]}}</span>
+                        <span class="words">{{top.keyWords[1][0]}}</span>
+                        <span class="words">{{top.keyWords[2][0]}}</span>
+                    </section>
+                </template>
+          </li>
+        </template>
+    </ul>
+    <div class="tip-warning">
+        <img src="images/icon-1.png"/>
+        <p>暂无内容</p>
+        
+    </div>
+	</div>
+  <script src="../../common/js/jquery.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/vue.js"></script>
+  <script src="js/topic.js"></script>
+
+  <script>
+    var mcValue = localStorage.getItem("CUR_TEAM") || "{}";
+    var thisMc = JSON.parse(mcValue);
+
+    var topiclistVM = new Vue({
+      el: '#vue-topiclist',
+      data: {
+        topics : []
+      }
+    });
+    
+    $(function () {
+        
+        var toplist = mcTopic.topList(thisMc.teamId,function(data){
+          //console.log(JSON.stringify(topiclist));
+          if(data.status == 200 ){
+              topiclistVM.topics = data.content;
+              if(data.length == 0) $(".tip").show()
+          }else{
+              mcTopic.muiAlert(data.message)
+          }
+        }, function(msg){
+          mcTopic.muiAlert(msg)
+        });
+
+    });
+  </script>  
+
+</body>
+</html>

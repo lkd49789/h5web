@@ -1,0 +1,127 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: url(../img/login_bg.jpg)no-repeat center center;
+	background-size: cover;
+	position: relative;
+}
+.login_box{
+	width: 80%;
+	margin-left: 10%;
+	padding-top: 40%;
+}
+.phone_box,.password_box{
+	position: relative;
+	width: 100%;
+	padding-bottom: 1.8rem;
+
+}
+.phone_box p,.password_box p{
+	position: absolute;
+	left: 0;
+	margin:3px 0;
+	font-size: 0.8rem;
+	color: #fff;
+	padding-left: 2%;
+}
+.phonenum,.password{
+	padding-left: 3%;
+	width: 97%;
+}
+.phonenum,.password,.submit{
+	height: 3.5rem;
+	background-color: transparent;
+	border:1px solid #fff;
+	border-radius: 5px;
+	color:#fff;
+	line-height: 3.5rem;
+	font-size: 1.3rem;
+	text-align: left;
+}
+.submit{
+	width: 100%;
+	background-color: #fff;
+	color:#acbcf0;
+	text-align: center;
+	border: none;
+	height: 4rem;
+	line-height: 4rem;
+}
+.help_link,.login_back{
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	bottom: 5%;
+	color: #fff;
+}
+.help_link a,.login_back a{
+	display: block;
+	font-size: 1.3rem;
+	margin-bottom: 10px;
+	text-decoration: underline;
+}
+
+
+/*登录失败五次*/
+.failure_box{
+	text-align: center;
+	padding-top: 15%;
+}
+.failure_box p{
+	color:#fff;
+	font-size: 1.2rem;
+	margin-bottom: 1rem;
+}
+.failure_box button{
+	width: 35%;
+	height: 3.5rem;
+	line-height: 3.5rem;
+	border: none;
+	background-color: #fff;
+	color:#acbcf0;
+	font-size: 1.3rem;
+	border-radius: 5px;
+}
+.failure_box .btn1{
+	margin-right: 2%;
+}
+.failure_box .btn2{
+	margin-left: 2%;
+}
+
+
+
+/*小弹框*/
+.sm_prompt_box{
+	width: 36%;
+	margin-left: 32%;
+	height: 3.5rem;
+	line-height: 3.5rem;
+	text-align: center;
+	color:#fff;
+	font-size: 1.2rem;
+	background-color: #222630;
+	position: absolute;
+	top: 12%;
+	border-radius: 5px;
+}
+
+
+
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #fff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #fff;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #fff;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #fff;
+}

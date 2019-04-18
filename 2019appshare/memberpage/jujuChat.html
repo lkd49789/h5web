@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>聚聚聊天室</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<link href="css/common.css" rel="stylesheet"/>
+	<link href="css/swiper.min.css" rel="stylesheet"/>
+	<link href="css/imageview.css" rel="stylesheet"/>
+	<link href="css/mui.min.css" rel="stylesheet"/>
+	<link href="css/jujuChat.css" rel="stylesheet"/>
+</head>
+<body>
+	<!-- 侧滑导航根容器 -->
+
+	<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable">
+	  	<!-- 菜单容器 -->
+	  	<aside id="offCanvasSideScroll" class="mui-off-canvas-right">
+		    <div class="mui-scroll-wrapper">
+		      	<div class="mui-scroll scroll_wai">
+		        <!-- 菜单具体展示内容 -->
+		        	<div class="devote_box">
+						<div class="user_avatar">
+							<span class="head"></span>
+							<span class="grade"></span>
+						</div>
+						<div class="right_devote">
+							<span class="user_box"><em class="icon_top">贡献TOP1</em><span class="top1name"></span><!-- <img src="img/icon_mogu.png" class="mogu"><img src="img/icon_fanpai.png" class="fanpai"> --><em class="i_time">15:32</em></span>
+							<div class="dialogue"><span class="top1text">明天是腊月儿还是新年，谁斗胆第 一个吃了螃蟹<span><!-- <em class="fanpaibtn">翻牌</em> --></div>
+						</div>
+		        	</div>
+		        	<p class="weektit">本周榜单<a href="javasprit:;"><img src="img/icon_rightbtn.png"></a></p>
+		        	<div id="pullrefresh" class="mui-content mui-scroll-wrapper weekbox mui-scroll-fans" lasttime="0">
+						<div class="mui-scroll mui-scroll2">
+				        	<ul class="mui-table-view mui-table-view-chevron weekList">
+								<!-- <li>
+									<div class="headingbox">
+										<span class="user_heading"></span>
+										<span class="team">lv2</span>
+									</div>
+									<div class="userbox">
+										<span class="nikename">夏天吃西瓜<em class="user_time">15:32</em></span>
+										<div class="user_content">今天天气特别好今天天气特别好今天天气特别好今天天气特别好</div>
+									</div>
+								</li>
+								<li>
+									<div class="headingbox">
+										<span class="user_heading"></span>
+										<span class="team">lv2</span>
+									</div>
+									<div class="userbox">
+										<span class="nikename">夏天吃西瓜<em class="user_time">15:32</em></span>
+										<div class="user_content">今天天气特别好今天天气特别好今天天气特别好今天天气特别好</div>
+									</div>
+								</li> -->
+				        	</ul>
+				        </div>
+				    </div>
+		      	</div>
+		    </div>
+	 	</aside>
+	 	<div class="mui-inner-wrap mainContent">
+	 		
+	 		
+	    	<!-- 主页面标题 -->
+		    <div class="topic_box">
+		    	<img class="btn-back" src="img/juju-back.png">
+		    	<span>【话题】</span><span class="juju-title"></span>
+		    	<img src="img/icon_msgbtn.png" id="offCanvasShow">
+		    	<span class="icon-diantailive">
+		    		<img src="img/icon-diantai-live.png">直播中<audio class="juju-diantai-audio" src=""></audio>
+		    	</span>
+		    </div>
+		    <div class="tips" canplay="true">
+		    	<div class="headingbox">
+					<span class="user_heading"></span>
+				</div>
+				<div class="userbox">
+					<span class="nikename"></span>
+					<div class="user_content"></div>
+				</div>
+		    </div>
+		    <div class="mui-content mui-scroll-wrapper mui-scroll-member contentbox">
+		      	<div class="mui-scroll scroll_wai">
+		        <!-- 主界面具体展示内容 -->
+			        <div id="pullrefresh offCanvasContentScroll" class="mui-content mui-scroll-wrapper chatbox" lasttime="0">
+						<div class="mui-scroll room-bg mui-scroll1">
+							<audio src="" id="audio-player"></audio>
+							<!-- <span class="time">星期三 14:22</span> -->
+							<ul class="mui-table-view mui-table-view-chevron mui-content-padded chatList">
+								<!-- <li class="leftChat">
+									<div class="member_head">
+										<span class="head NII-bd"></span>
+										<span class="team team-font-NII">NII</span>
+									</div>
+									<div class="dialogue_box">
+										<span class="member_name">曾艳芬<img src="img/icon_owner.png"></span>
+										<div class="dialogue"><span>今天天气很好</span></div>
+									</div>
+								</li>
+								<li class="leftChat">
+									<div class="member_head">
+										<span class="head NII-bd"></span>
+										<span class="team team-font-NII">NII</span>
+									</div>
+									<div class="dialogue_box">
+										<span class="member_name">曾艳芬<img src="img/icon_owner.png"></span>
+										<div class="dialogue"><img src="img/egimg1.png" data-preview-src="" data-preview-group="1"></div>
+									</div>
+								</li>
+								<li class="rightChat">
+									<div class="user_head">
+										<span class="head"></span>
+										<span class="team">48G</span>
+									</div>
+									<div class="dialogue_box">
+										<span class="member_name">袋王</span>
+										<div class="dialogue"><span>今天天气很好</span></div>
+									</div>
+								</li>
+								<li class="leftChat">
+									<div class="member_head">
+										<span class="head NII-bd"></span>
+										<span class="team team-font-NII">NII</span>
+									</div>
+									<div class="dialogue_box">
+										<audio src=""></audio>
+										<span class="member_name">曾艳芬<img src="img/icon_owner.png"></span>
+										<div class="dialogue voice"><span><b><img src="img/p1_yy.png" class="zt"><img src="img/p1_yy_1.png" class="zt_1"><img src="img/p1_yy_2.png" class="zt_2"><b><em class="sec">56"</em></span></div>
+									</div>
+								</li> -->
+								<!-- <li class="leftChat">
+									<div class="member_head">
+										<span class="head" style="background:url(img/icon_owner.png) center no-repeat;background-size: 100%;"></span>
+										<span class="team">lerl2</span>
+									</div>
+									<div class="dialogue_box">
+										<span class="member_name">曾艳芬<img src="img/icon_owner.png"></span>
+										<div class="dialogue video">
+											<video controls>
+												<source src="movie.mp4" type="video/mp4">
+								    											<source src="movie.ogg" type="video/ogg">
+								    											您的浏览器不支持 HTML5 video 标签。
+											</video>
+											<div class="porster">
+												<img src="img/porster.jpg" class="pimg">
+												<img src="img/icon_play.png" class="icon_playbtn">
+											</div>
+										</div>
+									</div> -->
+								</li>
+							</ul>
+						</div>
+						<div class="mui-off-canvas-backdrop"></div>
+					</div>
+		      	</div>
+		    </div>
+		    <div class="send_box">
+		    	
+				<textarea type="text" rows="1" placeholder="请在这里留言，最多300字" maxlength="300" class="sendinput" id="textarea"></textarea>
+				<img class="btn-emotion" src="img/smallbtn.png">
+				<button class="sendbtn">发送</button>
+		    </div>
+		    <div class="swiper-container emotion-box" id="swiper-container">
+		    	<div class="swiper-wrapper">
+		    		<!-- <div class="swiper-slide">
+						<ul>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li class="small_close"><img src="img/small_close.png"></li>
+						</ul>
+		    		</div>
+		    		<div class="swiper-slide">
+		    			<ul>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li><img src="public/face/f_static_000.imageset/f_static_000@2x.png"></li>
+							<li class="small_close"><img src="img/small_close.png"></li>
+						<ul>
+		    		</div> -->
+		    	</div>
+		    	<div class="swiper-pagination"></div>
+		    </div>  
+		</div>
+	</div>
+	<!-- <div style ="position:relative">
+		<video id ="video" class="videoContent" controls>
+   		<source src="https://nos.netease.com/nim/NDA5MzEwOA==/bmltYV84NTY5OTYzMF8xNTExNDA5MzQ2OTg5X2U3ZTdjYjFjLWE4NjAtNDc1Mi1iYzJjLTEzZGZjMzhmYTVhNQ==" type="video/mp4"/>
+   		
+   		<source src="4.mp4" type="video/mp4"/>
+		</video>
+		<div id ="output" style ="position:absolute;left:0;left:0">
+			
+		</div>
+	</div> -->
+</body>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="../../common/js/common.js"></script>
+<script src="js/NIM_Web_Chatroom_v4.4.0.js"></script>
+<script src="js/NIM_Web_SDK_v4.4.0.js"></script>
+<script src="js/swiper.min.js" ></script>
+<script src="js/mui.min.js" ></script>
+<script src="js/mui.pullToRefresh.js" ></script>
+<script src="js/mui.pullToRefresh.material.js" ></script>
+<script src="js/mui.zoom.js">    </script>
+<script src="js/mui.previewimage.js"></script>
+<script src="js/config.js" ></script>
+<script src="js/main.js" ></script>
+<script src="js/jujuChat.js" ></script>
+<script type="text/javascript">
+	var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?ddd7622c0af85c32e32c53fa657ae258";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+
+
+    
+</script>
+</html>

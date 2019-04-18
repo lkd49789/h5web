@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>提交MC话题</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+    <style type="text/css">
+        .mui-input-row{margin-top: 10px;}
+    </style>
+</head>
+<body>
+	<div class="mui-content">
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-pull-left nav_back_btn" href="###"><span class="nav_back"></span>返回</a>
+		    <h1 class="mui-title">提交MC话题</h1>
+		    <a class="mui-pull-right help" href="###">帮助</a>
+		</header>
+    
+    <div class="comment_input">
+      <div class="mui-input-row">
+        <span class="counter" id="word-count">0/30</span>
+         <textarea id="topic-text" name="topic-text" rows="5" cols="" maxlength="30" placeholder="请输入一个完整的MC话题，如：SNH48整个团队里，最傲娇的人是谁？为什么？"></textarea>
+      </div>
+    </div>
+    
+    <a class="comment_submit" id="confirmBtn">提交</a>
+    
+    <div class="show_name" id="vue-thisMc">
+          
+          <ul class="list_status">
+              <li>已选择队伍TEAM {{teamName}}</li>
+          </ul>
+    </div>	
+	</div>
+  
+  <script src="http://h5.snh48.com/common/js/jquery.min.js"></script>
+  <script src="js/vue.js"></script>
+  <script src="js/topic.js"></script>
+
+  <script>
+    var issubmit = false;
+    var mcValue = localStorage.getItem("CUR_TEAM");
+		var thisMc = JSON.parse(mcValue);
+		console.log("--"+JSON.stringify(thisMc.teamName));
+    //$(".list_status li").html("已选择队伍 TEAM "+thisMc.teamName)
+    var mcitemVM = new Vue({
+      el: '#vue-thisMc',
+      data: thisMc
+    });
+    
+    //$(".mui-title").html(thisMc.title);
+    
+      $("#topic-text").bind("input",function () {
+    //$("#topic-text").keydown(function () {
+        setTimeout(function(){
+            countStrNum()
+
+        },10);
+
+    });
+    function countStrNum(){
+        var total = 30;
+          var len = Number($("#topic-text").val().length);
+            if (len > total) {
+                $("#topic-text").val($("#topic-text").substring(0, total));
+            }else{
+                $("#word-count").text(len + "/" + total);
+            }
+            console.log($("#topic-text").val().length)
+            
+    }
+    
+    $("#confirmBtn").click(function () {
+        var title = $("#topic-text").val();
+        if(title.length==0) {
+            mcTopic.muiAlert("内容不能为空");
+            return false;
+        }
+        if(!issubmit){
+          issubmit = true;
+          mcTopic.topicNew(title, thisMc.teamId, thisMc.teamName, function(msg){
+            //alert(msg);
+            issubmit = false;
+            mui.alert(msg, '', function() {
+              //window.web.backHome();
+              mcTopic.backTo()
+            });
+
+            //window.web.gotoDetail('http://h5.snh48.com/mc/comment_list.html');
+            
+          }, function(msg){
+            issubmit = false;
+            mcTopic.muiAlert(msg)
+          });
+        }
+    });
+    
+    
+  </script>    
+  
+</body>
+</html>

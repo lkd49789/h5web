@@ -1,0 +1,21 @@
+body{
+    background-color: #fff;
+    text-align: center;
+}
+[v-cloak]{
+    display: none;
+}
+body > img{position: absolute;bottom: 0;width: 100%;z-index: -1;left: 0;}
+.wrapper p{margin-top: 5%;color: #828283;}
+.wrapper p img{width: 1.3rem;}
+.wrapper > img{width: 23%;margin: 15% 0 10% 0;}
+.wrapper h1{font-size: 1.5rem;margin-bottom: 10%;}
+.wrapper span{
+	font-size: 1.4rem;
+	color: #fff;
+	padding: 1rem 15%;
+	background: linear-gradient(to right,#ba9ef7,#6c61f6);
+	-webkit-background: linear-gradient(to right,#ba9ef7,#6c61f6);
+	border-radius: 2rem;
+
+}

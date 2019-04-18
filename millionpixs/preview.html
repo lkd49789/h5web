@@ -1,0 +1,79 @@
+<!DOCTYPE> 
+<html>
+<head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+    <meta name="viewport" content="width=device-width" />
+    <title>百万应援墙</title>
+    <!-- <link rel="stylesheet" type="text/css" href="css/common.css"> -->
+    <style type="text/css">
+        html,body{
+            
+            width: 1200px;
+            overflow: hidden;
+            
+        }
+        body{
+            background: url(images/bg-m.jpg) no-repeat;
+            background-size: cover;
+            overflow: hidden;
+            height: 340%;
+        }
+
+        
+        .body {
+            
+            height: auto;
+            text-align: center; 
+            display: block;
+            margin:auto;
+            overflow: hidden;
+        }
+        .main {
+            
+            width: 1000px; 
+            height: 1000px; 
+            display: inline-block; 
+            white-space: nowrap; 
+            text-align: left;
+            padding:0;
+             margin-top: 10%;
+             background-color: rgba(255,255,255,.5);
+             background: url("images/main_bg.png") left top; 
+        }
+        .home {
+            position: relative;
+        }
+        .img-wrapper img{
+            position: absolute;
+            z-index: 1000;
+        }
+        .link{
+            width: 1200px;
+            margin-top: 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="body">
+        <!-- -->
+        <div class="main">
+            <!-- 左侧工作区-->
+            <div class="home">
+                
+                <!-- 用户上传图片-->
+                <div class="img-wrapper">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <img class="link" src="images/link.png">
+    <img style="width: 85%;display: block;margin: auto;margin-top: 30px" src="images/tip.png">
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/preview.js"></script>
+</html> 

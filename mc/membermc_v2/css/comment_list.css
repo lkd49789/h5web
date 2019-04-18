@@ -1,0 +1,86 @@
+body{
+    width: 100%;
+    min-height: 100%;
+    background-color: #eff3f9;
+    font-size: 15px;
+}
+.wrapper{
+    display: none;
+}
+ul li{
+    position: relative;
+    padding: 20px 5%;
+    color: #5e68c2;
+    border-bottom: 1px solid #eee;
+}
+.title{
+    line-height: 2rem;
+    padding: 1rem 5%;
+}
+.title span{
+    color: #8f8f94;
+}
+.content-choose{
+    padding: 1px 0;
+    background-color: #fff;
+}
+.user-tx{
+    width:12%;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    border-radius: 5rem;
+    vertical-align: top;
+}
+.user-info{
+    color: #363d4d;
+}
+.mc-info p{
+    line-height: 25px;
+    margin-top: 5px;
+}
+.user-info span{
+    padding: 0 5px;
+    background-color: #839cff;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 10px;
+    margin-left: 5px;
+}
+.user-tx img{
+    width: 100%;
+}
+.mc-info{
+    display: inline-block;
+    width: 75%;
+    margin-left: 1%;
+}
+
+.c0{color: #5e68c2;}
+.c1{color: #acacac;}
+.s0{color: #5e68c2;}
+.s1{color: #acacac;}
+.lock{
+    max-width: 27%;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: .9rem;
+    text-align: center;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -28px;
+}
+
+
+.tip{
+    padding: 20px 5%;
+    text-align: center;
+    color: #999;
+}
+.tip img{
+    margin-right: 5px;
+    width: 10%;
+}

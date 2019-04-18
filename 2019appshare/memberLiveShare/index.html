@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>直播分享</title>
+    <link rel="stylesheet" href="../../common/css/common_mobile_v1.css">    
+    <link rel="stylesheet" href="../css/downloadBanner.css">    
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>  
+    <section class="wrapper" v-cloak>
+        <div class="download-up"></div>
+        <div class="videoInfo">
+            <div class="play-box" class="vod-box-pl" >
+                <div v-show="cover === true" v-on:click="playvideo()">
+                    <img class="cover" v-bind:src="infoData.user.userAvatar | imgpath">
+                    <img class="btn-play" src="img/btn-play.png">
+                </div>
+                <video v-on:click="playvideo()" v-show="cover === false" id="video" v-bind:src="infoData.playStreamPath" x-webkit-airplay="true" webkit-playsinline="true"></video>
+               <img  v-on:click="gotoDownLoad()" class="footer" src="img/icon-footer.png">
+            </div>
+        </div>
+    </section>
+    
+</body>
+    <script src="../../common/js/jquery.min.js"></script>
+    <script src="../../common/js/vue.js"></script>
+    <script src="../../common/js/common_v1.js"></script>
+    <script src="../js/downloadBottom.js"></script>
+    <script src="../js/config.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>直播</title>
+    <link rel="stylesheet" type="text/css" href="css/liveplayer.css"/>
+</head>
+<body>  
+    <div id="videoInfo" style="width: 100%;height: 100%;">
+        <div id="video-box" class="vod-box-pl" style="max-height: 750px;">
+            <a href="javascript:;" class="play" onclick="videoPlay();" style="display: none;"></a>
+            <video id="video" src="js/shipin3.mp4"  x5-playsinline="" playsinline="" webkit-playsinline="" x-webkit-airplay="true" controls="2" ></video>            
+            <!-- 顶部信息层 -->
+            <section class="top-attend-layer flexbox">
+                <figure class="avatar avatarM">
+                    <a href="javascript:;"></a>
+                </figure>
+                <dl class="item">
+                    
+                </dl>
+            </section>
+            <!-- 顶部信息层 end-->
+            <!-- 赞 -->
+
+                
+            <!-- 底部功能区 -->
+            <section class="bom-fun-area flexbox">
+                <a href="javascript:;" class="ico-lock" onclick="downLoadPocketApp();"></a>
+                <input type="text" readonly="readonly" class="item inp" placeholder="听说在这里评论的人都超帅..." onclick="downLoadPocketApp();">
+                <a href="javascript:;" class="ico-pub" onclick="downLoadPocketApp();"></a>
+                <a href="javascript:;" class="ico-gife ml10" onclick="downLoadPocketApp();"></a>
+            </section>
+        </div>
+        <section class="user-box">
+            <div class="flexbox item l-c">
+                <figure class="avatar avatarM"></figure>
+                <div class="item">
+                    <a href="javascript:;"></a>
+                    <span class="fs24 c-g disb"></span>
+                </div>
+            </div>
+            <a id="to-top" href="javascript:;" class="add" onclick="downLoadPocketApp();">加关注</a>
+        </section>
+            
+            
+        <ul class="opt-box flexbox">
+            <!--<li>
+                <em class="bg-sp-new ico-x" id="to-top2"></em><p id="praise-q" class="c-y">449</p>
+            </li>
+            <li>
+                <em class="bg-sp-share ico-x" id="to-top3"></em><p id="comment-q" class="c-y">758</p>
+            </li>
+            <li>
+                <em class="bg-sp-msg ico-x" id="to-top3"></em><p id="comment-q" class="c-y">758</p>
+            </li>
+            <li>
+                <em class="bg-sp-love ico-x" id="to-top3"></em><p id="comment-q" class="c-y">758</p>
+            </li>-->
+        </ul>
+    
+            
+        <figure class="fg"></figure>
+        <h2 class="tit">更多精彩视频</h2>
+        <ul class="vod-list">
+            <!--<li>
+                <div class="in">
+                    <img src="img/bottom.png" alt="">
+                    <div class="bom flexbox">
+                        <span class="avatar"><img src="img/avata.png"></span>
+                        <p>
+                            <a href="">张语格</a>
+                            <span class="fs24 c-g disb">总选举拉票视频</span>
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="in">
+                    <img src="img/bottom.png" alt="">
+                    <div class="bom flexbox">
+                        <span class="avatar"><img src="img/avata.png" alt=""></span>
+                        <p>
+                            <a href="">张语格</a>
+                            <span class="fs24 c-g disb">总选举拉票视频</span>
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="in">
+                    <img src="img/bottom.png" alt="">
+                    <div class="bom flexbox">
+                        <span class="avatar"><img src="img/avata.png" alt=""></span>
+                        <p>
+                            <a href="">张语格</a>
+                            <span class="fs24 c-g disb">总选举拉票视频</span>
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="in">
+                    <img src="img/bottom.png" alt="">
+                    <div class="bom flexbox">
+                        <span class="avatar"><img src="img/avata.png" alt=""></span>
+                        <p>
+                            <a href="">张语格</a>
+                            <span class="fs24 c-g disb">总选举拉票视频</span>
+                        </p>
+                    </div>
+                </div>
+            </li>-->
+        </ul>
+    </div>
+    <!-- 底部功能区 end-->
+    <ul class="barrage-box" id="barrage-box">
+        <!-- <li>
+            <p class="u-nickname">用户昵称</p>
+            <p class="barrage-info">弹幕内容弹幕幕幕内容</p>
+        </li>
+        <li>
+            <p class="u-nickname">用户昵称</p>
+            <p class="barrage-info">弹幕内容弹幕内容弹幕内容弹幕内容弹幕内容弹幕内容弹幕内容弹幕内容</p>
+        </li>
+        <li>
+            <p class="u-nickname">用户昵称</p>
+            <p class="barrage-info">弹幕内容弹幕内容弹幕内容弹幕内容弹幕内容弹幕内容弹幕内容弹幕内容</p>
+        </li> -->
+    </ul>
+    <img class="btn-back-prev" src="img/btn-back.png">
+    <!-- <footer class="footer clearfix"  onclick="downLoadPocketApp();">
+        <figure class="logo"><img src="img/down-text.png" alt=""></figure>
+        <a href="javascript:;" class="btn-down">立即下载</a>
+    </footer> -->
+</body>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../common/js/jquery.min.js"></script>
+    <script src="../../common/js/common.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+    <!-- <script type="text/javascript" src="js/cyberplayer.js"></script> -->
+    <script src="js/liveplayer.js"></script>
+</html>

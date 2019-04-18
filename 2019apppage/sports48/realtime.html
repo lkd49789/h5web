@@ -51,9 +51,15 @@
             itemList:[]
         },
         created () {
-            main.getSoleTags(2,(data)=>{
+            let  that=this;
+            that.itemList=[];
+            main.getSoleTags(2,function(data){
                 if(data.status==200){
-                    this.itemList = data.content.stickerInfoList.filter(item => item.stickersMemberList);
+                    vm.itemList = data.content.stickerInfoList.filter(function(item){ return item.stickersMemberList});                   
+                    // $.each(data.content.stickerInfoList,function(key,value){
+                    //     if(value.stickersMemberList) 
+                    //       that.itemList.push(value) 
+                    // })
                 }else{
                     alert(data.message)
                 }

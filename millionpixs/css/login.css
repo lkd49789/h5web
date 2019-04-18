@@ -1,0 +1,116 @@
+body{
+        background: url(../images/bg.jpg);
+        background-size: cover;
+        text-align: center;
+        overflow: scroll;
+        
+    }
+    .wrapper{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        min-width: 1310px;
+        height: 810px;
+        position: absolute;
+        top: 50%;
+        margin-top: -405px;
+       /* min-height: 768px;*/
+    }
+    .wrapper div{
+        
+        text-align: center;
+    }
+    .title{
+        width: 100%;
+        margin-top: 50px;
+    }
+    .qrcode{
+        width: 40%;
+    }
+    .footer{
+        width: 21%;
+    }
+    .tip{
+        color: #fff;
+        font-size: 22px;
+    }
+
+
+    .left{
+        width: 600px;
+        /*height: 1000px;*/
+        display: inline-block;
+         vertical-align: middle;
+
+    }
+    .right{
+        width: 600px;
+        /*height: 1000px;*/
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+    }
+    .right img{
+        width: 100%;
+    }
+    .intro{
+
+    }
+
+    .btn-intro{
+        
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+
+
+    .pop-box{
+        display: none;
+    }
+
+    .msk{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.5);
+        position: fixed;
+        left: 0;
+        top: 0;
+    }
+
+    .intro{
+        width: 670px;
+        height: 450px;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        margin-left: -335px;
+        margin-top: -225px;
+        background-color: #fff;
+        text-align: left;
+        font-size: 20px;
+       
+    }
+    .intro p{
+        margin-left: 100px;
+        font-weight: bold;
+    }
+    .intro p:nth-child(1){
+        margin-top: 50px;
+    }
+    .btn-close{
+        width: 140px;
+        height: 50px;
+        line-height: 50px;
+        background-color: #15b770;
+        color: #fff;
+        display: inline-block;
+        left: 50%;
+        margin-left: -70px;
+        position: absolute;
+        text-align: center;
+        border-radius: 30px;
+        margin-top: 50px;
+        cursor: pointer;
+    }

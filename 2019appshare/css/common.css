@@ -1,0 +1,42 @@
+/*title介绍*/
+.title{background-color: #fff;padding: 1rem 3%;margin: .4rem 0;}
+.title p{color:#adadad;line-height: 2em; }
+h1{font-size: 1.5rem;}
+/*标签*/
+.tags{background-color: #fff;padding: 3%;margin-bottom:.4rem; text-align: left;}
+.tags h1{margin-bottom: .5rem;}
+.tags li{color: #847afa;background-color: #ded9f3;padding: 5px 15px;border-radius: 20px;display: inline-block;margin-right: 3%;}
+/*com_list  评论列表*/
+.com_list{background-color: #fff;padding: 3%;text-align: center;}
+.com_list > p{color: #444444;font-size: 1.2rem;text-align: left;border-bottom: 1px solid #f7f7f7;padding-bottom: 3%;}
+.com_list ul{text-align: left;}
+.com_list ul > li {padding: 4% 0;width: 100%;border-bottom: 1px solid #f7f7f7;}
+.list-top{width: 100%;}
+.list-top div{display: inline-block;vertical-align: middle;position: relative;}
+.list-top-left{width: 12%;}
+.list-top-left img{width: 100%;border-radius: 100%;}
+.list-top-mid{width: 65%;margin-left: 2%;}
+.list-top-mid p{line-height: 1.5rem;font-size: 1.2rem;}
+.list-top-mid p:nth-child(1){color: #444444;margin-bottom: .2rem;font-size: 1.1rem;}
+.list-top-right{width: 17%;text-align: right;}
+.list-top-right img{width: 25%;}
+.list-top-right span{color: #adadad;}
+.list-bottom{padding-left: 15%;margin-top: .5rem;color:#adadad;}
+.list-bottom span{margin-right: 2%;}
+.gotoPocket48{font-size: 1.1rem;color:#847afa;text-decoration:underline; }
+.reply{padding: 5% 3%;background-color: #f6f6f6;margin-top: .5rem;border-radius: 7px;}
+.reply p{color: #444444;margin-bottom: .5rem;line-height: 1.6rem;}
+.reply p span{color: #000;}
+.reply div{color: #847afa;}
+.com_list > span{
+    color:#847afa; 
+    font-size: 1.2rem; 
+    text-align: center;
+    margin-top: 1rem;
+    border:1px solid #847afa;
+    padding: 5px 5%;
+    margin: 0 auto;
+    display: inline-block;
+    border-radius: 20px;
+    margin-top: 1rem;
+}

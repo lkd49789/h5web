@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="../../common/css/common_mobile_v1.css">	
+	<link rel="stylesheet" href="../css/downloadBanner.css">	
+	
+    <link href="css/index.css" rel="stylesheet" type="text/css"/>
+  </head>
+	<body>
+		<div class="download-up"></div>
+		<section class="wrapper" v-cloak>
+			<div class="tit">
+				<h3>{{infoData.title}}</h3>
+				<p>{{infoData.subTitle}}</p>
+			</div>
+			<ul class="list">
+				<li v-if='infoData.ticketInfo'>
+					<p>票价</p>
+					<p v-html='infoData.ticketInfo.content'></p>
+				</li>
+				<li v-if='infoData.liveInfo'>
+					<p>平台</p>
+					<p>{{infoData.liveInfo.content}}</p>
+				</li>
+				<li v-if='infoData.locationInfo'>
+					<p>地址</p>
+					<p>{{infoData.locationInfo.details}}</p>
+				</li>
+				<li v-if='infoData.joinMemberName'>
+					<p>成员</p>
+					<p>{{infoData.joinMemberName}}</p>
+				</li>
+
+			</ul>
+			<div class="miaoshu">
+				<h3>详情描述</h3>
+				<p>{{infoData.content}}</p>
+			</div>
+			<div class="comment-more">
+				<span v-on:click='gotoDownLoad()'>打开口袋48 APP查看所有偶像行程</span>
+			</div>
+		</section>
+		
+	</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="../../common/js/vue.js"></script>
+<script src="../../common/js/common_v1.js"></script>
+<script src="../js/downloadBottom.js"></script>
+<script src="../js/config.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

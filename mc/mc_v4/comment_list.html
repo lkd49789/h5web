@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>解锁你好奇的问题</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+    <style type="text/css">
+        .top_hint{height: 6rem;}
+        ul.comlist li{height: auto;padding:15px 10px;position: relative;}
+        ul.comlist li span{max-width: 27%;display: inline-block;vertical-align: middle;padding: 5px 10px;border-radius: 5px;}
+        .words{color: #fff;}
+        .lock{
+            text-align: center;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            margin-top: -28px;
+
+        }
+
+        ul.comlist li div{float: right;text-align: center;margin-top: 1rem;}
+        ul.comlist li img{width: 1rem;}
+        ul.comlist li p{margin-top: 0; margin-bottom: 0;color: #000;}
+        
+        .tip{width: 100%;height: 100%;background-color: rgba(0,0,0,.5);position: absolute;z-index: 100;top: 0;padding-top: 15%;display: none;}
+        .tip img{width: 100%;margin-top: 15%;}
+        .tip a{display: block;color: #fff; width: 60%;background: #86d4f5; padding: 10px 0 ;text-align: center;border-radius:10px;margin-left: 20%;}
+    </style>
+</head>
+<body>
+
+  <div class="mui-content">
+  
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-pull-left nav_back_btn" href="###"><span class="nav_back"></span>返回</a>
+		    <h1 class="mui-title">MC话题</h1>
+		    <a class="mui-pull-right help" href="###">帮助</a>
+		</header>
+    
+    <div class="top_hint">
+      <p>解锁你好奇的问题</p>
+      <a href="###" class="comment_send" >我也要提交话题</a>
+    </div>
+    
+    <ul class="comlist" id="vue-topiclist">
+
+      <template v-for="mc in topics" track-by="$index"> 
+          <li class="mui-table-view-cell" @click="setLike(mc)">
+                <span class="words c{{mc.keyWords[0][1]}}">{{mc.keyWords[0][0]}}</span>
+                <span class="words c{{mc.keyWords[1][1]}}">{{mc.keyWords[1][0]}}</span>
+                <span class="words c{{mc.keyWords[2][1]}}">{{mc.keyWords[2][0]}}</span>
+                <span class="lock">
+                    <img src="images/icon-lock.png"/>
+                    <p>{{mc.parseCount}}</p>
+                </span>
+          </li>
+        </template>
+    </ul>
+    <div class="tip">
+        <img src="images/tip.png"/>
+        <a href="###" class="help">查看详细规则</a>
+    </div>
+    <div class="tip-warning">
+        <img src="images/icon-1.png"/>
+        <p>本周该队暂无公演</p>
+        
+    </div>
+	</div>
+
+  <script src="https://h5.48.cn/common/js/jquery.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/vue.js"></script>
+  <script src="js/topic.js"></script>
+
+  <script>
+    var mcValue = localStorage.getItem("CUR_TEAM") || "{}";
+    var showTip = localStorage.getItem("TIP");
+    if(showTip != "isshow") $(".tip").show();
+
+		var thisMc = JSON.parse(mcValue);
+		
+    $(".mui-title").html("TEAM "+thisMc.teamName+" MC话题");
+		
+    
+    var topiclistVM = new Vue({
+      el: '#vue-topiclist',
+      data: {
+        topics : []
+      },
+      methods: {
+        // 设置当前消息并打开消息详细页面
+        setLike: function (topic) {
+          var topicLike = mcTopic.topicLike(thisMc.teamId, topic.id, function(status){
+            if (status == "200") {
+              topic.parseCount++;
+              
+              
+              //localStorage.setItem(topic.id, "1");
+            }else if (status == "403") {
+              
+               mcTopic.muiAlert("你已经解锁过一次了")
+            } else if(status == "404"){
+              
+                mcTopic.muiAlert("该话题已截止，不能继续解锁。")
+            }
+            
+          }, function(msg){
+            mcTopic.muiAlert(msg)
+           
+          });
+        }
+      }
+    });
+    
+    $(function () {
+        var mcid = thisMc.teamId;
+        var topiclist = mcTopic.getTopicList(mcid, function(topiclist){
+          console.log(JSON.stringify(topiclist));
+          topiclistVM.topics = topiclist;
+          if(topiclist.length == 0)  $(".tip-warning").show()
+        }, function(msg){
+          alert(msg);
+        });
+
+    });
+
+
+
+    $(".tip").click(function(){
+        $(".tip").hide();
+        localStorage.setItem("TIP", "isshow");
+    })
+
+    
+  </script>  
+
+</body>
+</html>

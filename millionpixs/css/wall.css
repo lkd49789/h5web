@@ -1,0 +1,107 @@
+html,body{
+            /*width: 1200px;*/
+            overflow: hidden;
+            margin: 0;
+            /*overflow: scroll;*/
+        }
+        body{
+            /*background: url(images/bg-m.jpg) no-repeat;
+            background-size: cover;*/
+            
+            /*height: 340%;*/
+            background: url(../images/bg.jpg);
+            background-size: cover;
+            min-width: 1750px;
+                padding: 3% 0;
+            
+        }
+
+        
+        .body {
+            min-width: 1750px;
+            height: auto;
+            text-align: center; 
+            display: block;
+            margin:auto;
+            overflow: hidden;
+        }
+        .main {
+            
+            width: 1000px; 
+            height: 1000px; 
+            display: inline-block; 
+            white-space: nowrap; 
+            text-align: left;
+            padding:0;
+             
+             background-color: rgba(255,255,255,.5);
+             background: url("../images/main_bg.png") left top; 
+        }
+        .home {
+            position: relative;
+        }
+        .img-wrapper img{
+            position: absolute;
+            z-index: 1000;
+        }
+        .link{
+            width: 1200px;
+            margin-top: 10%;
+        }
+
+        .banner{
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .banner-wrapper{
+            max-width: 740px;
+            position: relative;
+            display: inline-block;
+            height: 1000px;
+            width: 750px;
+        }
+        .btn{
+            width: 100%;
+            position: absolute;
+            bottom: 250px;
+            left: 0;
+        }
+
+
+
+        /*成员信息显示条*/
+.tip-alt{
+    position: absolute;
+    left: 10%;
+    background-color: rgba(0,0,0,.5);
+    border-radius: 3px;
+    height: 26px;
+    padding: 0 10px;
+    z-index: 10000;
+    pointer-events:none;
+    display: none;
+}
+.u-avata{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    border-radius: 20px;
+    vertical-align: middle;
+}
+.tip-alt p{
+    display: inline-block;
+    font-size: 12px;
+    color: #fff;
+    margin: 0;
+    vertical-align: top;
+    line-height: 26px;
+}
+.triangle{ 
+    width: 5px;
+    height: 26px;
+    position: absolute;
+    left: -5px;
+    top: 0;
+}

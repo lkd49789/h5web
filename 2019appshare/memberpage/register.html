@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>注册</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<link href="css/common.css" rel="stylesheet"/>
+	<link href="css/register.css" rel="stylesheet"/>
+	<link rel="stylesheet" type="text/css" href="css/country.css"/>
+	
+</head>
+<body>
+	<!-- 手机验证 -->
+	<div class="login_box">
+		<span class="region" area="86">中国大陆(86)</span>
+		<div class="phone_box">
+			<input type="tel" name="phonenum" value="" placeholder="手机号" class="phonenum">
+			<p>手机号格式错误/该手机号已注册</p>
+		</div>
+		<div class="code_box">
+			<input type="tel" name="code" value="" placeholder="验证码" class="code">
+			<span class="count">获取验证码</span>
+			<p>验证码错误</p>
+		</div>
+		<p class="nextbtn">下一步</p>
+	</div>
+	<!-- 昵称密码 -->
+	<div class="setup_box" style="display:none;">
+		<!-- <div class="phone_box">
+			<input type="text" name="nikename" maxlength="10" value="" placeholder="设置昵称" class="nikename">
+			<p>请输入昵称</p>
+		</div> -->
+		<div class="code_box">
+			<input type="password" name="password" value="" maxlength="18" placeholder="6~18位字符、字母及数字" class="password">
+			<p>请输入密码</p>
+		</div>
+		<p class="complete">完成注册</p>
+	</div>
+	
+	<div class="success_box" style="display:none;">
+		<img src="img/successimg.png" class="successimg">
+		<p>你已经成功注册了口袋48账号</p>
+		<button class="btn-login">返回</button>
+	</div>
+</body>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="../../common/js/common.js"></script>
+<script type="text/javascript" src="js/country.js"></script>
+<script src="js/config.js" ></script>
+<script src="js/main.js" ></script>
+<script src="js/register.js" ></script>
+</html>

@@ -1,0 +1,63 @@
+body{
+    background-color: #f6f6f6;
+    text-align: left;
+    width: 100%;
+}
+[v-cloak]{
+    display: none;
+}
+.tiezi-box{background-color: #fff;padding: 1% 0;margin-bottom: .4rem;}
+.member-info {
+    text-align: left;
+    padding: 0 3%;
+}
+.photo {
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    overflow: hidden;
+    border-radius: 5rem;
+    vertical-align: middle;
+    border: 1px solid #f9f9f9;
+}
+.photo > img {
+    margin-bottom: -10%;
+    width: 100%;
+}
+.info{display: inline-block;vertical-align: middle;}
+.info p{margin: .3rem 0;}
+.info p:nth-child(1){color: #847afa;font-size: 1.3rem;}
+.info p:nth-child(2){color: #949494;font-size: 1rem;}
+.info p img{width: 2rem;margin-left: .5rem;}
+.member-info span {
+    vertical-align: middle;
+    color: #7966fa;
+    border: 1px solid #7966fa;
+    border-radius: 20px;
+    padding: 5px 20px;
+    float: right;
+    margin-top: 1.2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/*tiezi-info*/
+.tj-tiezi{margin-bottom: 3%;}
+.tiezi-info{padding: 3%;}
+.tiezi-info a{color: #847afa;}
+.tiezi-info img{width: 100%;height: auto;}
+
+.tj-tiezi > p{background-color: #fff;padding: 1rem 3%;margin: .4rem 0;font-size: 1.4rem;}
+.tj-tiezi > div{margin:0 auto;text-align: center;}
+
+.tj-tiezi ul{width: 45%;position: relative;display: inline-block;margin:0 1%;}
+.tj-tiezi ul li{position: relative;background-color: #fff;padding-bottom: 5%;border-radius: 10px;text-align: left;margin-bottom: 5%;}
+.tj-tiezi ul li p{margin: 3% 0;padding: 3%;}
+.thumb-top{border-top-left-radius: 10px;border-top-right-radius: 10px;overflow: hidden;}
+.thumb-top img:nth-child(1){width: 100%;}
+.thumb-top img:nth-child(2){position: absolute;width:7%;right: 5%;top: 5%;}
+.thumb-bottom{position: relative;padding: 3%;}
+.thumb-bottom > img{width: 15%;border-radius:100%;margin-right: 3px;}
+.thumb-bottom p{position: absolute;left: 0;top: 0;text-align: right;width: 94%;}
+.thumb-bottom p img{width: 6%;margin-right: 5px;}
+.thumb-bottom span{vertical-align: middle;}

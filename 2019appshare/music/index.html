@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<!-- <meta http-equiv="Access-Control-Allow-Origin" content="*"> -->
+<title>口袋48 - 音乐分享</title>
+<link rel="stylesheet" href="../../common/css/common_mobile_v1.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="../css/downloadBanner.css">
+</head>
+<body class="page">
+<div class="download-up"></div>
+
+	<div class="bg blur"></div>
+	<div class="wrapper">
+		<article class="title">
+			<h1></h1>
+			<h2></h2>
+			<div class="thumb">
+				<img class="play" id="play" src="images/play.png">
+				<img class="pause" id="pause" src="images/pause.png">
+				
+			</div>
+		</article>
+		<article class="music">
+			
+			<audio  id="audio" src="music/yujizhihou.mp3"></audio>
+			
+			
+			<div id="lyricWrapper">
+				<div id="lyricContainer">
+					
+				</div>
+			</div>
+			<div class="controlbar">
+				<div class="curtime" id="curtime">00:00</div>
+				<div class="ap_progress" id="ap_progress">
+					<div class="ap-seek-bar">
+						<div class="ap-play-bar" id="ap-play-bar">
+							
+						</div>
+						<span id="drag" draggable="true"></span>
+					</div>
+				</div>
+				<div class="totaltime" id="totaltime">00:00</div>
+			</div>
+			<div class="clear"></div>
+			
+			
+		</article>
+
+	</div>
+	<footer class = "footer" onclick="downLoadPocketApp()">
+			<div class="intro">SNH48女子团队更多音乐<br>尽在“口袋48”APP</div>
+			<img  src="images/download.png"/>
+			
+		</footer>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="../../common/js/common_v1.js"></script>
+<script src="../js/downloadBottom.js"></script>
+<script src="../js/config.js?v=20190417" type="text/javascript" charset="utf-8"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

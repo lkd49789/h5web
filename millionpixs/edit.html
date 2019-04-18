@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+<html>
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+</head>
+
+<body>
+    <div class="body">
+        <!-- -->
+        <div class="main">
+            <!-- 左侧工作区-->
+            <div class="home">
+                <div class="tip-alt">
+                    <img class="triangle" src="images/triangle.png">
+                    <img class="u-avata" src="images/qrcode.png">
+                    <p>内容内容内容内容内容内容内容内容内容内容</p>
+                </div>
+                <!-- 用户上传图片-->
+                <div class="img-wrapper">
+                    
+                </div>
+                <!-- 3种选区-->
+                <span class="area area1">
+                    <img src="">
+                </span>
+                <span class="area area2">
+                    <img src="">
+                </span>
+                <span class="area area3">
+                    <img src="">
+                </span>
+            </div>
+            <!-- 右侧工作区-->
+            <div class="right-panel">
+                <!-- 个人信息 -->
+                <div class="info-box">
+                    <img src="images/title2.png">
+                    <p><img class="u-info" src="images/main_bg.png"><span class="u-name">昵称昵称昵称</span><span class="btn-quit">退出</span></p>
+                    <div class="money-info">0鸡腿 0像素</div>
+                </div>
+                <!-- 选择选区 -->
+                <div class="toolPanel">
+                    
+                    <!--选区信息 -->
+                    <div class="area-info-box">
+                        <p class="area-info area-info1">
+                            <span>区域1：</span>
+                            <span class="info info1"></span>
+                            <span id="1" class="btn btn-delete">删除</span>
+                        </p>
+                        <p class="area-info area-info2">
+                            <span>区域2：</span>
+                            <span class="info info2"></span>
+                            <span id="2" class="btn btn-delete">删除</span>
+                        </p>
+                        <p class="area-info area-info3">
+                            <span>区域3：</span>
+                            <span class="info info3"></span>
+                            <span id="3" class="btn btn-delete">删除</span>
+                        </p>
+                    </div>
+                    <div class="intro">
+                        <p>每个选区最小10像素x10像素;</p>
+                        <p>每个口袋账号只能购买一次，每次最多不超过3个选区，每个选区最多不超过20000个像素;</p>
+                        <p>上传图片尺寸需和所选区域尺寸一致;</p>
+                    </div>
+                    
+                    <div class="toolbtn">
+                        <span class="btn btn-addarea">增加选区</span>
+                        <span class="btn btn-next">下一步</span>
+                    </div>
+                </div>
+                <!-- 上传图片/信息 -->
+                <div class="uploadPanel">
+                    <div class="area-info-box">
+                        <input type="file" id="fileToUpload" class="fileToUpload "/>
+                        <p class="area-info area-info1">
+                            <span>区域1：</span>
+                            <span class="info info1"></span>
+                            
+                            <span img-src="" id="1" class="btn btn-upload btn-upload1">上传图片</span></br>
+                            <input class="txt" type="text" placeholder="输入寄语，20个汉字（可选）" maxlength="20" />
+                            <span class="tips">图片尺寸和所选区域不符，请重新选择</span>
+                        </p>
+                        <p class="area-info area-info2">
+                            <span>区域2：</span>
+                            <span class="info info2"></span>
+                            <!-- <input type="file" id="fileToUpload2" class="fileToUpload fileToUpload2"/> -->
+                            <span img-src="" id="2" class="btn btn-upload btn-upload2">上传图片</span></br>
+                            <input class="txt" type="text" placeholder="输入寄语，20个汉字（可选）" maxlength="20" />
+                            <span class="tips">图片尺寸和所选区域不符，请重新选择</span>
+                        </p>
+                        <p class="area-info area-info3">
+                            <span>区域3：</span>
+                            <span class="info info3"></span>
+                            <!-- <input type="file" id="fileToUpload3" class="fileToUpload fileToUpload3"/> -->
+                            <span img-src="" id="3" class="btn btn-upload btn-upload3">上传图片</span></br>
+                            <input class="txt" type="text" placeholder="输入寄语，20个汉字（可选）" maxlength="20" />
+                            <span class="tips">图片尺寸和所选区域不符，请重新选择</span>
+                        </p>
+                        
+                    </div>
+                    
+
+                    <div class="toolbtn">
+                        <span class="btn btn-buy">确认购买</span>
+                        <span class="btn btn-prev">上一步</span>
+                    </div>
+                </div>
+            </div>
+            <div class="self-box">
+                <p>
+                    <img class="u-info" src="images/main_bg.png">
+                    <span class="u-name">昵称昵称昵称</span>
+                </p>
+                <p class="time">购买时间：2018.3.15</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="pop-panel">
+        <div class="pop-pay">
+            <img class="btn-close" src="images/btn-close.png">
+            <p class="tip">是否确认使用口袋48</p>
+            <p>支付<em class="money">4400鸡腿</em></p>
+            <span class="btn btn-cancel">稍后再说</span>
+            <span class="btn btn-pay">确认购买</span>
+        </div>
+        <div class="pop-result">
+            <img class="btn-close" src="images/btn-close.png">
+            <p class="tip message"></p>
+            <span class="btn btn-cancel">知道了</span>
+        </div>
+        <div class="msk"></div>
+    </div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script type="text/javascript" src="js/edit1.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        $('.home').initWall();
+    });
+</script>
+
+</html> 

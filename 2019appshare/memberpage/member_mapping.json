@@ -1,0 +1,3522 @@
+{
+    "10001": {
+        "memberId": 3,
+        "memberAvatar": "/mediasource/avatar/1509073629433C79W11Fagp.jpg",
+        "memberName": "陈观慧",
+        "memberPinyin": "ChenGuanHui",
+        "teamId": 1001,
+        "teamName": "TEAM SII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10002": {
+        "memberId": 37,
+        "memberAvatar": "/mediasource/avatar/1508735376550xK4KPFc6Om.jpg",
+        "memberName": "陈思",
+        "memberPinyin": "Chen Si",
+        "teamId": 1001,
+        "teamName": "TEAM SII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10003": {
+        "memberId": 38,
+        "memberAvatar": "/mediasource/avatar/1508735529143960815u850.jpg",
+        "memberName": "戴萌",
+        "memberPinyin": "Dai Meng",
+        "teamId": 1001,
+        "teamName": "TEAM SII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10004": {
+        "memberId": 17,
+        "memberAvatar": "/mediasource/avatar/15087336012156cK2us3D12.jpg",
+        "memberName": "蒋芸",
+        "memberPinyin": "Jiang Yun",
+        "teamId": 1001,
+        "teamName": "TEAM SII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10005": {
+        "memberId": 19,
+        "memberAvatar": "/mediasource/avatar/1508733735612f6LLK20Kw9.jpg",
+        "memberName": "孔肖吟",
+        "memberPinyin": "Kong XiaoYin",
+        "teamId": 1001,
+        "teamName": "TEAM SII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10006": {
+        "memberId": 20,
+        "memberAvatar": "/mediasource/avatar/1508733813157jkbN7lF5f3.jpg",
+        "memberName": "李宇琪",
+        "memberPinyin": "Li YuQi",
+        "teamId": 1001,
+        "teamName": "TEAM SII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10007": {
+        "memberId": 35,
+        "memberAvatar": "/mediasource/avatar/1508734558164ZiMhI8cMjL.jpg",
+        "memberName": "莫寒",
+        "memberPinyin": "Mo Han",
+        "teamId": 1001,
+        "teamName": "TEAM SII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10008": {
+        "memberId": 36,
+        "memberAvatar": "/mediasource/avatar/15087352146244GFsARr0I5.jpg",
+        "memberName": "钱蓓婷",
+        "memberPinyin": "Qian BeiTing",
+        "teamId": 1001,
+        "teamName": "TEAM SII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10009": {
+        "memberId": 40,
+        "memberAvatar": "/mediasource/avatar/1508735579222b6fXL6PIm0.jpg",
+        "memberName": "邱欣怡",
+        "memberPinyin": "Qiu XinYi",
+        "teamId": 1001,
+        "teamName": "TEAM SII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10010": {
+        "memberId": 8,
+        "memberAvatar": "/mediasource/avatar/1508733326484PZ7VeZmER8.jpg",
+        "memberName": "孙芮",
+        "memberPinyin": "Sun Rui",
+        "teamId": 1001,
+        "teamName": "TEAM SII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10011": {
+        "memberId": 9,
+        "memberAvatar": "/mediasource/avatar/1508733374398WclSS834ND.jpg",
+        "memberName": "沈之琳",
+        "memberPinyin": "Shen ZhiLin",
+        "teamId": 1001,
+        "teamName": "TEAM SII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10012": {
+        "memberId": 11,
+        "memberAvatar": "/mediasource/avatar/15087334427357XND762N14.jpg",
+        "memberName": "温晶婕",
+        "memberPinyin": "Wen JingJie",
+        "teamId": 1001,
+        "teamName": "TEAM SII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10013": {
+        "memberId": 39,
+        "memberAvatar": "/mediasource/avatar/1508735432126qz2IH24ax1.jpg",
+        "memberName": "吴哲晗",
+        "memberPinyin": "Wu ZheHan",
+        "teamId": 1001,
+        "teamName": "TEAM SII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10014": {
+        "memberId": 18,
+        "memberAvatar": "/mediasource/avatar/1508733698334e1ZD603e9O.jpg",
+        "memberName": "徐晨辰",
+        "memberPinyin": "Xu ChenChen",
+        "teamId": 1001,
+        "teamName": "TEAM SII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10015": {
+        "memberId": 21,
+        "memberAvatar": "/mediasource/avatar/1508734360890H454523C20.jpg",
+        "memberName": "许佳琪",
+        "memberPinyin": "Xu JiaQi",
+        "teamId": 1001,
+        "teamName": "TEAM SII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10016": {
+        "memberId": 14,
+        "memberAvatar": "/mediasource/avatar/150873348552109Ogr41X18.jpg",
+        "memberName": "徐子轩",
+        "memberPinyin": "Xu ZiXuan",
+        "teamId": 1001,
+        "teamName": "TEAM SII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10017": {
+        "memberId": 5,
+        "memberAvatar": "/mediasource/avatar/15087332470615qyNQ1VYFk.jpg",
+        "memberName": "袁雨桢",
+        "memberPinyin": "Yuan YuZhen",
+        "teamId": 1001,
+        "teamName": "TEAM SII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10018": {
+        "memberId": 2,
+        "memberAvatar": "/mediasource/avatar/2.jpg",
+        "memberName": "赵嘉敏",
+        "memberPinyin": "Zhao JiaMin",
+        "teamId": 1001,
+        "teamName": "TEAM SII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10019": {
+        "memberId": 1,
+        "memberAvatar": "/mediasource/avatar/1508733128488d12h7zJWxY.jpg",
+        "memberName": "张语格",
+        "memberPinyin": "Zhang YuGe",
+        "teamId": 1001,
+        "teamName": "TEAM SII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10020": {
+        "memberId": 4,
+        "memberAvatar": "/mediasource/avatar/1508753875893k354hUTo1h.jpg",
+        "memberName": "陈佳莹",
+        "memberPinyin": "Chen JiaYing",
+        "teamId": 1002,
+        "teamName": "TEAM NII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10021": {
+        "memberId": 68,
+        "memberAvatar": "/mediasource/avatar/15087549137172GecI4UyYH.jpg",
+        "memberName": "陈问言",
+        "memberPinyin": "Chen WenYan",
+        "teamId": 1002,
+        "teamName": "TEAM NII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10022": {
+        "memberId": 6,
+        "memberAvatar": "/mediasource/avatar/6.jpg",
+        "memberName": "董艳芸",
+        "memberPinyin": "Dong YanYun",
+        "teamId": 1002,
+        "teamName": "TEAM NII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10023": {
+        "memberId": 7,
+        "memberAvatar": "/mediasource/avatar/1508753909474azg2UDqe1Z.jpg",
+        "memberName": "冯薪朵",
+        "memberPinyin": "Feng XinDuo",
+        "teamId": 1002,
+        "teamName": "TEAM NII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10024": {
+        "memberId": 26,
+        "memberAvatar": "/mediasource/avatar/15087542569372IS7xP1704.jpg",
+        "memberName": "龚诗淇",
+        "memberPinyin": "Gong ShiQi",
+        "teamId": 1002,
+        "teamName": "TEAM NII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10025": {
+        "memberId": 22,
+        "memberAvatar": "/mediasource/avatar/1508754118155hQ0DioNnG4.jpg",
+        "memberName": "黄婷婷",
+        "memberPinyin": "Huang TingTing",
+        "teamId": 1002,
+        "teamName": "TEAM NII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10026": {
+        "memberId": 10,
+        "memberAvatar": "/mediasource/avatar/1508753988466B3Z6SMDwQ6.jpg",
+        "memberName": "何晓玉",
+        "memberPinyin": "He XiaoYu",
+        "teamId": 1002,
+        "teamName": "TEAM NII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10027": {
+        "memberId": 48,
+        "memberAvatar": "/mediasource/avatar/1498546930814hg4GyBYPp2.jpg",
+        "memberName": "鞠婧祎",
+        "memberPinyin": "Ju JingYi",
+        "teamId": 1002,
+        "teamName": "TEAM NII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10029": {
+        "memberId": 24,
+        "memberAvatar": "/mediasource/avatar/1508754147845Eg7P4YA2Ug.jpg",
+        "memberName": "林思意",
+        "memberPinyin": "Lin SiYi",
+        "teamId": 1002,
+        "teamName": "TEAM NII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10030": {
+        "memberId": 34,
+        "memberAvatar": "/mediasource/avatar/1508754458484qP31IaRB24.jpg",
+        "memberName": "陆婷",
+        "memberPinyin": "Lu Ting",
+        "teamId": 1002,
+        "teamName": "TEAM NII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10031": {
+        "memberId": 16,
+        "memberAvatar": "/mediasource/avatar/15087540444263i78dy8cX2.jpg",
+        "memberName": "李艺彤",
+        "memberPinyin": "Li YiTong",
+        "teamId": 1002,
+        "teamName": "TEAM NII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10032": {
+        "memberId": 15,
+        "memberAvatar": "/mediasource/avatar/15.jpg",
+        "memberName": "孟玥",
+        "memberPinyin": "Meng Yue",
+        "teamId": 1002,
+        "teamName": "TEAM NII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10033": {
+        "memberId": 12,
+        "memberAvatar": "/mediasource/avatar/12.jpg",
+        "memberName": "唐安琪",
+        "memberPinyin": "Tang AnQi",
+        "teamId": 1002,
+        "teamName": "TEAM NII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10034": {
+        "memberId": 25,
+        "memberAvatar": "/mediasource/avatar/150875421509466UuC540hf.jpg",
+        "memberName": "万丽娜",
+        "memberPinyin": "Wan LiNa",
+        "teamId": 1002,
+        "teamName": "TEAM NII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10036": {
+        "memberId": 33,
+        "memberAvatar": "/mediasource/avatar/15087543905183o4m2m290F.jpg",
+        "memberName": "易嘉爱",
+        "memberPinyin": "Yi JiaAi",
+        "teamId": 1002,
+        "teamName": "TEAM NII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10037": {
+        "memberId": 27,
+        "memberAvatar": "/mediasource/avatar/1508754351200K07BJfh5Vd.jpg",
+        "memberName": "赵粤",
+        "memberPinyin": "Zhao Yue",
+        "teamId": 1002,
+        "teamName": "TEAM NII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10038": {
+        "memberId": 49,
+        "memberAvatar": "/mediasource/avatar/1508754673186Z80KhrLdZ7.jpg",
+        "memberName": "曾艳芬",
+        "memberPinyin": "Zeng YanFen",
+        "teamId": 1002,
+        "teamName": "TEAM NII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10051": {
+        "memberId": 5560,
+        "memberAvatar": "/mediasource/avatar/5560.jpg",
+        "memberName": "陈怡馨",
+        "memberPinyin": "Chen YiXin",
+        "teamId": 1003,
+        "teamName": "TEAM HII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10054": {
+        "memberId": 32,
+        "memberAvatar": "/mediasource/avatar/1508816536206bw2FV8iAOX.jpg",
+        "memberName": "郝婉晴",
+        "memberPinyin": "Hao WanQing",
+        "teamId": 1003,
+        "teamName": "TEAM HII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10057": {
+        "memberId": 28,
+        "memberAvatar": "/mediasource/avatar/1508816453570373IdcQAkm.jpg",
+        "memberName": "李清扬",
+        "memberPinyin": "Li QingYang",
+        "teamId": 1003,
+        "teamName": "TEAM HII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10061": {
+        "memberId": 5562,
+        "memberAvatar": "/mediasource/avatar/15088312043098RS6Vt03v1.jpg",
+        "memberName": "林楠",
+        "memberPinyin": "Lin Nan",
+        "teamId": 1003,
+        "teamName": "TEAM HII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10062": {
+        "memberId": 1544,
+        "memberAvatar": "/mediasource/avatar/1508816420969hhVY7qbAY1.jpg",
+        "memberName": "刘炅然",
+        "memberPinyin": "Liu JiongRan",
+        "teamId": 1003,
+        "teamName": "TEAM HII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10063": {
+        "memberId": 46,
+        "memberAvatar": "/mediasource/avatar/1508816798837sZ12D9O7W1.jpg",
+        "memberName": "刘佩鑫",
+        "memberPinyin": "Liu PeiXin",
+        "teamId": 1003,
+        "teamName": "TEAM HII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10064": {
+        "memberId": 47,
+        "memberAvatar": "/mediasource/avatar/150881702583301XfcKPec5.jpg",
+        "memberName": "王柏硕",
+        "memberPinyin": "Wang BaiShuo",
+        "teamId": 1003,
+        "teamName": "TEAM HII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10066": {
+        "memberId": 5564,
+        "memberAvatar": "/mediasource/avatar/15088312735161b5CzSJlTi.jpg",
+        "memberName": "吴燕文",
+        "memberPinyin": "Wu YanWen",
+        "teamId": 1003,
+        "teamName": "TEAM HII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10067": {
+        "memberId": 45,
+        "memberAvatar": "/mediasource/avatar/15088167559037rPU3cewGE.jpg",
+        "memberName": "谢妮",
+        "memberPinyin": "Xie Ni",
+        "teamId": 1003,
+        "teamName": "TEAM HII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10068": {
+        "memberId": 2470,
+        "memberAvatar": "/mediasource/avatar/1508831137713K13Me42x23.jpg",
+        "memberName": "徐晗",
+        "memberPinyin": "Xu Han",
+        "teamId": 1003,
+        "teamName": "TEAM HII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10069": {
+        "memberId": 43,
+        "memberAvatar": "/mediasource/avatar/15088166744901g58l0s0rU.jpg",
+        "memberName": "徐伊人",
+        "memberPinyin": "Xu YiRen",
+        "teamId": 1003,
+        "teamName": "TEAM HII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10070": {
+        "memberId": 5566,
+        "memberAvatar": "/mediasource/avatar/1508831340507Q06qr308TV.jpg",
+        "memberName": "许杨玉琢",
+        "memberPinyin": "Xu YangYuZhuo",
+        "teamId": 1003,
+        "teamName": "TEAM HII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10071": {
+        "memberId": 5567,
+        "memberAvatar": "/mediasource/avatar/15088313741272bs6m945Hc.jpg",
+        "memberName": "杨惠婷",
+        "memberPinyin": "Yang HuiTing",
+        "teamId": 1003,
+        "teamName": "TEAM HII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10073": {
+        "memberId": 67,
+        "memberAvatar": "/mediasource/avatar/1508735664760KXyi1c9yA6.jpg",
+        "memberName": "袁丹妮",
+        "memberPinyin": "Yuan DanNi",
+        "teamId": 1001,
+        "teamName": "TEAM SII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10075": {
+        "memberId": 2508,
+        "memberAvatar": "/mediasource/avatar/1508831502313a8m0DhTGph.jpg",
+        "memberName": "张昕",
+        "memberPinyin": "Zhang Xin",
+        "teamId": 1003,
+        "teamName": "TEAM HII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10076": {
+        "memberId": 5574,
+        "memberAvatar": "/mediasource/avatar/1508756820449C2MMPjAu16.jpg",
+        "memberName": "张雨鑫",
+        "memberPinyin": "Zhang YuXin",
+        "teamId": 1002,
+        "teamName": "TEAM NII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10077": {
+        "memberId": 6429,
+        "memberAvatar": "/mediasource/avatar/1508734523853CSHGf19qM5.jpg",
+        "memberName": "赵晔",
+        "memberPinyin": "Zhao Ye",
+        "teamId": 1001,
+        "teamName": "TEAM SII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10081": {
+        "memberId": 6431,
+        "memberAvatar": "/mediasource/avatar/1508844923688nNFU29xUE8.jpg",
+        "memberName": "陈琳",
+        "memberPinyin": "Chen Lin",
+        "teamId": 1004,
+        "teamName": "TEAM X",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10082": {
+        "memberId": 6432,
+        "memberAvatar": "/mediasource/avatar/1508845114502EJ83Y3FAMH.jpg",
+        "memberName": "冯晓菲",
+        "memberPinyin": "Feng XiaoFei",
+        "teamId": 1004,
+        "teamName": "TEAM X",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10083": {
+        "memberId": 6734,
+        "memberAvatar": "/mediasource/avatar/1508845284983rYoLHA7US2.jpg",
+        "memberName": "李晶",
+        "memberPinyin": "Li Jing",
+        "teamId": 1004,
+        "teamName": "TEAM X",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10084": {
+        "memberId": 6735,
+        "memberAvatar": "/mediasource/avatar/150884535387921W2SeAicK.jpg",
+        "memberName": "李钊",
+        "memberPinyin": "Li Zhao",
+        "teamId": 1004,
+        "teamName": "TEAM X",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10086": {
+        "memberId": 6737,
+        "memberAvatar": "/mediasource/avatar/1508845437290E3B9tr6xSq.jpg",
+        "memberName": "邵雪聪",
+        "memberPinyin": "Shao XueCong",
+        "teamId": 1004,
+        "teamName": "TEAM X",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10087": {
+        "memberId": 6738,
+        "memberAvatar": "/mediasource/avatar/1508845481601irUI9q8Q07.jpg",
+        "memberName": "宋昕冉",
+        "memberPinyin": "Song XinRan",
+        "teamId": 1004,
+        "teamName": "TEAM X",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10088": {
+        "memberId": 6739,
+        "memberAvatar": "/mediasource/avatar/1508845580210Gehl6kASy3.jpg",
+        "memberName": "孙歆文",
+        "memberPinyin": "Sun XinWen",
+        "teamId": 1004,
+        "teamName": "TEAM X",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10089": {
+        "memberId": 6740,
+        "memberAvatar": "/mediasource/avatar/15089287092396nnKw9UN8p.jpg",
+        "memberName": "汪佳翎",
+        "memberPinyin": "Wang JiaLing",
+        "teamId": 1004,
+        "teamName": "TEAM X",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10090": {
+        "memberId": 6741,
+        "memberAvatar": "/mediasource/avatar/150892878055089H0Pc7x1t.jpg",
+        "memberName": "汪束",
+        "memberPinyin": "Wang Shu",
+        "teamId": 1004,
+        "teamName": "TEAM X",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10091": {
+        "memberId": 6742,
+        "memberAvatar": "/mediasource/avatar/1508928811235233Xa0ydWp.jpg",
+        "memberName": "王晓佳",
+        "memberPinyin": "Wang XiaoJia",
+        "teamId": 1004,
+        "teamName": "TEAM X",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10092": {
+        "memberId": 6743,
+        "memberAvatar": "/mediasource/avatar/1508928883281PVCy68oRo6.jpg",
+        "memberName": "谢天依",
+        "memberPinyin": "Xie TianYi",
+        "teamId": 1004,
+        "teamName": "TEAM X",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10093": {
+        "memberId": 6744,
+        "memberAvatar": "/mediasource/avatar/1508928917919hbyK2uX7Tc.jpg",
+        "memberName": "杨冰怡",
+        "memberPinyin": "Yang BingYi",
+        "teamId": 1004,
+        "teamName": "TEAM X",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10095": {
+        "memberId": 6746,
+        "memberAvatar": "/mediasource/avatar/1508928991179pu2jzkemdy.jpg",
+        "memberName": "杨韫玉",
+        "memberPinyin": "Yang YunYu",
+        "teamId": 1004,
+        "teamName": "TEAM X",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10096": {
+        "memberId": 6747,
+        "memberAvatar": "/mediasource/avatar/1508929038369WT09fL028L.jpg",
+        "memberName": "张丹三",
+        "memberPinyin": "Zhang DanSan",
+        "teamId": 1004,
+        "teamName": "TEAM X",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10103": {
+        "memberId": 49003,
+        "memberAvatar": "/mediasource/avatar/1508755057841gH8Z3Vc38m.jpg",
+        "memberName": "周怡",
+        "memberPinyin": "Zhou Yi",
+        "teamId": 1002,
+        "teamName": "TEAM NII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10104": {
+        "memberId": 49005,
+        "memberAvatar": "/mediasource/avatar/1508817642717OpW5dVMcP3.jpg",
+        "memberName": "沈梦瑶",
+        "memberPinyin": "Shen MengYao",
+        "teamId": 1003,
+        "teamName": "TEAM HII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10106": {
+        "memberId": 49007,
+        "memberAvatar": "/mediasource/avatar/1508830926130f95jXc0Zcm.jpg",
+        "memberName": "袁航",
+        "memberPinyin": "Yuan Hang",
+        "teamId": 1003,
+        "teamName": "TEAM HII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10109": {
+        "memberId": 63550,
+        "memberAvatar": "/mediasource/avatar/63550Ur47Vie6l8.jpg",
+        "memberName": "陈音",
+        "memberPinyin": "Chen Yin",
+        "teamId": 1005,
+        "teamName": "TEAM XII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10110": {
+        "memberId": 63551,
+        "memberAvatar": "/mediasource/avatar/150892962573766mea5ZtBp.jpg",
+        "memberName": "陈韫凌",
+        "memberPinyin": "Chen YunLing",
+        "teamId": 1005,
+        "teamName": "TEAM XII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10114": {
+        "memberId": 63555,
+        "memberAvatar": "/mediasource/avatar/1508929669481OBr5IpnMp9.jpg",
+        "memberName": "费沁源",
+        "memberPinyin": "Fei QinYuan",
+        "teamId": 1005,
+        "teamName": "TEAM XII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10117": {
+        "memberId": 63558,
+        "memberAvatar": "/mediasource/avatar/1508929745794nQgmZn269z.jpg",
+        "memberName": "洪珮雲",
+        "memberPinyin": "Hong PeiYun",
+        "teamId": 1005,
+        "teamName": "TEAM XII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10119": {
+        "memberId": 63560,
+        "memberAvatar": "/mediasource/avatar/15089297815944IS6kLPgw6.jpg",
+        "memberName": "姜杉",
+        "memberPinyin": "Jiang Shan",
+        "teamId": 1005,
+        "teamName": "TEAM XII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10120": {
+        "memberId": 63561,
+        "memberAvatar": "/mediasource/avatar/15089298513959eN2Ye26Py.jpg",
+        "memberName": "蒋舒婷",
+        "memberPinyin": "Jiang ShuTing",
+        "teamId": 1005,
+        "teamName": "TEAM XII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10125": {
+        "memberId": 63566,
+        "memberAvatar": "/mediasource/avatar/1508929889786WT1uOLXtaC.jpg",
+        "memberName": "刘增艳",
+        "memberPinyin": "Liu ZengYan",
+        "teamId": 1005,
+        "teamName": "TEAM XII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10126": {
+        "memberId": 63567,
+        "memberAvatar": "/mediasource/avatar/1508929955807iLBF32bvPX.jpg",
+        "memberName": "潘瑛琪",
+        "memberPinyin": "Pan YingQi",
+        "teamId": 1005,
+        "teamName": "TEAM XII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10129": {
+        "memberId": 63570,
+        "memberAvatar": "/mediasource/avatar/15089299865393SuDl189j6.jpg",
+        "memberName": "宋雨珊",
+        "memberPinyin": "Song YuShan",
+        "teamId": 1005,
+        "teamName": "TEAM XII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10133": {
+        "memberId": 63574,
+        "memberAvatar": "/mediasource/avatar/1508930063000E3p2iCDna9.jpg",
+        "memberName": "严佼君",
+        "memberPinyin": "Yan JiaoJun",
+        "teamId": 1005,
+        "teamName": "TEAM XII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10134": {
+        "memberId": 63575,
+        "memberAvatar": "/mediasource/avatar/1508930114509Vk16A581n6.jpg",
+        "memberName": "於佳怡",
+        "memberPinyin": "Yu JiaYi",
+        "teamId": 1005,
+        "teamName": "TEAM XII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10138": {
+        "memberId": 63579,
+        "memberAvatar": "/mediasource/avatar/63579T94zDzTm4K.jpg",
+        "memberName": "邹佳佳",
+        "memberPinyin": "Zou JiaJia",
+        "teamId": 1005,
+        "teamName": "TEAM XII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10140": {
+        "memberId": 63581,
+        "memberAvatar": "/mediasource/avatar/1508930276825hM40aaQolr.jpg",
+        "memberName": "张文静",
+        "memberPinyin": "Zhang WenJing",
+        "teamId": 1005,
+        "teamName": "TEAM XII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10141": {
+        "memberId": 63582,
+        "memberAvatar": "/mediasource/avatar/1508930346147C5H78X63Mn.jpg",
+        "memberName": "张怡",
+        "memberPinyin": "Zhang Yi",
+        "teamId": 1005,
+        "teamName": "TEAM XII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10142": {
+        "memberId": 286973,
+        "memberAvatar": "/mediasource/avatar/15087356783887VlRt8iW0j.jpg",
+        "memberName": "成珏",
+        "memberPinyin": "Cheng Jue",
+        "teamId": 1001,
+        "teamName": "TEAM SII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10144": {
+        "memberId": 286976,
+        "memberAvatar": "/mediasource/avatar/15087536775214u5U73Glwy.jpg",
+        "memberName": "黄彤扬",
+        "memberPinyin": "Huang TongYang",
+        "teamId": 1002,
+        "teamName": "TEAM NII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10146": {
+        "memberId": 286977,
+        "memberAvatar": "/mediasource/avatar/1508816348999IZ1t6KKjE0.jpg",
+        "memberName": "孙珍妮",
+        "memberPinyin": "Sun ZhenNi",
+        "teamId": 1003,
+        "teamName": "TEAM HII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10148": {
+        "memberId": 286980,
+        "memberAvatar": "/mediasource/avatar/15088448164502vS5R6n20D.jpg",
+        "memberName": "林忆宁",
+        "memberPinyin": "Lin YiNing",
+        "teamId": 1004,
+        "teamName": "TEAM X",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10149": {
+        "memberId": 286979,
+        "memberAvatar": "/mediasource/avatar/15088448926167K1QIg8A8Z.jpg",
+        "memberName": "张嘉予",
+        "memberPinyin": "Zhang JiaYu",
+        "teamId": 1004,
+        "teamName": "TEAM X",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10151": {
+        "memberId": 286983,
+        "memberAvatar": "/mediasource/avatar/15089294356053uy5GjXWWa.jpg",
+        "memberName": "李佳恩",
+        "memberPinyin": "Li JiaEn",
+        "teamId": 1005,
+        "teamName": "TEAM XII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10152": {
+        "memberId": 286982,
+        "memberAvatar": "/mediasource/avatar/1508929364355FzHi3103Ov.jpg",
+        "memberName": "吕梦莹",
+        "memberPinyin": "Lv MengYing",
+        "teamId": 1005,
+        "teamName": "TEAM XII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10153": {
+        "memberId": 399631,
+        "memberAvatar": "/mediasource/avatar/1508733561823b1fRgs71pC.jpg",
+        "memberName": "吕一",
+        "memberPinyin": "Lv Yi",
+        "teamId": 1001,
+        "teamName": "TEAM SII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10154": {
+        "memberId": 399652,
+        "memberAvatar": "/mediasource/avatar/1508735292421qD3gYJJUjk.jpg",
+        "memberName": "潘燕琦",
+        "memberPinyin": "Pan YanQi",
+        "teamId": 1001,
+        "teamName": "TEAM SII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10155": {
+        "memberId": 399654,
+        "memberAvatar": "/mediasource/avatar/1498472571291d50IFKyiaW.jpg",
+        "memberName": "赵韩倩",
+        "memberPinyin": "Zhao HanQian",
+        "teamId": 1001,
+        "teamName": "TEAM SII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10156": {
+        "memberId": 399662,
+        "memberAvatar": "/mediasource/avatar/15087545154138t4Dy2gqNG.jpg",
+        "memberName": "江真仪",
+        "memberPinyin": "Jiang ZhenYi",
+        "teamId": 1002,
+        "teamName": "TEAM NII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10157": {
+        "memberId": 399664,
+        "memberAvatar": "/mediasource/avatar/1508754612360yZ2Xr1oxQ4.jpg",
+        "memberName": "刘菊子",
+        "memberPinyin": "Liu JuZi",
+        "teamId": 1002,
+        "teamName": "TEAM NII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10158": {
+        "memberId": 399667,
+        "memberAvatar": "/mediasource/avatar/1508754751341nfx78ZZ9NA.jpg",
+        "memberName": "刘瀛",
+        "memberPinyin": "Liu Ying",
+        "teamId": 1002,
+        "teamName": "TEAM NII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10159": {
+        "memberId": 399668,
+        "memberAvatar": "/mediasource/avatar/1508754792137F0m3HbLW9M.jpg",
+        "memberName": "许逸",
+        "memberPinyin": "Xu Yi",
+        "teamId": 1002,
+        "teamName": "TEAM NII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10160": {
+        "memberId": 399657,
+        "memberAvatar": "/mediasource/avatar/399657TPan4V2PYc.jpg",
+        "memberName": "徐真",
+        "memberPinyin": "Xu Zhen",
+        "teamId": 1002,
+        "teamName": "TEAM NII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10161": {
+        "memberId": 399665,
+        "memberAvatar": "/mediasource/avatar/14985497556868MKT7U58CV.jpg",
+        "memberName": "张雅梦",
+        "memberPinyin": "Zhang YaMeng",
+        "teamId": 1002,
+        "teamName": "TEAM NII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10163": {
+        "memberId": 399669,
+        "memberAvatar": "/mediasource/avatar/1508817070348jyJqhPyMmd.jpg",
+        "memberName": "袁一琦",
+        "memberPinyin": "Yuan YiQi",
+        "teamId": 1003,
+        "teamName": "TEAM HII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10164": {
+        "memberId": 399672,
+        "memberAvatar": "/mediasource/avatar/1508845152445A1FEgbCfY1.jpg",
+        "memberName": "祁静",
+        "memberPinyin": "Qi Jing",
+        "teamId": 1004,
+        "teamName": "TEAM X",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10165": {
+        "memberId": 419966,
+        "memberAvatar": "/mediasource/avatar/150892910057931QXTs9464.jpg",
+        "memberName": "姚祎纯",
+        "memberPinyin": "Yao YiChun",
+        "teamId": 1004,
+        "teamName": "TEAM X",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10167": {
+        "memberId": 399674,
+        "memberAvatar": "/mediasource/avatar/15089295412922qW834o4ij.jpg",
+        "memberName": "徐诗琪",
+        "memberPinyin": "Xu ShiQi",
+        "teamId": 1005,
+        "teamName": "TEAM XII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10170": {
+        "memberId": 399673,
+        "memberAvatar": "/mediasource/avatar/1508929511073q9A6rkvNg5.jpg",
+        "memberName": "曾晓雯",
+        "memberPinyin": "Zeng XiaoWen",
+        "teamId": 1005,
+        "teamName": "TEAM XII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10171": {
+        "memberId": 530584,
+        "memberAvatar": "/mediasource/avatar/1508831098793KO9P7RVdVZ.jpg",
+        "memberName": "郭倩芸",
+        "memberPinyin": "Guo QianYun",
+        "teamId": 1003,
+        "teamName": "TEAM HII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10175": {
+        "memberId": 593820,
+        "memberAvatar": "/mediasource/avatar/1508929138237Se1WABp7PS.jpg",
+        "memberName": "孙亚萍",
+        "memberPinyin": "Sun YaPing",
+        "teamId": 1004,
+        "teamName": "TEAM X",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10176": {
+        "memberId": 541132,
+        "memberAvatar": "/mediasource/avatar/1508930393272pxHA482068.jpg",
+        "memberName": "林歆源",
+        "memberPinyin": "Lin XinYuan",
+        "teamId": 1005,
+        "teamName": "TEAM XII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10177": {
+        "memberId": 533852,
+        "memberAvatar": "/mediasource/avatar/1508930242691Ey17k99Erm.jpg",
+        "memberName": "陶波尔",
+        "memberPinyin": "Tao Boer",
+        "teamId": 1005,
+        "teamName": "TEAM XII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10178": {
+        "memberId": 538735,
+        "memberAvatar": "/mediasource/avatar/1508756663993SWEHvv1GV3.jpg",
+        "memberName": "金莹玥",
+        "memberPinyin": "Jin Yingyue",
+        "teamId": 1002,
+        "teamName": "TEAM NII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10179": {
+        "memberId": 593999,
+        "memberAvatar": "/mediasource/avatar/15087549582143zoNVK4c9U.jpg",
+        "memberName": "葛佳慧",
+        "memberPinyin": "Ge JiaHui",
+        "teamId": 1002,
+        "teamName": "TEAM NII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10180": {
+        "memberId": 594002,
+        "memberAvatar": "/mediasource/avatar/1508817302117y6k1flU9W0.jpg",
+        "memberName": "姜涵",
+        "memberPinyin": "Jiang Han",
+        "teamId": 1003,
+        "teamName": "TEAM HII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10181": {
+        "memberId": 594003,
+        "memberAvatar": "/mediasource/avatar/1508817452777EqJZ2v673y.jpg",
+        "memberName": "王奕",
+        "memberPinyin": "Wang Yi ",
+        "teamId": 1003,
+        "teamName": "TEAM HII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10182": {
+        "memberId": 594005,
+        "memberAvatar": "/mediasource/avatar/1508817544392qqLyydanTg.jpg",
+        "memberName": "熊沁娴",
+        "memberPinyin": "Xiong QinXian",
+        "teamId": 1003,
+        "teamName": "TEAM HII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10184": {
+        "memberId": 592348,
+        "memberAvatar": "/mediasource/avatar/1508930464269y9fy89pr6W.jpg",
+        "memberName": "许嘉怡",
+        "memberPinyin": "Xu JiaYi",
+        "teamId": 1005,
+        "teamName": "TEAM XII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "10185": {
+        "memberId": 606343,
+        "memberAvatar": "/mediasource/avatar/15075457367576D5GPuBMeD.jpg",
+        "memberName": "马凡",
+        "memberPinyin": "Ma Fan",
+        "teamId": 1002,
+        "teamName": "TEAM NII",
+        "groupId": 10,
+        "groupName": "SNH48"
+    },
+    "20001": {
+        "memberId": 63549,
+        "memberAvatar": "/mediasource/avatar/1508293871232PAsUxpZ1u7.jpg",
+        "memberName": "陈美君",
+        "memberPinyin": "Chen MeiJun",
+        "teamId": 1101,
+        "teamName": "TEAM B",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20003": {
+        "memberId": 63554,
+        "memberAvatar": "/mediasource/avatar/1508305843212cCUt098QS8.jpg",
+        "memberName": "段艺璇",
+        "memberPinyin": "Duan YiXuan",
+        "teamId": 1101,
+        "teamName": "TEAM B",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20004": {
+        "memberId": 63556,
+        "memberAvatar": "/mediasource/avatar/63556I0UPP2M16k.jpg",
+        "memberName": "冯雪莹",
+        "memberPinyin": "Feng XueYing",
+        "teamId": 1101,
+        "teamName": "TEAM B",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20005": {
+        "memberId": 327584,
+        "memberAvatar": "/mediasource/avatar/327584iCjn23QDAx.jpg",
+        "memberName": "胡博文",
+        "memberPinyin": "Hu BoWen",
+        "teamId": 1101,
+        "teamName": "TEAM B",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20006": {
+        "memberId": 63559,
+        "memberAvatar": "/mediasource/avatar/1508305934098akpPBL72j7.jpg",
+        "memberName": "胡晓慧",
+        "memberPinyin": "Hu XiaoHui",
+        "teamId": 1101,
+        "teamName": "TEAM B",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20007": {
+        "memberId": 327579,
+        "memberAvatar": "/mediasource/avatar/1508308730889Crtuo7eIi3.jpg",
+        "memberName": "刘姝贤",
+        "memberPinyin": "Liu ShuXian",
+        "teamId": 1101,
+        "teamName": "TEAM B",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20008": {
+        "memberId": 327578,
+        "memberAvatar": "/mediasource/avatar/1508308657248BcZNBXrTX1.jpg",
+        "memberName": "林溪荷",
+        "memberPinyin": "Lin XiHe",
+        "teamId": 1101,
+        "teamName": "TEAM B",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20009": {
+        "memberId": 327586,
+        "memberAvatar": "/mediasource/avatar/1508309250835M7Y17zdO9f.jpg",
+        "memberName": "牛聪聪",
+        "memberPinyin": "Niu CongCong",
+        "teamId": 1101,
+        "teamName": "TEAM B",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20010": {
+        "memberId": 327581,
+        "memberAvatar": "/mediasource/avatar/1508308875165CqB71FDr3h.jpg",
+        "memberName": "青钰雯",
+        "memberPinyin": "Qing YuWen",
+        "teamId": 1101,
+        "teamName": "TEAM B",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20011": {
+        "memberId": 327582,
+        "memberAvatar": "/mediasource/avatar/1508308957023050Gx19G5F.jpg",
+        "memberName": "孙姗",
+        "memberPinyin": "Sun Shan",
+        "teamId": 1101,
+        "teamName": "TEAM B",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20012": {
+        "memberId": 63568,
+        "memberAvatar": "/mediasource/avatar/14994008530542siEHkSEVZ.jpg",
+        "memberName": "宋思娴",
+        "memberPinyin": "Song SiXian",
+        "teamId": 1101,
+        "teamName": "TEAM B",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20013": {
+        "memberId": 63571,
+        "memberAvatar": "/mediasource/avatar/15083084548395O4XSfxy7c.jpg",
+        "memberName": "田姝丽",
+        "memberPinyin": "Tian ShuLi",
+        "teamId": 1101,
+        "teamName": "TEAM B",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20014": {
+        "memberId": 327583,
+        "memberAvatar": "/mediasource/avatar/327583uF0dZwxA2S.jpg",
+        "memberName": "文妍",
+        "memberPinyin": "Wen Yan",
+        "teamId": 1101,
+        "teamName": "TEAM B",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20015": {
+        "memberId": 407071,
+        "memberAvatar": "/mediasource/avatar/407071K0eX8D99rG.jpg",
+        "memberName": "吴月黎",
+        "memberPinyin": "Wu YueLi",
+        "teamId": 1101,
+        "teamName": "TEAM B",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20016": {
+        "memberId": 48998,
+        "memberAvatar": "/mediasource/avatar/48998.jpg",
+        "memberName": "徐佳丽",
+        "memberPinyin": "Xu JiaLi",
+        "teamId": 1101,
+        "teamName": "TEAM B",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20017": {
+        "memberId": 63573,
+        "memberAvatar": "/mediasource/avatar/1508308575654nZWH4ft5VS.jpg",
+        "memberName": "熊素君",
+        "memberPinyin": "Xiong SuJun",
+        "teamId": 1101,
+        "teamName": "TEAM B",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20018": {
+        "memberId": 327585,
+        "memberAvatar": "/mediasource/avatar/1508309171112EoGjaz4365.jpg",
+        "memberName": "夏越",
+        "memberPinyin": "Xia Yue",
+        "teamId": 1101,
+        "teamName": "TEAM B",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20019": {
+        "memberId": 6745,
+        "memberAvatar": "/mediasource/avatar/1498212916594iISiuFW90S.jpg",
+        "memberName": "闫明筠",
+        "memberPinyin": "Yan MingJun",
+        "teamId": 1101,
+        "teamName": "TEAM B",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20020": {
+        "memberId": 63578,
+        "memberAvatar": "/mediasource/avatar/63578.jpg",
+        "memberName": "张菡筱",
+        "memberPinyin": "Zhang HanXiao",
+        "teamId": 1101,
+        "teamName": "TEAM B",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20021": {
+        "memberId": 327580,
+        "memberAvatar": "/mediasource/avatar/15083087860595N6MVpJXvA.jpg",
+        "memberName": "张梦慧",
+        "memberPinyin": "Zhang MengHui",
+        "teamId": 1101,
+        "teamName": "TEAM B",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20022": {
+        "memberId": 327590,
+        "memberAvatar": "/mediasource/avatar/327590.jpg",
+        "memberName": "毕梦媛",
+        "memberPinyin": "Bi MengYuan",
+        "teamId": 1102,
+        "teamName": "TEAM E",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20023": {
+        "memberId": 327588,
+        "memberAvatar": "/mediasource/avatar/1508310214400c3u0F9NbVY.jpg",
+        "memberName": "陈姣荷",
+        "memberPinyin": "Chen JiaoHe",
+        "teamId": 1102,
+        "teamName": "TEAM E",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20024": {
+        "memberId": 327601,
+        "memberAvatar": "/mediasource/avatar/1508312916540jCLYe7GGfQ.jpg",
+        "memberName": "陈倩楠",
+        "memberPinyin": "Chen QianNan",
+        "teamId": 1102,
+        "teamName": "TEAM E",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20025": {
+        "memberId": 327587,
+        "memberAvatar": "/mediasource/avatar/15083098081778x9Uph2BT4.jpg",
+        "memberName": "冯思佳",
+        "memberPinyin": "Feng SiJia",
+        "teamId": 1102,
+        "teamName": "TEAM E",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20026": {
+        "memberId": 327599,
+        "memberAvatar": "/mediasource/avatar/327599.jpg",
+        "memberName": "林堃",
+        "memberPinyin": "Lin Kun",
+        "teamId": 1102,
+        "teamName": "TEAM E",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20027": {
+        "memberId": 407132,
+        "memberAvatar": "/mediasource/avatar/1508316863888hhyT4ul1Vi.jpg",
+        "memberName": "李娜",
+        "memberPinyin": "Li Na",
+        "teamId": 1102,
+        "teamName": "TEAM E",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20028": {
+        "memberId": 327602,
+        "memberAvatar": "/mediasource/avatar/1508313173115u7Fdo16548.jpg",
+        "memberName": "刘胜男",
+        "memberPinyin": "Liu ShenNan",
+        "teamId": 1102,
+        "teamName": "TEAM E",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20029": {
+        "memberId": 327593,
+        "memberAvatar": "/mediasource/avatar/327593thJswu5CrC.jpg",
+        "memberName": "李诗彦",
+        "memberPinyin": "Li ShiYan",
+        "teamId": 1102,
+        "teamName": "TEAM E",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20030": {
+        "memberId": 327594,
+        "memberAvatar": "/mediasource/avatar/1508311905035H228a3eULL.jpg",
+        "memberName": "李想",
+        "memberPinyin": "Li Xiang",
+        "teamId": 1102,
+        "teamName": "TEAM E",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20031": {
+        "memberId": 327589,
+        "memberAvatar": "/mediasource/avatar/1508310235253C8rT6z353O.jpg",
+        "memberName": "罗雪丽",
+        "memberPinyin": "Luo XueLi",
+        "teamId": 1102,
+        "teamName": "TEAM E",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20032": {
+        "memberId": 327592,
+        "memberAvatar": "/mediasource/avatar/1508310820393Y9Ab7H5C0j.jpg",
+        "memberName": "李媛媛",
+        "memberPinyin": "Li YuanYuan",
+        "teamId": 1102,
+        "teamName": "TEAM E",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20033": {
+        "memberId": 327591,
+        "memberAvatar": "/mediasource/avatar/15083104724360es0n7Os59.jpg",
+        "memberName": "李梓",
+        "memberPinyin": "Li Zi",
+        "teamId": 1102,
+        "teamName": "TEAM E",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20034": {
+        "memberId": 327596,
+        "memberAvatar": "/mediasource/avatar/1508312053235qL1LBP2AuU.jpg",
+        "memberName": "马玉灵",
+        "memberPinyin": "Ma YuLing",
+        "teamId": 1102,
+        "teamName": "TEAM E",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20035": {
+        "memberId": 327597,
+        "memberAvatar": "/mediasource/avatar/150831210825606kfY9b9WJ.jpg",
+        "memberName": "苏杉杉",
+        "memberPinyin": "Su ShanShan",
+        "teamId": 1102,
+        "teamName": "TEAM E",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20036": {
+        "memberId": 327600,
+        "memberAvatar": "/mediasource/avatar/150831280916830uer8xzU0.jpg",
+        "memberName": "顼凘炀",
+        "memberPinyin": "Xu SiYang",
+        "teamId": 1102,
+        "teamName": "TEAM E",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20037": {
+        "memberId": 407135,
+        "memberAvatar": "/mediasource/avatar/1508316973842J1xomCVlsb.jpg",
+        "memberName": "杨一帆",
+        "memberPinyin": "Yang YiFan",
+        "teamId": 1102,
+        "teamName": "TEAM E",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20038": {
+        "memberId": 327603,
+        "memberAvatar": "/mediasource/avatar/3276037LtOT8f0gc.jpg",
+        "memberName": "易妍倩",
+        "memberPinyin": "Yi YanQian",
+        "teamId": 1102,
+        "teamName": "TEAM E",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20039": {
+        "memberId": 327598,
+        "memberAvatar": "/mediasource/avatar/15083121739301DJAO83swD.jpg",
+        "memberName": "张笑盈",
+        "memberPinyin": "Zhang XiaoYing",
+        "teamId": 1102,
+        "teamName": "TEAM E",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20040": {
+        "memberId": 327595,
+        "memberAvatar": "/mediasource/avatar/1508311980562789CWmRUAx.jpg",
+        "memberName": "郑一凡",
+        "memberPinyin": "Zhen YiFan",
+        "teamId": 1102,
+        "teamName": "TEAM E",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20041": {
+        "memberId": 407101,
+        "memberAvatar": "/mediasource/avatar/1508313679384y68m9QVBz5.jpg",
+        "memberName": "陈雅钰",
+        "memberPinyin": "Chen YaYu",
+        "teamId": 1103,
+        "teamName": "TEAM J",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20042": {
+        "memberId": 407103,
+        "memberAvatar": "/mediasource/avatar/1508313738355pwgR0KF4Ml.jpg",
+        "memberName": "房蕾",
+        "memberPinyin": "Fang Lei",
+        "teamId": 1103,
+        "teamName": "TEAM J",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20043": {
+        "memberId": 407104,
+        "memberAvatar": "/mediasource/avatar/1508313811849o82T0Wydxt.jpg",
+        "memberName": "葛司琪",
+        "memberPinyin": "Ge SiQi",
+        "teamId": 1103,
+        "teamName": "TEAM J",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20044": {
+        "memberId": 407106,
+        "memberAvatar": "/mediasource/avatar/15083138913940nONSSBaH5.jpg",
+        "memberName": "黄恩茹",
+        "memberPinyin": "Huang EnRu",
+        "teamId": 1103,
+        "teamName": "TEAM J",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20045": {
+        "memberId": 407108,
+        "memberAvatar": "/mediasource/avatar/150831398075668t17h5333.jpg",
+        "memberName": "李泓瑶",
+        "memberPinyin": "Li HongYao",
+        "teamId": 1103,
+        "teamName": "TEAM J",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20046": {
+        "memberId": 407110,
+        "memberAvatar": "/mediasource/avatar/1508316250728D2770j47oi.jpg",
+        "memberName": "刘闲",
+        "memberPinyin": "Liu Xian ",
+        "teamId": 1103,
+        "teamName": "TEAM J",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20047": {
+        "memberId": 407112,
+        "memberAvatar": "/mediasource/avatar/1508316337199J4wnIZ8e78.jpg",
+        "memberName": "任心怡",
+        "memberPinyin": "Ren XinYi",
+        "teamId": 1103,
+        "teamName": "TEAM J",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20048": {
+        "memberId": 407114,
+        "memberAvatar": "/mediasource/avatar/1499679900652N6tjxX5wak.jpg",
+        "memberName": "任玥霖",
+        "memberPinyin": "Ren YueLin",
+        "teamId": 1103,
+        "teamName": "TEAM J",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20049": {
+        "memberId": 407118,
+        "memberAvatar": "/mediasource/avatar/40711835j3Dt3H07.jpg",
+        "memberName": "单习文",
+        "memberPinyin": "Shan XiWen ",
+        "teamId": 1103,
+        "teamName": "TEAM J",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20050": {
+        "memberId": 407119,
+        "memberAvatar": "/mediasource/avatar/1508316424223RZA8NRmAmB.jpg",
+        "memberName": "石羽莎",
+        "memberPinyin": "Shi YuSha",
+        "teamId": 1103,
+        "teamName": "TEAM J",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20051": {
+        "memberId": 407121,
+        "memberAvatar": "/mediasource/avatar/1508316490219R1D6x7KmAf.jpg",
+        "memberName": "孙语姗",
+        "memberPinyin": "Sun YuShan",
+        "teamId": 1103,
+        "teamName": "TEAM J",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20052": {
+        "memberId": 407168,
+        "memberAvatar": "/mediasource/avatar/1508317399377oV42MWFOA4.jpg",
+        "memberName": "王雨煊",
+        "memberPinyin": "Wang YuXuan",
+        "teamId": 1103,
+        "teamName": "TEAM J",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20053": {
+        "memberId": 444081,
+        "memberAvatar": "/mediasource/avatar/1508317467513n711qMwgLT.jpg",
+        "memberName": "许婉玉",
+        "memberPinyin": "Xu WanYu",
+        "teamId": 1103,
+        "teamName": "TEAM J",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20054": {
+        "memberId": 407124,
+        "memberAvatar": "/mediasource/avatar/15083165453803bjq6cjE8q.jpg",
+        "memberName": "叶苗苗",
+        "memberPinyin": "Ye MiaoMiao",
+        "teamId": 1103,
+        "teamName": "TEAM J",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20055": {
+        "memberId": 407126,
+        "memberAvatar": "/mediasource/avatar/1508316627649jzaOQpl7yV.jpg",
+        "memberName": "杨晔",
+        "memberPinyin": "Yang Ye",
+        "teamId": 1103,
+        "teamName": "TEAM J",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20056": {
+        "memberId": 407127,
+        "memberAvatar": "/mediasource/avatar/15083166999082ou6UEmg3m.jpg",
+        "memberName": "张怀瑾",
+        "memberPinyin": "Zhang HuaiJin",
+        "teamId": 1103,
+        "teamName": "TEAM J",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20057": {
+        "memberId": 407130,
+        "memberAvatar": "/mediasource/avatar/15083168059250X9Hse0715.jpg",
+        "memberName": "张韩紫陌",
+        "memberPinyin": "Zhang HanZiMo",
+        "teamId": 1103,
+        "teamName": "TEAM J",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20058": {
+        "memberId": 528094,
+        "memberAvatar": "/mediasource/avatar/1508317594250hMR111151M.jpg",
+        "memberName": "胡丽芝",
+        "memberPinyin": " Hu LiZhi",
+        "teamId": 1101,
+        "teamName": "TEAM B",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20059": {
+        "memberId": 528101,
+        "memberAvatar": "/mediasource/avatar/1498215399766qPE9IXb1Z8.jpg",
+        "memberName": "刘崇恬",
+        "memberPinyin": "Liu ChongTian",
+        "teamId": 1101,
+        "teamName": "TEAM B",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20060": {
+        "memberId": 528106,
+        "memberAvatar": "/mediasource/avatar/14982154303229juwxM229u.jpg",
+        "memberName": "李沐遥",
+        "memberPinyin": "Li MuYao",
+        "teamId": 1101,
+        "teamName": "TEAM B",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20061": {
+        "memberId": 528118,
+        "memberAvatar": "/mediasource/avatar/1508317988152mt9Of0922Z.jpg",
+        "memberName": "毛其羽",
+        "memberPinyin": "Mao QiYu",
+        "teamId": 1101,
+        "teamName": "TEAM B",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20062": {
+        "memberId": 528329,
+        "memberAvatar": "/mediasource/avatar/15083180398572F1PId2z3Z.jpg",
+        "memberName": "孙晓艳",
+        "memberPinyin": "Sun XiaoYan",
+        "teamId": 1101,
+        "teamName": "TEAM B",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20063": {
+        "memberId": 528330,
+        "memberAvatar": "/mediasource/avatar/1498215518616M6AUt1o67V.jpg",
+        "memberName": "郑依灵",
+        "memberPinyin": "Zheng YiLing",
+        "teamId": 1101,
+        "teamName": "TEAM B",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20064": {
+        "memberId": 528331,
+        "memberAvatar": "/mediasource/avatar/1508318151222zI8hZs9eX4.jpg",
+        "memberName": "黄子璇",
+        "memberPinyin": "Huang ZiXuan",
+        "teamId": 1102,
+        "teamName": "TEAM E",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20065": {
+        "memberId": 528332,
+        "memberAvatar": "/mediasource/avatar/149275261023492stV3BMyk.jpg",
+        "memberName": "李烨",
+        "memberPinyin": "Li Ye",
+        "teamId": 1102,
+        "teamName": "TEAM E",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20066": {
+        "memberId": 528333,
+        "memberAvatar": "/mediasource/avatar/1508318408684Je6qEQs2NO.jpg",
+        "memberName": "徐静",
+        "memberPinyin": "Xu Jing",
+        "teamId": 1102,
+        "teamName": "TEAM E",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20067": {
+        "memberId": 528334,
+        "memberAvatar": "/mediasource/avatar/15083184588592k43840t4v.jpg",
+        "memberName": "赵笛儿",
+        "memberPinyin": "Zhao DiEr ",
+        "teamId": 1102,
+        "teamName": "TEAM E",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20068": {
+        "memberId": 528335,
+        "memberAvatar": "/mediasource/avatar/15083185751862KlZN61XI7.jpg",
+        "memberName": "金锣赛",
+        "memberPinyin": " Jin LuoSai",
+        "teamId": 1103,
+        "teamName": "TEAM J",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20069": {
+        "memberId": 528336,
+        "memberAvatar": "/mediasource/avatar/1508318634487IUAw3G33t8.jpg",
+        "memberName": "兰昊",
+        "memberPinyin": "Lan Hao",
+        "teamId": 1103,
+        "teamName": "TEAM J",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20070": {
+        "memberId": 528337,
+        "memberAvatar": "/mediasource/avatar/1508318696176h442pW6Hhw.jpg",
+        "memberName": "刘一菲",
+        "memberPinyin": "Liu YiFei",
+        "teamId": 1103,
+        "teamName": "TEAM J",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20071": {
+        "memberId": 528339,
+        "memberAvatar": "/mediasource/avatar/1508318802071176x5qU728.jpg",
+        "memberName": "乔钰珂",
+        "memberPinyin": "Qiao YuKe",
+        "teamId": 1103,
+        "teamName": "TEAM J",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20072": {
+        "memberId": 528340,
+        "memberAvatar": "/mediasource/avatar/1492753112079U17Twf9261.jpg",
+        "memberName": "郑心雨",
+        "memberPinyin": "Zheng XinYu ",
+        "teamId": 1103,
+        "teamName": "TEAM J",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "20073": {
+        "memberId": 538697,
+        "memberAvatar": "/mediasource/avatar/1508318854277muqH9459Rs.jpg",
+        "memberName": "沈小爱",
+        "memberPinyin": "Shen XiaoAi",
+        "teamId": 1101,
+        "teamName": "TEAM B",
+        "groupId": 11,
+        "groupName": "BEJ48"
+    },
+    "30001": {
+        "memberId": 63548,
+        "memberAvatar": "/mediasource/avatar/15076053915332Z9LO0FOAO.jpg",
+        "memberName": "陈珂",
+        "memberPinyin": "Chen Ke",
+        "teamId": 1201,
+        "teamName": "TEAM G",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30002": {
+        "memberId": 63552,
+        "memberAvatar": "/mediasource/avatar/15076054307398a3smc0y86.jpg",
+        "memberName": "陈雨琪",
+        "memberPinyin": "Chen YuQi",
+        "teamId": 1201,
+        "teamName": "TEAM G",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30003": {
+        "memberId": 63553,
+        "memberAvatar": "/mediasource/avatar/15076054692646FRu6EyFs4.jpg",
+        "memberName": "杜雨微",
+        "memberPinyin": "Du YuWei",
+        "teamId": 1201,
+        "teamName": "TEAM G",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30004": {
+        "memberId": 63557,
+        "memberAvatar": "/mediasource/avatar/15076055247685p77t3wqn8.jpg",
+        "memberName": "高源婧",
+        "memberPinyin": "Gao YuanJing",
+        "teamId": 1201,
+        "teamName": "TEAM G",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30005": {
+        "memberId": 327557,
+        "memberAvatar": "/mediasource/avatar/3275572t47zLu8f9.jpg",
+        "memberName": "胡怡莹",
+        "memberPinyin": "Hu YiYing",
+        "teamId": 1201,
+        "teamName": "TEAM G",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30006": {
+        "memberId": 63564,
+        "memberAvatar": "/mediasource/avatar/15076056936685ak3ue8yzQ.jpg",
+        "memberName": "李沁洁",
+        "memberPinyin": "Li QinJie",
+        "teamId": 1201,
+        "teamName": "TEAM G",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30007": {
+        "memberId": 63562,
+        "memberAvatar": "/mediasource/avatar/1507605588081YSt4P22tT8.jpg",
+        "memberName": "林嘉佩",
+        "memberPinyin": "Lin JiaPei",
+        "teamId": 1201,
+        "teamName": "TEAM G",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30008": {
+        "memberId": 63563,
+        "memberAvatar": "/mediasource/avatar/15076056520747LkI57sbA7.jpg",
+        "memberName": "刘梦雅",
+        "memberPinyin": "Liu MengYa",
+        "teamId": 1201,
+        "teamName": "TEAM G",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30009": {
+        "memberId": 63565,
+        "memberAvatar": "/mediasource/avatar/1498792498227y8NG46yShl.jpg",
+        "memberName": "刘筱筱",
+        "memberPinyin": "Liu XiaoXiao",
+        "teamId": 1201,
+        "teamName": "TEAM G",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30010": {
+        "memberId": 327558,
+        "memberAvatar": "/mediasource/avatar/1507606221549au6dMAy7FQ.jpg",
+        "memberName": "罗寒月",
+        "memberPinyin": "Luo HanYue",
+        "teamId": 1201,
+        "teamName": "TEAM G",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30012": {
+        "memberId": 63572,
+        "memberAvatar": "/mediasource/avatar/1507605745307f6tZ2UOM2M.jpg",
+        "memberName": "谢蕾蕾",
+        "memberPinyin": "Xie LeiLei",
+        "teamId": 1201,
+        "teamName": "TEAM G",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30013": {
+        "memberId": 63576,
+        "memberAvatar": "/mediasource/avatar/1507605785364IOr836Ba43.jpg",
+        "memberName": "阳青颖",
+        "memberPinyin": "Yang QingYing",
+        "teamId": 1201,
+        "teamName": "TEAM G",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30014": {
+        "memberId": 63577,
+        "memberAvatar": "/mediasource/avatar/1507605823013hQVkWdDYV5.jpg",
+        "memberName": "曾艾佳",
+        "memberPinyin": "Zeng AiJia",
+        "teamId": 1201,
+        "teamName": "TEAM G",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30015": {
+        "memberId": 63580,
+        "memberAvatar": "/mediasource/avatar/1507606170711U8i1y6labn.jpg",
+        "memberName": "张凯祺",
+        "memberPinyin": "Zhang KaiQi",
+        "teamId": 1201,
+        "teamName": "TEAM G",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30016": {
+        "memberId": 327560,
+        "memberAvatar": "/mediasource/avatar/15076062587043elkjH4Ij8.jpg",
+        "memberName": "张琼予",
+        "memberPinyin": "Zhang QiongYu",
+        "teamId": 1201,
+        "teamName": "TEAM G",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30017": {
+        "memberId": 327561,
+        "memberAvatar": "/mediasource/avatar/3275611B5fP7kw5a.jpg",
+        "memberName": "周倩玉",
+        "memberPinyin": "Zhou QianYu",
+        "teamId": 1201,
+        "teamName": "TEAM G",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30019": {
+        "memberId": 327562,
+        "memberAvatar": "/mediasource/avatar/1507606781288812uH2I0Pz.jpg",
+        "memberName": "陈慧婧",
+        "memberPinyin": "Chen HuiJing",
+        "teamId": 1202,
+        "teamName": "TEAM NIII",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30020": {
+        "memberId": 327563,
+        "memberAvatar": "/mediasource/avatar/1507606813674xrLY4GpYe7.jpg",
+        "memberName": "陈楠茜",
+        "memberPinyin": "Chen NanXi",
+        "teamId": 1202,
+        "teamName": "TEAM NIII",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30021": {
+        "memberId": 327564,
+        "memberAvatar": "/mediasource/avatar/1507606849673Yrws5s90oA.jpg",
+        "memberName": "陈欣妤",
+        "memberPinyin": "Chen XinYu",
+        "teamId": 1202,
+        "teamName": "TEAM NIII",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30022": {
+        "memberId": 327565,
+        "memberAvatar": "/mediasource/avatar/15076068861895O20h5CO9h.jpg",
+        "memberName": "冯嘉希",
+        "memberPinyin": "Feng JiaXi",
+        "teamId": 1202,
+        "teamName": "TEAM NIII",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30023": {
+        "memberId": 327566,
+        "memberAvatar": "/mediasource/avatar/1507606920016J8YK1L3K7x.jpg",
+        "memberName": "洪静雯",
+        "memberPinyin": "Hong JingWen",
+        "teamId": 1202,
+        "teamName": "TEAM NIII",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30024": {
+        "memberId": 327567,
+        "memberAvatar": "/mediasource/avatar/15076069636580S708D11P9.jpg",
+        "memberName": "刘力菲",
+        "memberPinyin": "Liu LiFei",
+        "teamId": 1202,
+        "teamName": "TEAM NIII",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30025": {
+        "memberId": 327568,
+        "memberAvatar": "/mediasource/avatar/1507607005475P7Kp5684LG.jpg",
+        "memberName": "刘倩倩",
+        "memberPinyin": "Liu QianQian",
+        "teamId": 1202,
+        "teamName": "TEAM NIII",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30026": {
+        "memberId": 327569,
+        "memberAvatar": "/mediasource/avatar/1507607050135NHWA6t6F9E.jpg",
+        "memberName": "卢静",
+        "memberPinyin": "Lu Jing",
+        "teamId": 1202,
+        "teamName": "TEAM NIII",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30027": {
+        "memberId": 327570,
+        "memberAvatar": "/mediasource/avatar/1507607143877k8RLxGH5X5.jpg",
+        "memberName": "孙馨",
+        "memberPinyin": "Sun Xin",
+        "teamId": 1202,
+        "teamName": "TEAM NIII",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30028": {
+        "memberId": 327571,
+        "memberAvatar": "/mediasource/avatar/1507607481231Rt94cgJm87.jpg",
+        "memberName": "唐莉佳",
+        "memberPinyin": "Tang LiJia",
+        "teamId": 1202,
+        "teamName": "TEAM NIII",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30029": {
+        "memberId": 327572,
+        "memberAvatar": "/mediasource/avatar/15076075310641LIsmqGAm9.jpg",
+        "memberName": "冼燊楠",
+        "memberPinyin": "Xian ShenNan",
+        "teamId": 1202,
+        "teamName": "TEAM NIII",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30030": {
+        "memberId": 327573,
+        "memberAvatar": "/mediasource/avatar/1507607568900LPxP94zZcA.jpg",
+        "memberName": "肖文铃",
+        "memberPinyin": "Xiao WenLing",
+        "teamId": 1202,
+        "teamName": "TEAM NIII",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30031": {
+        "memberId": 327574,
+        "memberAvatar": "/mediasource/avatar/1507607610035633i2K9j9h.jpg",
+        "memberName": "熊心瑶",
+        "memberPinyin": "Xiong XinYao",
+        "teamId": 1202,
+        "teamName": "TEAM NIII",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30032": {
+        "memberId": 327575,
+        "memberAvatar": "/mediasource/avatar/150760765540708vu2xRguH.jpg",
+        "memberName": "郑丹妮",
+        "memberPinyin": "Zheng DanNi",
+        "teamId": 1202,
+        "teamName": "TEAM NIII",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30033": {
+        "memberId": 327576,
+        "memberAvatar": "/mediasource/avatar/1507607701573kpyW69096r.jpg",
+        "memberName": "左嘉欣",
+        "memberPinyin": "Zuo JiaXin",
+        "teamId": 1202,
+        "teamName": "TEAM NIII",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30034": {
+        "memberId": 327577,
+        "memberAvatar": "/mediasource/avatar/15076077437678m27o9x2Kv.jpg",
+        "memberName": "左婧媛",
+        "memberPinyin": "Zuo JingYuan",
+        "teamId": 1202,
+        "teamName": "TEAM NIII",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30035": {
+        "memberId": 410177,
+        "memberAvatar": "/mediasource/avatar/4101774B4h2M7wgo.jpg",
+        "memberName": "向芸",
+        "memberPinyin": "Xiang Yun",
+        "teamId": 1201,
+        "teamName": "TEAM G",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30036": {
+        "memberId": 410175,
+        "memberAvatar": "/mediasource/avatar/1507606127567N2U3213K1j.jpg",
+        "memberName": "黄黎蓉",
+        "memberPinyin": "Huang LiRong",
+        "teamId": 1201,
+        "teamName": "TEAM G",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30038": {
+        "memberId": 410180,
+        "memberAvatar": "/mediasource/avatar/1507606749477hd4K8A0c4O.jpg",
+        "memberName": "李伊虹",
+        "memberPinyin": "Li YiHong",
+        "teamId": 1202,
+        "teamName": "TEAM NIII",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30039": {
+        "memberId": 417318,
+        "memberAvatar": "/mediasource/avatar/1507608223356454aba9KbR.jpg",
+        "memberName": "刘嘉怡",
+        "memberPinyin": "Liu JiaYi",
+        "teamId": 1203,
+        "teamName": "TEAM Z",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30040": {
+        "memberId": 417317,
+        "memberAvatar": "/mediasource/avatar/1507608188498Cw8f7qOKxC.jpg",
+        "memberName": "杜秋霖",
+        "memberPinyin": "Du QiuLin",
+        "teamId": 1203,
+        "teamName": "TEAM Z",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30041": {
+        "memberId": 417329,
+        "memberAvatar": "/mediasource/avatar/15076085120405335H3Tg2b.jpg",
+        "memberName": "王秭歆",
+        "memberPinyin": "Wang ZiXin",
+        "teamId": 1203,
+        "teamName": "TEAM Z",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30042": {
+        "memberId": 417326,
+        "memberAvatar": "/mediasource/avatar/150760846457907Wb46ZZr4.jpg",
+        "memberName": "王偲越",
+        "memberPinyin": "Wang SiYue",
+        "teamId": 1203,
+        "teamName": "TEAM Z",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30043": {
+        "memberId": 417321,
+        "memberAvatar": "/mediasource/avatar/1507608288914XG43NBNySx.jpg",
+        "memberName": "农燕萍",
+        "memberPinyin": "Nong YanPing",
+        "teamId": 1203,
+        "teamName": "TEAM Z",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30044": {
+        "memberId": 417316,
+        "memberAvatar": "/mediasource/avatar/15076081554205Sz3Ut3m4i.jpg",
+        "memberName": "代玲",
+        "memberPinyin": "Dai Ling",
+        "teamId": 1203,
+        "teamName": "TEAM Z",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30045": {
+        "memberId": 417333,
+        "memberAvatar": "/mediasource/avatar/14987934756928CoprZFYy5.jpg",
+        "memberName": "张心雨",
+        "memberPinyin": "Zhang XinYu",
+        "teamId": 1203,
+        "teamName": "TEAM Z",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30046": {
+        "memberId": 417331,
+        "memberAvatar": "/mediasource/avatar/1507608640130NA2Emk9lQw.jpg",
+        "memberName": "杨媛媛",
+        "memberPinyin": "Yang YuanYuan",
+        "teamId": 1203,
+        "teamName": "TEAM Z",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30047": {
+        "memberId": 417330,
+        "memberAvatar": "/mediasource/avatar/150760860635578n8jU3zx5.jpg",
+        "memberName": "杨可璐",
+        "memberPinyin": "Yang KeLu",
+        "teamId": 1203,
+        "teamName": "TEAM Z",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30048": {
+        "memberId": 417311,
+        "memberAvatar": "/mediasource/avatar/15076080936104PaXl7yibS.jpg",
+        "memberName": "陈桂君",
+        "memberPinyin": "Chen GuiJun",
+        "teamId": 1203,
+        "teamName": "TEAM Z",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30049": {
+        "memberId": 417328,
+        "memberAvatar": "/mediasource/avatar/1498793349296hOvvw2AM50.jpg",
+        "memberName": "王盈",
+        "memberPinyin": "Wang Ying",
+        "teamId": 1203,
+        "teamName": "TEAM Z",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30050": {
+        "memberId": 417324,
+        "memberAvatar": "/mediasource/avatar/1507608327379466sOGUyxk.jpg",
+        "memberName": "王翠菲",
+        "memberPinyin": "Wang CuiFei",
+        "teamId": 1203,
+        "teamName": "TEAM Z",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30051": {
+        "memberId": 417335,
+        "memberAvatar": "/mediasource/avatar/1507608725902CSn45KzB92.jpg",
+        "memberName": "赵欣雨",
+        "memberPinyin": "Zhao XinYu",
+        "teamId": 1203,
+        "teamName": "TEAM Z",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30052": {
+        "memberId": 417315,
+        "memberAvatar": "/mediasource/avatar/1507608121965b3hVTL6FPo.jpg",
+        "memberName": "陈梓荧",
+        "memberPinyin": "Chen ZiYing",
+        "teamId": 1203,
+        "teamName": "TEAM Z",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30053": {
+        "memberId": 417336,
+        "memberAvatar": "/mediasource/avatar/1498793490019eEhDK1E4eR.jpg",
+        "memberName": "赵翊民",
+        "memberPinyin": "Zhao YiMin",
+        "teamId": 1203,
+        "teamName": "TEAM Z",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30054": {
+        "memberId": 417320,
+        "memberAvatar": "/mediasource/avatar/1507608255036fv0jOv2OnT.jpg",
+        "memberName": "龙亦瑞",
+        "memberPinyin": "Long YiRui",
+        "teamId": 1203,
+        "teamName": "TEAM Z",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30055": {
+        "memberId": 417325,
+        "memberAvatar": "/mediasource/avatar/15076084196619VGC54g1H9.jpg",
+        "memberName": "王炯义",
+        "memberPinyin": "Wang JiongYi",
+        "teamId": 1203,
+        "teamName": "TEAM Z",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30056": {
+        "memberId": 417332,
+        "memberAvatar": "/mediasource/avatar/1507608679759Uf258064WM.jpg",
+        "memberName": "于珊珊",
+        "memberPinyin": "Yu ShanShan",
+        "teamId": 1203,
+        "teamName": "TEAM Z",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30057": {
+        "memberId": 530431,
+        "memberAvatar": "/mediasource/avatar/15076062921772I46iE1s60.jpg",
+        "memberName": "陈佳莹",
+        "memberPinyin": "Chen JiaYing",
+        "teamId": 1201,
+        "teamName": "TEAM G",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30058": {
+        "memberId": 530433,
+        "memberAvatar": "/mediasource/avatar/1507605870024pcU9eDD4bo.jpg",
+        "memberName": "陈俊宏",
+        "memberPinyin": "Chen JunHong",
+        "teamId": 1201,
+        "teamName": "TEAM G",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30059": {
+        "memberId": 530434,
+        "memberAvatar": "/mediasource/avatar/1498793532026KmqHBLGhTM.jpg",
+        "memberName": "陈乐添",
+        "memberPinyin": "Chen LeTian",
+        "teamId": 1201,
+        "teamName": "TEAM G",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30060": {
+        "memberId": 530435,
+        "memberAvatar": "/mediasource/avatar/1507605924947iATCq43SY8.jpg",
+        "memberName": "程一心",
+        "memberPinyin": "Cheng YiXin",
+        "teamId": 1201,
+        "teamName": "TEAM G",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30061": {
+        "memberId": 530436,
+        "memberAvatar": "/mediasource/avatar/1507605963811eRtYuhB2Fl.jpg",
+        "memberName": "方晓瑜",
+        "memberPinyin": "Fang XiaoYu",
+        "teamId": 1201,
+        "teamName": "TEAM G",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30062": {
+        "memberId": 530439,
+        "memberAvatar": "/mediasource/avatar/1507606342712D5MS1Vkiif.jpg",
+        "memberName": "高雪逸",
+        "memberPinyin": "Gao XueYi",
+        "teamId": 1202,
+        "teamName": "TEAM NIII",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30063": {
+        "memberId": 530440,
+        "memberAvatar": "/mediasource/avatar/1507608008632mvxBs9r68b.jpg",
+        "memberName": "赖俊亦",
+        "memberPinyin": "Lai JunYi",
+        "teamId": 1203,
+        "teamName": "TEAM Z",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30065": {
+        "memberId": 530443,
+        "memberAvatar": "/mediasource/avatar/1507606012420uas232Q5sZ.jpg",
+        "memberName": "梁可",
+        "memberPinyin": "Liang Ke",
+        "teamId": 1201,
+        "teamName": "TEAM G",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30066": {
+        "memberId": 530444,
+        "memberAvatar": "/mediasource/avatar/1498793654026m7rSATrit7.jpg",
+        "memberName": "刘小末",
+        "memberPinyin": "Liu XiaoMo",
+        "teamId": 1201,
+        "teamName": "TEAM G",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30067": {
+        "memberId": 530446,
+        "memberAvatar": "/mediasource/avatar/150760661874893tep29AD3.jpg",
+        "memberName": "唐诗怡",
+        "memberPinyin": "Tang ShiYi",
+        "teamId": 1202,
+        "teamName": "TEAM NIII",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30068": {
+        "memberId": 530447,
+        "memberAvatar": "/mediasource/avatar/1507606661835S4u4U7f52T.jpg",
+        "memberName": "谢艾琳",
+        "memberPinyin": "Xie AiLin",
+        "teamId": 1202,
+        "teamName": "TEAM NIII",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30069": {
+        "memberId": 530450,
+        "memberAvatar": "/mediasource/avatar/15076080633896Z0G3MEFZ9.jpg",
+        "memberName": "张秋怡",
+        "memberPinyin": "Zhang QiuYi",
+        "teamId": 1203,
+        "teamName": "TEAM Z",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30070": {
+        "memberId": 530451,
+        "memberAvatar": "/mediasource/avatar/150760671420799Q2lk7NM1.jpg",
+        "memberName": "郑悦",
+        "memberPinyin": "Zheng Yue",
+        "teamId": 1202,
+        "teamName": "TEAM NIII",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30071": {
+        "memberId": 530452,
+        "memberAvatar": "/mediasource/avatar/1507606081721EkS7VfzW6H.jpg",
+        "memberName": "朱怡欣",
+        "memberPinyin": "Zhu YiXin",
+        "teamId": 1201,
+        "teamName": "TEAM G",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30072": {
+        "memberId": 607507,
+        "memberAvatar": "/mediasource/avatar/1507691912009WYUndb0i0L.jpg",
+        "memberName": "毕瑞珊",
+        "memberPinyin": "Bi RuiShan",
+        "teamId": 1207,
+        "teamName": "偶像研究计划",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30073": {
+        "memberId": 607510,
+        "memberAvatar": "/mediasource/avatar/1507692427186V4zhdwtxVQ.jpg",
+        "memberName": "程子钰",
+        "memberPinyin": "Cheng Zi Yu",
+        "teamId": 1207,
+        "teamName": "偶像研究计划",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30074": {
+        "memberId": 607511,
+        "memberAvatar": "/mediasource/avatar/1507692611685mLBKYzr118.jpg",
+        "memberName": "邓惠恩",
+        "memberPinyin": "Deng Huien",
+        "teamId": 1207,
+        "teamName": "偶像研究计划",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30075": {
+        "memberId": 607513,
+        "memberAvatar": "/mediasource/avatar/1507692985972JE27oTJBlz.jpg",
+        "memberName": "符冰冰",
+        "memberPinyin": "Fu Bingbing",
+        "teamId": 1207,
+        "teamName": "偶像研究计划",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30076": {
+        "memberId": 607515,
+        "memberAvatar": "/mediasource/avatar/150769312955465752JoyLM.jpg",
+        "memberName": "黄楚茵",
+        "memberPinyin": "Huang ChuYin",
+        "teamId": 1207,
+        "teamName": "偶像研究计划",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30077": {
+        "memberId": 607516,
+        "memberAvatar": "/mediasource/avatar/15076937780931794jVT780.jpg",
+        "memberName": "何梦瑶",
+        "memberPinyin": "He MengYao",
+        "teamId": 1207,
+        "teamName": "偶像研究计划",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30078": {
+        "memberId": 607521,
+        "memberAvatar": "/mediasource/avatar/1507693950850TX6O5D0lAI.jpg",
+        "memberName": "罗可嘉",
+        "memberPinyin": "LuoKeJia",
+        "teamId": 1207,
+        "teamName": "偶像研究计划",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30079": {
+        "memberId": 601302,
+        "memberAvatar": "/mediasource/avatar/1507694507560f00Qh62G8d.jpg",
+        "memberName": "梁婉琳",
+        "memberPinyin": "Liang WanLin",
+        "teamId": 1207,
+        "teamName": "偶像研究计划",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30080": {
+        "memberId": 607523,
+        "memberAvatar": "/mediasource/avatar/15076947419997602nREheL.jpg",
+        "memberName": "林芝",
+        "memberPinyin": "Lin Zhi",
+        "teamId": 1207,
+        "teamName": "偶像研究计划",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30081": {
+        "memberId": 607524,
+        "memberAvatar": "/mediasource/avatar/150769493544614TmGESFn2.jpg",
+        "memberName": "汪慕远",
+        "memberPinyin": "WangMuYuan",
+        "teamId": 1207,
+        "teamName": "偶像研究计划",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30082": {
+        "memberId": 607591,
+        "memberAvatar": "/mediasource/avatar/1507702093456Sm9nSUvaZ6.jpg",
+        "memberName": "吴羽霏",
+        "memberPinyin": "Wu YuFei",
+        "teamId": 1207,
+        "teamName": "偶像研究计划",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30083": {
+        "memberId": 607592,
+        "memberAvatar": "/mediasource/avatar/150770223042892a09m01Kh.jpg",
+        "memberName": "叶晓梦",
+        "memberPinyin": "Ye XiaoMeng",
+        "teamId": 1207,
+        "teamName": "偶像研究计划",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "30084": {
+        "memberId": 607594,
+        "memberAvatar": "/mediasource/avatar/15077023576776R6bniF79R.jpg",
+        "memberName": "余芷媛",
+        "memberPinyin": "Yu ZhiYuan",
+        "teamId": 1207,
+        "teamName": "偶像研究计划",
+        "groupId": 12,
+        "groupName": "GNZ48"
+    },
+    "40001": {
+        "memberId": 460000,
+        "memberAvatar": "/mediasource/avatar/1507635005254p2fo8iosh7.jpg",
+        "memberName": "陈婧文",
+        "memberPinyin": "Chen JingWen",
+        "teamId": 1301,
+        "teamName": "TEAM SIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40002": {
+        "memberId": 460003,
+        "memberAvatar": "/mediasource/avatar/1507634967501D9t0oLmuab.jpg",
+        "memberName": "冯译莹",
+        "memberPinyin": "Feng YiYing",
+        "teamId": 1301,
+        "teamName": "TEAM SIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40003": {
+        "memberId": 460002,
+        "memberAvatar": "/mediasource/avatar/15076349819801cpo7NPfBL.jpg",
+        "memberName": "付紫琪",
+        "memberPinyin": "Fu ZiQi",
+        "teamId": 1301,
+        "teamName": "TEAM SIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40004": {
+        "memberId": 459996,
+        "memberAvatar": "/mediasource/avatar/1507635074802VJorNnEZYv.jpg",
+        "memberName": "关思雨",
+        "memberPinyin": "Guan SiYu",
+        "teamId": 1301,
+        "teamName": "TEAM SIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40005": {
+        "memberId": 459999,
+        "memberAvatar": "/mediasource/avatar/1507635034049q416k1306k.jpg",
+        "memberName": "韩家乐",
+        "memberPinyin": "Han JiaLei",
+        "teamId": 1301,
+        "teamName": "TEAM SIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40006": {
+        "memberId": 458335,
+        "memberAvatar": "/mediasource/avatar/15076353101799gN70I5438.jpg",
+        "memberName": "李慧",
+        "memberPinyin": "Li Hui",
+        "teamId": 1301,
+        "teamName": "TEAM SIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40007": {
+        "memberId": 459993,
+        "memberAvatar": "/mediasource/avatar/15076351507351CL6IN98vX.jpg",
+        "memberName": "刘娇",
+        "memberPinyin": "Liu Jiao",
+        "teamId": 1301,
+        "teamName": "TEAM SIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40008": {
+        "memberId": 459992,
+        "memberAvatar": "/mediasource/avatar/1509081922082wE04R1Q13l.jpg",
+        "memberName": "刘娜",
+        "memberPinyin": "Liu Na",
+        "teamId": 1301,
+        "teamName": "TEAM SIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40009": {
+        "memberId": 459991,
+        "memberAvatar": "/mediasource/avatar/1507635204467PJH08K3B4V.jpg",
+        "memberName": "卢天惠",
+        "memberPinyin": "Lu TianHui",
+        "teamId": 1301,
+        "teamName": "TEAM SIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40010": {
+        "memberId": 459995,
+        "memberAvatar": "/mediasource/avatar/150763510935180dr2NHxTT.jpg",
+        "memberName": "赖梓惜",
+        "memberPinyin": "La ZiXi",
+        "teamId": 1301,
+        "teamName": "TEAM SIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40011": {
+        "memberId": 458358,
+        "memberAvatar": "/mediasource/avatar/15076352871967YmU68X55U.jpg",
+        "memberName": "南翎璞",
+        "memberPinyin": "Nan lingpu",
+        "teamId": 1301,
+        "teamName": "TEAM SIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40012": {
+        "memberId": 459994,
+        "memberAvatar": "/mediasource/avatar/1507635126067H987tH4p3o.jpg",
+        "memberName": "秦玺",
+        "memberPinyin": "Qin Xi",
+        "teamId": 1301,
+        "teamName": "TEAM SIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40013": {
+        "memberId": 460007,
+        "memberAvatar": "/mediasource/avatar/15076348999411UcgtJ4gR5.jpg",
+        "memberName": "孙敏",
+        "memberPinyin": "Sun Min",
+        "teamId": 1301,
+        "teamName": "TEAM SIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40014": {
+        "memberId": 459989,
+        "memberAvatar": "/mediasource/avatar/1507635230346bU4Uc0mHgI.jpg",
+        "memberName": "王诗蒙",
+        "memberPinyin": "Wang Shimeng",
+        "teamId": 1301,
+        "teamName": "TEAM SIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40015": {
+        "memberId": 459988,
+        "memberAvatar": "/mediasource/avatar/15076352673191IA9IqYgnc.jpg",
+        "memberName": "徐静妍",
+        "memberPinyin": "Xu Jingyan ",
+        "teamId": 1301,
+        "teamName": "TEAM SIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40016": {
+        "memberId": 460004,
+        "memberAvatar": "/mediasource/avatar/1507634952884zq0jyp2t6X.jpg",
+        "memberName": "杨允涵",
+        "memberPinyin": "Yang YunHan",
+        "teamId": 1301,
+        "teamName": "TEAM SIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40017": {
+        "memberId": 460005,
+        "memberAvatar": "/mediasource/avatar/1507634923362Yj18S91ezS.jpg",
+        "memberName": "赵佳蕊",
+        "memberPinyin": "Zhao JiaRui",
+        "teamId": 1301,
+        "teamName": "TEAM SIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40018": {
+        "memberId": 459997,
+        "memberAvatar": "/mediasource/avatar/1507635050171vHcy057VSK.jpg",
+        "memberName": "朱燕",
+        "memberPinyin": "Zhu Yan",
+        "teamId": 1301,
+        "teamName": "TEAM SIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40019": {
+        "memberId": 480656,
+        "memberAvatar": "/mediasource/avatar/1507634884359ZODW31lynz.jpg",
+        "memberName": "董思佳",
+        "memberPinyin": "Dong Sijia",
+        "teamId": 1302,
+        "teamName": "TEAM HIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40020": {
+        "memberId": 480665,
+        "memberAvatar": "/mediasource/avatar/15076348631750p7H0BGl8V.jpg",
+        "memberName": "高志娴",
+        "memberPinyin": "Gao Zhixian",
+        "teamId": 1302,
+        "teamName": "TEAM HIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40021": {
+        "memberId": 480666,
+        "memberAvatar": "/mediasource/avatar/1507634845820875067on7M.jpg",
+        "memberName": "寇承希",
+        "memberPinyin": "Kou Chenxi",
+        "teamId": 1302,
+        "teamName": "TEAM HIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40022": {
+        "memberId": 480667,
+        "memberAvatar": "/mediasource/avatar/1507634819942LwTEmUiN39.jpg",
+        "memberName": "刘静晗",
+        "memberPinyin": "Liu Jinghan",
+        "teamId": 1302,
+        "teamName": "TEAM HIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40023": {
+        "memberId": 480668,
+        "memberAvatar": "/mediasource/avatar/15076347949688omEJTP192.jpg",
+        "memberName": "李晴",
+        "memberPinyin": "Li  Qing",
+        "teamId": 1302,
+        "teamName": "TEAM HIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40024": {
+        "memberId": 480670,
+        "memberAvatar": "/mediasource/avatar/1507634778734YI9Z6yMQi6.jpg",
+        "memberName": "李熙凝",
+        "memberPinyin": "Li Xining",
+        "teamId": 1302,
+        "teamName": "TEAM HIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40025": {
+        "memberId": 480671,
+        "memberAvatar": "/mediasource/avatar/1507634757925xN108b723Q.jpg",
+        "memberName": "曲悦萌",
+        "memberPinyin": "Qu Yuemeng",
+        "teamId": 1302,
+        "teamName": "TEAM HIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40026": {
+        "memberId": 480672,
+        "memberAvatar": "/mediasource/avatar/1507634731407yv0Nqk3Trv.jpg",
+        "memberName": "任雨情",
+        "memberPinyin": "Ren Yuqing",
+        "teamId": 1302,
+        "teamName": "TEAM HIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40027": {
+        "memberId": 480673,
+        "memberAvatar": "/mediasource/avatar/1507634715460qtyNAYMhjw.jpg",
+        "memberName": "徐斐然",
+        "memberPinyin": "Xu Feiran",
+        "teamId": 1302,
+        "teamName": "TEAM HIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40028": {
+        "memberId": 480674,
+        "memberAvatar": "/mediasource/avatar/15076346965324Ks0brABYy.jpg",
+        "memberName": "杨肖",
+        "memberPinyin": "Yang Xiao",
+        "teamId": 1302,
+        "teamName": "TEAM HIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40029": {
+        "memberId": 480675,
+        "memberAvatar": "/mediasource/avatar/15076346806587f01Z2jwv7.jpg",
+        "memberName": "张爱静",
+        "memberPinyin": "Zhang Aijing",
+        "teamId": 1302,
+        "teamName": "TEAM HIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40030": {
+        "memberId": 480676,
+        "memberAvatar": "/mediasource/avatar/150763466408927lB1D07YW.jpg",
+        "memberName": "郑洁丽",
+        "memberPinyin": "Zheng Jieli",
+        "teamId": 1302,
+        "teamName": "TEAM HIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40031": {
+        "memberId": 480678,
+        "memberAvatar": "/mediasource/avatar/1507634648429U8ArTdufWx.jpg",
+        "memberName": "张儒轶",
+        "memberPinyin": "Zhang Ruyi",
+        "teamId": 1302,
+        "teamName": "TEAM HIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40032": {
+        "memberId": 480679,
+        "memberAvatar": "/mediasource/avatar/1507634628880O7rbmd9yHm.jpg",
+        "memberName": "张云梦",
+        "memberPinyin": "Zhang Yunmeng",
+        "teamId": 1302,
+        "teamName": "TEAM HIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40033": {
+        "memberId": 480680,
+        "memberAvatar": "/mediasource/avatar/4806805JV69s435X.jpg",
+        "memberName": "张幼柠",
+        "memberPinyin": "Zhang Youning",
+        "teamId": 1302,
+        "teamName": "TEAM HIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40035": {
+        "memberId": 286978,
+        "memberAvatar": "/mediasource/avatar/15076353247531Vj3e1MDNm.jpg",
+        "memberName": "王金铭",
+        "memberPinyin": "Wang JinMing",
+        "teamId": 1302,
+        "teamName": "TEAM HIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40036": {
+        "memberId": 529991,
+        "memberAvatar": "/mediasource/avatar/1507634611307g2ycZ5HY9o.jpg",
+        "memberName": "陈奕君",
+        "memberPinyin": "chenyijun",
+        "teamId": 1301,
+        "teamName": "TEAM SIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40037": {
+        "memberId": 530378,
+        "memberAvatar": "/mediasource/avatar/1507634595584z673V4go6U.jpg",
+        "memberName": "菅瑞静",
+        "memberPinyin": "Jian Rui Jing",
+        "teamId": 1301,
+        "teamName": "TEAM SIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40038": {
+        "memberId": 530380,
+        "memberAvatar": "/mediasource/avatar/1507634577625e66dP8u1iw.jpg",
+        "memberName": "叶锦童",
+        "memberPinyin": "Ye Jin Tong",
+        "teamId": 1301,
+        "teamName": "TEAM SIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40039": {
+        "memberId": 530381,
+        "memberAvatar": "/mediasource/avatar/1507634561358MbyeKV84zZ.jpg",
+        "memberName": "臧聪",
+        "memberPinyin": "Zang Cong",
+        "teamId": 1301,
+        "teamName": "TEAM SIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40040": {
+        "memberId": 530383,
+        "memberAvatar": "/mediasource/avatar/150763454360059Z8yTiytJ.jpg",
+        "memberName": "郑诗琪",
+        "memberPinyin": "Zheng Shi Qi",
+        "teamId": 1301,
+        "teamName": "TEAM SIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40041": {
+        "memberId": 530384,
+        "memberAvatar": "/mediasource/avatar/15076345265133KD4oNLD13.jpg",
+        "memberName": "方诗涵",
+        "memberPinyin": "Fang Shi Han",
+        "teamId": 1302,
+        "teamName": "TEAM HIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40042": {
+        "memberId": 530385,
+        "memberAvatar": "/mediasource/avatar/1507634503528XBh39IQurz.jpg",
+        "memberName": "高崇",
+        "memberPinyin": "Gao Chong",
+        "teamId": 1302,
+        "teamName": "TEAM HIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40043": {
+        "memberId": 530386,
+        "memberAvatar": "/mediasource/avatar/1507634489085Kb35jfY5Pw.jpg",
+        "memberName": "龚梦婷",
+        "memberPinyin": "Gong Meng Ting",
+        "teamId": 1302,
+        "teamName": "TEAM HIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40044": {
+        "memberId": 530387,
+        "memberAvatar": "/mediasource/avatar/1507634470156MEfB1vhk1n.jpg",
+        "memberName": "逯芳竹",
+        "memberPinyin": "Lu Fang Zhu",
+        "teamId": 1302,
+        "teamName": "TEAM HIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40045": {
+        "memberId": 530388,
+        "memberAvatar": "/mediasource/avatar/15076344469190ZZ706J98c.jpg",
+        "memberName": "王菲妍",
+        "memberPinyin": "Wang Fei Yan",
+        "teamId": 1302,
+        "teamName": "TEAM HIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40046": {
+        "memberId": 530390,
+        "memberAvatar": "/mediasource/avatar/1507634423818BQ1HHotjZr.jpg",
+        "memberName": "王睿琦",
+        "memberPinyin": "Wang Rui Qi",
+        "teamId": 1302,
+        "teamName": "TEAM HIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40047": {
+        "memberId": 530392,
+        "memberAvatar": "/mediasource/avatar/150763440112363y92MqX65.jpg",
+        "memberName": "张羽涵",
+        "memberPinyin": "Zhang Yu Han",
+        "teamId": 1302,
+        "teamName": "TEAM HIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40048": {
+        "memberId": 608995,
+        "memberAvatar": "/mediasource/avatar/1507971819439c6gWkfk10V.jpg",
+        "memberName": "李彬玉",
+        "memberPinyin": "Li  Binyu",
+        "teamId": 1301,
+        "teamName": "TEAM SIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40049": {
+        "memberId": 608997,
+        "memberAvatar": "/mediasource/avatar/15079720624612uTX779XVE.jpg",
+        "memberName": "司珀琳",
+        "memberPinyin": "Si PoLin",
+        "teamId": 1301,
+        "teamName": "TEAM SIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40050": {
+        "memberId": 609001,
+        "memberAvatar": "/mediasource/avatar/15079721922523M9fhd7577.jpg",
+        "memberName": "周佳怡",
+        "memberPinyin": "Zhou JiaYi",
+        "teamId": 1301,
+        "teamName": "TEAM SIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "40051": {
+        "memberId": 609002,
+        "memberAvatar": "/mediasource/avatar/15079723829951Z8mjJKsr7.jpg",
+        "memberName": "赵天杨",
+        "memberPinyin": "Zhao TianYang",
+        "teamId": 1301,
+        "teamName": "TEAM SIII",
+        "groupId": 13,
+        "groupName": "SHY48"
+    },
+    "50001": {
+        "memberId": 614528,
+        "memberAvatar": "/mediasource/avatar/1509340634745v4v1tOX280.jpg",
+        "memberName": "柏欣妤",
+        "memberPinyin": "BaiXinYu",
+        "teamId": 1401,
+        "teamName": "TEAM C",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50002": {
+        "memberId": 614725,
+        "memberAvatar": "/mediasource/avatar/150941893249633K3euXt3I.jpg",
+        "memberName": "李恩锐",
+        "memberPinyin": "LiEnRui",
+        "teamId": 1401,
+        "teamName": "TEAM C",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50003": {
+        "memberId": 614727,
+        "memberAvatar": "/mediasource/avatar/15094198161705q1CW64818.jpg",
+        "memberName": "李姗姗",
+        "memberPinyin": "Li ShanShan",
+        "teamId": 1401,
+        "teamName": "TEAM C",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50004": {
+        "memberId": 614728,
+        "memberAvatar": "/mediasource/avatar/15094198977402E6r1p8Gx0.jpg",
+        "memberName": "雷宇霄",
+        "memberPinyin": "Lei YuXiao",
+        "teamId": 1401,
+        "teamName": "TEAM C",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50005": {
+        "memberId": 614729,
+        "memberAvatar": "/mediasource/avatar/1509419951289230eJb25e8.jpg",
+        "memberName": "李泽亚",
+        "memberPinyin": "Li ZeYa",
+        "teamId": 1401,
+        "teamName": "TEAM C",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50006": {
+        "memberId": 614730,
+        "memberAvatar": "/mediasource/avatar/150942014602376k4pcvglj.jpg",
+        "memberName": "孟玥",
+        "memberPinyin": "Meng Yue",
+        "teamId": 1401,
+        "teamName": "TEAM C",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50007": {
+        "memberId": 614731,
+        "memberAvatar": "/mediasource/avatar/1509420292272lri2iP8nnl.jpg",
+        "memberName": "毛译晗",
+        "memberPinyin": "Mao YiHan",
+        "teamId": 1401,
+        "teamName": "TEAM C",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50008": {
+        "memberId": 614733,
+        "memberAvatar": "/mediasource/avatar/1509420333717PFPTAN7bPt.jpg",
+        "memberName": "谯玉珍",
+        "memberPinyin": "Qiao YuZhen",
+        "teamId": 1401,
+        "teamName": "TEAM C",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50009": {
+        "memberId": 614734,
+        "memberAvatar": "/mediasource/avatar/1509420387474ihbi5Y1L5l.jpg",
+        "memberName": "冉蔚",
+        "memberPinyin": "Ran Wei",
+        "teamId": 1401,
+        "teamName": "TEAM C",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50010": {
+        "memberId": 614735,
+        "memberAvatar": "/mediasource/avatar/1509420434295Ufm09Z7LMM.jpg",
+        "memberName": "田倩兰",
+        "memberPinyin": "Tian QianLan",
+        "teamId": 1401,
+        "teamName": "TEAM C",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50011": {
+        "memberId": 614736,
+        "memberAvatar": "/mediasource/avatar/1509420487572H9CUc63t39.jpg",
+        "memberName": "陶菀瑞",
+        "memberPinyin": "Tao WanRui",
+        "teamId": 1401,
+        "teamName": "TEAM C",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50012": {
+        "memberId": 614738,
+        "memberAvatar": "/mediasource/avatar/15094205403752YO2b6mHrh.jpg",
+        "memberName": "伍寒琪",
+        "memberPinyin": "Wu HanQi",
+        "teamId": 1401,
+        "teamName": "TEAM C",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50013": {
+        "memberId": 614739,
+        "memberAvatar": "/mediasource/avatar/1509420674491D21FpyaSCZ.jpg",
+        "memberName": "王梦竹",
+        "memberPinyin": "Wang MengZhu",
+        "teamId": 1401,
+        "teamName": "TEAM C",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50014": {
+        "memberId": 614740,
+        "memberAvatar": "/mediasource/avatar/1509420715247wsf8C02cex.jpg",
+        "memberName": "王娱博",
+        "memberPinyin": "Wang YuBo",
+        "teamId": 1401,
+        "teamName": "TEAM C",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50016": {
+        "memberId": 614741,
+        "memberAvatar": "/mediasource/avatar/1509420757146r0NlJbClE4.jpg",
+        "memberName": "曾佳",
+        "memberPinyin": "Zeng Jia",
+        "teamId": 1401,
+        "teamName": "TEAM C",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50017": {
+        "memberId": 614742,
+        "memberAvatar": "/mediasource/avatar/1509420792540A1zKl18283.jpg",
+        "memberName": "左欣",
+        "memberPinyin": "Zuo Xin",
+        "teamId": 1401,
+        "teamName": "TEAM C",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50018": {
+        "memberId": 614743,
+        "memberAvatar": "/mediasource/avatar/1509420834626jfy7xUt2r7.jpg",
+        "memberName": "周源",
+        "memberPinyin": "Zhou Yuan",
+        "teamId": 1401,
+        "teamName": "TEAM C",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50019": {
+        "memberId": 614749,
+        "memberAvatar": "/mediasource/avatar/1509422939740sF7exBG7dc.jpg",
+        "memberName": "艾芷亦",
+        "memberPinyin": "Ai ZhiYi",
+        "teamId": 1402,
+        "teamName": "TEAM K",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50020": {
+        "memberId": 614750,
+        "memberAvatar": "/mediasource/avatar/1509422980474RRo51ZMtiz.jpg",
+        "memberName": "邓倩",
+        "memberPinyin": "Deng Qian",
+        "teamId": 1402,
+        "teamName": "TEAM K",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50021": {
+        "memberId": 614752,
+        "memberAvatar": "/mediasource/avatar/1509423017613Uu0QuVr213.jpg",
+        "memberName": "樊曦月",
+        "memberPinyin": "Fan XiYue",
+        "teamId": 1402,
+        "teamName": "TEAM K",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50022": {
+        "memberId": 614753,
+        "memberAvatar": "/mediasource/avatar/15094230556236Bk7nzUPv5.jpg",
+        "memberName": "郝婧怡",
+        "memberPinyin": "Hao JingYi",
+        "teamId": 1402,
+        "teamName": "TEAM K",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50023": {
+        "memberId": 614754,
+        "memberAvatar": "/mediasource/avatar/1509423093557yD2Oo61E97.jpg",
+        "memberName": "韩林芹",
+        "memberPinyin": "Han LinQin",
+        "teamId": 1402,
+        "teamName": "TEAM K",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50024": {
+        "memberId": 614755,
+        "memberAvatar": "/mediasource/avatar/1509423135729PTnIP995c7.jpg",
+        "memberName": "黄琬璎",
+        "memberPinyin": "Huang WanYing",
+        "teamId": 1402,
+        "teamName": "TEAM K",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50026": {
+        "memberId": 614756,
+        "memberAvatar": "/mediasource/avatar/1509423173948yz1QXau2Fi.jpg",
+        "memberName": "林舒晴",
+        "memberPinyin": "Lin ShuQing",
+        "teamId": 1402,
+        "teamName": "TEAM K",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50027": {
+        "memberId": 614757,
+        "memberAvatar": "/mediasource/avatar/15094232159329qm4HFqOi2.jpg",
+        "memberName": "李瑜璇",
+        "memberPinyin": "Li YuXuan",
+        "teamId": 1402,
+        "teamName": "TEAM K",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50028": {
+        "memberId": 614758,
+        "memberAvatar": "/mediasource/avatar/1509423274296o9eMe04d59.jpg",
+        "memberName": "石勤",
+        "memberPinyin": "Shi Qin",
+        "teamId": 1402,
+        "teamName": "TEAM K",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50029": {
+        "memberId": 614760,
+        "memberAvatar": "/mediasource/avatar/1509423314137hfkOz0Y8xA.jpg",
+        "memberName": "田祯臻",
+        "memberPinyin": "Tian ZhenZhen",
+        "teamId": 1402,
+        "teamName": "TEAM K",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50030": {
+        "memberId": 614776,
+        "memberAvatar": "/mediasource/avatar/1509425499519eE5J993ZZ2.jpg",
+        "memberName": "吴晶晶",
+        "memberPinyin": "Wu JingJing",
+        "teamId": 1402,
+        "teamName": "TEAM K",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50031": {
+        "memberId": 49006,
+        "memberAvatar": "/mediasource/avatar/1509680332770Pbrke7h0fN.jpg",
+        "memberName": "王露皎",
+        "memberPinyin": "Wang LuJiao",
+        "teamId": 1402,
+        "teamName": "TEAM K",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50032": {
+        "memberId": 614761,
+        "memberAvatar": "/mediasource/avatar/1509423354243nuxt1VE587.jpg",
+        "memberName": "吴学雨",
+        "memberPinyin": "Wu XueYu",
+        "teamId": 1402,
+        "teamName": "TEAM K",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50033": {
+        "memberId": 614762,
+        "memberAvatar": "/mediasource/avatar/1509423408470xeAMg3C6HS.jpg",
+        "memberName": "夏文倩",
+        "memberPinyin": "Xia WenQian",
+        "teamId": 1402,
+        "teamName": "TEAM K",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50034": {
+        "memberId": 614770,
+        "memberAvatar": "/mediasource/avatar/1509425172498nit9EvAq6P.jpg",
+        "memberName": "章宇阳",
+        "memberPinyin": "Zhang YuYang",
+        "teamId": 1402,
+        "teamName": "TEAM K",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50035": {
+        "memberId": 614772,
+        "memberAvatar": "/mediasource/avatar/15094252959202OVcLwIN6p.jpg",
+        "memberName": "郑阳莹",
+        "memberPinyin": "Zheng YangYing",
+        "teamId": 1402,
+        "teamName": "TEAM K",
+        "groupId": 14,
+        "groupName": "CKG48"
+    },
+    "50036": {
+        "memberId": 614773,
+        "memberAvatar": "/mediasource/avatar/15094253361690TgjXKqfnT.jpg",
+        "memberName": "赵泽慧",
+        "memberPinyin": "Zhao ZeHui",
+        "teamId": 1402,
+        "teamName": "TEAM K",
+        "groupId": 14,
+        "groupName": "CKG48"
+    }
+}

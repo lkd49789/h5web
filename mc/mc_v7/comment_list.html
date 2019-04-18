@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>MC话题你来定</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/comment_list.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="tip">
+      <img src="images/tip.png"/>
+      <!-- <a href="###" class="help">查看详细规则</a> -->
+  </div>
+  <div class="wrapper">
+    <div class="menu">
+        <ol>
+          <li class="active">本周话题</li>
+          <li>过往话题</li>
+        </ol>
+    </div>
+    <!--本周话题-->
+    <section class="content">
+        <div class="top_hint">
+          <p>解锁你好奇的问题</p>
+        </div>
+        <ul class="comlist" id="vue-topiclist">
+          <template v-for="mc in topics" track-by="$index"> 
+              <li class="mui-table-view-cell" topicId="{{mc.topicId}}" @click="setLike(mc)">
+                    <span class="words c{{mc.hasUnlocked | haslock mc.isRelive}}">{{mc.keyWords[0][0]}}</span>
+                    <span class="words c{{mc.hasUnlocked | haslock mc.isRelive}}">{{mc.keyWords[1][0]}}</span>
+                    <span class="words c{{mc.hasUnlocked | haslock mc.isRelive}}">{{mc.keyWords[2][0]}}</span>
+                    <span class="c{{mc.hasUnlocked | haslock mc.isRelive}} lock">
+                        <img src="{{mc.hasUnlocked | AvataLock  mc.isRelive}}"/>
+                        <p class="s{{mc.hasUnlocked  | haslock mc.isRelive}}">{{mc.parseCount}}</p>
+                    </span>
+              </li>
+            </template>
+            <!-- <li class="mui-table-view-cell" topicId="{{mc.topicId}}" @click="setLike(mc)">
+                    <span class="words c0">关键字</span>
+                    <span class="words c1">关键字</span>
+                    <span class="words c1">关键字</span>
+                    <span class="lock  c0">
+                        <img src="images/lock0.png"/>
+                        <p class="s0">525</p>
+                    </span>
+              </li> -->
+        </ul>
+        
+        <div class="tip-warning">
+            <img src="images/icon-1.png"/>
+            <p>本周该队暂无公演</p>
+        </div>
+        <div class="last-time">我要提交话题</div>
+    </section>
+
+    <!--过往话题-->
+    <section class="content content-old" style="display:none;">
+      <div class="mui-content">
+        <div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="mui-table-view mui-table-view-chevron">
+                <!--数据列表-->
+                <template v-for="histroymc in mcHistroyTopic" track-by="$index"> 
+                      <section>
+                          <input type="hidden" class="lastime" value="{{histroymc.lastTime}}">
+                          <p class="title">{{histroymc.mcStartTime}}{{histroymc.mcTitle}}使用话题:</p>
+                          <div class="content-choose">
+                              <ul>
+                                 <!--  <li v-for="mc in topics">{{mc.words}}</li> -->
+                                  <li v-for="mc in histroymc.mcHistroyTopic">
+                                    <span class="user-tx" >
+                                        <img src="{{mc.avatar | Avata}}">
+                                    </span>
+                                    <span class="mc-info">
+                                        <span class="user-info">{{mc.nickName}}<span>Lv{{mc.level}}</span></span>
+                                        <p>{{mc.title}}</p>
+                                    </span>
+
+                                  </li>
+                                  <!-- <li>
+                                    <span class="user-tx">
+                                        <img src="images/tx.png">
+                                    </span>
+                                    <span class="mc-info">
+                                        <span class="user-info">用户昵称<span>Lv3</span></span>
+                                        <p>测试测试测试测试测试测试测试测试测试测试测试测试测试测试</p>
+                                    </span>
+                                  </li>
+                                  <li>
+                                    <span class="user-tx">
+                                        <img src="images/tx.png">
+                                    </span>
+                                    <span class="mc-info">
+                                        <span class="user-info">用户昵称<span>Lv3</span></span>
+                                        <p>测试测试测试测试测试测试测试测试测试测试测试测试测试测试</p>
+                                    </span>
+                                  </li> -->
+                              </ul>
+                          </div>
+                      </section>
+                  </template>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!--<div id="wrapper">
+            <div id="scroller">
+              <div id="pullDown">
+                <span class="pullDownIcon"></span><span class="pullDownLabel"></span>
+              </div>
+              <div id="thelist" class="zixunlist">
+                  <template v-for="histroymc in mcHistroyTopic" track-by="$index"> 
+                      <section>
+                          <input type="hidden" class="lastime" value="{{histroymc.lastTime}}">
+                          <p class="title">{{histroymc.mcStartTime}}{{histroymc.mcTitle}}公演已入围话题:</p>
+                          <div class="content-choose">
+                              <ul>
+                                  <li v-for="mc in histroymc.mcHistroyTopic">
+                                    <span class="user-tx">
+                                        <img src="{{mc.avatar | Avata}}">
+                                    </span>
+                                    <span class="mc-info">
+                                        <span class="user-info">{{mc.nickName}}<span>Lv{{mc.level}}</span></span>
+                                        <p>{{mc.title}}</p>
+                                    </span>
+
+                                  </li>
+                                  <li>
+                                    <span class="user-tx">
+                                        <img src="images/tx.png">
+                                    </span>
+                                    <span class="mc-info">
+                                        <span class="user-info">用户昵称<span>Lv3</span></span>
+                                        <p>测试测试测试测试测试测试测试测试测试测试测试测试测试测试</p>
+                                    </span>
+                                  </li>
+                                  <li>
+                                    <span class="user-tx">
+                                        <img src="images/tx.png">
+                                    </span>
+                                    <span class="mc-info">
+                                        <span class="user-info">用户昵称<span>Lv3</span></span>
+                                        <p>测试测试测试测试测试测试测试测试测试测试测试测试测试测试</p>
+                                    </span>
+                                  </li>
+                              </ul>
+                          </div>
+                      </section>
+                  </template>
+              </div>
+              
+              
+              <div id="pullUp">
+                <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+              </div>
+            
+            </div>
+          </div>
+          -->
+    </section>
+	</div>
+
+  <script src="../../common/js/jquery.min.js"></script>
+  
+  <script src="js/config.js"></script>
+  <script src="js/vue.js"></script>
+  <script src="js/topic.js"></script>
+  <script src="js/comment_list.js"></script>
+
+</body>
+</html>

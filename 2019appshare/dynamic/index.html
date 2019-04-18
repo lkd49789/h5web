@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>口袋48－帖子分享</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+	<meta http-equiv="Cache-Control" content="max-age=0">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<link rel="stylesheet" href="../../common/css/common_mobile_v1.css">	
+	<link rel="stylesheet" href="../css/downloadBanner.css">	
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<div class="download-up"></div>
+	<section class="wrapper" v-cloak>
+		<!-- 帖子详情 -->
+		<div class="tiezi-box">
+			<div class="member-info">
+				<div class="photo">
+					<img v-bind:src="infoData.postsInfo.user.avatar | imgpath">
+				</div>
+				<div class="info">
+					<p>{{infoData.postsInfo.user.nickname}}的留言板<!-- <img v-bind:src="infoData.postsInfo.user.teamLogo | imgpath" --></p> 
+					<p>{{infoData.postsInfo.createAt | formatData}},    {{infoData.postsInfo.viewCount}}人看过</p> 
+				</div>
+				
+				<span class="like-box" v-on:click="gotoDownLoad()">关注</span>
+			</div>
+			<div class="tiezi-info" v-html="infoData.postsInfo.postContent">
+				
+			</div>
+		</div>
+		<!-- 评论 -->
+		<div class="com_list" style="display:none;">
+			<p>评论（3）</p>
+			<ul>
+			     <li>
+			     	<div class="list-top">
+				     	<div class="list-top-left">
+				     		<img src="images/thumb.jpg">
+				     	</div>
+			            <div class="list-top-mid">
+			                <p>昵称</p>
+			                <p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+			            </div>
+			            <div class="list-top-right">
+			            	<img src="images/like_icon.png">
+			            	<span>10000</span>
+			            </div>
+		            </div>
+		            <div class="list-bottom">
+		            	<span>3楼</span><span>38分钟前</span><span v-on:click="gotoDownLoad()" class="gotoPocket48">回复TA</span>
+		            	<div class="reply">
+		            		<p>昵称昵称昵称：<span>回复回复回复回复回复回复回复回复回复回复回复回复回复回复回复回复回复回复回复回复</span></p>
+		            		<p>昵称昵称昵称：<span>回复回复回复回复回复回复回复回复回复回复回复回复回复回复回复回复回复回复回复回复</span></p>
+		            		<div v-on:click="gotoDownLoad()">在口袋48 APP中查看所有22条评论 ></div>
+		            	</div>
+		            </div>
+			    </li>
+			    <li>
+			     	<div class="list-top">
+				     	<div class="list-top-left">
+				     		<img src="images/thumb.jpg">
+				     	</div>
+			            <div class="list-top-mid">
+			                <p>昵称</p>
+			                <p>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+			            </div>
+			            <div class="list-top-right">
+			            	<img src="images/like_icon.png">
+			            	<span>10000</span>
+			            </div>
+		            </div>
+		            <div class="list-bottom">
+		            	<span>3楼</span><span>38分钟前</span><span v-on:click="gotoDownLoad()" class="gotoPocket48">回复TA</span>
+		            	<div class="reply">
+		            		<p>昵称昵称昵称：<span>回复回复回复回复回复回复回复回复回复回复回复回复回复回复回复回复回复回复回复回复</span></p>
+		            		<p>昵称昵称昵称：<span>回复回复回复回复回复回复回复回复回复回复回复回复回复回复回复回复回复回复回复回复</span></p>
+		            		<div v-on:click="gotoDownLoad()">在口袋48 APP中查看所有22条评论 ></div>
+		            	</div>
+		            </div>
+			    </li>
+			</ul>
+			<span>打开口袋48 APP查看全部2258条评论</span>
+		</div>
+		<!-- 推荐帖子 -->
+		<div class="tj-tiezi" style="display:none;">
+			<p>帖子推荐</p>
+			<div>
+				<ul>
+					<li>
+						<div class="thumb-top">
+							<img src="images/item-1.jpg">
+							<img src="../images/icon-music.png">
+						</div>
+						<p>林楠生日公演暨总决拉票公演回顾：赤心所向 好在...</p>
+						<div class="thumb-bottom">
+							<img src="images/thumb.jpg">
+							<span>昵称昵称</span>
+							<p><img src="../images/icon-hot.png"><span>8989</span></p>
+						</div>
+					</li>
+					<li>
+						<div class="thumb-top">
+							<img src="images/item-1.jpg">
+							<img src="../images/icon-music.png">
+						</div>
+						<p>林楠生日公演暨总决拉票公演回顾：赤心所向 好在...</p>
+						<div class="thumb-bottom">
+							<img src="images/thumb.jpg">
+							<span>昵称昵称</span>
+							<p><img src="../images/icon-hot.png"><span>8989</span></p>
+						</div>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<div class="thumb-top">
+							<img src="images/item-1.jpg">
+							<img src="../images/icon-music.png">
+						</div>
+						<p>林楠生日公演暨总决拉票公演回顾：赤心所向 好在...</p>
+						<div class="thumb-bottom">
+							<img src="images/thumb.jpg">
+							<span>昵称昵称</span>
+							<p><img src="../images/icon-hot.png"><span>8989</span></p>
+						</div>
+					</li>
+					<li>
+						<div class="thumb-top">
+							<img src="images/item-1.jpg">
+							<img src="../images/icon-music.png">
+						</div>
+						<p>林楠生日公演暨总决拉票公演回顾：赤心所向 好在...</p>
+						<div class="thumb-bottom">
+							<img src="images/thumb.jpg">
+							<span>昵称昵称</span>
+							<p><img src="../images/icon-hot.png"><span>8989</span></p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	
+	<div class="download-down"></div>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="../../common/js/vue.js"></script>
+<script src="../../common/js/common_v1.js"></script>
+<script src="../js/downloadBottom.js"></script>
+<script src="../js/config.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+</html>

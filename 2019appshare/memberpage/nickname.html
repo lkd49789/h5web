@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>修改昵称</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="x5-fullscreen" content="true">
+	<meta name="full-screen" content="yes">
+	<link href="css/common.css" rel="stylesheet"/>
+	<style type="text/css">
+		*{margin:0;padding: 0;}
+		html,body{width: 100%;height: 100%;}
+		body{background-color:#f6f6f6;}
+		em{font-style: normal;}
+		.tit{font-size: 1rem;color:#808080;margin:0;padding:15px 4%;}
+		::-webkit-input-placeholder { /* WebKit browsers */
+		    color: #c4c4c4;
+		}
+		:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		    color: #c4c4c4;
+		}
+		::-moz-placeholder { /* Mozilla Firefox 19+ */
+		    color: #c4c4c4;
+		}
+		:-ms-input-placeholder { /* Internet Explorer 10+ */
+		    color: #c4c4c4;
+		}
+		.inputbox{width: 85%;height: 3.5rem;position: relative;padding-right: 15%;border:1px solid #e8e8e8;border-left: none;border-right: none;background-color:#fff;}
+		.nikename{color:#000;font-size: 1.2rem;height: 3.5rem;padding-left: 4%;width: 96%;border:none;outline: none;}
+		.inputbox span{position: absolute;font-size: 1.2rem;color:#c4c4c4;right:4%;top: 0.9rem;}
+		.completebtn,.comebackbtn{background-color: #fff;border:1px solid #e8e8e8;border-left: none;border-right: none;color:#5c6bc2;font-size: 1.3rem;width:100%;height:3.5rem;margin-top: 30px;}
+		.comebackbtn{margin-top: 10px;}
+	</style>
+</head>
+<body>
+	<p class="tit">请填写新的昵称</p>
+	<div class="inputbox">
+		<input type="text" name="name" placeholder="" maxlength="10" class="nikename">
+		<span><em class="dnum">0</em>/10</span>
+	</div>
+	<button class="completebtn">完成</button>
+	<button class="comebackbtn">返回</button>
+</body>
+<script src="https://h5.48.cn/common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/common.js"></script>
+<script src="js/config.js" ></script>
+<script src="js/main.js" ></script>
+<script>
+	$('.nikename').attr('placeholder',localStorage.getItem("userNikename"));
+	$('.inputbox .nikename').bind('input',function(){//编辑限制150字
+	    checkLength(10,this,$('.dnum')); 
+	});
+
+	function checkLength(num,which,obj) { //编辑限制10字
+	    var maxChars = num;
+	    if (which.value.length > maxChars){
+	        which.value = which.value.substring(0,maxChars);
+	        return false;
+	    }else{
+	        var curr = which.value.length; 
+	        obj.html( curr.toString() );
+	        return true;
+	    }
+	}
+
+	$('.completebtn').click(function(){
+		if($(".nikename").val() == ''){
+			main.alert("请填写新的昵称!");
+			return false;
+		}
+		main.modifyNickname($(".nikename").val(),function(dt){
+			if(dt.status==200){
+				if(GetQueryString('from') == 'usercenter'){//是否从用户个人中心来
+					main.hrefTo("userCenter.html");
+				}
+			}else{
+				main.alert(dt.message);
+			}
+		})
+	})
+	$('.comebackbtn').click(function(){
+		main.hrefTo("userCenter.html");
+	})
+</script>
+</html>

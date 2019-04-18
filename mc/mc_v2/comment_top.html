@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>已入围话题</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+    <style type="text/css">
+        .top_hint{height: auto;line-height: 1.5rem;padding: 5px 0;}
+        ul.comlist li{height: auto;padding-top:10px;position: relative;padding:20px 10px;}
+        ul.comlist li span{max-width: 30%;display: inline-block;vertical-align: middle;padding: 5px 10px;border-radius: 5px;}
+        .words{color: #fff;}
+        
+        
+        ul.comlist li div p{color: #000;font-size: 1rem;margin-bottom: 5px;}
+        ul.comlist li div{}
+        ul.comlist li div div{color: #666;font-size: .7rem;border-bottom:1px solid #ccc;padding-bottom: 10px;}
+        
+        
+
+        section{border-bottom: 1px solid #ccc;padding: 2rem 0;}
+        
+    </style>
+</head>
+<body>
+
+  <div class="mui-content">
+  
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-pull-left nav_back_btn" href="###"><span class="nav_back"></span>返回</a>
+		    <h1 class="mui-title">已入围话题</h1>
+		    <a class="mui-pull-right help" href="###">帮助</a>
+		</header>
+    
+    <div class="top_hint">
+      <p>每场公演当天10:00<br>获得解锁次数最多的10条MC入围</p>
+    </div>
+        
+    <ul class="comlist" id="vue-topiclist">
+      <template v-for="mc in topics" track-by="$index"> 
+          <li class="mui-table-view-cell">
+              <div>
+                  <p>{{mc.title}}</p>
+                  <div>公演时间：{{mc.showTime | MCTime}}</div>
+              </div>
+                <template v-for="top in mc.topicList" track-by="$index"> 
+                    <section>
+                        <span class="words c{{top.keyWords[0][1]}}">{{top.keyWords[0][0]}}</span>
+                        <span class="words c{{top.keyWords[1][1]}}">{{top.keyWords[1][0]}}</span>
+                        <span class="words c{{top.keyWords[2][1]}}">{{top.keyWords[2][0]}}</span>
+                    </section>
+                </template>
+          </li>
+        </template>
+    </ul>
+    <div class="tip-warning">
+        <img src="images/icon-1.png"/>
+        <p>暂无内容</p>
+        
+    </div>
+	</div>
+  <script src="http://h5.snh48.com/common/js/jquery.min.js"></script>
+  <script src="js/vue.js"></script>
+  <script src="js/topic.js"></script>
+
+  <script>
+    
+    var topiclistVM = new Vue({
+      el: '#vue-topiclist',
+      data: {
+        topics : []
+      }
+    });
+    
+    $(function () {
+        
+        var toplist = mcTopic.topList(function(topiclist){
+          console.log(JSON.stringify(topiclist));
+          topiclistVM.topics = topiclist;
+
+          if(topiclist.length == 0) $(".tip").show()
+        }, function(msg){
+          mcTopic.muiAlert(msg)
+        });
+
+    });
+  </script>  
+
+</body>
+</html>

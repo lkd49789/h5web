@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>实时榜</title>
+    <link href="../../common/css/common.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/realtime.css">
+</head>
+<body>
+    <div id='app'>
+        <div class="realtime">
+            <div class="realtime_top" v-cloak v-for='(item,index) in itemList' :key='index' v-if='item.stickersMemberList'>
+                <p>
+                    <img class="title_img" :src="'img-speak/page/forecast_title'+item.proId+'.png'" :alt="item.project">
+                </p>
+                <div class="realtime_list" v-for='(idol,ind) in item.stickersMemberList' :key='ind'>
+                    <div class="realtime_list_left">
+                        <div class="headWrap">
+                            <img class='realtime_list_left_img' :src="idol.avatar" alt="头像">
+                        </div>
+                        <div class='realtime_list_left_name' v-text='idol.nicker'></div>
+                    </div>
+                    <div class='realtime_list_right'>
+                        <img v-for='(tags,i) in idol.dataSportStickerList' :key='i' :src="tags.path" alt="贴纸">
+                    </div>
+                </div>
+                <p class='line' v-if='index+1 <  itemList.length && itemList[index+1].stickersMemberList'><img src="img-speak/page/realtime_line.jpg" alt=""></p>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="realtime_bottom">
+            <p><img class="title_img" src="img-speak/page/realtime_title.png" alt=""></p>
+            <div class="realtime_list"></div>
+            <div class="realtime_list"></div>
+            <div class="realtime_list"></div>
+        </div> -->
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<script src="../../common/js/vue.js"></script>
+<script src="../../common/js/common_v1.js"></script>
+<!-- <script src='https://cdn.bootcss.com/vue/2.6.10/vue.js'></script> -->
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script>
+    var vm=new Vue({
+        el:'#app',
+        data:{
+            itemList:[]
+        },
+        created () {
+            let  that=this;
+            that.itemList=[];
+            main.getSoleTags(2,function(data){
+                if(data.status==200){
+                    // vm.itemList = data.content.stickerInfoList.filter(function(item){ item.stickersMemberList});
+                    $.each(data.content.stickerInfoList,function(key,value){
+                        if(value.stickersMemberList){
+                           that.itemList.push(value) 
+                        }
+                    })
+                }else{
+                    alert(data.message)
+                }
+            })
+        }
+    })
+</script>
+</html>

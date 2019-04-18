@@ -1,0 +1,22 @@
+body{
+    background-color: #f6f6f6;
+    text-align: left;
+}
+[v-cloak]{
+    display: none;
+}
+
+video{
+    width: 100%;
+    height: auto;
+}
+.title{text-align: center;}
+.title h1{text-align: left;}
+.title span{color: #fff; background-color: #ccc;border-radius: 15px;padding: .5rem 20%;    display: inline-block;}
+.vid{/*background-color: #fff;*/}
+.video-list h1 span{float: right;color: #847afa;text-decoration: underline;}
+.video-list {text-align: left;background-color: #fff;padding: 3%;margin-top: .5rem;}
+
+.video-list li{width: 47%;display: inline-block;position: relative;text-align: left;margin: 2% 0;}
+.video-list li:nth-child(even){float: right;}
+.video-list li img{width: 100%;border-radius: 10px;}

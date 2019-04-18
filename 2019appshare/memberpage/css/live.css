@@ -1,0 +1,217 @@
+*{margin:0;padding: 0;}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+body{
+	background-color: #f6f6f6;
+	position: relative;
+}
+
+/*memberList*/
+.icon em{
+	width: 5px;
+    height: 5px;
+    background-color: #ff4848;
+    border-radius: 3px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 3px;
+    margin-top: -2px;
+}
+.icon{
+	position: absolute;
+	font-size: .8rem;
+	padding: 0 5px;
+	right: 5px;
+	top: 5px;
+	color: #fff;
+	background-color: rgba(0,0,0,.3);
+	border-radius: 3px;
+	border:1px solid #b4b3b3;
+	z-index: 100;
+	/*display: none;*/
+}
+.icon-left{
+	position: absolute;
+	left: 5px;
+	top: 5px;
+	font-size: .8rem;
+	color: #666666;
+	z-index: 1;
+}
+.icon-left .time{
+
+}
+.icon-type{
+	background-color: rgba(255,255,255,.5);
+    padding: 2px;
+    border-radius: 2px;
+}
+.time{
+	font-size: .8rem;
+    background: rgba(255,255,255,.5);
+    padding: 2px 4px;
+    border-radius: 2px;
+    margin-left: 2px;
+}
+.icon-type img{
+	width: 1rem;
+	vertical-align: text-top;
+}
+.shadow{
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	z-index: 1;
+	left: 0;
+}
+
+.share-btn{
+    width: 1.5rem!important;
+    float: right;
+    margin-top: 0.3rem;
+}
+.icon-1{
+	display: block;
+}
+.memberList{
+	position: relative;
+	color: #fff;
+	margin-top: 1rem;
+	text-align: left;
+	padding: 0 3%;
+}
+.avatar-wrapper{
+	overflow: hidden;
+	position: relative;
+}
+.memberList li{
+	display: inline-block;
+	width: 48%;
+	position: relative;
+	margin-bottom: 12px;
+	
+}
+.memberList li:nth-child(even){
+	float: right;
+}
+.memberList .avatar-wrapper img{
+	width: 100%;
+}
+.m-info{
+	position: relative;
+	margin-top: 5px;
+}
+.m-info b{
+	font-weight: normal;
+	position: absolute;
+	right: 0;
+	top: 0.2rem;
+	font-size: 1rem;
+}
+.m-info span{
+	color: #000000;
+	line-height: 2rem;
+}
+.m-info span em{
+	font-size: 0.9rem;
+	color: #fff;
+	padding: 0 0.5rem;
+	border-radius: 5px;
+	text-align: center;
+	font-style: normal;
+	margin-left: 5px;
+}
+.m-info span:nth-child(even){
+	float: right;
+	font-size: .9rem;
+}
+.m-info p{
+	font-size: 10px;
+	color: #f2adad;
+}
+.programme{
+	width: 98%;
+	position: absolute;
+	left: 2%;
+	bottom: -.5rem;
+	color:#fff;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+
+
+.memberList ul{
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+.rules{
+	padding: 4px 0px 4px 10px;
+    background-color: #f9c2c2;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.rules div{
+    width: 0;
+    height: 0px;
+    border-top: 12.5px solid transparent;
+    border-bottom: 12.5px solid transparent;
+    border-left: 12.5px solid #f9c2c2;
+    position: absolute;
+    top: 0;
+    display: inline-block;
+}
+.icon0{
+	display: none;
+}
+.icon1,.icon2{
+	display: block;
+}
+.work0,.work2{
+	display: block;
+}
+.work1{
+	display: none;
+}
+
+
+
+.shadow{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.shadowimg{
+	width: 100%;
+	position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.mui-pull-bottom-wrapper{
+	font-size: 12px;
+	text-align: center;
+}
+
+.btn-back{
+			position: fixed;
+		    width: 10%;
+		    bottom: 4rem;
+		    left: 1rem;
+		    z-index: 100;
+		}
+
+/*msk*/
+.msk{
+	width: 100%;
+	height: 100%;
+	background: url(../img/share_msk.png);
+	background-size: 100% 100%;
+	top: 0;
+	position: fixed;
+	z-index: 99999;
+	display: none;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>提交MC话题</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+    <style type="text/css">
+        .mui-input-row{margin-top: 10px;}
+        html,body{
+          width: 100%;
+          height: 100%;
+          /*overflow: hidden;*/
+        }
+        body{background: url(images/v4bg.jpg)no-repeat bottom center;background-size: cover;}
+        .text{width: 60%;padding: 5% 0 5% 3%;}
+        .text img{width: 100%;}
+        .mui-content{background: transparent;background-color:transparent;}
+        .mui-input-row {width: 90%;margin-left: 5%;height: 112px;}
+        textarea{margin-bottom:0;}
+        .mui-input-row:last-child{margin-top: 0;border-radius: 5px;border:1px solid #d7b460;}
+        .mui-input-row textarea{border-bottom: none;border-radius: 5px;background-color:transparent;color:#fff;height: 110px;}
+        .bgshadow{width: 90%;height:112px;margin-left: 5%;position: absolute;background-color: #362215;opacity: 0.5;border-radius: 5px;}
+        .tijiao{width: 100%;position: relative;margin-top:5%;}
+        .comment_submit{position:relative;width: 50%;margin:0;left:50%;margin-left: -25%;background: none;border:1px solid #d7b460;border-radius: 50px;color:#d7b460;}
+    </style>
+</head>
+<body>
+  <div class="text"><img src="images/text.png"></div>
+	<div class="mui-content">
+		
+    <div class="comment_input">
+      <div class="bgshadow"></div>
+      <div class="mui-input-row">
+        <span class="counter" id="word-count">0/30</span>
+         <textarea id="topic-text" name="topic-text" rows="5" cols="" maxlength="30" placeholder="我想说..."></textarea>
+      </div>
+    </div>
+    <div class="tijiao"><a class="comment_submit" id="confirmBtn">提交话题</a></div>
+    
+    <div class="show_name" id="vue-thisMc">
+          
+          <!-- <ul class="list_status">
+              <li>SNH48一期生出道四周年纪念</li>
+          </ul> -->
+    </div>
+	</div>
+  
+  <script src="https://h5.48.cn/common/js/jquery.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/vue.js"></script>
+  <script src="js/topic.js"></script>
+
+  <script>
+    var issubmit = false;
+    //var mcValue = localStorage.getItem("CUR_TEAM");
+		//var thisMc = JSON.parse(mcValue);
+		//console.log("--"+JSON.stringify(thisMc.teamName));
+    //$(".list_status li").html("已选择队伍 TEAM "+thisMc.teamName)
+    // var mcitemVM = new Vue({
+    //   el: '#vue-thisMc',
+    //   data: thisMc
+    // });
+    
+    //$(".mui-title").html(thisMc.title);
+    
+      $("#topic-text").bind("input",function () {
+    //$("#topic-text").keydown(function () {
+        setTimeout(function(){
+            countStrNum()
+
+        },10);
+
+    });
+    function countStrNum(){
+        var total = 30;
+        $("#topic-text").val(Trim($("#topic-text").val()))
+          var len = Number($("#topic-text").val().length);
+            if (len > total) {
+                
+                $("#topic-text").val($("#topic-text").substring(0, total));
+            }else{
+                $("#word-count").text(len + "/" + total);
+            }
+            console.log($("#topic-text").val().length)
+            
+    }
+    
+    $("#confirmBtn").click(function () {
+        var title = Trim($("#topic-text").val());
+        if(title.length==0) {
+            mcTopic.muiAlert("内容不能为空");
+            return false;
+        }
+        if(!issubmit){
+          issubmit = true;
+          mcTopic.topicNew_4th(title, function(msg){
+            //alert(msg);
+            issubmit = false;
+            mui.alert(msg, '', function() {
+              //window.web.backHome();
+              mcTopic.backTo()
+            });
+
+            //window.web.gotoDetail('https://h5.48.cn/mc/comment_list.html');
+            
+          }, function(msg){
+            issubmit = false;
+            mcTopic.muiAlert(msg)
+          });
+        }
+    });
+    function Trim(str)
+    { 
+        return str.replace(/(^\s*)|(\s*$)/g, ""); 
+    }
+    
+  </script>    
+  
+</body>
+</html>

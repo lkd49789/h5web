@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>本周榜单</title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/common.css">
+    <style type="text/css">
+		*{margin:0;padding: 0;}
+		html,body{width: 100%;height: 100%;}
+		body{font-size: 1rem;background-color: #fff;}
+		.mui-pull-bottom-tips{width: 100%;text-align: center;}
+		.mui-content{background-color: transparent;}
+		.weeklist li{height: 6rem;    border-bottom: 1px solid #eee;}
+		.mui-table-view:after{width: 100%;left: 3%;}
+		.runknum{font-size: 1.5rem;color:#c4c4c4;width:8%;text-align: center;line-height: 6rem;float: left;}
+		.content{width: 60%;height: 100%;float: left;}
+		.head{width: 3.5rem;height: 3.5rem;background-repeat: no-repeat;background-position: center top;background-size: cover;background-image: url(img/imglist.png);border-radius: 100%;display:block;margin-top: 1.2rem;float: left;}
+		.name{font-size: 1.2rem;color:#363d4d;margin-bottom: 0px!important;float: left;display:block;height: 6rem;line-height: 6rem;margin-left: 1rem;max-width: 53%;overflow:hidden;text-overflow: ellipsis;white-space: nowrap;}
+		.team{display: inline-block;color:#fff;background-color: #839cff;border-radius: 3px;padding: 0.1rem 0.5rem;margin-top: 2.3rem;margin-left: 0.5rem;line-height: 1.2rem;}
+		.val{width: 29%;padding-right: 3%;float: right;text-align: right;font-size: 1rem;color:#adadad;line-height: 6rem;overflow:hidden;text-overflow: ellipsis;white-space: nowrap;}
+		.the{color:#839cff;}
+		.mui-scroll-wrapper{
+			overflow-y: scroll;
+			overflow-x: hidden;
+		}
+		.btn-back{
+			position: fixed;
+		    width: 10%;
+		    bottom: 4rem;
+		    left: 1rem;
+		    z-index: 100;
+		}
+		.loading{
+			text-align: center;
+			font-size: 1.2rem;
+		}
+		.dotting {
+		    display: inline-block; 
+		    width: 10px; 
+		    min-height: 2px;
+		    padding-right: 2px;
+		    border-left: 2px solid currentColor; 
+		    border-right: 2px solid currentColor;   
+		    background-color: currentColor; 
+		    background-clip: content-box;
+		    box-sizing: border-box;
+		    animation: dot 1s infinite step-start both;
+		}
+		.dotting:before { content: '...'; } 
+		.dotting::before { content: ''; }
+		:root .dotting { margin-left: 2px; padding-left: 2px; } 
+
+		@keyframes dot {
+		    25% { border-color: transparent; background-color: transparent; }          
+		    50% { border-right-color: transparent; background-color: transparent; }   
+		    75% { border-right-color: transparent; }                                  
+		}
+    </style>
+</head>
+<body>
+	<img class="btn-back" src="img/btn-back.png">
+	<p class="loading">Loading<span class="dotting"></span></p>
+	<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+		<div class="mui-scroll">
+			<ul class="mui-table-view mui-table-view-chevron weeklist">
+				<!-- <li>
+					<div class="runknum the">1</div>
+					<div class="content">
+						<span class="head"></span>
+						<span class="name">小屏设备显示前五个</span>
+						<span class="team">lv2</span>
+					</div>
+					<div class="val">贡献1.2万</div>
+				</li>
+				<li>
+					<div class="runknum">1</div>
+					<div class="content">
+						<span class="head"></span>
+						<span class="name">小屏设备显示前五个</span>
+						<span class="team">lv2</span>
+					</div>
+					<div class="val">贡献1.2万</div>
+				</li>
+				<li>
+					<div class="runknum">1</div>
+					<div class="content">
+						<span class="head"></span>
+						<span class="name">小屏设备显示前五个</span>
+						<span class="team">lv2</span>
+					</div>
+					<div class="val">贡献1.2万</div>
+				</li>
+				<li>
+					<div class="runknum">1</div>
+					<div class="content">
+						<span class="head"></span>
+						<span class="name">小屏设备显示前五个</span>
+						<span class="team">lv2</span>
+					</div>
+					<div class="val">贡献1.2万</div>
+				</li> -->
+			</ul>
+		</div>
+	</div>
+</body>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="../../common/js/common.js"></script>
+<!-- <script src="js/mui.min.js" ></script>
+<script src="js/mui.pullToRefresh.js" ></script>
+<script src="js/mui.pullToRefresh.material.js" ></script> 
+<script src="js/mui.zoom.js">    </script>
+<script src="js/mui.previewimage.js"></script>-->
+<script src="js/config.js" ></script>
+<script src="js/main.js" ></script>
+<script src="js/weeklist.js" ></script>
+</html>

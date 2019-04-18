@@ -1,0 +1,65 @@
+/*app download*/
+.appdown{
+    position: relative;
+    top: 0px;
+    background-color: rgba(255,255,255,1);
+    z-index: 10001;
+    padding: .7rem;
+}
+.appcover{
+    width: 4rem;
+    height: 4rem;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+.appcover img{
+    width: 100%;
+}
+.appdown .intro{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 2%;
+    width: 60%;
+    overflow: hidden;
+}
+.appdown .intro p{
+    text-align: left;
+    color: #000;
+    font-size: 1rem;
+    line-height: 25px;
+}
+.appdown .intro p:nth-child(1){font-size: 1.1rem;}
+.appdown-btnbox{
+    float: right;
+    text-align: right;
+    display:inline-block;
+    vertical-align: middle;
+    position: relative;
+        margin-top: 1.5rem;
+}
+.appdown  a{
+    padding: .5rem 1rem;
+    background: linear-gradient(to right,#ba9ef7,#6c61f6);
+    -webkit-background: linear-gradient(to right,#ba9ef7,#6c61f6);
+    border-radius: 30px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.appdown  a:active{
+    color: #6c61f6;
+}
+.appdown-msk{
+    background-color: rgba(0,0,0,.06);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+    pointer-events: none;
+}
+.download-down{display: none;}

@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>口袋48</title>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<link href="css/swiper.min.css" rel="stylesheet" />
+		<link href="css/index.css" rel="stylesheet" />
+		<style>
+		body {
+				background: #000;
+			}
+
+		</style>
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<script src="js/swiper.animate.min.js"></script>
+	</head>
+	<body>
+		<div class="swiper-container swiper-container-main1">
+			<div class="swiper-wrapper">
+				<!--哈尔滨啤酒-->
+				<div class="swiper-slide page6"></div>
+				<!--新白娘子-->
+				<div class="swiper-slide page3" onclick="gotoUrl('https://h5.48.cn/2019apppage/xbnzcq')"></div>
+				<!--燃烧吧团魂-->
+				<div class="swiper-slide page7" onclick="gotoUrl('http://www.snh48.com/event/s266/wx/index.html')"></div>
+				<!--HERO-->
+				<div class="swiper-slide page2" onclick="gotoUrl('http://www.gnz48.com/event/g039/')"></div>
+				<!-- 恋爱48 -->
+				<div class="swiper-slide page5" onclick="gotoUrl('https://snh48client.xidea-inc.com/package48/mini.html')"></div>	
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+		<div class="ignore"><img src="img/ignore.png"></div>
+	</body>
+	<script type="text/javascript">
+		var e, f;
+		var total = $(".swiper-wrapper > div").length
+		$(document).ready(function() {
+			var mySwiper = new Swiper('.swiper-container', {
+				pagination: '.swiper-pagination',
+				prevButton: '.swiper-button-prev',
+				nextButton: '.swiper-button-next',
+				preventLinksPropagation: false,
+				preventClicks: true,
+				speed: 300,
+				autoplayStopOnLast: true,
+				onInit: function(swiper) {
+					init();
+					if(total == 1) {
+						e = setTimeout(function() {
+							window.web.skip()
+						}, 2000)
+					} else {
+						f = setTimeout(function() {
+							mySwiper.slideNext()
+							//window.web.skip()
+						}, 2000)
+					}
+
+				},
+				onSlideChangeEnd: function(swiper) {
+					// play();
+				},
+				onSlideChangeStart: function(swiper) {
+					console.log(swiper.activeIndex);
+
+					switch(swiper.activeIndex) {
+
+						case(total - 1):
+							init();
+							e = setTimeout(function() {
+								window.web.skip()
+							}, 2000)
+							break;
+
+						default:
+							init();
+							f = setTimeout(function() {
+								mySwiper.slideNext()
+							}, 2000)
+							break;
+					}
+
+				},
+
+			});
+
+			var mySwiper1 = new Swiper('.ignore', {
+				onTap: function(swiper) {
+					window.web.skip();
+				}
+			})
+		});
+
+		function init() {
+			clearTimeout(e);
+			clearTimeout(f);
+		}
+
+		function isFromIphone() {
+			var sUserAgent = navigator.userAgent.toLowerCase();
+			var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+			return bIsIphoneOs;
+		}
+
+		//打开外部url
+		function gotoUrl(url) {
+			window.web.gotoPage('webview/detail?url=' + url);
+			window.web.skip();
+		}
+		//跳转商城
+		function gotoShop() {
+			window.web.gotoPage('mobilemall/home');
+			window.web.skip();
+		}
+		//视频详情页
+		function vedioPlay(num) {
+			window.web.gotoPage('video/detail?id=' + num);
+			window.web.skip();
+		}
+		//音乐列表
+		function playmusicList() {
+			window.web.gotoPage('music/list');
+			window.web.skip();
+		}
+		//音频详情
+		function playmusic(num) {
+			window.web.gotoPage('music/detail?id=' + num);
+			window.web.skip();
+		}
+		//
+		//成员动态
+		function dynamicUrl(num) {
+			window.web.gotoPage('dynamic/detail?id=' + num);
+			window.web.skip();
+		}
+		//成员主页
+		function memberUrl(num) {
+			window.web.gotoPage('member/detail?id=' + num);
+			window.web.skip();
+		}
+		//公演直播详情
+		function liveUrl(num) {
+			window.web.gotoPage('publiclive/detail?id=' + num);
+			window.web.skip();
+		}
+
+		//公社news/detail?id=xxx
+		//图文
+		function gs_news(num) {
+			window.web.gotoPage('news/detail?id=' + num);
+			window.web.skip();
+		}
+		//art/detail?id=xxx   图片区
+		function gs_art(num) {
+			window.web.gotoPage('art/detail?id=' + num);
+			window.web.skip();
+		}
+		//thing/detail?id=xxx   视频区
+		function gs_video(num) {
+			window.web.gotoPage('thing/detail?id=' + num);
+			window.web.skip();
+		}
+		//voice/detail?id=xxx   音频区
+		function gs_voice(num) {
+			window.web.gotoPage('voice/detail?id=' + num);
+			window.web.skip();
+		}
+
+		function liveVedio(num) {
+			window.web.gotoPage('memberlive/detail?id=' + num);
+			window.web.skip();
+		}
+
+		//miniPro   跳到微信小程序
+		function gotoMiniApp(mid) {
+			window.web.launchWechatMiniProgram(launchParams(mid));
+		}
+
+		function launchParams(mid) {
+			return JSON.stringify({
+				id: "gh_dc1ce10e9cd3",
+				path: "pages/ad/ad?mid=" + mid,
+				type: 'release',
+				callback: "launchCallback"
+			})
+		}
+
+		var url = "";
+
+		function gotoUrlToo() { //画册开放征集特需方法，解决ios无法跳转
+			if(isFromIphone()) {
+				url = 'https://club.manhua.163.com/snh48/';
+			} else {
+				url = 'https://pr.da.netease.com/receiver/?action=ad&camName=1499401689645&target=https%3A%2F%2Fclub.manhua.163.com%2Fsnh48%2F&sid=1880289173';
+			}
+			window.web.gotoPage('webview/detail?url=' + url);
+			window.web.skip();
+		}
+
+		//电台
+		function musiconly(num) {
+			if(isFromIphone()) {
+				window.web.gotoPage('nighttalk/memberdetail?id=' + num);
+				window.web.skip();
+			} else {
+				window.web.gotoPage('nighttalk/list');
+				window.web.skip();
+			}
+		}
+
+		function gotoUrlxm(url) {
+			if(isFromIphone()) {
+				window.web.gotoPage('webview/detail?url=' + url);
+				window.web.skip();
+			} else {
+				window.web.goToDownLoad(url);
+				window.web.skip();
+			}
+		}
+	</script>
+
+</html>
