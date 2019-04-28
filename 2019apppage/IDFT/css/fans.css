@@ -9,17 +9,22 @@ body{
 }
 #app{
     min-height: 100%;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 /*tab栏*/
 .tab{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     background: #fff;
     position: relative;
     border-bottom: 1px solid #f6f6f6;
 }
 .tab_item{
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     text-align: center;
     height: 3.33rem;
     line-height: 3.33rem;
@@ -37,7 +42,8 @@ body{
     background: #ff7d7c;
     border-radius: .3rem;
     top: 100%;
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
     left: 25%;
 }
 
@@ -65,25 +71,35 @@ body{
 .my_time{
     color: #a2a2a2;
     font-size: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .my_time .time{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .my_time .triangle{
     border-width:0 .6rem .7rem;
     border-style:solid;
     border-color:transparent transparent #a2a2a2;
-    transform: translateY(-.5rem); 
+    -webkit-transform: translateY(-.5rem);
+            transform: translateY(-.5rem); 
     margin-left: .5rem;
 }
 /*三角反转*/
 .my_time .reverse{
     border-width:.7rem .6rem 0;
     border-color:#a2a2a2 transparent transparent;
-    transform: translateY(.5rem); 
+    -webkit-transform: translateY(.5rem);
+            transform: translateY(.5rem); 
 }
 .my_time .year{
     background: #fff2f2;
@@ -91,22 +107,36 @@ body{
     color: #ff7d7c;
     font-size: 1rem;
     padding: .2rem 1.2rem; 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .my_time .year img{
     width: 1.04rem;
     margin-left: .5rem;
 }
 .my li{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 1rem 0;
 }
 .my_li_left{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .my_li_left .head{
@@ -114,7 +144,8 @@ body{
     height: 4.79rem;
     margin:0 .83rem 0 1.92rem;
     padding: .62rem 0 0 .15rem;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 .my li:nth-child(1) .head{
     background: url(../img/fans/one.jpg) no-repeat;
@@ -155,21 +186,29 @@ body{
     position: fixed;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
 }
 .my_bottom_scroll{
     overflow-x: scroll;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding:0 .75rem;
 }
 .my_bottom_scroll .item{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-top: 3.46rem;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     color:#fff;
     padding-right: 2.08rem;
     width: 18rem;
-    flex-shrink:0;
+    -ms-flex-negative:0;
+        flex-shrink:0;
 }
 .my_bottom_scroll .item:last-child{
     padding-right: 0;
@@ -202,7 +241,8 @@ body{
 .know_itemWrap{
     position: absolute;
     width:50%;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding: .83rem .33rem 0;
 } 
   
@@ -225,15 +265,25 @@ body{
     padding: .63rem;
 }
 .know_item .user{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     color: #8c8c8d;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 1.3rem;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .user_right{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-right: 1rem;
 }
 .fire{

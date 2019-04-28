@@ -9,17 +9,22 @@ body{
 }
 #app{
     min-height: 100%;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 /*tab栏*/
 .tab{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     background: #fff;
     position: relative;
     border-bottom: 1px solid #f6f6f6;
 }
 .tab_item{
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     text-align: center;
     height: 3.33rem;
     line-height: 3.33rem;
@@ -37,7 +42,8 @@ body{
     background: #ff7d7c;
     border-radius: .3rem;
     top: 100%;
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
     left: 16%;
     z-index: 1;
 }
@@ -51,6 +57,8 @@ body{
     position: relative;
 }
 .my_top_t{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     color: #fff;
     text-align: center;
@@ -91,9 +99,16 @@ body{
     width: 10.08rem;
     border-radius: .83rem;
     font-size: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .my_time b{
     font-size: 1.5rem;
@@ -109,7 +124,8 @@ body{
     text-align: center;
     color: #c4c4c4;
     padding-top: 1.92rem;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 .my_bar{
     background: #f5f5f5;
@@ -133,7 +149,8 @@ body{
     position: absolute;
     left: 100%;
     top: 10%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     white-space: nowrap;
 }
 .my_bar_bg_ps span{
@@ -174,8 +191,12 @@ body{
     height: 4.17rem;
     border-bottom: 1px solid #f5f5f5;
     font-size: 1.4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .my_center b{
     font-size: 1.6rem;
@@ -183,15 +204,26 @@ body{
 .my_bottom{
     margin-top:.6rem;
     background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 5px 1.67rem;
     text-align: center;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .my_bottom_text{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .my_bottom_text b{
     font-size: 2rem;
@@ -206,7 +238,8 @@ body{
     width: 9.38rem;
     height: 8.71rem;
     padding-top: 3.17rem;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 .my_bottom_rk p{
     color: #d3780e;
@@ -225,6 +258,8 @@ body{
 /*积分榜*/
 
 .il_tab{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 0 20%;
     margin: 0 auto;
@@ -235,7 +270,9 @@ body{
     line-height: 4rem;
 }
 .il_tab_item{
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     text-align: center;
     font-size: 1.4rem;
 }
@@ -247,22 +284,33 @@ body{
     background: #fff;
 }
 .il li{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 4.17rem;
     background: #f5f5f5;
     border-radius: 2rem;
     padding: 0 1.21rem;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     margin-top: .83rem;
 }
 .il li:first-child{
     margin-top: 0;
 }
 .il_li_left{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .il_li_left .index{
     width: 1.67rem;
@@ -338,16 +386,24 @@ body{
     height: 3.75rem;
     line-height: 3.75rem;
     font-size:1.4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     border-bottom: 1px solid #f5f5f5;
 }
 .mvp_item li img{
     height: 1.1rem;
 }
 .mvp_item .arrows{
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .mvp_item .arrows img{
     height: 1.04rem;
