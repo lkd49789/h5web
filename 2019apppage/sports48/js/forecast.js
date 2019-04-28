@@ -154,7 +154,6 @@ var vm=new Vue({
     },
     components:{
         /*选择偶像组件 */
-        /*选择偶像组件 */
         selectidol:{
             props:['list'],
             template:'#selectIdol',

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>公演MVP排行</title>
+    <link href="../../common/css/common.css" rel="stylesheet" />
+</head>
+<style>
+    [v-cloak] {
+        display: none !important;
+    } 
+    body{
+        max-width: 640px;
+        margin:0 auto;
+        background: #f6f6f6;
+    }
+    #app{
+        min-height: 100%;
+        box-sizing: border-box;
+        font-size: 1.3rem;
+    }
+    .titleDiv{
+        background: #fff;
+    }
+    .title{
+        margin:0 .83rem;
+        line-height: 2.75rem;
+        border-bottom: 1px solid #f5f5f5;
+    }
+    ul{
+        background: #fff;
+    }
+    ul li{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 .83rem 0 1.25rem;
+        line-height: 5.75rem;
+        height: 5.75rem;
+        border-bottom: 1px solid #f5f5f5;
+    }
+    li .left{
+        display: flex;        
+    }
+    li .left .num{
+        font-size: 1.4rem;
+    }
+    li .left .head{
+        border-radius: 50%;
+        width: 3.33rem;
+        height: 3.33rem;
+        margin: 0 .75rem;
+        overflow: hidden;
+    }
+    li .left .name{
+        font-size: 1.6rem;
+        color: #1d1d1d;
+    }
+</style>
+<body>
+    <div id="app">
+        <div class="titleDiv"><p class="title">2017年11月8日 19:30 Team SII 勇气重生公演</p></div>
+        <ul>
+            <li>
+                <div class="left">
+                    <b class="num">1</b>
+                    <div class="head"><img src="" alt=""></div>
+                    <span  class="name">谁谁</span>
+                </div>
+                <div class="right"><b>32</b>票</div>
+            </li>
+        </ul>
+    </div>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<!-- <script src="../../common/js/vue.js"></script> -->
+<script src='https://cdn.bootcss.com/vue/2.6.10/vue.js'></script>
+<script src="../../common/js/common_v1.js"></script>
+<!-- <script src="js/config.js"></script> -->
+<!-- <script src="js/main.js"></script> -->
+<script>
+
+</script>
+</html>

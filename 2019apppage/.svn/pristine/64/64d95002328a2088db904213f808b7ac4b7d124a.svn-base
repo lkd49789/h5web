@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>2019网络握手会</title>
+	<link href="../../common/css/common.css" rel="stylesheet" />
+	<link href="css/index.css" rel="stylesheet" />
+</head>
+<body>
+	<section class='wrapper' v-cloak>
+		<div class="cd-info">
+			<div>
+				<img src="img/thumb.jpg">
+			</div>
+			<div class="cd-info-r">
+				<div>
+					<h1>《我们的旅程》</h1>
+					<p>01. 心的旅程</p>
+					<p>02. 就差一点点</p>
+					<p>03. 笨</p>
+					<p>04. SPY</p>
+					<p>05. ZEN</p>
+				</div>
+				<p class="vote-info">含1个网络握手权</p>
+			</div>
+		</div>
+		<div class="btns">
+			<p :class="{'enabled':cannotdown}" v-on:click="gotoDown()">下载专辑</p>
+			<p class="btn" v-on:click="gotoBuy()">78元 立即购买</p>
+		</div>
+		<p class="tip">注：购买后网络握手权可以直接使用。</p>
+		<div class="buy-list">
+			<h1>购买记录</h1>
+			<!-- <div class="empty">
+				<img src="img/empty.jpg">
+			</div> -->
+			
+			<ul>
+				<!-- <li v-for="(item,index) in guessInfo.sportFableList">购买成功 <span>+12个网络握手权</span><em>2019.5.1 19:30</em></li> -->
+				<li>购买成功 <span>+12个网络握手权</span><em>2019.5.1 19:30</em></li>
+			</ul>
+		</div>
+	</section>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<script src="../../common/js/vue.js"></script>
+<script src="../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/index.js"></script>
+</html>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0a799f1a-86d3-4f6e-a399-b26a3fb4b4f4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/bidding.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/champion.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/common/css/common.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/css/bidding.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/css/champion.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/css/forecast.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/css/popbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/css/ranking.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/css/realtime.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/css/seer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/css/speak.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/css/vip.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/css/votemusic.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/forecast.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-champion/bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-champion/btn-show-success.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-champion/head.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-champion/option1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-champion/option2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-champion/option3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-champion/option4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-champion/option5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-champion/option6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-champion/option7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-champion/option8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-champion/stars.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-champion/tip-fail.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-champion/tip-issubmit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-champion/tip-success.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-champion/tip-timeout.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-champion/title.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-music/btn-jf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-music/btn-jt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-music/icon-yes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-music/prize.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-music/subtitle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-music/timeout.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-music/title.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-seer/title.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/bidding.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/bidding_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/bidding_text.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/exercise_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/exercise_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/exercise_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/exercise_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/exercise_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/exercise_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/exercise_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/head_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/page/biddingNum_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/page/biddingPage_bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/page/dot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/page/forecast_bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/page/forecast_btn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/page/forecast_pitchon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/page/forecast_rule.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/page/forecast_title.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/page/realtime_bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/page/realtime_line.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/page/realtime_list_bg1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/page/realtime_list_bg2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/page/realtime_list_bg3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/page/realtime_list_bg4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/page/realtime_list_bg5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/page/realtime_list_bg6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/page/realtime_title.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/page/rulePage_bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/page/rule_title.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/page/rule_title2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/page/tags.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/page/tags2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/ranking.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/select_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/select_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/select_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/select_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/select_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/select_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/select_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/sole.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/sole_rule.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img-speak/tags_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img/bg-toplist.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img/bg-votemusic.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img/bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img/bg1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img/btn1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img/btn2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img/btn3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img/btn4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img/btn5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img/btn6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img/btn7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img/circle_bule.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img/close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img/copper.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img/crown.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img/fans_btn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img/go_champion.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img/go_seer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img/icon-fail.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img/icon-yes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img/silver.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img/slogan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img/support.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img/title_champion.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img/title_fans.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img/title_seer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img/title_support.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img/title_talk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/img/top1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/index1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/js/champion.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/js/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/js/forecast.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/js/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/js/seer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/js/speak.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/js/vip.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/js/votemusic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/ranking.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/realtime.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/rulePage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/seer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/speak.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/vip.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2019apppage/sports48/votemusic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2019apppage/sports48/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/2019apppage/sports48/js/main.js" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/2019apppage/sports48/speak.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2250" />
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="295" />
+    <option name="y" value="9" />
+    <option name="width" value="1454" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="h5web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="h5web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="h5web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="h5web" type="462c0819:PsiDirectoryNode" />
+              <item name="2019apppage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="h5web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="h5web" type="462c0819:PsiDirectoryNode" />
+              <item name="2019apppage" type="462c0819:PsiDirectoryNode" />
+              <item name="sports48" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0a799f1a-86d3-4f6e-a399-b26a3fb4b4f4" name="Default Changelist" comment="" />
+      <created>1555555211096</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1555555211096</updated>
+      <workItem from="1555555213122" duration="30000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="30000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="295" y="9" width="1454" height="1000" extended-state="0" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24011299" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/2019apppage/sports48/speak.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2250" />
+      </provider>
+    </entry>
+  </component>
+</project>

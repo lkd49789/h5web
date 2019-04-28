@@ -13,14 +13,27 @@
     
     //口袋用户信息
     if(checkFromNew()){
+        // var u_info = JSON.parse(dsBridge.call("snhUserInfo"))
+        // var appUserInfo = {
+        //     "appid":u_info.userInfo.bigSmallInfo.bigUserInfo.userId,             //用户ID
+        //     "apptoken":u_info.token,                                             //验证Token
+        //     "uname":u_info.userInfo.bigSmallInfo.bigUserInfo.nickname,             //用户昵称
+        //     "avata":u_info.userInfo.bigSmallInfo.bigUserInfo.avatar,             //头像地址
+        //     "dev_cd":u_info.IMEI,                                                //设备号
+        //     "bindInfo":u_info.userInfo.bindInfo                                 //绑定信息
+        // }
+        /*修改后的 */
         var u_info = JSON.parse(dsBridge.call("snhUserInfo"))
         var appUserInfo = {
-            "appid":u_info.userInfo.bigSmallInfo.bigUserInfo.userId,             //用户ID
+            "appid":u_info.userInfo.userId,             //用户ID
             "apptoken":u_info.token,                                             //验证Token
-            "uname":u_info.userInfo.bigSmallInfo.bigUserInfo.nickname,             //用户昵称
-            "avata":u_info.userInfo.bigSmallInfo.bigUserInfo.avatar,             //头像地址
+            "uname":u_info.userInfo.nickname,             //用户昵称
+            "avata": u_info.userInfo.avatar,             //头像地址
             "dev_cd":u_info.IMEI,                                                //设备号
             "bindInfo":u_info.userInfo.bindInfo                                 //绑定信息
+        }
+        if(appUserInfo.uname == null || appUserInfo.uname == undefined){
+            appUserInfo.uname = u_info.userInfo.nickName
         }
     }else if(checkFromOld()){
         var appUserInfo = {

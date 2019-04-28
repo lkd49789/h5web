@@ -1,0 +1,46 @@
+[v-cloak]{
+    display: none;
+}
+html,body{color: #9b9a9a;}
+section{
+	position: relative;
+    
+}
+
+.info-top{color: #fff;position: relative;background-color: #fff;}
+.info-top img{width: 100%;}
+.info-top p{position: absolute;left: 0;padding: 0 3%;}
+.info-top p:nth-child(2){font-size: 1.3rem;top: 10%;}
+.info-top p:nth-child(3){font-size: 1.2rem;bottom: 0;}
+.info-top span{font-size: 5rem;margin-right: 1rem;}
+
+
+.info-mid{padding: 3%;background-color: #fff;}
+.info-mid p:nth-child(1){font-size: 1.5rem;font-weight: bold;color: #000;margin: .2rem 0;}
+.info-mid p img{width: 1.5rem;margin-right: .3rem;margin-top: -.3rem;}
+.info-mid p span{color: #f7657c;}
+.info-mid i{color: #5c6bc2;text-decoration: underline;margin: 0 .5rem;font-style: normal;}
+.wrapper > p{padding: 3%;}
+
+.info-bottom{padding: 3% 3% 0 3%;background-color: #fff;}
+.info-bottom li{padding: .5rem 0;border-bottom: 1px solid #e8e8e8;}
+.info-bottom li div{width: 83%;display: inline-block;vertical-align: middle;}
+.info-bottom li > span{
+	width: 15%;
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	border: 1px solid #9b9a9a;
+	border-radius: .5rem;
+	padding: .3rem 0;
+
+}
+.info-bottom li div p:nth-child(1){
+	font-size: 1.7rem;
+	color: #363d4d;
+}
+.info-bottom li div p span{font-size: 1.4rem;margin-left: .3rem;}
+.info-bottom li div p:nth-child(2){
+	font-size: 1.4rem;
+}
+.can{color: #5c6bc2;border: 1px solid #5c6bc2 !important;}

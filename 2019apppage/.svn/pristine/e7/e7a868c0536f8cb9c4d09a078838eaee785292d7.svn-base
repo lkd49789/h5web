@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IDOLS FT</title>
+    <link href="../../common/css/common.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/idol.css">
+</head>
+<body>
+    <div id="app">
+        <div class="tab">
+            <div :class="['tab_item',{'tab_active':who == 'my'}]" @click="tabClick(1)">我的信息</div>
+            <div :class="['tab_item',{'tab_active':who == 'integral'}]" @click="tabClick(2)">积分榜</div>
+            <div :class="['tab_item',{'tab_active':who == 'mvp'}]" @click="tabClick(3)">公演MVP</div>
+            <span class="border" :style="'left:'+left"></span>
+        </div>
+        <component :is="who"></component>
+    </div>
+
+    <!--我的信息页-->
+    <template id="myPage">
+        <div class="my">
+            <div class="my_top">
+                <div class="my_top_t">
+                    <div>
+                        <div class="my_head_img">
+                            <img src="" alt="">
+                        </div>
+                        <p class="my_name">某某</p>
+                    </div>
+                    <div class="my_ranking">
+                        <div class="my_ranking_box">
+                            <p><b>23</b></p>
+                            <p>本月积分排名</p>
+                        </div>
+                        <div class="my_ranking_box">
+                            <p><b>23</b></p>
+                            <p>累计积分排名</p>
+                        </div>
+                    </div>
+                    <div class="my_time">
+                        <p><b>2</b>小时<b>45</b>分</p>
+                        <p><b>30</b>秒</p>
+                        <p>本月直播时长</p>
+                    </div>
+                </div>
+                <div class="my_barWrap">
+                    <p>实时积分中不包括微博九宫格，该项将在月底结算时加入</p>
+                    <div class="my_bar">
+                        <div class="my_bar_bg">
+                            <div class="my_bar_bg_ps">
+                                <span></span>
+                                <p>255积分</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="my_center">
+                <p class="my_center_title"><b>我的任务</b></p>
+                <p><span>1个月内直播4小时</span><span>+<em>222</em>积分</span></p>
+                <p><span>发布30个帖子</span><span>+<em>222</em>积分</span></p>
+                <p><span>聚聚房间发布50条消息</span><span>+<em>0</em>积分</span></p>
+            </div>
+            <div class="my_bottom">
+                <div class="my_bottom_text">
+                    <p><b>我的公演MVP排名</b></p>
+                    <p class="p2">《以爱之名》公演 3月14日</p>
+                </div>
+                <div class="my_bottom_rk">
+                    <p><b>34票</b></p>
+                    <div>第四名</div>
+                </div>
+            </div>
+        </div>
+
+    </template>
+    
+     <!--积分榜页面-->
+    <template id="integralPage">
+        <div class="il">
+            <div class="il_tab">
+                <div :class="['il_tab_item',{'il_active':indexShow == 1}]" @click="ilTabClick(1)">本月排行</div>
+                <div :class="['il_tab_item',{'il_active':indexShow == 2}]" @click="ilTabClick(2)">累计排行</div>
+            </div>
+            <ul>
+                <li>
+                    <div class="il_li_left">
+                        <div class="index"><b>1</b></div>
+                        <div class="il_head">
+                            <img src="" alt="">
+                        </div>
+                        <div>某某某</div>
+                     </div>
+                    <div class="il_num">3000积分</div>
+                </li>
+            </ul>              
+            <p class="il_p">统计截止日期2019年3月2日</p>
+        </div>
+    </template>
+
+    <!--公演MVP-->
+    <template id="mvpPage">
+        <div class="mvp">
+            <div class="mvp_item">
+                <p class="mvp_title">2018年6月</p>
+                <ul>
+                    <li><b>06-30 Team SII《第发现》剧场公演</b><img src="img/idol/arrows1.png" alt=""></li>
+                    <li class="arrows"><img src="img/idol/arrows2.png" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </template>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<!-- <script src="../../common/js/vue.js"></script> -->
+<script src='https://cdn.bootcss.com/vue/2.6.10/vue.js'></script>
+<script src="../../common/js/common_v1.js"></script>
+<!-- <script src="js/config.js"></script> -->
+<!-- <script src="js/main.js"></script> -->
+<script src="js/idol.js"></script>
+</html>

@@ -9,13 +9,13 @@ var vm=new Vue({
         maskDate: '', /*日期 */
         alreadyShow:false /*是否成功报名 */
     },
-    created (){
+    created:function(){
         this.getList() 
     },
     directives:{
         /*定义指令 根据人数修改颜色 */
         color:{
-            bind(el, bind, vNode){
+            bind:function(el, bind, vNode){
                 if(bind.value == 0){
                     el.style.color='#6fd69f'
                 }else if(bind.value > 0 && bind.value < 4){
@@ -28,11 +28,11 @@ var vm=new Vue({
     },
     methods:{
         /*获取所有日期预约情况 */
-        getList(){
+        getList:function(){
             main.getList(function(data){
                 if (data.status == 200) {
-                    Vue.AprilList = [];
-                    Vue.MayList = [];
+                    vm.AprilList = [];
+                    vm.MayList = [];
                     if (data.content.date) {
                         vm.date = data.content.date;
                         vm.alreadyShow = true;
@@ -52,7 +52,7 @@ var vm=new Vue({
             }) 
         },  
         /*提交预约 */
-        upEnterFor(date){
+        upEnterFor:function(date){
             main.upEnterFor(date, function(data){
                 if (data.status == 200) {
                     vm.tips = '报名成功'
@@ -64,11 +64,11 @@ var vm=new Vue({
                 }
             }) 
         },
-        dayClick(item,month){
+        dayClick:function(item,month){
             var GMonth = new Date().getMonth() + 1
             var GDay = new Date().getDate()
-            var ThisDate = new Date("2019/" + GMonth.toString().padStart(2, '0') + "/" + GDay.toString().padStart(2, '0') + " 00:00:00").getTime()
-            var endDate = new Date("2019/" + month.toString().padStart(2, '0') + "/" + item.day.toString().padStart(2, '0')+" 00:00:00").getTime()
+            var ThisDate = new Date("2019/" + GMonth.toString() + "/" + GDay.toString() + " 00:00:00").getTime()
+            var endDate = new Date("2019/" + month.toString() + "/" + item.day.toString()+" 00:00:00").getTime()
             if (vm.alreadyShow){
                 vm.tips = '你已经成功报名啦不用在选了～'
                 vm.showpop = 1;  
@@ -83,22 +83,22 @@ var vm=new Vue({
                 vm.showpop = 2;
             }
         },
-        submit(){
+        submit:function(){
             vm.upEnterFor(vm.maskDate);
         },
         /*跳转*/ 
-        go(){
+        go:function(){
             vm.gotoPage('rule.html');
         },
         /*弹框 */
-        closePop(){
+        closePop:function(){
             vm.showpop = 0;
             if (vm.tips == '报名成功'){
                 vm.getList()
             }
         },
         /*跳转方法 */
-        gotoPage(_url){
+        gotoPage:function(_url){
             var url = _url
             if(url.indexOf("http://")>=0 ||url.indexOf("https://")>=0){
                 

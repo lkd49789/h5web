@@ -1,0 +1,300 @@
+[v-cloak] {
+    display: none !important;
+} 
+body{
+    max-width: 640px;
+    margin:0 auto;
+    font-size: 1.5rem;
+    background: #f6f6f6;
+}
+#app{
+    min-height: 100%;
+    box-sizing: border-box;
+}
+/*tab栏*/
+.tab{
+    display: flex;
+    background: #fff;
+    position: relative;
+    border-bottom: 1px solid #f6f6f6;
+}
+.tab_item{
+    flex: 1;
+    text-align: center;
+    height: 3.33rem;
+    line-height: 3.33rem;
+    color: #c4c4c4;
+    font-weight:bold; 
+    font-size: 1.4rem;
+}
+.tab_active{
+    color: #ff7d7c;
+}
+.border{
+    position: absolute;
+    width: 2.08rem;
+    height: .38rem;
+    background: #ff7d7c;
+    border-radius: .3rem;
+    top: 100%;
+    transform: translate(-50%,-50%);
+    left: 16%;
+}
+
+/*我的信息*/
+.my_top{
+    padding: 3.21rem 1.67rem 3.04rem;
+    background: url(../img/idol/my_top_bg.jpg) no-repeat;
+    background-size:100% 100%; 
+    margin-bottom:7.3rem;
+}
+.my_top_t{
+    display: flex;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 2.08rem;
+    position: relative;
+}
+.my_head_img{
+    width: 6.6rem;
+    height: 6.6rem;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+.my_name{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.my_ranking{
+    margin-left: .88rem;
+}
+.my_ranking_box{
+    font-size: 1rem;
+    background: rgba(255, 127, 126, .2);
+    border-radius: .83rem;
+    width: 10.21rem;
+    height: 4.17rem;
+    margin-bottom: .58rem;
+}
+.my_ranking_box:nth-child(2){
+    margin-bottom: 0;
+}
+.my_ranking_box b{
+    font-size: 1.5rem;
+}
+.my_time{
+    background: rgba(255, 127, 126, .2);
+    margin-left: .67rem;
+    height: 8.79rem;
+    width: 10.08rem;
+    border-radius: .83rem;
+    font-size: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+.my_time b{
+    font-size: 1.5rem;
+}
+.my_barWrap{
+    background: #fff;
+    width: 93%;
+    height: 9.7rem;
+    position: absolute;
+    border-radius: .83rem;
+    left: 3.5%;
+    font-size: 1rem;
+    text-align: center;
+    color: #c4c4c4;
+    padding-top: 1.92rem;
+    box-sizing: border-box;
+}
+.my_bar{
+    background: #f5f5f5;
+    width: 90%;
+    height: .83rem;
+    margin: 1.2rem 5% 0 5%;
+    border-radius: .6rem;
+}
+.my_bar_bg{
+    background: #ffab47;
+    height: 100%;
+    border-radius: .6rem 0 0 .6rem;
+    position: relative;
+    width: 80%;
+}
+.my_bar_bg_ps{
+    position: absolute;
+    left: 100%;
+    top: 10%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+.my_bar_bg_ps span{
+    width:0;
+    height:0;
+    border-width:0 .42rem .84rem;
+    border-style:solid;
+    border-color:transparent transparent #ffab47;
+}
+.my_bar_bg_ps p{
+    margin-top: .8rem;
+}
+.my_center{
+    margin-top: .54rem;
+    background: #fff;
+    line-height: 4.17rem;
+    padding:0 .83rem;
+    color: #1d1d1d;
+}
+.my_center p{
+    height: 4.17rem;
+    border-bottom: 1px solid #f5f5f5;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+}
+.my_center b{
+    font-size: 1.6rem;
+}
+.my_bottom{
+    margin-top:.6rem;
+    background: #fff;
+    display: flex;
+    padding: 5px 1.67rem;
+    text-align: center;
+    justify-content: space-between;
+}
+.my_bottom_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.my_bottom_text b{
+    font-size: 2rem;
+    color: #d3780e;
+}
+.my_bottom .p2{
+    font-size: 1.4rem;
+}
+.my_bottom_rk{
+    background:url(../img/idol/ranking-bg.jpg) no-repeat;
+    background-size:100% 100%;  
+    width: 9.38rem;
+    height: 8.71rem;
+    padding-top: 3.17rem;
+    box-sizing: border-box;
+}
+.my_bottom_rk p{
+    color: #d3780e;
+}
+.my_bottom_rk  div{
+    background: #d3780e;
+    color: #fff;
+    text-align: center;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+    width: 86%;
+    margin-left: 7%;
+    margin-top: .4rem;
+}
+
+/*积分榜*/
+
+.il_tab{
+    display: flex;
+    padding: 0 20%;
+    margin: 0 auto;
+    color: #c8c8c8;
+    background: #fff;
+    display: flex;
+    height: 4rem;
+    line-height: 4rem;
+}
+.il_tab_item{
+    flex: 1;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.il_active{
+    color: #000;
+}
+.il ul{
+    padding:0 1.08rem 1.5rem;
+    background: #fff;
+}
+.il li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.17rem;
+    background: #ffefef;
+    border-radius: 2rem;
+    padding: 0 1.21rem;
+    box-sizing: border-box;
+    margin-top: .83rem;
+}
+.il li:first-child{
+    margin-top: 0;
+}
+.il_li_left{
+    display: flex;
+    align-items: center;
+}
+.il_li_left .index{
+    width: 1.67rem;
+    height: 1.67rem;
+    color: #fff;
+    text-align:center;
+    line-height: 1.67rem;
+    background: #ff7d7c;
+    border-radius: 50%;
+    font-size: 1.3rem;
+}
+.il_head{
+    width: 2.71rem;
+    height: 2.71rem;
+    border-radius: 50%;
+    background: #ccc;
+    margin: 0 .63rem;
+}
+.il_num{
+    font-size: 1.4rem;
+}
+.il_p{
+    margin-top: 1.17rem;
+    color: #c4c4c4;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/*mvp榜*/
+.mvp_item{
+    padding: 0 .83rem;
+    background: #fff;
+}
+.mvp_title{
+    color:#949494;
+    border-bottom: 1px solid #f5f5f5;
+    font-size: 1.2rem;
+    height: 3.25rem;
+    line-height: 3.25rem;
+}
+.mvp_item li{
+    height: 3.75rem;
+    line-height: 3.75rem;
+    font-size:1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #f5f5f5;
+}
+.mvp_item li img{
+    height: 1.1rem;
+}
+.mvp_item .arrows{
+    justify-content: center;
+}
+.mvp_item .arrows img{
+    height: 1.04rem;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>提现</title>
+	<link href="../../common/css/common.css" rel="stylesheet" />
+	<link href="css/popbox.css" rel="stylesheet" />
+	<link href="css/index.css" rel="stylesheet" />
+</head>
+<body>
+	<section class='wrapper' v-cloak>
+		<div class="info-top">
+			<img src="img/top-bg.jpg">
+			<p>鸡腿余量（个）</p>
+			<p><span>{{totaljt}}</span>鸡腿</p>
+		</div>
+		<div class="info-mid">
+			<p><img src="img/icon.jpg">袋王温馨提示</p>
+
+			<p>1.<span>4.25日-4.30日</span>，作为过渡期，成员仍可以按照原有的方式自行选择提现，提现的档次以及比例，按照<i v-on:click="gotoNewRule()">新版规则</i>执行。提现完成后，将和本月工资一同发放。</p>
+			<p>2.<span>从5.1日起</span>，正式按照新的提现规则进行，即5.31日凌晨24点，系统将会自动结算成员身上的鸡腿，变成现金。</p>
+		</div>
+		<p>提现</p>
+		<div class="info-bottom">
+			<ul>
+				<li v-for="(item,index) in listData">
+					<div>
+						<p>{{item.jt}}<span>鸡腿</span></p>
+						<p>{{item.rmb}}RMB</p>
+					</div>
+					<span :class="totaljt>=item.jt ? 'can':''" v-on:click="getRmb(index)">提现</span>
+				</li>
+			</ul>
+		</div>
+		<div class="mask" v-if="showpop!=0">
+			<!-- no money -->
+			<div class="no-money" v-if="showpop == 1">
+				<p>{{tips}}</p>
+				<span v-on:click="closePop()">知道了</span>
+			</div>
+		</div>
+	</section>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<script src="../../common/js/vue.js"></script>
+<script src="../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/index.js"></script>
+</html>

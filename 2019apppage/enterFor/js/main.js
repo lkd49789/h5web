@@ -5,23 +5,28 @@
         "appid":"27422",                                //用户ID
         // "apptoken":"gAPn7Cywqux5guu5cvq4geMtH182EehR8RL9CWtoviVa+V9THsw/hg==",                //验证Token
         // "apptoken":"/SV7Ugtmu4Z5guu5cvq4gU7vsflc3NDuUsd/TPS44h3MnwXEeZbAIg==",   //验证Token
-        "apptoken":"UG0+fia6/A/W90Q3DS4fGH7cIMgRONx3cUbhs4Td6QOW1wDGOQFZgw==",   //验证Token
+        // "apptoken":"UG0+fia6/A/W90Q3DS4fGH7cIMgRONx3cUbhs4Td6QOW1wDGOQFZgw==",   //验证Token
+        "apptoken":"6p4v/9hX6iRRTPhdNvwwA3rJR54VPmH4tCJdrtbVl9Ae6TVZYHTlmJo1O9XkjIeyFmq3zwIMIuQ49AtvSGgZvEv2IdemW9YtK7g8E7VAjNqKC5htxUpLWwMAdAOuQeo7",   //验证Token
         "uname":"nicker",                                 //用户昵称
         "avata":"avata",                                    //头像地址
-        "dev_cd":"dev_cd",                        //设备号
-        "bindInfo":"bindInfo"
+        "dev_cd":"dev_cd"                        //设备号
     }
     
     //口袋用户信息
     if(checkFromNew()){
         var u_info = JSON.parse(dsBridge.call("snhUserInfo"))
+        var nickname = ''
+        if(isFromAndroid()){
+            nickname = u_info.userInfo.nickName
+        }else{
+            nickname = u_info.userInfo.nickname
+        }
         var appUserInfo = {
-            "appid":u_info.userInfo.bigSmallInfo.bigUserInfo.userId,             //用户ID
+            "appid":u_info.userInfo.userId,             //用户ID
             "apptoken":u_info.token,                                             //验证Token
-            "uname":u_info.userInfo.bigSmallInfo.bigUserInfo.nickname,             //用户昵称
-            "avata":u_info.userInfo.bigSmallInfo.bigUserInfo.avatar,             //头像地址
-            "dev_cd":u_info.IMEI,                                                //设备号
-            "bindInfo":u_info.userInfo.bindInfo                                 //绑定信息
+            "uname":nickname,                         //用户昵称
+            "avata":u_info.userInfo.avatar,             //头像地址
+            "dev_cd":u_info.IMEI                                                //设备号
         }
     }else if(checkFromOld()){
         var appUserInfo = {

@@ -1,0 +1,42 @@
+[v-cloak]{
+    display: none;
+}
+html,body{background-color: #fff;color: #808080;}
+h1{font-size: 1.4rem;font-weight: bold;}
+section{
+	position: relative;
+    padding: 3%;
+}
+
+
+.cd-info > div{width: 48%;display: inline-block;position: relative;vertical-align: top;}
+.cd-info > div img{width: 100%;}
+.cd-info > div:nth-child(2){margin-left: 1%;}
+.cd-info-r > div{background-color: #f6f6f6;border-radius: .5rem;padding: 3%;}
+.cd-info-r div p{font-size: 1.13rem;}
+.vote-info{
+	width: 100%;
+	background-color:#ebe5f8; 
+	border-radius: .5rem; 
+	color: #444444;
+	text-align: center;
+	padding: .5rem 0;
+	bottom: 0;
+	left: 0;
+	margin-top: .5rem;
+}
+
+.btns{text-align: center;margin: 2rem 0;color: #fff;}
+.btn{background: linear-gradient(to right,#ccacff,#6057ff );}
+
+.enabled{background-color: #d1d1d1 !important;}
+.btns p{padding: .7rem;width: 40%;margin: 0 2%;display: inline-block;border-radius: 2rem;font-size: 1.2rem;background-color: #33cc99;}
+.tip{font-size: 1rem;}
+.empty img{width: 100%;}
+
+.buy-list{margin-top: 2rem;}
+.buy-list h1{border-bottom: 1px solid #f1f1f1;padding: .5rem 0;}
+
+.buy-list li{line-height: 3.5rem;border-bottom: 1px solid #f1f1f1;}
+.buy-list span{color:#33cc99; }
+.buy-list em{float: right;font-size: 1rem;color: #c4c4c4;}

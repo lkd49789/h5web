@@ -1,0 +1,37 @@
+/*弹框*/
+[v-cloak]{
+    display: none;
+}
+.mask{position: fixed;width: 100%;height: 100%;text-align: center;background-color: rgba(0,0,0,.5);top: 0;left: 0;z-index: 100;}
+.mask > div{
+	width: 75%;
+	background-color: #fff;
+	border-radius: 1rem;
+	position: absolute;
+	top:45%;
+    left:50%;
+	transform:translate(-50%,-50%);
+	padding: 1.8rem 0;
+    /*display: none;*/
+}
+.mask .no-money p{padding: 8% 12%;font-size: 1.8rem;}
+.mask div > span{padding: .6rem 0;display: inline-block;color: #fff;font-size: 1.4rem;width:38%;background:#7467ff;border-radius: 3rem;background:url(../img/btn_bg.png) no-repeat;background-size: 100% 100%; }
+.mask > div span:nth-child(3){border-left: 1px solid #f0f0f0;}
+/* .submit-box p span{color: #999;font-size: 1rem;} */
+.mask div > .nospan{
+	background: #c4c4c4;
+	margin-right:.5rem; 
+}
+.submit-box .people{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 1rem;
+}
+.submit-box .head{
+	border-radius: 50%;
+    border: 1px solid #b4cf2c;
+    width: 4.17rem;
+    height: 4.17rem;
+    margin: 0 1rem;
+}

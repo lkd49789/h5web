@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>2019网络握手会</title>
+	<link href="../../common/css/common.css" rel="stylesheet" />
+	<link href="css/buy.css" rel="stylesheet" />
+	<link href="css/popbox.css" rel="stylesheet" />
+</head>
+<body>
+	<section class='wrapper' v-cloak>
+		<input type="tel" name="" v-model="total" maxlength="6" placeholder="请填写购买数量" oninput="javascript:this.value=this.value.replace(/[^\d]/g,'')">
+		<p>付款金额：<i>{{getTotal.totalPrice}}元</i> <span class="count">包含网络握手权：<i>{{getTotal.totalVote}}个</i></span></p>
+		<p class="btn" v-on:click="showBuyPanel()">确认购买</p>
+
+		<div class="pay-box" v-show="showpop==1">
+			<div>
+				<p>应付金额{{getTotal.totalPrice}}元</p>
+				<img v-on:click="buy('ali')" src="img/ali.png">
+				<img v-on:click="buy('wechat')" src="img/wechat.png">
+				<p v-on:click="closePop()" class="btn-cancel">取消</p>
+			</div>
+		</div>
+		<div class="mask" v-if="showpop==2">
+			<div>
+				<p>{{tips}}</p>
+				<span v-on:click="closePop()">{{btnstr}}</span>
+			</div>
+		</div>
+	</section>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<script src="../../common/js/vue.js"></script>
+<script src="../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/buy.js"></script>
+</html>

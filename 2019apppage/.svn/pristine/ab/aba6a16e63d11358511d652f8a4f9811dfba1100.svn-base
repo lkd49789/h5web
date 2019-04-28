@@ -1,0 +1,152 @@
+[v-cloak] {
+    display: none !important;
+} 
+body{
+    max-width: 640px;
+    margin:0 auto;
+    font-size: 1.5rem;
+    background: #f6f6f6;
+}
+#app{
+    min-height: 100%;
+    box-sizing: border-box;
+}
+/*tab栏*/
+.tab{
+    display: flex;
+    background: #fff;
+    position: relative;
+    border-bottom: 1px solid #f6f6f6;
+}
+.tab_item{
+    flex: 1;
+    text-align: center;
+    height: 3.33rem;
+    line-height: 3.33rem;
+    color: #c4c4c4;
+    font-weight:bold; 
+    font-size: 1.4rem;
+}
+.tab_active{
+    color: #ff7d7c;
+}
+.border{
+    position: absolute;
+    width: 2.08rem;
+    height: .38rem;
+    background: #ff7d7c;
+    border-radius: .3rem;
+    top: 100%;
+    transform: translate(-50%,-50%);
+    left: 25%;
+}
+
+/*我的信息*/
+.banner{
+    background: #fff;
+    padding: .75rem .83rem 0;
+}
+.banner img{
+    width: 100%;
+}
+.my_title{
+    font-size: 1.7rem;
+    line-height: 4.42rem;
+    background: #fff;
+    padding-left: .83rem;
+}
+.my_item{
+    background: #fff; 
+    padding: 0 .83rem;
+}
+.my_time{
+    color: #a2a2a2;
+    font-size: 1.3rem;
+}
+.my li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+.my_li_left{
+    display: flex;
+    align-items: center;
+}
+.my_li_left .head{
+    width: 4.33rem;
+    height: 4.79rem;
+    margin:0 .83rem 0 1.92rem;
+    padding: .62rem 0 0 .15rem;
+    box-sizing: border-box;
+}
+.my li:nth-child(1) .head{
+    background: url(../img/fans/one.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.my li:nth-child(2) .head{
+    background: url(../img/fans/two.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.my li:nth-child(3) .head{
+    background: url(../img/fans/three.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.my_li_left .head img{
+    width: 4.17rem;
+    height: 4.17rem;
+}
+.my_li_left_p2{
+    color: #828283;
+    font-size: 1.3rem;
+}
+.my_li_right{
+    text-align: center;
+    color: #fff;
+    background: url(../img/fans/right_bg.jpg) no-repeat;
+    background-size: 100% 100%;
+    width: 8.13rem;
+    height: 3.45rem;
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+}
+.my_bottom{
+    background: url(../img/fans/bottom_bg.jpg ) no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 7.75rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+.my_bottom_scroll{
+    overflow-x: scroll;
+    display: flex;
+    padding:0 .75rem;
+}
+.my_bottom_scroll .item{
+    display: flex;
+    margin-top: 3.46rem;
+    align-items: center;
+    color:#fff;
+    padding-right: 2.08rem;
+    width: 15.67rem;
+    flex-shrink:0;
+}
+.my_bottom_scroll .item .head{
+    width: 3.96rem;
+    height: 3.96rem;
+    margin: 0 .75rem 0 1.33rem;
+}
+.my_bottom_scroll .item .name{
+    line-height: 1.8rem;
+}
+.my_bottom_scroll .item .p2{
+    font-size: 1.3rem;
+}
+.bor{
+    height: 60%;
+    width:1px;
+    background: #fff;
+    margin-left: 2.08rem;
+}

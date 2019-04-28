@@ -1,0 +1,43 @@
+var app=new Vue({
+    el:"#app",
+    data:{
+        who:'mvp',
+        left:'17%',
+    },
+    components:{
+        /*我的信息页面 */
+        my:{
+            template:'#myPage'
+        },
+        /*积分榜页面 */
+        integral:{
+            template:'#integralPage',
+            data:function(){
+                return{
+                    indexShow:1
+                }
+            },
+            methods:{
+                ilTabClick:function(index){
+                    this.indexShow = index
+                }
+            }
+        },
+        mvp:{
+            template:"#mvpPage"
+        }
+    },
+    methods:{
+        tabClick:function(index){
+            this.left = index*33.33-16.66+"%"
+            console.log(this.left)
+            if(index == 1){
+                this.who = 'my'
+            }else if(index == 2){
+                this.who = 'integral'
+            }else if(index == 3){
+                this.who = 'mvp'
+            }
+        }
+    }
+})

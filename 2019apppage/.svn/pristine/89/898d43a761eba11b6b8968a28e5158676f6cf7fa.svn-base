@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GNZ48丝芭偶像节</title>
+    <link href="../../common/css/common.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/popbox.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div id="app">
+        <!--顶部-->
+        <!-- <div class="top">
+            <div class="top_btn"><img src="./img/top_btn1.png" alt="投票记录" @click="gotoPage('record.html')"></div>
+            <div class="top_btn"><img src="./img/top_btn2.png" alt="规则" @click="gotoPage('rule.html')"></div>
+        </div> -->
+        <!--中间 团队-->
+        <div class="center">
+            <div class="title"><img src="./img/center_title.png" alt="标题"></div>
+            <div class="center_content">
+                <div class="center_content_team">
+                    <div>
+                        <img src="./img/team1.png" alt="团队">
+                    </div>    
+                    <div class="center_content_team_num"><span>0</span>票</div>  
+                    <!-- <button>投票</button>           -->
+                </div>
+                <div class="center_content_team">
+                    <div>
+                        <img src="./img/team2.png" alt="团队">
+                    </div>    
+                    <div class="center_content_team_num"><span>0</span>票</div>  
+                    <!-- <button>投票</button>           -->
+                </div>
+                <div class="center_content_team">
+                    <div>
+                        <img src="./img/team3.png" alt="团队">
+                    </div>    
+                    <div class="center_content_team_num"><span>0</span>票</div>  
+                    <!-- <button>投票</button>           -->
+                </div>
+            </div>
+        </div>
+        <!--个人节目-->
+        <div class="bottom">
+            <div class="title"><img src="./img/bottom_title.jpg" alt="标题"></div>
+            <div class="bottom_content">
+                <!-- <div class="bottom_content_tab">
+                    <div :class="['tab',{'active':tabIndex == 1}]" @click='tabClick(1)'>
+                        <p class="p1">Team G</p>
+                        <p class="p2">未开始</p>
+                    </div>
+                    <div :class="['tab',{'active':tabIndex == 2}]"  @click='tabClick(2)'>
+                        <p class="p1">Team NII</p>
+                        <p class="p2">未开始</p>
+                    </div>
+                    <div :class="['tab',{'active':tabIndex == 3}]"  @click='tabClick(3)'>
+                        <p class="p1">Team Z</p>
+                        <p class="p2">未开始</p>
+                     </div>
+                </div> -->
+                <ul class="solo_wrap">
+                    <li class="solo">
+                        <div class="index">1</div>
+                        <div class="border">
+                            <div class="head"><img src="" alt=""></div>
+                            <div class="nameWrap">
+                                <p class="name"><b>陈陈陈</b><img src="" alt=""></p>
+                                <p class="num">0票</p>
+                            </div>
+                            <!-- <button>投票</button> -->
+                        </div>
+                        <div class="score"><span>0</span>分</div>
+                    </li>
+                    <li class="solo">
+                        <div class="index">1</div>
+                        <div class="border">
+                            <div class="head"><img src="" alt=""></div>
+                            <div class="nameWrap">
+                                <p class="name"><b>陈陈陈</b><img src="" alt=""></p>
+                                <p class="num">0票</p>
+                            </div>
+                            <!-- <button>投票</button> -->
+                        </div>
+                        <div class="score"><span>0</span>分</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottomimg"> <img src="./img/bottom.jpg" alt="底部图片"></div>
+        <!--弹框-->
+        <div class="mask" v-if="showpop != 0" v-cloak  @touchmove.prevent>
+            <!-- no money -->
+            <div class="no-money" v-if="showpop == 1">
+                <p>{{tips}}</p>
+                <span v-on:click="closePop()">知道了</span>
+            </div>
+            <div class="submit-box" v-if="showpop == 2">
+                <div class="people">
+                    <div class="head"><img src="" alt=""></div>
+                    <div><b>某某</b></div>
+                    <img src="" alt="">
+                </div>
+                <div><input type="text" placeholder="在这里输入票数 1鸡腿=1票"></div>
+                <p>所需鸡腿<span>0</span></p>
+                <p>我的鸡腿<span>666</span> <span>充值</span></p>
+                <span v-on:click="submit()">投票</span>
+            </div>
+            <div class="no-money" v-if="showpop == 3">
+                <p>鸡腿不足,请先充值</p>
+                <span v-on:click="recharge()">去充值</span>
+                <span v-on:click="closePop()">知道了</span>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<!-- <script src="../../common/js/vue.js"></script> -->
+<script src='https://cdn.bootcss.com/vue/2.6.10/vue.js'></script>
+<script src="../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/index.js"></script>
+</html>

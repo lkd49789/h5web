@@ -1,0 +1,26 @@
+var app=new Vue({
+    el:"#app",
+    data:{
+        who:"my",
+        left:'25%'
+    },
+    components:{
+        /*我的信息页面 */
+        my:{
+            template:'#myPage'
+        },
+        know:{
+            template:"#knowPage"
+        }
+    },
+    methods:{
+        tabClick:function(index){
+            this.left = index*50-25+"%"
+            if(index == 1){
+                this.who = 'my'
+            }else{
+                this.who = 'know'
+            }
+        }
+    }
+})

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GNZ48丝芭偶像节</title>
+    <link href="../../common/css/common.css" rel="stylesheet" />
+</head>
+<style>
+     body{
+        max-width: 640px;
+        margin:0 auto;
+        position: relative;
+        font-size: 1.3rem;
+    }
+    #app{
+        min-height: 100%;
+        background: #fff;
+    }
+    .title{
+        font-size: 1.8rem;
+        background: #f6f6f6;
+        padding: .67rem 1.25rem;
+    }
+    ul{
+        padding-left: 1.25rem;
+    }
+    li{
+        display: flex;
+        justify-content: space-between;
+        line-height: 3.75rem;
+        height: 3.75rem;
+        border-bottom: 1px solid #f5f5f5;
+        padding-right: 1.25rem;
+    }
+    .time{
+        color: #c4c4c4;
+    }
+</style>
+<body>
+    <div id="app">
+        <p class="title"><b>投票纪录</b></p>
+        <ul>
+            <li>
+                <div>为<span>某某</span>投了<span>300</span>票</div>
+                <div class="time">2019.5.1 10:30</div>
+            </li>
+        </ul>
+    </div>
+</body>
+<script src="../../common/js/vue.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script>
+    var app=new Vue({
+        el:"#app",
+        data:{
+            list:[]
+        },
+        created:function(){
+            
+        }
+    })
+</script>
+</html>

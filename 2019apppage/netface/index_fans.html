@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<title>网络握手会规则</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+	<meta http-equiv="Cache-Control" content="max-age=0">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<link rel="stylesheet" href="../../common/css/common_mobile_v1.css">	
+	<link rel="stylesheet" href="css/popbox.css">
+	<link rel="stylesheet" href="css/index_fans.css">
+</head>
+<body>
+	<section class="wrapper" v-cloak>
+		<section class="info">
+			<div class="title"><span>网络握手会规则</span></div>
+			<p class="subtitle"><b>参加网络握手会的账号必须在口袋48中进行实名认证，使用已经实名认证过的丝瓜账号也需要再次在口袋48中实名认证。</b></p>
+			<p><b>• 网络握手开始前，请务必注意衣冠整齐。</b></p>
+			<p>• 网络握手过程中，成员如遇恶意粉丝，可在通知Staff后退出该次握手。<b>切勿和粉丝进行相互谩骂，保持良好的心态。</b></p>
+			<p>• 成员应严格遵守公司的保密制度，切勿在网络握手过程中泄露公司的商业秘密，每位成员均签署过保密协议，<b>公司的各项运营制度以及内容管理政策均属于保密内容。</b></p>
+			<br>
+			<br>
+			<p>以上，请参加网络握手的成员都务必要仔细阅读，如违反本注意事项中的条款将面临相应限制或处罚措施，包括但不限于：限制、关闭、回收、或终止成员微博、口袋48等各项工具的使用，限制或停止某项单独服务（如视频直播）并根据实际情况决定是否恢复使用。</p>
+			
+			<div class="btns">
+				<button v-if="verification==0" v-on:click="authrealname()" class="btn btn-realname">去实名认证</button>
+				<button  v-on:click="agree()" class="btn btn-agreement">同意规则进入预约</button>
+			</div>
+
+			
+		</section>
+		
+		<div class="mask" v-if="showpop == 1">
+			<div class="submit-box" >
+				<p><b>你的账号还未在口袋48<br>中实名认证。</b></p>
+				<span v-on:click="closePop()">再说</span>
+				<span v-on:click="authrealname()">去实名认证</span>
+			</div>
+		</div>
+	</section>
+</body>
+<script src="https://h5.48.cn/common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"> </script>
+<script src="../../common/js/vue.js"></script>
+<script src="js/index_fans.js"></script>
+</html>
+

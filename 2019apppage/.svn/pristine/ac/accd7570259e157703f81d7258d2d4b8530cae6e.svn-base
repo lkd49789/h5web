@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GNZ48丝芭偶像节</title>
+    <link href="../../common/css/common.css" rel="stylesheet" />
+</head>
+<style>
+    body{
+        max-width: 640px;
+        margin:0 auto;
+        position: relative;
+        font-size: 1.3rem;
+    }
+    .wrap{
+        background: #ffffff;
+        min-height: 100%;
+        box-sizing: border-box;
+        padding: 1.42rem 1.25rem 1rem;
+    }
+    .title{
+        font-size: 1.6rem;
+        font-weight: bold;
+    }
+    .title span{
+        background: url('./img/title_bg.png') no-repeat left bottom/100% 30%;
+    }
+    .list{
+        display: flex;
+        margin-top: 1.2rem;
+    }
+    .list .index div{
+        border-radius:50%; 
+        background: #e2d8fe;
+        color: #5d2dd2;
+        width: 1.67rem;
+        height: 1.67rem;
+        text-align: center;
+        line-height: 1.67rem;
+        font-weight: bold;
+    }
+    .list .index{
+        margin-right: .42rem;
+        padding-top: .21rem;
+    }
+</style>
+<body>
+    <div class="wrap">
+        <p class="title"><span>投票说明：1鸡腿=1票</span></p>
+        <div class="list">
+            <div class="index"><div>1</div></div>
+            <p>可在GNZ48各队《十八个闪耀瞬间》首演以及GNZ48三周年联合公演的投票时段，为演出成员及演出队伍通过口袋48用鸡腿进行投票，角逐出最受欢迎个人节目奖（金/银/铜奖）以及最佳团队奖各1名，各奖项结果将于<b>5月4日联合公演结束前宣布<br/>说明：GNZ48 三个队伍将有单独的投票项进行投票</b></p>
+        </div>
+        <div class="list">
+            <div class="index"><div>2</div></div>
+            <p><b>投票时段如下：</b><br/>
+                5月1日 GNZ48 TEAM G 20:00-24:00<br/>                   
+                5月2日 GNZ48 TEAM NIII 20:00-24:00<br/>                   
+                5月3日 GNZ48 TEAM Z 20:00-24:00<br/>                    
+                5月4日 GNZ48 16:30-18:30<br/>
+                <b>说明：参与演出的所有成员及三支队伍将于5月4日投票时段中开通投票通道</b></p>
+        </div>
+        <div class="list">
+            <div class="index"><div>3</div></div>
+            <p><b>成员及队伍所获票数将在公演直播画面上显示</b></p>
+        </div>
+        <div class="list">
+            <div class="index"><div>4</div></div>
+            <p><b>奖项设置：</b><br/> 
+                <b>最受欢迎个人节目奖-金奖</b><br/>                    
+                奖励：获奖成员可在GNZ48任意公演任意时段加播该成员的Solo环节1次，并获得一年期公演专用金色话筒使用权。<br/>                    
+                <b>最受欢迎个人节目奖-银奖</b><br/>                     
+                奖励：获奖成员可在GNZ48任意公演任意时段加播该成员的Solo环节1次，并获得一年期公演专用银色话筒使用权。<br/>                     
+                <b>最受欢迎个人节目奖-铜奖</b><br/>                     
+                奖励：获奖成员可在GNZ48任意公演任意时段加播该成员的Solo环节1次，并获得一年期公演专用铜色话筒使用权。<br/>                     
+                <b>最佳团队奖</b><br/>                    
+                奖励：获奖队伍可获得全权策划一场在GNZ48星梦剧院上演的SNH48 GROUP第六届偶像年度人气总决选团队拉票公演权利                 
+                </p>
+        </div>
+    </div>
+</body>
+</html>
