@@ -1,8 +1,8 @@
 var app=new Vue({
     el:"#app",
     data:{
-        who:'mvp',
-        left:'83%',
+        who:'my',/*当前页面 */
+        left:'16.66%',/*tab下划线位置 */
     },
     components:{
         /*我的信息页面 */
@@ -62,11 +62,12 @@ var app=new Vue({
                     }else{
                         window.location.href = url
                     }         
-                },
+                }
             }
         }
     },
     methods:{
+        /*tab切换 */
         tabClick:function(index){
             this.left = index * 33.33 - 16.66 +"%"
             if(index == 1){

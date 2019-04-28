@@ -67,6 +67,7 @@ body{
     font-size: 1rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .my_time .time{
     display: flex;
@@ -75,7 +76,7 @@ body{
     border-width:0 .6rem .7rem;
     border-style:solid;
     border-color:transparent transparent #a2a2a2;
-    transform: translateY(-.9rem); 
+    transform: translateY(-.5rem); 
     margin-left: .5rem;
 }
 /*三角反转*/

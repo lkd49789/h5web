@@ -20,20 +20,10 @@ var app=new Vue({
                     el.style.color='#b0afaf'
                   }
                 }
-              },
-              reverse:{
-                bind:function(el,bind){
-                  if(bind.value > 3){
-                    el.style.borderWidth='0 .6rem .7rem';
-                
-                  }
-                }
               }
-            },
-            methods:{
-
             }
         },
+        /*重新认识下页面 */
         know:{
             template:"#knowPage",
             data:function(){
@@ -44,7 +34,7 @@ var app=new Vue({
                 height1:0,
                 height2:0,
                 height3:0,
-                available:true
+                available:true /*防止多次触底请求 */
 
               }
             },
@@ -65,7 +55,7 @@ var app=new Vue({
                 newImg.onload = function(){
                     this.img(items,len)
                 }.bind(this) 
-                newImg.onload = function(){
+                newImg.error = function(){
                   this.img(items,len)
                 }.bind(this) 
               },
@@ -82,10 +72,10 @@ var app=new Vue({
                   // 3- 找到数组中最小高度  和 它的索引
                   var minHeight = this.arr[0];
                   var index = 0;
-                  for (var j = 0; j < this.arr.length; j++) {
+                  for (var j = 1; j < this.arr.length; j++) {
                     if (minHeight > this.arr[j]) {
-                      minHeight = this.arr[j];
-                      index = j;
+                        minHeight = this.arr[j];
+                        index = j;
                     }
                   }
                   // 4- 设置下一行的第一个盒子位置
@@ -111,7 +101,7 @@ var app=new Vue({
                // 可视区域
                this.height3 = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
                if(this.height3 + this.height1 >= this.height2 && this.available){
-                 console.log(1)
+                  console.log(1)
                }
              }
             }

@@ -2,7 +2,7 @@
 (function(data) {
     //正式接口
     
-    // var URL_PATH = "https://h5.48.cn/2019apppage/GNZvote/"
+    // var URL_PATH = "https://h5.48.cn/2019apppage/IDFT/"
     // var LINK_URL = "https://pactivity.48.cn/app-activity/";                     //项目地址
     //测试
     var URL_PATH = "http://192.168.0.9/2019apppage/IDFT/"    //项目地址
