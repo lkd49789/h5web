@@ -1,18 +1,18 @@
-(function(data){
+(function(data) {
+ //vip/detail 跳转vip短链接
     //web端测试（用户信息）
     var webUserInfo = {
-        "appid":"27422",                                //用户ID
-        "apptoken":"/SV7Ugtmu4Z5guu5cvq4gU7vsflc3NDuUsd/TPS44h3MnwXEeZbAIg==",                //验证Token
+        "appid":"27422",     
+        "apptoken":"",
         "uname":"nicker",                                 //用户昵称
         "avata":"avata",                                    //头像地址
-        "dev_cd":"dev_cd",                        //设备号
-        "bindInfo":"bindInfo"
+        "dev_cd":"dev_cd"                        //设备号
     }
-
+    
     //口袋用户信息
     if(checkFromNew()){
         var u_info = JSON.parse(dsBridge.call("snhUserInfo"))
-        var nickname = '';
+        var nickname = ''
         if(isFromAndroid()){
             nickname = u_info.userInfo.nickName
         }else{
@@ -38,10 +38,30 @@
     data.getAppUserInfo = function(){
         if(checkFromApp()){
             return appUserInfo;
-        }else{           
+        }else{
+            
             return webUserInfo;
         }
     }
+    /*报名 */
+    data.getApply = function(num,succ){
+        $.ajax({
+            url:CONFIG.getLink() +"api/activity/v1/theatreCanvass",
+            type: "POST",
+            dataType: "json",
+            beforeSend: function (request) {
+                request.setRequestHeader("token", main.getAppUserInfo().apptoken);
+            },
+            data: JSON.stringify({ "type": num}),
+            contentType: 'application/json',
+            success: function (data) {
+                succ(data)
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                // alert("eee");
+            }
+        })
+    }
 
     
-}(window.main = {}))
+}(window.main = {}));

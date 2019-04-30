@@ -1,0 +1,55 @@
+[v-cloak]{
+    display: none;
+}
+html,body{color: #c4c4c4;}
+h1{font-size: 1.6rem;font-weight: bold;color: #000;text-align: center;padding: 1.5rem 0;}
+section{
+	position: relative;
+    
+}
+section > div{padding: 0 3%;background-color: #fff;margin-bottom: .3rem;}
+section > div >p{color: #000;margin: .5rem 0;}
+.empty{background: none;}
+.empty img{width: 100%;}
+.empty p{text-align: center;color: #949494;}
+.btn{
+	background: linear-gradient(to right,#ccacff,#6057ff );
+	text-align: center;
+	font-size: 1.5rem;
+	color: #fff;
+	border-radius: 2rem;
+	width: 50%;
+	margin: 0 auto;
+	padding: .7rem 0;
+	margin-top: 2rem;
+}
+
+/*lists*/
+.lists{}
+.lists li{padding: 1rem 0;border-bottom: 1px solid #f2f2f2;position: relative;}
+.lists li > div{display: inline-block;vertical-align: middle;}
+.lists li > div:nth-child(3) {float: right;}
+.lists li > div:nth-child(3) span{line-height: 7rem;}
+.m-info p{font-weight: bold;font-size: 1.4rem;color: #000;}
+.m-info div{font-size: .8rem;margin-top: .5rem;}
+.m-info div span{margin-right: .5rem;}
+.m-info p span{
+	
+}
+.status{color:#ff0000; font-size: .9rem;}
+.status-1{background-color: #c4c4c4;color: #fff;padding: 2px 5px;border-radius: 3px;margin-left: 5px;font-size: 1.1rem;}
+.avatar{width: 5rem;height: 5rem;position: relative;overflow: hidden;border-radius: 100%;}
+.avatar img{width: 100%;margin-top: -.8rem;}
+
+
+.btns{background: none;text-align: center;margin-top: 5rem;}
+.btns div p{
+	display: inline-block;
+	width: 30%;
+	text-align: center;
+	background-color: #fff;
+	padding: .5rem 0;
+	margin: 0 1%;
+	border-radius: .3rem;
+	color: #949494;
+}

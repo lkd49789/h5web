@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>申诉</title>
+	<link href="../../common/css/common.css" rel="stylesheet" />
+	<link href="css/popbox.css" rel="stylesheet" />
+	<link href="css/appeal.css" rel="stylesheet" />
+</head>
+<body>
+	<section class='wrapper' v-cloak>
+		<h1>选择需要申诉的握手场次</h1>
+		<div class="empty" style="display: none;">
+			<img src="img/empty1.png">
+			<p>你还没有参加过握手</p>
+		</div>
+		
+		<div class="lists">
+			<ul>
+				<li v-on:click="gotoPage(0)">
+					<div class="avatar"><img src="http://www.snh48.com/images/member/mp_10086.jpg"></div>
+					<div class="m-info">
+						<p>邵雪聪<img src=""><span class="status-1">已申诉</span></p>
+						<div>
+							<span>开始 22：24</span>
+							<span>结束 22：36</span>
+							<span>12个握手券</span>
+						</div>
+					</div>
+					<div><span class="status">被踢出</span></div>
+				</li>
+				<li>
+					<div class="avatar"><img src="http://www.snh48.com/images/member/mp_10086.jpg"></div>
+					<div class="m-info">
+						<p>邵雪聪<img src=""><span class="status-1">已申诉</span></p>
+						<div>
+							<span>开始 22：24</span>
+							<span>结束 22：36</span>
+							<span>12个握手券</span>
+						</div>
+					</div>
+					<div><span class="status">被踢出</span></div>
+				</li>
+			</ul>
+		</div>
+		<div class="btns">
+			<h1>其他问题申诉</h1>
+			<div>
+				<p v-on:click="gotoPage(1)">队列问题</p>
+				<p v-on:click="gotoPage(2)">握手券兑换</p>
+				<p v-on:click="gotoPage(3)">偶像相关</p>
+			</div>
+		</div>
+		<!-- 弹框 -->
+		<div class="mask" v-if="showpop==2">
+			<div>
+				<p>{{tips}}</p>
+				<span v-on:click="closePop()">{{btnstr}}</span>
+			</div>
+		</div>
+	</section>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<script src="../../common/js/vue.js"></script>
+<script src="../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/appeal.js"></script>
+</html>

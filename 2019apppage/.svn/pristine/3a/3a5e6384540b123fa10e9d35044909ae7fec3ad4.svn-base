@@ -1,0 +1,292 @@
+[v-cloak] {
+    display: none !important;
+} 
+body{
+    max-width: 640px;
+    margin:0 auto;
+    font-size: 1.5rem;
+    background: #f6f6f6;
+}
+#app{
+    min-height: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+/*tab栏*/
+.tab{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: #fff;
+    position: relative;
+    border-bottom: 1px solid #f6f6f6;
+}
+.tab_item{
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    text-align: center;
+    height: 3.33rem;
+    line-height: 3.33rem;
+    color: #c4c4c4;
+    font-weight:bold; 
+    font-size: 1.4rem;
+}
+.tab_active{
+    color: #ff7d7c;
+}
+.border{
+    position: absolute;
+    width: 2.08rem;
+    height: .38rem;
+    background: #ff7d7c;
+    border-radius: .3rem;
+    top: 100%;
+    -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+    left: 25%;
+}
+
+/*我的信息*/
+.my{
+    padding-bottom: 9rem;
+}
+.banner{
+    background: #fff;
+    padding: .75rem .83rem 0;
+}
+.banner img{
+    width: 100%;
+}
+.my_title{
+    font-size: 1.7rem;
+    line-height: 4.42rem;
+    background: #fff;
+    padding-left: .83rem;
+}
+.my_item{
+    background: #fff; 
+    padding: 0 .83rem;
+}
+.my_time{
+    color: #a2a2a2;
+    font-size: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.my_time .time{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.my_time .triangle{
+    border-width:0 .6rem .7rem;
+    border-style:solid;
+    border-color:transparent transparent #a2a2a2;
+    -webkit-transform: translateY(-.5rem);
+            transform: translateY(-.5rem); 
+    margin-left: .5rem;
+}
+/*三角反转*/
+.my_time .reverse{
+    border-width:.7rem .6rem 0;
+    border-color:#a2a2a2 transparent transparent;
+    -webkit-transform: translateY(.5rem);
+            transform: translateY(.5rem); 
+}
+.my_time .year{
+    background: #fff2f2;
+    border-radius: 1rem;
+    color: #ff7d7c;
+    font-size: 1rem;
+    padding: .2rem 1.2rem; 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.my_time .year img{
+    width: 1.04rem;
+    margin-left: .5rem;
+}
+.my li{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1rem 0;
+}
+.my_li_left{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.my_li_left .head{
+    width: 4.33rem;
+    height: 4.79rem;
+    margin:0 .83rem 0 1.92rem;
+    padding: .62rem 0 0 .15rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.my li:nth-child(1) .head{
+    background: url(../img/fans/one.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.my li:nth-child(2) .head{
+    background: url(../img/fans/two.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.my li:nth-child(3) .head{
+    background: url(../img/fans/three.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.my_li_left .head img{
+    width: 4.17rem;
+    height: 4.17rem;
+}
+.my_li_left_p2{
+    color: #828283;
+    font-size: 1rem;
+}
+.my_li_right{
+    text-align: center;
+    color: #fff;
+    background: url(../img/fans/right_bg.jpg) no-repeat;
+    background-size: 100% 100%;
+    width: 8.13rem;
+    height: 3.45rem;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+}
+.my_bottom{
+    max-width: 640px;
+    background: url(../img/fans/bottom_bg.png ) no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 7.75rem;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+}
+.my_bottom_scroll{
+    overflow-x: scroll;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding:0 .75rem;
+}
+.my_bottom_scroll .item{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 3.46rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color:#fff;
+    padding-right: 2.08rem;
+    width: 18rem;
+    -ms-flex-negative:0;
+        flex-shrink:0;
+}
+.my_bottom_scroll .item:last-child{
+    padding-right: 0;
+}
+.my_bottom_scroll .item .head{
+    width: 3.96rem;
+    height: 3.96rem;
+    margin: 0 .75rem 0 1.33rem;
+}
+.my_bottom_scroll .item .name{
+    line-height: 1.8rem;
+}
+.my_bottom_scroll .item .p2{
+    font-size: 1.3rem;
+}
+.bor{
+    height: 60%;
+    width:1px;
+    background: #fff;
+    margin-left: 4.08rem;
+}
+
+/*重新认识下*/
+.know{
+    padding: 0 .5rem;
+    position: relative;
+    margin: 0 .33rem;
+    height: 500px;
+}
+.know_itemWrap{
+    position: absolute;
+    width:50%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: .83rem .33rem 0;
+} 
+  
+.know_item{
+    border-radius: .6rem;
+    background: #fff;
+    padding-bottom:  .75rem;
+}
+.know_item .img{
+    width:100%;
+}
+.know_item .title{
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    padding: .63rem;
+}
+.know_item .user{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #8c8c8d;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 1.3rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.user_right{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 1rem;
+}
+.fire{
+    height: 1.2rem;
+    margin-right:.5rem; 
+}

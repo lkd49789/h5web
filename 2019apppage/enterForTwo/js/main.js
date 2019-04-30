@@ -2,13 +2,12 @@
  //vip/detail 跳转vip短链接
     //web端测试（用户信息）
     var webUserInfo = {
-        "appid":"27422",                                //用户ID
-        "apptoken":"NqKC5htxUpLWwMAdAOuQeo7",                //非上海团成员 Token
+        "appid":"27422",     
+        "apptoken":"",
         "uname":"nicker",                                 //用户昵称
         "avata":"avata",                                    //头像地址
         "dev_cd":"dev_cd"                        //设备号
     }
-    
     
     //口袋用户信息
     if(checkFromNew()){
@@ -44,33 +43,16 @@
             return webUserInfo;
         }
     }
-    //获取时间
-    data.getList = function (succ) {
+    /*报名 */
+    data.getApply = function(num,succ){
         $.ajax({
-            url: CONFIG.getLink() + "api/activity/v1/dateList",
+            url:CONFIG.getLink() +"api/activity/v1/theatreCanvass",
             type: "POST",
             dataType: "json",
             beforeSend: function (request) {
                 request.setRequestHeader("token", main.getAppUserInfo().apptoken);
             },
-            success: function (data) {
-                succ(data)
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                // alert("eee");
-            }
-        });
-    }
-    //预约 
-    data.upEnterFor = function (date,succ) {
-        $.ajax({
-            url: CONFIG.getLink() + "api/activity/v1/reservation",
-            type: "POST",
-            dataType: "json",
-            beforeSend: function (request) {
-                request.setRequestHeader("token", main.getAppUserInfo().apptoken);
-            },
-            data: JSON.stringify({ "date": date}),
+            data: JSON.stringify({ "type": num}),
             contentType: 'application/json',
             success: function (data) {
                 succ(data)
@@ -78,7 +60,7 @@
             error: function (jqXHR, textStatus, errorThrown) {
                 // alert("eee");
             }
-        });
+        })
     }
 
     

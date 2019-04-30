@@ -1,0 +1,45 @@
+var vm=new Vue({
+    el:'#app',
+    data:{
+        showpop:0,/*控制弹框显示隐藏 */
+        tips:'报名成功',/*弹框内容 */
+        alreadyShow:false /*是否成功报名 */
+    },
+    created:function(){
+        main.getApply(1,function(data){
+            if(data.status == 200){
+                if(data.content.code == 2){
+                    /*未报名 */
+                    vm.alreadyShow = false;
+                }else{
+                    vm.alreadyShow = true;
+                }
+            }else{
+                vm.tips = data.message;
+                vm.showpop = 1;
+            }
+        })
+    },
+    methods:{
+        /*报名 */
+        submit:function(){
+            main.getApply(2,function(data){
+                if(data.status == 200){
+                    if(data.content.code == 1){
+                        /*报名成功 */
+                        vm.alreadyShow = true;
+                        vm.tips = '报名成功';
+                        vm.showpop = 1;
+                    }
+                }else{
+                    vm.tips = data.message;
+                    vm.showpop = 1;
+                }
+            })
+        },
+        /*弹框 */
+        closePop:function(){
+            vm.showpop = 0;
+        }
+    }
+})

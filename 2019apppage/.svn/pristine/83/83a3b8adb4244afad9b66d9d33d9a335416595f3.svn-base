@@ -1,0 +1,52 @@
+[v-cloak]{
+    display: none;
+}
+html,body{color: #808080;background-color: #fff;}
+h1{font-size: 1.5rem;font-weight: bold;color: #000;}
+section{
+	position: relative;
+}
+.member-box{}
+.member-box{padding: 1rem 3%;border-bottom: 1px solid #f2f2f2;position: relative;}
+.member-box > div{display: inline-block;vertical-align: middle;}
+.member-box > div:nth-child(3) {float: right;}
+.member-box > div:nth-child(3) span{line-height: 7rem;}
+.m-info p{font-weight: bold;font-size: 1.4rem;color: #000;}
+.m-info div{font-size: .8rem;margin-top: .5rem;}
+.m-info div span{margin-right: .5rem;}
+.avatar{width: 5rem;height: 5rem;position: relative;overflow: hidden;border-radius: 100%;}
+.avatar img{width: 100%;margin-top: -.8rem;}
+.status{color:#ff0000; font-size: .9rem;}
+
+section > div{padding: 3%;background-color: #fff;}
+section > div >p{color: #000;margin: 1rem 0;}
+
+.btn{
+	background: linear-gradient(to right,#ccacff,#6057ff );
+	text-align: center;
+	font-size: 1.5rem;
+	color: #fff;
+	border-radius: 2rem;
+	width: 50%;
+	margin: 0 auto;
+	padding: .7rem 0;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+/*reason*/
+.reason{position: relative;}
+.reason > div p{background-color: #f5f5f5;border-radius: .5rem;padding: 1rem;text-align: center;}
+.reason div{position: relative;margin-top: 1rem;color: #000;}
+.reason div span{position: absolute;right: 3%;bottom: 3%;}
+.choose{background-color: #bbb2f3 !important;color: #fff;}
+textarea{
+	width: 94%;
+	height: 10rem;
+	padding: .5rem 3% 2rem 3%;
+	border: none;
+	border-radius: .5rem;
+	background-color: #f5f5f5;
+}
+.tip{text-align: left !important;background: none !important;padding-left: 0 !important;color: #808080;}
+.mask div p{color: #000;font-weight: bold;}

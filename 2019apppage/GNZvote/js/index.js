@@ -11,8 +11,12 @@ var app=new Vue({
     created:function(){
         var that = this;
         main.getList(function(data){
-            that.teamList = data.content.gnzTeamList
-            that.idolList = data.content.gnzMemberList
+            if (data.status == 200) {
+                that.teamList = data.content.gnzTeamList
+                that.idolList = data.content.gnzMemberList
+            }else{
+                alert(data.message)
+            }
         })
 
 

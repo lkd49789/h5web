@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SNH48第六届偶像年度人气总决选剧场拉票会细则</title>
+    <link href="../../common/css/common.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/popbox.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div id='app'>
+        <!--是否预约过-->
+        <div v-cloak class='already' v-if='alreadyShow' >
+            <div class='imgWrap'>
+                <img src="img/nike.png" alt="对勾">
+            </div>
+            <div class='textWrap'>
+                <p class='p1'><b>已成功报名！</b></p>
+            </div>
+        </div>
+        
+        <div class='top'>  
+            <p class="top_title">SNH48第六届偶像年度人气总决选剧场拉票会细则</p>
+            <p>
+                一、对象：<b>SNH48四支队伍现役成员</b>
+            </p>
+            <p>
+                二、拉票方式：普通公演中的个人拉票会，每人<b>15分钟</b>。
+            </p>
+            <p>
+                三、报名方式：<b>口袋48 APP登陆报名</b>。
+            </p>
+            <p>
+                四、报名时间：<b class="text_bg">2019年4月30日—2019年5月10日</b>
+            </p> 
+            <p>五、拉票内容规定：</p>
+            <p class="indent">
+                1. 唱歌、舞蹈、小品、乐器、演讲等，题材不限；<br/>
+                2. 拉票表演中不得演唱<b>日文、韩文歌曲，舞蹈歌曲选择时不可以出现日文；</b><br/>
+                3. 为避免版权纷争，<b>AKB48未翻过的公演或单曲及46系歌曲即使翻译后也不得演出；</b><br/>
+                4. 拉票时间为每人<b>15分钟</b>，总选政见视频不计入拉票时间，15分钟倒计时结束后，拉票结束，请各位成员把握时间；<br/>
+                5. <b>灯光会延续往拉票会方式</b>，预设6种灯光，现场会根据成员走位及歌曲类型做细微调整，<b>有特殊灯光要求需至少提前一天沟通</b>；<br/>
+                6. <b>公演当日不接受临时节目修改</b>；<br/>
+                7. 本年度拉票环节将<b>不限制助演人数</b>，但助演成员不得因参与拉票环节耽误后续曲目的演出，请成员们把握时间。
+            </p>
+            <p>六、录音内容规定：</p>
+            <p class="indent">
+                1. 拉票公演的歌单需提前<b>一周的周三中午12点前</b>，交给各队声乐或舞蹈老师。通过老师审核后，才可以进行后续录音；如未按时提交，将不再安排录音；<br/>
+                2. 拉票公演所使用到的伴奏音频，<b>需成员自行下载并提供给声乐或舞蹈老师（团内歌曲除外）</b>；<br/>
+                3. <b>拉票公演不限制歌曲录音数量，单个成员的拉票公演仅提供一首歌曲的后期修音制作。（串烧曲目仅录音）</b>。                    
+            </p>
+            <div class='top_btnWrap'>
+                <button :class='["top_btn",{"alreadyBtn":alreadyShow}]' @click='!alreadyShow && (showpop = 2)'>报名</button>
+            </div>
+        </div> 
+        <div v-cloak class="mask" v-if='showpop != 0' @touchmove.prevent>
+                <!-- no money -->
+                <div class="no-money" v-if="showpop == 1">
+                    <p><b>{{tips}}</b></p>
+                    <span v-on:click="closePop()">知道了</span>
+                </div>
+                <div class="submit-box" v-if="showpop == 2">
+                    <p><b>是否报名参加</b></p>
+                    <span class='nospan' v-on:click="closePop()">再想想</span>
+                    <span v-on:click="submit()">确定参加</span>
+                 </div>
+        </div>
+    </div>
+
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<script src="../../common/js/vue.js"></script>
+<!-- <script src='https://cdn.bootcss.com/vue/2.6.10/vue.js'></script> -->
+<script src="../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/index.js"></script>
+</html>
