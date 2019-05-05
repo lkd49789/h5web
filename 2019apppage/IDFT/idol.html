@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/idol.css">
 </head>
 <body>
-    <div id="app">
+    <div id="app" v-cloak>
         <div class="tab">
             <div :class="['tab_item',{'tab_active':who == 'my'}]" @click="tabClick(1)">我的信息</div>
             <div :class="['tab_item',{'tab_active':who == 'integral'}]" @click="tabClick(2)">积分榜</div>

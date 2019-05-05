@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IDFT五月任务</title>
+    <link href="../../common/css/common.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div id="app">
+        <p class="title"><img src="./img/title.png" alt=""></p>
+        <div class="wrap">
+            <p class="wrap_title"><b>根据IDFT成员的日常表现，以及粉丝人气，偶像态度等相关内容，口袋48每月会进行分数考核。</b></p>
+            <div class="itme">
+                <div class="itme_title">
+                    <img src="./img/item_title1.png" alt="标题">
+                </div>
+                <p><b class="text_bg">个人微博内容是否积极阳光，</b>是否主动积极，每月微博条数不少于10条，每条计分1000分。封顶10000分。</p>
+                <p><b class="text_bg">个人展示，包括各类社交媒体内容发布，</b>如口袋48，B站，抖音，唱吧，小红书等，每条计分1000分，封顶5000分，如在口袋48以外的其他APP发布内容，请自行通知袋王，或分享微博进行通知。</p>
+            </div>
+
+            <div class="itme">
+                    <div class="itme_title">
+                        <img src="./img/item_title2.png" alt="标题">
+                    </div>
+                    <p><b class="text_bg">每月直播次数不少于5次，</b>每小时计1000分，封顶15000分。</p>
+                    <p><b class="text_bg">每月鸡腿结算数量，</b>每1万个鸡腿，计5000分，不设封顶。</p>
+                    <p><b class="text_bg">每月微博、口袋48粉丝数量增长，</b>每100人计1000分，封顶20000分。</p>
+                </div>
+
+            <div class="itme">
+                    <div class="itme_title">
+                        <img src="./img/item_title3.png" alt="标题">
+                    </div>
+                    <p>口袋房间内的粉丝互动，内容积极阳光，<b>每天计50分，封顶1500分。</b></p>
+                    <p><b class="text_bg">粉丝安利：</b>每位粉丝投稿成员的安利作品，形式不限，每作品计500分，封顶20000分。</p>
+                </div>    
+            <div class="lastItem">
+                <p>根据以上IDFT的考核规则，每月都会生成积分排行榜。</p>
+                <p><b class="text_bg">5月基础津贴标准：20000分。</b></p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

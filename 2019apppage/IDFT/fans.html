@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/fans.css">
 </head>
 <body>
-    <div id="app">
+    <div id="app" v-cloak>
         <div class="tab">
             <div :class="['tab_item',{'tab_active':who == 'my'}]" @click="tabClick(1)">我的信息</div>
             <div :class="['tab_item',{'tab_active':who == 'know'}]" @click="tabClick(2)">重新认识下</div>

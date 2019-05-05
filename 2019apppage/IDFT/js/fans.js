@@ -63,6 +63,7 @@ var app=new Vue({
               img:function(items,len){
                 var i = this.i;
                 let itemWidth= this.$refs.know.offsetWidth /this.columns; //总的宽度除以几列
+                items[i].style.width = 100 / this.columns + "%"; /*设置宽度 */
                 if(i<this.columns){
                   // 2- 确定第一行
                   items[i].style.top = 0;
@@ -71,7 +72,9 @@ var app=new Vue({
                 }else if(i>=this.columns){// 其他行
                   // 3- 找到数组中最小高度  和 它的索引
                   var minHeight = this.arr[0];
+                  // var minHeight = Math.min.apply(Math,this.arr);
                   var index = 0;
+                  // var index = this.arr.indexOf(minHeight);
                   for (var j = 1; j < this.arr.length; j++) {
                     if (minHeight > this.arr[j]) {
                         minHeight = this.arr[j];
