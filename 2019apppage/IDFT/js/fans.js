@@ -28,6 +28,68 @@ var app=new Vue({
             template:"#knowPage",
             data:function(){
               return {
+                list:[
+                  {
+                    img:'./img/fans/img.jpg',
+                    text:'哈哈哈哈哈哈啊哈哈哈',
+                    name:'哈哈',
+                    num:888
+                  },
+                  {
+                    img:'./img/fans/img.jpg',
+                    text:'',
+                    name:'哈哈4',
+                    num:888
+                  },
+                  {
+                    img:'./img/fans/img.jpg',
+                    text:'哈哈哈哈哈哈啊哈哈哈',
+                    name:'哈哈3',
+                    num:888
+                  },
+                  {
+                    img:'./img/fans/img.jpg',
+                    text:'哈哈哈哈哈哈啊哈哈哈',
+                    name:'哈哈2',
+                    num:888
+                  },
+                  {
+                    img:'./img/fans/img.jpg',
+                    text:'',
+                    name:'哈',
+                    num:888
+                  },
+                  {
+                    img:'./img/fans/img.jpg',
+                    text:'哈哈哈哈哈哈啊哈哈哈',
+                    name:'哈哈',
+                    num:888
+                  },
+                  {
+                    img:'./img/fans/img.jpg',
+                    text:'',
+                    name:'哈哈4',
+                    num:888
+                  },
+                  {
+                    img:'./img/fans/img.jpg',
+                    text:'哈哈哈哈哈哈啊哈哈哈',
+                    name:'哈哈3',
+                    num:888
+                  },
+                  {
+                    img:'./img/fans/img.jpg',
+                    text:'哈哈哈哈哈哈啊哈哈哈',
+                    name:'哈哈2',
+                    num:888
+                  },
+                  {
+                    img:'./img/fans/img.jpg',
+                    text:'',
+                    name:'哈',
+                    num:888
+                  }
+                ],
                 columns:2,/*列数 */
                 arr:[], /*高度数组 */
                 i:0, /*循环 */
@@ -48,7 +110,8 @@ var app=new Vue({
             },
             methods:{
               /*判断图片是否加载完 */
-              imgLoad(items,len){   
+              imgLoad(items,len){  
+                 
                 var newImg=new Image();
                 newImg.src='./img/fans/img.jpg';
                 // newImg.src='./img/fans/img.jpg';
@@ -91,8 +154,8 @@ var app=new Vue({
                   // 最小列的高度 = 当前自己的高度 + 拼接过来的高度 + 间隙的高度
                   this.arr[index] = this.arr[index] + items[i].offsetHeight ;
                 }
-                if(i+1<len){
-                  this.i+=1;
+                this.i+=1;
+                if(this.i<len){
                   this.imgLoad(items,len)
                 }
               },
@@ -105,6 +168,23 @@ var app=new Vue({
                this.height3 = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
                if(this.height3 + this.height1 >= this.height2 && this.available){
                   console.log(1)
+                  this.list.push({
+                    img:'./img/fans/img.jpg',
+                    text:'哈哈哈哈哈哈啊哈哈哈',
+                    name:'呵呵',
+                    num:888
+                  },
+                  {
+                    img:'./img/fans/img.jpg',
+                    text:'',
+                    name:'呵呵',
+                    num:888
+                  })
+
+                  this.$nextTick(function(){
+                      var box = this.$refs.know.children;
+                          this.imgLoad(box,box.length) 
+                  })
                }
              }
             }

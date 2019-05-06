@@ -15,7 +15,10 @@
             <div :class="['tab_item',{'tab_active':who == 'know'}]" @click="tabClick(2)">重新认识下</div>
             <span class="border" :style="'left:'+left"></span>
         </div>
-        <component :is="who"></component>
+        <!-- <keep-alive include="know"> -->
+            <!-- 将缓存name为know的组件 -->
+            <component :is="who"></component>
+        <!-- </keep-alive> -->
     </div>
 
     <!--我的信息页面-->
@@ -94,104 +97,20 @@
     <!--重新认识下页面-->
     <template id="knowPage">
         <div class="know" ref="know">
-            <div class="know_itemWrap">
+            <div class="know_itemWrap" v-for="(item,index) in list" :key="index">
                 <div class="know_item">
-                    <img class="img" src="./img/fans/img.jpg" alt="图片">
-                    <!-- <p class="title"><b>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</b></p> -->
+                    <img class="img" :src="item.img" alt="图片">
+                    <p class="title"><b v-text="item.text"></b></p>
                     <div class="user">
                         <img src="" alt="">
-                        <span>某某某</span>
+                        <span v-text="item.name"></span>
                             <div class="user_right">
                                 <img class="fire" src="./img/fans/fire.jpg" alt="热度">
-                                <span>7888</span>
+                                <span v-text="item.num"></span>
                             </div>
                     </div>
                 </div>
-            </div>
-            <div class="know_itemWrap">
-                    <div class="know_item">
-                        <img class="img" src="./img/fans/img.jpg" alt="图片">
-                        <p class="title"><b>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</b></p>
-                        <div class="user">
-                            <img src="" alt="">
-                            <span>某某某</span>
-                                <div class="user_right">
-                                    <img class="fire" src="./img/fans/fire.jpg" alt="">
-                                    <span>7888</span>
-                                </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="know_itemWrap">
-                        <div class="know_item">
-                            <img class="img" src="./img/fans/img.jpg" alt="图片">
-                            <p class="title"><b>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</b></p>
-                            <div class="user">
-                                <img src="" alt="">
-                                <span>某某某</span>
-                                    <div class="user_right">
-                                        <img class="fire" src="./img/fans/fire.jpg" alt="">
-                                        <span>7888</span>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="know_itemWrap">
-                            <div class="know_item">
-                                <img class="img" src="./img/fans/img.jpg" alt="图片">
-                                <p class="title"><b>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</b></p>
-                                <div class="user">
-                                    <img src="" alt="">
-                                    <span>某某某</span>
-                                        <div class="user_right">
-                                            <img class="fire" src="./img/fans/fire.jpg" alt="">
-                                            <span>7888</span>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="know_itemWrap">
-                            <div class="know_item">
-                                <img class="img" src="./img/fans/img.jpg" alt="图片">
-                                <p class="title"><b>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</b></p>
-                                <div class="user">
-                                    <img src="" alt="">
-                                    <span>某某某</span>
-                                        <div class="user_right">
-                                            <img class="fire" src="./img/fans/fire.jpg" alt="">
-                                            <span>7888</span>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="know_itemWrap">
-                            <div class="know_item">
-                                <img class="img" src="./img/fans/img.jpg" alt="图片">
-                                <p class="title"><b>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</b></p>
-                                <div class="user">
-                                    <img src="" alt="">
-                                    <span>某某某</span>
-                                        <div class="user_right">
-                                            <img class="fire" src="./img/fans/fire.jpg" alt="">
-                                            <span>7888</span>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="know_itemWrap">
-                            <div class="know_item">
-                                <img class="img" src="./img/fans/img.jpg" alt="图片">
-                                <p class="title"><b>啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</b></p>
-                                <div class="user">
-                                    <img src="" alt="">
-                                    <span>某某某</span>
-                                        <div class="user_right">
-                                            <img class="fire" src="./img/fans/fire.jpg" alt="">
-                                            <span>7888</span>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
+            </div>        
         </div>
     </template>
     
