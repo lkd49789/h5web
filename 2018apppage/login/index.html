@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<title>确认登录</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+	<meta http-equiv="Cache-Control" content="max-age=0">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<link rel="stylesheet" href="css/css.css">
+	<script src="../../common/js/jquery.min.js"></script>
+</head>
+<body>
+	<div class="content">
+        <img src="../../common/images/logo-pocket48.png">
+		<p>口袋48账号登录确认</p>
+		
+	</div>
+    <div class="btns">
+        <button class="btn-login" onclick="login()">确认登录</button>
+        <button class="btn-cancel" onclick="cancel()">取消登录</button>
+    </div>
+	<script type="text/javascript">
+	
+	
+	function login(){
+		//var token = "7FvPY8+jb9j/kW0mLytO2KK8rCCIwfI6xlWZZue29l7OC9nU9ANvLw==";
+		var token = window.web.getAccessToken();
+		//alert(token);
+		var data = {
+			"uuid":GetQueryString("uuid")
+		};
+        //alert(GetQueryString("uuid"))
+        $.ajax({
+            url:"https://puser.48.cn/usersystem/api/v1/qrcode/scan",
+            //url:"http://192.168.0.159:8080/usersystem/api/v1/qrcode/scan",
+            type: "POST", 
+            contentType: "application/json; charset=utf-8",
+			beforeSend: function(xhr) {
+				xhr.setRequestHeader('token', token);
+			},
+            data: JSON.stringify(data),
+            timeout: 5000, 
+            success: function (res) { 						
+                //alert(JSON.stringify(res));
+                if(res.status == 200){
+                	//alert("登录成功！")
+                	window.web.backHome();
+                }else{
+                	alert(res.message)
+                }
+				
+            }, 
+            error: function (jqXHR, textStatus, errorThrown) { 
+               //alert("eee");
+            } 
+        });
+	}
+
+    function cancel(){
+        window.web.backHome()
+    }
+	function GetQueryString(name)
+	{
+	     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+	     var r = window.location.search.substr(1).match(reg);
+	     if(r!=null)return  unescape(r[2]); return null;
+	}
+
+	function alert(name){
+        var iframe = document.createElement("IFRAME");
+        iframe.style.display="none";
+        iframe.setAttribute("src", 'data:text/plain,');
+        document.documentElement.appendChild(iframe);
+        window.frames[0].window.alert(name);
+        iframe.parentNode.removeChild(iframe);
+    }
+	</script>
+</body>
+
+</html>
+

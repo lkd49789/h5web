@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<title>《双面偶像》首演直播预约</title>
+	<link href="css/common.css" rel="stylesheet" />
+	<link href="css/index.css" rel="stylesheet" />
+</head>
+<body>
+	<section>
+		<img src="img/title.png" class="title">
+		<div class="video-box">
+			<video src="img/mengxiangqizhi.mp4" poster="img/mengxiangqizhi.png" controls loop></video>
+			<img src="img/vidbox.png" class="vidbox">
+			<div class="vidpor"></div>
+		</div>
+		<div class="timebox">
+			<p>TEAM FT 《双面偶像》出道公演还有</p>
+			<p class="time"></p>
+		</div>
+		<div class="timestarbox">
+			<p>公演已经开始，点击观看</p>
+		</div>
+		<div class="remindbox">
+			<p class="tp1">预约公演开始提醒</p>
+			<p class="tp2">9月1日 17:30停止预约</p>
+		</div>
+		<div class="readright">
+			<p class="tp1">手机号码已经预约</p>
+			<p class="tp2">9月1日本场公演结束可以参加该场MVP投票</p>
+		</div>
+		<div class="waitbox">
+			<h4>查看投票排行</h4>
+		</div>
+		<div class="succ">在口袋48app内预约成功后<br/>可以获得1个该场公演的MVP网络投票权</div>
+		<img src="img/text.png" class="text">
+		
+		<p class="zhu">注：本场公演网络投票权一票按照0.1票计入最终榜单</p>
+		<!-- 弹框 -->
+		<div class="mask_box">
+			<!-- 输入手机号 -->
+			<div class="phonebox">
+				<input type="text" name="phonenum" value="" placeholder="请输入手机号" maxlength='11' class="phonenum">
+				<div class="code_box">
+					<input type="text" name="code" value="" placeholder="输入验证码" maxlength='6' class="code">
+					<div class="count">发送验证码</div>
+					<p class="help-block"></p>
+				</div>
+				<div class="btns">
+					<button class="cancel">取消</button>
+					<button class="right">确认预约</button>
+				</div>
+			</div>
+			<!-- 预约成功 -->
+			<div class="successbox">
+				<img src="img/icon_succ.png" class="icon_succ">
+				<div class="suctext">
+					<p>预约成功，首演开始前将会短信通知</p>
+					<p>已获得<b>1票</b>MVP公演投票权</p>
+				</div>
+				<button class="succRight">确认</button>
+			</div>
+		</div>
+	</section>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="../../common/js/common.js"></script>
+<script src="js/main.js"></script>
+<script src="js/index.js"></script>
+</html>

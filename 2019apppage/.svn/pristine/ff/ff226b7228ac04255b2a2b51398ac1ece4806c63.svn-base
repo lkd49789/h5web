@@ -1,0 +1,42 @@
+var app =new Vue({
+    el:'#app',
+    data:{
+        content:[],
+        finish:false,
+    },
+    mounted:function(){
+        var gallery = mui('.mui-slider');
+            gallery.slider({
+            interval:5000//自动轮播周期，若为0则不自动播放，默认为0；
+        });
+        var that = this;
+        main.getList(function(data){
+            if(data.status == 200){
+                that.content = data.content;
+                if(new Date().getTime()>that.content.endAt && that.content.auctionStatus != 1){
+                    that.finish = true;
+                }
+            }else{
+                alert(data.message)
+            }
+        })
+    },
+    methods:{
+        /*跳转方法 */
+        gotoPage:function(_url){
+            var url = _url
+            if(url.indexOf("http://")>=0 ||url.indexOf("https://")>=0){
+                
+            }else{
+                url = CONFIG.geturl()+url
+            }
+            if(checkFromNew()){
+                snhOpenNewWebview(url)
+            }else if(checkFromOld()){
+                window.web.gotoDetail(url);
+            }else{
+                window.location.href = url
+            }         
+        }
+    }
+})

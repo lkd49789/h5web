@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>BEJ48红白歌会回顾</title>
+	<link href="css/common.css" rel="stylesheet" />
+	<link href="css/vidlist.css" rel="stylesheet" />
+</head>
+<body>
+	<section id="vidList">
+		<div class="bannerbox">
+			<div class="vidpic"><img :src="vidpic"/></div>
+		</div>
+		<ul class="vidList">
+			<template v-for="vid in vid_list"> 
+				<li>
+					<p class="micName" v-text="vid.songName"></p>
+					<div class="vidbox">
+						<div class="video">
+							<video class="bofang" :src="vid.videoPath" webkit-playsinline></video>
+						</div>
+						<div class="qu" v-bind:style="{backgroundImage:'url(' + vid.picPath + ')'}">
+							<img src="img/play.png" class="play">
+						</div>
+					</div>
+					<div class="msgbox">
+						<p class="members" :class="{'active1':vid.active1,'unactive1':!vid.active1}">
+							<span class="member_name" v-text="vid.whiteDescripe"></span>
+							<img src="img/team_white.png" class="teamimg">
+							<button :class="vid.dzTeam == 1 ? 'zanbtn color1' : 'zanbtn'" v-on:click="giveLike(2,vid)">
+								<img src="img/zanimg.png"/>
+								<span class="zanNum" v-text="vid.whitePraise"></span>
+							</button>
+						</p>
+						<p class="members" :class="{'active2':vid.active2,'unactive2':!vid.active2}">
+							<span class="member_name" v-text="vid.redDescripe"></span>
+							<img src="img/team_red.png" class="teamimg">
+							<button :class="vid.dzTeam == 2 ? 'zanbtn color2' : 'zanbtn'" v-on:click="giveLike(1,vid)">
+								<img src="img/zanimg.png"/>
+								<span class="zanNum" v-text="vid.redPraise"></span>
+							</button>
+						</p>
+					</div>
+				</li>
+			</template>
+		</ul>
+		<div class="zanclick"><img src="img/icon_success.png"></div>
+	</section>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/vue.min.js"></script>
+<script src="js/vidlist.js"></script>
+</html>

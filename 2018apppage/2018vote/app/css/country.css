@@ -1,0 +1,118 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td { margin:0; padding:0; }
+
+ol, ul, li { list-style:none; }
+
+.mask li{
+    list-style: none;
+    font-size: 1.2rem;
+    margin-top: .5rem;
+}
+.mask p{
+    margin: 0;
+}
+/**选择地区浮层底框**/
+.select_layer{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    /*display: none;*/
+}
+.layer{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #000;
+    opacity: 0.5;
+}
+.mask{
+    position: fixed;
+    width: 94%;
+    height: 80%;
+    background: #fff;
+    -moz-box-shadow: 0px 10px 5px rgba(181,179,198,.2); /* 老的 Firefox */
+    box-shadow: 0px 3px 5px rgba(181,179,198,.2);
+    border-radius: 10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    left: 3%;
+    top: 3%;
+   /* overflow-y: auto;*/
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+}
+.choose_title{
+    padding: 5% 0 5% 5%;
+    font-size: 1.3rem;
+}
+.mask_title{
+    padding-left: 5%;
+    width: 100%;
+    height:auto;
+    border-bottom: 1px solid #ddd;
+    font-size: 1.1rem;
+    color: #444;
+    padding-bottom:3%;
+}
+.mask_title span{
+    
+}
+.mask_title li{
+    
+}
+
+.all{
+    color: #808080;
+}
+.active{
+    background: #839cff;
+}
+.color{
+    color: #fff;
+}
+.mask_city{
+    font-size: 1.1rem;
+    color: #444;
+    overflow-y: scroll;
+    padding-top: 3%;
+}
+.mask_city li{
+    padding-left: 5%;
+    /*padding-top: 2rem;*/
+    position: relative;
+}
+.mask_city li span{
+    /*color:#839cff;*/
+    display: block;
+    /*position: absolute;
+    left: 5%;
+    top: 0;*/
+}
+.mask_city li p{
+    display: inline-block;
+}
+.mask span{
+    color: #000;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.hidden{
+    /*opacity: 0;*/
+    display: none !important;
+}
+
+.btn-close{
+    position: absolute;
+    right: 11px;
+    top: 11px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.country-wrapper{
+    height: 85%;
+    overflow-x:hidden;
+    overflow-y: scroll;
+}

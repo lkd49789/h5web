@@ -1,0 +1,40 @@
+[v-cloak]{
+    display: none;
+}
+html,body{color: #808080;background-color: #fff;}
+h1{font-size: 1.5rem;font-weight: bold;color: #000;}
+section{
+	position: relative;
+}
+.member-box{padding: 1rem 3%;border-bottom: 1px solid #f2f2f2;position: relative;}
+.member-box > div{display: inline-block;vertical-align: middle;}
+.member-box > div:nth-child(3) {float: right;}
+.member-box > div:nth-child(3) span{line-height: 7rem;}
+.m-info p{font-weight: bold;font-size: 1.4rem;color: #000;}
+.m-info div{font-size: .8rem;}
+.m-info div span{margin-right: .5rem;}
+.m-info div span:nth-child(1){font-size: 1.4rem;color: #000;}
+.avatar{width: 5rem;height: 5rem;position: relative;overflow: hidden;border-radius: 100%;}
+.avatar img{width: 100%;margin-top: -.8rem;}
+.status{color:#ff0000; font-size: .9rem;}
+
+section > div{padding: 3%;background-color: #fff;}
+section > div >p{color: #000;margin: 1rem 0;}
+.mask div > span{padding: .5rem 0;}
+
+.btns{text-align: center;}
+.btn{
+	background: linear-gradient(to right,#ccacff,#6057ff );
+	text-align: center;
+	font-size: 1.3rem;
+	color: #fff;
+	border-radius: 2rem;
+	width: 42%;
+	margin: 0 2%;
+	padding: .5rem 0;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	display: inline-block;
+}
+.red{background:#f05858 !important; }
+.mask div p{color: #000;font-weight: bold;}

@@ -1,0 +1,248 @@
+{
+    "content":[
+    	{
+	        "mid": "13", 
+	        "img_url": "image/ben.jpg",
+	        "musicName":"《笨》",
+	        "vid_img":"image/ben.jpg",
+	        "vidUrl":"https://mp4.48.cn/20180126/1516938783987_13.mp4"
+	    },
+	    {
+	        "mid": "9", 
+	        "img_url": "image/spy.jpg",
+	        "musicName":"《SPY》",
+	        "vid_img":"image/spy.jpg",
+	        "vidUrl":"https://mp4.48.cn/20180126/1516938783987_9.mp4"
+	    },
+	    {
+	        "mid": "7", 
+	        "img_url": "image/show.jpg",
+	        "musicName":"《SHOW》",
+	        "vid_img":"image/show.jpg",
+	        "vidUrl":"https://mp4.48.cn/20180126/1516938783987_7.mp4"
+	    },
+	    {
+	        "mid": "1", 
+	        "img_url": "image/fighter.jpg",
+	        "musicName":"《Be a Fighter》",
+	        "vid_img":"image/fighter.jpg",
+	        "vidUrl":"https://mp4.48.cn/20180126/1516938783987_1.mp4"
+	    },
+	    {
+	        "mid": "11", 
+	       	"img_url": "image/zijincheng.jpg",
+	       	"musicName":"《华夏—紫禁城》",
+	       	"vid_img":"image/zijincheng.jpg",
+	       	"vidUrl":"https://mp4.48.cn/20180126/1516938783987_11.mp4"
+	    },
+	    {
+	        "mid": "12", 
+	       	"img_url": "image/ifyou.jpg",
+	       	"musicName":"《If You》",
+	       	"vid_img":"image/ifyou.jpg",
+	       	"vidUrl":"https://mp4.48.cn/20180126/1516938783987_12.mp4"
+	    },
+	    {
+	        "mid": "5", 
+	        "img_url": "image/shenshifengdu.jpg",
+	        "musicName":"《绅士风度》",
+	        "vid_img":"image/shenshifengdu.jpg",
+	        "vidUrl":"https://mp4.48.cn/20180126/1516938783987_5.mp4"
+	    },
+	    {
+	        "mid": "16", 
+	        "img_url": "image/aiyuqianfang.jpg",
+	        "musicName":"《爱与前方》",
+	        "vid_img":"image/aiyuqianfang.jpg",
+	        "vidUrl":"https://mp4.48.cn/20180126/1516938783987_16.mp4"
+	    },
+	    {
+	        "mid": "14", 
+	        "img_url": "image/hongsejingjie.jpg",
+	        "musicName":"《虹色警戒》",
+	        "vid_img":"image/hongsejingjie.jpg",
+	        "vidUrl":"https://mp4.48.cn/20180126/1516938783987_14.mp4"
+	    },
+	    {
+	        "mid": "3", 
+	        "img_url": "image/su.jpg",
+	        "musicName":"《速》",
+	        "vid_img":"image/su.jpg",
+	        "vidUrl":"https://mp4.48.cn/20180126/1516938783987_3.mp4"
+	    },
+	    {
+	        "mid": "2", 
+	        "img_url": "image/xianfenghaojiao.jpg",
+	        "musicName":"《先锋号角》",
+	        "vid_img":"image/xianfenghaojiao.jpg",
+	        "vidUrl":"https://mp4.48.cn/20180126/1516938783987_2.mp4"
+	    },
+	    {
+	        "mid": "8", 
+	        "img_url": "image/yitiantian.jpg",
+	        "musicName":"《一天天一点点》",
+	        "vid_img":"image/yitiantian.jpg",
+	        "vidUrl":"https://mp4.48.cn/20180126/1516938783987_8.mp4"
+	    },
+	    {
+	        "mid": "6", 
+	        "img_url": "image/zidanriji.jpg",
+	        "musicName":"《子弹日记》",
+	        "vid_img":"image/zidanriji.jpg",
+	        "vidUrl":"https://mp4.48.cn/20180126/1516938783987_6.mp4"
+	    },
+	    {
+	        "mid": "10", 
+	        "img_url": "image/xingmengqiyu.jpg",
+	        "musicName":"《星梦奇遇记》",
+	        "vid_img":"image/xingmengqiyu.jpg",
+	        "vidUrl":"https://mp4.48.cn/20180126/1516938783987_10.mp4"
+	    },
+	    {
+	        "mid": "4", 
+	        "img_url": "image/feixingguodu.jpg",
+	        "musicName":"《飞行国度》",
+	        "vid_img":"image/feixingguodu.jpg",
+	        "vidUrl":"https://mp4.48.cn/20180126/1516938783987_4.mp4"
+	    },
+	    {
+	        "mid": "15", 
+	        "img_url": "image/qianxingba.jpg",
+	        "musicName":"《前行吧！彼异界号》",
+	        "vid_img":"image/qianxingba.jpg",
+	        "vidUrl":"https://mp4.48.cn/20180126/1516938783987_15.mp4"
+	    }       
+    ],
+    "imageList":[
+     	{
+	        "mid": "1",
+	    	"img_url":[
+	    		"image/StarRiver1.jpg",
+	    		"image/StarRiver2.jpg"
+	    	],
+	    	"musicName":"《Be a Fighter》"
+	    },
+	    {
+	        "mid": "2",
+	    	"img_url":[
+	    		"image/zhinanzhen1.jpg",
+	    		"image/zhinanzhen2.jpg"
+	    	],
+	    	"musicName":"《先锋号角》"
+	    },
+	    {
+	        "mid": "3",
+	    	"img_url":[
+	    		"image/aikesihao1.jpg",
+	    		"image/aikesihao2.jpg"
+	    	],
+	    	"musicName":"《速》"
+	    },
+	    {
+	        "mid": "4",
+	    	"img_url":[
+	    		"image/mingyunx1.jpg",
+	    		"image/mingyunx2.jpg"
+	    	],
+	    	"musicName":"《飞行国度》"
+	    },
+	    {
+	        "mid": "5",
+	    	"img_url":[
+	    		"image/IceQueen1.jpg",
+	    		"image/IceQueen2.jpg"
+	    	],
+	    	"musicName":"《绅士风度》"
+	    },
+	    {
+	        "mid": "6",
+	    	"img_url":[
+	    		"image/BattleCry1.jpg",
+	    		"image/BattleCry2.jpg"
+	    	],
+	    	"musicName":"《子弹日记》"
+	    },
+	    {
+	        "mid": "7",
+	    	"img_url":[
+	    		"image/zhanpushi1.jpg",
+	    		"image/zhanpushi2.jpg"
+	    	],
+	    	"musicName":"《SHOW》"
+	    },
+	    {
+	        "mid": "8",
+	    	"img_url":[
+	    		"image/shenhaizhisheng1.jpg",
+	    		"image/shenhaizhisheng2.jpg"
+	    	],
+	    	"musicName":"《一天天一点点》"
+	    },
+	    {
+	        "mid": "9",
+	    	"img_url":[
+	    		"image/shuangshenghua1.jpg",
+	    		"image/shuangshenghua2.jpg"
+	    	],
+	    	"musicName":"《SPY》"
+	    },
+	    {
+	        "mid": "10",
+	    	"img_url":[
+	    		"image/zuihoudeshuguang1.jpg",
+	    		"image/zuihoudeshuguang2.jpg"
+	    	],
+	    	"musicName":"《星梦奇遇记》"
+	    },
+	    {
+	        "mid": "11",
+	    	"img_url":[
+	    		"image/gangtiezhiyi1.jpg",
+	    		"image/gangtiezhiyi2.jpg"
+	    	],
+	    	"musicName":"《华夏—紫禁城》"
+	    },
+	    {
+	        "mid": "12",
+	    	"img_url":[
+	    		"image/shizhonghua1.jpg",
+	    		"image/shizhonghua2.jpg"
+	    	],
+	    	"musicName":"《If You》"
+	    },
+	    {
+	        "mid": "13",
+	    	"img_url":[
+	    		"image/mengyuxinguang1.jpg",
+	    		"image/mengyuxinguang2.jpg",
+	    		"image/mengyuxinguang3.jpg"
+	    	],
+	    	"musicName":"《笨》"
+	    },
+	    {
+	        "mid": "14",
+	    	"img_url":[
+	    		"image/shuijindeguangmang1.jpg",
+	    		"image/shuijindeguangmang2.jpg"
+	    	],
+	    	"musicName":"《虹色警戒》"
+	    },
+	    {
+	        "mid": "15",
+	    	"img_url":[
+	    		"image/xinhanglu1.jpg",
+	    		"image/xinhanglu2.jpg"
+	    	],
+	    	"musicName":"《前行吧！彼异界号》"
+	    },
+	    {
+	        "mid": "16",
+	    	"img_url":[
+	    		"image/fireX1.jpg",
+	    		"image/fireX2.jpg",
+	    		"image/fireX3.jpg"
+	    	],
+	    	"musicName":"《爱与前方》"
+	    }
+    ]
+}

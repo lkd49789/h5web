@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<title>《头号新闻》公演首演直播预约</title>
+	<link href="css/common.css" rel="stylesheet" />
+	<link href="css/index.css" rel="stylesheet" />
+	<style type="text/css">
+	.zhu{
+		font-size: 1rem;
+		color:#422a1d;
+		text-align: center;
+		padding-bottom: 4%;
+	}
+	.timebox{display: none;}
+	</style>
+</head>
+<body>
+	<section>
+		<img src="img/title.png" class="title">
+		<div class="video-box">
+			<video src="img/touhaoxinwen.mp4" poster="img/touhaoxinwen.jpg" controls loop ></video>
+			<img src="img/touhaoxinwen.jpg" class="vidbox">
+			<!-- <div class="vidpor"></div> -->
+		</div>
+		<div class="timebox">
+			<p>距离 SNH48 TEAM HII  《头号新闻》公演首演</p>
+			<p class="time"></p>
+		</div>
+		<div class="timestarbox">
+			<p>公演已经开始，点击观看</p>
+		</div>
+		<div class="remindbox">
+			<p class="tp1">预约公演开始提醒</p>
+			<p class="tp2">5月18日 19:30停止预约</p>
+		</div>
+		<div class="readright">
+			<p class="tp1">手机号码已经预约</p>
+			<p class="tp2">23点公演结束可以参加该场MVP投票</p>
+		</div>
+		<div class="waitbox">
+			<!-- <h4>快去参加Team HII《头号新闻》公演的MVP投票吧</h4> -->
+			<h4>查看投票排行</h4>
+		</div>
+		<div class="succ">在口袋48app内预约成功后<br/>可以获得1个该场公演的MVP网络投票权</div>
+		<img src="img/text.png" class="text">
+		
+		<p class="zhu">注：本场公演网络投票权一票按照0.1票计入最终榜单</p>
+		<!-- 弹框 -->
+		<div class="mask_box">
+			<!-- 输入手机号 -->
+			<div class="phonebox">
+				<input type="text" name="phonenum" value="" placeholder="请输入手机号" maxlength='11' class="phonenum">
+				<div class="code_box">
+					<input type="text" name="code" value="" placeholder="输入验证码" maxlength='6' class="code">
+					<div class="count">发送验证码</div>
+					<p class="help-block"></p>
+				</div>
+				<div class="btns">
+					<button class="cancel">取消</button>
+					<button class="right">确认预约</button>
+				</div>
+			</div>
+			<!-- 预约成功 -->
+			<div class="successbox">
+				<img src="img/icon_succ.png" class="icon_succ">
+				<div class="suctext">
+					<p>预约成功，首演开始前将会短信通知</p>
+					<p>已获得<b>1票</b>MVP公演投票权</p>
+				</div>
+				<button class="succRight">确认</button>
+			</div>
+		</div>
+	</section>
+</body>
+<script src="https://h5.48.cn/common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/common.js"></script>
+<script src="js/main.js"></script>
+<script src="js/index.js"></script>
+</html>

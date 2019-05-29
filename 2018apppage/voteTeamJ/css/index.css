@@ -1,0 +1,221 @@
+*{
+	margin:0;
+	padding: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+body{
+	max-width: 640px;
+	margin:0 auto;
+	background-color: #fff;
+	background:url(../img/bg1.jpg) center top;
+	background-size: cover;
+}
+section{
+	/*padding: 0 3% 5% 3%; */
+}
+.title{
+	font-size: 1.4rem;
+	text-align: center;
+	padding: 5% 0 2% 0;
+}
+.text p{
+	font-size: 1rem;
+	color: #808080;
+	line-height: 1.6rem;
+}
+.titspan span{
+	position: relative;
+	font-size: 1rem;
+}
+.titspan b{
+	position: absolute;
+	background-color: #fffca4;
+	top: 0.5rem;
+	left:0;
+	display: block;
+	width: 100%;
+	height: 0.5rem;
+	z-index: -1;
+}
+.groupAbox li p,.groupBbox li p{
+	/*text-align: center;
+	color: #839cff;
+	font-size: 1.4rem;
+	padding: 3% 0;*/
+	position: absolute;
+    bottom: -1.5rem;
+    color: #fff;
+    font-size: 1rem;
+    width: 100%;
+}
+.groupBbox{
+	margin-top: 4%;
+}
+ul{
+	width: 100%;
+	text-align: center;
+}
+ul li{
+	display: inline-block;
+	border:1px solid #b5c3f2;
+	width: 19%;
+	margin:5% 1%;
+	border-radius: 100%;
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+	position: relative;
+}
+.btns{
+	text-align: center;
+	margin-top: 4%;
+	display: none;
+}
+.btns div{
+	width: 40%;
+	border-radius: 5px;
+	/*background-color: #839cff;*/
+	color:#fff;
+	font-size: 1.3rem;
+	border:1px solid #fff;
+	height: 3rem;
+	line-height: 3rem;
+	/*outline: none;*/
+	display: inline-block;
+
+}
+.btns div:first-child{
+	margin-right: 2%;
+}
+.btns div:last-child{
+	margin-left:2%;
+}
+.active{
+	background-color: #fff!important;
+	color: #000!important;
+}
+
+.submit{
+	width: 100%;
+	/*background-color: #839cff;*/
+	border-radius: 5px;
+	color: #fff;
+	font-size: 1.3rem;
+	height: 4rem;
+	line-height: 4rem;
+	border:0;
+	margin: 8% 0;
+	display: none;
+}
+.downtext{
+	height: 2rem;
+	line-height: 2rem;
+	    padding: 0 4%;
+}
+.downtext span{
+	color: #fff;
+	font-size: 1.2rem;
+}
+.downtext span:first-child{
+	float: right;
+}
+.downtext span:first-child{
+	float: right;
+}
+.tip{
+	width: 100%;
+	display: none;
+	margin: 1rem 0;
+}
+/*弹窗*/
+.mask{
+	width: 100%;
+	height: 100%;
+	max-width: 640px;
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+	background-color: rgba(0,0,0,.4);
+	display: none;
+}
+.votebox{
+	width: 80%;
+	position: absolute;
+	left:10%;
+	background-color: #fff;
+	border-radius: 5px;
+	top:30%;
+}
+.upbox{
+	padding: 10% 0;
+	border-bottom: 1px solid #c4c4c4;
+	text-align: center;
+}
+
+.maskbtns button{
+	background: transparent;
+	border:0;
+	width: 47%;
+	color:#2774ff;
+	font-size: 1.3rem;
+	padding: 4% 0;
+	display: inline-block;
+	outline: none;
+}
+.maskbtns button:first-child{
+	border-right: 1px solid #c4c4c4;
+}
+.resultbox{
+	
+	width: 100%;
+    
+    position: relative;
+    
+}
+.resultbox img{
+	width: 100%;
+	display: none;
+}
+.resp1{
+	margin-top: 2rem;
+
+}
+.resp2{
+	font-weight: bold;
+	margin-top: 8px;
+}
+.resp1,.resp2{
+	font-size: 1.6rem;
+	color: #5c6bc2;
+	text-align:center;
+}
+
+.title img{
+	width: 100%;
+}
+.groupbox p img{
+	width: 100%;
+}
+.submit img{
+	width: 100%;
+}
+.text{
+	position: relative;
+}
+.text img{
+	width: 100%;
+	
+}
+.info{
+	    position: absolute;
+    top: 5rem;
+    padding: 0 5%;
+}
+.info p{
+	color: #fff;
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>最佳表现奖投票</title>
+	<link href="../common/css/common.css" rel="stylesheet" />
+	<link href="css/field.css" rel="stylesheet" />
+</head>
+<body>
+	<section>
+		<!-- loading加载 -->
+		<div class="loadingbox">
+			<img src="img/earth.png" class="earth">
+			<p>正在加载...</p>
+		</div>
+		<!-- 区域块 -->
+		<div class="regionbox">
+			<img class="logo" src="img/logo.png">
+			<!-- 验证区块列表 -->
+			<ul class="regionList list-nomal">
+			</ul>
+			<!-- 区块列表 -->
+			<ul class="regionList list-my">
+				<!-- <li class="libox box1">
+					<p class="seatof">第25号区块</p>
+					<div class="manyper">
+						<h4>0人</h4>
+					</div>
+					<p class="date">2018-04-14</p>
+					<p class="time">16:00:49</p>
+				</li>
+				<li class="libox box2">
+					<p class="seatof">第25号区块</p>
+					<div class="manyper">
+						<h4>0人</h4>
+					</div>
+					<p class="date">2018-04-14</p>
+					<p class="time">16:00:49</p>
+				</li>
+				<li class="libox box3 mylibox">
+					<p class="seatof">第25号区块</p>
+					<div class="manyper myper">
+						<h4>0人</h4>
+						<div class="mymsgs">
+							<span></span>
+							<div>
+							<p>我为许杨玉琢</p>
+							<p>投了4000票</p>
+							</div>
+						</div>
+					</div>
+					<p class="date">2018-04-14</p>
+					<p class="time">16:00:49</p>
+				</li>
+				<li class="libox box4 mylibox">
+					<p class="seatof">第25号区块</p>
+					<div class="manyper myper">
+						<h4>0人</h4>
+						<div class="other">
+							<p>炸炸炸鸡腿为许杨玉琢</p>
+							<p>投了4000票</p>
+						</div>
+					</div>
+					<p class="date">2018-04-14</p>
+					<p class="time">16:00:49</p>
+				</li>
+				<li class="libox box5">
+					<p class="seatof">第25号区块</p>
+					<div class="manyper">
+						<h4>0人</h4>
+					</div>
+					<p class="date">2018-04-14</p>
+					<p class="time">16:00:49</p>
+				</li>
+				<li class="libox box6">
+					<p class="seatof">第25号区块</p>
+					<div class="manyper">
+						<h4>0人</h4>
+					</div>
+					<p class="date">2018-04-14</p>
+					<p class="time">16:00:49</p>
+				</li> -->
+			</ul>
+			<!-- 验证区块列表 -->
+			<ul class="regionList list-othor">
+			</ul>
+		</div>
+
+		<div class="total">目前总计有XX个区块</div>
+		<div class="fieldbtns" style="display:none;">
+			<button class="lookbtn">看看我在哪里</button>
+			<button class="testbtn">验证投票区块信息</button>
+		</div>
+		<div class="fieldbtns_my">
+			<button class="backup">返回链顶端</button>
+			<button class="getself">获取自己的投票ID</button>
+		</div>
+		<!-- 弹窗 -->
+		<div class="mask">
+			<!-- 信息弹框-->
+			<div class="message">
+				<h4>我的投票ID</h4>
+				<button class="close">关闭</button>
+			</div>
+			<!-- 获取自己的ID弹窗 -->
+			<div class="myidbox" style="display:none;">
+				<h4>我的投票ID</h4>
+				<div class="myidnum">33254654545</div>
+				<p>你可以将投票ID提供给自己信任的朋友去验证自己的投票结果在区块链上的相关信息</p>
+				<div class="myidbtns">
+					<button class="closebtn">关闭</button>
+					<!-- <button class="copybtn">复制投票ID</button> -->
+				</div>
+			</div>
+			<!-- 在这里输入投票ID弹窗 -->
+			<div class="inputbox" style="display:none;">
+				<input type="text" name="idnum" placeholder="在这里输入投票ID" class="idnum"/>
+				<p class="tip">投票ID不能为空</p>
+				<div class="inputbtns">
+					<button class="inputback">返回</button>
+					<button class="mertest">在Merkle Tree上验证</button>
+				</div>
+			</div>
+			<!-- 区块信息弹窗 -->
+			<div class="blockInfobox" style="display:none;">
+				<h4>第25号区块</h4>
+				<div class="curbox">当前块hash:0x2964</div>
+				<p>上链时间  2018-04-14  16:00:49</p>
+				<button class="close">关闭</button>
+			</div>
+			<!-- 投票ID对应块信息弹窗 -->
+			<div class="chunkInfobox" style="display:none;">
+				<h4>第12号区块</h4>
+				<div class="node root_hash">Merkle Tree根节点:0x2964</div>
+				<div class="node node_hash_id">
+					<h5>证明Hash值</h5>
+					<!-- <p class="othor_left">左:09096d</p>
+					<p class="othor_right1">右:ed2456</p>
+					<p class="othor_right2">右:eac53d</p> -->
+				</div>
+				<p class="chunkname"></p>
+				<p class="chunktx">为许杨玉琢投出了4999票</p>
+				<p class="chunktime">上链时间  2018-04-14  16:00:49</p>
+				<button class="close">关闭</button>
+			</div>
+			<!-- 我的投票ID对应块信息弹窗 -->
+			<div class="chunkMyinfo">
+				<h4>第12号区块</h4>
+				<div class="node root_hash">Merkle Tree根节点:0x2964</div>
+				<div class="node node_hash_my">
+					<h5>证明Hash值</h5>
+					<!-- <p class="my_left">左:09096d</p>
+					<p class="my_right1">右:ed2456</p>
+					<p class="my_right2">右:eac53d</p> -->
+				</div>
+				<p class="mychunktx">我为<span>许杨玉琢</span>投出了<b>4999</b>票</p>
+				<p class="chunktime">上链时间  2018-04-14  16:00:49</p>
+				<button class="close">关闭</button>
+			</div>
+		</div>
+	</section>
+</body>
+<script src="../../../common/js/jquery.min.js"></script>
+<script src="../../../common/js/common.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main1.js"></script>
+<script src="js/field.js"></script>
+</html>

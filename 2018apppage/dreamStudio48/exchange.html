@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>兑换</title>
+	<link href="css/common.css" rel="stylesheet" />
+	<link href="css/exchange.css" rel="stylesheet" />
+</head>
+<body>
+	<section>
+		<p class="titbox1">
+			<span>积分兑换</span>
+			<span class="balance">您的丝瓜积分余额：<em></em></span>
+		</p>
+		<div class="changebox">
+			<p class="txt">每个口袋账号可以使用100丝瓜积分兑换10个点赞权。</p>
+			<span class="changebtn">兑换</span>
+		</div>
+		<p class="titbox2">星沃卡/乐享卡领取</p>
+		<div class="rReceivebox">
+			<p class="txt">每个星沃卡/丝芭卡用户可以领取20个点赞权。</p>
+			<span class="receivebtn">领取</span>
+		</div>
+		<p class="titbox3">口袋48用户等级领取</p>
+		<div class="rReceivebox">
+			<p class="txt">每个点赞周期中，3级以上（含3级）的用户可以领取1次投票权，数量和等级数字相同。</p>
+			<span class="receivebtn1">领取</span>
+		</div>
+		<button class="btnwx program">去为偶像们应援点赞</button>
+		<div class="mypoint">我的点赞权：<em></em></div>
+	</section>
+	<section class="maskbox">
+		<!-- 兑换指示 -->
+		<div class="mask1">
+			<p>你还未兑换点赞权，前往梦想演播厅活动将无法点赞。仍要前往？</p>
+			<div class="btns">
+				<button class="again">仍然前往</button>
+				<button class="comeback">返回</button>
+			</div>
+		</div>
+		<!-- 兑换确认中 -->
+		<div class="mask2">
+			<p>服务器正在确认信息中请稍后再试</p>
+			<div class="btns">
+				<button class="knowbtn">知道了</button>
+			</div>
+		</div>
+		<!-- 兑换成功 -->
+		<div class="mask3">
+			<img src="img/icon_success.png" class="icon_success">
+			<p>已兑换成功</p>
+			<div class="btns">
+				<button class="knowbtn1 know1">知道了</button>
+			</div>
+		</div>
+		<!-- 领取成功 -->
+		<div class="mask4">
+			<img src="img/icon_success.png" class="icon_success">
+			<p>已领取成功</p>
+			<div class="btns">
+				<button class="knowbtn1 know2">知道了</button>
+			</div>
+		</div>
+		<div class="mask5">
+			<img src="img/icon_success.png" class="icon_success">
+			<p>已领取成功</p>
+			<div class="btns">
+				<button class="knowbtn1 know3">知道了</button>
+			</div>
+		</div>
+	</section>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+
+var url= 'h5.48.cn/2018apppage/dreamStudio48/index.html';
+var appToken = window.web.getAccessToken();
+
+var flag = true;
+
+	$(function(){
+		init();
+	})
+
+	function init(){
+
+		getBalance()
+		addListeners()
+
+	}
+
+	function addListeners(){
+
+		//兑换点赞权
+		$('.changebtn').click(function(){
+			if(!flag){
+				return false;
+			}
+			if($(this).hasClass('pinkActive')){
+				var eventId = $(this).attr('eventId');
+				flag = false;
+				main.changeZannum(eventId,function(dt){
+					flag = true;
+					if(dt.status==200){//兑换成功
+						$('.maskbox,.mask3').show();
+					}else{
+						main.alert(dt.message);
+					}
+				})
+			}else if($(this).hasClass('noticeActive')){//跳转到电子EP购买
+
+				window.web.gotoDetail('https://vote.48.cn/app/index.html?gotoid=buy');
+			}
+		})
+
+		//领取点赞权
+		$('.receivebtn').click(function(){
+			if(!flag){
+				return false;
+			}
+			if($(this).hasClass('pinkActive')){
+				var eventId = $(this).attr('eventid');
+				flag = false;
+				main.receivePraise(eventId,function(dt){
+					flag = true;
+					if(dt.status==200){//领取成功
+						$('.maskbox,.mask4').show();
+					}else{
+						main.alert(dt.message);
+					}
+				})
+			}
+		})
+
+
+		//等级领取
+		$('.receivebtn1').click(function(){
+			if(!flag){
+				return false;
+			}
+			if($(this).hasClass('pinkActive')){
+				var eventId = $(this).attr('eventid');
+				flag = false;
+				main.receiveDengji(eventId,function(dt){
+					flag = true;
+					if(dt.status==200){//领取成功
+						$('.maskbox,.mask5').show();
+					}else{
+						main.alert(dt.message);
+					}
+				})
+			}
+		})
+
+		/*//取消
+		$('.cancel').click(function(){
+			$('.maskbox,.mask1').hide();
+		})
+
+		//发送
+		$('.send').click(function(){
+			$('.maskbox,.mask1').hide();
+			$('.changebtn').addClass('haveActive');
+			$('.changebtn').html("查询状态");
+		})
+*/
+		//兑换知道了
+		$('.know1').click(function(){
+			$('.maskbox,.mask3').hide();
+			$('.changebtn').html("已兑换");
+			$('.changebtn').removeClass('pinkActive').addClass('greenActive');
+			getBalance()
+		})
+
+		//领取知道了
+		$('.know2').click(function(){
+			$('.maskbox,.mask4').hide();
+			$('.receivebtn').html("已领取");
+			$('.receivebtn').removeClass('pinkActive').addClass('greenActive');
+			getBalance()
+		})
+
+		//等级领取知道了
+		$('.know3').click(function(){
+			$('.maskbox,.mask5').hide();
+			$('.receivebtn1').html("已领取");
+			$('.receivebtn1').removeClass('pinkActive').addClass('greenActive');
+			getBalance()
+		})
+
+		//为小偶像投票
+		$('.program').click(function(){
+			if($('.mypoint em').html()>0){//跳转小程序
+				var eventId = $(this).attr('eventid');
+				if(isExitsFunction("window.web.launchWechatMiniProgram")){
+					window.web.launchWechatMiniProgram(launchParams(eventId));
+				}else{
+					main.alert("请下载最新版口袋48app");
+				}
+				
+			}else{
+				$('.maskbox,.mask1').show();
+			}
+		})
+
+		//跳转小程序
+		$('.again').click(function(){//跳转小程序
+			$('.maskbox,.mask1').hide();
+			window.web.launchWechatMiniProgram(launchParams());
+		})
+		//返回
+		$('.comeback').click(function(){
+			$('.maskbox,.mask1').hide();
+		})
+
+	}
+
+	//获取积分和点赞权的数量
+	function getBalance(){
+
+		main.getBalance(function(dt){
+			//alert('---------'+JSON.stringify(dt));
+			if(dt.status==200){
+
+				$('.balance em').html(dt.content.jifen);
+				$('.mypoint em').html(dt.content.praise);
+				$('.program').attr('eventid',dt.content.eventId);
+
+				if(dt.content.jifen>=100){
+					if(dt.content.exchange==1 || dt.content.exchange=="1"){//已兑换
+						$('.changebtn').removeClass('pinkActive').addClass('greenActive');
+						$('.changebtn').html("已兑换");
+					}else{//未兑换
+						$('.changebtn').addClass('pinkActive').removeClass('greenActive');
+						$('.changebtn').attr('eventid',dt.content.eventId);
+					}
+				}else{
+					$('.changebtn').html("获取积分");
+					$('.changebtn').addClass('noticeActive').removeClass('pinkActive greenActive');
+				}
+
+				if(dt.content.isReceive==1 || dt.content.isReceive=="1"){//可以领取
+					if(dt.content.receive==1 || dt.content.receive=="1"){//已领取
+						$('.receivebtn').removeClass('pinkActive').addClass('greenActive');
+						$('.receivebtn').html("已领取");
+					}else{//未领取
+						$('.receivebtn').addClass('pinkActive').removeClass('greenActive');
+						$('.receivebtn').attr('eventid',dt.content.eventId);
+					}
+				}else{//不能领取
+
+				}
+
+				if(dt.content.isReceiveByLevel==1 || dt.content.isReceiveByLevel=="1"){//等级账号是否可领取
+					if(dt.content.receiveByLevel==1 || dt.content.receiveByLevel=="1"){//已领取
+						$('.receivebtn1').removeClass('pinkActive').addClass('greenActive');
+						$('.receivebtn1').html("已领取");
+					}else{//未领取
+						$('.receivebtn1').addClass('pinkActive').removeClass('greenActive');
+						$('.receivebtn1').attr('eventid',dt.content.eventId);
+					}
+				}else{//不能领取
+
+				}
+				
+			}else{
+				main.alert(dt.message);
+			}
+		})
+	}
+
+
+function launchParams(eventId) {
+	return JSON.stringify({
+		id: "gh_dc1ce10e9cd3",
+		path: "pages/h5page/h5page?htp=https&url="+url+"&apptoken="+appToken,
+		type: 'release',
+		callback: "launchCallback"
+	})
+}
+</script>
+</html>

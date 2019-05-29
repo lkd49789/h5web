@@ -1,0 +1,6 @@
+body,section{background-color: #fff;-webkit-overflow-scrolling: touch;overflow-scrolling: touch; font-size:0;}
+section img{width: 100%;-webkit-user-select: none;}
+.btns{position: absolute;width: 100%;top: -19px;text-align: center;}
+.btns img{width: 78%;margin-bottom: 3%;}
+.btn-wrapper{position: relative;}
+

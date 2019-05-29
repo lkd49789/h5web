@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>SNH48 GROUP 2019夏季三团联合招募</title>
+		<!--title-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+		<meta name="keywords" content="snh,48,SNH48,snh48,招募,报名,中国,官网,官方,网站,少女,组合,偶像,团体">
+		<meta name="description" content="SNH48是全球华语区规模最大的偶像团体, 也是基于互联网思维和参与感精神、O2O构架和&quot;可面对面偶像&quot;运营理念的近距离养成式造星平台。SNH48充分吸收亚洲女子偶像天团AKB48的模式特色和运营经验并对进行&quot;中国表达&quot;和&quot;接地气&quot;的本土化改造, 其发展目标是在全球十四亿中国人中甄选优才，充分运用互联网和社交网络时代最具想象力，创新性和前瞻性的造星理念和技术手段, 积极培育兼具音乐舞蹈和影视表演才艺的全方位偶像艺人, 全力打造健康向上、充满青春活力、具备国际影响力的全球华语区第一女子偶像团体，并使之成为互联网和社交传媒时代中国偶像文化和粉丝经济产业的新标杆。">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/public.css">
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" href="css/other.css">
+		<!--css-->
+	</head>
+	<body>
+		<div class="page" id="inner">
+			<header>
+				<div class="container">
+					<img src="image/index/img-header-title.png" alt="三团联合招募">
+					<div class="time">
+						<a href="javascript:;"><img src="image/index/btn-header-join.png" alt="立即报名"></a>
+					</div>
+				</div>
+			</header>
+			<!--header-->
+			<div class="mainbody">
+				<div class="container">
+					<div class="faq">
+						<h2><img src="image/inner/title-faq.png" alt="招募FAQ"></h2>
+						<div class="content">
+							<div class="b_fq_c">
+								<div class="b_fq_cq">Q：请问SNH48 GROUP 2019夏季三团联合招募何时开始？何时截止报名？</div>
+								<div class="b_fq_ca">A：</div>
+								<div class="b_fq_ca2">SNH48 GROUP 2019夏季三团联合招募自2019年5月25日起至2019年07月31日截止。</div>
+								<div class="b_fq_line"></div>
+								<div class="b_fq_cq">Q：请问SNH48 GROUP 2019夏季三团联合招募的需求是？</div>
+								<div class="b_fq_ca">A：</div>
+								<div class="b_fq_ca2">13-22周岁，拥有梦想的女生未与任何经纪公司签约，并能与我方经纪公司签约，入选后可以正常参与SNH48 GROUP的剧院公演及宣传活动。</div>
+								<div class="b_fq_line"></div>
+								<div class="b_fq_cq">Q：请问我如何获知是否通过SNH48 GROUP 2019夏季三团联合招募海选？</div>
+								<div class="b_fq_ca">A：</div>
+								<div class="b_fq_ca2">SNH48 GROUP 2019夏季三团联合招募海选报名将自2019年5月25日起至2019年07月31日截止，海选截止报名后，陆续通过电话及邮件对合格的面试者进行合格通知。</div>
+								<div class="b_fq_line"></div>
+								<div class="b_fq_cq">Q：如果我没有收到报名确认邮件怎么办？ </div>
+								<div class="b_fq_ca">A：</div>
+								<div class="b_fq_ca2">报名确认邮件可能会被系统误认为垃圾邮件，请仔细查收！亦可利用SNH48 GROUP 2019夏季三团联合招募专题中的确认邮件重发功能重发确认邮件，建议在重发邮件的时候使用与先前不同的邮件地址。</div>
+								<div class="b_fq_line"></div>
+								<div class="b_fq_cq">Q：请问SNH48 GROUP 2019夏季三团联合招募复试及终试将于何时在何地进行？</div>
+								<div class="b_fq_ca">A：</div>
+								<div class="b_fq_ca2">SNH48 GROUP 2019夏季三团联合招募复试确切时间请随时留意SNH48官方网站。</div>
+								<div class="b_fq_line"></div>
+								<div class="b_fq_cq">Q：收到报名确认邮件是乱码怎么办？ </div>
+								<div class="b_fq_ca">A：</div>
+								<div class="b_fq_ca2">您的邮箱显示页面对utf-8编码不支持或显示错误，建议您使用确认邮件重发功能，重新发送确认邮件，请使用不同的邮箱。</div>
+								<div class="clear"></div>
+							</div>
+						</div>
+					</div>
+					<!--faq-->
+					<div class="return"><a href="index.html" class="btn btn-large">返回首页</a></div>
+				</div>
+				<footer>
+					<div class="container">Copyright 2019 © SNH48 All Rights Reserved.</div>
+				</footer>
+				<!--footer-->
+			</div>
+			<!--mainbody-->
+		</div>
+		<!--page-->
+		<script src="../resource/js/jquery.min.js"></script>
+		<script src="js/prefixfree.min.js"></script>
+		<!--js-->
+	</body>
+</html>

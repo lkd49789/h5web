@@ -1,0 +1,34 @@
+html,
+body {
+	margin: 0;
+	height: 100%;
+}
+
+
+/*背景全屏*/
+
+body {
+	background-image: url(../img/bg-1.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+main {
+	text-align: center;
+	margin-top: 50%;
+}
+main p{
+	color: #FFFFFF;
+	font-size: 1.8rem;
+	margin-bottom: 3%;
+}
+
+.bfb {
+	width: 100%;
+}
+
+.btn-1 {
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+}

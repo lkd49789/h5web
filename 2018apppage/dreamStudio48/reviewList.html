@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>梦想演播厅</title>
+	<link href="css/common.css" rel="stylesheet" />
+	<style>
+		*{margin:0;padding: 0;}
+		html,body{
+			width: 100%;
+			height: 100%;
+		}
+		body{
+			max-width: 640px;
+			margin:0 auto;
+		}
+		section{
+			width: 100%;
+			height: auto;
+			min-height: 100%;
+			background: url(img/bg.jpg)no-repeat top center #191462;
+			background-size: cover;
+		}
+		.timeList{
+			padding: 3% 0;
+		}
+		.timeList li{
+			width: 100%;
+			height: 6rem;
+			background-color: rgba(255,255,255,0.3);
+			margin-bottom: 3%;
+			text-align: center;
+			line-height: 6rem;
+			color:#ff80d8;
+			font-size: 1.2rem;
+			letter-spacing: 2px;
+			font-weight: 600;
+			position: relative;
+		}
+		.lineleft{
+			width: 25%;
+			position: absolute;
+			left:0%;
+			top:50%;
+			transform: translateY(-50%);
+    		-webkit-transform: translateY(-50%);
+		}
+		.lineright{
+			width: 25%;
+			position: absolute;
+			right:0%;
+			top:50%;
+    		transform: rotate(180deg) translateY(-50%);
+            -webkit-transform: rotate(180deg) translateY(-50%);
+            -moz-transform: rotate(180deg) translateY(-50%);
+            -o-transform: rotate(180deg) translateY(-50%);
+            -ms-transform: rotate(180deg) translateY(-50%);
+		}
+		.nohave{
+			width: 50%;
+		    margin-left: 25%;
+		    padding-top: 20%;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<ul class="timeList">
+			<!-- <li>
+				6月24日 第三期
+				<img src="img/line.png" class="lineleft">
+				<img src="img/line.png" class="lineright">
+			</li> -->
+		</ul>
+		<div class="icon_backbtn"><img src="img/btn-back.png"></div>
+	</section>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+
+	main.pastReview(function(dt){
+		console.log(dt);
+		if(dt.status==200){
+			var html = [];
+			if(dt.content=="" || dt.content.length==0){
+				$('section').css('background','transparent');
+				$('.timeList').html('<img src="../../common/images/tip.png" class="nohave" />');
+			}else{
+				$.each(dt.content,function(index,data){
+					html.push('<li eventid='+data.eventId+'>');
+					html.push(data.eventName);
+					html.push('<img src="img/line.png" class="lineleft">');
+					html.push('<img src="img/line.png" class="lineright">');
+					html.push('</li>')
+				});
+				$('.timeList').append(html.join(""));
+			}
+		}else{
+			main.alert(dt.message);
+		}
+	})
+
+	$('.timeList').on('click','li',function(){
+		var eventId = $(this).attr('eventid');
+		main.hrefTo('index.html?eventId='+eventId+'&wxtoken='+localStorage.getItem('wxToken'));
+	})
+
+	$('.icon_backbtn').click(function(){
+		window.history.back();
+	})
+
+</script>
+</html>

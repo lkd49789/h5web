@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="format-detection" content="telephone=no, email=no" />
+	<title>2018年度报告</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<div class="loading">
+		
+		<div>
+			<img src="img/lucky.gif">
+			<div>
+				<p class="tip">一年有365天，所以聚聚要等365秒</p>
+			</div>
+		</div>
+		<!-- <div class="loadEffect">
+			<span></span>
+	        <span></span>
+	        <span></span>
+	        <span></span>
+	        <span></span>
+	        <span></span>
+	        <span></span>
+	        <span></span>
+        </div> -->
+        <!-- <div class="per">100%</div> -->
+	</div>
+	<section class="share_page">
+		<img src="img/share.png" class="shareimg">
+	</section>
+	<img class="btn-music music" src="img/music.png">
+	<audio src="img/bgm.mp3" autoplay='autoplay' loop="loop" id="audioPlay"></audio>
+
+	<section class="sec" id="info">
+		<div class="swiper-container">
+		  	<div class="swiper-wrapper">
+			    <div class="swiper-slide page1">
+					<img src="img/p1-icon1.png" class="p1-icon1  upDown" swiper-animate-duration="0.5s" swiper-animate-delay="0s">
+					<img src="img/p1-icon2.png" class="p1-icon2  upDown1" swiper-animate-duration="0.5s" swiper-animate-delay="1s">
+					<div class="first">
+						<img src="img/p1-title.png" class="p1-title ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0s">
+					</div>
+					<div class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay=".4s">
+						<p>一年四季交替又到寒冬,2018年也已悄然走过</p>
+						<p>在这不平凡的一年里</p>
+						<p>你与SNH48 GROUP一同经历了</p>
+						<p class="yellow">金曲大赏 人气总决选 风尚大典</p>
+					</div>
+					<br>
+					<div class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay=".8s">
+						<p>看《SNHello》让你笑疼了肚子</p>
+						<p>看《花样妹妹》又让你饿了肚子</p>
+						<p>《莫莫有闻第二季》和《梦想演播厅》</p>
+						<p>让你更了解小偶像了</p>
+						<p>你甚至还为了一口气看完《芸汐传》而彻夜不眠</p>
+					</div>
+			    </div>
+			    <div class="swiper-slide page2">
+					<div class="first ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0s">
+						<template v-if="infoData.praiseData.praiseNum != 0">
+							<p>这一年里，</p>
+							<p>你一共给<span class="yellow">{{infoData.praiseData.memberNum}}</span>个小偶像点了<span class="yellow">{{infoData.praiseData.praiseNum}}</span>次赞</p>
+							<p>其中你最喜欢的是<span class="yellow">{{infoData.praiseData.memberInfo.realName}}</span></p>
+							<p>你为她点赞了<span class="yellow">{{infoData.praiseData.memberPraise}}</span>次</p>
+						</template>
+						<template v-else>
+							<p>这一年里，</p>
+							<p>你还没有给小偶像们点过赞</p>
+							<p>轻轻一点代表你的喜爱~</p>
+							<p>新的一年快去给喜欢的小偶像们点赞吧</p>
+						</template>
+					</div>
+					<br>
+					<div class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay=".8s">
+						<p class="yellow">是无数小甜蜜，</p>
+						<p class="yellow">让生活变得有风景</p>
+					</div class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.2s">
+					<div class="p2-toy upDown">
+						<img src="img/p2-1.png" class="p2-1">
+						<img src="img/p2-2.png" class="p2-2">
+					</div>
+			    </div>
+			    <div class="swiper-slide page3">
+					<img src="img/p3-1.png" class="p3-1 upDown" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s">
+					<div class="first ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0s">
+						<template v-if="infoData.giftData.giftTotal != 0">
+							<p>支持小偶像从来不止靠爱发电！</p>
+							<p>2018年你在口袋48消耗了许多鸡腿</p>
+							<p>一共送出了<span class="yellow">{{infoData.giftData.giftTotal}}</span>份礼物</p>
+							<p>有<span class="yellow">{{infoData.giftData.loveMemberCount}}</span>份送给了你最喜欢的<span class="yellow">{{infoData.giftData.memberInfo.realName}}</span></p>
+							<p>你一次送出的一份最贵的礼物是<span class="yellow">{{infoData.giftData.mostPayGift}}</span></p>
+						</template>
+						<template v-else>
+							<p>2018年你在口袋48还未消耗过鸡腿</p>
+							<p><span class="yellow">理财小能手</span>非你莫属啦</p>
+							<p>即使没有送过礼物</p>
+						</template>
+					</div>
+					<br>
+					<div class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay=".6s">
+						<p class="yellow">这一年也十分感谢有您的应援！</p>
+					</div>
+			    </div>
+			    <div class="swiper-slide page4">
+					<div>
+						<img src="img/p4-1.png" class="p4-1 upDown1">
+						<img src="img/p4-2.png" class="p4-2 upDown">
+						<img src="img/p4-3.png" class="p4-3 upDown1">
+					</div>
+					<div class="first ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0s">
+						<template v-if="infoData.roomData.roomTotal != 0">
+							<p>2018年你一共在<span class="yellow">{{infoData.roomData.roomTotal}}</span>个聚聚房间里</p>
+							<p>留下了足迹</p>
+							<p>在<span class="yellow">{{infoData.roomData.memberInfo.realName}}</span>的房间你和她说了很多心里话</p>
+							
+						</template>
+						<template v-else>
+							<p>聚聚房间是小偶像和大家交流的地方</p>
+							<p>新的一年记得要多去聚聚房间给小偶像留言</p>
+							<p>让她看到你对她的支持与喜爱</p>
+						</template>
+					</div>
+					<br>
+					<div class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay=".4s">
+						<template v-if="infoData.fanpaiData.fanpaiTotla != 0">
+							<p>你消耗了<span class="yellow">{{infoData.fanpaiData.payTotla}}</span>个鸡腿，</p>
+							<p>将许多悄悄话写在了私密翻牌里</p>
+							<p>你共被翻牌了<span class="yellow">{{infoData.fanpaiData.fanpaiTotla}}</span>次</p>
+							<p>其中<span class="yellow">{{infoData.fanpaiData.fanpaiMemberInfo.realName}}</span>接受到了你最多的心意</p>
+						</template>
+						<template v-else>
+							
+							<p>不好意思让别人看到的悄悄话</p>
+							<p>那就写在私密翻牌里吧</p>
+						</template>
+					</div>
+					<br>
+					<div class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay=".8s">
+						<p class="yellow">有你陪伴，梦想注定不会孤单</p>
+					</div>
+			    </div>
+			    <div class="swiper-slide page5">
+			    	<img src="img/p5-1.png" class="p5-1  upDown">
+					<img src="img/p5-2.png" class="p5-2  upDown1">
+					<div class="first ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0s">
+						<p>每周星梦剧院</p>
+						<p>都上演着精彩的公演</p>
+						<p>小偶像们总是在台上呈现出元气满满的表演</p>
+					</div>
+					<br>
+					<div class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay=".4s">
+						<template v-if="infoData.mvpData.voteTotal != 0">
+							<p>看完后的你</p>
+							<p>为你心目中的公演MVP投出了<span class="yellow">{{infoData.mvpData.voteTotal}}</span>票</p>
+							<p>其中最受你喜爱的是<span class="yellow">{{infoData.mvpData.memberInfo.realName}}</span></p>
+						</template>
+						<template v-else>
+							<p>对于公演MVP投票你总是很慎重</p>
+							<p>在新的一年，</p>
+							<p>一定会有小偶像的表演能打动你投出宝贵的一票</p>
+						</template>
+					</div>
+					<br>
+					<div class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay=".8s">
+						<p>梦想汗水坚持</p>
+						<p>你见证着<span class="yellow">小偶像们的每一步成长</span></p>
+					</div>
+			    </div>
+			    <div class="swiper-slide page6">
+					<img src="img/p6-1.png" class="p6-1  upDown">
+					<img src="img/p6-2.png" class="p6-2  upDown1">
+					<img src="img/p6-3.png" class="p6-3  upDown">
+					<div class="first ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0s">
+						<template v-if="infoData.birthdayDm.dmTotal != 0">
+							<p>小偶像的出生日都是奇迹日</p>
+							<p>生日祝福弹幕是你斐然文采展示的地方</p>
+						</template>
+						<template v-else>
+							<p>小偶像的出生日都是奇迹日</p>
+							<p>2018的你</p>
+							<p>将最美好的祝福都默默放在了心中</p>
+						</template>
+					</div>
+					<br>
+					<div class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay=".4s">
+						<template v-if="infoData.birthdayDm.dmTotal != 0">
+							<p>2018年的你共投出过<span class="yellow">{{infoData.birthdayDm.dmTotal}}</span>个弹幕</p>
+							<p>花费了<span class="yellow">{{infoData.birthdayDm.payTotal}}</span>个鸡腿</p>
+							<p>其中最贵的一条弹幕你花费了<span class="yellow">{{infoData.birthdayDm.mostPay}}</span>个鸡腿</p>
+							<p>投给了<span class="yellow">{{infoData.birthdayDm.memberInfo.realName}}</span></p>
+							<br>
+						</template>
+					</div>
+					<br>
+					<div class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay=".8s">
+						<template v-if="infoData.birthdayDm.dmTotal != 0">
+							<p class="yellow">在新的一年里</p>
+							<p class="yellow">也要展示你自己的才能哦！</p>
+						</template>
+					</div>
+			    </div>
+			    <div class="swiper-slide page7">
+					<img src="img/p4-3.png" class="p7-1 upDown1">
+					<div class="first ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0s">
+						<p>喜欢偶像会让自己变成更好的人</p>
+						<template v-if="infoData.commune.num != 0">
+							<p>为了推小偶像你已经练成了<span class="yellow">十项全能！</span></p>
+						</template>
+						<template v-else>
+							<p>在推小偶像的过程中你正在练成十项全能</p>
+						</template>
+					</div>
+					<br>
+					<div class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay=".4s">
+						<template v-if="infoData.commune.num != 0">
+							<p>在过去的一年</p>
+							<p>你一共在塞纳河公社里投出了<span class="yellow">{{infoData.commune.num}}</span>个稿件</p>
+							<p>获得了<span class="yellow">{{infoData.commune.praiseTotal}}</span>个点赞，其中点赞数最高的</span></p>
+							<p>稿件是<span class="yellow">{{infoData.commune.title}}</span></p>
+						</template>
+						<template v-else>
+							<p>期待新的一年</p>
+							<p>在塞纳河公社里能看到你才华满满的投稿哦！</p>
+						</template>
+					</div>
+					<br>
+					<div class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay=".8s">
+						<template v-if="infoData.commune.num != 0">
+							<p>在新的一年里</p>
+							<p>也要产出更多有意思的稿件</p>
+							<p>展示你自己的才能哦！</p>
+						</template>
+					</div>
+			    </div>
+			    <div class="swiper-slide page8">
+			    	<img src="img/p8-1.png" class="p8-1 ">
+			    	<img src="img/p8-2.png" class="p8-2 ">
+			    	<img src="img/p8-3.png" class="p8-3 ">
+			    	<img src="img/p8-4.png" class="p8-4 ">
+					<div class="first ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0s">
+						<p>听，2019年新年的钟声响起了</p>
+						<p>感谢各位聚聚2018年的陪伴</p>
+						<p>愿每一个<span class="yellow">「此刻」</span></p>
+						<p>都会变成你不会忘的<span class="yellow">「永远」</span></p>
+					</div>
+					<br>
+					<div class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay=".4s">
+						<p>那么新的一年</p>
+						<p>也要继续喜欢<span class="yellow">SNH48 GROUP</span></p>
+						<p>为喜欢的小偶像们应援呀！</p>
+					</div>
+					<img src="img/p8-btn.png" class="p8-5">
+			    </div>
+			   
+		 	</div>
+		</div>
+	</section>
+	<script src="../../common/js/jquery.min.js"></script>
+	<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../common/js/common.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/swiper.animate.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

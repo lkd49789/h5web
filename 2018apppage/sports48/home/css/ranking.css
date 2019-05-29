@@ -1,0 +1,172 @@
+*{margin:0;padding:0;}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+body{
+	max-width: 640px;
+	margin:0 auto;
+	background-color: #71b6f4;
+	position: relative;
+}
+section{
+	width: 100%;
+	height: 100%;
+	background: url(../img/bg.jpg)no-repeat center bottom;
+	background-size: cover;
+	position: relative;
+}
+.upbox{
+	/* padding-bottom: 6%; */
+}
+.title{
+	font-size: 1.2rem;
+	color:#fff;
+	text-align: center;
+	padding: 4% 0;
+}
+.headbox{
+	position: relative;
+	width: 7rem;
+	height: 7rem;
+	left:50%;
+	margin-left: -3.5rem;
+}
+.avatar{
+	display: block;
+	width: 100%;
+	height: 100%;
+	border:1px solid #ffea05;
+	border-radius: 100%;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url(../img/thumb.png);
+	z-index: 1;
+}
+.crown{
+	position: absolute;
+    width: 2.6rem;
+    right: -0.3rem;
+    top: -0.7rem;
+    z-index: 0;
+}
+.top1{
+	position: absolute;
+    width: 8rem;
+    bottom: -0.5rem;
+    left: -0.5rem;
+}
+.topnikename{
+	color:#fff;
+	font-size: 1.5rem;
+	text-align: center;
+	margin-top:4%;
+}
+.toptime{
+	color:#dce3ff;
+	font-size: 1rem;
+	text-align: center;
+	padding: 1% 0;
+}
+.topnum{
+	text-align: center;
+	margin-top:1%;
+	padding-bottom: 6%;
+}
+.topnum span{
+	padding: 1% 6%;
+	border-radius: 5px;
+	font-size: 1.1rem;
+}
+.the{
+	color:#6077e1;
+	background-color: #b7c4ff;
+}
+.the1{
+	color:#d46a14;
+	background-color: #ffe13d;
+}
+.the2{
+	color:#fff;
+	background-color: #588fe7;
+}
+.the3{
+	color:#be5109;
+	background-color: #fca871;
+}
+.rankList{
+	background-color:#fff;
+	width: 96%;
+	margin-left:2%;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+.rankList ul{
+	padding: 0 3%;
+	height: 100%;
+	overflow:auto;
+}
+.rankList ul li{
+	padding: 1.5rem 0;
+	position: relative;
+	border-bottom: 1px solid #b8c2eb;
+}
+
+.silver,.copper{
+	display: block;
+	width: 3rem;
+	height: 4rem;
+	text-align: center;
+	color:#fff;
+	font-size: 1.3rem;
+	line-height: 3.5rem;
+	float: left;
+	margin-right: 2%;
+}
+.silver{
+	background: url(../img/silver.png)no-repeat center center;
+	background-size: 100%;
+}
+.copper{
+	background: url(../img/copper.png)no-repeat center center;
+	background-size: 100%;
+}
+.ranknum{
+	display: block;
+	width: 2.5rem;
+	height: 2.5rem;
+	text-align: center;
+	color:#fff;
+	font-size: 1.3rem;
+	line-height: 3.5rem;
+	float: left;
+	margin-right: 2%;
+	background: url(../img/yuan_bule.png)no-repeat center center;
+	background-size: 100%;
+	margin-top: 0.9rem;
+	line-height: 2.5rem;
+}
+.newsmsg{
+
+}
+.newsmsg .nikename{
+	color:#465df3;
+	font-size: 1.3rem;
+	margin-top:0.5rem;
+}
+.newsmsg .time{
+	color:#a0abef;
+	font-size: 1rem;
+	margin-top: 0.3rem;
+}
+.num{
+	display: block;
+	text-align: center;
+	padding: 1% 3%;
+	position: absolute;
+	font-size: 1.1rem;
+	border-radius: 5px;
+	right: 0%;
+	top: 2.5rem;
+}

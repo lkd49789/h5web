@@ -1,0 +1,24 @@
+.u-wrapper{
+    
+}
+
+.menu-wrapper{
+	padding: 3%;
+}
+
+.menu-wrapper li{
+	background-color: #fff;
+	padding: 3%;
+	font-size: 1rem;
+	margin-bottom: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+.menu-wrapper li em img{
+	float: right;
+    width: 24px;
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    margin-top: -18px;
+}

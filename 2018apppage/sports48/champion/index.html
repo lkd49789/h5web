@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>冠军竞猜</title>
+	<link href="../common/css/common.css" rel="stylesheet" />
+	<link href="../common/css/member.css" rel="stylesheet" />
+	<link href="css/index.css" rel="stylesheet" />
+	<style type="text/css">
+		.mem_con{
+			padding:0;
+			margin-top: 20%;
+			height: auto;
+		}
+		.team{
+			margin:0;
+			margin-left: 10%;
+			width: 80%;
+			padding: 3% 0;
+		}
+		.mem_cbtn{
+			margin-top: 20%;
+		}
+	</style>
+</head>
+<body>
+	<section class="sec">
+		<p class="tit">请选择你认为会胜出的团队</p>
+		<ul class="motionList">
+			<li>
+				<img src="img/motion_run.png" class="motion_log">
+				<em>点击选择队伍</em>
+				<span></span>
+			</li>
+			<li>
+				<img src="img/motion_rope.png" class="motion_log">
+				<em>点击选择队伍</em>
+				<span></span>
+			</li>
+			<li>
+				<img src="img/motion_jump.png" class="motion_log">
+				<em>点击选择队伍</em>
+				<span></span>
+			</li>
+			<li>
+				<img src="img/motion_bike.png" class="motion_log">
+				<em>点击选择队伍</em>
+				<span></span>
+			</li>
+			<li>
+				<img src="img/motion_go.png" class="motion_log">
+				<em>点击选择队伍</em>
+				<span></span>
+			</li>
+			<li>
+				<img src="img/motion_tug.png" class="motion_log">
+				<em>点击选择队伍</em>
+				<span></span>
+			</li>
+			<li>
+				<img src="img/motion_group.png" class="motion_log">
+				<em>点击选择队伍</em>
+				<span></span>
+			</li>
+		</ul>
+		<!-- 竞猜按钮 -->
+		<div class="usebox" >
+			<div class="integralbox integral_btn">
+				<p>使用50积分参加竞猜</p>
+				<p>我的积分：<span class="integral"></span></p>
+			</div>
+			<div class="chickenbox chicken_btn">
+				<p>使用50鸡腿参加竞猜</p>
+				<p>我的鸡腿：<span class="money"></span></p>
+			</div>
+
+			<!-- 去往app充值通道 -->
+			<p class="loaded">鸡腿不足，请先去充值</p>
+		</div>
+		
+		<!-- 奖励 -->
+		<div class="rewardbox" style="display:none;">
+			<div>+100000鸡腿</div>
+			<img src="img/round.png" class="lround">
+			<img src="img/round.png" class="rround">
+		</div>
+	</section>
+	<!--弹框 -->
+	<div class="mask_inbox">
+		<!-- 是否参加竞猜弹框 -->
+		<div class="mask">
+			<div class="upbox">
+				<h4></h4>
+				<p>提交后无法更改选择</p>
+			</div>
+			<div class="btns">
+				<button class="btnsback">返回修改</button>
+				<button class="btnsright">确定</button>
+			</div>
+		</div>
+		<!-- 没有选择完全弹框 -->
+		<div class="prompt">
+			<div class="upbox">
+				<p>您还有竞猜<br/>项目没有选择哦~</p>
+			</div>
+			<div class="know">知道了</div>
+		</div>
+	</div>
+</body>
+<script src="../../../common/js/jquery.min.js"></script>
+<script src="../common/js/memberhtml.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/index.js"></script>
+</html>

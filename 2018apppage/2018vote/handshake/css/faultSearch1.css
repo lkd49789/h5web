@@ -1,0 +1,30 @@
+.listDiv{
+	
+}
+.date{
+	display: inline-block;
+	width: 40%;
+	vertical-align: top;
+}
+.info{
+	display: inline-block;
+	width: 55%;
+}
+.intro{
+	color: #999;
+	line-height: 2rem;
+}
+#pullrefresh{
+	padding-top: 10px;
+}
+#pullrefresh ul{
+	padding: 0 5%;
+}
+#pullrefresh ul li{
+	
+	padding: 15px 0;
+}
+#pullrefresh ul li:not(:last-child){
+	border-bottom: 1px solid #d6d6d6;
+	
+}

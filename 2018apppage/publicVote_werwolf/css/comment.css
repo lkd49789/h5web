@@ -1,0 +1,123 @@
+/*评论区域*/
+.comment_box{
+	padding: 0 3% 3% 3%;
+}
+/* 点评输入框 */
+.text_box{
+	width: 100%;
+	height: 60px;
+	margin-bottom:8%;
+}
+.textarea{
+	resize: none;
+	width: 76%;
+	height: 40px;
+	background-color: #c8ad6b;
+	border:none;
+	padding:10px 2%;
+	line-height:20px;
+	margin-right: 2%;
+	color:#fff;
+	outline: none;
+}
+.text_box button{
+	width: 16%;
+	height: 60px;
+	border:none;
+	float: right;
+	background-color: #f1c459!important;
+	color:#fff;
+}
+
+/*评论列表*/
+.commentList{
+	color:#fff;
+	font-size: 12px;
+}
+.commentList li{
+	padding: 5% 2%;
+	border-bottom:1px solid #3B2631;
+	position: relative;
+}
+.avata{
+	display:block;
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	float: left;
+}
+.commentList .content{
+	padding-left: 50px;
+}
+.name{
+	color:#fff;
+}
+.time{
+	margin-top: 3px;
+	color:#c4c4c4;
+}
+.time span{
+	margin-left: 10px;
+}
+.texts{
+	margin-top: 5px;
+	color:#fff;
+}
+.icon_self{
+	width: 8px;
+	vertical-align: baseline;
+	margin-left: 5px;
+}
+.zanbtn{
+	position: absolute;
+	right: 2%;
+	top: 22%;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.zanbtn img{
+	width: 14px;
+	vertical-align: middle;
+	margin-right:3px;
+}
+.zanbtn .like-heart{
+	display: none;
+}
+.zannum{
+	vertical-align: middle;
+	color:#c4c4c4;
+}
+.commentList li:last-child{
+	border-bottom:none!important;
+}
+.color11{
+	color:#EFD073!important;
+}
+.color12{
+	color:#A89B79!important;
+}
+.color13{
+	color:#FBDF9E!important;
+}
+.show{
+	display: block;
+}
+.hide{
+	display: none;
+}
+.like-box .zanimg,.like-box .zannum{
+	display: none;
+}
+.like-box .like-heart{
+	display: block;
+}
+.like-box .like-heart{
+	top: 30% !important;
+}

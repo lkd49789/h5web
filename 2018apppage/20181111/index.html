@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>双十一返利，集卡抽锦鲤</title>
+    <link rel="stylesheet" href="../../common/css/common_mobile.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body id="main-wrapper">
+	<section>
+		<img src="images/p1-1.png">
+		<img src="images/p1-2.png">
+		<div class="banner">
+			<img src="images/p1-3.png">
+			<img src="images/p1-4.png">
+		</div>
+		
+		<!-- 抽奖记录 -->
+		<div class="container-list">
+			<div class="list-box">
+				<div>
+					<div class="title-record">
+						<img src="images/title-record.png">
+						<span v-on:click="gotoTop()">查看所有结果>></span>
+					</div>
+					<div class='scroll-wrapper'>
+						<div  class="scroll-box">
+							<ul>
+								<li v-for="list in prizeData" track-by="$index">
+									<p><span class="nickname">{{list.userName}}</span><span class="time">{{list.ctime | timeFormat}}</span></p>
+									<p><span class="c1">{{list.rewardType | getType}}</span><span class="j{{list.rewardType}}">{{list.rewardType | prizeName}}</span></p>
+								</li>
+								<!-- <li>
+									<p><span class="nickname">昵称</span><span class="time">2018-11-01</span></p>
+									<p><span class="c1">抽中了</span><span class="j2">锦鲤袋王</span></p>
+								</li>
+								<li>
+									<p><span class="nickname">昵称</span><span class="time">2018-11-01</span></p>
+									<p><span class="c1">抽中了</span><span class="j3">锦鲤袋王</span></p>
+								</li> -->
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<img src="images/mycard.png">
+			<div class="cards">
+				<div>
+					<div>
+						<img src="images/x.png">
+						<span class="num1">{{mainData.snhCard}}</span>
+					</div>
+					<img src="images/card1.png">
+				</div>
+				<div>
+					<div>
+						<img src="images/x.png">
+						<span class="num2">{{mainData.bejCard}}</span>
+					</div>
+					<img src="images/card2.png">
+				</div>
+				<div>
+					<div>
+						<img src="images/x.png">
+						<span class="num3">{{mainData.gnzCard}}</span>
+					</div>
+					<img src="images/card3.png">
+				</div>
+				<div>
+					<div>
+						<img src="images/x.png">
+						<span class="num4">{{mainData.shyCard}}</span>
+					</div>
+					<img src="images/card4.png">
+				</div>
+				<div>
+					<div>
+						<img src="images/x.png">
+						<span class="num5">{{mainData.ckgCard}}</span>
+					</div>
+					<img src="images/card5.png">
+				</div>
+				<div>
+					<div>
+						<img src="images/x.png">
+						<span class="num6">{{mainData.wzCard}}</span>
+					</div>
+					<img src="images/card6.png">
+				</div>
+				<div>
+					<div>
+						<img src="images/x.png">
+						<span class="num7">{{mainData.dwCard}}</span>
+					</div>
+					<img src="images/card7.png">
+				</div>
+			</div>
+		
+			<div class="btns">
+				<!-- <span class="btn-1" v-on:click="gotoRecharge()">充值获得抽奖机会</span> -->
+				<!-- <span class="btn-2 btn-goto-login" v-on:click="gotoPrize()">你有<span class="draw-num">{{mainData.drawNum}}</span>次抽奖机会</span> -->
+				<span class="btn-2 btn-show-login" v-on:click="gotoList()">奖励领取</span>
+
+			</div>
+			<p class="btn-record">请在12月12日23:59领取并使用优惠券</p>
+			<p class="btn-rule" v-on:click="gotoPrize()">充值未到账用户抽奖通道</p>
+			<p class="btn-rule" v-on:click="gotoRule()">查看详细规则</p>
+		</div>
+		<p class="tip">通过微信公众号"SNH48"可参与活动，获得"锦鲤袋王"的机会更多。</p>
+	</section>
+	<div class="login-wrapper">
+
+		<div class="login-box">
+			<img v-on:click="closeLogin()" class="pop-close" src="images/btn-close.png">
+			<p>抽奖请登录口袋48</p>
+			<input type="tel" class="phonenum" placeholder="请输入口袋48绑定的手机号码" maxlength="11" name="">
+			<input type="password" class="password" placeholder="请输入密码" name="">
+			<span class="warning"></span>
+			<span v-on:click="gotoLogin()" class="btn-login">登录</span>
+			<span class="tip1">如果你在口袋48中没有绑定手机号码请先前往绑定</span>
+		</div>
+	</div>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+
+<script src="js/config.js" ></script>
+<script src="js/main.js" ></script>
+<script src="js/vue.js" ></script>
+<script src="js/index.js"></script>
+</html>

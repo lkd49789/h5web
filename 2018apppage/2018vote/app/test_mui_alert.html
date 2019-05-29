@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="Cache-Control" content="max-age=0">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css" />
+</head>
+<body>
+    
+	<button id="btn">MUI ALERT</button>
+
+    
+	
+
+</body>
+<script src="js/jquery.min.js" ></script>
+<script src="js/mui.min.js" ></script>
+
+<script type="text/javascript">
+
+// mui('#btn').on('click', function(e) {
+// getAccessToken()
+// })
+// $("#btn").click(function(){
+//     getAccessToken()
+// })
+ document.getElementById("btn").addEventListener('tap', function() {
+getAccessToken()
+    })
+    function getAccessToken(){
+        mui.alert('', '欢迎使用Hello MUI', function() {
+                    console.log("1")
+                });
+        // var btnArray = ['否', '是'];
+        //         mui.confirm('MUI是个好框架，确认？', 'Hello MUI', btnArray, function(e) {
+        //             if (e.index == 1) {
+                        
+        //             } else {
+                        
+        //             }
+        //         })
+    }
+    
+</script>
+</html>

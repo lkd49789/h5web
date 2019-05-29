@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>手账</title>
+    <link rel="stylesheet" href="../../common/css/mui.min.css">
+     <link href="../../common/css/common.css" rel="stylesheet" />
+      <link rel="stylesheet" href="./css/imgDetails.css">
+</head>
+<style>
+    .mui-slider{
+        padding-bottom: 1.7rem;
+        margin-top:1rem;
+    }
+    .mui-slider img{
+        border-radius: .5rem;
+    }
+    .mui-slider-indicator{
+        bottom: 0px;
+    }
+    .mui-slider-indicator .mui-active.mui-indicator{
+        background: #7966fa;
+    }
+</style>
+<body>
+    <div id="app">
+        <!-- <div class="headWrap">
+           <div class='head'><img class="head" v-if="content.baseUserInfo" :src="'https://source.48.cn'+content.baseUserInfo.avatar" alt=""></div>
+            <span><b  v-if="content.baseUserInfo" v-text="content.baseUserInfo.nickname"></b></span>
+            <img  v-if="content.baseUserInfo" :src="'https://source.48.cn'+content.baseUserInfo.teamLogo" alt="">
+        </div>
+        <div class="mui-slider" v-if="content.auctionGoods">
+            <div class="mui-slider-group mui-slider-loop"> -->
+                <!--支持循环，需要重复图片节点-->
+                <!-- <div class="mui-slider-item" @click="download()"><a href="#"><img :src="'./images/'+content.auctionGoods.detailsImage[content.auctionGoods.detailsImage.length - 1]" /></a></div>
+                <div v-for="(item,index) in content.auctionGoods.detailsImage" class="mui-slider-item" @click="download()"><a href="#"><img :src="'./images/'+item" /></a></div> -->
+                <!--支持循环，需要重复图片节点-->
+                <!-- <div class="mui-slider-item" @click="download()"><a href="#"><img :src="'./images/'+content.auctionGoods.detailsImage[0]" /></a></div>
+            </div>
+            <div class="mui-slider-indicator" id="sliin">
+                <div v-for="(item,index) in content.auctionGoods.detailsImage" :class="['mui-indicator',{'mui-active':index == 0}]"></div>
+            </div>
+        </div> -->
+    </div>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="../../common/js/mui.min.js" ></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<script src="../../common/js/vue.js"></script>
+<!-- <script src='https://cdn.bootcss.com/vue/2.6.10/vue.js'></script> -->
+<script src="../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script>
+    var app = new Vue({
+        el:"#app",
+        data:{
+            content:[]
+        },
+        mounted:function(){
+            var that = this;
+            main.getImgDetails(this.getUrlParam('?goodsId'),function(data){
+                if(data.status == 200){
+                    data.content.auctionGoods.detailsImage = data.content.auctionGoods.detailsImage.split(';')
+                    var arr = []
+                    data.content.auctionGoods.detailsImage.forEach(function(item,index){
+                        arr.push('http://192.168.0.107/h5web/2019apppage/swimsuit/images/'+item)
+                    })
+                    that.snhBrowserImages(arr)
+                    that.content = data.content;
+                    that.$nextTick(function(){
+                        var gallery = mui('.mui-slider');
+                            gallery.slider({
+                            interval:5000//自动轮播周期，若为0则不自动播放，默认为0；
+                        });
+                    })
+                    that.snhBrowserImages()
+                }else{
+
+                }
+
+            })
+        },
+        methods:{
+            snhBrowserImages:function(images) {
+                // var images =  new Array("/20181112/154201491032365B86p7b65.jpg",
+                //             "/20181112/1542014912141dXIHl0H4K7.jpg",
+                //             "/20181112/154201491607385y7YDd1Ao.jpg",
+                //             "/20181112/1542014919127N2NgpI893e.jpg",
+                //             "/20181112/1542014922285e6TkTw26Ho.jpg",
+                //             "/20181112/1542014924378IqTfepTHy3.jpg");
+                var params = {
+                    images: images,
+                    index: 0  
+                };
+                dsBridge.call("snhBrowserImages",params);
+            },
+            download:function(){
+                //下载图片的方法
+            },
+    /*获取url参数*/
+            getUrlParam(name) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+                var r = window.location.search.substr(1).match(reg); //匹配目标参数
+                if (r != null) return decodeURI(r[2]);
+                return null; //返回参数值
+            },
+        }
+    }) 
+</script>
+</html>

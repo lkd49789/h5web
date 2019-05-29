@@ -1,0 +1,217 @@
+*{margin:0;padding: 0}
+html,body{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background-color: #191462;
+}
+body{
+	max-width: 640px;
+	margin:0 auto;
+}
+section{
+	width: 100%;
+	height: auto;
+	min-height: 100%;
+	background-color: #191462;
+}
+input,button{
+	outline: none;
+	border:none;
+}
+.titbox1,.titbox2,.titbox3{
+	padding: 0 4%;
+	height: 4rem;
+	line-height: 4rem;
+}
+.titbox1 span{
+	color: #c4c4c4;
+	font-size: 1.2rem;
+}
+.balance{
+	float: right;
+	line-height: 4rem;
+}
+.balance em{
+	font-size: 1.2rem;
+	color:#ff80d8;
+}
+.changebox,.rReceivebox{
+	padding: 1.3rem 4%;
+	background-color: rgba(255,255,255,0.3);
+	position: relative;
+}
+.changebox .txt,.rReceivebox .txt{
+	color: #fff;
+	font-size: 1.2rem;
+	padding-right: 7rem;
+}
+.changebtn,.receivebtn,.receivebtn1{
+	position: absolute;
+	width: 5.5rem;
+	height: 2rem;
+	color: #fff;
+	font-size: 1.2rem;
+	text-align: center;
+	line-height: 2rem;
+	border-radius: 0.5rem;
+	right: 4%;
+	top: 50%;
+	transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    background-color: #c4c4c4;
+}
+
+/*可兑换可领取颜色*/
+.pinkActive{
+	background-color: #ff80d8;
+}
+/*已兑换已领取颜色*/
+.greenActive{
+	background-color: #7dcd8f;
+}
+/*积分不够颜色*/
+.noticeActive{
+	background-color: #d79d47;
+}
+/*正在确认中颜色*/
+.haveActive{
+	background-color: #7b93ed;
+}
+
+.btnwx{
+	width: 80%;
+	margin-left: 10%;
+	color: #fff;
+	font-size: 1.3rem;
+	height: 3.5rem;
+	line-height: 3.5rem;
+	border-radius: 2rem;
+	background-color: #ff80d8;
+	margin-top: 10%;
+}
+.grant{
+
+}
+.program{
+	
+}
+
+/**/
+.titbox2,.titbox3{
+	font-size: 1.2rem;
+	color: #c4c4c4;
+}
+.mypoint{
+	width: 100%;
+	height: 4rem;
+	max-width: 640px;
+	position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+	background-color: #ff80d8;
+	bottom: 0;
+	text-align: center;
+	line-height: 4rem;
+	font-size: 1.3rem;
+	color: #fff;
+	letter-spacing: 2px;
+}
+.mypoint em{
+	font-size: 1.3rem;
+	color: #fff;
+}
+
+
+/*弹窗*/
+.maskbox{
+	width: 100%;
+	height: 100%;
+	max-width: 640px;
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+	background-color: rgba(0,0,0,.3);
+	display: none;
+}
+
+.mask1{
+	position: absolute;
+	width: 72%;
+	padding: 10% 4% 7% 4%;
+	margin-left: 10%;
+	top: 30%;
+	background-color: #fff;
+	border-radius: 15px;
+	display: none;
+}
+.maskbox p{
+	color: #444;
+	font-size: 1.2rem;
+	text-align: center;
+}
+.maskbox p b{
+	font-size: 1.2rem;
+}
+.mask1 .pz{
+	font-size: 1rem!important;
+	color: #c4c4c4;
+	margin-top: 1rem;
+}
+.btns{
+	text-align: center;
+	margin-top: 12%;
+}
+.btns button{
+	width: 45%;
+	height: 3.5rem;
+	border-radius:0.8rem;
+	font-size: 1.3rem;
+	border:1px solid #ff80d8;
+}
+.btns .again{
+	background-color: transparent;
+	color:#ff80d8;
+	margin-right: 2%;
+}
+.btns .comeback{
+	background-color: #ff80d8;
+	color:#fff;
+	margin-left: 2%;
+}
+
+
+.mask2{
+	position: absolute;
+	width: 60%;
+	padding: 10% 10% 7% 10%;
+	margin-left: 10%;
+	top: 30%;
+	background-color: #fff;
+	border-radius: 15px;
+	display: none;
+}
+.knowbtn,.knowbtn1{
+	background-color: #ff80d8;
+	color: #fff;
+}
+
+.mask3,.mask4,.mask5{
+	position: absolute;
+	width: 80%;
+	padding: 10% 0;
+	margin-left: 10%;
+	top: 30%;
+	background-color: #fff;
+	border-radius: 15px;
+	text-align: center;
+	display: none;
+}
+.icon_success{
+	display: inline-block;
+	width: 20%;
+	margin-bottom: 3%;
+}

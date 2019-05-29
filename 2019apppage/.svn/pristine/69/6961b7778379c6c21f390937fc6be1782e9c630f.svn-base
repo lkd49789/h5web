@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>收货地址</title>
+	<link href="../../common/css/mui.picker.css" rel="stylesheet"/>
+	<link href="../../common/css/common.css" rel="stylesheet" />
+	<link href="css/buy.css" rel="stylesheet" />
+	<link href="css/popbox.css" rel="stylesheet" />
+</head>
+<body>
+	<section class='wrapper' v-cloak>
+		<!-- <div>
+			<input type="tel" name="" v-model="total" maxlength="6" placeholder="请填写购买数量" oninput="javascript:this.value=this.value.replace(/[^\d]/g,'')">
+			<p>付款金额：<i>{{getTotal.totalPrice}}元+{{post*12}}元邮费</i> <span class="count">包含网络握手权：<i>{{getTotal.totalVote}}个</i></span></p>
+		</div> -->
+		<div>
+			<h1>收货信息</h1>
+			<p>收货人姓名</p>
+			<input type="text" class="mui-input-clear" maxlength="10" v-model="uname" placeholder="填写收货人的姓名（必须）" name="">
+			<p>收货人联系方式</p>
+			<input type="tel" v-model="phone" maxlength="15" placeholder="填写收货联络的方式，如手机号（必须）" name="">
+			<p>收货人地址</p>
+			<input type="text" class="mui-input-clear u-city" v-model="area" v-on:click="picker && showProPanel()" readOnly="true" placeholder="选择地区">
+			<input type="text" maxlength="50" v-model="address" placeholder="请填写收货的详细地址（必须）" name="">
+			<!-- <p class="tip">注：购买后网络握手权可以直接使用，包装中不包含实体握手劵</p> -->
+		</div>
+		<!-- <div v-on:click="choosePostAddress()" class="checkBox">
+			<img v-if="post==0" src="img/icon-check.png">
+			<img v-if="post==1" src="img/icon-none.png">
+		    不需要发货
+		</div> -->
+		<p class="btn" v-on:click="showBuyPanel()">保存</p>
+		<!-- <div class="pay-box" v-show="showpop==1">
+			<div>
+				<p>应付金额{{getTotal.totalPrice+post*12}}元</p>
+				<img v-on:click="buy('ALI')" src="img/ali.png">
+				<img v-on:click="buy('WX_APP')" src="img/wechat.png">
+				<p v-on:click="closePop()" class="btn-cancel">取消</p>
+			</div>
+		</div> -->
+		<div class="mask" v-if="showpop > 1">
+			<div v-if="showpop==2">
+				<p>{{tips}}</p>
+				<span style="background: url('./img/btn2.png') no-repeat left top/100% 100%" v-on:click="closePop()">{{btnstr}}</span>
+			</div>
+			<div v-if="showpop == 3">
+				<p>{{tips}}</p>
+				<span style="background: url('./img/btn2.png') no-repeat left top/100% 100%" v-on:click="closePop()">{{btnstr}}</span>
+			</div>
+		</div>
+	</section>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="../../common/js/mui.min.js"></script>
+<script src="../../common/js/data.city.js"></script>	
+<script src="../../common/js/mui.picker.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<script src="../../common/js/vue.js"></script>
+<script src="../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/buy.js"></script>
+</html>

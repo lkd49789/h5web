@@ -1,0 +1,127 @@
+*{margin:0;padding: 0}
+html,body{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background-color: #ffffff;
+}
+body{
+	max-width: 640px;
+	margin:0 auto;
+}
+section{
+	width: 100%;
+	height: auto;
+	min-height: 100%;
+	background-color: #ffffff;
+}
+button{
+	border:none;
+}
+ul,li{
+	list-style: none;
+}
+
+.bannerbox{
+	width: 100%;
+	background:url(../../img/smbg.jpg)no-repeat center center;
+	background-size:cover;
+	padding: 7% 0;
+}
+.topbox{
+	width: 20%;
+	position: relative;
+	margin-left: 41%;
+}
+.tophead{
+	display: block;
+	width: 100%;
+	/* border:1px solid #ffdd19; */
+	border-radius: 100%;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.namebox{
+	text-align: center;
+	color: #fff;
+	font-size: 1.2rem;
+	margin-top: 0.5rem;
+	height: 2rem;
+	line-height: 2rem;
+	white-space:nowrap;
+	width: 130%;
+    margin-left: -15%;
+}
+
+.team{
+	font-size: 1rem;
+	margin-left: 0.5rem;
+	background-color: #7bd5f5;
+	color:#fff;
+	padding:0 0.4rem;
+	border-radius: 5px;
+}
+.ulmsg{
+	width: 100%;
+	text-align: center;
+	height: 2.5rem;
+	margin-top: 5%;
+}
+.ulmsg li{
+	display: inline-block;
+	width: 40%;
+	border-radius: 15px;
+	background-color: #f8f0fe;
+	height: 2.5rem;
+	line-height: 2.5rem;
+	font-size: 1.1rem;
+	color:#6253f7;
+}
+.allrank{
+	margin-right: 3%;
+}
+.allnum{
+	margin-left: 3%;
+}
+.textlist{
+	background-color: #f6f6f6;
+}
+.textlist li{
+	padding: 0 5%;
+	background-color: #fff;
+	height: 3rem;
+	font-size: 1.2rem;
+	line-height: 3rem;
+	margin-bottom: 1%;
+}
+.textlist li em{
+	float: right;
+	font-size: 1.2rem;
+	color:#847afa;
+	line-height: 3rem;
+}
+.totaltxt{
+	width: 100%;
+	text-align: center;
+	background-color: #F3F2FE;
+	font-size: 1.1rem;
+	color:#222;
+	height: 3.5rem;
+	line-height: 3.5rem;
+}
+.namebox .team{
+	width: 1.5rem;
+}
+
+
+.icon_backbtn{
+	position: fixed;
+	width: 3rem;
+	bottom: 6.5rem;
+	z-index: 999;
+}
+.icon_backbtn img{
+	width: 100%;
+}

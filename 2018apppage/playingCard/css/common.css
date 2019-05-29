@@ -1,0 +1,46 @@
+@charset "utf-8";
+/*reset */
+html,body,div,p,span,img,em,i,cite,pre,object,code,del,hr,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,frame,iframe,fieldset,form,table,caption,tbody,thead,tfoot,tr,td,th,label,legend{margin:0;padding:0; border:0; font:17px "Helvetica Neue",Helvetica,sans-serif;}
+input,select,textarea{margin:0;padding:0;color:#666; font-family:"Helvetica Neue",Helvetica,sans-serif; font-size:17px}
+ul,ul li,ol,ol li,dl,dl dd{ list-style:none;}
+table,tr,td{ border-collapse:collapse;}
+pre{white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap;word-wrap: break-word;white-space : normal ;}
+a:hover{ color:#333}
+select,img,input{ vertical-align:middle;}
+/*ClearFix */
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+*html .clearfix {height:1%;}
+*+html .clearfix{height:1%;}
+.clearfix{display:inline-block;}
+.clearfix {display:block;}
+.clear{ clear:both; overflow:hidden;_zoom:1;}
+
+a{color:#666; text-decoration:none}
+a {bblr:expression(this.onFocus=this.blur()); outline:none;}
+.mui-segmented-control .mui-control-item{
+	color: #5B6BC2!important;
+}
+/* scrollbar */
+/*::-webkit-scrollbar{width:6px;height:10px;}
+::-webkit-scrollbar-track-piece{-webkit-box-shadow:inset 2px 2px 6px rgba(0,0,0,.5);-webkit-border-radius:8px;}
+::-webkit-scrollbar-thumb:vertical{background-color:#333;-webkit-border-radius:8px; border:solid 1px #ccc}*/
+
+iframe{
+	width: 100%;
+}
+
+html,body { width: 100%; font-family: "微软雅黑",Helvetica,sans-serif;/*background: transparent;*/}
+
+html{font-size:10px}
+@media screen and (min-width:321px) and (max-width:374px){html{font-size:11px}}
+@media screen and (min-width:375px) and (max-width:413px){html{font-size:12px}}
+@media screen and (min-width:414px) and (max-width:499px){html{font-size:13px}}
+@media screen and (min-width:500px) and (max-width:549px){html{font-size:15px}}
+@media screen and (min-width:550px) and (max-width:600px){html{font-size:17px}}
+@media screen and (min-width:601px) and (max-width:719px){html{font-size:20px}}
+@media screen and (min-width:720px) and (max-width:749px){html{font-size:21.5px}}
+@media screen and (min-width:750px) and (max-width:799px){html{font-size:22.5px}}
+@media screen and (min-width:800px){html{font-size:24px}}
+@media screen and (max-height:480px){html{font-size:9px;}}
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+

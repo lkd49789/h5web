@@ -1,0 +1,305 @@
+/***************************************************
+		定义 SNH48 GROUP 专属颜色
+***************************************************/
+
+//分团颜色
+@C-GROUP: @C-LG-BLUE;
+@C-SNH: rgba(142, 210, 245, 1);
+@C-BEJ: rgba(253, 42, 111, 1);
+@C-GNZ: rgba(166, 200, 25, 1);
+@C-SHY: rgba(230, 0, 193, 1);
+@C-CKG: rgba(164, 98, 1, 1);
+
+//SNH 队伍颜色
+@C-SNH-LIGHT-S: rgba(135, 199, 244, 1);
+@C-SNH-S: rgba(83, 184, 255, 1);
+@C-SNH-LIGHT-N: rgba(212, 149, 231, 1);
+@C-SNH-N: rgba(189, 156, 198, 1);
+@C-SNH-LIGHT-H: rgba(248, 192, 34, 1);
+@C-SNH-H: rgba(248, 167, 34, 1);
+@C-SNH-LIGHT-X: rgba(191, 221, 32, 1);
+@C-SNH-X: rgba(166, 206, 40, 1);
+@C-SNH-LIGHT-XII: rgba(34, 221, 157, 1);
+@C-SNH-XII: rgba(4, 203, 132, 1);
+@C-SNH-LIGHT-FT: rgba(242, 64, 114, 1);
+@C-SNH-FT: rgba(219, 0, 100, 1);
+@C-SNH-LIGHT-READY: rgba(179, 190, 193, 1);
+@C-SNH-READY: rgba(167, 176, 186, 1);
+
+//SNH 队伍渐变
+@C-LG-S: linear-gradient(@C-LG-DEG, @C-SNH-LIGHT-S, @C-SNH-S);
+@C-LG-N: linear-gradient(@C-LG-DEG, @C-SNH-LIGHT-N, @C-SNH-N);
+@C-LG-H: linear-gradient(@C-LG-DEG, @C-SNH-LIGHT-H, @C-SNH-H);
+@C-LG-X: linear-gradient(@C-LG-DEG, @C-SNH-LIGHT-X, @C-SNH-X);
+@C-LG-XII: linear-gradient(@C-LG-DEG, @C-SNH-LIGHT-XII, @C-SNH-XII);
+@C-LG-FT: linear-gradient(@C-LG-DEG, @C-SNH-LIGHT-FT, @C-SNH-FT);
+@C-LG-READY: linear-gradient(@C-LG-DEG, @C-SNH-LIGHT-READY, @C-SNH-READY);
+
+//SNH 队伍块风格
+.DIV-SNH-S(@DEG: 45deg, @OPACITY: 26%, @X: -12px, @Y: 12px, @DEPTH: 24px){
+	.C-LG-COLOR(@DEG, @C-SNH-LIGHT-S, @C-SNH-S);
+	.DROP-SHADOW(@C-SNH-S, @OPACITY, @X, @Y, @DEPTH);
+}
+.DIV-SNH-N(@DEG: 45deg, @OPACITY: 26%, @X: -12px, @Y: 12px, @DEPTH: 24px){
+	.C-LG-COLOR(@DEG, @C-SNH-LIGHT-N, @C-SNH-N);
+	.DROP-SHADOW(@C-SNH-N, @OPACITY, @X, @Y, @DEPTH);
+}
+.DIV-SNH-H(@DEG: 45deg, @OPACITY: 26%, @X: -12px, @Y: 12px, @DEPTH: 24px){
+	.C-LG-COLOR(@DEG, @C-SNH-LIGHT-H, @C-SNH-H);
+	.DROP-SHADOW(@C-SNH-H, @OPACITY, @X, @Y, @DEPTH);
+}
+.DIV-SNH-X(@DEG: 45deg, @OPACITY: 26%, @X: -12px, @Y: 12px, @DEPTH: 24px){
+	.C-LG-COLOR(@DEG, @C-SNH-LIGHT-X, @C-SNH-X);
+	.DROP-SHADOW(@C-SNH-X, @OPACITY, @X, @Y, @DEPTH);
+}
+.DIV-SNH-XII(@DEG: 45deg, @OPACITY: 26%, @X: -12px, @Y: 12px, @DEPTH: 24px){
+	.C-LG-COLOR(@DEG, @C-SNH-LIGHT-XII, @C-SNH-XII);
+	.DROP-SHADOW(@C-SNH-XII, @OPACITY, @X, @Y, @DEPTH);
+}
+.DIV-SNH-FT(@DEG: 45deg, @OPACITY: 26%, @X: -12px, @Y: 12px, @DEPTH: 24px){
+	.C-LG-COLOR(@DEG, @C-SNH-LIGHT-FT, @C-SNH-FT);
+	.DROP-SHADOW(@C-SNH-FT, @OPACITY, @X, @Y, @DEPTH);
+}
+.DIV-SNH-READY(@DEG: 45deg, @OPACITY: 26%, @X: -12px, @Y: 12px, @DEPTH: 24px){
+	.C-LG-COLOR(@DEG, @C-SNH-LIGHT-READY, @C-SNH-READY);
+	.DROP-SHADOW(@C-SNH-READY, @OPACITY, @X, @Y, @DEPTH);
+}
+
+
+
+/***************************************************
+		定义分团颜色
+***************************************************/
+
+@C-BEJ-B: rgba(251, 44, 116, 1);
+@C-BEJ-E: rgba(38, 200, 194, 1);
+@C-BEJ-J: rgba(15, 103, 176, 1);
+@C-GNZ-G: rgba(167, 196, 43, 1);
+@C-GNZ-N: rgba(253, 213, 49, 1);
+@C-GNZ-Z: rgba(222, 94, 118, 1);
+@C-SHY-S: rgba(222, 94, 118, 1);
+@C-SHY-H: rgba(80, 30, 108, 1);
+@C-CKG-C: rgba(160, 99, 22, 1);
+@C-CKG-K: rgba(249, 81, 74, 1);
+
+
+
+/***************************************************
+		定义通用风格（颜色、渐变、投影、圆角）
+***************************************************/
+
+//纯色
+@C-LIGHT-BLUE: rgba(186, 222, 242, 1);
+@C-BLUE: rgba(137, 199, 255, 1);
+@C-LIGHT-PINK: rgba(242, 230, 200, 1);
+@C-PINK: rgba(243, 161, 196, 1);
+@C-LIGHT-YELLOW: rgba(242, 232, 200, 1);
+@C-YELLOW: rgba(247, 183, 121, 1);
+@C-LIGHT-VIOLET: rgba(207, 217, 244, 1);
+@C-VIOLET: rgba(163, 165, 244, 1);
+@C-LIGHT-DARK: rgba(217, 218, 238, 1);
+@C-DARK: rgba(0, 0, 0, 1);
+@C-LIGHT: rgba(255, 255, 255, 1);
+
+//背景色
+@C-BG: rgba(255, 255, 255, 1);
+@C-BG-DARK: rgba(32, 32, 32, 1);
+
+//渐变角度
+@C-LG-DEG: 45deg;
+
+//背景渐变
+@C-LG-BLUE: linear-gradient(@C-LG-DEG, @C-LIGHT-BLUE, @C-BLUE);
+@C-LG-PINK: linear-gradient(@C-LG-DEG, @C-LIGHT-PINK, @C-PINK);
+@C-LG-YELLOW: linear-gradient(@C-LG-DEG, @C-LIGHT-YELLOW, @C-YELLOW);
+@C-LG-VIOLET: linear-gradient(@C-LG-DEG, @C-LIGHT-VIOLET, @C-VIOLET);
+.C-LG-COLOR(@DEG: @C-LG-DEG, @COLOR1: @C-LIGHT-BLUE, @COLOR2: @C-BLUE){background: linear-gradient(@DEG, @COLOR1, @COLOR2)}
+
+//文字渐变
+.C-LG-TXT{
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.C-LG-TXT-BLUE{background: @C-LG-BLUE; .C-LG-TXT;}
+.C-LG-TXT-PINK{background: @C-LG-PINK; .C-LG-TXT;}
+.C-LG-TXT-YELLOW{background: @C-LG-YELLOW; .C-LG-TXT;}
+.C-LG-TXT-VIOLET{background: @C-LG-VIOLET; .C-LG-TXT;}
+
+//投影
+.DROP-SHADOW(@COLOR: @C-BLUE, @OPACITY: 26%, @X: -12px, @Y: 12px, @DEPTH: 24px){box-shadow: fade(@COLOR, @OPACITY) @X @Y @DEPTH;}
+.FILTER-SHADOW(@COLOR: @C-BLUE, @OPACITY: 26%, @X: -12px, @Y: 12px, @DEPTH: 24px){filter:drop-shadow(fade(@COLOR, @OPACITY) @X @Y @DEPTH);}
+
+//字体投影
+.TEXT-SHADOW(@COLOR: @C-BLUE, @OPACITY: 26%){text-shadow: fade(@COLOR, @OPACITY) -6px 6px 12px;}
+
+//圆角
+.BORDER-RADIUS-BTN{border-radius: 2px;}
+.BORDER-RADIUS-CIRLCE{border-radius: 99em;}
+
+
+/***************************************************
+		定义字体
+***************************************************/
+
+//字族
+.FONT-FAMILY-CN{font-family: "PingFang SC", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Arial", "Verdana", "Microsoft Yahei", sans-serif;}
+.FONT-FAMILY-EN{font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Arial", "Verdana", "Century Gothic";}
+
+//字体尺寸
+.TITLE-1(@FONT-SIZE: 2.8rem, @LINE-HEIGHT: 1.21){font-size: @FONT-SIZE; line-height: @LINE-HEIGHT;}
+.TITLE-2(@FONT-SIZE: 2.2rem, @LINE-HEIGHT: 1.27){font-size: @FONT-SIZE; line-height: @LINE-HEIGHT;}
+.TITLE-3(@FONT-SIZE: 2.0rem, @LINE-HEIGHT: 1.25){font-size: @FONT-SIZE; line-height: @LINE-HEIGHT;}
+.HEADLINE(@FONT-SIZE: 1.7rem, @LINE-HEIGHT: 1.29){.FONT-WEIGHT-BOLD; font-size: @FONT-SIZE; line-height: @LINE-HEIGHT;}
+.BODY(@FONT-SIZE: 1.7rem, @LINE-HEIGHT: 1.29){font-size: @FONT-SIZE; line-height: @LINE-HEIGHT;}
+.CALLOUT(@FONT-SIZE: 1.6rem, @LINE-HEIGHT: 1.31){font-size: @FONT-SIZE; line-height: @LINE-HEIGHT;}
+.SUBHEAD(@FONT-SIZE: 1.5rem, @LINE-HEIGHT: 1.33){font-size: @FONT-SIZE; line-height: @LINE-HEIGHT;}
+.FOOTNOTE(@FONT-SIZE: 1.3rem, @LINE-HEIGHT: 1.38){font-size: @FONT-SIZE; line-height: @LINE-HEIGHT;}
+.CAPTION-1(@FONT-SIZE: 1.2rem, @LINE-HEIGHT: 1.33){font-size: @FONT-SIZE; line-height: @LINE-HEIGHT;}
+.CAPTION-2(@FONT-SIZE: 1.1rem, @LINE-HEIGHT: 1.18){font-size: @FONT-SIZE; line-height: @LINE-HEIGHT;}
+.TABBER(@FONT-SIZE: 1.0rem, @LINE-HEIGHT: 1.1){.FONT-WEIGHT-BOLD; font-size: @FONT-SIZE; line-height: @LINE-HEIGHT;}
+
+//字重
+.FONT-WEIGHT-LIGHT{font-weight: 200;}
+.FONT-WEIGHT-REGULAR{font-weight: 400;}
+.FONT-WEIGHT-BOLD{font-weight: 600;}
+
+//字体颜色
+@FC-DARK-1: fade(@C-DARK, 100%);
+@FC-DARK-2: fade(@C-DARK, 87%);
+@FC-DARK-3: fade(@C-DARK, 64%);
+@FC-DARK-4: fade(@C-DARK, 56%);
+@FC-DARK-5: fade(@C-DARK, 37%);
+@FC-DARK-6: fade(@C-DARK, 26%);
+@FC-DARK-7: fade(@C-DARK, 12%);
+@FC-DARK-8: fade(@C-DARK, 6%);
+@FC-LIGHT-1: fade(@C-LIGHT, 100%);
+
+//字体大小写
+.FC-UPPER{font-variant: normal; text-transform: uppercase;}
+.FC-LOWER{font-variant: normal; text-transform: lowercase;}
+
+
+/***************************************************
+		定义块风格
+***************************************************/
+
+//渐变 + 投影
+.DIV-BLUE(@DEG: 45deg, @OPACITY: 26%, @X: -12px, @Y: 12px, @DEPTH: 24px){
+	.C-LG-COLOR(@DEG, @C-LIGHT-BLUE, @C-BLUE);
+	.DROP-SHADOW(@C-BLUE, @OPACITY, @X, @Y, @DEPTH);
+}
+.DIV-PINK(@DEG: 45deg, @OPACITY: 26%, @X: -12px, @Y: 12px, @DEPTH: 24px){
+	.C-LG-COLOR(@DEG, @C-LIGHT-PINK, @C-PINK);
+	.DROP-SHADOW(@C-PINK, @OPACITY, @X, @Y, @DEPTH);
+}
+.DIV-YELLOW(@DEG: 45deg, @OPACITY: 26%, @X: -12px, @Y: 12px, @DEPTH: 24px){
+	.C-LG-COLOR(@DEG, @C-LIGHT-YELLOW, @C-YELLOW);
+	.DROP-SHADOW(@C-YELLOW, @OPACITY, @X, @Y, @DEPTH);
+}
+.DIV-VIOLET(@DEG: 45deg, @OPACITY: 26%, @X: -12px, @Y: 12px, @DEPTH: 24px){
+	.C-LG-COLOR(@DEG, @C-LIGHT-VIOLET, @C-VIOLET);
+	.DROP-SHADOW(@C-VIOLET, @OPACITY, @X, @Y, @DEPTH);
+}
+//纯白 + 投影
+.DIV-LIGHT-DARK(@DEG: 45deg, @OPACITY: 26%, @X: -12px, @Y: 12px, @DEPTH: 24px){
+	.C-LG-COLOR(@DEG, @C-LIGHT, @C-LIGHT);
+	.DROP-SHADOW(@C-LIGHT-DARK, @OPACITY, @X, @Y, @DEPTH);
+}
+
+
+
+/***************************************************
+		定义复用风格
+***************************************************/
+
+//图片替换文字
+.TXT2PIC{text-indent: -9999em;}
+
+//文字两端对齐，适配 IE
+.JUSTIFY{text-align: justify; text-justify: inter-ideograph;}
+
+//行内布局
+.INLINE-BLOCK(@LAYOUT: left, @ALIGN: left){
+	font-size: 0; letter-spacing: -4px; line-height: 0; text-align: @LAYOUT;
+	&>*{vertical-align: top; display: inline-block;}
+	*{.BODY; text-align: @ALIGN; letter-spacing: normal;}
+	&:after{content: ""; width: 100%; height: 0; display: inline-block;}
+}
+
+//行内垂直居中
+.VERTICAL-ALIGN{
+	>*, &:before{vertical-align: middle; display: inline-block;}
+	&:before{content: ""; width: 0; height: 100%;}
+}
+
+//行内强制换行
+.ENTER{
+	&:after{content: "\D\A"; white-space: pre;}
+}
+
+//多行文字截字
+.TEXT-CUT(@NUM: 1){text-overflow: ellipsis; -webkit-line-clamp: @NUM; -webkit-box-orient: vertical; display: -webkit-box; overflow : hidden;}
+
+//容器定位
+.POSITION(@POSITION: absolute, @TOP: 0, @RIGHT: 0, @BOTTOM: 0, @LEFT: 0){position: @POSITION; top: @TOP; right: @RIGHT; bottom: @BOTTOM; left: @LEFT;}
+
+//安全区域
+@SAFETY-VALUE: 16px;
+.SAFETY-AREA(@PADDING: @SAFETY-VALUE){padding: 0 @PADDING;}
+
+//页面最大宽度
+.MAX-WIDTH{max-width: 1920px; margin: 0 auto;}
+
+//图片 hover
+.IMG-HOVER{
+	position: relative;
+	&:before{.POSITION; content: ""; display: block; z-index: 1;}
+	&:hover{
+		img{filter: brightness(126%);}
+		&:before{background: fade(@C-BLUE, 37%);}
+	}
+}
+
+
+
+
+/***************************************************
+		CSS 初始化
+***************************************************/
+
+*{line-height: inherit; margin: 0; padding: 0; box-sizing: border-box;}
+html{.MAX-WIDTH; font-size: 10px;}
+body{.FONT-FAMILY-CN; .BODY; color: @C-DARK; background: @C-BG;}
+h1, h2, h3, h4, h5, h6{.FONT-WEIGHT-REGULAR; margin: 0; padding: 0;}
+ul, ol{list-style: none;}
+a{color: @C-DARK; text-decoration: none; display: inline-block;}
+b{.FONT-WEIGHT-BOLD;}
+i{font-style: normal;}
+input, textarea{background: none; border: none; outline: none; font-variant: normal;}
+input{width: 100%; height: 100%; padding: 4px 8px;}
+
+//针对 H5 设置
+img{
+	//屏蔽图片长按
+	max-width: 100%; max-height: 100%; pointer-events: none;
+}
+a{
+	//修改 webkit a 标签的点击效果
+	-webkit-tap-highlight-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

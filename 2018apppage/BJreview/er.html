@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0,width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>小程序测试</title>
+
+	<script type="text/javascript">
+		window.onload = function() {
+			document.getElementById('shareContent').innerText = shareParams();
+			document.getElementById('launchContent').innerText = launchParams();
+			document.getElementById('shareComponentContent').innerText = shareComponentParams();
+		}
+		function shareParams() {
+			return JSON.stringify({
+				id: "gh_f3ad16e4a6c0",
+				path: "page/API/index",
+				type: "preview",
+				callback: 'shareCallback',
+				webpageUrl: "http://www.baidu.com",
+				title: "小程序分享",
+				desc: "小程序啊小程序",
+				imgPath: "https://res.wx.qq.com/wxopenres/zh_CN/htmledition/comm_htmledition/style/base/layout_head_z_@all3890d1.png",
+				scene: 'session'
+			})
+		}
+
+		function shareComponentParams() {
+			return JSON.stringify({
+				id: "gh_f3ad16e4a6c0",
+				path: "page/component/index",
+				type: "preview",
+				callback: 'shareCallback',
+				webpageUrl: "http://www.baidu.com",
+				title: "小程序分享",
+				desc: "小程序啊小程序",
+				imgPath: "https://res.wx.qq.com/wxopenres/zh_CN/htmledition/comm_htmledition/style/base/layout_head_z_@all3890d1.png",
+				scene: 'session'
+			})
+		}
+
+		function launchParams() {
+			return JSON.stringify({
+				id: "gh_f3ad16e4a6c0",
+				path: "page/API/index",
+				type: 'preview',
+				callback: "launchCallback"
+			})
+		}
+// 		page/component/index
+// page/API/index
+		function shareCallback(params) {
+			// alert("share")
+			window.web.backHome();
+			return "OK";
+		}
+
+		function launchCallback(params) {
+			// alert("launch")
+			window.web.backHome();
+			return "OK";
+		}
+
+		function share() {
+			window.web.shareWechatMiniProgram(shareParams());
+		}
+
+		function shareCompoennt() {
+			window.web.shareWechatMiniProgram(shareComponentParams());
+		}
+
+		function launch() {
+			window.web.launchWechatMiniProgram(launchParams());
+		}
+	</script>
+			<style type="text/css">
+			html,body {margin: 0;padding: 0;height: 100%;}
+			body {
+				max-width: 750px;
+				flex-direction: 'column';
+				justify-content: 'center';
+				align-items: 'center';
+			}
+			.container {
+				width: 100%;
+				height: 100%;
+				flex-direction: column;
+				display: -webkit-flex;
+	            display:flex;
+				align-items: center;
+				-webkit-align-items: center;
+				-webkit-justify-content: center;
+				justify-content: center;
+			}
+
+			button {
+				width: 90%;
+				height: 50px;
+				background-color:  	#6495ED;
+				text-align: center;
+				color: white;
+				size: 20;
+				margin-top: 10px;
+				border: 1px solid #dedede;
+			   -moz-border-radius: 10px;      /* Gecko browsers */
+			   -webkit-border-radius: 10px;   /* Webkit browsers */
+			   border-radius:10px;            /* W3C syntax */
+			}
+
+			.textarea {
+				width: 90%;
+				height: auto;
+				height: auto;  
+			    word-wrap:break-word;  
+			    word-break:break-all;  
+			    overflow: hidden; 
+				size: 20;
+				border: 1px solid #f0f0f0;
+				background-color: #f0f0f0;
+				margin-top: 20px;
+			}
+		</style>
+</head>
+<body>
+	<div class="container">
+		<p class="textarea" id="shareContent">哈哈哈</p>
+		<button onclick="share()">分享到小程序</button>
+		<p class="textarea" id="shareComponentContent">哈哈哈</p>
+		<button onclick="shareCompoennt()">分享Component到小程序</button>
+		<p class="textarea" id="launchContent">呵呵呵</p>
+		<button onclick="launch()">调起小程序</button>
+	</div>
+</body>
+</html>
+
+
+
+

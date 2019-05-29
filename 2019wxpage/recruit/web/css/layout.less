@@ -1,0 +1,173 @@
+/***************************************************
+		加载 LESS
+***************************************************/
+
+@import (reference) "public";
+
+
+
+
+/***************************************************
+		定义专用风格（颜色、渐变、投影、圆角）
+***************************************************/
+
+//藏蓝
+@C-MAIN: rgba(137, 199, 255, 1);
+@C-SUB: rgba(243, 161, 196, 1);
+@C-BG: rgba(245, 245, 245, 1);
+
+
+
+
+/***************************************************
+		定义通用样式
+***************************************************/
+
+//通用布局
+/*空*/
+
+//通用样式设定
+*{letter-spacing: 1px;}
+body{background: @C-BG; color: @C-DARK; font-size: 1.6rem;}
+.container{max-width: 1200px; margin: 0 auto;}
+a:hover{opacity: .64;}
+
+
+
+
+/***************************************************
+		定义通用布局
+***************************************************/
+
+//header
+header{
+	.DROP-SHADOW(@C-MAIN, 26%, 0, 12px, 24px); background: @C-LIGHT;
+	.topbar{
+		background: @C-MAIN; color: @C-LIGHT; height: 40px;
+		.container{
+			.SUBHEAD; overflow: hidden;
+			*{font-size: inherit !important;}
+			a{line-height: 40px;}
+			.left{
+				float: left;
+				img{margin: -2px 0 0; vertical-align: middle;}
+				a{color: inherit; padding: 0 8px;}
+			}
+			.right{
+				float: right; margin: 0 -24px 0;
+				a{
+					color: inherit; padding: 0 24px; position: relative;
+					&:before{.POSITION(absolute, 50%, auto, auto, 0); content: ""; background: @C-LIGHT; width: 1px; height: 14px; margin: -7px 0 0; display: block;}
+					&:first-child:before{content: none;}
+				}
+			}
+		}
+	}
+	.logobar{
+		height: 120px; overflow: hidden;
+		.container{
+			.INLINE-BLOCK(justify);
+			>div{margin: 32px 0 0; vertical-align: middle;}
+			.left{
+				img{vertical-align: middle;}
+				p{
+					border-left: 1px solid fade(@C-DARK, 26%); font-size: 2.4rem; line-height: 1; letter-spacing: 4px; margin: 0 0 0 32px; padding: 0 0 0 32px; display: inline-block;
+					b{color: @C-SUB; font-size: inherit; line-height: inherit; letter-spacing: inherit; margin: 0 0 0 8px; display: inline-block;}
+				}
+			}
+			.right{
+				background: url(../image/index/logo-snh48-group.png) no-repeat center top; line-height: 0; height: 56px; padding: 32px 0 0;
+				a{line-height: inherit;}
+			}
+		}
+	}
+}
+
+
+//page
+.page{
+	height: 800px; position: relative; overflow: hidden;
+	.container{position: relative; z-index: 1;}
+	&:before{.POSITION(absolute); content: ""; background: url(../pic/index/pic-screen.jpg) no-repeat center; background-position: -25px center; background-size: cover; width: 100%; height: 100%; display: block; filter: blur(50px); z-index: 0;}
+}
+
+//footer
+footer{
+	.container{
+		.SUBHEAD; padding: 32px 0;
+		*{font-size: inherit !important;}
+		.link{
+			ul{
+				.INLINE-BLOCK(center);
+				li{
+					padding: 0 24px; position: relative;
+					a{color: fade(@C-DARK, 87%);}
+					&.service{color: fade(@C-DARK, 57%);}
+					&:before{.POSITION(absolute, 50%, auto, auto, 0); content: ""; background: fade(@C-DARK, 26%); width: 1px; height: 14px; margin: -7px 0 0; display: block;}
+					&:first-child:before{content: none;}
+				}
+			}
+		}
+		.cpright{.FC-UPPER; color: fade(@C-DARK, 57%); text-align: center; margin: 16px 0 0;}
+	}
+}
+
+
+
+
+/***************************************************
+		index.html
+***************************************************/
+
+html, body{height: 100%;}
+
+#index{
+	position: relative;
+	header{.POSITION(fixed, 0, 0, auto, 0); z-index: 3;}
+	footer{
+		.POSITION(fixed, auto, 0, 0, 0);
+		.container{
+			padding: 24px 0;
+			.cpright{font-size: 13px !important; margin: 0;}
+		}
+	}
+	.page{
+		height: inherit;
+		.container{
+			height: inherit; z-index: 2;
+			.phone{
+				.POSITION(relative, 10%, auto, auto, auto); background: url(../image/index/bg-phone-2.png) no-repeat; width: 391px; height: 724px; margin: 0 auto;
+				.content{.POSITION(relative, 24px, auto, auto, 8px); border-radius: 12px; width: 375px; height: 667px; overflow: hidden;}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

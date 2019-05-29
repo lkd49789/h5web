@@ -1,0 +1,103 @@
+[v-cloak] {
+    display: none !important;
+} 
+body{
+    max-width: 640px;
+    margin:0 auto;
+    position: relative;
+    font-size: 1.4rem;
+}
+button{
+    background: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+#app{
+    min-height: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    padding: .6rem;
+}
+p{
+    color:#000;
+}
+.banner img{
+    width: 100%;
+}
+/*中间*/
+.center{
+    margin-top: .83rem;
+}
+.center img{
+    width: 100%;
+}
+.idolWrap{
+   width: 100%;
+   padding: 1.25rem;
+   display: flex;
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+.idol{
+    width: 60%;
+}
+.head{
+    border-radius: 50%;
+    border: 1px solid #fff;
+    width: 4.17rem;
+    height: 4.17rem;
+    overflow: hidden;
+}
+.head img{
+    width: 100%;
+}
+.name{
+    margin-top: .2rem;
+}
+.name img{
+    width: 1.67rem;
+}
+
+/*底部*/
+.bottom{
+    position: relative;
+    border: .8rem solid #d9eaff;
+    border-radius: .5rem;
+    min-height: 10rem;
+    max-height: 36rem;
+    margin-top: .83rem;
+    overflow: hidden;
+}
+.bottom .bgimg{
+    width: 100%;
+}
+.bottom_btnWrap{
+    display: flex;
+    /* justify-content: space-around; */
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    width: 100%;
+}
+.bottom_btnWrap .btn{
+    width: 31%;
+    border-radius: 2rem;
+    color: #fff;
+    box-sizing: border-box;
+    text-align: center;
+    height: 3.2rem;
+    line-height: 3.2rem;
+    margin-left: 2%;
+    background: url('../img/btn1.png') no-repeat top left/100% 100%;
+}
+.bottom_btnWrap .btn:nth-child(2){
+    background: url('../img/btn2.png') no-repeat top left/100% 100%;
+}
+.bottom_btnWrap .btn:nth-child(3){
+    background: url('../img/btn3.png') no-repeat top left/100% 100%;
+}
+.bottom_btnWrap .finish{
+    background: #ccc !important;
+}

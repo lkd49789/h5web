@@ -1,0 +1,443 @@
+<!DOCTYPE html PUBLIC "-//W3C//ddD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/ddD/xhtml1-transitional.ddd">
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>第三届总选举口袋APP用API说明文档</title>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+<link rel="stylesheet" href="http://libs.baidu.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link href="help.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="bs-docs-header" id="content" tabindex="-1">
+    <div class="container">
+      <h1>第三届总选举口袋APP用API说明文档</h1>
+      <p>2016.5.20 V1.0 BY SNH48-YuanHao</p>
+    </div>
+  </div>
+
+  <div class="container bs-docs-container">
+    <div class="row">
+      <div class="col-md-9" role="main">
+        <div class="bs-docs-section">
+
+          <h3 id="common">概要说明</h3>
+          <h2></h2>
+          <pre>
+            <b>API访问地址</b>
+              测试服：http://h5.snh48.com/2016vote/app/php/
+              正式服：https://vote.48.cn/app/php/
+
+            <b>返回数据格式</b>
+              json
+
+            <b>异常返回</b>
+              errcode 返回码
+              errmsg  失败信息
+
+              常见错误码：
+              -1  系统繁忙，稍候再试
+              110 服务异常中断，请与管理员联系
+              114 token已过期，需重新登录（程序捕捉后重新调用api_login.php）
+              119 token验证失败（程序捕捉后重新调用api_login.php）
+              120 参数错误
+              130 禁止操作
+              140 成员ID不存在
+              190 其他未知错误
+          </pre>
+
+          <h3 id="app_login">APP账号登录</h3>
+          <h2><a href='http://h5.snh48.com/2016vote/app/php/api_login.php' target='api'>http://h5.snh48.com/2016vote/app/php/api_login.php</a></h2>
+          <pre>
+            <b>POST参数</b>
+              appid     APPID
+              apptoken  APPToken
+              uname     用户昵称
+              avata     用户头像地址
+              dev_cd    设备号
+
+            <b>返回</b>
+              uname     用户昵称
+              avata     用户头像
+              phone     联系电话
+              tp_rest   可使用投票权（APP用户会累计绑定的丝瓜账号）
+              tp_total  累计投票权（APP用户会累计绑定的丝瓜账号）
+
+            <b>说明</b>
+              连续5次登陆失败（APPToken验证失败）30分钟内该APPID会被禁止再次登录
+              首次登录会将设备号绑定在appid上
+              该账号在非绑定设备号上登录需要通过手机号码进行重新绑定操作。
+
+              1201  APPToken验证失败
+              1202  非绑定设备号
+
+          </pre>
+
+          <h3 id="app_bind">APP用户绑定丝瓜账号</h3>
+          <h2><a href='http://h5.snh48.com/2016vote/app/php/api_web_bind.php' target='api'>http://h5.snh48.com/2016vote/app/php/api_web_bind.php</a></h2>
+          <pre>
+            <b>POST参数</b>
+              appid     APPID
+              apptoken  APPToken
+              username  丝瓜用户名
+              password  丝瓜密码
+              dev_cd    设备号
+
+
+            <b>返回</b>
+               errcode = 0 请求成功
+
+            <b>说明</b>
+              连续5次绑定失败30分钟内会被禁止再次绑定
+
+              1401  用户名密码错误
+              1402  该丝瓜账号已被其他账户绑定
+
+          </pre>
+
+          <h3 id="app_bind_sms">APP用户绑定设备号短信发送</h3>
+          <h2><a href='http://h5.snh48.com/2016vote/app/php/api_bind_sms.php' target='api'>http://h5.snh48.com/2016vote/app/php/api_bind_sms.php</a></h2>
+          <pre>
+            <b>POST参数</b>
+              appid     APPID
+              apptoken  APPToken
+              phone     绑定手机号码
+              dev_cd    设备号
+
+            <b>返回</b>
+              errcode = 0 请求成功
+
+
+            <b>说明</b>
+              APP独有功能，首次绑定成功后手机号码今后将无法修改
+              连续5次绑定失败30分钟内会被禁止再次发送
+              1601  APPToken验证失败
+              1602  找不到用户信息
+              1603  电话号码与绑定信息不符
+              1604  该设备号已经绑定
+
+          </pre>
+
+          <h3 id="app_dev_bind">APP用户绑定设备号</h3>
+          <h2><a href='http://h5.snh48.com/2016vote/app/php/api_dev_bind.php' target='api'>http://h5.snh48.com/2016vote/app/php/api_dev_bind.php</a></h2>
+          <pre>
+            <b>POST参数</b>
+              appid     APPID
+              apptoken  APPToken
+              sms_code  短信验证码
+              dev_cd    设备号
+
+            <b>返回</b>
+              errcode = 0 请求成功
+
+            <b>说明</b>
+              APP独有功能
+              连续5次绑定失败30分钟内会被禁止再次绑定
+              1701  APPToken验证失败
+              1702  找不到用户绑定信息
+              1703  验证码错误
+              1704  设备号与请求验证码的设备不一致
+
+          </pre>
+
+          <h3 id="user_info">用户资料取得</h3>
+          <h2><a href='http://h5.snh48.com/2016vote/app/php/api_user_info.php' target='api'>http://h5.snh48.com/2016vote/app/php/api_user_info.php</a></h2>
+          <pre>
+            <b>POST参数</b>
+              无
+
+            <b>返回</b>
+              uname     用户昵称
+              avata     用户头像
+              phone     联系电话
+              tp_rest   可使用投票权（APP用户会累计绑定的丝瓜账号）
+              tp_total  累计投票权（APP用户会累计绑定的丝瓜账号）
+
+            <b>说明</b>
+
+          </pre>
+
+          <h3 id="code_act">投票券激活</h3>
+          <h2><a href='http://h5.snh48.com/2016vote/app/php/api_active_code.php' target='api'>http://h5.snh48.com/2016vote/app/php/api_active_code.php</a></h2>
+          <pre>
+            <b>POST参数</b>
+              tpcd      投票卷CD
+              dev_cd    设备号
+
+            <b>返回</b>
+              tpseq     激活投票券序号
+              tp_no     激活投票权数
+
+            <b>说明</b>
+              连续5次激活不存在的投票券30分钟内会被禁止再次激活
+              2101  投票卷不存在
+              2102  投票卷已激活
+
+          </pre>
+
+          <h3 id="user_vote">登录用户投票</h3>
+          <h2><a href='http://h5.snh48.com/2016vote/app/php/api_user_vote.php' target='api'>http://h5.snh48.com/2016vote/app/php/api_user_vote.php</a></h2>
+          <pre>
+            <b>POST参数</b>
+              sid       成员ID
+              tp_no     投票数
+              dev_cd    设备号
+
+            <b>返回</b>
+              errcode = 0 请求成功
+
+            <b>说明</b>
+              连续5次投票失败30分钟内会被禁止再次投票
+              2201  可投票数量不足
+
+          </pre>
+
+          <h3 id="buy_order">电子券订单提交</h3>
+          <h2><a href='http://h5.snh48.com/2016vote/app/php/api_buy_order.php' target='api'>http://h5.snh48.com/2016vote/app/php/api_buy_order.php</a></h2>
+          <pre>
+            <b>POST参数</b>
+              order_type  购买渠道 （1 支付宝 2 微信支付）
+              pd_type     产品类型 （1 5元单曲 2 450元EP）
+              amount      购买数量
+              dev_cd      设备号
+
+            <b>返回</b>
+              order_id      订单ID
+              total_amount  购买金额(RMB 单位分)
+              url           回调URL
+
+            <b>说明</b>
+              只有登录用户才能购买
+              连续5次订单未成交的30分钟内会被禁止再次提交订单
+
+          </pre>
+
+          <h3 id="act_log">投票券激活记录取得（按激活时间逆序）</h3>
+          <h2><a href='http://h5.snh48.com/2016vote/app/php/api_act_log.php' target='api'>http://h5.snh48.com/2016vote/app/php/api_act_log.php</a></h2>
+          <pre>
+            <b>POST参数</b>
+              limit     （记录条数，可选）默认10 最大100
+              offset    （记录偏移量，可选）默认0 与limit参数一起分页使用。如设置 offset=20&limit=10 取第21-30条记录
+
+            <b>返回</b>
+              total     总记录件数
+              rows      记录数组
+                tpcd      投票卷CD
+                tpseq     投票券序号
+                tp_no     激活投票权数
+                ctime     激活时间
+                dev       激活设备（web，app，wx）
+
+            <b>说明</b>
+              只返回激活成功的记录
+              如无数据返回空数组
+
+          </pre>
+
+          <h3 id="vote_log">投票记录取得（按投票时间逆序）</h3>
+          <h2><a href='http://h5.snh48.com/2016vote/app/php/api_vote_log.php' target='api'>http://h5.snh48.com/2016vote/app/php/api_vote_log.php</a></h2>
+          <pre>
+            <b>POST参数</b>
+              limit     （记录条数，可选）默认10 最大100
+              offset    （记录偏移量，可选）默认0 与limit参数一起分页使用。如设置 offset=20&limit=10 取第21-30条记录
+
+            <b>返回</b>
+              total     总记录件数
+              rows      记录数组
+                sid       成员ID
+                realname  成员名字
+                group_id  分团ID
+                team_name 队伍名称
+                pinyin    拼音
+                tp_no     投票数
+                ctime     投票时间
+                dev       投票设备（web，app，wx）
+
+            <b>说明</b>
+              只返回投票成功的记录
+              如无数据返回空数组
+
+          </pre>
+
+          <h3 id="vote_sum_log">合计投票记录取得（按总投票数逆序，只取前5位）</h3>
+          <h2><a href='http://h5.snh48.com/2016vote/app/php/api_vote_sum_log.php' target='api'>http://h5.snh48.com/2016vote/app/php/api_vote_sum_log.php</a></h2>
+          <pre>
+            <b>POST参数</b>
+              无
+
+            <b>返回</b>
+              total     总记录件数
+              rows      记录数组
+                sid       成员ID
+                realname  成员名字
+                group_id  分团ID
+                team_name 队伍名称
+                pinyin    拼音
+                tp_sum    投票总数
+                tp_sort   投票顺位（得票最多的排第一）
+
+            <b>说明</b>
+              只返回投票成功的记录前5位
+              如无数据返回空数组
+
+          </pre>
+
+          <h3 id="buy_log">电子券购买记录取得（按购买时间逆序）</h3>
+          <h2><a href='http://h5.snh48.com/2016vote/app/php/api_buy_log.php' target='api'>http://h5.snh48.com/2016vote/app/php/api_buy_log.php</a></h2>
+          <pre>
+            <b>POST参数</b>
+              limit     （记录条数，可选）默认10 最大100
+              offset    （记录偏移量，可选）默认0 与limit参数一起分页使用。如设置 offset=20&limit=10 取第21-30条记录
+
+            <b>返回</b>
+              total     总记录件数
+              rows      记录数组
+                pay_type  支付渠道 （1 支付宝 2 微信支付）
+                order_id  订单ID
+                pd_type   产品类型  （1 5元单曲 2 450元EP）
+                amount    购买数量
+                total_amount  购买金额
+                tp_no     获得投票权数
+                ctime     购买时间
+                dev       购买设备（web，app）
+
+            <b>说明</b>
+              只返回购买成功的记录
+              获得投票权 5元单曲=0.1票，450元EP=10票
+              如无数据返回空数组
+
+          </pre>
+
+          <h3 id="bug_upload">故障申告图片上传</h3>
+          <h2><a href='http://feedback.snh48.com/feedback/api/feedback/upload' target='api'>http://feedback.snh48.com/feedback/api/feedback/upload</a></h2>
+          <pre>
+            <b>POST参数</b>
+              字段名	    字段类型	是否必选	  说明
+              medias0	File	是	      第一张图片文件
+              medias1	File	否	      第二张图片文件
+              medias2	File	否	      第三种图片文件
+
+            <b>返回</b>
+              {
+                "status": 0,
+                "message": "SUCCESS",
+                "content": [
+                  "/mediasource/feedback/pic/e78f24be-d8e3-4dd1-a092-d5f375d81281.jpg",
+                  "/mediasource/feedback/pic/dc780acc-7ba5-4308-9c70-7c4e80e24431.jpg"
+                ]
+              }
+
+              status	Number	请求status，status=0时表示请求成功，其他情况失败
+              message	String	请求返回的提示信息
+              content	Array	图片相对地址数组，图片服务器是http://feedback.snh48.com
+            <b>说明</b>
+              在提交故障申报时，请将此图片数组转成字符串，以逗号','分隔 例如：'/mediasource/feedback/pic/e78f24be-d8e3-4dd1-a092-d5f375d81281.jpg,/mediasource/feedback/pic/dc780acc-7ba5-4308-9c70-7c4e80e24431.jpg'
+
+          </pre>
+
+          <h3 id="bug_report">故障申告提交</h3>
+          <h2><a href='http://h5.snh48.com/2016vote/app/php/api_feedback.php' target='api'>http://h5.snh48.com/2016vote/app/php/api_feedback.php</a></h2>
+          <pre>
+            <b>POST参数</b>
+              appid	    Number	否	微信用户ID，当orderFrom=2时，此项不能为空
+              uname	    String	是	用户昵称
+              phone	    String	是	联系电话
+              type	    String	是	故障类型
+              pic	        String	否	图片地址，以','分割，最多3张图片，例如'/mediasource/1.jpg,mediasource/2.jpg'
+              devCd	    String	否	设备号，当orderFrom=2时，此项不能为空
+              devVer	    String	否	设备版本，当orderFrom=2时，此项不能为空
+              submitInfo	String	是	故障内容
+
+            <b>返回</b>
+              errcode = 0 请求成功
+
+            <b>说明</b>
+              只有登录用户才能提交故障申告。
+              同一用户存在未处理故障时（status<>99），不能提交新的故障申告
+              3101  禁止提交
+
+          </pre>
+
+          <h3 id="deal_log">故障申告记录取得（按故障ID逆序）</h3>
+          <h2><a href='http://h5.snh48.com/2016vote/app/php/api_feedback_log.php' target='api'>http://h5.snh48.com/2016vote/app/php/api_feedback_log.php</a></h2>
+          <pre>
+            <b>POST参数</b>
+              limit   （记录条数，可选）默认10
+              offset  （记录偏移量，可选）默认0 与limit参数一起分页使用。如设置 offset=20&limit=10 取第21-30条记录
+
+            <b>返回</b>
+              字段名	        字段类型	说明
+              errcode	    String	请求errcode，errcode=0时表示请求成功，其他情况失败
+              errmsg	    String	请求返回的提示信息
+              logid	        Number	故障申报编号，ID
+              orderFrom	    Number	客户端类型 1-Web 2-App 3-微信
+              uid	        Number	投票用户ID，当orderFrom=1时，此项不能为空
+              webid	        Number	官网用户ID，当orderFrom=1时，此项不能为空
+              appid	        Number	微信用户ID，当orderFrom=2时，此项不能为空
+              openid	    String	微信用户ID，当orderFrom=3时，此项不能为空
+              uname	        String	用户昵称
+              phone	        String	联系电话
+              subsys	    String	故障系统
+              type	        String	故障类型
+              pic	        String	故障图片，以逗号','分隔
+              browser	    String	浏览器类型，当orderFrom=1时，此项不能为空
+              ip	        String	IP地址
+              devCd	        String	设备号，当orderFrom=2时，此项不能为空
+              devVer	    String	设备版本，当orderFrom=2时，此项不能为空
+              submitInfo	String	故障内容
+              submitTime	String	提交时间
+              acceptTime	String	故障受理时间
+              analyseTime	String	故障分析时间
+              analyseName	String	故障分析人
+              dealTime	    String	故障处理时间
+              dealInfo	    String	处理意见
+              dealName	    String	故障处理人
+              status	    Number	故障状态 0 提交 1 受理 2 分析 99 已处理
+              total	        Number	总记录条数
+
+
+            <b>说明</b>
+              用户只能查询当前用户ID的故障申告记录，绑定ID的故障申告记录无法查询
+              如无数据返回空数组
+
+          </pre>
+
+
+
+        </div>
+      </div>
+
+
+      <div class="col-md-3" role="complementary">
+        <nav class="bs-docs-sidebar hidten-print hidten-xs hidten-sm fixmenu">
+          <ul class="nav bs-docs-sidenav">
+            <li><a href="#common"><b>概要说明</b></a></li>
+            <li>------------------------------------------</li>
+            <li><a href="#app_login"><b class="text-success">APP账号登录</b></a></li>
+            <li><a href="#app_bind"><b class="text-success">APP用户绑定丝瓜账号</b></a></li>
+            <li><a href="#app_bind_sms"><b class="text-success">APP用户绑定设备号短信发送</b></a></li>
+            <li><a href="#app_dev_bind"><b class="text-success">APP用户绑定设备号</b></a></li>
+            <li><a href="#user_info"><b class="text-success">用户资料取得</b></a></li>
+            <li><a href="#code_act"><b class="text-success">投票券激活</b></a></li>
+            <li><a href="#user_vote"><b class="text-success">登录用户投票</b></a></li>
+            <li><a href="#buy_order"><b class="text-success">电子券订单提交</b></a></li>
+            <li><a href="#act_log"><b class="text-success">投票券激活记录取得</b></a></li>
+            <li><a href="#vote_log"><b class="text-success">投票记录取得</b></a></li>
+            <li><a href="#vote_sum_log"><b class="text-success">合计投票记录取得</b></a></li>
+            <li><a href="#buy_log"><b class="text-success">电子券购买记录取得</b></a></li>
+            <li><a href="#bug_upload"><b class="text-success">故障申告图片上传</b></a></li>
+            <li><a href="#bug_report"><b class="text-success">故障申告提交</b></a></li>
+            <li><a href="#deal_log"><b class="text-success">故障申告记录取得</b></a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="http://libs.baidu.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+

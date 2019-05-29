@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+		<title>星梦大转盘</title>
+		<link rel="stylesheet" href="css/awardRotate.css" type="text/css" />
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="turntable-bg">
+				<div class="pointer" style="background:url(images/pointer.png)no-repeat center center;background-size:contain;"><!-- <img src="images/pointer.png" alt="pointer" /> --></div>
+				<div class="rotate"><img id="rotate" src="images/turntable.png" alt="turntable" /></div>
+			</div>
+			<p class="numchance">您共有<em class="numCh"></em>次机会参与抽奖</p>
+			<div class="download"><img src="images/download.png"></div>
+		</div>
+		
+		<div class="mask"></div>
+		<section class="window">
+			<div class="prizebox">
+				<img src="images/prizebox.png" class="pbox">
+				<div class="con">
+					<img src="" class="icon_prize">
+					<p class="text"></p>
+				</div>
+				<div class="btn-click">知道了</div>
+			</div>
+		</section>
+		<section class="loadmask">
+			<div class="downmask">
+				<div class="upbox">
+					<h4>请复制链接地址去pc端下载</h4>
+					<p></p>
+				</div>
+				<div class="know">确定</div>
+			</div>
+		</section>
+<!-- 		<section class="awardPop">
+	<div class="con">
+		<p></p>
+		<img src="" alt="" class="awardurl"/>
+		<input type="hidden" id="awardInfo"/>
+		<p class="awardName">梦想</p>
+	</div>
+	<p class="tip"></p>
+	<a class="btn-next">再抽一次</a>
+</section> -->
+
+	</body>
+	<script src="../../common/js/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/awardRotate.js"></script>
+	<script src="js/award.js"></script>
+</html>
+

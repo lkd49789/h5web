@@ -1,0 +1,161 @@
+[v-cloak] {
+    display: none !important;
+} 
+body{
+    max-width: 640px;
+    margin:0 auto;
+    position: relative;
+    font-size: 1.5rem;
+}
+button{
+    background: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+#app{
+    min-height: 100%;
+    box-sizing: border-box;
+    background: #fff;
+}
+.siteWrap{
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    line-height: 4rem;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 0 .9rem;
+}
+.siteWrap .right{
+    display: flex;
+    align-items: center;
+}
+.siteWrap .right img{
+    width: .7rem;
+    margin-left: .63rem; 
+}
+.history li{
+    border-bottom:1px solid #f1f1f1;
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    line-height: 4rem;
+    padding: 0 .9rem;
+    font-size: 1.4rem;
+    color: #808080;
+}
+.history li .left .who{
+    margin-left: .6rem;
+}
+.left .who em{
+    display: none;
+    font-size: 1rem;
+    padding: .2rem .4rem;
+    border-radius: .4rem;
+    margin-left: .4rem;
+}
+/**/
+.left .who .no{
+    display: inline;
+    background: #ffe6e8;
+    color: #f75353;
+}
+/**/
+.left .who .yes{
+    display: inline;
+    background: #daf9f5;
+    color: #50d6a7;
+}
+
+.center{
+    background: url('../img/record_center.png') no-repeat left top/100% 100%;
+    margin: 1.46rem 1.1rem;
+    height: 7rem;
+    padding: 1rem 1.75rem;
+    line-height: 2.5rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    display: none;
+}
+.center p{
+    color: #fff;
+    font-size: 1.6rem;
+}
+.status{
+    display: none;
+}
+.center .time{
+    font-size: 1.2rem;
+    color: #fff;
+    display: none;
+}
+.center .img{
+    display: flex;
+    align-items: center;
+}
+.center img{
+    width: 6.25rem;
+}
+
+/*中标付款*/
+.payment{
+    display: flex;
+}
+.payment .status1{
+    display: inline;
+}
+.payment .time1{
+    display: block;
+    color:#d7fbeb;
+}
+/*失去标*/
+.lose{
+    display: flex;
+    background: url('../img/record_lose.png') no-repeat left top/100% 100%;
+}
+.lose .img{
+    display: none;
+}
+.lose .status2{
+    display: inline;
+}
+.lose .time2{
+    display: block;
+    color:#fccbd3;
+}
+
+
+/**/
+#payPgae{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .3);
+}
+#payPgae .box{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    height: 32%;
+    background: #fbfbfb;
+    text-align: center;
+}
+.box>p{
+    line-height: 6.67rem;
+    font-size: 2rem;
+}
+#payPgae .pay{
+    display: flex;
+    padding: 0 10%;
+}
+#payPgae .pay img{
+    width: 6rem;
+}
+#payPgae .pay>div{
+    width:50%;
+    color: #828283;
+}

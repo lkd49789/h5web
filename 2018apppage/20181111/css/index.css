@@ -1,0 +1,218 @@
+body{background-color: #ffe8fb;}
+h1{font-size: 1.3rem;margin: 1rem 0;}
+section{
+	text-align: center;
+	background: -webkit-linear-gradient(#e52663, #fdb780,#e52663);
+	padding: 0 0 3% 0;
+}
+section > img{
+	width: 100%;
+}
+section > p{
+	padding: 2% 0;
+	color: #fff;
+	font-size: 1.2rem;
+}
+.btns{
+	margin: 9% 0 3% 0;
+}
+.banner img{
+	width: 100%;
+}
+.cards > div{
+	width: 20%;
+	margin: 1%;
+	position: relative;
+	display: inline-block;
+}
+.cards div div{
+	position: absolute;
+	bottom: 8%;
+	width: 100%;
+}
+.cards div img{
+	width: 100%;
+}
+.cards div div img{
+	width: 10%;
+	display: inline-block;
+	vertical-align: middle;
+}
+.cards div div span{
+	display: inline-block;
+	vertical-align: middle;
+	color: #fff;
+}
+/*.num6,.num7{
+	color: #9e6223 !important;
+}*/
+.btns > span{
+	color: #fff;
+	padding: 10px 27%;
+	border-radius: 20px;
+	margin: 0 1%;
+	min-width: 30%;
+	display: inline-block;
+	-webkit-user-select:none;
+}
+.btn-record{
+	text-decoration:underline;
+	color: #e52663;
+	-webkit-user-select:none;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+.btn-rule{
+	text-decoration:underline;
+	color: #9e6223;
+	margin-top: 2%;
+	-webkit-user-select:none;
+}
+.btn-1{
+	background: -webkit-linear-gradient(#f852d7, #db7af4);
+}
+.btn-2{
+	background: -webkit-linear-gradient(#ffcb4d, #f86379);
+}
+.tip{
+	font-size: .8rem !important;
+	padding: 5% 0  !important;
+}
+
+.footer{
+	width: 94%;
+	margin-left: 3%;
+	padding: 0 0 2rem 0;
+	box-shadow: 0px 0px 20px red inset;
+	background-color: #fff;
+	border-radius: 5%;
+}
+.footer > img{
+	width: 100%;
+}
+/*登录框*/
+.login-wrapper{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.6);
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	margin: 0 auto;
+	display: none;
+}
+.login-box{
+	width: 70%;
+	margin-left: 10%;
+	background-color: #fff;
+	padding: 5%;
+	border-radius: 10px;
+	text-align: center;
+	margin-top: 40%;
+	position: relative;
+}
+.pop-close{
+	width: 12%;
+    position: absolute;
+    right: 0%;
+    top: -4rem;
+}
+.login-box p{
+	font-size: 1.3rem;
+	font-weight: bold;
+	margin: 1rem;
+	text-align: center;
+}
+.login-box input{
+	margin: .5rem 0;
+	padding: 15px;
+	width: 90%;
+	background-color: #f4f4f4;
+	border-radius: 5px;
+	border: none;
+}
+.btn-login{
+	background: -webkit-linear-gradient(left,#fa4c84, #ff9b4c) ;
+	color: #fff;
+	padding: 10px 0;
+	border-radius: 5px;
+	margin-top: 3%;
+	display: block;
+	font-size: 1.3rem;
+	-webkit-user-select:none;
+}
+.tip1{
+	display: block;
+	color: #ccc;
+	font-size: .9rem;
+	padding: 10px 15%;
+}
+.warning{
+	display: block;
+	color: #fd4848;
+	text-align: left;
+	padding: 0 5%;
+	opacity: 0;
+}
+/*.btn-goto-login{display: none;}*/
+/*抽奖记录*/
+/*container-list*/
+
+.container-list{
+	width: 100%;
+	position: relative;
+	margin-bottom: 2rem;
+}
+.menu-title{padding: 1rem 0;}
+.menu-title img{
+	width: 100%;
+}
+.product-box{
+  text-align: center;
+
+}
+.product-box img{
+  width: 37%;
+  margin: 0 4%;
+  border-radius: 10px;
+}
+.list-box{
+   	position: relative;
+    overflow: hidden;
+    height: 20rem;
+    padding: 0 5% 3% 5%;
+
+    width: 84%;
+	margin-left: 3%;
+	box-shadow: 0px 0px 20px red inset;
+	background-color: #fff;
+	border-radius: 5%;
+}
+.list-box > div{
+  width: 100%;
+  height: 100%;
+
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.list-box img{width: 100%;}
+.list-box span{
+  	display: inline-block;
+  	vertical-align: middle;
+}
+
+
+.scroll-box li{margin: 5px 0;text-align: left;}
+.c1{color: #626060;}
+
+.j1{color: #ff3a5d;}
+.j2{color: #1f617b;}
+.j3{color: #613269;}
+.scroll-wrapper{height: 16rem;position: absolute;overflow: hidden;    width: 100%;}
+.product-wrapper{background-color: #38938a;padding-bottom: 2rem;}
+.title-record{position: relative;}
+.title-record span{text-decoration: underline;position: absolute;right: 0;bottom: 0;color: #ff3a5d;}
+.time{float: right;color: #a2a2a2;}
+.nickname{font-size: 1.2rem;font-weight: bold;}

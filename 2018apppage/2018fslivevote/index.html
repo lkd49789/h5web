@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>风尚直播投票</title>
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<link rel="stylesheet" href="../../common/css/teamColor.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<!-- 首页 -->
+	<section class="s1" style="display: none">
+		<p>请前往口袋48 APP中的风尚大赏专题，进入点赞通道执行授权操作获得点赞权。</p>
+		<div class="btns">
+			<span class="btn-quit">知道了</span>
+			<!-- <span class="btn-bind">前往授权</span> -->
+		</div>
+	</section>
+	<!-- 成员列表 -->
+	<section class="s2" style="display: none">
+		<div class="nav-btn">
+			<span class="btn-close">关闭</span>
+		</div>
+		<div class="arrow">
+			<img class="arrow-prev" src="img/arrow-prev.png">
+			<img class="arrow-next" src="img/arrow-next.png">
+			<!-- <p>滑动查看</p>
+			<p>更多成员</p>
+			<img src="img/arrow.png"> -->
+		</div>
+		<ul class="memberList">
+		</ul>
+	</section>
+	<!-- 点赞页 -->
+	<section class="s3" style="display: none">
+		<div class="nav-btn">
+			<span class="btn-back">返回</span>
+			<span class="btn-close">关闭</span>
+		</div>
+		<div class="minfo-avatar">
+			<span class="m-avatar1" style="background-image:url();background-size: 100%;"></span>
+		</div>
+		<div class="m-info">
+			<span class="minfo-name">许杨玉琢</span>
+			<span class="minfo-team K-bg">HII</span>
+		</div>
+		<div class="vote-ing" style="display: none">
+			<div>
+				<input type="tel" class="vote-num" placeholder="输入点赞数量" maxlength="10" name="" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}">
+			</div>
+			<div class="tips">
+				<p class="tip">需要230鸡腿</p>
+				<p class="btn-buylike">你的点赞权不足，请前往风尚大赏专题页购买！</p>
+				<p class="btn-buyjt">你得鸡腿不足，请先去充值！</p>
+			</div>
+			<div class="type-box">
+				<div type="jt" id="1" class="choose-jt">鸡腿:<span class="total-jt"></span></div><div type="like" id="0" class="choose-like">点赞权:<span class="total-like"></span></div>
+				
+			</div>
+			<div>
+				<span class="btn-submit">为她点赞</span>
+			</div>
+		</div>
+		<div class="vote-end" style="display: none">
+			<p>感谢你为小偶像点赞～</p>
+			<span class="btn-go-vote">继续为其他小偶像点赞</span>
+		</div>
+	</section>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="../../common/js/common.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/index.js"></script>
+
+</html>

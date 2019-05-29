@@ -3,10 +3,7 @@
     //web端测试（用户信息）
     var webUserInfo = {
         "appid":"27422",                                //用户ID
-        // "apptoken":"gAPn7Cywqux5guu5cvq4geMtH182EehR8RL9CWtoviVa+V9THsw/hg==",                //验证Token
-        // "apptoken":"/SV7Ugtmu4Z5guu5cvq4gU7vsflc3NDuUsd/TPS44h3MnwXEeZbAIg==",   //验证Token
-        // "apptoken":"UG0+fia6/A/W90Q3DS4fGH7cIMgRONx3cUbhs4Td6QOW1wDGOQFZgw==",   //验证Token
-        "apptoken":"6p4v/9hX6iRRTPhdNvwwA3rJR54VPmH4tCJdrtbVl9Ae6TVZYHTlmJo1O9XkjIeyFmq3zwIMIuQ49AtvSGgZvEv2IdemW9YtK7g8E7VAjNqKC5htxUpLWwMAdAOuQeo7",   //验证Token
+        "apptoken":"",   //验证Token
         "uname":"nicker",                                 //用户昵称
         "avata":"avata",                                    //头像地址
         "dev_cd":"dev_cd"                        //设备号

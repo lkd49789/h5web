@@ -1,0 +1,135 @@
+*{margin:0;padding: 0}
+html,body{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background-color: #191464;
+}
+body{
+	max-width: 640px;
+	margin:0 auto;
+}
+section{
+	width: 100%;
+	height: auto;
+	min-height: 100%;
+	background-color: #191464;
+}
+button{
+	border:none;
+}
+ul,li{
+	list-style: none;
+}
+.content{
+	padding-bottom: 6rem;
+}
+.banner{
+	width: 100%;
+}
+
+.tit{
+	text-align: center;
+	padding:1rem 0;
+	font-size: 1.2rem;
+	color: #fff;
+    background-color: #2d2a67;
+}
+
+
+.daylist{
+	margin-bottom:5%;
+}
+.daylist li{
+	width: 100%;
+	height: 4rem;
+	line-height: 4rem;
+	color: #fff;
+	font-size: 1rem;
+	margin-top: 3%;
+}
+.leftbox{
+	width: 60%;
+	height: 4rem;
+	float: left;
+	font-size: 1.2rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.leftbox span{
+	display:block;
+	font-size: 1.2rem;
+	float: left;
+	line-height: 4rem;
+}
+.rank{
+	width: 3rem;
+	text-align: center;
+}
+.avatar{
+	width:4rem;
+	height: 4rem;
+	border-radius: 100%;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+	margin-right: 0.5rem;
+}
+.leftbox em{
+	font-size: 1.2rem;
+	line-height: 4rem;
+}
+.leftbox em img{
+	width: 1.8rem;
+	margin-left: 0.5rem;
+}
+.leftbox b{
+	font-weight: normal;
+	margin-left: 0.5rem;
+}
+.rightbox{
+	float: right;
+	text-align: right;
+	font-size: 1.2rem;
+	color: #fff;
+	line-height: 4rem;
+	padding-right: 4%;
+	width: 35%;
+}
+.rightbox em{
+	font-size: 1.2rem;
+	color: #fff;
+}
+.zanbtnbox{
+	width: 100%;
+	max-width: 640px;
+	background-color: #191464;
+	left: 50%;
+    transform: translate(-50%);
+    position: fixed;
+	bottom: 0;
+	padding: 1.5rem;
+}
+.myzanbtn{
+	width: 50%;
+	margin-left: 25%;
+	border-radius: 8px;
+	font-size: 1.2rem;
+	height: 3.5rem;
+	line-height: 3.5rem;
+	color: #fff;
+	letter-spacing: 1px;
+	background: -webkit-linear-gradient(left, #ea81ff , #515aff); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(right, #ea81ff , #515aff); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(right, #ea81ff , #515aff); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to right, #ea81ff , #515aff); /* 标准的语法 */
+	
+}
+.votenum{
+	/*text-decoration: underline;*/
+}
+.rightbox span{
+	/* text-decoration: underline; */
+	font-size: 1.2rem;
+}

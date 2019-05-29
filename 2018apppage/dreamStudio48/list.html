@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>投票</title>
+	<link href="css/common.css" rel="stylesheet"/>
+	<link href="css/list.css" rel="stylesheet" />
+	<style type="text/css">
+	.zhu{
+		font-size: 1rem;
+		color:#422a1d;
+		text-align: center;
+		padding-bottom: 4%;
+		margin-top: 2%;
+	}
+	.timebox{display: none;}
+	</style>
+</head>
+<body>
+	<section>
+		<img src="img/banner.jpg" class="banner">
+		<p class="tit"><p>
+		<ul class="voteList">
+			<!-- <li>
+				<span class="runknum"><em>1</em></span>
+				<div class="headbox">
+					<span class="headimg" style="background-image:url(img/egimg.png)"></span>
+					<div class="namebox">
+						<p>陈问言<em class="team">SII</em></p>
+					</div>
+				</div>
+			</li> -->
+		</ul>
+		<div class="icon_backbtn"><img src="img/btn-back.png"></div>
+	</section>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+var eventId = GetQueryString('eventId');
+var type = GetQueryString('type');
+
+if(type==2 || type=="2"){
+	$('.tit').show();
+	$('.tit').html('该榜单仅为粉丝点赞实时排行，不包含成员互投票数');
+}
+if(type==0 || type=="0"){
+	$('.tit').show();
+	$('.tit').html('出现同票情况按2017年总选排名和助力榜排名顺序排位');
+}
+
+likeRanking();
+	function likeRanking(){
+		main.likeRanking(eventId,type,function(data){
+			console.log(data);
+			if(data.status==200){
+				if(data.content.length==0 || data.content==""){
+					$('.voteList').html('暂时还没有数据！')
+				}else{
+					var html = [];
+					$.each(data.content,function(index,dl){
+						html.push('<li>');
+						html.push('<span class="runknum"><em>'+dl.rank+'</em></span>');
+						html.push('<div class="headbox">');
+						html.push('<span class="headimg" style="background-image:url('+dl.memberInfo.avatar+')"></span>');
+						html.push('<div class="namebox">');
+						html.push('<p>'+dl.memberInfo.memberName+'<img class="teamimg" src='+main.formatAvata(dl.memberInfo.teamPic)+'></p>');
+						html.push('</div>');
+						html.push('</div>');
+						html.push('</li>');
+					})
+					$('.voteList').append(html.join(""));
+				}
+			}else{
+				main.alert(data.message);
+			}
+		})
+	}
+
+	$('.icon_backbtn').click(function(){
+		window.history.back();
+	})
+</script>
+</html>

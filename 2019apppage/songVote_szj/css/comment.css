@@ -1,0 +1,88 @@
+[v-cloak] {
+    display: none !important;
+} 
+a{
+    color:rgb(0, 0, 238);
+}
+body{
+    max-width: 640px;
+    margin:0 auto;
+    position: relative;
+    font-size: 1.3rem;
+}
+#app{
+    min-height: 100%;
+    box-sizing: border-box;
+    background: url('../img/comment_bg.jpg') no-repeat top left/100% auto #212121;
+    padding: 0 1.4rem 2rem;
+    overflow: hidden;
+}
+.titleWrap{
+    background: #302c29;
+    border-radius: .5rem;
+    color: #fff;
+    margin-top: 2.22rem;
+    padding: 1.4rem .7rem;
+    box-sizing: border-box;
+}
+.titleWrap span{
+    color: #d0a259;
+}
+.content{
+    background: #f1f4fd;
+    border-radius: .5rem;
+    margin-top: 1.6rem;
+}
+.content li{
+    padding: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    background: url("../img/li_bg.png") no-repeat top right/20% auto;
+    border-bottom: 1px solid #e7e9ec;
+}
+.content li:last-child{
+    border-bottom:0;
+}
+.content li .left{
+    display: flex;
+    margin-right: .5rem;
+}
+.content li .left .head{
+    width:3.8rem;
+    height: 3.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.content li .left .head img{
+    width: 100%;
+}
+.right{
+    flex: 1;
+}
+.right .parise{
+    float: right;
+}
+.right .parise img{
+    height: 1.46rem;
+    vertical-align: top;
+    margin-right: .2rem;
+}
+.time{
+    color: #c4c4c4;
+    font-size: 1.2rem;
+}
+.text{
+    margin-top: .8rem;
+}
+.content li:first-child{
+    background: url(../img/li_bg2.png) no-repeat top right/20% auto;
+}
+.content li:first-child .name{
+    color:#fd7430;
+}
+.content li:first-child .time{
+    color:#a79d80;
+}
+.content li:first-child .text{
+    color:#fd7430;
+}

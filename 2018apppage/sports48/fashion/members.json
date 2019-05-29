@@ -1,0 +1,506 @@
+[
+    {
+        "teamId": 1001,
+        "teamName": "TEAM SII",
+        "teamLogo": "https://source.48.cn/mediasource/teamLogo/fulllogo/TEAM-SII.jpg",
+        "members": [
+            {
+                "member_id": 1,
+                "real_name": "张语格",
+                "pinyin": "Zhang YuGe",
+                "teamId": 1001,
+                "avatar": "http://www.snh48.com/images/member/zp_10019.jpg?ram=1514205030523"
+            },
+            {
+                "member_id": 3,
+                "real_name": "陈观慧",
+                "pinyin": "Chen GuanHui",
+                "teamId": 1001,
+                "avatar": "http://www.snh48.com/images/member/zp_10001.jpg?ram=1514205016750"
+            },
+            {
+                "member_id": 5,
+                "real_name": "袁雨桢",
+                "pinyin": "Yuan YuZhen",
+                "teamId": 1001,
+                "avatar": "http://www.snh48.com/images/member/zp_10017.jpg?ram=1514205029148"
+            },
+            {
+                "member_id": 8,
+                "real_name": "孙芮",
+                "pinyin": "Sun Rui",
+                "teamId": 1001,
+                "avatar": "http://www.snh48.com/images/member/zp_10010.jpg?ram=1514205023930"
+            },
+            {
+                "member_id": 14,
+                "real_name": "徐子轩",
+                "pinyin": "Xu ZiXuan",
+                "teamId": 1001,
+                "avatar": "http://www.snh48.com/images/member/zp_10016.jpg?ram=1514205028329"
+            },
+            {
+                "member_id": 17,
+                "real_name": "蒋芸",
+                "pinyin": "Jiang Yun",
+                "teamId": 1001,
+                "avatar": "http://www.snh48.com/images/member/zp_10004.jpg?ram=1514205018928"
+            },
+            {
+                "member_id": 18,
+                "real_name": "徐晨辰",
+                "pinyin": "Xu ChenChen",
+                "teamId": 1001,
+                "avatar": "http://www.snh48.com/images/member/zp_10014.jpg?ram=1514205026763"
+            },
+            {
+                "member_id": 19,
+                "real_name": "孔肖吟",
+                "pinyin": "Kong XiaoYin",
+                "teamId": 1001,
+                "avatar": "http://www.snh48.com/images/member/zp_10005.jpg?ram=1514205019621"
+            },
+            {
+                "member_id": 20,
+                "real_name": "李宇琪",
+                "pinyin": "Li YuQi",
+                "teamId": 1001,
+                "avatar": "http://www.snh48.com/images/member/zp_10006.jpg?ram=1514205020518"
+            },
+            {
+                "member_id": 21,
+                "real_name": "许佳琪",
+                "pinyin": "Xu JiaQi",
+                "teamId": 1001,
+                "avatar": "http://www.snh48.com/images/member/zp_10015.jpg?ram=1514205027761"
+            },
+            {
+                "member_id": 36,
+                "real_name": "钱蓓婷",
+                "pinyin": "Qian BeiTing",
+                "teamId": 1001,
+                "avatar": "http://www.snh48.com/images/member/zp_10008.jpg?ram=1514205022371"
+            },
+            {
+                "member_id": 37,
+                "real_name": "陈思",
+                "pinyin": "Chen Si",
+                "teamId": 1001,
+                "avatar": "http://www.snh48.com/images/member/zp_10002.jpg?ram=1514205017536"
+            },
+            {
+                "member_id": 38,
+                "real_name": "戴萌",
+                "pinyin": "Dai Meng",
+                "teamId": 1001,
+                "avatar": "http://www.snh48.com/images/member/zp_10003.jpg?ram=1514205018226"
+            },
+            {
+                "member_id": 39,
+                "real_name": "吴哲晗",
+                "pinyin": "Wu ZheHan",
+                "teamId": 1001,
+                "avatar": "http://www.snh48.com/images/member/zp_10013.jpg?ram=1514205026066"
+            },
+            {
+                "member_id": 40,
+                "real_name": "邱欣怡",
+                "pinyin": "Qiu XinYi",
+                "teamId": 1001,
+                "avatar": "http://www.snh48.com/images/member/zp_10009.jpg?ram=1514205023164"
+            },
+            {
+                "member_id": 43,
+                "real_name": "徐伊人",
+                "pinyin": "Xu YiRen",
+                "teamId": 1001,
+                "avatar": "http://www.snh48.com/images/member/zp_10069.jpg?ram=1514205073406"
+            },
+            {
+                "member_id": 67,
+                "real_name": "袁丹妮",
+                "pinyin": "Yuan DanNi",
+                "teamId": 1001,
+                "avatar": "http://www.snh48.com/images/member/zp_10073.jpg?ram=1514205078265"
+            },
+            {
+                "member_id": 63566,
+                "real_name": "刘增艳",
+                "pinyin": "Liu ZengYan",
+                "teamId": 1001,
+                "avatar": "http://www.snh48.com/images/member/zp_10125.jpg?ram=1514205127823"
+            },
+            {
+                "member_id": 399631,
+                "real_name": "吕一",
+                "pinyin": "Lv Yi",
+                "teamId": 1001,
+                "avatar": "http://www.snh48.com/images/member/zp_10153.jpg?ram=1514205137565"
+            }
+        ]
+    },
+    {
+        "teamId": 1002,
+        "teamName": "TEAM NII",
+        "teamLogo": "https://source.48.cn/mediasource/teamLogo/fulllogo/TEAM-NII.jpg",
+        "members": [
+            {
+                "member_id": 4,
+                "real_name": "陈佳莹",
+                "pinyin": "Chen JiaYing",
+                "teamId": 1002,
+                "avatar": "http://www.snh48.com/images/member/zp_10020.jpg?ram=1514205031110"
+            },
+            {
+                "member_id": 7,
+                "real_name": "冯薪朵",
+                "pinyin": "Feng XinDuo",
+                "teamId": 1002,
+                "avatar": "http://www.snh48.com/images/member/zp_10023.jpg?ram=1514205033385"
+            },
+            {
+                "member_id": 10,
+                "real_name": "何晓玉",
+                "pinyin": "He XiaoYu",
+                "teamId": 1002,
+                "avatar": "http://www.snh48.com/images/member/zp_10026.jpg?ram=1514205035585"
+            },
+            {
+                "member_id": 22,
+                "real_name": "黄婷婷",
+                "pinyin": "Huang TingTing",
+                "teamId": 1002,
+                "avatar": "http://www.snh48.com/images/member/zp_10025.jpg?ram=1514205034934"
+            },
+            {
+                "member_id": 27,
+                "real_name": "赵粤",
+                "pinyin": "Zhao Yue",
+                "teamId": 1002,
+                "avatar": "http://www.snh48.com/images/member/zp_10037.jpg?ram=1514205045453"
+            },
+            {
+                "member_id": 32,
+                "real_name": "郝婉晴",
+                "pinyin": "Hao WanQing",
+                "teamId": 1002,
+                "avatar": "http://www.snh48.com/images/member/zp_10054.jpg?ram=1514205054924"
+            },
+            {
+                "member_id": 33,
+                "real_name": "易嘉爱",
+                "pinyin": "Yi JiaAi",
+                "teamId": 1002,
+                "avatar": "http://www.snh48.com/images/member/zp_10036.jpg?ram=1514205043855"
+            },
+            {
+                "member_id": 34,
+                "real_name": "陆婷",
+                "pinyin": "Lu Ting",
+                "teamId": 1002,
+                "avatar": "http://www.snh48.com/images/member/zp_10030.jpg?ram=1514205038613"
+            },
+            {
+                "member_id": 45,
+                "real_name": "谢妮",
+                "pinyin": "Xie Ni",
+                "teamId": 1002,
+                "avatar": "http://www.snh48.com/images/member/zp_10067.jpg?ram=1514205069845"
+            },
+            {
+                "member_id": 46,
+                "real_name": "刘佩鑫",
+                "pinyin": "Liu PeiXin",
+                "teamId": 1002,
+                "avatar": "http://www.snh48.com/images/member/zp_10063.jpg?ram=1514205063538"
+            },
+            {
+                "member_id": 68,
+                "real_name": "陈问言",
+                "pinyin": "Chen WenYan",
+                "teamId": 1002,
+                "avatar": "http://www.snh48.com/images/member/zp_10021.jpg?ram=1514205031904"
+            },
+            {
+                "member_id": 63582,
+                "real_name": "张怡",
+                "pinyin": "Zhang Yi",
+                "teamId": 1002,
+                "avatar": "http://www.snh48.com/images/member/zp_10141.jpg?ram=1514205131927"
+            },
+            {
+                "member_id": 399662,
+                "real_name": "江真仪",
+                "pinyin": "Jiang ZhenYi",
+                "teamId": 1002,
+                "avatar": "http://www.snh48.com/images/member/zp_10156.jpg?ram=1514205139922"
+            },
+            {
+                "member_id": 399664,
+                "real_name": "刘菊子",
+                "pinyin": "Liu JuZi",
+                "teamId": 1002,
+                "avatar": "http://www.snh48.com/images/member/zp_10157.jpg?ram=1514205140563"
+            },
+            {
+                "member_id": 399668,
+                "real_name": "许逸",
+                "pinyin": "Xu Yi",
+                "teamId": 1002,
+                "avatar": "http://www.snh48.com/images/member/zp_10159.jpg?ram=1514205141824"
+            },
+            {
+                "member_id": 530584,
+                "real_name": "郭倩芸",
+                "pinyin": "Guo QianYun",
+                "teamId": 1002,
+                "avatar": "http://www.snh48.com/images/member/zp_10171.jpg?ram=1514205147085"
+            },
+            {
+                "member_id": 533852,
+                "real_name": "陶波尔",
+                "pinyin": "Tao BoEr",
+                "teamId": 1002,
+                "avatar": "http://www.snh48.com/images/member/zp_10177.jpg?ram=1514205150995"
+            },
+            {
+                "member_id": 538735,
+                "real_name": "金莹玥",
+                "pinyin": "Jin Yingyue",
+                "teamId": 1002,
+                "avatar": "http://www.snh48.com/images/member/zp_10178.jpg?ram=1514205151746"
+            }
+        ]
+    },
+    {
+        "teamId": 1003,
+        "teamName": "TEAM HII",
+        "teamLogo": "https://source.48.cn/mediasource/teamLogo/fulllogo/TEAM-HII.jpg",
+        "members": [
+            {
+                "member_id": 16,
+                "real_name": "李艺彤",
+                "pinyin": "Li YiTong",
+                "teamId": 1003,
+                "avatar": "http://www.snh48.com/images/member/zp_10031.jpg?ram=1514205039298"
+            },
+            {
+                "member_id": 25,
+                "real_name": "万丽娜",
+                "pinyin": "Wan LiNa",
+                "teamId": 1003,
+                "avatar": "http://www.snh48.com/images/member/zp_10034.jpg?ram=1514205041908"
+            },
+            {
+                "member_id": 2470,
+                "real_name": "徐晗",
+                "pinyin": "Xu Han",
+                "teamId": 1003,
+                "avatar": "http://www.snh48.com/images/member/zp_10068.jpg?ram=1514205071785"
+            },
+            {
+                "member_id": 2508,
+                "real_name": "张昕",
+                "pinyin": "Zhang Xin",
+                "teamId": 1003,
+                "avatar": "http://www.snh48.com/images/member/zp_10075.jpg?ram=1514205080810"
+            },
+            {
+                "member_id": 5562,
+                "real_name": "林楠",
+                "pinyin": "Lin Nan",
+                "teamId": 1003,
+                "avatar": "http://www.snh48.com/images/member/zp_10061.jpg?ram=1514205060550"
+            },
+            {
+                "member_id": 5566,
+                "real_name": "许杨玉琢",
+                "pinyin": "Xu YangYuZhuo",
+                "teamId": 1003,
+                "avatar": "http://www.snh48.com/images/member/zp_10070.jpg?ram=1514205074743"
+            },
+            {
+                "member_id": 5567,
+                "real_name": "杨惠婷",
+                "pinyin": "Yang HuiTing",
+                "teamId": 1003,
+                "avatar": "http://www.snh48.com/images/member/zp_10071.jpg?ram=1514205076287"
+            },
+            {
+                "member_id": 49005,
+                "real_name": "沈梦瑶",
+                "pinyin": "Shen MengYao",
+                "teamId": 1003,
+                "avatar": "http://www.snh48.com/images/member/zp_10104.jpg?ram=1514205114499"
+            },
+            {
+                "member_id": 63555,
+                "real_name": "费沁源",
+                "pinyin": "Fei QinYuan",
+                "teamId": 1003,
+                "avatar": "http://www.snh48.com/images/member/zp_10114.jpg?ram=1514205120520"
+            },
+            {
+                "member_id": 63560,
+                "real_name": "姜杉",
+                "pinyin": "Jiang Shan",
+                "teamId": 1003,
+                "avatar": "http://www.snh48.com/images/member/zp_10119.jpg?ram=1514205124022"
+            },
+            {
+                "member_id": 63561,
+                "real_name": "蒋舒婷",
+                "pinyin": "Jiang ShuTing",
+                "teamId": 1003,
+                "avatar": "http://www.snh48.com/images/member/zp_10120.jpg?ram=1514205125614"
+            },
+            {
+                "member_id": 399669,
+                "real_name": "袁一琦",
+                "pinyin": "Yuan YiQi",
+                "teamId": 1003,
+                "avatar": "http://www.snh48.com/images/member/zp_10163.jpg?ram=1514205144009"
+            },
+            {
+                "member_id": 399673,
+                "real_name": "曾晓雯",
+                "pinyin": "Zeng XiaoWen",
+                "teamId": 1003,
+                "avatar": "http://www.snh48.com/images/member/zp_10170.jpg?ram=1514205146469"
+            },
+            {
+                "member_id": 594003,
+                "real_name": "王奕",
+                "pinyin": "Wang Yi",
+                "teamId": 1003,
+                "avatar": "http://www.snh48.com/images/member/zp_10181.jpg?ram=1514205153897"
+            },
+            {
+                "member_id": 594005,
+                "real_name": "熊沁娴",
+                "pinyin": "Xiong QinXian",
+                "teamId": 1003,
+                "avatar": "http://www.snh48.com/images/member/zp_10182.jpg?ram=1514205154566"
+            }
+        ]
+    },
+    {
+        "teamId": 1004,
+        "teamName": "TEAM X",
+        "teamLogo": "https://source.48.cn/mediasource/teamLogo/fulllogo/TEAM-X.jpg",
+        "members": [
+            {
+                "member_id": 6431,
+                "real_name": "陈琳",
+                "pinyin": "Chen Lin",
+                "teamId": 1004,
+                "avatar": "http://www.snh48.com/images/member/zp_10081.jpg?ram=1514205089359"
+            },
+            {
+                "member_id": 6432,
+                "real_name": "冯晓菲",
+                "pinyin": "Feng XiaoFei",
+                "teamId": 1004,
+                "avatar": "http://www.snh48.com/images/member/zp_10082.jpg?ram=1514205090734"
+            },
+            {
+                "member_id": 6734,
+                "real_name": "李晶",
+                "pinyin": "Li Jing",
+                "teamId": 1004,
+                "avatar": "http://www.snh48.com/images/member/zp_10083.jpg?ram=1514205092043"
+            },
+            {
+                "member_id": 6735,
+                "real_name": "李钊",
+                "pinyin": "Li Zhao",
+                "teamId": 1004,
+                "avatar": "http://www.snh48.com/images/member/zp_10084.jpg?ram=1514205093458"
+            },
+            {
+                "member_id": 6738,
+                "real_name": "宋昕冉",
+                "pinyin": "Song XinRan",
+                "teamId": 1004,
+                "avatar": "http://www.snh48.com/images/member/zp_10087.jpg?ram=1514205097346"
+            },
+            {
+                "member_id": 6739,
+                "real_name": "孙歆文",
+                "pinyin": "Sun XinWen",
+                "teamId": 1004,
+                "avatar": "http://www.snh48.com/images/member/zp_10088.jpg?ram=1514205098867"
+            },
+            {
+                "member_id": 6740,
+                "real_name": "汪佳翎",
+                "pinyin": "Wang JiaLing",
+                "teamId": 1004,
+                "avatar": "http://www.snh48.com/images/member/zp_10089.jpg?ram=1514205100173"
+            },
+            {
+                "member_id": 6741,
+                "real_name": "汪束",
+                "pinyin": "Wang Shu",
+                "teamId": 1004,
+                "avatar": "http://www.snh48.com/images/member/zp_10090.jpg?ram=1514205101066"
+            },
+            {
+                "member_id": 6742,
+                "real_name": "王晓佳",
+                "pinyin": "Wang XiaoJia",
+                "teamId": 1004,
+                "avatar": "http://www.snh48.com/images/member/zp_10091.jpg?ram=1514205102438"
+            },
+            {
+                "member_id": 6744,
+                "real_name": "杨冰怡",
+                "pinyin": "Yang BingYi",
+                "teamId": 1004,
+                "avatar": "http://www.snh48.com/images/member/zp_10093.jpg?ram=1514205105429"
+            },
+            {
+                "member_id": 6747,
+                "real_name": "张丹三",
+                "pinyin": "Zhang DanSan",
+                "teamId": 1004,
+                "avatar": "http://www.snh48.com/images/member/zp_10096.jpg?ram=1514205108786"
+            },
+            {
+                "member_id": 63551,
+                "real_name": "陈韫凌",
+                "pinyin": "Chen YunLing",
+                "teamId": 1004,
+                "avatar": "http://www.snh48.com/images/member/zp_10110.jpg?ram=1514205118164"
+            },
+            {
+                "member_id": 63567,
+                "real_name": "潘瑛琪",
+                "pinyin": "Pan YingQi",
+                "teamId": 1004,
+                "avatar": "http://www.snh48.com/images/member/zp_10126.jpg?ram=1514205128527"
+            },
+            {
+                "member_id": 286979,
+                "real_name": "张嘉予",
+                "pinyin": "Zhang JiaYu",
+                "teamId": 1004,
+                "avatar": "http://www.snh48.com/images/member/zp_10149.jpg?ram=1514205135334"
+            },
+            {
+                "member_id": 399672,
+                "real_name": "祁静",
+                "pinyin": "Qi Jing",
+                "teamId": 1004,
+                "avatar": "http://www.snh48.com/images/member/zp_10164.jpg?ram=1514205144630"
+            },
+            {
+                "member_id": 399674,
+                "real_name": "徐诗琪",
+                "pinyin": "Xu ShiQi",
+                "teamId": 1004,
+                "avatar": "http://www.snh48.com/images/member/zp_10167.jpg?ram=1514205145878"
+            }
+        ]
+    }
+]

@@ -1,0 +1,41 @@
+*{margin:0;padding: 0}
+html,body{
+	width: 100%;
+	height: 100%;
+	background-color: #fefefe;
+    color:#fff;
+    font-family: "宋体", sans-serif,Helvetica;
+    font-size: .92rem;
+   
+}
+section{
+	background: url(../img/share-bg.jpg) no-repeat;
+	background-size: 100%;
+	width: 100%;
+	height: 100%;
+	
+}
+section img{
+	width: 100%;
+}
+.share-title{
+	margin-top: 5%;
+	position: relative;
+    z-index: 100;
+}
+.share-top3{
+	position: absolute;
+	bottom: -5%;
+	left: 0;
+}
+.share-button{
+	position: absolute;
+	width: 70%;
+	bottom: 2%;
+	left: 15%;
+}
+.share-cloud{
+	position: absolute;
+	bottom: -5%;
+	left: 0;
+}

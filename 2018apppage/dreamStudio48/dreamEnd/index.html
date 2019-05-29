@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>梦想演播厅最终排名</title>
+	<link href="../css/common.css" rel="stylesheet" />
+	<link href="css/index.css" rel="stylesheet" />
+</head>
+<body>
+	<section>
+		<img src="../img/bannerend.jpg" class="banner">
+		<div class="content">
+			<div class="topbox">
+				<span class="tophead first" style="background-image:url(https://h5.48.cn/resource/img/member/zp_10006.jpg)"></span>
+				<p class="namebox"><span class="rank gold">1</span>李宇琪<img src="https://source.48.cn/mediasource/teamLogo2/all/snh48_s2.png"></p>
+				<img src="../img/crown.png" class="crown">
+			</div>
+			<ul class="list1">
+				<li class="headbox">
+					<span class="tophead tow" style="background-image:url(https://h5.48.cn/resource/img/member/zp_10076.jpg)"></span>
+					<p class="namebox"><span class="rank silver">2</span>张雨鑫<img src="https://source.48.cn/mediasource/teamLogo2/all/snh48_n2.png"></p>
+				</li>
+				<li class="headbox">
+					<span class="tophead three" style="background-image:url(https://h5.48.cn/resource/img/member/zp_10091.jpg)"></span>
+					<p class="namebox"><span class="rank copper">3</span>王晓佳<img src="https://source.48.cn/mediasource/teamLogo2/all/snh48_x.png"></p>
+				</li>
+			</ul>
+		</div>
+		<button class="lookbtn">查看66位成员完整排名</button>
+		<p class="rulebtn"><a href="javascript:;">查看介绍和规则</a></p>
+	</section>
+</body>
+<script src="../../../common/js/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+	$('.tophead').css('height',$('.topbox').width());
+	$('.rulebtn').click(function(){
+        main.hrefToEnd('https://h5.48.cn/2018apppage/dreamStudio48/rule.html');
+	})
+
+	$('.lookbtn').click(function(){//跳转小程序
+		window.web.launchWechatMiniProgram(launchParams());
+	})
+
+	var url= 'h5.48.cn/2018apppage/dreamStudio48/dreamEnd/ranklist.html';
+	function launchParams() {
+		return JSON.stringify({
+			id: "gh_dc1ce10e9cd3",
+			path: "pages/h5page/h5page?htp=https&url="+url,
+			type: 'release',
+			callback: "launchCallback"
+		})
+	}
+</script>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>报名代役</title>
+	<link href="../../../common/css/common.css" rel="stylesheet" />
+	<link href="css/popbox.css" rel="stylesheet" />
+	<link href="css/submit.css" rel="stylesheet" />
+</head>
+<body>
+	<section class='wrapper' v-cloak>
+		<div class="member-box">
+			<div class="avatar"><img :src="mInfo.starAvatar"></div>
+			<div class="m-info">
+				<p>{{mInfo.starName}}</p>
+				<div>
+					<span>IDFT排名：{{mInfo.rank}}</span>
+					<span>入团时间：{{mInfo.joinTime}}</span>
+				</div>
+			</div>
+		</div>
+		<div class="group">
+			<h1>选择代役分团</h1>
+			<div v-for="(item,index) in groupList" v-on:click="chooseGroup(index)">
+				<img :src="item.id | img">
+				<div v-if="group == item.gname" class="check-box">
+					<img src="images/icon-check.png">
+				</div>
+			</div>
+			<!-- <div>
+				<img src="images/g2.png">
+				<div class="check-box">
+					<img src="images/icon-check.png">
+				</div>
+			</div>
+			<div>
+				<img src="images/g3.png">
+				<div class="check-box">
+					<img src="images/icon-check.png">
+				</div>
+			</div> -->
+			<!-- <span v-for="(item,index) in groupList" v-on:click="chooseGroup(index)">{{item.gname}}</span> -->
+			
+		</div>
+		<div class="teams" v-if="group != '' ">
+			<h1>选择代役队伍</h1>
+			<span v-for="(item,index) in teamList" :class="team==item ? 'choose':''" v-on:click="chooseTeam(index)">Team {{item}}</span>
+			
+		</div>
+		<div class="submit-box">
+			<h1>申请理由（必填）</h1>
+			<div>
+				<textarea placeholder="填写自己希望回归的队伍的原因。以及对外来的自我规划" v-bind:maxlength="1000"  @input="descArea" v-model="words"></textarea>
+			</div>
+			<span class="count">{{totalwords}}/1000</span>
+		</div>
+		<p class="btn" v-on:click="submit()">提交报名</p>
+		<!-- 弹框 -->
+		<div class="mask" v-if="showpop==1">
+			<div>
+				<p>{{tips}}</p>
+				<span v-on:click="closePop()">知道了</span>
+			</div>
+		</div>
+	</section>
+</body>
+<script src="../../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<script src="../../../common/js/vue.js"></script>
+<script src="../../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/submit.js"></script>
+</html>

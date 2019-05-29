@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>梦想演播厅</title>
+	<link href="css/common.css" rel="stylesheet" />
+	<link href="css/index.css" rel="stylesheet" />
+</head>
+<body>
+	<section>
+		<img src="img/banner.jpg" class="banner">
+		<div class="btnsbox">
+			<button class="mersrank">成员互投排行</button>
+			<button class="usersrank">粉丝点赞排行</button>
+			<button class="realrank">点赞实时排行</button>
+		</div>
+		<p class="praise">我的点赞权：<em class="praisenum"></em></p>
+		<div class="content">
+			<ul class="listbox1">
+				<!-- <li>
+					<div class="avatabox">
+						<span class="avata NII-bd" style="background-image:url(img/banner.png);"></span>
+						<p class="mername">陈问言<em class="team NII-bg">NII</em></p>
+						<span class="rank">1</span>
+					</div>
+					<div class="vidbox">
+						<div class="video">
+							<video class="bofang" src="" webkit-playsinline></video>
+						</div>
+						<div class="qu" style="background-image:url(img/egimg.png)">
+							<img src="img/play.png" class="play">
+						</div>
+					</div>
+					<ol class="iconsbtn">
+						<li><img src="img/icon_msg.png"></li>
+						<li><img src="img/icon_tougao.png"></li>
+						<li><img src="img/icon_zan.png"></li>
+						<li><img src="img/icon_vote.png"></li>
+						<li class="iconmany"><img src="img/icon_many.png">详细内容</li>
+					</ol>
+				</li> -->
+			</ul>
+		</div>
+		<ul class="undertabs">
+			<li class="tab1">
+				<span class="t1"></span>
+				<p>往期回顾</p>
+			</li>
+			<li class="tab2">
+				<span class="t2"></span>
+				<p>介绍</p>
+			</li>
+			<li class="tab3">
+				<span class="t3"></span>
+				<p>所有成员</p>
+			</li>
+		</ul>
+		<!-- 是否确认点赞的弹框 -->
+		<div class="maskbox">
+			<div class="masklike">
+				<div class="upbox">
+					<p>点赞将消耗你账号里所有的点赞权，是否为她点赞？</p>
+				</div>
+				<div class="btnbox">
+					<button class="btnsback">取消</button>
+					<button class="btnsright">确定</button>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
+<script src="js/main.js"></script>
+<script src="js/index.js"></script>
+</html>

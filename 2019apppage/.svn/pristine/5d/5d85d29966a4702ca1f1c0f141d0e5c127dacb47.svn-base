@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>泳装综艺</title>
+    <link rel="stylesheet" href="../../common/css/mui.min.css">
+    <link href="../../common/css/common.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        <div class="mui-slider">
+            <div class="mui-slider-group mui-slider-loop">
+                <!--支持循环，需要重复图片节点-->
+                <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="img/btn3.png"/></a></div>
+                <div class="mui-slider-item"><a href="#"><img src="img/btn1.png" /></a></div>
+                <div class="mui-slider-item"><a href="#"><img src="img/btn2.png" /></a></div>
+                <div class="mui-slider-item"><a href="#"><img src="img/btn3.png" /></a></div>
+                <!--支持循环，需要重复图片节点-->
+                <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="img/btn1.png" /></a></div>
+            </div>
+            <div class="mui-slider-indicator" id="sliin">
+                <div class="mui-indicator mui-active"></div>
+                <div class="mui-indicator"></div>
+                <div class="mui-indicator"></div>
+                <div class="mui-indicator"></div>
+            </div>
+        </div>
+        <div class="center">
+            <img src="./img/center.jpg" alt="">
+            <!-- <p><b>偶像亲笔手帐拍卖</b></p> -->
+        </div>
+        <div class="bottom" v-if="content">
+            <img class="bgimg" :src="'https://source.48.cn'+content.image" alt="">
+            <div class="idolWrap">
+                <div class="idol">
+                    <div class="head">
+                        <img :src="content.baseUserInfo?'https://source.48.cn'+content.baseUserInfo.avatar:''" alt="">
+                    </div>
+                    <div class="name">
+                        <span><b v-text="content.baseUserInfo?content.baseUserInfo.nickname:''"></b></span>
+                        <span><img :src="content.baseUserInfo?'https://source.48.cn'+content.baseUserInfo.teamLogo:''" alt=""></span>
+                    </div>
+                </div> 
+            </div>
+            <div class="bottom_btnWrap">
+                <div class="btn" @click="gotoPage('rule.html')">竞拍规则</div>
+                <div class="btn" @click="gotoPage('record.html')">我的竞拍记录</div>
+                <div class="btn" @click="gotoPage('auction.html')">参与竞拍</div>
+            </button>
+        </div>
+     </div>
+  </div>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="../../common/js/mui.min.js" ></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<!-- <script src="../../common/js/vue.js"></script> -->
+<script src='https://cdn.bootcss.com/vue/2.6.10/vue.js'></script>
+<script src="../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/index.js"></script>
+
+</html>

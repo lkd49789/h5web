@@ -1,0 +1,72 @@
+html, body{ margin:0; height:100%; } /*背景全屏*/
+body {
+	background-image: url(../img/bg-1.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+main{
+	margin-top: 50%;
+}
+main .second{
+	width: 100%;
+}
+.bfb{
+	width: 100%;
+}
+.moon-1{
+	margin-top: 3%;
+}
+.moon-2{
+	width: 100%;
+	text-align: center;
+}
+.moon-2 img{
+	width: 15%;
+}
+.moon-2 p{
+	margin-top: 5%;
+	font-size: 2rem;
+	color: #ebeaef;
+}
+.btn-1{
+	margin-top: 10%;
+}
+.popUp{
+	background: #FFFFFF;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 90%;
+	height: 44%;
+	border: 1px solid #FFFFFF;
+	padding: 15px;
+	border-radius: 10px;
+}
+.popUp p{
+	margin-top: 5%;
+	font-size: 1.5rem;
+	text-align: center;
+	line-height: 1.6;
+}
+.benediction{
+	border: 1px red solid;
+}
+.btn-2{
+	margin-top: 9%;
+	margin-bottom: 5%;
+	margin-left: -14%;
+    width: 125%;
+}
+.btn-3{
+	margin-left: -14%;
+    width: 125%;
+}
+.msk {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    position: fixed;
+    top: 0;
+    z-index: 3;
+}

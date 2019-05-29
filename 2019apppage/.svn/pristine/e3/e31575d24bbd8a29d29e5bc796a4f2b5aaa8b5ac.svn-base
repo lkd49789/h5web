@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>我的分数</title>
+	<link href="../../../common/css/common.css" rel="stylesheet" />
+	<link href="css/popbox.css" rel="stylesheet" />
+	<link href="css/scores.css" rel="stylesheet" />
+</head>
+<body>
+	<section class='wrapper' v-cloak>
+		<div class="score-list">
+			<ul>
+				<li v-for="(item,index) in scoreList.integralPros">
+					<p>日常表现</p><p>{{item.integral}}分</p>
+				</li>
+				
+			</ul>
+			<p>4月排行 <em>{{scoreList.rank}}</em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4月总分<em> {{scoreList.integrals}}</em></p>
+		</div>
+		<p v-if="scoreList.isShow!=1">{{showtip}}</p>
+		<p class="btn" v-if="showbtn==1" v-on:click="gotoPage()">报名代役</p>
+		<!-- 弹框 -->
+		<div class="mask" v-if="showpop!=0">
+			<div v-if="showpop == 1">
+				<p>{{tips}}</p>
+				<span v-on:click="closePop()">知道了</span>
+			</div>
+			<div class="submit-box" v-if="showpop == 2">
+				<p>你还未满足代役条件，无法报名代役。</p>
+				<span v-on:click="giveup()">确认放弃</span>
+				<span v-on:click="closePop()">取消</span>
+			</div>
+		</div>
+	</section>
+</body>
+<script src="../../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<script src="../../../common/js/vue.js"></script>
+<script src="../../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/scores.js"></script>
+</html>

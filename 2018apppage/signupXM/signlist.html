@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>星梦演播厅</title>
+	<link href="css/common.css" rel="stylesheet" />
+	<link href="css/signlist.css" rel="stylesheet" />
+</head>
+<body>
+	<section>	
+		<img src="img/banner.png" class="banner">
+		<div class="iftop">
+			<img src="img/icon_top66.png" class="topimg">
+			<p class="date">4月26日-4月30日</p>
+		</div>
+		<div class="memberbox">
+			<div class="manynum">星梦演播厅席位：<span><em></em>/66</span></div>
+			<ul class="memberList">
+				<!-- <li>
+					<div class="avatarbox">
+						<span class="avater"></span>
+					</div>
+					<img src="img/icon_line.png" class="icon_line">
+					<span class="name">许杨玉琢</span>
+				</li> -->
+			</ul>
+		</div>
+	</section>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+	var timerend = setInterval("exChangeEnd()",1000);
+	getMembersign();
+	function getMembersign(){
+        main.getMembersign(function(dt){
+        	if(dt.status==200){
+        		$('.manynum em').html(dt.content.num);
+        		var html=[];
+        		$.each(dt.content.list, function(index,dl) {
+        			html.push('<li>');
+        			html.push('<div class="avatarbox">');
+        			if(dl.hasApply==1 || dl.hasApply=="1"){
+        				html.push('<span class="avater" style="background-image:url('+dl.avatar+')"></span>');
+        			}
+        			html.push('</div>');
+        			html.push('<img src="img/icon_line.png" class="icon_line">');
+        			if(dl.hasApply==1 || dl.hasApply=="1"){
+        				html.push('<span class="name">'+dl.name+'</span>');
+        			}else{
+        				html.push('<span class="name">？？？</span>');
+        			}
+        			html.push('</li>');
+        		})
+        		$('.memberList').append(html.join(""));
+				$('.avatarbox').height($('.avatarbox').width());
+        	}else{
+        		main.alert(dt.message);
+        	}
+        })
+    }
+
+
+    function exChangeEnd(){
+		var EndTime= new Date('2018/05/01 10:00:00');
+	    var NowTime = new Date();
+	    var t =EndTime.getTime() - NowTime.getTime();
+	    var d=0;
+	    var h=0;
+	    var m=0;
+	    var s=0;
+	    if(t>=0){
+	      d=Math.floor(t/1000/60/60/24);
+	      h=Math.floor(t/1000/60/60%24);
+	      m=Math.floor(t/1000/60%60);
+	      s=Math.floor(t/1000%60);
+	    }
+	  	if(d==0&&h==0&&m==0&&s==0){
+	  		clearInterval(timerend);
+	 		$('.topimg').attr('src','img/icon_notop66.png').addClass('notopimg').removeClass('topimg');
+	 		$('.date').html("5月1日-5月3日");
+	 		$('.iftop').click(function(){
+	 			main.hrefTo('list.html');
+	 		})
+	  	}
+	}
+</script>
+</html>

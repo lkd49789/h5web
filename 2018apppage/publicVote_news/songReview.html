@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html id="index_html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>《头号新闻》曲目投票</title>
+    <link href="css/pager.css" rel="stylesheet"/>
+    <link href="css/songReview.css" rel="stylesheet"/>
+    <link href="css/comment.css" rel="stylesheet"/>
+</head>
+<body>
+	<!-- 顶部视频 -->
+	<div class="vidbox">
+		<div class="video">
+			<video class="bofang" src='https://mp4.48.cn/2017b50/480/47.mp4' preload="load" webkit-playsinline></video>
+		</div>
+		<div class="qu" style="background-image:url()">
+			<img src="img/play.png" class="play">
+		</div>
+		<div class="sing">
+			<p class="musicName"></p>
+			<p class="musicMer"></p>
+		</div>
+	</div>
+	<!-- 图片区域 -->
+	<div class="picbox">
+		<p>本曲目公演图片<a href="javascript:;" class="manyimg-btn">更多图片></a></p>
+		<div class="theImg"><img src=""></div>
+	</div>
+	<!-- 评论区域 -->
+	<div class="comment_box">
+		<!-- 点评输入框 -->
+		<div class="text_box">
+			<textarea class="textarea" id="alltexts" name="text" maxlength="160" placeholder="在这里留下你的点评后，再点击“喜欢”即可提交哦(最多160字)"></textarea>
+			<button class="likebtn">喜欢</button>
+		</div>
+		<!-- 评论列表 -->
+		<ul class="commentList">
+			<!-- <li>
+				<span class="avata" style="background-image:url(img/head.png)"></span>
+				<div class="content">
+					<p class="name">木木西西<img src="img/icon_self.png" class="icon_self"></p>
+					<p class="time">2017.10.14 12:12</p>
+					<p class="texts"><em>对H Zone的观点：</em>她，身为软妹，却常被其他软妹惦念在心头；她，身怀绝技，不仅拥有一支乐队，一个人也能是一支乐队；她，身姿摇</p>
+				</div>
+				<div class="zanbtn"><img src="img/icon_zanbtn.png"><em class="zannum">22</em></div>
+			</li> -->
+		</ul>
+		<!--分页-->
+		<div class="pagination_box">
+			<ul class="pagination" curpage="1"></ul>
+		</div>
+	</div>
+</body>
+<script src="https://h5.48.cn/common/js/jquery.min.js"></script>
+<!-- <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript" charset="utf-8"></script> -->
+<script src="https://h5.48.cn/common/js/common.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/pager.js"></script>
+<script src="js/songReview.js"></script>
+<script src="js/comment.js"></script>
+</html>

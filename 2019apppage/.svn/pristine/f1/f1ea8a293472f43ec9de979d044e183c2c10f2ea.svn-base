@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>新公演曲目投票</title>
+    <link href="../../common/css/common.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div id="app">
+        <!-- 标题图片 -->
+        <div class="title">
+            <img src="./img/title3.jpg" alt="">
+            <!-- <img class="title1" src="./img/title2.png" alt="">
+            <img class="title2" src="./img/title.png" alt=""> -->
+        </div>
+
+        <!-- tab -->
+        <div class="tabWrap">
+            <button class="tab"><img src="./img/tab1.png" alt="分享" @click="snhOnActionShare()"></button>
+            <button class="tab" @click="ruleShow = true"><img src="./img/tab2.png" alt="规则"></button>
+            <!-- <button class="tab"><img src="./img/tab3.png" alt="精选投稿"></button> -->
+        </div>
+        <!-- 主体内容 -->
+        <div class="contentWrap">
+            <div class="content" ref="content">
+                <div class="content_item" v-for="(item,index) in list" :key="index">
+                    <div class="content_item_top">
+                        <!-- preload 显示第一张 -->
+                        <!-- controls 播放控件 -->
+                        <video preload="auto"  :src="item.videoUrl?item.videoUrl:''" webkit-playsinline @click="videoClick($event,index,item.videoUrl,1)"></video>
+                        <div class="meng" v-if="item.imgShow" @click="videoClick($event,index,item.videoUrl)">
+                            <img class="mengImg" :src="item.coverUrl" alt="">
+                            <img class="play"  src="./img/play.png" alt="按钮" >
+                        </div>
+                    </div>
+                    <div  class="content_item_bottom">
+                        <p><b v-text="'《'+item.name+'》'"></b></p>
+                        <div class="callWrap">
+                            <div class="callWrap_left">
+                                <div>
+                                    <img :src="item.praiseStatus?'./img/call_active.png':'./img/call.png'" alt="大拇哥">
+                                    <span :class="item.praiseStatus?'call_active':''" v-text="item.praise"></span>
+                                </div>
+                                <div>
+                                    <img src="./img/pen.jpg" alt="">
+                                    <span v-text="item.posts"></span>
+                                </div>
+                            </div>
+                            <div @click="gotoPage('particulars.html?songId='+item.id)">进入打CALL></div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+        <!--规则-->
+        <div class="ruleWrap" v-if="ruleShow" v-cloak>
+            <div class="rule">
+                <div class="scroll">
+                    <p>snh48 team nii第三套全新原创公演<span class="color">《时之卷》</span>，延续《重生计划》拓展宇宙宽度，以亚洲元素作为核心概念，着力打造东方古国——十洲。公元二零一九年五月十日正式上演，公演宇宙计划未完待续……</p>
+                    <p><span class="color">5月10日22:00 - 5月17日12:00，</span>期间通过本次活动为你最喜欢的<span class="color">《时之卷》</span>公演曲目点赞，投稿评论发表你的感想或点评，袋王将会从投稿中选出写得最好最用心的<span class="color">1</span>位聚聚奖励<span class="color">3天的开屏页使用权，6名</span>聚聚各<span class="color">500鸡腿</span>奖励！快来为你喜爱的新公演曲目打call成为点评“神七”吧~</p>
+                    <div class="last">
+                        <div class="x">*</div>
+                        <div><p>开屏页内容可以是视频，内容为获奖粉丝指定，但必须为投稿评论的曲目参演者相关内容，或是该曲目首演片段。</p></div>
+                    </div>
+                    <p>※投稿内容需添加至少一张配图方可参与活动。<br/>
+                        ※开屏页内容可以是视频，内容为获奖粉丝制定，但必须为投稿评论的曲目参演者相关内容，或是该曲目首演片段。<br/>
+                        ※活动最终解释权归口袋48所有。
+                    </p>
+                </div>
+            </div>
+            <div class="ruleClose" @click="ruleShow = false">
+                <img src="./img/close.png" alt="">
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<script src="../../common/js/vue.js"></script>
+<!-- <script src='https://cdn.bootcss.com/vue/2.6.10/vue.js'></script> -->
+<script src="../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/index.js"></script>
+</html>

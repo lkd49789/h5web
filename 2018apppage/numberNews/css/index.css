@@ -1,0 +1,306 @@
+*{margin:0;padding: 0;}
+button{outline: none;}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+body{
+	max-width: 640px;
+	margin:0 auto;
+	background-color:#ffecd2;
+}
+section{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background: url(../img/bg.jpg)no-repeat center top;
+	background-size:cover;
+	position: relative;
+}
+.title{
+	width: 50%;
+	margin-left:25%;
+	padding-top: 2%;
+}
+input,button{
+	outline: none;
+}
+
+/*视频区*/
+.video-box{
+	width: 80%;
+	margin-left: 10%;
+	margin-top:6%;
+	position: relative;
+}
+video{
+	width: 100%;
+	position: absolute;
+	left:0%;
+	top: 0%;
+	z-index: 1;
+}
+.vidbox{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	left:0%;
+	top: 0%;
+}
+.vidpor{
+	width: 108%;
+	height: 100%;
+	position: absolute;
+	left:-4%;
+	top: 0;
+	background: url(../img/vidtit.png) no-repeat center center;
+	background-size: 40%;
+}
+.vidbox,.vidpor{
+	/* display: none; */
+}
+
+
+
+/*剩余时间*/
+.timebox,.timestarbox{
+	position: relative;
+	width: 80%;
+	text-align: center;
+	border:1px solid #422a1d;
+	color:#675142;
+	left:10%;
+	margin-top: 4%;
+	padding: 3% 0;
+}
+.timebox p,.timestarbox p{
+	font-size: 1.2rem;
+}
+.timebox p:last-child{
+
+}
+.timestarbox{
+	display: none;
+}
+
+
+/*预约提醒*/
+.remindbox,.readright,.waitbox{
+	position: relative;
+	width: 80%;
+	text-align: center;
+	border:1px solid #422a1d;
+	color:#fefeff;
+	left:10%;
+	margin-top: 4%;
+	padding: 3% 0;
+	border-radius: 8px;
+	display: none;
+}
+.remindbox,.waitbox{
+	background-color:#422a1d;
+}
+.remindbox p:first-child{
+	font-size: 1.3rem;
+}
+.remindbox p:last-child{
+	font-size: 1.2rem;
+	color:#ffe8bb;
+}
+.waitbox h4{
+	font-size: 1.4rem;
+	color:#fff;
+}
+
+.readright{
+	background-color: #b39e8a;
+	border: 1px solid #b39e8a;
+}
+.readright p{
+	color: #fff;
+}
+.readright p:first-child{
+	font-size: 1.3rem;
+	color: #422a1d;
+}
+.readright p:last-child{
+	font-size: 1.2rem;
+	color: #735c4c;
+}
+
+.succ{
+	width: 80%;
+	color:#422a1d;
+	text-align: center;
+	padding: 1% 0;
+	font-size: 1rem;
+	border:1px dotted #422a1d;
+	margin-left: 10%;
+	margin-top:2%;
+	display: none;
+}
+
+
+.text{
+	position: relative;
+	width: 80%;
+	left:10%;
+	margin-top: 5%;
+	padding-bottom: 5%;
+}
+
+
+
+
+/*弹窗*/
+
+.mask_box{
+	width: 100%;
+	height: 100%;
+	max-width: 640px;
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	background-color: rgba(0,0,0,.4);
+	display: none;
+	z-index: 999;
+}
+.phonebox{
+	width: 80%;
+	position: absolute;
+	left:10%;
+	background-color:#fff;
+	top: 20%;
+	padding: 10% 0;
+	border-radius: 8px;
+	display: none;
+}
+
+
+.phonetitle{
+	text-align: center;
+	padding: 4% 0;
+}
+.phonenum{
+	width: 76%;
+	margin-left: 10%;
+	height: 3rem;
+	padding-left: 4%;
+	border-radius: 5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border:1px solid #d5d6d7;
+	font-size: 1.2rem;
+}
+
+.code_box{
+	width: 100%;
+	margin-top: 1rem;
+	float: left;
+	padding-bottom: 3rem;
+	position: relative;
+}
+.code{
+	width: 46%;
+	margin-left: 10%;
+	height: 3rem;
+	border:1px solid #d5d6d7;
+	text-align: left;
+	border-radius: 5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	float: left;
+	padding-left: 4%;
+	font-size: 1.2rem;
+}
+.count{
+	display: inline-block;
+    width: 26%;
+    height: 3rem;
+    margin-right: 10%;
+	border-radius: 5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	background-color: #422a1d;
+	float: right;
+	text-align: center;
+	line-height: 3rem;
+	font-size: 1rem;
+	color:#fff;
+	border:1px solid #422a1d;
+	cursor: pointer;
+}
+.token_value_enabled{
+	background:#f5ddad;
+	color: #422a1d;
+}
+.btns{
+	text-align: center;
+}
+.btns button{
+	width: 35%;
+	height: 3rem;
+	border:1px solid #422a1d;
+	border-radius: 5px;
+}
+
+.btns button:first-child{
+	background-color: transparent;
+	margin-right:3%;
+	color:#422a1d;
+}
+
+.btns button:last-child{
+	background-color: #422a1d;
+	margin-left:3%;
+	color:#fff;
+}
+
+.help-block{
+    position: absolute;
+    color: red;
+    width: 100%;
+    bottom: 1.5rem;
+    font-size: 1rem;
+    padding-left: 10%;
+}
+
+/*预约成功弹窗*/
+.successbox{
+	width: 80%;
+	position: absolute;
+	left:10%;
+	background-color:#fff;
+	top: 20%;
+	padding: 10% 0;
+	border-radius: 8px;
+	display: none;
+}
+.icon_succ{
+	width: 20%;
+	margin-left: 40%;
+}
+.suctext{
+	margin-top:4%;
+}
+.suctext p{
+	text-align: center;
+	font-size: 1.2rem;
+	color:#444444;
+}
+.suctext p b{
+	color:#f06161;
+}
+.succRight{
+	display: block;
+	width: 40%;
+	margin-left: 30%;
+	border: 0;
+	background-color: #422a1d;
+	color: #fff;
+	height: 3rem;
+	border-radius: 5px;
+	margin-top:6%;
+	font-size: 1.4rem;
+}

@@ -51,7 +51,7 @@ var app=new Vue({
         interval:function(end){
             this.timer=setInterval(function(){
                 if(end<new Date().getTime()){
-                    clearInterval(that.timer)
+                    clearInterval(this.timer)
                     return false;
                 }
                 this.countDown(end,new Date().getTime())
@@ -59,7 +59,7 @@ var app=new Vue({
         },
         /*倒计时 */
         countDown:function(end,presentTime){
-            var date= end - presentTime 
+            var date = end - presentTime 
             var hours    = date/ 1000 / 60 / 60 
             var hoursRound   = Math.floor(hours);
             var minutes   = date / 1000 /60  - (60 * hoursRound);

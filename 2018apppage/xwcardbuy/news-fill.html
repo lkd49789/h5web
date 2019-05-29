@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>填写购卡信息</title>
+	<link href="css/common.css" rel="stylesheet" />
+	<link href="css/news-fill.css" rel="stylesheet" />
+</head>
+<body>
+	<section>
+		<div class="choosebox">
+			<p class="choose">当前选择的是<em>48元/每月套餐</em></p>
+			<p>根据国家实名制要求, 请准确提供身份证信息</p>
+		</div>
+		<p class="tips">请填写正确的身份证号！</p>
+		<ul class="u-info">
+			<li>
+				<label>姓名</label>
+				<input type="text" title="姓名" id="certName"  maxlength="15" placeholder="请输入身份证证件姓名">
+			</li>
+			<li>
+				<label>身份证</label>
+				<input type="text" title="身份证" id="certNo" maxlength="18" placeholder="请输入身份证号">
+			</li>
+			<li>
+				<label>联系电话</label>
+				<input type="tel" title="联系电话" id="mobilePhone" maxlength="13" placeholder="请输入联系电话">
+			</li>
+		</ul>
+		<p class="choosephone">请选择号码</p>
+		<ul class="u-info">
+			<li class="phone-area">
+				<label>号码归属</label>
+				<div province="" city="" class="phonecome choosecity">选择号码归属地</div>
+			</li>
+			<li>
+				<label>选择号码</label>
+				<div phone="" class="clickchoose">点击选择</div>
+			</li>
+		</ul>
+		<p class="chooseadd">请填写配送地址<b>(不支持省外配送<!-- ，新疆不支持配送 -->)</b></p>
+		<ul class="u-info">
+			<li>
+				<label>所在地区</label>
+				<div province="" city=""  county="" class="fromcome chooseadd">选择区/县</div>
+			</li>
+			<li>
+				<textarea type="text" name="address" title="delivery-desc" id="address" placeholder="街道/镇+村/小区/写字楼+门牌号" rows="2" class="text-area"></textarea>
+			</li>
+		</ul>
+		<div class="apply">
+			<div class="protocol-div">
+				<p class="protocol agree" id="protocol">
+					<i class="protocol-radio"></i>我已阅读并同意<a href="javascript:;" id="go-protocol">《客户入网服务协议及业务协议》</a>
+				</p>
+				<div class="btn-box">
+					<a id="submit" href="javascript:;" class="btn submit">立即提交，免费送货上门</a>
+				</div>
+			</div>
+		</div>
+		<p class="tx">请保持联系号码畅通，我们可能随时与您联系。本次为阶段性优惠活动，数量有限，联系电话无人接听或恶意下单情况，将不予发货。</p>
+	</section>
+</body>
+<!-- 弹窗 -->
+<div class="mask">
+	<div class="content">
+		<div class="search">
+			<input type="tel" id="search" class="search-input" maxlength="10"  placeholder="末4位生日、幸运数字等">
+			<a id="search-btn" href="javascript:;" class="search-btn">
+				<i><img src="img/icon_search.png"></i>
+			</a>
+			<a id="search-close-btn" href="javascript:;" class="search-close-btn" hidden>
+				<i><img src="img/icon_close.png"></i>
+			</a>
+		</div>
+		<div class="number-wrap">
+			<ul class="number-list">
+				<li><a>18721430090</a></li>
+				<li><a>18721430090</a></li>
+				<li><a>18721430090</a></li>
+				<li><a>18721430090</a></li>
+				<li><a>18721430090</a></li>
+				<li><a>18721430090</a></li>
+			</ul>
+			<p class="no-number">抱歉没有匹配的号码</p>
+		</div>
+		<a id="refresh" href="javascript:;" class="refresh">换一批</a>
+		<a class="popup-close" href="javascript:;"></a>
+	</div>
+</div>
+
+<!-- 选择城市弹窗 -->
+<div class="maskinfo"></div>
+<div id="area" class="sidebar location">
+	<ul id="province" class="first-list">
+		<li>上海</li>
+		<li>北京</li>
+	</ul>
+	<ul id="city" class="second-list">
+		<li>上海</li>
+	</ul>
+</div>
+<div id="post" class="sidebar location">
+	<ul id="post-city" class="first-list">
+		<li>上海</li>
+		<li>北京</li>
+	</ul>
+	<ul id="post-district" class="second-list">
+		<li>上海</li>
+	</ul>
+</div>
+
+<script src="../../common/js/jquery.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/data.city.js"></script>
+<script src="js/news-fill.js"></script>
+</html>

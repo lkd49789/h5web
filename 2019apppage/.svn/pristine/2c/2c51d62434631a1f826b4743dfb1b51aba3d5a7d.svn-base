@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IDOLS FT</title>
+    <link href="../../common/css/common.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/idol.css">
+</head>
+<body>
+    <div id="app">
+        <div class="tab">
+            <div :class="['tab_item',{'tab_active':who == 'my'}]" @click="tabClick(1)">我的信息</div>
+            <div :class="['tab_item',{'tab_active':who == 'integral'}]" @click="tabClick(2)">积分榜</div>
+            <div :class="['tab_item',{'tab_active':who == 'mvp'}]" @click="tabClick(3)">公演MVP</div>
+            <span class="border" :style="'left:'+left"></span>
+        </div>
+        <keep-alive>
+                <component :is="who"></component>
+        </keep-alive>
+    </div>
+
+    <!--我的信息页-->
+    <template id="myPage">
+        <div class="my" v-cloak>
+            <div :class="['my_top',{'my_btn':!btnShow}]">
+                <div class="my_top_t">
+                    <div>
+                        <div class="my_head_img">
+                            <img :src="content.starInfo.starAvatar" alt="">
+                        </div>
+                        <p class="my_name" v-text="content.starInfo.wbName"></p>
+                    </div>
+                    <div class="my_ranking">
+                        <div class="my_ranking_box">
+                            <p><b v-text="content.integralRank"></b></p>
+                            <p>本月积分排名</p>
+                        </div>
+                        <div class="my_ranking_box">
+                            <p><b v-text="content.totalIntegralRank">23</b></p>
+                            <p>累计积分排名</p>
+                        </div>
+                    </div>
+                    <div class="my_time">
+                        <p><b v-text="content.liveTime[0]"></b>小时<b v-text="content.liveTime[1]"></b>分钟</p>
+                        <p><b v-text="content.liveTime[2]"></b>秒</p>
+                        <p>本月直播时长</p>
+                    </div>
+                </div>
+                <div class="my_barWrap">
+                    <p>实时积分中不包括微博九宫格，该项将在月底结算时加入</p>
+                    <!-- 满2000添加class名 fullBar -->
+                    <div :class="['my_bar',{'fullBar':content.integrals > 20000}]" >
+                        <div class="my_bar_bg" :style="'width:'+width">
+                            <span v-if="content.integrals > 20000">20000积分</span>
+                            <div class="my_bar_bg_ps" >
+                                <span></span>
+                                <p v-if="content.integrals > 20000" v-text="content.integrals - 20000"></p>
+                                <p v-else v-text="content.integrals"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="fullText" v-if="content.integrals > 20000">额外+<span v-text="content.integrals - 20000">222</span>积分</p>
+                    <div class="btn" v-if="btnShow" @click="gotoPage('IDFTsignup/signup.html')">代役报名</div>
+                </div>
+
+            </div>
+            <div class="my_center">
+                <p class="my_center_title"><b>我的任务</b></p>
+                <p v-for="(item,index) in content.myTasks"><span v-text="item.proName"></span><span v-color="item.integral">+<em v-text="item.integral"></em>积分</span></p>
+            </div>
+            <div class="my_bottom">
+                <div class="my_bottom_text">
+                    <p><b>我的公演MVP排名</b></p>
+                    <p class="p2" v-text="content.mvpInfo.title"></p>
+                </div>
+                <div class="my_bottom_rk">
+                    <p><b v-text="content.mvpInfo.votes + '票'"></b></p>
+                    <div>第<span v-text="content.mvpInfo.rank"></span>名</div>
+                </div>
+            </div>
+        </div>
+
+    </template>
+    
+     <!--积分榜页面-->
+    <template id="integralPage">
+        <div class="il">
+            <div class="il_tab">
+                <div :class="['il_tab_item',{'il_active':indexShow == 1}]" @click="ilTabClick(1)">本月排行</div>
+                <div :class="['il_tab_item',{'il_active':indexShow == 2}]" @click="ilTabClick(2)">累计排行</div>
+            </div>
+            <ul>
+                <li v-for="(item,index) in content">
+                    <div class="il_li_left" >
+                        <div class="index"><b v-text="item.rank"></b></div>
+                        <div class="il_head">
+                            <img :src="item.avatar" alt="" @error="imgError(index,item.avatar)">
+                        </div>
+                        <div v-text="item.memberName"></div>
+                     </div>
+                    <div class="il_num" v-text="item.integral+'积分'"></div>
+                </li>
+            </ul>              
+            <p class="il_p">统计截止日期 <span v-text="date"></span></p>
+        </div>
+    </template>
+
+    <!--公演MVP-->
+    <template id="mvpPage">
+        <div class="mvp">
+            <div class="mvp_item" v-for="(item,index) in content">
+                <p class="mvp_title" v-text="item.date"></p>
+                <ul>
+                    <li v-for="(ite,ind) in item.pastEventList" @click="go(ite.infoId)"><b v-text="ite.title"></b><img src="img/idol/arrows1.png" alt="右箭头"></li>
+                    <li class="arrows" v-if="contentList[index].pastEventList.length > 3 && item.pastEventList.length == 3" @click="unfold(index)"><img src="img/idol/arrows2.png" alt="下箭头"></li>
+                </ul>
+            </div>
+        </div>
+    </template>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<!-- <script src="../../common/js/vue.js"></script> -->
+<script src='https://cdn.bootcss.com/vue/2.6.10/vue.js'></script>
+<script src="../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script> 
+<script src="js/idol.js"></script>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>参与竞标</title>
+     <link href="../../common/css/common.css" rel="stylesheet" />
+      <link rel="stylesheet" href="./css/join.css">
+      <link rel="stylesheet" href="./css/popbox.css">
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        <div class="idolWrap">
+            <div class="head">
+                <img :src="'https://source.48.cn'+content.baseUserInfo.avatar" alt="">
+            </div>
+            <div class="name">
+                <span v-text="content.baseUserInfo.nickname"></span>
+                <img :src="'https://source.48.cn'+content.baseUserInfo.teamLogo" alt="">
+                <span>的亲笔手帐</span>
+            </div>
+        </div>
+
+        <div class="auctionText">
+            <p><b>当前中标价格 <em v-if="content.highestPrice" v-text="content.highestPrice"></em><em v-else>0</em>元人民币</b></p>
+            <div>竞价截止时间还剩<span v-text="time.hours">23</span>小时<span v-text="time.minutes">33</span>分<span v-text="time.seconds">33</span> 秒</div>
+        </div>
+        <div class="write">
+            <input type="number" v-model="money" placeholder="填写你竞拍的价格（人民币）">
+        </div>
+        <button :class="['btn',{'btnNo':!start}]" @click="start && auction()">出价</button>
+        <p class="p" v-if='!content.auctionPrice'>保证金4800鸡腿 <span @click="recharge()">去充值</span></p>
+        <p class="p" v-else> <img src="./img/nike2.jpg" alt=""> 已缴纳保证金</p>
+        <div class="history">
+            <p><b>出价记录</b></p>
+            <ul v-if="list.length >0">
+                <li v-for="(item,index) in list[0].logAuctionJions" :key="index">
+                    <span v-text="item.logAt"></span>
+                    <span v-text="item.price+'元'"></span>
+                </li>
+            </ul>
+        </div>
+
+
+        <!-- 弹框 -->
+        <div class="mask" v-if="showpop!=0" v-cloak>
+                <!-- no money -->
+                <div class="no-money" v-if="showpop == 1">
+                    <p><b v-html="tips"></b></p>
+                    <span style="background: url('./img/btn2.png') no-repeat left top/100% 100%"  v-on:click="close()">知道了</span>
+                </div>
+                <!-- 无手机号 -->
+                <div class="no-money" v-if="showpop == 2">
+                    <p><b>{{tips}}</b></p>
+                    <span style="background: url('./img/btn1.png') no-repeat left top/100% 100%" v-on:click="showpop = 0">再说</span>
+                    <span style="background: url('./img/btn2.png') no-repeat left top/100% 100%" v-on:click="phone()" >去绑定</span>
+                </div>
+                <!-- 击退不足 -->
+                <div class="no-money" v-if="showpop == 3">
+                    <p><b>{{tips}}</b></p>
+                    <span style="background: url('./img/btn1.png') no-repeat left top/100% 100%" v-on:click="showpop = 0">再说</span>
+                    <span style="background: url('./img/btn2.png') no-repeat left top/100% 100%" v-on:click="recharge()" >去充值</span>
+                </div>
+            </div>
+    </div>
+
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<!-- <script src="../../common/js/vue.js"></script> -->
+<script src='https://cdn.bootcss.com/vue/2.6.10/vue.js'></script>
+<script src="../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/join.js"></script>
+</html>

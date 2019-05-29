@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>星梦演播厅竞猜</title>
+	<link href="css/common.css" rel="stylesheet" />
+	<link href="../../common/css/teamColor.css" rel="stylesheet" />
+	<link href="css/index.css" rel="stylesheet" />
+</head>
+<body>
+	<section class="sec1">
+		<img src="img/banner.png" class="banner">
+		<img src="" class="bannerimg">
+		<ol class='tab'>
+			<li class="tit">第一期排名预测</li>
+			<li class="rulebtn">竞猜规则</li>
+		</ol>
+		<div class="content">
+			<ul class="rankList">
+				<li>
+					<div class="rankLeft">
+						<span class="rank">1</span>
+						<span class="avatar"></span>
+					</div>
+					<button class="mername"  val="1">选一位成员</button>
+				</li>
+				<li>
+					<div class="rankLeft">
+						<span class="rank">2</span>
+						<span class="avatar"></span>
+					</div>
+					<button class="mername" val="2">选一位成员</button>
+				</li>
+				<li>
+					<div class="rankLeft">
+						<span class="rank">3</span>
+						<span class="avatar"></span>
+					</div>
+					<button class="mername" val="3">选一位成员</button>
+				</li>
+				<li>
+					<div class="rankLeft">
+						<span class="rank">4</span>
+						<span class="avatar"></span>
+					</div>
+					<button class="mername" val="4">选一位成员</button>
+				</li>
+				<li>
+					<div class="rankLeft">
+						<span class="rank">5</span>
+						<span class="avatar"></span>
+					</div>
+					<button class="mername" val="5">选一位成员</button>
+				</li>
+				<li>
+					<div class="rankLeft">
+						<span class="rank">6</span>
+						<span class="avatar"></span>
+					</div>
+					<button class="mername" val="6">选一位成员</button>
+				</li>
+				<li>
+					<div class="rankLeft">
+						<span class="rank">7</span>
+						<span class="avatar"></span>
+					</div>
+					<button class="mername" val="7">选一位成员</button>
+				</li>
+				<li>
+					<div class="rankLeft">
+						<span class="rank">8</span>
+						<span class="avatar"></span>
+					</div>
+					<button class="mername" val="8">选一位成员</button>
+				</li>
+				<li>
+					<div class="rankLeft">
+						<span class="rank">9</span>
+						<span class="avatar"></span>
+					</div>
+					<button class="mername" val="9">选一位成员</button>
+				</li>
+				<li>
+					<div class="rankLeft">
+						<span class="rank">10</span>
+						<span class="avatar"></span>
+					</div>
+					<button class="mername" val="10">选一位成员</button>
+				</li>
+				<li>
+					<div class="rankLeft">
+						<span class="rank">11</span>
+						<span class="avatar"></span>
+					</div>
+					<button class="mername" val="11">选一位成员</button>
+				</li>
+			</ul>
+			<div class="underbtns">
+				<button class="againbtn">重新选择</button>
+				<button class="curbtn">提交当期预测</button>
+				<button class="pastbtn">往期竞猜</button>
+				<button class="winnerbtn">获奖名单</button>
+			</div>
+		</div>
+	</section>
+	<!-- 每期成员列表 -->
+	<section class="merMask">
+		<ul class="memberList" val="">
+			<!-- <li>
+				<span class="merhead"></span>
+				<p class="mer_name">许杨玉琢玉琢<em>SII</em></p>
+				<p class="choosebtn choosebgno"><span>选他</span></p>
+			</li>  -->
+		</ul>
+	</section>
+	<!-- 弹框 -->
+	<div class="mask_inbox">
+		<!-- 单行提示双按钮 -->
+		<div class="mask1">
+			<div class="upbox">是否确认提交预测名单？</div>
+			<div class="btns">
+				<button class="btnsback">取消</button>
+				<button class="btnsright">确定</button>
+			</div>
+		</div>
+		<!-- 单行提示单按钮 -->
+		<div class="mask2">
+			<div class="upbox">你还未填写全部名单</div>
+			<div class="know">知道了</div>
+		</div>
+		<!-- 验证 -->
+		<div class="mask3">
+			<p class="tip">请输入验证码</p>
+			<p class="code"></p>
+			<input type="text" name="code" class="codeinput" />
+			<div class="subbtn">提交</div>
+		</div>
+		<!-- 提交成功 -->
+		<div class="mask4">
+			<div class="upbox">提交成功</div>
+			<div class="finish">完成</div>
+		</div>
+	</div>
+	<section class="sec2">
+		<img src="img/banner.png" class="banner">
+		<img src="" class="topimg">
+		<ol class='tab'>
+			<li class="tit2">第一期排名预测</li>
+			<li class="rulebtn">竞猜规则</li>
+		</ol>
+		<div class="content">
+			<ul class="rankList1">
+				<!-- <li>
+					<div class="rankLeft">
+						<span class="rank">1</span>
+						<span class="avatar"></span>
+					</div>
+					<button class="mername"></button>
+				</li> -->
+				
+			</ul>
+			<div class="underbtns1">
+				<button class="pastbtn">往期竞猜</button>
+				<button class="curingbtn">已提交当期预测</button>
+			</div>
+			<div class="underbtns">
+				<button class="pastbtn">往期竞猜</button>
+				<button class="winnerbtn">获奖名单</button>
+			</div>
+		</div>
+	</section>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/index.js"></script>
+</html>

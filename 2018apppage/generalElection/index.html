@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>总决选助力</title>
+	<link href="css/common.css" rel="stylesheet" />
+	<link href="css/index.css" rel="stylesheet" />
+</head>
+<body>
+	<section class="sec">
+		<img src="img/ibanner.jpg" class="ibanner">
+		<div class="vidbox">
+			<img src="img/vidimg.png">
+		</div>
+		<div class="textbox">
+			<h4>安利总选赢神七神龙海报</h4>
+			<p class="date">7月18日-7月27日</p>
+			<p class="text">通过MATE48小程序安利分享给身边的小伙伴，活动期间每天分享最多的粉丝可以获得总选排名1名-7名成员的签名海报（共7张）</p>
+			<button class="sharejoinbtn">查看结果</button>
+		</div>
+		<div class="textbox">
+			<h4>TOP16竞猜享握手会直通车</h4>
+			<p class="date">7月18日-7月27日</p>
+			<p class="text">预测总选TOP16排名成功的粉丝可以在总选后的握手会中获得直通车的福利，无需排队即可和小偶像握手。</p>
+			<button class="guessjoinbtn">查看结果</button>
+		</div>
+	</section>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script>
+
+	//去安利mate48
+	$('.sharejoinbtn').click(function(){
+		main.hrefTo('share.html');
+	})
+
+	//去参加竞猜
+	$('.guessjoinbtn').click(function(){
+		main.hrefTo('rule.html');
+	})
+
+	//跳转视频连接
+	$('.vidbox').click(function(){
+		vedioPlay('2680');
+	})
+
+	//视频详情页
+	function vedioPlay(num){
+		window.web.gotoPage('video/detail?id='+num);
+	}
+</script>
+</html>

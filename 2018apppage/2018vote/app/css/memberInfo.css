@@ -1,0 +1,191 @@
+html,body { width: 100%; height: 100%; font-family: "微软雅黑";}
+
+html{font-size:10px}
+@media screen and (max-width:320px){html{font-size:7px}}
+@media screen and (min-width:321px) and (max-width:375px){html{font-size:11px}}
+@media screen and (min-width:376px) and (max-width:414px){html{font-size:13px}}
+@media screen and (min-width:415px) and (max-width:639px){html{font-size:18px}}
+@media screen and (min-width:640px) and (max-width:719px){html{font-size:20px}}
+@media screen and (min-width:720px) and (max-width:749px){html{font-size:22.5px}}
+@media screen and (min-width:750px) and (max-width:799px){html{font-size:25.5px}}
+@media screen and (min-width:800px){html{font-size:25px}}
+
+section{
+	padding: 3%;
+	background: #fff;
+	overflow: hidden;
+}
+.memberList{
+	font-size:1.1rem;
+	line-height: 1.5rem;
+	color: #222222;
+	margin:1.5% 0;
+}
+section:nth-child(1){
+	border-bottom: 1px solid #CBCBCB;	
+}
+.memberInfo{
+	overflow:hidden ;
+	
+}
+.memberInfo div{
+	float: left;
+}
+.memberInfo div:nth-child(1){
+	width: 20%;
+	margin-right:5%;
+}
+.memberInfo div:nth-child(1) img{
+	width: 100%;	
+}
+.memberInfo ul{
+	float: left;
+}
+.memberInfo ul li:nth-child(1){
+	margin-top: 0;
+}
+.memberInfo div:nth-child(2){
+	width: 50%;
+}
+.memberInfo ul li{
+	font-size: 1.1rem;
+	color: #7A7A7A;
+	margin: 8% 0;
+}
+.memberInfo ul i{
+	font-size: 1.1rem;
+	color: #000;
+}
+.engName i{
+	font-size: 1.3rem!important;
+}
+.memBlood i,.memHeight i{
+	font-size: 1.2rem!important;
+}
+.memberInfo div:nth-child(3){
+	width: 5rem;
+    height:6.9rem;
+    float: right;
+}
+.memberInfo .SNH{
+	background: url(../images/SNH.png) no-repeat 0 0;
+	background-size: 100% 100%;
+}
+.memberInfo .GNZ{
+	background: url(../images/GNZ.png) no-repeat 0 0;
+	background-size: 100% 100%;
+}
+.memberInfo .BEJ{
+	background: url(../images/BEJ.png) no-repeat 0 0;
+	background-size: 100% 100%;
+}
+.memberInfo div:nth-child(3) img{
+	width: 100%;
+	
+}
+/*个人特长和兴趣爱好*/
+.skill dt{
+	color: #676767;
+	font-weight: 400;
+	margin: 2% 2% 0 0;
+}
+.skill dd{
+	height: 2rem;
+	line-height: 2rem;
+	margin: 1.5% 6% 1.5% 0;
+	padding:0 4px 0 4px;
+	float: left;
+	color: #fff;
+	font-size: 1.1rem;
+	position: relative;
+	background: #EA4B35;
+}
+.skill dd::after{
+	content: "";
+	width:1rem;
+	height:2rem;
+	right: -1rem;
+	position: absolute;
+	background: url(../images/skill-bg.png) no-repeat 0 0;
+	background-size: 100% 100%;
+}
+
+/*身世*/
+h4{
+	margin: 3%;
+	font-size: 1.1rem;
+	color: #8D8D8D;
+}
+section:nth-child(2){
+	/*border-top: 1px solid #CBCBCB;*/
+}
+.memberHistory li{
+	font-size: 1.1rem;
+	color: #7A7A7A;
+	margin:1% 3%;
+	float:left;
+}
+.memberHistory li:nth-child(1),.memberHistory li:nth-child(4){
+	margin-left: 0;
+}
+.memberHistory i{
+	font-size: 1.1rem;
+	color: #282828;
+}
+/**************/
+
+/*.memberList li{
+	
+}*/
+/*********************/
+h3{
+	margin: 4% 0 0 6%;
+	font-size: 1.1rem;
+	color: #8D8D8D;
+}
+h3 span{
+	margin: 0 2%;
+	color: #5C6BC3;
+	font-size: 1.3rem;
+}
+input[type="number"]{
+	width: 90%;
+	margin: 2% 5%;
+	border: none;
+	background: #FFFFFF;
+	border-radius: 10px;
+	font-size: 15px;
+}
+input[type="button"]{
+	width: 90%;
+	margin: 2% 5%;
+	border: none;
+	background: #5B6BC2;
+	border-radius: 5px;
+	color: #fff;
+	height: 40px;
+	font-weight: 400;
+	border-radius: 10px;
+    letter-spacing: 2px;
+}
+input[type="number"]::-webkit-input-placeholder{
+	color:#A0A0A0;
+	font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

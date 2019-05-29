@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>BEJ48红白歌会投票</title>
+	<link href="css/common.css" rel="stylesheet" />
+	<style type="text/css">
+		*{margin:0;padding: 0;}
+		html,body{width:100%;height: 100%;}
+		body{max-width: 640px;margin:0 auto;position: relative;background-color: #fff;}
+		section{width: 100%;height: 100%;position: relative;display: none;}
+		.icon_this{display: block;width: 56%;margin-left:22%;padding-top: 40%;}
+		.goto{display: block;width: 40%;margin-left: 30%;margin-top: 20%;}
+	</style>
+</head>
+<body>
+	<section>
+		<img src="img/icon_this.png" class="icon_this">
+		<img src="img/goto.png" class="goto">
+	</section>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+	if(checkFromApp()){
+		$('section').remove();
+		// window.web.backHome();
+		main.hrefTo('index.html?from=code');
+	}else{
+		$('section').show();
+	}
+
+	$('.goto').click(function(){
+        window.location.href="http://app.48.cn";
+	})
+</script>
+</html>

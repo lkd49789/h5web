@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>总决选助力</title>
+	<link href="css/common.css" rel="stylesheet" />
+	<style>
+		*{margin:0;padding: 0;}
+		html,body{
+			width: 100%;
+			height: 100%;
+		}
+		body{
+			width: 100%;
+			max-width: 640px;
+			margin:0 auto;
+			background-color: #222462;
+			position:relative;
+		}
+		button,input{
+			border:none;
+			outline: none;
+		}
+		.contentbox{padding-bottom: 13rem;}
+		.rbanner{width: 100%;}
+		.rulelist{padding: 5% 5% 3% 5%;}
+		.rulelist2{padding: 0 5%;}
+		.rulelist li,.rulelist2 li{font-size: 1.2rem;color: #fff;position: relative;padding-left: 1rem;margin-bottom:0.5rem;}
+		.rulelist2 li{padding-left: 1.5rem;}
+		.rulelist li span{display:block;width: 0.4rem;height: 0.4rem;border-radius: 100%;background-color: #fff;position: absolute;left:0;top: 0.6rem;}
+		.rulelist2 li em{position: absolute;left:0;top: 0.2rem;font-size: 1.2rem;}
+		.rulelist li p,.rulelist2 li p{color: #ff71bb;font-size: 1.2rem;}
+		.ptit{font-size: 1.3rem;color:#fff;padding-left: 5%;margin-bottom: 2%;color: #ff71bb;}
+		.choosebtn,.lookbtn,.rightbtn{
+			width: 80%;
+			margin-left: 10%;
+			border-radius: 8px;
+			font-size: 1.3rem;
+			height: 3.8rem;
+			line-height: 3.8rem;
+			color: #fff;
+			letter-spacing: 1px;
+			margin-top: 1.5rem;
+			background: -webkit-linear-gradient(left, #ea81ff , #515aff); /* Safari 5.1 - 6.0 */
+			background: -o-linear-gradient(right, #ea81ff , #515aff); /* Opera 11.1 - 12.0 */
+			background: -moz-linear-gradient(right, #ea81ff , #515aff); /* Firefox 3.6 - 15 */
+			background: linear-gradient(to right, #ea81ff , #515aff); /* 标准的语法 */
+			display: none; 
+		}
+		.btnbox{
+			position: fixed;
+			width: 100%;
+			max-width: 640px;
+		    left: 50%;
+		    bottom: 0;
+		    transform: translate(-50%);
+		    -webkit-transform: translate(-50%);
+			padding-bottom: 1.5rem;
+			background-color: #222462;
+		}
+	</style>
+</head>
+<body>
+	<div class="contentbox">
+		<img src="img/rbanner.jpg" class="rbanner">
+		<ul class="rulelist">
+			<li><span></span>7月27日中午12:00截止</li>
+			<li><span></span><p>参加预测的必须在口袋48中绑定实名认证的丝瓜账号</p></li>
+			<li><span></span>TOP16的成员名字和顺位与总选结果一致则预测成功</li>
+			<li><span></span>预测成功的粉丝可以在7月29日总选握手会当天在现场凭本人身份证（需和实名认证的身份证一致）领取5张握手会直通券</li>
+			<li><span></span>每次行使直通权利需消耗1张直通券</li>
+			<li><span></span><p>直通券仅在7月29日握手会当天有效，7月30日握手会无法使用该券。</p></li>
+		</ul>
+		<p class="ptit">直通券使用细则：</p>
+		<ul class="rulelist2">
+			<li><em>1.</em>预测成功的粉丝在总选握手会开始前到口袋48 APP中的消息盒子里填写自己的实名身份信息</li>
+			<li><em>2.</em>握手会当天获奖的粉丝到握手会现场服务台出示身份证核对个人信息</li>
+			<li><em>3.</em>验证个人信息后提供5张有效的握手券給工作人员敲章后获得5张直通握手券</li>
+			<li><em>4.</em>每张敲章的直通握手券上需由工作人员写上希望握手的成员名字，之后这张握手券只能在该成员处使用</li>
+			<li><em>5.</em>每个成员最多接受10张直通握手券， 先到先得约满为止</li>
+			<li><em>6.</em>直通券无法和普通握手券一起使用</li>
+		</ul>
+	</div>
+	<div class="btnbox">
+		<button class="choosebtn">去填写你心目中的TOP16名单</button>
+		<button class="lookbtn">查看我的预测</button>
+		<button class="rightbtn">恭喜你预测正确，请填写联系方式</button>
+	</div>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/rule.js"></script>
+</html>

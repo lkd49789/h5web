@@ -1,0 +1,160 @@
+body {
+	width: 100%;
+	height: 100%;
+	background: url(../img/home-page.jpg) no-repeat;
+	background-size: 100%;
+}
+html{background-color: #141b4e;}
+.home header {
+	position: relative;
+	font-weight: bold;
+	margin-top: 10%;
+	font-size: 1.6rem;
+}
+
+.home header img {
+	margin-bottom: 5%;
+	margin-left: 8%;
+	width: 56%;
+	margin-top: 8%;
+}
+
+.home main {
+	color: #dbdae0;
+}
+
+.home main p {
+	font-size: 1rem;
+	margin: 0;
+}
+
+.home .lotusLeaf {
+	margin-top: 23%;
+	width: 100%;
+	margin-left: 4%;
+}
+
+.home footer {
+	margin-top: 10%;
+}
+
+.region header {
+	margin-top: 3%;
+}
+
+header .time {
+	color: #fbe06f;
+	border-bottom: 1px #6b6f56 solid;
+	border-top: 1px #6b6f56 solid;
+	position: absolute;
+	bottom: 10%;
+	right: 5%;
+	font-size: 1.4rem;
+	江苏路站(2号线, 广州路方向)>世纪大道站>站内换乘6号线(港城路方向)>云山路站
+}
+
+main .text-danger {
+	color: #fbe06f;
+}
+
+main .btn {
+	margin-top: 13%;
+	margin-bottom: 3%;
+}
+
+.btn-primary {
+	margin-bottom: 5%;
+	font-stretch: expanded;
+	font-weight: bold;
+	color: #684002;
+	background-color: #f5b629;
+	border-color: #f5b629;
+}
+
+footer p {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.mooncoke {
+	width: 16%;
+}
+
+.mooncoke img,
+.region img {
+	width: 100%;
+}
+
+.list-unstyled li {
+	border: 1px #957132 solid;
+	padding: 12px 0;
+	margin-bottom: 3%;
+	background: #352c3f;
+	color: #fff;
+}
+
+.provincial {
+	margin-left: 2%;
+}
+
+.region .listKing {
+	background: #FFFFFF;
+	border: 1px solid #FFFFFF;
+}
+
+.region .photo {
+	padding: 0;
+	width: 11%;
+	border: 1px solid cadetblue;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.col-xs-2ths {
+	width: 20%;
+	float: left;
+}
+
+.col-xs-3ths {
+	width: 30%;
+	float: left;
+}
+
+.region .listKing .bdLeft img {
+	width: 100%;
+	border-radius: 50%;
+	background: #0099FF;
+}
+
+.region .headPhoto {
+	padding-left: 6%;
+	width: 32%;
+}
+
+.region .id,
+.monnKing {
+	margin-top: 2%;
+	padding: 0;
+}
+
+.region .bdRight {
+	padding-left: 0;
+}
+
+.region .bdRight div {
+	padding: 0;
+}
+
+.region .rtPhoto {
+	margin-right: 10%;
+	width: 21%;
+	margin-left: 17%;
+}
+
+.chunk {
+	margin-top: 3%;
+}
+.home .moonList{
+	margin-bottom: 5%;
+	width: 100%;
+}

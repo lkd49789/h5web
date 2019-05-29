@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>泳装综艺</title>
+     <link href="../../common/css/common.css" rel="stylesheet" />
+     <link href="./css/popbox.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/auction.css">
+</head>
+
+<body>
+    <div id="app" v-cloak>
+       <div class="wrap" :style="'background:url(https://source.48.cn'+content.image+') no-repeat center center/auto 100%;'" >
+           <div class="wrap2">
+               <div class="idol">
+                    <div class="head">
+                        <img :src="'https://source.48.cn'+content.baseUserInfo.avatar" alt="">
+                    </div>
+                    <div class="name">
+                        <span><b v-text="content.baseUserInfo.nickname"></b></span>
+                        <span><img :src="'https://source.48.cn'+content.baseUserInfo.teamLogo" alt=""></span>
+                    </div>
+              </div>
+              <div class="bottom" >
+                    <!-- v-if="content.auctionDetails" -->
+                    <div :class="['meng',{'meng0':status == 0},{'meng1':(status == 1 || status == 3)},{'meng2':status == 2},{'meng1_pay':yesPay}]">
+                        <div class="pos" v-if="status != 4">
+                            <span class="img"></span>
+                            <!--未中标-->
+                            <span v-if="status == 0">未中标</span>
+
+                            <!--中标-->
+                            <span v-else-if="status == 1 || status == 3">中标</span>
+
+                            <!--未付款-->
+                            <span v-else-if="status == 2">失标</span>
+                        </div>
+                        <div class="moneyWrap">
+                            <p>当前中标价格<span class="money"><b v-if="content.highestPrice" v-text='content.highestPrice'></b><b v-else>0</b>元人民币</span></p>
+                        </div>
+                        <div class="timeWrap">
+                            <div class="time1">
+                                <!--未竞拍及未中标-->
+                                <span v-if="!yesPay">竞价截止时间还剩</span>
+
+                                <!--中标 付款-->
+                                <span v-else>离付款截止还剩</span>
+                                <div class="hours">
+                                    <span class="box"><b v-text="time.hours">2</b></span>小时
+                                </div>
+                                <div><span class="box"><b v-text="time.minutes">2</b></span>分钟
+                                </div>
+                                <div><span class="box"><b v-text="time.seconds">2</b></span>秒
+                                </div>
+                            </div>
+                            <div class="time2">超时未付款</div>
+                        </div>
+                    </div>
+                    <div class="btnWrap">
+                        <div class="btn" @click="gotoPage('imgList.html')"><img src="./img/auction_btn1.png" alt=""></div>
+                        <!--未竞拍-->
+                        <div class="btn" v-if="status == 4" @click="status != 5 && gotoPage('join.html?goodsId='+content.goodsId)"><img src="./img/auction_btn2.png" alt=""></div> 
+                        
+                        <!--未中标 以及中标-->
+                        <div class="btn"  v-if="(status == 0 || status == 1) && !yesPay" @click="status != 5 && gotoPage('join.html?goodsId='+content.goodsId)"><img src="./img/auction_update.png" alt=""></div>
+
+                        <!--中标 付款-->
+                        <div class="btn" v-if="yesPay && status == 1" @click="status != 5  && payClick()"><img src="./img/pay.png" alt=""></div>
+
+                        <!--中标未付款 以及 已付款-->
+                        <div class="btn" v-if="status == 2 || status == 3"><img src="./img/nopay.png" alt=""></div> 
+                        <!--结束-->
+                        <div class="btn" v-if="status == 5"><img src="./img/finish.png" alt=""></div>
+                    </div>
+                </div>
+           </div>
+       </div> 
+       <!--支付-->
+       <div id='payPgae' v-if="payShow" @click.stop="payShow = false">
+            <div class="box" @click.stop="">
+                <p><b>应付金额<span v-text='content.auctionPrice'></span>元</b></p>
+                <div class="pay">
+                    <div @click="pay(1)">
+                        <img src="./img/Alipay.png" alt="">
+                        <p>支付宝</p>
+                    </div>
+                    <div @click="pay()">
+                        <img src="./img/wxpay.jpg" alt="">
+                        <p>微信</p>
+                    </div>
+                </div>
+            </div>
+       </div>
+       <!-- 弹框 -->
+     <div class="mask" v-if="showpop!=0" v-cloak>
+         <!--  -->
+         <div class="no-money" v-if="showpop == 1">
+                <p><b>{{tips}}</b></p>
+                <span style="background: url('./img/btn2.png') no-repeat left top/100% 100%" v-on:click="showpop = 0" >确定</span>
+            </div>
+            <!-- 无手机号 -->
+            <div class="no-money" v-if="showpop == 2">
+                <p><b>你还未绑定手机，请先去绑定手机再参加拍卖。</b></p>
+                <span style="background: url('./img/btn1.png') no-repeat left top/100% 100%" v-on:click="showpop = 0">再说</span>
+                <span style="background: url('./img/btn2.png') no-repeat left top/100% 100%" v-on:click="snhOnActionPhone()" >去绑定</span>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<!-- <script src="../../common/js/vue.js"></script> -->
+<script src='https://cdn.bootcss.com/vue/2.6.10/vue.js'></script>
+<script src="../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/auction.js"></script>
+
+</html>

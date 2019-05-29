@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>投票榜单</title>
+	<link href="css/common.css" rel="stylesheet"/>
+	<link href="css/vote.css" rel="stylesheet" />
+	<style type="text/css">
+	.zhu{
+		font-size: 1rem;
+		color:#fff;
+		text-align: center;
+		padding-bottom: 4%;
+		margin-top: 2%;
+	}
+	.timebox{display: none;}
+	</style>
+</head>
+<body>
+	<section>
+		<ul class="voteList">
+			<!-- <li>
+				<span class="runknum">1</span>
+				<div class="headbox">
+					<span class="headimg"></span>
+					<div class="namebox">
+						<p>严佼君</p>
+					</div>
+				</div>
+				<div class="votebox">
+					<span class="votebtn votesart">投票</span>
+				</div>
+			</li> -->
+		</ul>
+		<p class="zhu">注：本场公演网络投票权一票按照0.1票计入最终榜单</p>
+	</section>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="../../common/js/common.js"></script>
+<script src="js/main.js"></script>
+<script type="text/javascript">
+	voteList();
+
+	function voteList(){
+		main.getMemberList(function(data){
+			// console.log(dt);
+			var html = [];
+			if(data.status==200){
+				var dt=data.content.list;
+				$.each(dt.sort(down),function(index,dl){
+					var index=index+1;
+					html.push('<li>');
+					html.push('<span class="runknum">'+index+'</span>');
+					html.push('<div class="headbox">');
+					html.push('<span class="headimg" style="background-image:url('+dl.avatar+')"></span>');
+					html.push('<div class="namebox">');
+					html.push('<p>'+dl.memberName+'</p>');
+					html.push('</div></div>');
+					html.push('<div class="votebox">');
+					if(data.content.voteEnd==false){
+						html.push('<span class="votebtn votesart" memberId='+dl.memberId+'>投票</span>');
+					}else{
+						html.push('<span class="votebtn voteend">'+dl.voteNum+'票</span>');
+					}
+					html.push('</div></li>');
+				})
+				$('.voteList').append(html.join(""));
+			}else{
+				main.alert(dt.message);
+			}
+		})
+	}
+
+
+
+	$('.voteList').on('click','.votesart',function(){
+		var memberId = $(this).attr('memberId');
+		if(checkFromApp()){
+			main.voteDone(memberId,function(dt){
+				if(dt.status==200){
+					main.alert("投票成功");
+				}else{
+					main.alert(dt.message);
+				}
+			})
+		}else{
+			downLoadPocketApp();
+		}
+	})
+
+
+	function down(a,b){
+       	return b.voteNum-a.voteNum;
+    }
+	
+</script>
+</html>

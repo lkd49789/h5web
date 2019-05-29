@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html id="index_html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>公演图库</title>
+    <style type="text/css">
+		*{margin:0;padding:0;}
+		html,body{width: 100%;height: 100%;background-color:#fdcde5;}
+		/* body{max-width: 640px;margin: 0 auto;background: url(img/bg.jpg)no-repeat center top;background-size: cover;background-attachment: fixed;}
+		body:before {
+		  content: ' ';
+		  position: fixed;
+		  z-index: -1;
+		  top: 0;
+		  right: 0;
+		  bottom: 0;
+		  left: 0;
+		  background: url(img/bg0.jpg) center 0 no-repeat;
+		  background-size: cover;
+		} */
+		body{
+			max-width: 640px;margin: 0 auto;
+		}
+		section{width: 100%;height: auto;overflow-y: auto;}
+		.logo{width: 100%;}
+		.imgList{padding:6% 6% 4% 6%;margin-top: -34%;}
+		.imgList li{margin-bottom: 15px;}
+		.imgList li,.smallimgs,.smallimgs li{width: 100%; list-style: none;}
+		.smallimgs{height: auto;}
+		.smallimgs li{border:1px dotted #fff;border-radius:5px;margin-bottom:10px;background-size: cover;background-repeat: no-repeat;background-position: center top;}
+		.imgList li span{color:#fff;font-size: 14px;}
+    </style>
+</head>
+<body>
+	<section>
+		<img src="img/banner.png" class="logo">
+		<ul class="imgList">
+			<!-- <li>
+				<ul class="smallimgs">
+					<li></li>
+					<li></li>
+				</ul>
+				<span>美杜莎的温柔</span>
+			</li> -->		
+		</ul>
+	</section>
+</body>
+<script src="https://h5.48.cn/common/js/jquery.min.js"></script>
+<script type="text/javascript">
+	$.getJSON("musicImg.json", function(data) {
+	   	var arr = data.imageList;	   
+	   	for(i=0;i<arr.length;i++){
+	   		var liHtml = $("<li></li>");
+	   		// console.log(liHtml)
+	   		var tmp = arr[i];
+	   		var ulHtml = $("<ul></ul>").addClass("smallimgs");
+	   		var arrImg = tmp.img_url;	   	
+	   		for(j=0;j<arrImg.length;j++){	 
+	   			var imgUrl = arrImg[j]
+	   			var tmpLi = $('<li style="background-image:url('+ imgUrl +')"></li>'); 
+	   			ulHtml.append(tmpLi);
+	   		}
+	   		liHtml.append(ulHtml);
+	   		liHtml.append($('<span>'+tmp.musicName+'</span>'));
+	   		$('.imgList').append(liHtml);	
+	   	}
+	   	$('.smallimgs li').height($('.smallimgs').width()/1.5);
+	});
+</script>
+</html>

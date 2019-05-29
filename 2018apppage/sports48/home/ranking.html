@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>粉丝应援排行榜TOP20</title>
+	<link href="../common/css/common.css" rel="stylesheet" />
+	<link href="css/ranking.css" rel="stylesheet" />
+</head>
+<body>
+	<section>
+		<div class="upbox">
+			<p class="title">最佳表现奖应援排行，票数相同时先投的在前</p>
+			<div class="headbox">
+				<span class="avatar"></span>
+				<img src="img/crown.png" class="crown">
+				<img src="img/top1.png" class="top1">
+			</div>
+			<h4 class="topnikename"></h4>
+			<p class="toptime"></p>
+			<div class="topnum">
+				<span class="the1"></span>
+			</div>
+		</div>
+		<div class="rankList">
+			<ul>
+				<!-- <li>
+					<span class="silver">2</span>
+					<div class="newsmsg">
+						<p class="nikename">草莓地里吃芒果</p>
+						<p class="time">2018.4.3 13:02:55</p>
+					</div>
+					<span class="num the2">许杨玉琢4000票</span>
+				</li> -->
+			</ul>
+		</div>
+	</section>
+</body>
+<script src="https://h5.48.cn/common/js/jquery.min.js"></script>
+<script src="js/config.js"></script>
+<!-- <script src="js/ranking.js"></script> -->
+<script>
+	$('.rankList').css({'min-height':$('body').height()-$('.upbox').height()});
+	getBalance(succ);
+	 //应援排行
+ 	function getBalance(succ){
+        $.ajax({
+            url:  CONFIG.geturl()+"api/v1/vote/rank/user",
+            type: "POST", 
+            async:true,
+            contentType: "application/json; charset=utf-8",
+            /*beforeSend: function (request) {
+                 request.setRequestHeader("token", main.getToken());
+            },*/
+            data: JSON.stringify({
+
+            }),
+            timeout: 15000, 
+            dataType:"json",
+            success: function (dt) { 
+                succ(dt);
+            }, 
+            error: function (jqXHR, textStatus, errorThrown) { 
+				//alert("eee");
+            } 
+        });
+    }
+
+
+    function succ(dt){
+    	var html = [];
+    	if(dt.status==200){
+    		if(dt.content.data.length==0){
+    			$('.rankList ul').html("<p>暂无数据！</p>");
+    		}else{
+	    		//第一名
+	    		var firstContent = dt.content.data[0];
+	    		$('.avatar').css('background-image','url('+formatAvata(firstContent.voterAvatar)+')');
+	    		$('.topnikename').html(firstContent.voterName);
+	    		$('.toptime').html(firstContent.voteTime);
+	    		$('.topnum span').html(firstContent.memberName+firstContent.voterNum+'票');
+
+	    		//其他名次
+	    		$.each(dt.content.data,function(index,dl){
+	    			index = index+1;
+					if(index>1){
+						html.push('<li>');
+						if(index==2){
+							html.push('<span class="silver">'+index+'</span>');
+						}else if(index==3){
+							html.push('<span class="copper">'+index+'</span>');
+						}else{
+							html.push('<span class="ranknum">'+index+'</span>');
+						}
+						
+						html.push('<div class="newsmsg">');
+						html.push('<p class="nikename">'+dl.voterName+'</p>');
+						html.push('<p class="time">'+dl.voteTime+'</p>');
+						html.push('</div>');
+						if(index==2){
+							html.push('<span class="num the2">'+dl.memberName+dl.voterNum+'票</span>');
+						}else if(index==3){
+							html.push('<span class="num the3">'+dl.memberName+dl.voterNum+'票</span>');
+						}else{
+							html.push('<span class="num the">'+dl.memberName+dl.voterNum+'票</span>');
+						}
+						html.push('</li>');
+					}
+				})
+
+				$('.rankList ul').append(html.join(""));
+				$('.rankList').css({'min-height':$('body').height()-$('.upbox').height()});
+			}
+    	}else{
+    		mainAlert(dt.message);
+    	}
+    }
+
+
+       //弹框
+    function mainAlert(name){
+        var iframe = document.createElement("IFRAME");
+        iframe.style.display="none";
+        iframe.setAttribute("src", 'data:text/plain,');
+        document.documentElement.appendChild(iframe);
+        window.frames[0].window.alert(name);
+        iframe.parentNode.removeChild(iframe);
+    }
+
+    //无域名头像添加域名
+    function formatAvata(avata){
+        if(avata.indexOf("http://")>=0 ||avata.indexOf("https://")>=0){
+            return avata
+        }else{
+            return CONFIG.getSource()+avata;
+        }
+    }
+</script>
+</html>

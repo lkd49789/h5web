@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+     <link href="../../common/css/common.css" rel="stylesheet" />
+      <link rel="stylesheet" href="./css/production.css">
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(item,index) in list" :key="index">
+                <label v-text="item.platfromName"></label><input type="text" v-model="item.platformId" :placeholder="item.placeholder">
+            </li>
+        </ul>
+        <div class="btn" @click="btn"><img src="./img/btn.png" alt=""></div>
+    </div>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<script src="../../common/js/vue.js"></script>
+<!-- <script src='https://cdn.bootcss.com/vue/2.6.10/vue.js'></script> -->
+<script src="../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script>
+    var app = new Vue({
+        el:"#app",
+        data:{
+            list:[]
+        },  
+        mounted:function(){
+            var that = this;
+            main.getProduction(function(data){
+                if(data.status == 200){
+                    data.content.forEach(function(item,index){
+                        item.platformId = item.platformId?item.platformId:'';
+                        if(item.platfromName == 'B站'){
+                            item.placeholder = '用户名，例如：SNH48官方账号'
+                        }else if(item.platfromName == '抖音'){
+                            item.placeholder = '抖音号，例如：112874602'
+                        }else if(item.platfromName == '小红书'){
+                            item.placeholder = '小红书号，例如：677144421'
+                        }else if(item.platfromName == '唱吧'){
+                            item.placeholder = '唱吧号，例如：snh48cc'
+                        }else if(item.platfromName == '快手'){
+                            item.placeholder = '用户ID，例如：338483'
+                        }
+                    });
+                    that.list = data.content
+                    console.log(that.list)
+                }else{
+                    alert(data.message)
+                }
+
+            })
+        },
+        methods:{
+            btn:function(){
+                var  that = this;
+                var list_2 = JSON.parse(JSON.stringify(that.list))
+                var arr =  list_2.filter(function(item,index){
+                    if(item.platformId != ''){
+                       delete item.placeholder
+                       delete item.platfromName
+                       item.platfrom = item.platform
+                       delete item.platform
+                       return item
+                    }
+                })
+                if(arr.length <=0){
+                    alert('请输入平台信息')
+                    return false;
+                }
+                main.setProduction(arr,function(data){
+                    if(data.status == 200){
+                        alert('保存成功')
+                    }else{
+                        alert(data.message)
+                    }
+                })
+            }
+        }
+    })
+
+</script>
+</html>

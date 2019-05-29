@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>曲目内页</title>
+    <link rel="stylesheet" href="css/mui.min.css">
+    <link href="../../common/css/common.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/imageview.css">
+    <link rel="stylesheet" href="css/popbox.css">
+    <link rel="stylesheet" href="css/particulars.css">
+</head>
+<body>
+    <div id="app" v-cloak>
+        <!-- 上半部分 -->
+        <div class="videoWrap">
+           <div class="vid">
+                <video preload="meta" ref="video"  @click="videoClick(music.videoUrl)" :src="music.videoUrl?music.videoUrl:''" webkit-playsinline></video>
+                <div class="meng" v-if="playImgShow" @click="videoClick(music.videoUrl)">
+                    <img class="mengImg" :src="music.coverUrl" alt="">
+                    <img class="play"  src="./img/play.png" alt="按钮">
+                </div>
+           </div>
+            <div class="video_content">
+                <p class="video_content_p1" ref="listWidth"><b v-text="music.name?'《'+music.name+'》':''"></b></p>
+                <!-- <p class="video_content_p2">谁谁</p> -->
+                <div class="video_content_btn">
+                    <!-- yetCall -->
+                    <div :class="['videoBtn',music.praiseStatus?'yetCall':'']" @click="songPraise()">
+                        <img :src="music.praiseStatus?'./img/yetCall.jpg':'./img/bigCall.png'" alt="大拇哥">
+                        <b v-text="music.praise"></b>
+                    </div>
+                    <div class="videoBtn" @click="createPostCallback()">
+                        <img src="./img/bigPen.png" alt="">
+                        <b v-text="music.posts"></b>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 下半部分 帖子列表 -->
+        <div class="list">
+            <div class="list_item" v-for="(item,index) in list" :key="index">
+                <div class="userWrap">
+                    <div class="userWrap_left">
+                        <div class="head">
+                            <img :src="item.avatar" alt="头像">
+                        </div>
+                        <div class="name">
+                            <p class="name"><b v-text="item.nickname"></b></p>
+                            <p class="time" v-text="item.createAt"></p>
+                        </div>
+                    </div>
+                    <div class="userWrap_right" @click="songPraise2(item.postId,index)">
+                        <img :src="item.praiseStatus?'./img/call_active.png':'./img/call.png'" alt="点赞">
+                        <span :class="item.praiseStatus?'call_active':''" v-text="item.likeCount"></span>
+                    </div>
+                </div> 
+                <div class="content">
+                    <p class="text" @click="_openNativeModule(item.postId)" v-html="item.previewText"></p>
+                    <ul class="content_imgWrap">
+                        <!-- .replace('/resize_150x150','') -->
+                        <li v-for="(ite,ind) in item.previewImg" :key="ind" v-imgnum="item.previewImg.length"  :style="item.previewImg.length>2?'height:'+liHeigt3+'px':'height:'+liHeigt2+'px'">
+                            <img :src="'https://source.48.cn/resize_150x150'+ite.imgUrl" alt="图片" :data-preview-src="'https://source.48.cn'+ite.imgUrl" :data-preview-group="index"> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 弹框 -->
+        <popbox :show="showpop" :tips="tips" :submit="submit" :bg="bg"></popbox>
+    </div>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<script src="../../common/js/vue.js"></script>
+<!-- <script src='https://cdn.bootcss.com/vue/2.6.10/vue.js'></script> -->
+<script src="../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<!-- 图片预览插件 -->
+    <script src="js/mui.min.js" ></script>
+    <script src="js/mui.zoom.js"></script>
+    <script src="js/mui.previewimage.js"></script>
+
+<!-- 弹框 -->
+    <script src="js/popobox.js"></script>
+
+<script src="js/particulars.js"></script>
+<script> 
+    mui.previewImage();
+    mui.plusReady(function() {})
+</script>
+</html>

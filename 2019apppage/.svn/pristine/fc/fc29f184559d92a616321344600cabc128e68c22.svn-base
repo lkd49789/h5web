@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第六届年度总决选宣言视频拍摄报名</title>
+    <link href="../../common/css/common.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/popbox.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div id='app'>
+        <!--是否预约过-->
+        <div v-cloak class='already' v-if='alreadyShow' >
+            <div class='imgWrap'>
+                <img src="img/nike.png" alt="对勾">
+            </div>
+            <div class='textWrap'>
+                <p class='p1'><b>已成功报名！</b></p>
+            </div>
+        </div>
+        
+        <div class='top'>  
+            <p class="top_title">第六届年度总决选宣言视频拍摄报名</p>
+            <p>
+                定制总选宣言视频的预约时间已截止，未预约的成员将统一在<b class="text_bg">5月20日~5月30日生活中心白色摄影棚</b>内拍摄。   
+            </p>
+            <p>
+                现在公布中心白棚的预约时间及规则，具体如下：
+            </p>
+            <p>
+                <b>5月9日至5月19日</b>，成员可通过口袋48预约<b>5月20日至5月28日</b>的生活中心的白棚拍摄，每天最多<b>6个</b>拍摄名额，拍摄顺序以报名顺序为准。
+            </p>
+            <p>
+                未预约或预约失败的成员，将根据通告表统一安排在<b>5月29日~5月31日</b>于生活中心白色摄影棚内拍摄。（形式参考第三届总决选宣言视频）。
+            </p>
+            <p><b class="text_bg">所有拍摄都必须在以上时间及地点内完成，不再做其他安排。</b></p>
+            <!-- <div class='top_btnWrap'>
+                <button class='top_btn' @click='go'>查看详细介绍</button>
+            </div> -->
+        </div> 
+
+        <div class="bottom">
+            <p class="bttom_title">报名日期选择</p>
+            <ul>
+                <li class="bottom_dayWrap May" ></li>
+                <li class="bottom_dayWrap" v-for='(item,index) in MayList' :key='item.day+Math.random()' @click='dayClick(item,5)' >
+                    <p class="bottom_day"><b v-text='item.day'></b></p>
+                    <p v-color='item.num' class='bottom_day_num'><span v-text='item.num'></span>人报名</p>
+                    <img class="pithOn" v-if='alreadyShow && date == item.date' src="img/pitchOn.png" alt="预约">
+                </li>
+            </ul>
+        </div>
+        <div v-cloak class="mask" v-if='showpop != 0' @touchmove.prevent>
+                <!-- no money -->
+                <div class="no-money" v-if="showpop == 1">
+                    <p><b>{{tips}}</b></p>
+                    <span v-on:click="closePop()">知道了</span>
+                </div>
+                <div class="submit-box" v-if="showpop == 2">
+                    <p><b>是否报名参加 <b>{{maskDate}}</b>的拍摄？</b></p>
+                    <span class='nospan' v-on:click="closePop()">再想想</span>
+                    <span v-on:click="submit()">确定参加</span>
+                </div>
+        </div>
+    </div>
+
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<script src="../../common/js/vue.js"></script>
+<!-- <script src='https://cdn.bootcss.com/vue/2.6.10/vue.js'></script> -->
+<script src="../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/indexNext.js"></script>
+</html>

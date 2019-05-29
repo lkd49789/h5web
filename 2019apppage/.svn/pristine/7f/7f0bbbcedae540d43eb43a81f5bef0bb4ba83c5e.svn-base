@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>SNH48 GROUP 统一招募平台</title>
+</head>
+<body>
+    <h1>正在自动跳转对应页面，如无法跳转请点击相应链接</h1>
+    <h2><a href='snh_12/web/'>网页版</a></h2>
+    <h2><a href='snh_12/wx/'>微信版</a></h2>
+</body>
+</html>
+
+<script type="text/javascript">
+window.onload = function(){
+    if(isFromMobile()){
+       window.location.href="https://h5.48.cn/2019apppage/snh_13/wx/index.html";
+    } else {
+       window.location.href="https://h5.48.cn/2019apppage/snh_13/web/index.html";
+    }
+}
+
+
+function isFromMobile(){
+    var sUserAgent = navigator.userAgent.toLowerCase();  
+    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";  
+    var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";  
+    var bIsMidp = sUserAgent.match(/midp/i) == "midp";  
+    var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+    var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";  
+    var bIsAndroid = sUserAgent.match(/android/i) == "android";  
+    var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";  
+    var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";  
+    if (!(bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) ){  
+        return false;
+    } else{
+        return true;
+    }
+}
+</script>

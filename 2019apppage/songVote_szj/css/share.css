@@ -1,0 +1,48 @@
+[v-cloak] {
+    display: none !important;
+} 
+body{
+    max-width: 640px;
+    margin:0 auto;
+    position: relative;
+    font-size: 1.3rem
+}
+#app{
+    background: url('../img/share_bg.jpg') no-repeat;
+    background-size: 100% 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+    padding: 12rem 0 2.5rem;
+}
+.title{
+    text-align: center;
+}
+.title img{
+    width: 28.08rem;
+}
+.content{
+    width: 90%;
+    border: 1px solid #68553f;
+    background: #1a1a1c;
+    color: #fff;
+    padding: 1.25rem;
+    margin: 1.42rem auto 2.83rem;
+    box-sizing: border-box;
+}
+em{
+    color: #c09653;
+}
+.text{
+    display: flex;
+    margin-top: 3px;
+}
+.text .x{
+    font-size: 2rem;
+    margin-right: 3px;
+}
+.btn{
+    text-align: center;
+}
+.btn img{
+    width: 60%;
+}

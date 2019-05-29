@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>出价记录</title>
+     <link href="../../common/css/common.css" rel="stylesheet" />
+      <link rel="stylesheet" href="./css/popbox.css ">
+      <link rel="stylesheet" href="./css/record.css">
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        <div class="siteWrap">
+            <div>我的收货地址</div>
+            <div class="right" @click="gotoPage('buy.html')">设置<img src="./img/arrow.jpg" alt=""></div>
+        </div>
+        <div v-if="" :class="['center',{'payment':content.auctionStatus == 1 && yesPay},{'lose':content.auctionStatus == 2}]">
+            <div>
+                <p><b><span class="status status1">中标</span><span class="status status2">失标</span><span v-text="content.goodsName"></span>&nbsp;<span v-text="content.highestPrice+'元'">3222元</span></b></p>
+                <div class="time time1">离付款截止还剩<span v-text="time.minutes">33</span>分<span v-text="time.seconds">33</span>秒</div>
+                <div class="time time2">超时未付款</div>
+            </div>
+            <div class="img" @click="payShow = true"><img src="./img/record_pay.png" alt=""> </div>
+        </div>
+        <div class="history">
+            <ul>
+                <template v-if="list != []" v-for="(item,index) in list">
+                    <li v-for="(ite,ind) in item.logAuctionJions" :key="ind">
+                        <div class="left">
+                            <span v-text="ite.logAt"></span>
+                            <!-- /竞标状态 0 未中标 1 中标 2 失标 -->
+                            <span class='who'><span v-text="item.goodsName"></span>
+                            <span v-if="ind == 0">
+                                <em class="yes" v-if="item.auctionStatus == 3">已付款</em>
+                                <em class="no" v-if="item.auctionStatus == 2">失标</em>
+                            </span>
+                        </span>
+                        </div>
+                        <div v-text="ite.price+'元'"></div>
+                    </li>
+                </template>
+            </ul>
+        </div>
+        <!--支付-->
+       <div id='payPgae' v-if="payShow" @click.stop="payShow = false">
+            <div class="box" @click.stop="">
+                <p><b>应付金额<span v-text="content.highestPrice"></span>元</b></p>
+                <div class="pay">
+                    <div @click="pay(1)">
+                        <img src="./img/Alipay.png" alt="">
+                        <p>支付宝</p>
+                    </div>
+                    <div @click="pay()">
+                        <img src="./img/wxpay.jpg" alt="">
+                        <p>微信</p>
+                    </div>
+                </div>
+            </div>
+       </div>
+       <!-- 弹框 -->
+     <div class="mask" v-if="showpop!=0" v-cloak>
+            <!-- 无手机号 -->
+            <div class="no-money" v-if="showpop == 1">
+                   <p><b>{{tips}}</b></p>
+                   <span style="background: url('./img/btn1.png') no-repeat left top/100% 100%" v-on:click="showpop = 0">再说</span>
+               </div>
+           </div>
+    </div>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<!-- <script src="../../common/js/vue.js"></script> -->
+<script src='https://cdn.bootcss.com/vue/2.6.10/vue.js'></script>
+<script src="../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/record.js"></script>
+</html>

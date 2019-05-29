@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>BEJ48红白歌会回顾</title>
+	<link href="css/common.css" rel="stylesheet" />
+	<link href="css/index.css" rel="stylesheet" />
+</head>
+<body>
+	<section>
+		<img src="img/title.png" class="title">
+		<ul class="picList" id="picList">
+			<template v-for="pic in pic_list"> 
+				<li :id="pic.groupName" @click="jumpList(pic)">
+					<img :src="pic.pic" class="thumbnail">
+					<span class="songNum" v-text="pic.title"></span>
+					<span class="zanbox"><img src="img/zan.png"><em class="zanNum" v-text="pic.praise"></em></span>
+					<p class="text" v-text="pic.info">红白两队热成登场，精彩一触即发见证成长，邂逅新生</p>
+				</li>
+			</template>
+		</ul>
+		<div class="btnsbox">
+			<button class="sharebtn">分享</button>
+			<button class="smprogrambtn">小程序版</button>
+		</div>
+	</section>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="js/vue.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/index.js"></script>
+</html>

@@ -1,0 +1,22 @@
+[
+    {
+        "teamId":1001,
+        "teamName":"TEAM SII",
+        "teamLogo":"https://source.48.cn/mediasource/teamLogo/fulllogo/TEAM-SII.jpg"
+    },
+    {
+        "teamId":1002,
+        "teamName":"TEAM NII",
+        "teamLogo":"https://source.48.cn/mediasource/teamLogo/fulllogo/TEAM-NII.jpg"
+    },
+    {
+        "teamId":1003,
+        "teamName":"TEAM HII",
+        "teamLogo":"https://source.48.cn/mediasource/teamLogo/fulllogo/TEAM-HII.jpg"
+    },
+    {
+        "teamId":1004,
+        "teamName":"TEAM X",
+        "teamLogo":"https://source.48.cn/mediasource/teamLogo/fulllogo/TEAM-X.jpg"
+    }
+]

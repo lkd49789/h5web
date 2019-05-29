@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>最佳表现奖</title>
+	<style type="text/css">
+		*{margin:0;padding: 0;}
+		html,body{width: 100%;height: 100%;}
+		body{max-width: 640px;margin:0 auto;position: relative;}
+		section{width: 100%;height: 100%;position: relative;background:url(img/bg.jpg)no-repeat center bottom;background-size: cover;}
+		.zhu{position: absolute;bottom: 3%;width:100%;text-align: center; font-size: 12px;color: #fff;}
+		.topmember{display: block;width: 84%;margin-left: 8%;padding-top: 6%;}
+		.lookbtn{width: 84%;margin-left: 8%;margin-top:4%;}
+		.lookbtn img{width: 100%;}
+	</style>
+</head>
+<body>
+	<section>
+		<img src="img/topmember.png" class="topmember">
+		<div class="lookbtn"><img src="img/lookbtn.png"></div>
+		<p class="zhu">本次投票使用区块链技术将你的投票结果永久固化在链上</p>
+	</section>
+</body>
+<script src="../../../common/js/jquery.min.js"></script>
+<script src="../../../common/js/common.js"></script>
+<script>
+	$('.lookbtn').click(function(){
+		hrefTo("https://h5.48.cn/2018apppage/sports48/fashion/field.html");
+	})
+
+	function hrefTo(_url){
+        if(checkFromApp()){
+            window.web.gotoDetail(_url);
+        }else{
+            window.location.href=_url;
+        }
+    }
+</script>
+</html>

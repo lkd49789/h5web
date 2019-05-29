@@ -1,0 +1,250 @@
+(function(data) {
+ //vip/detail 跳转vip短链接
+    //web端测试（用户信息）
+    var webUserInfo = {
+        "appid":"27422",                                //用户ID
+        // "apptoken":"m2VXP+GwpVLkC9bWBBE2p/AhlVUHx5ZIpdLx09HwiTvMQUG3iDzcahNymgtYbFbtFhaduX8zX92MWCnyAb1W+OZi0acA4OGYspgzUOJimqw=", 
+        "apptoken":"UnXB6inKsnu0Do3fdTrUw56/LWFccz4CqZsZWOcO36DsrJmh2+gRketRrjp9p48gIXf7iIyO5nOT89FXWLyFImiOtJdbeoCvWNZgi55k3cKYykgq/ahup7KYM1DiYpqs",  //验证Token
+        // "apptoken":"TbZXGh4LnW/5u50EBI9WtOEb8Acg2ltBny8OBBMEEd8lHz1v17ZyhSpc0I5AHxPS9yo2eCadtLICQgv7ul6YO9RInw7dejOji4N1g5LgdupFGh0fC2d36EJcECQ/nl0E",  //验证Token
+        "uname":"nicker",                                 //用户昵称
+        "avata":"avata",                                    //头像地址
+        "dev_cd":"dev_cd"                        //设备号
+    }
+    
+    //口袋用户信息
+    if(checkFromNew()){
+        var u_info = JSON.parse(dsBridge.call("snhUserInfo"))
+        var nickname = ''
+        if(isFromAndroid()){
+            nickname = u_info.userInfo.nickName
+        }else{
+            nickname = u_info.userInfo.nickname
+        }
+        var appUserInfo = {
+            "appid":u_info.userInfo.userId,             //用户ID
+            // "apptoken":u_info.token,                                             //验证Token
+            "apptoken":"UnXB6inKsnu0Do3fdTrUw56/LWFccz4CqZsZWOcO36DsrJmh2+gRketRrjp9p48gIXf7iIyO5nOT89FXWLyFImiOtJdbeoCvWNZgi55k3cKYykgq/ahup7KYM1DiYpqs",
+            "uname":nickname,                         //用户昵称
+            "avata":u_info.userInfo.avatar,             //头像地址
+            "dev_cd":u_info.IMEI                                                //设备号
+        }
+    }else if(checkFromOld()){
+        var appUserInfo = {
+            "appid":window.web.getLoginUserId(),             //用户ID
+            // "apptoken":window.web.getAccessToken(),         //验证Token
+            "apptoken":"UnXB6inKsnu0Do3fdTrUw56/LWFccz4CqZsZWOcO36DsrJmh2+gRketRrjp9p48gIXf7iIyO5nOT89FXWLyFImiOtJdbeoCvWNZgi55k3cKYykgq/ahup7KYM1DiYpqs",
+            "uname":window.web.getLoginUserNickName(),       //用户昵称
+            "avata":window.web.getLoginUserPic(),            //头像地址
+            "dev_cd":(window.web.getPhoneIMEI().length <3) ? window.web.getLoginUserId() :  window.web.getPhoneIMEI()   //设备号
+        }
+    }
+    //获取用户信息
+    data.getAppUserInfo = function(){
+        if(checkFromApp()){
+            return appUserInfo;
+        }else{
+            
+            return webUserInfo;
+        }
+    }
+    //查询当前竞拍商品
+    data.getList = function (succ) {
+        $.ajax({
+            url: CONFIG.getLink() + "api/activity/v1/getauctioninfo",
+            type: "POST",
+            dataType: "json",
+            beforeSend: function (request) {
+                request.setRequestHeader("token", main.getAppUserInfo().apptoken);
+            },
+            success: function (data) {
+                succ(data)
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert("error",jqXHR);
+            }
+        });
+    }
+    //竞拍
+    data.auction = function (id,price,succ) {
+        $.ajax({
+            url: CONFIG.getLink() + "api/activity/v1/auction",
+            type: "POST",
+            dataType: "json",
+            contentType:"application/json",
+            data:JSON.stringify({"goodsId":id,"price":price}),
+            beforeSend: function (request) {
+                request.setRequestHeader("token", main.getAppUserInfo().apptoken);
+            },
+            success: function (data) {
+                succ(data)
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert("error",jqXHR);
+            }
+        });
+    }
+    //出价记录
+    data.getHistory = function (id,succ) {
+        $.ajax({
+            url: CONFIG.getLink() + "api/activity/v1/auction/mylist",
+            type: "POST",
+            dataType: "json",
+            contentType:"application/json",
+            data:JSON.stringify({"goodsId":id}),
+            beforeSend: function (request) {
+                request.setRequestHeader("token", main.getAppUserInfo().apptoken);
+            },
+            success: function (data) {
+                succ(data)
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert("error",jqXHR);
+            }
+        });
+    }
+  /*支付 */
+    main.Alipay = function (id,succ) {
+        $.ajax({
+            url: CONFIG.getLink() + "api/v1/ali/order/create",
+            type: "POST",
+            dataType: "json",
+            contentType:"application/json",
+            data:JSON.stringify({"goodsId":id}),
+            beforeSend: function (request) {
+                request.setRequestHeader("token", main.getAppUserInfo().apptoken);
+            },
+            success: function (data) {
+                succ(data)
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert("error",jqXHR);
+            }
+        });
+    }
+
+    main.wxpay = function (id,succ) {
+        $.ajax({
+            url: CONFIG.getLink() + "api/v1/wx/order/create",
+            type: "POST",
+            dataType: "json",
+            contentType:"application/json",
+            data:JSON.stringify({"goodsId":id}),
+            beforeSend: function (request) {
+                request.setRequestHeader("token", main.getAppUserInfo().apptoken);
+            },
+            success: function (data) {
+                succ(data)
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert("error",jqXHR);
+            }
+        });
+    }
+
+    /*获取地址 */
+    main.getsite = function (succ) {
+        $.ajax({
+            url: CONFIG.getLink() + "api/activity/v1/auction/getaddress",
+            type: "POST",
+            dataType: "json",
+            contentType:"application/json",
+            beforeSend: function (request) {
+                request.setRequestHeader("token", main.getAppUserInfo().apptoken);
+            },
+            success: function (data) {
+                succ(data)
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert("error",jqXHR);
+            }
+        });
+    }
+    /*修改地址 */
+    main.setsite = function (obj,succ) {
+        $.ajax({
+            url: CONFIG.getLink() + "api/activity/v1/auction/address",
+            type: "POST",
+            dataType: "json",
+            data:JSON.stringify({
+                'name':obj.name,         //收货人姓名
+                'mobile':obj.phone,        //收货人手机号
+                'province':obj.province,  // 收件地址 - 省份
+                'city':obj.city,           // 收件地址 - 城市
+                'country':obj.county,       // 收件地址 - 区(县)
+                'details':obj.details     // 收件地址 - 详细
+            }),
+            contentType:"application/json",
+            beforeSend: function (request) {
+                request.setRequestHeader("token", main.getAppUserInfo().apptoken);
+            },
+            success: function (data) {
+                succ(data)
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert("error",jqXHR);
+            }
+        });
+    }
+
+    /*电子 获取图片列表 */
+    data.getImgList = function (succ) {
+        $.ajax({
+            url: CONFIG.getLink() + "api/activity/v1/getallgoods",
+            type: "POST",
+            dataType: "json",
+            contentType:"application/json",
+            beforeSend: function (request) {
+                request.setRequestHeader("token", main.getAppUserInfo().apptoken);
+            },
+            success: function (data) {
+                succ(data)
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert("error",jqXHR);
+            }
+        });
+    }
+    
+    /*购买图片 */
+    data.buyImg = function (id,succ) {
+        $.ajax({
+            url: CONFIG.getLink() + "api/activity/v1/buygoods",
+            type: "POST",
+            dataType: "json",
+            data:JSON.stringify({"goodsId":id}),
+            contentType:"application/json",
+            beforeSend: function (request) {
+                request.setRequestHeader("token", main.getAppUserInfo().apptoken);
+            },
+            success: function (data) {
+                succ(data)
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert("error",jqXHR);
+            }
+        });
+    }
+
+    /*查看图片 */
+    data.getImgDetails = function (id,succ) {
+        $.ajax({
+            url: CONFIG.getLink() + "api/activity/v1/getdetailsimage",
+            type: "POST",
+            dataType: "json",
+            data:JSON.stringify({"goodsId":id}),
+            contentType:"application/json",
+            beforeSend: function (request) {
+                request.setRequestHeader("token", main.getAppUserInfo().apptoken);
+            },
+            success: function (data) {
+                succ(data)
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert("error",jqXHR);
+            }
+        });
+    }
+
+
+    
+}(window.main = {}));

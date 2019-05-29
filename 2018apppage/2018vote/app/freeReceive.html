@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>领取投票权</title>
+	<!-- <link href="css/mui.min.css" rel="stylesheet" /> -->
+	<link rel="stylesheet" type="text/css" href="css/common_mobile.css" />
+	<style>
+		html,body{
+			width: 100%;
+		    height: 100%;
+		    font-family: "微软雅黑";
+		}
+		section{width: 100%;height: 100%;}
+		.topbox{padding: 10% 5% 0 5%;}
+		.topbox h4,.topbox ul li{font-size: 15px;}
+		.topbox ul{margin-top: 5%;}
+		.zhu{font-size: 14px;color: #808080;margin-top: 5%;}
+		.recbox{
+			padding: 10% 5% 0% 5%;
+		}
+		.receivebtn{
+			width: 100%;
+			background-color: #ECECEC;
+		    color: #A0A0A0;
+		    height: 45px;
+		    border: none;
+		    border-radius: 10px;
+		    font-size: 16px;
+		    letter-spacing: 2px;
+		}
+		.recActive{
+			background-color: #8a9af1;
+			color: #fff;
+		}
+		.mask{
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,0.4);
+			position: fixed;
+			left: 0;
+			top:0;
+			display: none;
+		}
+		.maskinfo{
+			width: 60%;
+			padding: 10% 10% 5% 10%;
+			background-color: #fff;
+			border-radius: 10px;
+			position: absolute;
+			left: 10%;
+			top:30%;
+			text-align: center;
+		}
+		.rightbtn{
+			width: 50%;
+			background-color: #8a9af1;
+			color: #fff;
+		    height: 40px;
+		    border: none;
+		    border-radius: 10px;
+		    font-size: 16px;
+		    letter-spacing: 2px;
+		    margin-top: 15%;
+		}
+		input,button{outline: none;}
+	</style>
+</head>
+
+<body>	
+	<section id="receive">
+		<div class="topbox">
+			<h4>领取规则：</h4>
+			<ul>
+				<li>畅享卡预存200元可领取1个投票权</li>
+				<li>星沃卡48元月付/年付可领取1个投票权</li>
+				<li>星沃卡168元月付/年付可领取2个投票权</li>
+				<li>仅限正常使用的星沃卡、畅享卡领取</li>
+				<li>丝瓜会员的投票权领取请到官网vote.48.cn进行领取</li>
+			</ul>
+			<p class="zhu">注：每个绑定的手机号只能领取1次</p>
+		</div>
+		<div class="recbox">
+			<button class="receivebtn">领取投票权</button>
+		</div>
+		<div class="mask">
+			<div class="maskinfo">
+				<p>成功领取<em></em>个投票权</p>
+				<button class="rightbtn">完成</button>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
+<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.jsonp.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/config.js" type="text/javascript" charset="utf-8"></script>	
+<script src="js/main.js" type="text/javascript" charset="utf-8"></script>	
+<script src="js/getUserInfo.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="js/freeReceive.js"></script>
+

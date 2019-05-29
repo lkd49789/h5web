@@ -1,0 +1,336 @@
+*{margin:0;padding: 0}
+html,body{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background-color: #f6f6f6;
+}
+body{
+	max-width: 640px;
+	margin:0 auto;
+}
+section{
+	width: 100%;
+	height: auto;
+	min-height: 100%;
+	background: #f6f6f6;
+}
+.topbox{
+	padding: 4%;
+}
+.perbox{
+	border-radius: 5px;
+	background-color: #fff;
+}
+.avatatbox{
+	height: 5rem;
+}
+.avatat{
+	display: block;
+	width: 3.5rem;
+	height: 3.5rem;
+	border-radius: 100%;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+	float: left;
+	margin-top:0.6rem;
+	margin-left:1rem;
+}
+.mername{
+	font-size: 1.2rem;
+	color:#222;
+	padding-left:5.5rem;
+	line-height: 5rem;
+}
+.mername .team{
+	font-size:1rem;
+	border-radius: 0.2rem;
+	padding: 0 0.3rem;
+	margin-left: 0.5rem;
+	width: 2.5rem;
+}
+
+
+.vidbox{
+	position: relative;
+}
+
+.video{
+	width: 100%;
+	height: 0;
+	position: relative; 
+	padding-bottom:49.25%; 
+	background: #000000;
+}
+.video video{
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.qu,.no_qu{
+	width: 100%;
+	height:0;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0;
+	padding-bottom:49.25%;
+	background-size: 100%;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.play{
+    width: 14%;
+    position: absolute;
+    left: 43%;
+    top: 35%;
+    z-index: 1;
+}
+.btns{
+	padding: 1rem 0;
+	text-align: center;
+}
+.btns button{
+	border:0;
+	background-color: #ff80d8;
+	color:#221d6d;
+	font-size: 1.2rem;
+	border-radius: 2rem;
+	width: 40%;
+	height: 2.3rem;
+}
+.votebtn{
+	margin-right: 2%;
+}
+.zanbtn{
+	margin-left: 2%;
+}
+
+
+.iconsbtn{
+	border-top:1px solid #6c699b;
+	height: 3.5rem;
+}
+.iconsbtn li{
+	float: left;
+	font-size: 1rem;
+	color:#adadad;
+	border:none;
+	height: 3.5rem;
+	line-height: 3.5rem;
+	vertical-align: middle;
+	margin-bottom: 0;
+	text-align: center;
+	position: relative;
+}
+.iconsbtn li img{
+	width: 1.5rem;
+	margin-right:0.5rem;
+
+}
+
+
+
+
+
+.mui-scroll-wrapper{
+	top: 0%;
+	bottom: 4.5rem;
+}
+.mui-pull-bottom-tips{
+	text-align: center;
+}
+.mui-pull-loading{
+	font-size: 1.2rem;
+	color: #808080;
+}
+.mui-content{
+	background: #f6f6f6;
+}
+.mui-table-view:before,.mui-table-view:after{
+	background-color: #e8e8e8;
+}
+
+.title{
+	height: 3.5rem;
+	font-size: 1.3rem;
+	color: #222;
+	line-height: 3.5rem;
+	padding-left: 4%;
+}
+
+.lists li{
+	padding: 1.5rem 4%;
+	background-color: #fff;
+	margin-bottom: 1px;
+	border-bottom: 1px solid #e8e8e8;
+}
+.nohave{
+	padding: 1rem 2rem;
+	font-size: 1.3rem;
+}
+p{
+	margin:0;
+	padding: 0;
+	font-size: 1.2rem;
+	color:#000;
+}
+.avatabox{
+	position: relative;
+	height: 4rem;
+}
+.avata{
+	display:block;
+	width: 4rem;
+	height: 4rem;
+	border-radius: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	float: left;
+	border:1px solid #c4c4c4;
+}
+.avatext{
+	position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    padding-left: 4.5rem;
+}
+
+.name{
+	color: #222;
+}
+.time{
+	margin-top: 3px;
+	color:#c4c4c4;
+}
+.time span{
+	margin-left: 10px;
+}
+.texts{
+	margin-top: 5px;
+	color: #222;
+}
+.report{
+	display: block;
+	position: absolute;
+	width: 4rem;
+	height: 2rem;
+	color: #fff;
+	background-color: #839cff;
+	font-size: 1rem;
+	right: 0;
+	text-align: center;
+	line-height: 2rem;
+	border-radius: 0.5rem;
+	top: 1rem;
+}
+.reActive{
+	background-color: #c4c4c4;
+}
+
+.inputbox{
+	height: 4rem;
+	position: fixed;
+	width: 100%;
+	max-width: 640px;
+	bottom: 0;
+	z-index: 99;
+}
+.textinput{
+	width: 80%!important;
+	height: 4rem!important;
+	background-color: #fff!important;
+	font-size: 1.2rem;
+	margin-bottom: 0!important;
+	padding: 1rem 0 1rem 1rem!important;
+	float: left;
+	border:0!important;
+}
+.submit{
+	border:0;
+	width: 20%!important;
+	background-color:#839cff;
+	color:#fff;
+	height: 4rem;
+	font-size: 1.2rem;
+}
+.praise{
+	text-align: center;
+	padding: 2% 0 0 0;
+	font-size: 1.3rem;
+	color: #808080;
+	letter-spacing: 2px;
+}
+.praisenum{
+	font-size: 1.3rem;
+	color:#839cff;
+}
+
+
+/*input textarea（placeholder的颜色） */
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #c4c4c4;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #c4c4c4;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #c4c4c4;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #c4c4c4;
+}
+
+
+/*是否点赞弹框*/
+.maskbox{
+	width: 100%;
+	height: 100%;
+	max-width: 640px;
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+	background-color: rgba(0,0,0,.4);
+	display: none;
+	z-index: 9999999;
+}
+.masklike{
+	width: 80%;
+	background-color:#fff;
+	border-radius: 8px;
+	position: absolute;
+	left: 10%;
+	top: 33%;
+}
+.upbox{
+	padding: 10%;
+	border-bottom: 1px solid #c4c4c4;
+}
+.btnbox button{
+	background: transparent;
+	border:0;
+	width: 47%;
+	color:#2774ff;
+	font-size: 1.3rem;
+	padding: 4% 0;
+	display: inline-block;
+}
+.btnbox button:first-child{
+	border-right: 1px solid #c4c4c4;
+}
+
+.upbox p{
+	font-size: 1.3rem;
+	text-align: center;
+}
+
+input,button{
+	outline: none;
+}

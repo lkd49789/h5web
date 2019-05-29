@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>视频列表</title>
+	<link href="css/common.css" rel="stylesheet" />
+	<style type="text/css">
+		*{margin:0;padding: 0;}
+		html,body{width: 100%;height: 100%;}
+		body{max-width: 640px;margin:0 auto;position: relative;}
+		section{width: 100%;height: 100%;position: relative;}
+		.vidbox{position: relative;padding-bottom: 2%;}
+		.video{width: 100%;height: 0;position: relative; padding-bottom:52.25%; background: #000000;}
+		.video video{position: absolute;top:0;left: 0;width: 100%;height: 100%;}
+		.qu,.no_qu{width: 100%;height:0;background-position: center;background-repeat: no-repeat;position: relative;top: 0;padding-bottom:52.25%;background-size: 100%;border-top-left-radius: 5px;border-top-right-radius: 5px;}
+		.play{width: 14%;position: absolute;left: 43%;top: 30%;}
+		.musicName{padding-left: 2%;font-size: 14px!important;color:#000;line-height: 3rem;}
+		.jumpbox{width: 100%;position: relative;height: 3rem;line-height: 3rem;}
+		.icon_jump{width: 2%;position: absolute;top: 0.8rem;right: 4%;}
+	</style>
+</head>
+<body>
+	<section>
+		<ul class="vidList">
+			<!-- <li class="vidbox">
+				<div class="video">
+					<video class="bofang" src="" preload="load" webkit-playsinline></video>
+				</div>
+				<div class="qu" style="background-image:url(img/eg.jpg)">
+					<img src="img/play.png" class="play">
+				</div>
+				<div class="jumpbox">
+					<p class="musicName">《最后的曙光》</p>
+				</div>
+			</li> -->
+			<li class="vidbox" vid="2336">
+				<div class="qu" style="background-image:url(img/gongpingjingsai.jpg)">
+					<img src="img/play.png" class="play">
+				</div>
+				<div class="jumpbox">
+					<p class="musicName">《公平竞赛篇》</p>
+					<img src="img/icon_jump.png" class="icon_jump">
+				</div>
+			</li>
+			<li class="vidbox" vid="2337">
+				<div class="qu" style="background-image:url(img/yongxingechang.jpg)">
+					<img src="img/play.png" class="play">
+				</div>
+				<div class="jumpbox">
+					<p class="musicName">《用心歌唱篇》</p>
+					<img src="img/icon_jump.png" class="icon_jump">
+				</div>
+			</li>
+			<li class="vidbox" vid="2338">
+				<div class="qu" style="background-image:url(img/ningjuli.jpg)">
+					<img src="img/play.png" class="play">
+				</div>
+				<div class="jumpbox">
+					<p class="musicName">《凝聚力篇》</p>
+					<img src="img/icon_jump.png" class="icon_jump">
+				</div>
+			</li>
+		</ul>
+	</section>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script>
+	//点击播放视频
+	/*$('.vidList').on('click','.qu',function(){
+	  		$(this).hide();
+	  		$(this).parents('.vidbox').find('video').trigger('play');
+	  		$(this).parents('.vidbox').siblings().find('video').trigger('pause');
+	  		$(this).parents('.vidbox').find('video').removeClass('pause');
+	  		$(this).parents('.vidbox').find('video').addClass('play');
+	});
+
+	$('.vidList').on('click','video',function(){
+		if ($(this).hasClass('pause')) {
+	  		$(this).trigger('play');
+	  		$(this).parents('.vidbox').siblings().find('video').trigger('pause');
+	  		$(this).removeClass('pause');
+	  		$(this).addClass('play');
+  		}else{
+  			$(this).trigger('pause');
+  			$(this).removeClass('play');
+  			$(this).addClass('pause');
+  		}
+	})*/
+
+	//跳转至视频播放
+	$('.vidbox').click(function(){
+		var vid = $(this).attr('vid');
+		vedioPlay(vid);
+	});
+
+	//视频详情页
+	function vedioPlay(num){
+		window.web.gotoPage('video/detail?id='+num);
+	}
+
+</script>
+</html>

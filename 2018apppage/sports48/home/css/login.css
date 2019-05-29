@@ -1,0 +1,103 @@
+
+#logsec{
+	width: 100%;
+	height: 100%;
+	background:url(../img/bg.jpg)no-repeat center bottom;
+	background-size: cover;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+}
+.loginbox{
+	width: 80%;
+	position: absolute;
+	left: 10%;
+	top: 15%;
+}
+.username,.password{
+	width: 100%;
+	text-align: center;
+	border:1px solid #fff;
+	border-radius: 10px;
+	height: 3.5rem;
+	color:#fff;
+	font-size: 1.3rem;
+	background-color:transparent;
+	outline: none;
+	margin-top: 1.5rem;
+}
+.remind{
+	font-size: 1.2rem;
+	color:#b1300e;
+	margin-bottom: 0;
+	text-align: center;
+	letter-spacing: 2px;
+	font-weight: bold;
+}
+.tokencon{
+	width: 100%;
+	height: 3.5rem;
+	margin-top: 1.5rem;
+}
+.token{
+	width: 60%;
+	border:1px solid #fff;
+	height: 100%;
+	border-radius: 5px;
+	background-color: transparent;
+	font-size: 1.3rem;
+	color:#fff;
+	float: left;
+	outline: none;
+	text-align: center;
+}
+.token_value{
+	float: right;
+	width: 35%;
+	margin-left: 4%;
+	line-height: 3.5rem;
+}
+.token_value img{
+	width: 100%;
+}
+.submit_btn,.back_btn{
+	margin-top: 1.5rem;
+	width: 100%;
+	border:0;
+	border-radius: 10px;
+	font-size: 1.3rem;
+	color: #fff;
+	height: 3.5rem;
+	background: -webkit-linear-gradient(left, #9b66fd , #eea3ff); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(right, #9b66fd , #eea3ff); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(right, #9b66fd , #eea3ff); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to right, #9b66fd , #eea3ff); /* 标准的语法 */
+	outline: none;
+	    text-align: center;
+}
+label{
+	font-size: 1rem;
+    color: #fff;
+    vertical-align: -0.5rem;
+    margin-right: 0.5rem;
+}
+
+.p1,.p2,.p3{
+	opacity:0;
+}
+
+
+/*input textarea（placeholder的颜色） */
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #e5ecff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #e5ecff;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #e5ecff;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #e5ecff;
+}

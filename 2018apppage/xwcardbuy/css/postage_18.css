@@ -1,0 +1,45 @@
+*{
+	margin:0;
+	padding: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+body{
+	max-width: 640px;
+	margin:0 auto;
+	background-color: #fff;
+}
+section{
+	width: 100%;
+	height: 100%;
+}
+.content{
+	padding:3% 3% 10% 3% 
+}
+p{
+	font-size: 1.3rem;
+	color: #343d4e;
+	font-weight: bold;
+}
+em{
+	font-size: 1.3rem;
+	color: #838cff;
+}
+.p1{
+	padding-bottom: 4%; 
+}
+li{
+	color: #808080;
+	font-size: 1.2rem;
+}
+.p2{
+	margin:4% 0 1% 0;
+}
+.p3{
+	margin:1% 0 1% 0;
+}
+.p4{
+	margin:5% 0 3% 0;
+}

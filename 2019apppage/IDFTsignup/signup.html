@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>报名代役</title>
+	<link href="../../common/css/common.css" rel="stylesheet" />
+	<link href="css/popbox.css" rel="stylesheet" />
+	<link href="css/signup.css" rel="stylesheet" />
+</head>
+<body>
+	<section class='wrapper' v-cloak>
+		<div class="member-box">
+			<div class="avatar"><img :src="mInfo.starAvatar"></div>
+			<div class="m-info">
+				<p>{{mInfo.starName}}</p>
+				<div>
+					<span>IDFT排名：{{mInfo.rank}}</span>
+					<span>入团时间：{{mInfo.joinTime}}</span>
+				</div>
+			</div>
+		</div>
+		<div class="btns">
+			<p class="btn red" v-on:click="showpop = 2">放弃代役资格</p>
+			<p class="btn" v-on:click="gotoSubmitPage()">填写报名信息</p>
+		</div>
+		
+		<!-- 弹框 -->
+		<div class="mask" v-if="showpop!=0">
+			<div v-if="showpop == 1">
+				<p>{{tips}}</p>
+				<span v-on:click="closePop()">知道了</span>
+			</div>
+			<div class="submit-box" v-if="showpop == 2">
+				<p>你已选择放弃本次代役资格，下次重新获得机会需要间隔3个月的时间，是否确认放弃？</p>
+				<span class="red" v-on:click="giveup()">确认放弃</span>
+				<span v-on:click="closePop()">取消</span>
+			</div>
+		</div>
+	</section>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<script src="../../common/js/vue.js"></script>
+<script src="../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/signup.js"></script>
+</html>

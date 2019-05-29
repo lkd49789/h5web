@@ -1,0 +1,108 @@
+/*绑定设备号弹窗*/
+body{
+	/*background: #fff;*/
+}
+section{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	overflow: hidden;
+}
+.bind-content{
+	position: absolute;
+    z-index: 10000;
+    text-align: center;
+    color: #000; 
+    background: #fff; 
+    /*border-radius: 13px;*/
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 10% 6% 5%;
+    box-shadow: 2px 2px 5px #ccc;
+    height: 100%;
+    width:100%;
+}
+.bind-content h5{
+	font-weight: 600;
+	margin-bottom: 14px;
+	color: #000;
+}
+.bind-content input[type="phone"]{
+	width: 100%;
+    height: 40px;
+    -webkit-appearance: none;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    line-height: 21px;
+    -webkit-user-select: text;
+    border-radius:5px;
+    outline: 0;
+    color: #fff;
+}
+.bind-content input{
+	background: #ECECEC;
+	border: 1px solid #DADADA;
+	border-radius:5px;
+	color: #000;
+}
+.bind-content input::-webkit-input-placeholder{
+	color: #A0A0A0;
+}
+
+.bind-content input[type="button"]{
+	width: 100%;
+    height: 40px;
+    -webkit-appearance: none;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    line-height: 21px;
+    -webkit-user-select: text;
+    background-color: #5C6BC2;
+    border-radius:5px;
+    outline: 0;
+    color: #fff;
+    font-weight:500;
+    text-align: center;
+    border: none;
+}
+.bind-content #bind{
+	width: 100%;
+    height: 40px;
+    -webkit-appearance: none;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    line-height: 21px;
+    -webkit-user-select: text;
+    background-color: #5C6BC2;
+    border-radius:5px;
+    outline: 0;
+    color: #fff;
+    font-weight:500;
+    text-align: center;
+    border: none;
+}
+#sgInfor div p{
+    font-size: 12px;
+    text-align: left;
+    color: #f00;
+}
+footer{
+    width: 88%;
+    position: absolute;
+    bottom: 2rem;
+}
+.bind-wrapper{
+    display: none;
+}
+.bind-info{
+    color: #FF1212;
+    text-align: left;
+}
+
+.tip-vip{
+    font-size: 12px;
+    text-align: left;
+    color: #f00;
+    margin-top: 10px;
+}

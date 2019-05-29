@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>获奖列表</title>
+	<link href="css/common.css" rel="stylesheet" />
+	<style>
+		*{margin:0;padding: 0;}
+		html,body{
+			width: 100%;
+			height: 100%;
+		}
+		body{
+			width: 100%;
+			max-width: 640px;
+			background-color: #181461;
+			position:relative;
+			margin:0 auto;
+		}
+		section{
+			width: 100%;
+			min-height: 100%;
+			height: auto;
+			position: relative;
+			background: url(img/bg.jpg)no-repeat center top #181461;
+			background-size:cover;
+		}
+		input,button{
+			outline: none;
+			border:none;
+		}
+		.perList{
+			padding: 0% 5% 5% 5%;
+		}
+		.perList li{
+			font-size: 1.3rem;
+			color: #ff80d8;
+			width: 100%;
+			height: 7.5rem;
+			line-height: 7.5rem;
+			text-align: center;
+			background: url(img/bigbg.png)no-repeat 0 0;
+			background-size: 100% 100%;
+			letter-spacing: 2px;
+			margin-bottom:2%;
+		}
+		.banner{
+			display: block;
+			width: 60%;
+			margin-left: 20%;
+			padding-top: 3%;
+		}
+		.tab{
+			width: 100%;
+			height: 3.5rem;
+		}
+		.tab li{
+			width: 50%;
+			float: left;
+			height: 3.5rem;
+			line-height: 3.5rem;
+			font-size: 1.3rem;
+			color: #ff80d8;
+			text-align: center;
+			letter-spacing: 2px;
+		}
+		.perbox{
+			padding: 0 5% 10% 5%;
+		}
+		.linkpastbtn{
+			font-size: 1.5rem;
+			color: #fff;
+			width: 100%;
+			height: 5.5rem;
+			line-height: 5.5rem;
+			text-align: center;
+			letter-spacing: 2px;
+			border-radius: 1rem;
+			background: -webkit-linear-gradient(left, #f972c4 , #b161f0); /* Safari 5.1 - 6.0 */
+			background: -o-linear-gradient(right, #f972c4 , #b161f0); /* Opera 11.1 - 12.0 */
+			background: -moz-linear-gradient(right, #f972c4 , #b161f0); /* Firefox 3.6 - 15 */
+			background: linear-gradient(to right, #f972c4 , #b161f0); /* 标准的语法 */
+		}
+		.trans{
+			opacity: 0.4;
+		}
+		
+	</style>
+</head>
+<body>
+	<section>
+		<img src="img/banner.png" class="banner">
+		<ol class='tab'>
+			<li class="tit">获奖名单</li>
+			<li class="rulebtn">竞猜规则</li>
+		</ol>
+		<ul class="perList">
+			<!-- <li class="perli" guessId="1">第一期获奖粉丝</li> -->
+		</ul>
+		<div class="perbox">
+			<button class="linkpastbtn">往期竞猜</button>
+		</div>
+	</section>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+	$(function(){
+		init();
+	})
+	function init(){
+		getNumawardList();
+		addListeners();
+	}
+	function addListeners(){
+
+		//跳转往期列表
+		$('.linkpastbtn').click(function(){
+			main.hrefTo("periods.html");
+		})
+
+		//跳转规则
+		$('.rulebtn').click(function(){
+			main.hrefTo("rule.html");
+		})
+
+		//跳转每期获奖名单
+		$('.perList').on('click','.linkbtn',function(){
+			var guessId = $(this).attr('guessId');
+			main.hrefTo("winners.html?guessId="+guessId);
+		})
+
+		
+	}
+
+	function getNumawardList(){
+		main.getNumawardList(function(dt){
+			if(dt.status==200){
+				var html=[];
+
+				$.each(dt.content,function(index,value){
+					var text;
+					//console.log(index)
+					if(index==1 || index=="1"){
+						text="第一期获奖粉丝"
+					}else if(index==2 || index=="2"){
+						text="第二期获奖粉丝"
+					}else if(index==3 || index=="3"){
+						text="第三期获奖粉丝"
+					}else if(index==4 || index=="4"){
+						text="第四期获奖粉丝"
+					}else if(index==5 || index=="5"){
+						text="第五期获奖粉丝"
+					}else{
+						text="第六期获奖粉丝"
+					}
+					
+					if(value==false || value=="false"){//未公布获奖粉丝名单
+						html.push('<li class="trans" guessId='+index+'>'+text+'</li>');
+					}else{
+						html.push('<li class="linkbtn" guessId='+index+'>'+text+'</li>');
+					}
+
+				})
+				$('.perList').append(html.join(""));
+			}else{
+				main.alert(dt.message);
+			}
+		})
+	}
+</script>
+</html>

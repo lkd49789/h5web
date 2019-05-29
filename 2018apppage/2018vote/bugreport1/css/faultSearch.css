@@ -1,0 +1,148 @@
+html,body { width: 100%; height: 100%; font-family: "微软雅黑";}
+
+
+
+html{font-size:10px}
+
+@media screen and (max-width:320px){html{font-size:9px}}
+
+@media screen and (min-width:321px) and (max-width:375px){html{font-size:11px}}
+
+@media screen and (min-width:376px) and (max-width:414px){html{font-size:13px}}
+
+@media screen and (min-width:415px) and (max-width:639px){html{font-size:18px}}
+
+@media screen and (min-width:640px) and (max-width:719px){html{font-size:20px}}
+
+@media screen and (min-width:720px) and (max-width:749px){html{font-size:22.5px}}
+
+@media screen and (min-width:750px) and (max-width:799px){html{font-size:25.5px}}
+
+@media screen and (min-width:800px){html{font-size:25px}}
+
+section{
+	    padding-bottom: 30px;
+}
+
+
+
+.list_view {
+	/*min-height: 100%;*/
+	margin: 0 15px 0 70px;
+	padding-left: 20px;
+	border-left: solid 3px #C4C4C4;
+	padding-bottom: 25px;
+}
+
+.list_view li {
+	position: relative;
+	padding-top: 12px;
+}
+.bg-fault{
+	/*background:url(../images/bg-fault.png) no-repeat 0 0;
+	background-size: 100% 100%;*/
+	background-color: #fff;
+}
+.list_view li .card {
+	padding: 10px 10px 10px 20px;
+	border-radius: 5px;
+	/*overflow-y: scroll;*/
+	color: #808080;
+}
+
+.list_view li .card:hover {
+	background: #f3f3f3;
+}
+
+.list_view li .card .pic img {
+	width: 100%;
+}
+
+.list_view li .card h2 {
+	margin: 6px 0;
+	font-size: 1.4rem;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.list_view li .card .desc {
+	margin-top: 3px;
+	color: #999;
+	font-size: 1.3rem;
+	/*max-height: 75px;*/
+	/*overflow: scroll;*/
+}
+.circle{
+
+	position: absolute;
+
+	left: -30px;
+
+	top: 30px;
+
+	width:18px;
+
+	height:18px;	
+
+	color: #C5C5C5;
+
+	border-radius: 50%;
+
+	background: #5B6BC2;
+
+}
+.list_view li .date {
+	position: absolute;
+	left: -79px;
+	top:21px;
+	color: #C4C4C4;
+
+	text-align: center;
+}
+
+.list_view li .date strong {
+	font-weight: normal;
+	line-height: 14px;
+	color: #808080;
+	font-size: 1rem;
+}
+
+.list_view li .date p {
+	line-height:22px;
+	font-size: 1rem;
+	color: #808080;
+	white-space: nowrap;
+}
+.list_view li img{
+	width: 5px;
+    margin-left: -5px;
+    position: absolute;
+    margin-top: 10px;
+}
+.myscroll {
+	width: 100%;
+	height: 85%;
+	overflow: hidden;
+}
+
+.listDiv{
+	position: relative;
+	height: 100%;
+}
+.mui-scroll-wrapper{
+	height: 100%;
+    overflow-y: scroll;
+}
+#pullrefresh ul{
+	background-color: rgba(0,0,0,0);
+}
+.mui-table-view:before,.mui-table-view:after{
+	background-color: rgba(0,0,0,0);
+}
+.mui-scroll{
+	width: auto;
+}
+footer{
+	position: fixed;
+	bottom: 0;
+}

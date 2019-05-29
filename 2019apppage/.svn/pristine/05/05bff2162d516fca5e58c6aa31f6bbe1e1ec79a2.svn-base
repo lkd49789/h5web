@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IDOLS FT</title>
+    <link href="../../common/css/mui.picker.css" rel="stylesheet"/>
+    <link href="../../common/css/common.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/fans.css">
+</head>
+<body>
+    <div id="app" v-cloak>
+        <div class="tab">
+            <div :class="['tab_item',{'tab_active':who == 'my'}]" @click="tabClick(1)">我的信息</div>
+            <div :class="['tab_item',{'tab_active':who == 'know'}]" @click="tabClick(2)">重新认识下</div>
+            <span class="border" :style="'left:'+left"></span>
+        </div>
+        <!-- <keep-alive include="know"> -->
+            <!-- 将缓存name为know的组件 -->
+            <component :is="who"></component>
+        <!-- </keep-alive> -->
+    </div>
+
+    <!--我的信息页面-->
+    <template id="myPage">
+        <div class="my">
+            <div class="banner" >
+                <a href="http://www.cqpw.cn/m/#/projectDetail/723758909407502336.html">
+                    <img src="img/fans/banner.jpg" alt="">
+                </a>
+            </div>
+            <p class="my_title"><b>应援榜</b></p>
+            <div class="my_item">
+                <div class="my_time">
+                    <!-- <div class="year"><span>2017年排行</span><img src="./img/fans/date.jpg" alt="日历"></div> -->
+                    <div class="time" @click="timeClick && showProPanel()"><span v-text="time"></span> 
+                        <span class="triangle" ></span>
+                    </div>
+                </div>
+                <ul class="myUl">
+                    <li v-for="(item,index) in rankUserList">
+                        <div class="my_li_left" >
+                            <div><b v-color="1" v-text='item.rankNum' ></b></div>
+                            <div class="head">
+                                <img :src="'https://source.48.cn'+item.baseUserInfo.avatar" alt="">
+                            </div>
+                            <div>
+                                <p v-text="item.baseUserInfo.nickname"></p>
+                                <p class="my_li_left_p2">头号粉: <span v-text="item.topUserInfo.nickname"></span></p>
+                            </div>
+                        </div>
+                        <div class="my_li_right">
+                            <p>魅力值 <b v-text="item.melee"></b></p>
+                            <p>去应援</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="my_bottom">
+                <div class="my_bottom_scroll">
+                    <div class="item" v-for="(item,index) in content.friendshipsMeleeRank.rankUserList">
+                        <div><b v-text='item.rankNum'></b></div>
+                        <div class="head">
+                            <img :src="'https://source.48.cn'+item.baseUserInfo.avatar" alt="">
+                        </div>
+                        <div class="name">
+                            <p v-text="item.baseUserInfo.nickname"></p>
+                            <p class="p2">魅力值 <b v-text="item.melee"></b></p>
+                        </div>
+                        <div class="bor"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!--重新认识下页面-->
+    <template id="knowPage">
+        <div class="know" ref="know">
+            <div class="know_itemWrap" v-for="(item,index) in list" :key="index" >
+                <div class="know_item">
+                    <img class="img" v-if='item.previewImg[0]' :src="'https://source.48.cn'+item.previewImg[0].imgUrl" alt="图片">
+                    <p class="title"><b v-html="item.previewText"></b></p>
+                    <div class="user">
+                        <div class="head">
+                            <img :src="'https://source.48.cn'+item.user.avatar" alt="">
+                            <span v-text="item.user.nickname"></span>
+                        </div>
+                        <div class="user_right">
+                            <img class="fire" src="./img/fans/fire.jpg" alt="热度">
+                            <span v-text="item.hotCount"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+        </div>
+    </template>
+    
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="../../common/js/mui.min.js"></script>
+<!-- <script src="../../common/js/data.city.js"></script>	 -->
+<script src="../../common/js/mui.picker.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<!-- <script src="../../common/js/vue.js"></script> -->
+<script src='https://cdn.bootcss.com/vue/2.6.10/vue.js'></script>
+<script src="../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/fans.js"></script>
+</html>

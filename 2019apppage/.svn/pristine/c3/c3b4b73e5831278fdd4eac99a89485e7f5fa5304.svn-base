@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>手账电子档</title>
+     <link href="../../common/css/common.css" rel="stylesheet" />
+      <link rel="stylesheet" href="./css/popbox.css">
+      <link rel="stylesheet" href="./css/imgList.css">
+</head>
+
+<body>
+    <div id="app">
+        <p class="title"><b>VIP用户可以免费获得一位成员的手账电子档</b></p>
+        <div class="listWrap">
+            <ul>
+                <li v-for="(item,index) in list" :key="index" @click="buy(item.goodsId,item.status,item.baseUserInfo.nickname)">
+                    <img :class="{'bg':item.status == 0}" :src="'https://source.48.cn'+item.vipImage" alt="">
+                    <div class="headWrap">
+                        <div class="head">
+                            <img :src="'https://source.48.cn'+item.baseUserInfo.avatar" alt="">
+                        </div>
+                        <div class="name">
+                            <span><b v-text="item.baseUserInfo.nickname"></b></span>
+                            <img :src="'https://source.48.cn'+item.baseUserInfo.teamLogo" alt="">
+                        </div>
+                    </div>
+                    <div class="nike" v-if="item.status == 2">
+                        <img src="./img/list_nike.png" alt="">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- 弹框 -->
+        <div class="mask" v-if="showpop!=0" v-cloak>
+                <!-- 充值 -->
+                <div class="no-money" v-if="showpop == 1">
+                        <p><b>{{tips}}</b></p>
+                        <span style="background: url('./img/btn1.png') no-repeat left top/100% 100%" v-on:click="showpop = 0">再说</span>
+                        <span style="background: url('./img/btn2.png') no-repeat left top/100% 100%" v-on:click="recharge()" >充值</span>
+                    </div>
+                <!-- 确认 或称为VIP -->
+                <div class="no-money" v-if="showpop == 2">
+                    <p><b>{{tips}}</b></p>
+                    <span style="background: url('./img/btn1.png') no-repeat left top/100% 100%" v-on:click="showpop = 0">再说</span>
+                    <span style="background: url('./img/btn2.png') no-repeat left top/100% 100%" v-on:click="close()" v-text="poxText"></span>
+                </div>
+            </div>
+    </div>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="../../common/js/mui.min.js" ></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<script src="../../common/js/vue.js"></script>
+<!-- <script src='https://cdn.bootcss.com/vue/2.6.10/vue.js'></script> -->
+<script src="../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script>
+ var app = new Vue({
+     el:'#app',
+     data:{
+        list:[],
+        showpop:0,
+        tips:'',
+        useVip:false, /*是否用过VIP*/
+        vip:false,  /*是否是VIP*/
+        poxText:'确认',
+        goodsId:''
+     },
+     mounted:function(){
+         var that = this;
+         that.getImgList()
+     },
+     methods:{
+         /*获取用户信息 */
+        getUserInfo:function() {
+           return dsBridge.call("snhUserInfo");
+        },
+         getImgList:function(){
+            var that = this;
+            main.getImgList(function(data){
+                if(data.status == 200){
+                    that.useVip = data.content.useVip;
+                    that.vip = data.content.vip;
+                    data.content.memberGoodsInfos.sort(function(a,b){
+                       return a.goodsId - b.goodsId;
+                    })
+                    that.list = data.content.memberGoodsInfos;
+                    if(!that.vip){
+                        var obj = JSON.parse(that.getUserInfo())
+                        var time = setInterval(function(){
+                        that.vip =  obj.userInfo.vip
+                        if(that.vip){
+                            clearInterval(time)
+                        }
+                        },2000)
+                    }
+                }else{
+                    alert(data.message)
+                }
+            })
+         },
+         buy:function(id,status,name){
+             var that = this;
+             if(status == 0){
+                return false;
+             }else if(!that.vip){
+                that.poxText = '成为VIP';
+                that.tips = 'VIP可以免费获取或购买小偶像的亲笔手账电子档。';
+                that.showpop = 2;
+                return false;
+             }else if(that.vip && !that.useVip){
+                that.poxText = '确认';
+                that.tips = '只有1次免费领取机会，是否领取'+name.split('-')[1]+'手账的电子版？';
+                that.goodsId = id
+                that.showpop = 2;
+                return false;
+             }else if(status == 1){
+                that.poxText = '确认';
+                that.tips = '是否确认花费50鸡腿购买'+name.split('-')[1]+'手账的电子版？';
+                that.goodsId = id
+                that.showpop = 2;
+                return false;
+             }else if(status == 2){
+                // that.gotoPage('imgDetails.html?goodsId='+id);
+
+                var that = this;
+                main.getImgDetails(id,function(data){
+                    if(data.status == 200){
+                        data.content.auctionGoods.detailsImage = data.content.auctionGoods.detailsImage.split(';')
+                        var arr = data.content.auctionGoods.detailsImage.map(function(item,index){
+                            item = 'https://h5.48.cn/2019apppage/swimsuit/images/'+item
+                            return item
+                        })
+                        that.snhBrowserImages(arr)
+                    }else{
+
+                    }
+
+                })
+             }
+         },
+         snhBrowserImages:function(images) {
+                // var images =  new Array("/20181112/154201491032365B86p7b65.jpg",
+                //             "/20181112/1542014912141dXIHl0H4K7.jpg",
+                //             "/20181112/154201491607385y7YDd1Ao.jpg",
+                //             "/20181112/1542014919127N2NgpI893e.jpg",
+                //             "/20181112/1542014922285e6TkTw26Ho.jpg",
+                //             "/20181112/1542014924378IqTfepTHy3.jpg");
+                var params = {
+                    images: images,
+                    index: 0  
+                };
+                dsBridge.call("snhBrowserImages",params);
+            },
+          /*充值 */
+        recharge:function(){
+            if(checkFromNew()){
+	    		_openNativeModule("recharge/recharge")
+	    	}else{
+	    		window.web.gotoPage("recharge/detail");
+	    	}
+        },   
+        /*跳转方法 */
+        gotoPage:function(_url){
+            var url = _url
+            if(url.indexOf("http://")>=0 ||url.indexOf("https://")>=0){
+                
+            }else{
+                url = CONFIG.geturl()+url
+            }
+            if(checkFromNew()){
+                snhOpenNewWebview(url)
+            }else if(checkFromOld()){
+                window.web.gotoDetail(url);
+            }else{
+                window.location.href = url
+            }         
+        },
+        close:function(){
+            var that = this;
+            if( that.tips == 'VIP可以免费获取或购买小偶像的亲笔手账电子档。'){
+                /*VIP方法*/
+                _openNativeModule('vip/detail')
+            }else if(that.tips.indexOf('只有1次免费领取机会') >= 0){
+                /*领取*/
+                main.buyImg(that.goodsId,function(data){
+                    if(data.status == 200){
+                        that.tips = '购买成功';
+                        that.showpop = 1;
+                        that.getImgList()
+                    }else{
+                        alert(data.message)
+                    }
+                })
+            }else if(that.tips.indexOf('是否确认花费50鸡腿') >= 0){
+                main.buyImg(that.goodsId,function(data){
+                    if(data.status == 200){
+                        that.tips = '购买成功';
+                        that.showpop = 1;
+                        that.getImgList()
+                    }else{
+                        alert(data.message)
+                    }
+                })
+            }
+        }
+     }
+ })
+
+</script>
+</html>

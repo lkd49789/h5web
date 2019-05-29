@@ -1,0 +1,382 @@
+*{margin:0;padding: 0;}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+body{
+	width: 100%;
+	max-width: 640px;
+	margin:0 auto;
+	background-color: #181461;
+	position:relative;
+}
+button,input{
+	border:none;
+	outline: none;
+}
+.sec1{
+	width: 100%;
+	min-height: 100%;
+	height: auto;
+	background: url(../img/bg.jpg)no-repeat center top #181461;
+	background-size:cover;
+	position: absolute;
+	left:0;
+	top: 0;
+	display: none;
+}
+.sec2{
+	width: 100%;
+	min-height: 100%;
+	height: auto;
+	background: url(../img/bg.jpg)no-repeat center top #181461;
+	background-size:cover;
+	position: absolute;
+	left:0;
+	top: 0;
+	display: none;
+}
+
+.banner{
+	display: block;
+	width: 60%;
+	margin-left: 20%;
+	padding-top: 3%;
+}
+.tab{
+	width: 100%;
+	height: 3.5rem;
+}
+.tab li{
+	width: 50%;
+	float: left;
+	height: 3.5rem;
+	line-height: 3.5rem;
+	font-size: 1.3rem;
+	color: #ff80d8;
+	text-align: center;
+	letter-spacing: 2px;
+}
+.rankList,.rankList1{
+	padding: 3%;
+}
+.rankList li,.rankList1 li{
+	color: #fff;
+	height: 6rem;
+	margin-bottom:2%;
+}
+.rankLeft {
+	float: left;
+	width: 50%;
+	height: 100%;
+	line-height: 6rem;
+}
+.rank{
+	display: block;
+	font-size: 1.3rem;
+	color: #fff;
+	width: 25%;
+	height: 100%;
+	text-align: center;
+	float: left;
+	line-height:6rem;
+}
+.avatar {
+	display: block;
+	width: 4rem;
+	height: 4rem;
+	border:1px solid #fff;
+	border-radius: 100%;
+	margin-left: 40%;
+	position: relative;
+	margin-top: 1rem;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+	background-image: url(../img/headeg.png);
+}
+.mername{
+	display: block;
+	float: left;
+	width: 50%;
+	border: none;
+	height: 100%;
+	background:url(../img/smbg.png)no-repeat 0 0;
+	background-size: 100% 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 1.2rem;
+}
+
+.underbtns,.underbtns1{
+	text-align: center;
+	padding:0% 0 3rem 0;
+}
+.underbtns button{
+	width: 42%;
+	height: 4rem;
+	border-radius: 1rem;
+	font-size: 1.3rem;
+	color:#fff;
+}
+.underbtns1 button{
+	width: 42%;
+	height: 4rem;
+	border-radius: 1rem;
+	font-size: 1.3rem;
+	color:#fff;
+}
+.againbtn{
+	background: -webkit-linear-gradient(left, #f67cd9 , #ae67eb); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(right, #f67cd9 , #ae67eb); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(right, #f67cd9 , #ae67eb); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to right, #f67cd9 , #ae67eb); /* 标准的语法 */
+	margin: 2% 0.5%;
+}
+.pastbtn{
+	background: -webkit-linear-gradient(left, #86479e , #633ea6); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(right, #86479e , #633ea6); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(right, #86479e , #633ea6); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to right, #86479e , #633ea6); /* 标准的语法 */
+	margin: 2% 0.5%;
+}
+.winnerbtn{
+	background: -webkit-linear-gradient(left, #86479e , #633ea6); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(right, #86479e , #633ea6); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(right, #86479e , #633ea6); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to right, #86479e , #633ea6); /* 标准的语法 */
+	margin: 2% 0.5%;
+}
+.curbtn{
+	background: -webkit-linear-gradient(left, #f67cd9 , #ae67eb); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(right, #f67cd9 , #ae67eb); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(right, #f67cd9 , #ae67eb); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to right, #f67cd9 , #ae67eb); /* 标准的语法 */
+	margin:2% 0.5%;
+}
+.curingbtn{
+	background: -webkit-linear-gradient(left, #6fbefb , #747efa); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(right, #6fbefb , #747efa); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(right, #6fbefb , #747efa); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to right, #6fbefb , #747efa); /* 标准的语法 */
+	margin:2% 0.5%;
+}
+
+.sec2 .rankList1{
+	padding: 0;
+}
+.sec2 .rankList1 li{
+	background-color: #474382;
+	margin-bottom: 0; 
+    border: 1px solid #191463;
+}
+.sec2 .rankList1 li button{
+	background:transparent;
+}
+.sec2 .underbtns{
+	padding: 2rem 0 2rem 0;
+	display: none;
+}
+
+.topimg,.bannerimg{
+	width: 90%;
+	margin-left: 5%;
+	padding-top: 5%;
+	display: none;
+}
+.uncomm{
+	width: 50%;
+    margin-left: 25%;
+    padding: 14% 0 10% 0;
+}
+
+/*每期成员列表*/
+.merMask{
+	width: 100%;
+    min-height: 100%;
+    height: auto;
+    max-width: 640px;
+    position: absolute;
+    top: 0;
+    left:0;
+    background-color:#1a1465;
+    z-index: 1;
+    display: none;
+	
+}
+.memberList{
+	text-align: center;
+	padding-bottom: 1.5rem;
+}
+.memberList li{
+	display: inline-block;
+	width:32%;
+	text-align: center;
+	margin-bottom: 3%;
+}
+.merhead{
+	display: block;
+	width: 70%;
+	padding-top: 70%;
+	/* border:1px solid #86d4f5;  */
+	border-radius: 100%;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 100%;
+	margin:1.5rem 0 1rem 15%;
+}
+.mer_name{
+	font-size: 1.1rem;
+	margin-bottom: 1rem;
+	color: #fff;
+}
+.mer_name em{
+	display: inline-block;
+	font-size: 1rem;
+	color: #fff;
+	/* background-color: #86d4f5;  */
+	padding: 0 0.3rem;
+	border-radius: 3px;
+	margin-left: 0.2rem;
+}
+.choosebtn{
+	text-align: center;
+}
+.choosebtn span{
+	font-size: 1.2rem;
+	color: #fff;
+	border-radius: 0.5rem;
+	padding: 0.3rem 1.2rem;
+}
+.choosebgno {
+	background: -webkit-linear-gradient(left, #f57fdb , #b367e9); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(right, #f57fdb , #b367e9); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(right, #f57fdb , #b367e9); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to right, #f57fdb , #b367e9); /* 标准的语法 */
+}
+.choosebgyes {
+	background: -webkit-linear-gradient(left, #71bdfb , #7984fa); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(right, #71bdfb , #7984fa); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(right, #71bdfb , #7984fa); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to right, #71bdfb , #7984fa); /* 标准的语法 */
+}
+
+
+/*小弹框*/
+.mask_inbox{
+	width: 100%;
+	height: 100%;
+	max-width: 640px;
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+	background-color: rgba(0,0,0,.4);
+	 display: none; 
+}
+.mask1,.mask2,.mask3,.mask4{
+	width: 80%;
+	background-color:#fff;
+	border-radius: 8px;
+	position: absolute;
+	left: 10%;
+	top: 33%;
+	 display: none; 
+}
+.mask1,.mask2,.mask4{
+	/* display: none; */
+}
+.mask2,.mask3,.mask4{
+	padding-bottom: 10%;
+}
+.mask_inbox{
+	text-align: center;
+}
+.mask h4{
+	font-size: 1.3rem;
+}
+.mask p{
+	font-size: 1.3rem;
+}
+.upbox{
+	padding: 15% 0;
+	font-size: 1.3rem;
+}
+.btns{
+	text-align: center;
+	padding-bottom: 8%;
+}
+.btns button{
+	width: 40%;
+	font-size: 1.3rem;
+	padding:3% 0;
+	display: inline-block;
+	border-radius: 1rem;
+}
+.btnsback{
+	background: transparent; 
+	border:1px solid #db87e6;
+	margin-right: 2%;
+	color: #ff80d8;
+}
+.btnsright{
+	background: -webkit-linear-gradient(left, #f37ada , #b06bec); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(right, #f37ada , #b06bec); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(right, #f37ada , #b06bec); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to right, #f37ada , #b06bec); /* 标准的语法 */
+	margin-left: 2%;
+	color:#fff;
+}
+.upbox p{
+	font-size: 1.3rem;
+}
+.know,.subbtn,.finish{
+	color:#fff;
+	width: 40%;
+	font-size: 1.3rem;
+	padding: 4% 0;
+	background: -webkit-linear-gradient(left, #f37ada , #b06bec); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(right, #f37ada , #b06bec); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(right, #f37ada , #b06bec); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to right, #f37ada , #b06bec); /* 标准的语法 */
+	color:#fff;
+	margin-left: 30%;
+	border-radius: 1rem;
+}
+.tip{
+	font-size: 1.4rem;
+	margin-top: 10%;
+}
+.tipColor{
+	color: #ec093d;
+}
+.code{
+	font-weight: bold;
+	font-size: 1.4rem;
+	margin-top:3%;
+}
+.codeinput{
+	display: block;
+	width:60%;
+	padding:1rem 0;
+	border:1px solid #c4c4c4;
+	border-radius: 0.5rem;
+	text-align: center;
+	font-size: 1.2rem;
+	margin: 3% 0 8% 20%;
+}
+
+/*input textarea（placeholder的颜色） */
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #fff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #fff;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #fff;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #fff;
+}

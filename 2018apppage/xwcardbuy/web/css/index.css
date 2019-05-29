@@ -1,0 +1,151 @@
+*{margin:0;padding:0;}
+html{
+	height: 100%;
+}
+html,body{
+	margin: 0 auto;
+    max-width: 100%;
+}
+body{
+	font-family: Adobe Heiti Std,Helvetica,Arial,sans-serif;
+    position: relative;
+    min-height: 100%;
+    background-color: #ffffff;
+}
+button,input{
+	outline: none;
+}
+ul li{
+	list-style: none;
+}
+
+.topbanner,.topbanner img{
+	width: 100%;
+}
+
+.look{
+	text-align: right;
+}
+.look a{
+	font-size: 1.2rem;
+	color: #62707e;
+	margin-right: 37%;
+}
+
+.btn-box{
+	height: 3rem;
+    width: 100%;
+    margin-top: 1.3rem;
+    margin-bottom: 1.25rem;
+}
+
+.btn-box .btn{
+	display: block;
+    width: 13.75rem;
+    height: 2.8125rem;
+    line-height: 2.8125rem;
+    background: #62707e;
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    -webkit-border-radius: .1875rem;
+    -moz-border-radius: .1875rem;
+    border-radius: .1875rem;
+	position: relative;
+	left: 50%;
+	margin-left: -6.875rem;
+}
+.giftimg{
+	display: block;
+	width: 50%;
+	margin-left: 25%;
+	margin-bottom: 2.5rem;
+}
+
+
+
+/*福利列表*/
+.contentbox{
+	width: 100%;
+	max-width: 640px;
+	margin: 0 auto;
+}
+.welfareList{
+	padding: 0 5%;
+}
+.welfareList li{
+	height: 9rem;
+	border-bottom:1px solid #e8e8e8;
+	position: relative;
+}
+.welfareList li img{
+	width: 5rem;
+	height: 5rem;
+	float: left;
+	margin-top: 2rem;
+}
+.welfareList div{
+	padding-left: 6rem;
+}
+.welfareList div p:first-child{
+	font-size: 1.4rem;
+	color: #62707e;
+	padding-top: 2rem;
+}
+.welfareList div p:last-child{
+	font-size: 1rem;
+	color:#999999;
+	margin-top:1%;
+}
+
+
+.postage {
+	display: block;
+	width: 90%;
+	display: block;
+	margin: 5% 0 5% 5%;
+}
+.postageinfo{
+	padding:4% 5% 10% 5%;
+}
+.postageinfo p{
+	font-size: 1.3rem;
+	color: #62707e;
+	font-weight: bold;
+	margin-bottom: 5%;
+}
+.postageinfo ul li{
+	color: #808080;
+	font-size: 1.2rem;
+	margin-bottom: 0.5rem;
+}
+.postageinfo a{
+	color: #62707e;
+	font-size: 1.3rem;
+	text-decoration: underline;
+	display: block;
+	margin-top: 5%;
+}
+
+
+
+
+
+
+
+
+
+
+
+html{font-size:10px}
+@media screen and (min-width:321px) and (max-width:374px){html{font-size:11px}}
+@media screen and (min-width:375px) and (max-width:413px){html{font-size:12px}}
+@media screen and (min-width:414px) and (max-width:499px){html{font-size:13px}}
+@media screen and (min-width:500px) and (max-width:549px){html{font-size:15px}}
+@media screen and (min-width:550px) and (max-width:600px){html{font-size:17px}}
+@media screen and (min-width:601px) and (max-width:719px){html{font-size:20px}}
+@media screen and (min-width:720px) and (max-width:749px){html{font-size:21.5px}}
+@media screen and (min-width:750px) and (max-width:799px){html{font-size:22.5px}}
+@media screen and (min-width:800px){html{font-size:24px}}
+@media screen and (max-height:480px){html{font-size:9px;}}

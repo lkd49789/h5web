@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>竞拍规则</title>
+     <link href="../../common/css/common.css" rel="stylesheet" />
+      <link rel="stylesheet" href="./css/rule.css">
+</head>
+<style>
+    .p{
+        font-size: 1.6rem;
+    }
+    p{
+        margin-top: .2rem;
+    }
+</style>
+<body>
+    <div id="app">
+        <p class="p"><b>竞拍规则</b></p>
+        <p>• 参加竞标必须绑定手机。</p>
+        <p> • 参加竞标必须支付4800鸡腿保证金。</p>
+        <p>• 竞价使用人民币现金出价，每次出价数字必须大于当前最高价格。</p>
+        <p>• 中标信息将通过通过短信和口袋48 APP消息盒子通知。</p>
+        <p>• 竞拍时间截止后，中标粉丝需要再30分钟内完成付款，超时未付款将失标，并且不退换4800鸡腿保证金。</p>
+        <p>• 出价第一的粉丝因超时未付款失标后，中标资格顺延到出价第二的粉丝，同样需要30分钟内完成付款。</p>
+        <p>• 失标最多顺延2名用户，如全部失标，该次拍卖取消。</p>
+        <p>• 未中标粉丝将退还4800鸡腿保证金</p>
+    </div>
+</body>
+
+</html>

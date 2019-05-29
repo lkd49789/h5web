@@ -1,0 +1,117 @@
+body{
+    
+}
+p{
+    /*color: #3d4762;*/
+}
+.content{
+	padding: 10px 20px;
+	color: #000;
+}
+.red{
+	color: #f45696;
+	/*text-indent: 2em;*/
+}
+.tip{
+    /*color: #3d4762;*/
+}
+.blue{
+	color: #1196DF;
+}
+.line{
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #f45696;
+        margin: 10px 0;
+}
+.title{
+	width:94%;
+	font-weight: 700;
+	background: url(../images/sbt_bg.png) right no-repeat;
+    background-size:100% 100%;
+    padding: 5px 8px 5px 10px;
+    font-size:16px;
+    color: #fff;
+    margin: 20px 0 10px;
+}
+.r_text{
+	/*height: 58px;*/
+    background: url(../images/sbt_bg.png) right no-repeat;
+    background-size:auto 100%;
+    line-height:58px;
+    padding:10px 25px 10px 10px;
+    font-size:15px;
+    color: #fff;
+    font-weight: 600;
+    margin: 10px 0 20px;
+    /*display: inline-block;*/
+   display: inline;
+ 
+}
+p{
+	/*text-indent: 2em;*/
+	/*margin: 1% 0;*/
+	line-height:24px;
+	/*font-size: 1.3rem;*/
+	font-size:12px;
+}
+h2{
+	font-size:12px;
+}
+h3{
+	text-indent: 2em;
+	font-size:12px;
+}
+/*ul li{
+	line-height: 40px;
+	font-size: 12px;
+	text-indent: 2em;
+}
+
+dl dt{
+	font-size: 12px;
+	text-indent: 2em;
+}
+dl dd{
+	line-height:40px;
+	font-size: 12px;
+	text-indent: 2em;
+}*/
+.vipsp {
+    width: 100%;
+    height: 80px;
+    clear: both;
+    font-size:10px;
+}
+.vipsp .we1 {
+    width: 20%;
+    float: left;
+    text-align: center;
+    color: #3193c7;
+    border: 1px solid #90d2f5;
+    /*padding:1% 0;*/
+    font-size:10px;
+}
+.vipsp .we2 {
+    width: 13%;
+    float: left;
+    text-align: center;
+    margin: 0 0 5px 5px;
+    background-color: #90d2f5;
+    color: #FFF;
+    border: 1px solid #90d2f5;
+    /*padding:1% 0;*/
+    font-size:10px;
+}
+.vipsp .we3 {
+    width: 13%;
+    float: left;
+    text-align: center;
+    margin: 0 0 5px 5px;
+    border: 1px solid #90d2f5;
+    /*padding:1% 0;*/
+    font-size:10px;
+}
+footer p{
+	margin: 0;
+}

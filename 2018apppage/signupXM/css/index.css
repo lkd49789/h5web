@@ -1,0 +1,125 @@
+*{margin:0;padding: 0;}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+body{
+	max-width: 640px;
+	margin:0 auto;
+	position: relative;
+}
+input,button{
+	outline: none;
+}
+section{
+	min-height: 100%;
+	height: auto;
+	background: url(../img/bg.jpg)no-repeat center top #1a1465;
+	background-size: cover;
+}
+
+.banners{
+	width: 90%;
+	margin-left: 5%;
+	padding-top: 2%;
+	position: relative;
+}
+.banners .banner{
+	width: 100%;
+}
+.sm_banner{
+    position: absolute;
+    width: 25%;
+    top: 3%;
+    left: 2%;
+}
+
+.text{
+	display: block;
+	width: 84%;
+	margin-left:8%;
+	margin-top: 1rem;
+}
+.btns{
+	padding:0 8% 8% 8%;
+}
+.btns button{
+	width: 100%;
+	border:none;
+	background-color: #e95fd0;
+	color: #fff;
+	font-size: 1.3rem;
+	height: 3.8rem;
+	border-radius: 5rem;
+	margin-top: 7%;
+}
+.btns p{
+	text-align: center;
+	margin-top: 5%;
+}
+.btns p a{
+	color: #f976d6;
+	font-size:1.2rem;
+	text-decoration: underline;
+}
+
+/*弹窗*/
+.mask{
+	width: 100%;
+	height: 100%;
+	max-width: 640px;
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+	background-color: rgba(0,0,0,.4);
+	z-index: 99;
+	display: none; 
+}
+.mask_have1,.mask_have2{
+	width: 80%;
+	background-color:#fff;
+	border-radius: 8px;
+	position: absolute;
+	left: 10%;
+	top: 33%;
+	display: none;  
+}
+.upbox p{
+	font-size: 1.3rem;
+	text-align: center;
+}
+.upbox{
+	padding: 10% 0;
+	border-bottom: 1px solid #c4c4c4;
+}
+.knowbtn{
+	color:#2774ff;
+	font-size: 1.3rem;
+	padding: 4% 0;
+	text-align: center;
+}
+
+.rule{
+	text-align: center;
+	margin-top: 1rem;
+	text-decoration:underline
+}
+.rule a{
+	color: #ef68d2;
+	font-size: 1.5rem;
+}
+
+.timeActive{
+	background-color: #b4abb3!important;
+}
+
+button{
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+	-khtml-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+}

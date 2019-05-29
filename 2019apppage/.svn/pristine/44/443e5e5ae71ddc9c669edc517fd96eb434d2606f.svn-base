@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta http-equiv="Cache-Control" content="max-age=0">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<title>SNH48 GROUP 新生招募</title>
+	<link rel="shortcut icon " type="images/x-icon" href="../favicon.ico">
+	<link rel="stylesheet" href="css/reset.css">
+	<script src="js/rem.js"></script>
+
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="js/layer_mobile/need/layer.css">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+</head>
+
+<body>
+
+	<div class="box">
+		<img src="images/top_bg.jpg" alt="">
+		<div class="bg1">
+			<div class="bg1_con">
+				<div class="text">
+					<div class="flex">
+						<div class="color">一、</div>
+						<div>13-22周岁，拥有偶像梦想的女生（注：优秀者条件可适当放宽）；</div>
+					</div>
+					<div class="flex">
+						<div class="color">二、</div>
+						<div>未与任何经纪公司签约，并能与SNH48 GROUP经纪公司签约专属艺人协议者；</div>
+					</div>
+					<div class="flex">
+						<div class="color">三、</div>
+						<div>入选后，将接受SNH48 GROUP的专业化艺人培训，参加SNH48
+							GROUP的专属剧场公演，国内外各类演出，电视和网络综艺节目的拍摄，电影和电视剧拍摄，广告代言等各类演艺和商业活动。</div>
+					</div>
+				</div>
+				<div style="text-align: center;">
+					<a href="info.html">
+						<img src="images/b4_btn1.png" class="b4_btn1" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="../resource/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script src="js/wx.js"></script>
+<script src="js/wxshare.js?v=20190522"></script>
+</html>

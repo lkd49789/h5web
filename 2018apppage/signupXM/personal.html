@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>星梦演播厅 Studio 48</title>
+	<link href="css/common.css" rel="stylesheet" />
+	<link href="css/mui.min.css" rel="stylesheet"/>
+	<link href="css/list.css" rel="stylesheet" />
+	<style type="text/css">
+		html,body{background-color:#1a1465;}
+		.allList{padding-bottom: 6rem;}
+		.mui-scroll-wrapper{top: 0;}
+		.List{margin:3%;border:1px solid #ff80d8;border-radius: 5px;}
+		.helpbtn{width: auto;padding:0 0.5rem;}
+		.btnbox{width: 100%;height: 3.5rem;margin-top: 5%;text-align: center;}
+		.votebtn{border:none;font-size: 1.3rem;color: #fff;background-color: #e75dcf;width: 40%;height: 3.5rem;border-radius: 2rem;margin-left: 3%;}
+		.merhomebtn{border:none;font-size: 1.2rem;color: #fff;background-color: #e75dcf;width: 40%;height: 3.5rem;border-radius: 2rem;margin-right: 3%;}
+		.myright{width: 100%;position: fixed;left:0;text-align: center;height: 4rem;line-height: 4rem;background-color: #e75dcf;font-size: 1.4rem;color: #fff;letter-spacing: 2px;max-width: 640px;left: 50%; -webkit-transform: translate(-50%, 0);transform: translate(-50%, 0);}
+		.video,.qu{display: none;}
+		.pic{height: auto!important;}
+		.pic img{width: 100%!important;}
+		/*弹窗*/
+		.maskbox{
+			width: 100%;
+			height: 100%;
+			max-width: 640px;
+			position: fixed;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+		    -webkit-transform: translate(-50%, -50%);
+			background-color: rgba(0,0,0,.5);
+			z-index: 999;
+			display: none; 
+		}
+		.mask2{
+			width: 80%;
+			background-color:#fff;
+			border-radius: 8px;
+			position: absolute;
+			left: 10%;
+			top: 33%;
+			padding-top: 5% ;
+			display: none; 
+		}
+		.tit,.phone{
+			color: #000;
+			font-size: 1.3rem;
+			padding: 0 4%;
+		}
+
+		.tokenbox{
+			width: 100%;
+			padding: 0 4%;
+			margin-top: 6%;
+			height: 3.5rem;
+		}
+		.token{
+			width: 45%!important;
+			border:1px solid #839cff!important;
+			border-radius: 8px;
+			text-align: center;
+			font-size: 1.2rem;
+			height: 100%;
+			float: left;
+		}
+		.tokenbtn{
+			width: 40%;
+			border:1px solid #839cff;
+			border-radius: 8px;
+			background-color: #839cff;
+			text-align: center;
+			font-size: 1.2rem;
+			height: 100%;
+			float: right;
+			color: #fff;
+		}
+
+		.notice{
+			display: block;
+			width: 100%;
+			font-size: 1rem;
+			color:#ff0000;
+			clear: both;
+			padding-left: 4%;
+			opacity: 0;
+		}
+		.btns{
+			border: 1px solid #c4c4c4;
+		}
+		.btns button{
+			background: transparent;
+			border:0;
+			width: 47%;
+			color:#2774ff;
+			font-size: 1.3rem;
+			padding: 4% 0;
+			display: inline-block;
+		}
+		.btns button:first-child{
+			border-right: 1px solid #c4c4c4;
+		}
+		.token_value_enabled{
+			background:#f5ddad;
+			color: #fff;
+			border:1px solid #f5ddad;
+		}
+		.btnsback:active,.btnsright:active{
+			background-color:transparent!important;
+			color: #2774ff!important;
+		}
+
+
+		/*input textarea（placeholder的颜色） */
+		::-webkit-input-placeholder { /* WebKit browsers */
+		    color: #c4c4c4;
+		}
+		:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		    color: #c4c4c4;
+		}
+		::-moz-placeholder { /* Mozilla Firefox 19+ */
+		    color: #c4c4c4;
+		}
+		:-ms-input-placeholder { /* Internet Explorer 10+ */
+		    color: #c4c4c4;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<div class="allList">
+			<div class="mui-table-view mui-table-view-chevron List">
+					<div class="m_msg">
+						<span class="avatar avatar_new"></span>
+						<div class="r_msg">
+							<p class="p1"><em class="team NII-bg"></em></p>
+							<p class="time"><b></b><span class="helpnum"><img src="img/icon_help.png"/><em class="num"></em></span></p>
+						</div>
+					</div>
+					<p class="text"></p>
+					<div class="vidbox">
+						<div class="video">
+							<video class="bofang" src='' preload="load" webkit-playsinline></video>
+						</div>
+						<div class="qu" style="background-image:url(img/v_default.png)">
+							<img src="img/play.png" class="play">
+						</div>
+					</div>
+					<button class="helpbtn">助力排行第23名</button>
+			</div>
+			<div class="btnbox">
+				<button class="merhomebtn">查看个人主页</button>
+				<button class="votebtn">为她助力</button>
+			</div>
+		</div>
+		<div class="myright">我的助力权：<em></em></div>
+		<div class="maskbox">
+			<!-- 验证手机号 -->
+			<div class="mask2">
+				<p class="tit">当前绑定的手机号</p>
+				<p class="phone">18721430090</p>	
+				<div class="tokenbox">
+					<input type="text" name="token" value placeholder="输入验证码" class="token">
+					<button class="tokenbtn">发送验证码</button>
+				</div>
+				<p class="notice">验证码不正确，请重试/手机号码格式不正确</p>
+				<div class="btns">
+					<button class="btnsback">返回</button>
+					<button class="btnsright">验证手机号</button>
+				</div>
+			</div>	
+		</div>
+	</section>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="js/mui.min.js" ></script>
+<script src="js/main.js"></script>
+<script>
+	var flag=true;
+	var assisNum = "";
+	var _assistances ="";
+	var _this = "";
+	var memberId = GetQueryString('mid'); //成员ID
+	var avatar = localStorage.getItem("avatar"); //成员头像
+	var memberName = localStorage.getItem("memberName"); //成员an姓名
+	var teamName = localStorage.getItem("teamName"); //成员队伍
+	var ctime = localStorage.getItem("ctime"); //时间
+	var rank = localStorage.getItem("rank"); //名次
+	var assistances = localStorage.getItem("assistances"); //助力
+	var addMessage = localStorage.getItem("addMessage"); //文字描述
+	var addMessagePic = localStorage.getItem("addMessagePic"); //图片
+	var addMessageVideo = localStorage.getItem("addMessageVideo"); //视频
+	var addMessageVideoPic = localStorage.getItem("addMessageVideoPic"); //视频封面图
+
+	getinit();
+	$('.avatar').css('background-image','url('+main.formatAvata(avatar)+')');
+	if(teamName=="预备生"){
+		$('.p1').html(memberName+'<em class="team YUBEI-bg">'+teamName+'</em>');
+	}else if(teamName=="TEAM FT"){
+		$('.p1').html(memberName+'<em class="team FT-bg">'+teamName+'</em>');
+	}else if(teamName=="无队伍"){
+		$('.p1').html(memberName);
+	}else{
+		$('.p1').html(memberName+'<em class="team '+teamName.split(' ')[1]+'-bg">'+teamName+'</em>');
+	}
+	$('.time b').html(ctime);
+	if(assistances=="" || assistances=="undefined" || assistances==undefined){
+		$('.helpnum').remove();
+	}else{
+		$('.helpnum em').html(assistances);
+	}
+	
+	if(addMessage=="" || addMessage=="undefined" || addMessage==undefined){
+
+	}else{
+		$('.text').show();
+		$('.text').html(addMessage);
+	}
+	if(addMessagePic=="" || addMessagePic=="undefined" || addMessagePic==undefined){
+
+	}else{
+		$('.video,.qu').hide();
+		$('.pic').css({'height':'auto'});
+		$('.pic img').css({'width':'100%;'});
+		$('.vidbox').html('<div class="pic"><img src="'+addMessagePic+'"/></div>')
+	}
+	if(addMessageVideo=="" || addMessageVideo=="undefined" || addMessageVideo==undefined){
+
+	}else{
+		$('.video,.qu').show();
+		$('video').attr('src',addMessageVideo);
+		if(addMessageVideoPic=="" || addMessageVideoPic=="undefined" || addMessageVideoPic==undefined){
+
+		}else{
+			$('.qu').css('background-image','url('+addMessageVideoPic+')');
+		}
+	}
+	if(rank=="" || rank=="undefined" || rank==undefined){
+		$('.helpbtn').remove();
+	}else{
+		$('.helpbtn').html("助力排行第"+rank+"名");
+	}
+
+	$('.votebtn').click(function(){
+		_this = $('.num');
+		_assistances = $('.num').html();
+		assisNum=$('.myright em').html();
+		if(assisNum>0){
+			helping(memberId);
+		}else{
+			main.alert("助力权不足");
+		}
+	})
+
+	//点击播放视频
+	$("video").addClass('pause');//for check pause or play add a class
+	$('.vidbox').on('click','.qu',function(){
+		$(this).hide();
+		$(this).parents('.vidbox').find('video').trigger('play');
+		$(this).parents('.vidbox').siblings().find('video').trigger('pause');
+		$(this).parents('.vidbox').find('video').removeClass('pause');
+		$(this).parents('.vidbox').find('video').addClass('play');
+	});
+	//视频播放和暂停
+	$('.vidbox').on('click','video',function() {
+		if ($(this).hasClass('pause')) {
+			$("video").trigger("play");
+			$(this).removeClass('pause');
+			$(this).addClass('play');
+		} else {
+			$("video").trigger("pause");
+			$(this).removeClass('play');
+			$(this).addClass('pause');
+		}
+	})
+
+	//获取验证码
+	$(".tokenbtn").click(function(){
+		if($(".tokenbtn").hasClass("token_value_enabled")){
+			return false;
+		}
+		//请求接口
+		if(flag==true){
+			flag=false;
+			main.getCode($('.phone').html(),function(dt){
+				flag=true;
+				if(dt.status == 200){
+					//加载成功 倒计时开始 60 秒
+					$(".tokenbtn").addClass("token_value_enabled");
+					var total = 60;
+					$(".tokenbtn").html(total+"秒")
+					time = setInterval(function(){
+						total -= 1
+						$(".tokenbtn").html(total+"秒")
+						if(total<0){
+							$(".tokenbtn").removeClass("token_value_enabled");
+							$(".tokenbtn").html("重发");
+							clearInterval(time)
+						}
+					},1000)
+					$(".code").val("")
+				}else{
+					showTip(dt.message);
+				}
+			})
+		}
+	})
+
+
+	//验证码
+	$(".token").focus(function(){
+		$(".notice").css('opacity','0');
+	})
+
+	//确定验证
+	$(".btnsright").click(function(){
+		$(".notice").css('opacity','0');
+
+		//验证码
+		if($(".token").val() == ''){
+			showTip("请输入验证码")
+			return false;
+		}
+
+		if(flag==true){
+			flag=false;
+			main.rightTest($('.phone').html(),$(".token").val(),function(dt){
+				flag=true;
+				if(dt.status == 200){//激活成功
+					$('.maskbox,.mask2').hide();
+					main.alert("验证成功");
+				}else{
+					main.alert(dt.message);
+				}
+			})
+		}
+	})
+
+	//验证返回按钮
+	$('.btnsback').click(function(){
+		$('.maskbox,.mask2').hide();
+	})
+
+	//为她助力
+	function helping(memberId){
+		if(flag==true){
+			flag=false;
+			main.helping(memberId,function(dt){
+				flag=true;
+				if(dt.status==200){
+					main.alert("助力成功");
+					_assistances=parseInt(_assistances)+1;
+					_this.html(_assistances);
+					getinit();
+				}else if(dt.status==1008610 || dt.status=="1008610"){
+					$('.maskbox,.mask2').show();
+					$('.phone').html(dt.message);
+				}else{
+					main.alert(dt.message);
+				}
+			})
+		}
+	}
+
+	//跳转成员主页
+	$('.merhomebtn').click(function(){
+		window.web.gotoPage('member/detail?id='+memberId);
+	})
+
+	function getinit(){
+		main.getinit(function(dt){
+			if(dt.status==200){
+				assisNum = dt.content.assisNum;
+				$('.myright em').html(assisNum);
+			}else{
+				main.alert(dt.message);
+			}
+		})
+	}
+
+	//提示语
+	function showTip(str){
+		$(".notice").css('opacity','1');
+		$(".notice").html(str);
+	}
+
+	
+</script>
+</html>

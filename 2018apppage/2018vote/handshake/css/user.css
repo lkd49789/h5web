@@ -1,0 +1,90 @@
+body{
+    overflow: hidden;
+}
+section{
+    margin-top: 10px;
+}
+.wrapper{
+    background-color: #fff;
+    padding: 0 3%;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.wrapper > div{
+    border-bottom: 1px solid #f0f0f0;
+    height: 5rem;
+    line-height: 5rem;
+    position: relative;
+}
+.btn-choose-ct{
+    float: right;
+    line-height: 5rem;
+
+}
+.btn-code{
+    font-size: 1rem;
+    display: inline-block;
+    padding: 0 15px;
+    background-color: #afbaef;
+    color: #fff;
+    border-radius: 16px;
+    float: right;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    margin-top: 1.25rem;
+    position: absolute;
+    right: 3%;
+}
+.btn-code-time{
+    background-color: #f6f6f6;
+    color: #808080;
+}
+.menu-wrapper{
+	padding: 3%;
+}
+
+.menu-wrapper li{
+	background-color: #fff;
+	padding: 3%;
+	font-size: 1rem;
+	margin-bottom: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+.menu-wrapper li em img{
+	float: right;
+    width: 24px;
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    margin-top: -18px;
+}
+
+input{
+    padding: 5px  !important;
+    margin-bottom: 0 !important;
+    width: 50% !important;
+    height: auto !important;
+    border:none !important;
+}
+
+
+.btn-submit{
+    color: #fff;
+    width: 70%;
+    background-color: #5c6bc2;
+    margin-left: 15%;
+    padding: 10px;
+    margin-top: 2rem;
+    border-radius: 7px;
+}
+
+.tip{
+    color: #f44336;
+    padding:3%;
+    opacity: 0;
+}
+
+.u-id{
+    min-width: 65% !important;
+}

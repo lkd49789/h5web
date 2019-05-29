@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>双十一返利，集卡抽锦鲤</title>
+    <link rel="stylesheet" href="../../common/css/common_mobile.css">
+    <link rel="stylesheet" href="css/prize.css">
+</head>
+<body>
+	<section id="main-wrapper">
+		<img src="images/bg.png">
+		<p>还剩<span class="count">{{mainData.drawNum}}</span>次机会</p>
+		<div class="btns">
+			<p class="btn-1" v-on:click="doDraw(1)">抽1张</p>
+			<p class="btn-10" v-on:click="doDraw(10)">抽10张</p>
+		</div>
+		<p class="tip1">充值未到账用户的抽奖机会讲到11月14日23:59失效，请抓紧时间哦～</p>
+		<p class="tip" v-on:click="gotoList()">相关奖励请到抽奖记录领取</p>
+
+		<div class="msk">
+			<ul>
+				<img src="images/card1.png">
+				<img src="images/card2.png">
+				<img src="images/card3.png">
+				<img src="images/card4.png">
+				<!-- <img src="images/card5.png">
+				<img src="images/card6.png">
+				<img src="images/card7.png">
+				<img src="images/card6.png">
+				<img src="images/card5.png">
+				<img src="images/card4.png"> -->
+			</ul>
+			<p>恭喜你获得了以上卡牌</p>
+			<span class="btn-close" v-on:click="close()">继续抽</span>
+		</div>
+	</section>
+	
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="js/vue.js" ></script>
+<script src="js/config.js" ></script>
+<script src="js/main.js" ></script>
+<script src="js/prize.js"></script>
+</html>

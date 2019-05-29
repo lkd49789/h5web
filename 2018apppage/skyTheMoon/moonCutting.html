@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>天涯共明月</title>
+		<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/animate.css" />
+		<link rel="stylesheet" type="text/css" href="css/moonCutting.css" />
+
+	</head>
+	<body>
+		<div class="container">
+			<section class="game-init">
+				<p>点击屏幕切月饼</p>
+				<img class="moon-5 bfb" src="img/moon-5.png">
+			</section>
+			<section class="game-play" style="display: none;">
+				<div class="second text-center">
+					<span class="sec">
+						<img class="num" src="img/num-top/1.png"/>
+						<img class="num" src="img/num-top/0.png"/>
+					</span>
+					<img class="num-second" src="img/second-2.png" />
+				</div>
+				<div class="moon-1 bfb">
+
+					<img class="bfb moon-3" src="img/moon-3.png" />
+					<!-- <img class="moon-4 animated fadeOutDown" src="img/moon-4.png" /> -->
+					<!-- animated fadeOutDown infinite -->
+				</div>
+				<div class="moon-2">
+					<img class="small-moon" src="img/moon-2.png" />
+					<img class="X" src="img/X.png" style="width: 12%;"/>
+					<span class="total">
+						<img class="num-down" src="img/num-down/0.png" />
+					</span>
+					<p>剩余切月饼机会<span class="left-times">0</span>次</p>
+				</div>
+				<div class="btn-1">
+					<img class="btn-play" src="img/btn-11.png" />
+					<img class="btn-share" src="img/btn-1.png" />
+				</div>
+
+			</section>
+			<div class="footer">
+				<img class="bfb" src="img/lotusLeaf-2.png">
+			</div>
+		</div>
+		<!--弹窗页-->
+		<div class="msk" style="display: none;">
+			<div class="popUp">
+				<p>分享祝福給你的微信好友，每当一个好友点击该分享链接可完成1次中秋助力，而你就能获得额外一次切月饼的机会。</p>
+				<div class="btn-popUp">
+					<img class="bfb btn-2" src="img/btn-2.png" />
+					<img class="bfb btn-3" src="img/btn-3.png" />
+				</div>
+			</div>
+		</div>
+	</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="js/mui.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/moonCutting.js"></script> 
+</html>

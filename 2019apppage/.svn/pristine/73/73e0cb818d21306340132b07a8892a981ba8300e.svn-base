@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>手账电子档</title>
+     <link href="../../common/css/common.css" rel="stylesheet" />
+      <link rel="stylesheet" href="./css/popbox.css">
+      <link rel="stylesheet" href="./css/imgList.css">
+</head>
+
+<body>
+    <div id="app">
+        <p class="title"><b>VIP用户可以免费获得一位成员的手账电子档</b></p>
+        <div class="listWrap">
+            <ul>
+                <li v-for="(item,index) in list" :key="index" @click="buy(item.goodsId,item.status,item.baseUserInfo.nickname)">
+                    <img :class="{'bg':item.status == 0}" :src="'https://source.48.cn'+item.vipImage" alt="">
+                    <div class="headWrap">
+                        <div class="head">
+                            <img :src="'https://source.48.cn'+item.baseUserInfo.avatar" alt="">
+                        </div>
+                        <div class="name">
+                            <span><b v-text="item.baseUserInfo.nickname"></b></span>
+                            <img :src="'https://source.48.cn'+item.baseUserInfo.teamLogo" alt="">
+                        </div>
+                    </div>
+                    <div class="nike" v-if="item.status == 2">
+                        <img src="./img/list_nike.png" alt="">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- 弹框 -->
+        <div class="mask" v-if="showpop!=0" v-cloak>
+                <!-- 充值 -->
+                <div class="no-money" v-if="showpop == 1">
+                        <p><b>{{tips}}</b></p>
+                        <span style="background: url('./img/btn1.png') no-repeat left top/100% 100%" v-on:click="showpop = 0">再说</span></span>
+                        <span style="background: url('./img/btn2.png') no-repeat left top/100% 100%" v-on:click="recharge()" >充值</span>
+                    </div>
+                <!-- 确认 或称为VIP -->
+                <div class="no-money" v-if="showpop == 2">
+                    <p><b>{{tips}}</b></p>
+                    <span style="background: url('./img/btn1.png') no-repeat left top/100% 100%" v-on:click="showpop = 0">再说</span>
+                    <span style="background: url('./img/btn2.png') no-repeat left top/100% 100%" v-on:click="close()" v-text="poxText"></span>
+                </div>
+                <!-- 确认 -->
+                <div class="no-money" v-if="showpop == 3">
+                    <p><b>{{tips}}</b></p>
+                    <span style="background: url('./img/btn2.png') no-repeat left top/100% 100%" v-on:click="close()" v-text="poxText2"></span>
+                </div>
+            </div>
+    </div>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="../../common/js/mui.min.js" ></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<script src="../../common/js/vue.js"></script>
+<!-- <script src='https://cdn.bootcss.com/vue/2.6.10/vue.js'></script> -->
+<script src="../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script>
+ var app = new Vue({
+     el:'#app',
+     data:{
+        list:[],
+        showpop:0,
+        tips:'',
+        useVip:false, /*是否用过VIP*/
+        vip:false,  /*是否是VIP*/
+        poxText:'确认',
+        goodsId:'',
+        btnClick:true,   /* 防止多次点击*/
+        poxText2:'完成'
+     },
+     mounted:function(){
+         var that = this;
+         that.getImgList()
+     },
+     methods:{
+         /*获取用户信息 */
+        getUserInfo:function() {
+           return dsBridge.call("snhUserInfo");
+        },
+         getImgList:function(){
+            var that = this;
+            main.getImgList(function(data){
+                if(data.status == 200){
+                    that.useVip = data.content.useVip;
+                    that.vip = data.content.vip;
+                    data.content.memberGoodsInfos.sort(function(a,b){
+                       return a.goodsId - b.goodsId;
+                    })
+                    that.list = data.content.memberGoodsInfos;
+                    if(!that.vip){
+                        var obj = JSON.parse(that.getUserInfo())
+                        var time = setInterval(function(){
+                            that.vip =  obj.userInfo.vip;
+                            if(that.vip){
+                                clearInterval(time)
+                            }
+                        },2000)
+                    }
+                }else{
+                    that.poxText2 = '确认';
+                    that.tips = data.message;
+                    that.showpop = 3;
+                }
+            })
+         },
+         buy:function(id,status,name){
+             var that = this;
+             if(status == 0){
+                return false;
+             }else if(!that.vip){
+                that.poxText = '成为VIP';
+                that.tips = 'VIP可以免费获取或购买小偶像的亲笔手账电子档。';
+                that.showpop = 2;
+                return false;
+             }else if(that.vip && !that.useVip){
+                that.poxText = '确认';
+                that.tips = '只有1次免费领取机会，是否领取'+name.split('-')[1]+'手账的电子版？';
+                that.goodsId = id
+                that.showpop = 2;
+                return false;
+             }else if(status == 1){
+                that.poxText = '确认';
+                that.tips = '是否确认花费50鸡腿购买'+name.split('-')[1]+'手账的电子版？';
+                that.goodsId = id
+                that.showpop = 2;
+                return false;
+             }else if(status == 2){
+                var that = this;
+                main.getImgDetails(id,function(data){
+                    if(data.status == 200){
+                        data.content.auctionGoods.detailsImage = data.content.auctionGoods.detailsImage.split(';')
+                        var arr = data.content.auctionGoods.detailsImage.map(function(item,index){
+                            item = 'https://source.48.cn'+item
+                            return item;
+                        })
+                        console.log(arr)
+                        that.snhBrowserImages(arr)
+                    }else{
+                        that.poxText2 = '确认';
+                        that.tips = data.message;
+                        that.showpop = 3;
+                    }
+
+                })
+             }
+         },
+         snhBrowserImages:function(images) {
+                var params = {
+                    images: images,
+                    index: 0  
+                };
+                dsBridge.call("snhBrowserImages",params);
+            },
+          /*充值 */
+        recharge:function(){
+            if(checkFromNew()){
+	    		_openNativeModule("recharge/recharge")
+	    	}else{
+	    		window.web.gotoPage("recharge/detail");
+	    	}
+        },   
+        /*跳转方法 */
+        gotoPage:function(_url){
+            var url = _url
+            if(url.indexOf("http://")>=0 ||url.indexOf("https://")>=0){
+                
+            }else{
+                url = CONFIG.geturl()+url
+            }
+            if(checkFromNew()){
+                snhOpenNewWebview(url)
+            }else if(checkFromOld()){
+                window.web.gotoDetail(url);
+            }else{
+                window.location.href = url
+            }         
+        },
+        close:function(){
+            var that = this;
+            if( that.tips == 'VIP可以免费获取或购买小偶像的亲笔手账电子档。'){
+                /*VIP方法*/
+                _openNativeModule('vip/detail')
+            }else if(that.tips.indexOf('只有1次免费领取机会') >= 0 || that.tips.indexOf('是否确认花费50鸡腿') >= 0){
+                if(that.btnClick){
+                    /*领取*/
+                    if(that.vip && !that.useVip){
+                        that.tips = '免费电子档领取成功';
+                    }else{
+                        that.tips = '购买成功';
+                    }
+                    that.btnClick = false;
+                    main.buyImg(that.goodsId,function(data){
+                        if(data.status == 200){
+                            that.poxText2 = '完成';
+                            that.showpop = 3;
+                            that.getImgList()
+                        }else{
+                            that.tips = data.message;
+                            if(data.message == '当前鸡腿少于购买电子档所所需金额'){
+                                that.tips = '你的鸡腿不足，请先充值';
+                                that.showpop = 1;
+                                return false;
+                            }
+                            that.poxText2 = '确认';
+                            that.showpop = 3;
+                        }
+                        that.btnClick = true;
+                    })
+                }
+            }else{
+                that.showpop = 0
+            }
+        }
+     }
+ })
+
+</script>
+</html>

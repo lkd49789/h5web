@@ -1,0 +1,734 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>SNH48 GROUP 2019夏季三团联合招募</title>
+	<!--title-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta name="keywords" content="snh,48,SNH48,snh48,招募,报名,中国,官网,官方,网站,少女,组合,偶像,团体">
+	<meta name="description"
+		content="SNH48是全球华语区规模最大的偶像团体, 也是基于互联网思维和参与感精神、O2O构架和&quot;可面对面偶像&quot;运营理念的近距离养成式造星平台。SNH48充分吸收亚洲女子偶像天团AKB48的模式特色和运营经验并对进行&quot;中国表达&quot;和&quot;接地气&quot;的本土化改造, 其发展目标是在全球十四亿中国人中甄选优才，充分运用互联网和社交网络时代最具想象力，创新性和前瞻性的造星理念和技术手段, 积极培育兼具音乐舞蹈和影视表演才艺的全方位偶像艺人, 全力打造健康向上、充满青春活力、具备国际影响力的全球华语区第一女子偶像团体，并使之成为互联网和社交传媒时代中国偶像文化和粉丝经济产业的新标杆。">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/artdialog.css">
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/other.css">
+	<!--css-->
+</head>
+<style>
+	#idcard_show{
+		width: 30%;
+	}
+</style>
+<body>
+	<div class="page" id="inner">
+		<header>
+			<div class="container">
+				<img src="image/index/img-header-title.png" alt="三团联合招募">
+				<div class="time">
+					<a href="javascript:;"><img src="image/index/btn-header-join.png" alt="立即报名"></a>
+				</div>
+			</div>
+		</header>
+		<!--header-->
+		<div class="mainbody">
+			<div class="container">
+				<div class="faq">
+					<h2><img src="image/inner/title-faq.png" alt="招募FAQ"></h2>
+					<div class="content">
+						<form  id="postform">
+							<input multiple type="file" style="display: none;">
+							<table align="center" border="0" cellpadding="0" cellspacing="0">
+								<tbody>
+									<tr>
+										<td align="center">
+											<div style="margin-bottom:20px"><b>* 全部信息必须如实填写 报名填写信息除演出经历外都为必填</b></div>
+										</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>											
+											<div class="join">
+												<div class="la">
+													<div class="labs1">姓名：</div>
+													<div class="labs">
+														<input name="name" class="srk1" id="name" type="text">
+													</div>
+													<div class="labs1">民族：</div>
+													<div class="labs">
+														<input name="nation" class="srk2" id="nation" type="text">
+													</div>
+													<div class="labs1">身份证（或海外护照）：</div>
+													<div class="labs">
+														<input name="identity" class="srk" id="identity" maxlength="18"
+															type="text">
+													</div>
+												</div>
+												<div class="la">
+													<div class="labs1">出生年月：</div>
+													<div class="labs">
+														<select name="birthday_year" style="width:54px;" class="srk2"
+															id="birthday_year">
+															<option>年</option>
+														</select>
+													</div>
+													<div class="labs">
+														<select name="birthday_month" class="srk2" id="birthday_month">
+															<option>月</option>
+														</select>
+													</div>
+													<div class="labs">
+														<select name="birthday_day" class="srk2" id="birthday_day">
+															<option>日</option>
+														</select>
+													</div>
+													<div class="labs1">身高(cm)：</div>
+													<div class="labs">
+														<input name="height" class="srk2" id="height" maxlength="3"
+															type="text">
+													</div>
+													<div class="labs1">体重(kg)：</div>
+													<div class="labs">
+														<input name="weight" class="srk2" id="weight" maxlength="3"
+															type="text">
+													</div>
+													<div class="labs1">邮箱：</div>
+													<div class="labs">
+														<input name="email" class="srk8" id="email" type="text">
+													</div>
+												</div>
+												<div class="la">
+													<div class="labs1">本人手机：</div>
+													<div class="labs1">
+														<input name="phone_own" class="srk8" maxlength="11"
+															id="phone_own" type="text">
+													</div>
+													<div class="labs1">监护人手机：</div>
+													<div class="labs1">
+														<input name="phone_guardian" class="srk8" maxlength="11"
+															id="phone_guardian" type="text">
+													</div>
+													<div class="labs1">新浪微博地址：</div>
+													<div class="labs1">
+														<input name="weibo_url" class="srk9" id="weibo_url" type="text">
+													</div>
+												</div>
+												<div class="la">
+													<div class="la" style="margin:0 0 10px;">
+														<div class="labs1"> 优选加入团体： </div>
+														<div class="labs1">
+															<select name="resident" class="srk1" id="resident">
+																<option>请选择加入团体</option>
+																<option>SNH48</option>
+																<option>BEJ48</option>
+																<option>GNZ48</option>
+																<option>海外练习生</option>
+															</select>
+														</div>
+													</div>
+													<div class="labs1"> 请选择希望前往复试的城市： </div>
+													<div class="labs1">
+														<select name="area" class="srk1" id="area">
+															<option>上海</option>
+															<option>北京</option>
+															<option>广州</option>
+														</select>
+													</div>
+												</div>
+												<div class="la1">
+													<div class="la">
+														<div class="labs"> <span
+																style="font-size:12px;"><b>*非中国大陆地区填写：</b></span></div>
+													</div>
+													<div class="la">
+														<div class="labs1"> 联系电话： </div>
+														<div class="labs1">
+															<input name="phone_non_prc" class="srk" maxlength="20"
+																id="phone_non_prc" type="text">
+														</div>
+													</div>
+												</div>
+												<div class="la">
+													<div class="labs1">
+														<p>家庭住址：</p>
+													</div>
+													<div class="labs1">
+														<select name="province" id="province">
+														</select>
+														<select name="city" id="city">
+														</select>
+													</div>
+													<div class="labs1">
+														<input name="address" class="srk" id="address" type="text">
+													</div>
+												</div>
+												<div class="la1">
+													<div class="la">
+														<div class="labs"> <span
+																style="font-size:12px;"><b>*非中国大陆地区填写：</b></span></div>
+													</div>
+													<div class="la">
+														<div class="labs1"> 家庭住址： </div>
+														<div class="labs1">
+															<input name="address_non_prc" class="srk"
+																id="address_non_prc" type="text">
+														</div>
+													</div>
+												</div>
+												<div class="la">
+													<div class="labss1"><b>报名确认邮件可能会被系统误认为垃圾邮件，请仔细查收。</b></div>
+												</div>
+												<div class="la">
+													<div class="labss1"> 上传身份证件图： </div>
+													<div class="labs1" id="upload_id">
+														<div class="qq-uploader">
+															<div style="display: none;" class="qq-upload-drop-area">
+																<span>Drop files here to upload</span></div>
+															<div style="position: relative; overflow: hidden; direction: ltr;"
+																class="qq-upload-button btn btn-middle">
+																<span>上传照片</span>
+																
+																<input
+																	style="position: absolute; right: 0px; top: 0px; font-family: Arial; font-size: 118px; margin: 0px; padding: 0px; cursor: pointer; opacity: 0;"
+																	name="file1" multiple type="file" onchange="previewImage(1)">
+															</div>
+															<ul class="qq-upload-list">
+															</ul>
+														</div>
+													</div>
+													<div class="labss1"> （未成年报名者请上传户口本，非中国大陆地区报名者请上传护照） </div>
+												</div>
+												<div class="la" id="idcard_show" style="display:none;"></div>
+												<div class="la">
+													<div class="labs" style="float:left; text-align:left;">
+														<p style="font-size:12px;"><b>*
+																请报名者上传本人素颜正面照，若上传艺术照，写真照，COSPLAY照或妆容过浓者一律取消报名资格。请注意照片附件大小在1Mb以内，以免上传等待时间过长，照片格式限制为：
+																jpg / gif / png / bmp。</b></p>
+														<p style="margin: 10px 0 0;"><b>上传照片参考样照</b><br><img
+																src="image/inner/ppb.png" alt="参考样张"></p>
+													</div>
+												</div>
+												<div class="la">
+													<div class="labsss">上半身正面照1~3张： </div>
+													<div class="labsss1" id="upload_bust">
+														<div class="qq-uploader">
+															<div style="display: none;" class="qq-upload-drop-area">
+																<span>Drop files here to upload</span></div>
+															<div style="position: relative; overflow: hidden; direction: ltr;"
+																class="qq-upload-button btn btn-middle">
+																<span>上传照片</span>
+																<input
+																	style="position: absolute; right: 0px; top: 0px; font-family: Arial; font-size: 118px; margin: 0px; padding: 0px; cursor: pointer; opacity: 0;"
+																	name="file2" multiple type="file" onchange="previewImage(2)">
+															</div>
+															<ul class="qq-upload-list">
+															</ul>
+														</div>
+													</div>
+													<div class="ppbox"></div>
+													<div class="ppbox"></div>
+													<div class="ppbox"></div>
+												</div>
+												<div class="la">
+													<div class="labsss">单人全身照1~3张： </div>
+													<div class="labsss1" id="upload_full">
+														<div class="qq-uploader">
+															<div style="display: none;" class="qq-upload-drop-area">
+																<span>Drop files here to upload</span></div>
+															<div style="position: relative; overflow: hidden; direction: ltr;"
+																class="qq-upload-button btn btn-middle">
+																<span>上传照片</span>
+																<input
+																	style="position: absolute; right: 0px; top: 0px; font-family: Arial; font-size: 118px; margin: 0px; padding: 0px; cursor: pointer; opacity: 0;"
+																	name="file3" multiple type="file" onchange="previewImage(3)">
+															</div>
+															<ul class="qq-upload-list">
+															</ul>
+														</div>
+													</div>
+													<div class="ppbox"></div>
+													<div class="ppbox"></div>
+													<div class="ppbox"></div>
+												</div>
+												<div class="la" style="display:none;">
+													<div class="labs1" style="margin-top:8px;">
+														<img src="images/meipai.jpg" height="62" width="184" alt="meipai">
+														</div>
+													<div class="labs1" style="font-weight:bold; ">
+														SNH48五期生招募特别与"美拍"合作，您可以通过"美拍"拍摄个人才艺特长展示视频短片，<br>
+														并带上#SNH48五期生招募#话题分享后，将链接在此处提交，以更全面的展示自己。<br>
+														<a href="http://www.meipai.com/" target="_blank">什么是“美拍”？</a>
+													</div>
+												</div>
+												<div class="la" style="display:none;">
+													<div class="labs1">美拍视频连接： </div>
+													<div class="labs1">
+														<input name="meipai_url" class="srk" maxlength="255" id="meipai"
+															type="text">
+														<span style="font-size:14px;">（选填）</span></div>
+												</div>
+												<div class="la" style="display:none;">
+													<div class="labs1" style="margin-top:8px;"><img
+															src="images/changba.jpg" height="59" width="152"></div>
+													<div class="labs1" style="font-weight:bold; ">唱吧 （最时尚的手机KTV）<br>
+														您亦可以上传唱吧上snh48招募活动中个人参赛的链接，以更全面的展示自己。<br>
+													</div>
+												</div>
+												<div class="la" style="display:none;">
+													<div class="labs1">唱吧视频连接： </div>
+													<div class="labs1">
+														<input name="songba_url" class="srk" maxlength="255" id="songba"
+															type="text">
+														<span style="color:#C00; font-size:14px;">（选填）</span></div>
+												</div>
+												<div class="la">
+													<div class="titless1"> 演出经验: </div>
+												</div>
+												<div class="la">
+													<textarea name="experience" cols="45" rows="5" class="srk10"
+														id="experience"></textarea>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<input name="from_type" value="网站报名" type="hidden">
+								</tbody>
+							</table>
+							<div class="form-btn"><a href="#submit" class="btn btn-large">提交报名表</a><a href="#reset"
+									class="btn btn-large">重新填写</a></div>
+						<input type="hidden"  name="group_id" value="SNH">
+                        <input type="hidden"  name="period" value="GROUP_13">
+                        <!-- <input type="hidden"  name="area" value="" id="tcity"> -->
+                        <!-- <input type="hidden"  name="resident" value="" id="ttitle"> -->
+						</form>
+						<!--form-->
+					</div>
+				</div>
+				<!--join-->
+				<div class="return"><a href="index.html" class="btn btn-large">返回首页</a></div>
+			</div>
+			<footer>
+				<div class="container">Copyright 2019 © SNH48 All Rights Reserved.</div>
+			</footer>
+			<!--footer-->
+		</div>
+		<!--mainbody-->
+	</div>
+	<!--page-->
+	<script src="../resource/js/jquery.min.js"></script>
+	<script src="../resource/js/common.js"></script>
+	<script src="js/prefixfree.min.js"></script>
+	<script src="js/jquery.artDialog.min.js"></script>
+	<script src="js/PCASClass.js"></script>
+	<script type="text/javascript">
+		$.getScript("js/jquery.artDialog.min.js", function () {
+			(function (d) {
+				d['okValue'] = '确定';
+				d['cancelValue'] = '取消';
+				d['title'] = '消息';
+				d['lock'] = true;
+			})($.dialog.defaults);
+		});
+		var isloading = false;//是否在提交中
+		$(function () {
+			$("#postform a").click(function () {
+				//$.dialog('四期生招募报名已结束！',function(){});
+				//return false;
+				var act = this.href.substr(this.href.lastIndexOf("#") + 1);
+				switch (act) {
+					case "reset":
+						$("#postform").get(0).reset();
+						window.scrollTo(0, 964);
+						break;
+					case "submit":
+						if (!/^[\u4E00-\u9FA5]{2,6}$/.test($("#name").val())) {
+							$.dialog('请正确填写姓名！', function () { });
+							return false;
+						}
+						else if (!/^[\u4E00-\u9FA5]+$/.test($("#nation").val())) {
+							$.dialog('请正确填写民族！', function () { });
+							return false;
+						}
+						else if (!/^[\d\w]{5,18}$/.test($("#identity").val())) {
+							$.dialog('请正确填写身份证或海外护照！', function () { });
+							return false;
+						}
+
+						var day = new Date(parseInt($("#birthday_year").val()), parseInt($("#birthday_month").val()) - 1, parseInt($("#birthday_day").val()));
+						console.log(day)
+
+						if (isNaN(day.getMonth()) || $("#birthday_month").val() != day.getMonth() + 1) {
+							$.dialog('请正确选择出生年月！', function () { });
+							return false;
+						}
+						else if (isNaN(parseFloat($("#height").val())) || isNaN(parseFloat($("#weight").val()))) {
+							$.dialog('请正确填写身高和体重！', function () { });
+							return false;
+						}
+						else if (!/\w@\w+\.\w/.test($("#email").val())) {
+							$.dialog('请正确填写邮箱地址！', function () { });
+							return false;
+						}
+						else if (!/1\d{10}/.test($("#phone_own").val()) && $("#phone_non_prc").val().length < 5) {
+							$.dialog('请正确填写你的手机号码！', function () { });
+							return false;
+						}
+						else if (!/1\d{10}/.test($("#phone_guardian").val()) && $("#phone_non_prc").val().length < 5) {
+							$.dialog('请正确填写你的监护人手机号码！', function () { });
+							return false;
+						}
+
+						else if ($("#weibo_url").val().length < 5) {
+							$.dialog('请正确填写你的新浪微博！', function () { });
+							return false;
+						}
+						else if ($("#resident").val() == '请选择加入团体') {
+							$.dialog('请选择优先加入团体！', function () { });
+							return false;
+						}
+						else if ($("#city").val() == '' || $("#city").val().indexOf("选择") > -1) {
+							$.dialog('请选择你所在的地区！', function () { });
+							return false;
+						}
+						else if ($("#address").val().length < 5 && $("#address_non_prc").val().length < 5) {
+							$.dialog('请正确填写你的家庭住址！', function () { });
+							return false;
+						}
+						else if ($("#postform input:hidden[name='upload_id']").size() == 0) {
+							$.dialog('请上传身份证件图！', function () { });
+							return false;
+						}
+						else if ($("#postform input:hidden[name^='upload_bust']").size() == 0) {
+							$.dialog('请上传上半身正面照！', function () { });
+							return false;
+						}
+						else if ($("#postform input:hidden[name^='upload_full']").size() == 0) {
+							$.dialog('请上传单人全身照！', function () { });
+							return false;
+						}
+						// $(this).attr("disabled", "disabled");
+						// $("#postform").submit();
+						var formdata = {};
+							var postform = $("#postform");
+							postform.find('input[name]').each(function () {
+								formdata[$(this).attr('name')] = $(this).val();
+							});
+							postform.find('select[name]').each(function () {
+								formdata[$(this).attr('name')] = $(this).val();
+							});
+							postform.find('textarea[name]').each(function () {
+								formdata[$(this).attr('name')] = $(this).val();
+							});
+							// 报名期别根据当前路径自动识别
+							//var urlpath = window.location.href.split('/');urlpath[3]
+							formdata['period'] = $("input[name='period']").val();
+							// 出生年份处理
+							formdata['birth_year'] = day.getFullYear();
+							var m = day.getMonth() + 1;
+							if (m >= 1 && m <= 9) m = "0" + m;
+							var d = day.getDate();
+							if (d >= 0 && d <= 9) d = "0" + d;
+							// 生日处理
+							formdata['birth_day'] = m + '.' + d;
+							formdata['birthday'] =day.getFullYear() + '-' + m + '-' + d;
+							//身份证处理
+							var upload_id_arr = []
+							upload_id_arr[0] = $("input[name='upload_id']").val()
+							formdata['upload_id'] = upload_id_arr;
+							// 上半身正面照处理
+							var bust_array = new Array;
+							$("input[name='upload_bust']").each(function(i){
+								bust_array[i] = $(this).val();
+							});
+							formdata['upload_bust'] = bust_array;
+							// 单人全身照处理
+							var full_array = new Array;
+							$("input[name='upload_full']").each(function(i){
+								full_array[i] = $(this).val();
+							});
+							formdata['upload_full'] = full_array;
+							console.log(formdata)
+							// 提交报名表处理
+							var $this = $(this);
+							//if (DisableClick($this)) return;
+							if(isloading){
+								return false;
+							}else{
+								isloading = true;
+							}
+							InfoSubmit(formdata, function (response) {
+								//ActiveClick($this, '提交报名表');
+								isloading = false;
+								if (response.errcode == 0) {
+									$.dialog('你提交的信息已经成功受理，请登录你填写的邮箱，查询并仔细阅读招募邮件，确认报名成功。', function () {
+										window.location.href = "index.html";
+									}, function () { });
+								} else {
+								console.log("-----------"+response)
+								$.dialog(response.errmsg, function () { });
+								}
+							}, function (response) {
+								//ActiveClick($this, '提交报名表');
+								$.dialog(response.errmsg, function () { });
+								isloading = false;
+							});
+						break;
+					default:
+						return true;
+				}
+
+			});
+			var sel = $("#postform select[name='birthday_year']");
+			for (var i = 1985; i < 2013; i++) {
+				sel.append($("<option />", { "text": i }));
+			}
+			var sel = $("#postform select[name='birthday_month']");
+			for (var i = 1; i < 13; i++) {
+				sel.append($("<option />", { "text": i }));
+			}
+			var sel = $("#postform select[name='birthday_day']");
+			for (var i = 1; i < 32; i++) {
+				sel.append($("<option />", { "text": i }));
+			}
+
+			//城市选择
+			new PCAS("province", "city");
+
+
+			// //上传控件
+			// $.getScript("../resource/fileuploader.js", function () {
+			// 	return false;
+			// 	var dialog = null;
+			// 	new qq.FileUploader({
+			// 		allowedExtensions: ['gif', 'jpg', 'png', 'bmp'],
+			// 		params:'',
+			// 		element: document.getElementById('upload_id'),
+			// 		action: 'https://apimeet.48.cn/join/api/file/upload',
+			// 		onComplete: function (id, name, ret) {
+			// 			if (ret.success) {
+			// 				if ($("#postform input:hidden[name='upload_id']").size() > 0) {
+			// 					return;
+			// 				}
+			// 				$("#postform").append($("<input />", { "value": ret.filename, "type": "hidden", "name": "upload_id" }));
+			// 				$("#idcard_show").append(
+			// 					$("<img />", {
+			// 						"src": 'join/' + ret.filename.substring(0, ret.filename.lastIndexOf(".")) + "_thumb.jpg",
+
+			// 						"title": "点击取消图片，重新上传",
+
+			// 						"click": function () {
+			// 							var that = $(this);
+			// 							$.dialog('是否取消该图片，重新上传？', function () {
+			// 								that.remove();
+			// 								$("#postform input:hidden[value='" + ret.filename + "']").remove();
+			// 								$("#idcard_show").hide();
+			// 							}, function () { });
+			// 						}
+			// 					})
+			// 				);
+
+
+
+			// 				$("#idcard_show").show();
+			// 			}
+			// 			if (dialog) dialog.time(2200).content("身份证件图上传成功！");
+			// 		},
+			// 		onSubmit: function () {
+			// 			if ($("#postform input:hidden[name='upload_id']").size() > 0) {
+			// 				if (confirm("您已经上传过身份证件图，是否需要重新上传？"))
+			// 					$("#postform input:hidden[name='upload_id']").remove();
+			// 				else
+			// 					return false;
+			// 			}
+			// 			dialog = $.dialog('身份证件图上传中...');
+			// 		}
+			// 	});
+
+
+			// 	$.each(['upload_bust', 'upload_full'], function (i, id) {
+			// 		var dialog = null;
+			// 		new qq.FileUploader({
+			// 			allowedExtensions: ['gif', 'jpg', 'png', 'bmp'],
+			// 			element: document.getElementById(id),
+			// 			action: 'https://apimeet.48.cn/join/api/file/upload',
+			// 			sizeLimit: 1024 * 1024,
+			// 			onComplete: function (i, name, ret) {
+			// 				if (ret.success) {
+			// 					if ($("#postform input:hidden[name^='" + this.element.id + "']").size() >= 3) {
+
+			// 						return;
+
+			// 					}
+			// 					$("#postform").append($("<input />", { "value": ret.filename, "type": "hidden", "name": this.element.id + "[]" }));
+			// 					$("#" + this.element.id).parent().children(".ppbox:empty:eq(0)").append(
+			// 						$("<img />", {
+			// 							"src": 'join/' + ret.filename.substring(0, ret.filename.lastIndexOf(".")) + "_thumb.jpg",
+			// 							"width": 78,
+			// 							"title": "点击取消该照片",
+			// 							"click": function () {
+			// 								var that = $(this);
+			// 								$.dialog('是否取消该照片？', function () {
+			// 									that.remove();
+			// 									$("#postform input:hidden[value='" + ret.filename + "']").remove();
+			// 								}, function () { });
+			// 							}
+			// 						})
+			// 					);
+			// 				}
+			// 				if (dialog) dialog.close();
+			// 				$(".d-mask").remove();
+			// 				$(".d-state-lock").parent().remove();
+			// 			},
+			// 			onSubmit: function () {
+			// 				if ($("#postform input:hidden[name^='" + this.element.id + "']").size() >= 3) {
+			// 					alert("只允许上传3张！");
+			// 					return false;
+			// 				}
+			// 				dialog = $.dialog('照片上传中...');
+			// 			}
+			// 		});
+			// 	});
+			// });
+		});
+
+		var curid; // 当前照片位
+			function previewImage(id) {
+				curid = id;
+				var file = $("input[name='file" + curid + "']")[0].files;
+				console.log("size>>" + file[0].size)
+
+				if (curid == 1) {//身份证只能上传一张
+					if ($("#postform input:hidden[name='upload_id']").size() > 0) {
+						$.dialog("最多上传1张图片", function () { });
+						return false;
+					}
+
+				} else if (curid == 2) {
+					if ($("#postform input:hidden[name='upload_bust']").size() >= 3) {
+						$.dialog("最多上传3张图片", function () { });
+						return false;
+					}
+
+				} else if (curid == 3) {
+					if ($("#postform input:hidden[name='upload_full']").size() >= 3) {
+						$.dialog("最多上传3张图片", function () { });
+						return false;
+					}
+
+				}
+
+
+				if (file[0].type.match(/image*/)) {
+					var reader = new FileReader();
+					reader.onload = function (e) {
+						// $('.uploadmask').show();
+						// $('.imgbox').css('background-image','url('+e.target.result+')');
+
+						var formData = new FormData()
+						formData.append("file", file[0]);
+						//上传文件到服务器
+						_uploadToServer(formData, e.target.result)
+
+
+					};
+					reader.readAsDataURL(file[0]);
+				} else {
+					console.log("此文件不是图片文件！");
+				}
+			}
+
+		//提交图片上传
+		function _uploadToServer(formData, imgobj) {
+			$.ajax({
+				"async": false,
+				"crossDomain": true,
+				"url": 'https://apimeet.48.cn/join/api/file/upload',
+				"method": "POST",
+				"headers": {},
+				"processData": false,
+				"contentType": false,
+				"mimeType": "multipart/form-data",
+				"data": formData,
+				success: function (response) {
+					var data = JSON.parse(response);
+					//console.log(JSON.stringify(data))
+					var filename = data.result
+					console.log("data.errcode---" + data.errcode)
+					if (data.errcode == 0) {
+						if (curid == 1) {
+							$("#postform").append($("<input />", { "value": filename, "type": "hidden", "name": "upload_id"}));
+							$("#idcard_show").show().append(
+								$("<img />", {
+									"src": imgobj,
+									// "width": 78,
+									"title": "点击取消该照片"})
+							).click(function(){
+										var that = $(this);
+										$.dialog('是否取消该照片？', function () {
+											that.unbind('click')
+											that.find("img").remove();
+											$("#postform input:hidden[value='" + filename + "']").remove();
+										}, function () { });
+								})
+						} else if (curid == 2) {
+							$("#postform").append($("<input />", { "value": filename, "type": "hidden", "name": "upload_bust" }));
+								$("#upload_bust").parent().children(".ppbox:empty:eq(0)").append(
+									$("<img />", {
+										"src": imgobj,
+										// "width": 78,
+										"title": "点击取消该照片"})
+								).click(function(){
+											var that = $(this);											
+											$.dialog('是否取消该照片？', function () {
+												that.unbind('click')
+												that.find("img").remove();
+												$("#postform input:hidden[value='" + filename + "']").remove();
+											}, function () { });
+								})
+						} else if (curid == 3) {
+							$("#postform").append($("<input />", { "value": filename, "type": "hidden", "name": "upload_full" }));
+								$("#upload_full").parent().children(".ppbox:empty:eq(0)").append(
+									$("<img />", {
+										"src": imgobj,
+										// "width": 78,
+										"title": "点击取消该照片"})
+								).click(function(){
+											var that = $(this);										
+											$.dialog('是否取消该照片？', function () {
+												that.unbind('click')
+												that.find("img").remove();
+												$("#postform input:hidden[value='" + filename + "']").remove();
+											}, function () { });
+								})
+						}
+
+						//上传成功
+						// $('.mask').show();
+						// $('.uploadmask').hide();
+						// var picPath = CONFIG.getSourcePic()+data.content[0].picPath;
+
+						// main.holdPic(picPath,function(dt){
+						//     if(dt.status==200){
+						//         $('.lookinfopic').attr('pathpic',picPath);
+						//     }else{
+						//         main.alert(dt.message);
+						//     }
+						// })
+						$('input[type=file]').wrap('<form>').closest('form').get(0).reset();
+					} else {
+						//上传失败
+						ShowMsg(data.errmsg)
+					}
+					return
+				}, error: function (err) {
+					//上传失败
+					ShowMsg("上传失败")
+				}
+			});
+		}
+	</script>
+	<!--js-->
+</body>
+
+</html>

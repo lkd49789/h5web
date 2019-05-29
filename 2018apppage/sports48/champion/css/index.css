@@ -1,0 +1,211 @@
+*{margin:0;padding:0;}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+body{
+	max-width: 640px;
+	margin:0 auto;
+	background-color:#72bcf5;
+}
+button{
+	outline: none;
+}
+.sec{
+	width: 100%;
+	height: 100%;
+	background:url(../img/bg.jpg) no-repeat center bottom #72bcf5;
+	background-size: cover;
+	position: relative;
+}
+.tit{
+	color:#fff;
+	text-align: center;
+	font-size: 1.2rem;
+	padding: 4% 0;
+}
+.motionList{
+	padding: 0 5%;
+	margin-top: 10px;
+}
+.motionList li{
+	background-color: #fff;
+	border-radius: 8px;
+	height: 4.5rem;
+	line-height: 4.5rem;
+	position: relative;
+	color:#5c6bc2;
+	text-align: left;
+	margin-bottom: 8%;
+
+}
+.motionList li em{
+	font-size: 1.3rem;
+	margin-left: 42%;
+}
+.motionList li span{
+	display: block;
+	width: 2.2rem;
+	height: 2.2rem;
+	border-radius: 100%;
+	position: absolute;
+	right: 5%;
+	top:1.1rem;
+	background-image: url(../img/right.png);
+	background-size: 100% 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: none;
+}
+.motion_log{
+    width: 32%;
+    position: absolute;
+    left: -1rem;
+    top: -0.8rem;
+}
+.usebox{
+	padding: 0 5% 5% 5%;
+	text-align: center;
+}
+.usebox div{
+	display: inline-block;
+
+}
+.integralbox{
+	width: 45%;
+	padding: 4% 0;
+	text-align: center;
+	border-radius: 8px;
+	color:#fff;
+	background: -webkit-linear-gradient(left, #f8768d , #ff97aa); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(right, #f8768d , #ff97aa); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(right, #f8768d , #ff97aa); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to right, #f8768d , #ff97aa); /* 标准的语法 */
+	margin-right: 1%;
+}
+.usebox p{
+	font-size: 1.2rem;
+	text-align: center;
+}
+.chickenbox{
+	width: 45%;
+	padding: 4% 0;
+	text-align: center;
+	border-radius: 8px;
+	color:#fff;
+	background: -webkit-linear-gradient(left, #9b66fd , #eea3ff); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(right, #9b66fd , #eea3ff); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(right, #9b66fd , #eea3ff); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to right, #9b66fd , #eea3ff); /* 标准的语法 */
+	margin-left: 1%;
+}
+.nohave{
+	opacity: 0.5;
+}
+
+.loaded{
+	color:#fff;
+	font-size: 1.2rem;
+	text-align: center;
+	text-decoration: underline;
+	padding-bottom: 4%;
+	display: none;
+	margin-top: 2rem;
+}
+
+/*奖励*/
+.rewardbox{
+	text-align: center;
+	padding-bottom:6%;
+	position: relative;
+}
+.rewardbox div{
+	width: 70%;
+	border-radius: 8px;
+	color:#fdfc80;
+	font-size: 2rem;
+	padding: 4% 0;
+	background: -webkit-linear-gradient(left, #f7758c , #ff99ab); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(right, #f7758c , #ff99ab); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(right, #f7758c , #ff99ab); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to right, #f7758c , #ff99ab); /* 标准的语法 */
+	margin-left:15%;
+	letter-spacing: 0.2rem;
+}
+.lround,.rround{
+	position: absolute;
+	width: 15%;
+}
+.lround{
+	left: 4%;
+    top: 1.2rem;
+}
+.rround{
+	right: 4%;
+	top: 0.5rem;
+	transform:rotate(175deg);
+	-ms-transform:rotate(175deg); /* Internet Explorer */
+	-moz-transform:rotate(175deg); /* Firefox */
+	-webkit-transform:rotate(175deg); /* Safari 和 Chrome */
+	-o-transform:rotate(175deg); /* Opera */
+}
+
+/*是否参加竞猜弹框*/
+.mask_inbox{
+	width: 100%;
+	height: 100%;
+	max-width: 640px;
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+	background-color: rgba(0,0,0,.4);
+	display: none;
+}
+.mask,.prompt{
+	width: 80%;
+	background-color:#fff;
+	border-radius: 8px;
+	position: absolute;
+	left: 10%;
+	top: 33%;
+	display: none;
+}
+.mask_inbox{
+	text-align: center;
+}
+.mask h4{
+	font-size: 1.3rem;
+}
+.mask p{
+	font-size: 1rem;
+	color:#808080;
+	margin-top: 0.7rem;
+}
+.upbox{
+	padding: 10% 0;
+	border-bottom: 1px solid #c4c4c4;
+}
+.btns button{
+	background: transparent;
+	border:0;
+	width: 47%;
+	color:#2774ff;
+	font-size: 1.3rem;
+	padding: 4% 0;
+	display: inline-block;
+}
+.btns button:first-child{
+	border-right: 1px solid #c4c4c4;
+}
+
+.upbox p{
+	font-size: 1.3rem;
+	padding: 0 10%;
+}
+.know{
+	color:#2774ff;
+	font-size: 1.3rem;
+	padding: 4% 0;
+}

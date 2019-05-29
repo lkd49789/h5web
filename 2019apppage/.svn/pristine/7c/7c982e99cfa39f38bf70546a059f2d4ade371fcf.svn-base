@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>SNH48 GROUP 2019夏季三团联合招募</title>
+		<!--title-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+		<meta name="keywords" content="snh,48,SNH48,snh48,招募,报名,中国,官网,官方,网站,少女,组合,偶像,团体">
+		<meta name="description" content="SNH48是全球华语区规模最大的偶像团体, 也是基于互联网思维和参与感精神、O2O构架和&quot;可面对面偶像&quot;运营理念的近距离养成式造星平台。SNH48充分吸收亚洲女子偶像天团AKB48的模式特色和运营经验并对进行&quot;中国表达&quot;和&quot;接地气&quot;的本土化改造, 其发展目标是在全球十四亿中国人中甄选优才，充分运用互联网和社交网络时代最具想象力，创新性和前瞻性的造星理念和技术手段, 积极培育兼具音乐舞蹈和影视表演才艺的全方位偶像艺人, 全力打造健康向上、充满青春活力、具备国际影响力的全球华语区第一女子偶像团体，并使之成为互联网和社交传媒时代中国偶像文化和粉丝经济产业的新标杆。">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/artdialog.css">
+		<link rel="stylesheet" href="css/public.css">
+		<link rel="stylesheet" href="css/layout.css">
+		<link rel="stylesheet" href="css/other.css">
+		<!--css-->
+	</head>
+	<body>
+		<div class="page" id="index">
+			<header>
+				<div class="container">
+					<img src="image/index/img-header-title.png" alt="三团联合招募">
+					<div class="time">
+						<a href="join_index.html" class="btn"><b>立即<i class="icon icon-arc"></i>报名</b></a>
+					</div>
+					<div class="cd">
+						<p><b class="d">--</b>天<b class="h">--</b>时</p>
+						<p><b class="m">--</b>分<b class="s">--</b>秒</p>
+					</div>
+				</div>
+			</header>
+			<!--header-->
+			<div class="mainbody">
+				<div class="container">
+					<div class="intro">
+						<div class="content">
+							<p>
+								SNH48 GROUP是全球华语区规模最大的女子偶像团体及基于互联网思维和参与感精神的造星平台，<br>
+								自成立以来共举办了多期成员招募， 共有20余万名拥有梦想的女孩报名参选、其中近300位<br>
+								脱颖而出加入SNH48 GROUP的大家庭。SNH48 GROUP通过其独有的偶像养成模式以及强大的培训团队，<br>
+								源源不断的为华语娱乐圈输送优质的少女偶像。
+							</p>
+							<p>
+								此次SNH48 GROUP三团联合招募分为：<br>
+								<b class="snh">SNH48（上海）</b>十三期生招募；<b class="bej">BEJ48（北京）</b>八期生招募；<b class="gnz">GNZ48（广州）</b>八期生招募。<br>
+								为了加速优质偶像人才的培养和储备，同时也将开启16-18岁年龄段的<b>SNH48 GROUP海外练习生</b>招募，<br>
+								凡是入选成员将有机会前往海外基地接受为期二年的高级别、高强度、高水准的培训。<br>
+								招募通道将于在2019年5月25日正式开启。
+							</p>
+						</div>
+					</div>
+					<!--intro-->
+					<div class="part-1">
+						<h2><img src="image/index/title-part-1.png" alt="招募条件"></h2>
+						<div class="content">
+							<ol>
+								<li><p>13-22周岁，拥有偶像梦想的女生（注：优秀者条件可适当放宽）；</p></li>
+								<li><p>未与任何经纪公司签约，并能与SNH48 GROUP经纪公司签约专属艺人协议者；</p></li>
+								<li><p>入选后，将接受SNH48 GROUP的专业化艺人培训，参加SNH48 GROUP的专属剧场公演，国内外各类演出，电视和网络综艺节目的拍摄，电影和电视剧拍摄，广告代言等各类演艺和商业活动。</p></li>
+							</ol>
+						</div>
+					</div>
+					<!--part-1-->
+					<div class="part-2">
+						<h2><img src="image/index/title-part-2.png" alt="招募时间"></h2>
+						<div class="content">
+							<p>报名通道开启时间为<b>2019年5月25日</b>，报名通道关闭时间为<b>2019年7月31日</b>。</p>
+						</div>
+					</div>
+					<!--part-2-->
+					<div class="part-3">
+						<h2><img src="image/index/title-part-3.png" alt="报名流程与方式"></h2>
+						<div class="content">
+							<img src="image/index/img-part3-flow.png" alt="招募流程" class="flow">
+							<div class="link">
+								<h3>报名通道：</h3>
+								<div>
+									<a href="faq.html" class="btn btn-large">招募FAQ</a>
+									<a href="note.html" class="btn btn-large">报名详解</a>
+									<a href="javascript:;" class="btn btn-large" onClick="showid('smallLay1')">确认邮件重发</a>
+								</div>
+							</div>
+							<!--报名通道-->
+							<div class="enter">
+								<div class="web">
+									<div class="tag"><b>官方指定</b><i>网页报名通道</i></div>
+									<p>点击进入报名</p>
+									<img src="image/index/img-part3-1.png" alt="网页报名通道">
+									<a href="join_index.html">点击报名</a>
+								</div>
+								<div class="wx">
+									<div class="tag"><b>官方指定</b><i>微信报名通道</i></div>
+									<p>扫一扫报名</p>
+									<img src="image/index/img-part3-2.png" alt="网页报名通道">
+									<img src="image/index/img-qr-code.png" alt="二维码" class="code">
+								</div>
+							</div>
+							<!--主入口-->
+						</div>
+					</div>
+					<!--part-3-->
+					<div class="part-4">
+						<h2><img src="image/index/title-part-4.png" alt="发展机会"></h2>
+						<div class="content">
+							<ul>
+								<li>
+									<h3>丰富造星经验</h3>
+									<p>多年行业耕耘，铸就规模化和专业化的千人运营团队，建设了完善的培训体系。造就了鞠婧祎、李艺彤、黄婷婷等SNH48明星级成员，以及SNH48及各大姐妹团体，SNH48-7SENSES等新生代偶像艺人及偶像组合。建设了覆盖全国的生态化和联盟化运营网络；</p>
+								</li>
+								<li>
+									<h3>卓越平台资源</h3>
+									<p>屡登央视等国内顶级平台，受共青团中央认可表彰，和国内各大卫视及网络媒体均有良好合作。公司不仅拥有丰厚推广资源，更铺设了全方位的艺人包装和立体化营销管道；</p>
+								</li>
+								<li>
+									<h3>影视剧及综艺节目生产实力</h3>
+									<p>旗下明星及成员主演了《九州天空城》、《择天记》、《新白娘子传奇》、《热血长安》、《图兰朵》、《日不落酒店》等多部影视剧和电影巨制。公司自制出品了电视连续剧《芸汐传》、《小夜曲》和网络电影《倔强甜心》等大量优秀影视作品。打造了《国民美少女》、《星梦学院SNHello》等多款人气综艺；</p>
+								</li>
+								<li>
+									<h3>广阔发展空间</h3>
+									<p>练习生均有机会参演或参加丝芭传媒投资的各项综艺、影视剧相关项目，参与各类演出、通告、大型演唱会、广告代言、时尚大片拍摄等。对于资质优秀的练习生将直接输送海外进行封闭式歌舞表演集中培训，让你的发展真正实现高起点、快成长、大回报。让你的偶像之路领先别人一步！</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--part-4-->
+				</div>
+				<footer>
+					<div class="container">Copyright 2019 © SNH48 All Rights Reserved.</div>
+				</footer>
+				<!--footer-->
+			</div>
+			<!--mainbody-->
+		</div>
+		<!--page-->
+		<div id="smallLay1" style="display:none">
+		  <div class="title">SNH48 甄选海选初试邮件重发</div>
+		  <div class="fc_h">
+			<div class="in">
+			  <label for="textfield"></label>
+			  <input id="phone" name="phone" type="text" class="kgd" />
+			</div>
+			<div class="word">请输入您报名时所填写的手机号码</div>
+			<div class="in">
+			  <label for="textfield"></label>
+			  <input id="email" name="email" type="text" class="kgd" />
+			</div>
+			<div class="word">请输入您的邮箱地址，建议与之前的邮箱地址有所区别</div>
+		  </div>
+		  <div class="nb"><a href="#resend">点击重发</a></div>
+		  <div id="word_h"></div>
+		</div>
+		<!--确认邮件重发，结束-->
+		<script src="../resource/js/jquery.min.js"></script>
+		<script src="js/prefixfree.min.js"></script>
+		<!-- <script src="../resource/js/layer/mobile/layer.js"></script> -->
+		<script src="../resource/js/common.js"></script>
+
+		<script src="js/jquery.artDialog.min.js"></script>
+		<script src="js/PCASClass.js"></script>
+
+		<script src="js/index.js"></script>
+		<!--js-->
+	</body>
+</html>

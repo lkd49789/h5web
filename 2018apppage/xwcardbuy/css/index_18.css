@@ -1,0 +1,186 @@
+*{
+	margin:0;
+	padding: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+body{
+	max-width: 640px;
+	margin:0 auto;
+	background-color: #fff;
+}
+section{
+	width: 100%;
+	height: 100%;
+}
+.banner{
+	width: 100%;
+}
+
+.look{
+	width: 90%;
+	margin-left: 5%;
+	text-align: right;
+}
+.look a{
+	text-decoration:underline;
+	font-size: 1.1rem;
+	color: #62707e;
+}
+
+.applybtn{
+	width: 90%;
+	margin-left: 5%;
+	border-radius: 5px;
+	padding: 3% 0;
+	background-color: #62707e;
+	color: #fff;
+	font-size: 1.3rem;
+	margin-top: 5%;
+}
+.looktitle{
+	color:#62707e;
+	font-size: 1.3rem;
+	text-align: center;
+	margin:4% 0 1% 0; 
+}
+.icon_down{
+	text-align: center;
+}
+.icon_down img{
+	width: 5%;
+}
+.freeFlowbox{
+	width: 90%;
+	margin-left:5%;
+	background-color: #f4f2e9;
+	border-radius: 5px;
+	padding: 5% 0;
+}
+.freeFlowbox h4,.chickPack h4,.giftPack h4{
+	text-align: center;
+	color: #62707e;
+	font-size: 1.3rem;
+	font-weight: bold;
+	margin-bottom: 3%;
+	letter-spacing: 2px;
+}
+.logs{
+	width: 100%;
+	text-align: center;
+}
+.logs img{
+	display: inline-block;
+	width: 20%;
+}
+.freeFlowbox p{
+	text-align: center;
+	color: #62707e;
+}
+.freeFlowbox .p1{
+	font-size: 1.2rem;
+}
+.freeFlowbox .p2{
+	font-size: 1rem;
+}
+
+
+.chickPack,.giftPack{
+	width: 80%;
+	margin-left:5%;
+	background-color: #f4f2e9;
+	border-radius: 5px;
+	padding: 5%;
+	margin-top: 3%;
+}
+.chickPack p,.giftPack p{
+	color: #62707e;
+	font-size:1.2rem;
+	position: relative;
+	padding-left: 3rem;
+}
+.chickPack p b{
+	font-size: 1.5rem;
+}
+.giftPack p span{
+	font-size: 1rem;
+}
+
+.chickPack p img,.giftPack p img{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.chickPack p img{
+	width: 1.8rem;
+}
+.giftPack p img{
+	width: 2.2rem;
+}
+
+
+
+
+/*福利列表*/
+.welfareList{
+	padding: 0 5%;
+}
+.welfareList li{
+	height: 9rem;
+	border-bottom:1px solid #e8e8e8;
+	position: relative;
+}
+.welfareList li img{
+	width: 5rem;
+	height: 5rem;
+	float: left;
+	margin-top: 2rem;
+}
+.welfareList div{
+	padding-left: 6rem;
+}
+.welfareList div p:first-child{
+	font-size: 1.4rem;
+	color: #62707e;
+	padding-top: 2rem;
+}
+.welfareList div p:last-child{
+	font-size: 1rem;
+	color:#999999;
+	margin-top:1%;
+}
+.welfareList li .yuan{
+	position: absolute;
+	height: auto;
+	left:0;
+	top: 0;
+	margin: 0;
+}
+.postage {
+	width: 90%;
+	display: block;
+	margin: 5% 0 5% 5%;
+}
+.postageinfo{
+	padding:4% 5% 10% 5%;
+}
+.postageinfo p{
+	font-size: 1.3rem;
+	color: #62707e;
+	font-weight: bold;
+	margin-bottom: 5%;
+}
+.postageinfo ul li{
+	color: #808080;
+	font-size: 1.2rem;
+	margin-bottom: 0.5rem;
+}
+.postageinfo a{
+	color: #62707e;
+	font-size: 1.3rem;
+	text-decoration: underline;
+	display: block;
+	margin-top: 5%;
+}

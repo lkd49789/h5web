@@ -1,0 +1,108 @@
+var vm = new Vue({
+	el:'.wrapper',
+	data:{
+    mInfo:[], //成员信息
+    group:'',   //要加入的分团
+    team:'',    //要加入的队伍
+    teamList:[],   //当前分团队伍
+    groupList:[
+      {
+        gname:"SNH48",
+        id:'1',
+        teams:["SII","NII","HII","X"]
+      },
+      {
+        gname:"BEJ48",
+        id:'2',
+        teams:["B","E","J"]
+      },
+      {
+        gname:"GNZ48",
+        id:'3',
+        teams:["G","NIII","Z"]
+      }
+    ],
+		showpop:0, //0 关闭  1.显示弹框
+		words:'',      //其他申诉问题
+    totalwords:0,   //总字数
+    tips:'你还未选择或填写任何的申诉问题。',//弹框提示语
+    backhome:0  //是否返回上一页  0 NO  1yes
+	},
+  filters:{
+    img:function(_id){
+      return 'images/g'+_id+".png"
+    }
+  },
+  mounted: function () {
+    main.getMemInfo(function(dt){
+      if(dt.status == 200){
+        vm.mInfo = dt.content
+      }else{
+        vm.showPop(dt.message)
+        //vm.backhome = 1;
+      }
+    })
+  },
+	watch:{
+		// words:function(neww){
+  //     console.log(neww)
+		// 	this.totalwords = neww.length;
+		// }
+	},
+	methods: {
+    //检查输入字符
+    descArea(){
+      this.totalwords = this.words.length;
+    },
+    //选择当前分团
+    chooseGroup:function(index){
+      this.group = this.groupList[index].gname
+      this.teamList = this.groupList[index].teams
+      this.team = ""
+      console.log(this.group)
+    },
+    //选择当前队伍
+    chooseTeam:function(index){
+      this.team = this.teamList[index]
+      console.log(this.team)
+    },
+    //提交报名
+		submit:function(){
+        var _this = this;
+			 console.log(this.words)
+       if(this.group == "" || this.team == "" || this.words == ""){
+          this.showPop("请填写完整信息！")
+          return false;
+       }
+       var info = JSON.stringify({
+        group:this.group,
+        team:this.team,
+        words:this.words
+      })
+       main.submit(info,function(dt){
+          if(dt.status == 200){
+              _this.showPop("报名成功！")
+              _this.backhome = 1;
+          }else{
+              _this.showPop(dt.message)
+          }
+       })
+		},
+    //显示弹框
+	  showPop:function(_str){
+        this.backhome = 0;
+	    	this.showpop = 1;
+        this.tips = _str;
+	  },
+    //关闭弹框
+	  closePop:function(){
+        if(this.backhome == 1){
+            snhGoBack()
+        }
+	    	vm.showpop = 0;
+	  }
+	}
+
+})
+
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>绑定丝瓜账号</title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+     <link rel="stylesheet" type="text/css" href="css/common_mobile.css"/>
+    <link href="css/loofahLogin.css" rel="stylesheet"/>
+</head>
+<body>
+		<section>
+			<div class="bind-content" id="sgInfor">
+				<h5>绑定丝瓜账号</h5>
+				<p class="bind-info"></p>
+				
+				 <div class="bind-wrapper">
+				 	<input type="text" class="u-name" placeholder="请输入丝瓜账号" v-model="user_name"/>
+				 	<input type="password" placeholder="请输入密码" id="psd" v-model="password"/>
+				 	<input type="submit" value="绑定" id="bind" @click="submitTodo()"/>
+				 	
+				 	<p>★投票期间丝瓜账号绑定成功后不能解绑或更换！</p>
+
+				 	<!-- <p>★如果您在投票官网上http://vote.48.cn为成员进行了投票，请在“绑定丝瓜账号”的页面中进行账号绑定，投票记录将会进行累加，如果不绑定，则分开计算投票记录。</p> -->
+				 </div>
+				 <p class="tip-vip">★只有通过官网 https://vote.48.cn 网站登录的丝瓜账号才有VIP赠票。</p>
+			</div>
+
+		</section>
+</body>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/config.js" type="text/javascript" charset="utf-8"></script>	
+	<script src="js/getUserInfo.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/bind.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/loofahlogin.js"></script>
+</html>

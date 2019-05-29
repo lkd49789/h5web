@@ -1,0 +1,78 @@
+/* -webkit-filter: grayscale(1); /* Webkit */  
+/* filter: gray; /* IE6-9 */    
+/* filter: grayscale(1); */
+[v-cloak] {
+    display: none !important;
+} 
+body{
+    max-width: 640px;
+    margin:0 auto;
+    position: relative;
+    font-size: 1.4rem;
+}
+button{
+    background: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+#app{
+    min-height: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    padding: .6rem;
+}
+.title{
+    margin: .8rem 0;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.listWrap{
+    padding: 0 .83rem;
+}
+li{
+    height: 10rem;
+    margin-top: 1.25rem;
+    border-radius: .5rem;
+    position: relative;
+    overflow: hidden;
+}
+li>img{
+    width: 100%;
+    height: auto;
+}
+li .headWrap{
+    position: absolute;
+    top: 1rem;left:1rem;
+}
+li .headWrap .head{
+    border-radius: 50%;
+    border: 1px solid #fff;
+    width: 4.17rem;
+    height: 4.17rem;
+    overflow: hidden;
+}
+li .headWrap .head img{
+    width: 100%;
+}
+li .headWrap .name{
+    display: flex;
+    align-items: center;
+}
+li .headWrap .name img{
+    width: 1.67rem;
+    margin-left: .2rem;
+}
+.nike{
+    position: absolute;
+    bottom: .83rem;
+    right: .83rem;
+}
+.nike img{
+    width: 1.83rem;
+}
+.bg{
+    -webkit-filter: grayscale(1); /* Webkit */  
+    filter: gray;   
+    filter: grayscale(1);
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>代役及进入正式团体规则</title>
+	<link href="../../common/css/common.css" rel="stylesheet" />
+	<link href="css/index.css" rel="stylesheet" />
+</head>
+<body>
+	<section class='wrapper' v-cloak>
+		<div class="rule-box">
+			<div class="rule-top">
+				<p><b>根据IDFT成员的日常表现，以及粉丝人气，偶像态度等相关内容，口袋48每月会进行分数考核。</b></p>
+				<div>
+					<h1>日常表现项：</h1>
+					<p>个人微博内容是否积极阳光，是否主动积极，每月微博条数不少于10条，每条计分1000分。封顶1万分。</p>
+					<p>个人展示，包括各类社交媒体内容发布，如口袋48，B站，抖音，唱吧，小红书等，每条计分1000分，封顶5千分。</p>
+				</div>
+				<div>
+					<h1>粉丝人气：</h1>
+					<p>每月直播次数不少于5次，每小时计1000分，封顶5千分。</p>
+					<p>每月鸡腿结算数量，每1万个鸡腿，计5000分，不设封顶。</p>
+					<p>每月微博，口袋48粉丝数量增长，每100人计1000分，封顶2万分。</p>
+				</div>
+				<div>
+					<h1>偶像态度：</h1>
+					<p>口袋房间内的粉丝互动，内容积极阳光。每天计50分，封顶1500分</p>
+				</div>
+				<div>
+					<h1>粉丝安利</h1>
+					<p>每位粉丝投稿成员的安利作品，形式不限，每作品计500分，封顶2万分。</p>
+				</div>
+			</div>
+			<p><b>根据以上IDFT的考核规则，每月都会生成积分排行榜。</b></p>
+			<div class="rule-bottom">
+				<div>
+					<p><b>代役规则：</b></p>
+					<p><b>1.单月总分超过10万分。</b></p>
+					<p><b>2.单月总分排名前15</b></p>
+					<p><b>3.在IDFT工作中，无任何违反成员守则行为。</b></p>
+					<p><b>4.可以全身心投入到正式团体的日常工作中。</b></p>
+				</div>
+				<br>
+				<p><b>满足上述所有条件的成员，可以获得代役的机会。根据排名以及个人意愿，进行报名申请，由各分团的经纪业务部门进行评估，符合本团条件以及个人意愿一致的成员，可以升级或者代役到各分团中，参与代役的成员，可以获得参加年度总诀选等大型团体活动的机会。</b></p>
+				<br>
+				<p>符合条件人员，如自行放弃当月代役机会，将在3个月内不再重新安排代役申请。如代役申请为所申请分团拒绝，则下个月仍可继续申请其他分团的代役请求。</p>
+				<br>
+				<div>
+					<p><b>进入正式团体规则：</b></p>
+					<p><b>1.进入到代役队伍中，代役场次满20场，并且代役期间无任何违规行为。</b></p>
+					<p><b>2.进入到代役队伍中，年度总决选中报成绩排名top48</b></p>
+					<p><b>3.进入到代役队伍中，连续4个月IDFT排名第一并且每月总分超过20万分。</b></p>
+				</div>
+				<br>
+				<p>满足以上<b>三个条件的任何一个，均可获得升级的机会。</b></p>
+				<br>
+				<p><b>代役期间，福利待遇除基本薪资外，公演津贴，可参与正式队伍中的其他团体及外务活动。</b></p>
+				<br>
+				<p><b>4月积分明细，以及达标人员代役资格申请表，稍后定向推送给各位成员。</b></p>
+			</div>
+		</div>
+		
+		<p class="btn" v-on:click="check()">查看我的分数</p>
+		
+	</section>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<script src="../../common/js/vue.js"></script>
+<script src="../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/index.js"></script>
+</html>

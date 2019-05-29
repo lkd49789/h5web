@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>SNH48五周年充值抽奖活动</title>	
+	<link rel="stylesheet" href="css/common.css" />	
+	<link href="css/mui.min.css" rel="stylesheet"/>
+	<link href="css/mui.picker.css" rel="stylesheet"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+</head>
+<body>
+	<!--loading-->
+	<div class="loading-wrapper" >
+		<div id="colorfulPulse">
+			  <span class="item-1 item"></span>
+			  <span class="item-2 item"></span>
+			  <span class="item-3 item"></span>
+			  <span class="item-4 item"></span>
+			  <span class="item-5 item"></span>
+			  <span class="item-6 item"></span>
+			  <span class="item-7 item"></span>
+			  <div class="loading-txt">Loading...<span class="count"></span></div>
+		</div>
+	</div>
+	
+	<section id="wrap" style="max-width: 680px;margin: 0 auto;">
+		<div class="btn-top">
+			<span class="top-result">剩余<em class="draw-num"></em>次</span>
+			<span class="top-list">中奖记录</span>
+		</div>
+		<div class="title">
+			<img src="images/title.png">
+		</div>
+		<div class="container">
+			
+			<img class="subtitle" src="images/sub-title.png">
+			<div class="container-onearm">
+				<div class="onearmbandit-box">
+					<img src="images/onearmbandit.png">
+					<div class="food-box">
+				    	<div class="food"></div>
+				    	<!-- <div class="food"></div>
+				    	<div class="food"></div> -->
+				    </div>
+				</div>
+				
+				<div class="menu">
+					<img class="btn-prize" src="images/btns_01.png">
+					<img class="btn-start" src="images/btns_02.png">
+					<img class="btn-game" src="images/btns_03.png">
+				</div>
+			</div>
+			<div class="container-list">
+				<div class="menu-title">
+					<img src="images/txt.png">
+				</div>
+				<div class="list-box">
+					<div>
+						<ul>
+							<!-- <li><span>我是XXX</span>开了个特等鸡袋，抢了袋王1688个鸡腿！</li>
+							<li><span>我是XXX</span>开了个特等鸡袋，抢了袋王1688个鸡腿！</li>
+							<li><span>我是XXX</span>开了个特等鸡袋，抢了袋王1688个鸡腿！</li>
+							<li><span>我是XXX</span>开了个特等鸡袋，抢了袋王1688个鸡腿！</li>
+							<li><span>我是XXX</span>开了个特等鸡袋，抢了袋王1688个鸡腿！</li>
+							<li><span>我是XXX</span>开了个特等鸡袋，抢了袋王1688个鸡腿！</li>
+							<li><span>我是XXX</span>开了个特等鸡袋，抢了袋王1688个鸡腿！</li>
+							<li><span>我是XXX</span>开了个特等鸡袋，抢了袋王1688个鸡腿！</li>
+							<li><span>我是XXX</span>开了个特等鸡袋，抢了袋王1688个鸡腿！</li>
+							<li><span>我是XXX</span>开了个特等鸡袋，抢了袋王1688个鸡腿！</li>
+							<li><span>我是XXX</span>开了个特等鸡袋，抢了袋王1688个鸡腿！</li>
+							<li><span>我是XXX</span>开了个特等鸡袋，抢了袋王1688个鸡腿！</li>
+							<li><span>我是XXX</span>开了个特等鸡袋，抢了袋王1688个鸡腿！</li>
+							<li><span>我是XXX</span>开了个特等鸡袋，抢了袋王1688个鸡腿！</li>
+							<li><span>我是XXX</span>开了个特等鸡袋，抢了袋王1688个鸡腿！</li> -->
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!--所有小弹窗-->
+	<div class="popups">
+		<!--弹窗的遮罩层-->
+		<div class="layer"></div>
+		<!-- 未中奖 -->
+		<div class="mask2" style="display:none">
+			<img src="images/frame.png" class="frame">
+			<div class="jp-box">
+				<img src="images/icon-2.png" class="icon">
+				<div class="user-jp-info">
+					<p>聚聚，感谢你一直以来对SNH48的支持</p>
+					<p class="user-jp-name">没中奖别气馁！袋王为你打CALL！</p>
+				</div>
+			</div>
+			<div class="btn-pop">
+				<img class="btn-know" src="images/btn-know.png">
+			</div>
+		</div>
+		<!-- 奖项说明 -->
+		<div class="mask1" style="display:none">
+			<img src="images/frame.png" class="frame">
+			<div class="rule-info">
+				<p>奖项说明</p>
+				<div>
+					<p class="user-jp-name">惊喜奖</p>
+					<p>SNH48第四届年度金曲大赏 BEST50 REQUEST TIME歌曲总决选演唱会门票</p>
+					<p class="user-jp-name">奖品列表</p>
+					<p>1.口袋48鸡腿(随机数额)</p>
+					<p>2.口袋48免费扭蛋券3张 </p>
+					<p>3.口袋48开屏广告首页使用权3天<!-- （2018年中任意连续3天） --> </p>
+					<p>4.鞠婧祎个人台历1本 </p>
+					<p>5.李艺彤个人海报1张 </p>
+					<p>6.《向阳的星光》海报1张</p>
+					<p>7.7SENSES《绽放》海报1张 </p>
+					<p>8.SNH48 京剧造型扑克牌1套</p>
+					<p>9.SNH48 TOP7冰箱贴1个 </p>
+					<p>10.激流之战主体A4文件夹1个 </p>
+				</div>
+			</div>
+			<div class="btn-pop">
+				<img class="btn-know" src="images/btn-goto-draw.png">
+			</div>
+		</div>
+		<!-- 活动说明 -->
+		<div class="mask3" style="display:none">
+			<img src="images/frame.png" class="frame">
+			<div class="rule-info">
+				<p>活动说明</p>
+				<div>
+					<p>1.充值时间：2018年1月13日18:00 - 1月22日18:00</p>
+					<p>2.抽奖时间：2018年1月13日18:00 - 1月22日19:00</p>
+					<p>3.在口袋48 APP、SNH48微信公众号、官方直播网页（live.snh48.com）购买口袋48鸡腿，<em class="user-jp-name">单笔</em>充值实际支付满100元即可获得一次口袋48“SNH48成立五周年纪念抽奖活动”的抽奖资格。每人每天抽奖次数无上限。</p>
+					<p>4.实体奖品将在活动结束后统一安排发放(仅限中国地区,包括港澳台)</p>
+					<p>5.对活动如有疑问，请通过袋王的聚聚房间，或新浪微博@口袋48联系袋王。</p>
+				</div>
+			</div>
+			<div class="btn-pop">
+				<img class="btn-know" src="images/btn-goto-draw.png">
+			</div>
+		</div>
+		<!-- 无抽奖机会 -->
+		<div class="mask4" style="display:none">
+			<img src="images/frame.png" class="frame">
+			<div class="jp-box">
+				<img src="images/icon-2.png" class="icon">
+				<div class="user-jp-info">
+					<p>聚聚，您已经没有抽奖机会了！</p>
+					<p class="user-jp-name">马上去充值，赢取抽奖机会吧！</p>
+				</div>
+			</div>
+			<div class="btn-pop">
+				<img class="btn-know" src="images/btn-know.png">
+			</div>
+		</div>
+
+		<!-- 实物奖 -->
+		<div class="mask5" style="display:none">
+			<img src="images/frame.png" class="frame">
+			<div class="jp-box">
+				<img src="images/icon.png" class="icon">
+				<div class="user-jp-info">
+					<p>聚聚，感谢你一直以来对SNH48的支持</p>
+					<p>恭喜你抽中了五周年奖品——</p>
+					<p class="user-jp-name">鞠婧祎个人台历1本</p>
+
+				</div>
+			</div>
+			<div class="btn-pop-7">
+				<img class="btn-input btn-half" src="images/btn-input.png">
+				<img class="btn-close btn-gift btn-half float-r" src="images/btn-know-harf.png">
+			</div>
+		</div>
+		<!-- 虚拟奖 -->
+		<div class="mask6" style="display:none">
+			<img src="images/frame.png" class="frame">
+			<div class="jp-box">
+				<img src="images/icon.png" class="icon">
+				<div class="user-jp-info">
+					<p>聚聚，感谢你一直以来对SNH48的支持</p>
+					<p>恭喜你抽中了五周年奖品——</p>
+					<p class="user-jp-name">口袋48鸡腿 100个</p>
+					<p class="tip-6">快去“鸡腿记录”查看吧！</p>
+				</div>
+			</div>
+			<div class="btn-pop">
+				<img class="btn-know" src="images/btn-know.png">
+			</div>
+		</div>
+		<!-- 提交地址信息 -->
+		<div class= "mask7" style="display:none">
+			<img src="images/frame.png" class="frame">
+			<ul class="u-info">
+				<li>
+					<input type="text" class="mui-input-clear u-name" maxlength="10" placeholder="请输入姓名">
+				</li>
+				<li>
+					<input type="tel" class="mui-input-clear u-phone" maxlength="11" placeholder="请输入手机号码">
+				</li>
+				<li>
+					<input type="text" class="mui-input-clear u-city" readOnly="true" onfocus="this.blur()" placeholder="选择地区">
+				</li>
+				<li>
+					<input type="text" class="mui-input-clear u-address"  maxlength="50" placeholder="请输入详细地址">
+				</li>
+			</ul>
+			<div class="btn-pop-7">
+				<img class="btn-submit btn-half" src="images/btn-7-1.png">
+				<img class="btn-close btn-hide-addr btn-half float-r" src="images/btn-7-2.png">
+			</div>
+			<p>点击“确定”提交后，不可再进行修改</p>
+		</div>
+		<!-- 中奖记录 -->
+		<div class="mask8" style="display:none">
+			<img src="images/frame.png" class="frame">
+			<div class="gift-list">
+				<p>我的中奖记录</p>
+				<div>
+					
+					<ul>
+						<!-- <li>
+							<p class="jp-info">1.口袋48鸡腿100个</p>
+							<p><span class="time">1月22号 22:00</span><span class="list-info">已到账</span><span class="btn-addr">补填地址</span></p>
+						</li>
+						<li>
+							<p class="jp-info">2.口袋48鸡腿100个</p>
+							<p><span class="time">1月22号 22:00</span><span class="list-info">已发货(运单号：4545333454)</span></p>
+						</li>
+						<li>
+							<p class="jp-info">3.口袋48鸡腿100个</p>
+							<p><span class="time">1月22号 22:00</span><span class="list-info">已到账</span></p>
+						</li>
+						<li>
+							<p class="jp-info">4.口袋48鸡腿100个</p>
+							<p><span class="time">1月22号 22:00</span><span class="list-info">已到账</span></p>
+						</li> -->
+					</ul>
+				</div>
+			</div>
+			<div class="btn-pop">
+				<img class="btn-know" src="images/btn-know.png">
+			</div>
+		</div>
+	</div>
+</body>
+	<script type="text/javascript" src="../../common/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../../common/js/common.js"></script>
+	<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>	
+	<script src="js/data.city.js" type="text/javascript" charset="utf-8"></script>	
+	<script src="js/mui.picker.min.js" type="text/javascript" charset="utf-8"></script>	
+	<script type="text/javascript" src="js/easing.js"></script>
+	<script src="js/config.js" type="text/javascript" charset="utf-8"></script>	
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+</html>

@@ -1,0 +1,160 @@
+*{margin:0;padding: 0}
+html,body{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background-color: #191464;
+}
+body{
+	max-width: 640px;
+	margin:0 auto;
+}
+section{
+	width: 100%;
+	height: auto;
+	min-height: 100%;
+	background-color: #191464;
+}
+button{
+	border:none;
+}
+ul,li{
+	list-style: none;
+}
+.banner{
+	width: 100%;
+}
+
+
+
+.content{
+	padding-top: 9%;
+	padding-bottom: 10%;
+	background-color: #191464;
+}
+.content li{
+	display: inline-block;
+}
+
+
+
+.topbox{
+	width: 20%;
+	position: relative;
+	margin-left: 41%;
+}
+.tophead{
+	display: block;
+	width: 100%;
+	/* border:1px solid #ffdd19; */
+	border-radius: 100%;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.namebox{
+	text-align: center;
+	color: #fff;
+	font-size: 1.1rem;
+	margin-top: 0.5rem;
+	height: 2rem;
+	line-height: 2rem;
+	white-space:nowrap;
+	width: 130%;
+    margin-left: -15%;
+}
+.rank{
+	display: inline-block;
+	width: 1.5rem;
+	height: 1.5rem;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: contain;
+	text-align: center;
+	line-height: 1.5rem;
+	color:#fff;
+	font-size: 1rem;
+	margin-right: 0.3rem;
+}
+.namebox em{
+	font-size: 1rem;
+	margin-left: 0.3rem;
+}
+.gold{
+	background-image:url(../../img/gold.png);
+}
+.silver{
+	background-image:url(../../img/silver.png);
+}
+.copper{
+	background-image:url(../../img/copper.png);
+}
+.crown{
+	position: absolute;
+    left: -1%;
+    top: -7%;
+    width: 30%;
+}
+
+
+.list1{
+	text-align: center;
+	margin-top: 3%;
+}
+.headbox{
+	width: 20%;
+	position: relative;
+}
+.list1 li{
+	margin:0% 12%;
+}
+
+.lookbtn{
+	width: 80%;
+	margin-left: 10%;
+	border-radius: 8px;
+	font-size: 1.3rem;
+	height: 3.8rem;
+	line-height: 3.8rem;
+	color: #fff;
+	letter-spacing: 1px;
+	margin-top: 3%;
+	background: -webkit-linear-gradient(left, #ea81ff , #515aff); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(right, #ea81ff , #515aff); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(right, #ea81ff , #515aff); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to right, #ea81ff , #515aff); /* 标准的语法 */
+}
+
+.rulebtn{
+	text-align: center;
+	margin-top: 5%;
+}
+.rulebtn a{
+	font-size: 1.2rem;
+	color:#ff5cb4;
+	text-decoration:underline
+
+}
+
+
+.first{
+	border:2px solid #ffdd19;
+}
+.tow{
+	border:2px solid #bfbfbf;
+}
+.three{
+	border:2px solid #facd89;
+}
+
+.SII-c{color:#91CCEA;}
+.NII-c{color:#AD85BA;}
+.X-c{color:#b1d61b;}
+
+.namebox img{
+	width: 2rem;
+	margin-left: .5rem;
+	vertical-align: middle;
+	margin-top: -.1rem;
+}

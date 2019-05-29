@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>第五届48偶像年度人气总决选</title>
+    <link href="css/common_mobile.css" rel="stylesheet"/>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/country.css" rel="stylesheet"/>
+    <link href="css/index.css" rel="stylesheet"/>
+    
+</head>
+
+<body>
+	<!--绑定设备号弹窗-->
+	<section id="bindPop" mytype="">
+		<div class="bind-content">
+			<h5></h5>
+		 	<span class="region" area="86">中国大陆(86)</span>
+		 	<p class="tip">请输入手机号</p>
+		 	<div class="pdiv"><input type="phone" id="phone" placeholder="请输入手机号" maxlength="11"/></div>
+		 	<div class="phoneCode">
+		 		<input type="text" placeholder="验证码" id="code"/>
+		 		<label for="code" class="count">获取验证码</label>
+		 	</div>
+		 	<div><button type="button" class="btn-submit">提交</button></div>
+		</div>
+	</section>
+	<div class="content">
+		<!-- banner -->
+		<div id="banner" class="mui-slider">
+			<img src="images/banner.jpg">
+			<!-- <div class="mui-slider-group mui-slider-loop">
+				<div class="mui-slider-item mui-slider-item-duplicate">
+				<a href="#"><img src="images/banner1.png"></a>
+			</div>
+			<div class="mui-slider-item">
+				<a href="#"><img src="images/banner1.png"></a>
+			</div>
+			<div class="mui-slider-item">
+				<a href="#"><img src="images/banner1.png"></a>
+			</div>
+			<div class="mui-slider-item mui-slider-item-duplicate">
+				<a href="#"><img src="images/banner1.png"></a>
+			</div>
+				
+			</div>
+			<div class="mui-slider-indicator">
+				<div class="mui-indicator mui-active"></div>
+				<div class="mui-indicator"></div>
+			</div> -->
+			<div class="rule-wrapper">
+				<a class="btn-rule" href="###">年度作品介绍</a>
+			</div>
+			<div class="intro-wrapper">
+				<a class="btn-intro" href="###">总选介绍</a>
+			</div>
+		</div>
+		<!-- 用户信息 -->
+		<div class="userinfo-wrapper">
+			<div class="vote-used">
+				<p>已投票数</p>
+				<p class="vote-num"></p>
+			</div>
+			
+			<div class="vote-left">
+				<p>剩余票数</p>
+				<p class="vote-num"></p>
+			</div>
+		</div>
+		<!-- 菜单 -->
+		<div class="mui-content">
+
+			<ul class="mui-table-view mui-table-view-chevron">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate" link="active.html" href="###">
+						<img src="images/icon-p-1.png">激活投票券
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate" link="buy_ticket.html" href="###">
+						<img src="images/icon-p-2.png">获得投票券
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate" link="vote_history.html" href="###">
+						<img src="images/icon-p-3.png">投票记录
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-guzhang" href="###">
+						<img src="images/icon-p-4.png">故障申诉
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate" link="loofahLogin.html" href="###">
+						<img src="images/icon-p-5.png">绑定丝瓜账号
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-bindwx" href="###">
+						<img src="images/icon-p-5.png">绑定微信
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate" link="freeReceive.html">
+						<img src="images/icon-p-6.png">投票权领取
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- 成员信息 -->
+		<div class="member-wrapper">
+			<div class="member-menu">
+				<div class="group-menu">
+					<img class="menu-bg" src="images/group-menu.png"/>
+					<img class="menu-line" src="images/group-line.png"/>
+					<ul class="menu-btns">
+						<li group="SNH"></li>
+						<li group="BEJ"></li>
+						<li group="GNZ"></li>
+						<li group="SHY"></li>
+						<li group="CKG"></li>
+					</ul>
+				</div>
+				<div class="team-group">
+						<ul prevteam="SNH-SII">
+							<li team="SNH-SII" class="SNH-SII-bg">TEAM SII</li>
+							<li team="SNH-NII" class="SNH-NII-c SNH-NII-bd">TEAM NII</li>
+							<li team="SNH-HII" class="SNH-HII-c SNH-HII-bd">TEAM HII</li>
+							<li team="SNH-X" class="SNH-X-c SNH-X-bd">TEAM X</li>
+							<li team="SNH-Ft" class="SNH-Ft-c SNH-Ft-bd">TEAM Ft</li>
+							<li team="SNH-YBS" class="SNH-YBS-c SNH-YBS-bd">预备生</li>
+						</ul>
+						<ul prevteam="BEJ-B">
+							<li team="BEJ-B" class="BEJ-B-bg">TEAM B</li>
+							<li team="BEJ-E" class="BEJ-E-c BEJ-E-bd">TEAM E</li>
+							<li team="BEJ-J" class="BEJ-J-c BEJ-J-bd">TEAM J</li>
+							<li team="BEJ-YBS" class="BEJ-YBS-c BEJ-YBS-bd">预备生</li>
+						</ul>
+						<ul prevteam="GNZ-G">
+							<li team="GNZ-G" class="GNZ-G-bg">TEAM G</li>
+							<li team="GNZ-NIII" class="GNZ-NIII-c GNZ-NIII-bd">TEAM NIII</li>
+							<li team="GNZ-Z" class="GNZ-Z-bg">TEAM Z</li>
+							<li team="GNZ-YBS" class="GNZ-YBS-bg">预备生</li>
+						</ul>
+						<ul prevteam="SHY-SIII">
+							<li team="SHY-SIII" class="SHY-SIII-bg">TEAM SIII</li>
+							<li team="SHY-HIII" class="SHY-HIII-c SHY-HIII-bd">TEAM HIII</li>
+						</ul>
+						<ul prevteam="CKG-C">
+							<li team="CKG-C" class="CKG-C-bg">TEAM C</li>
+							<li team="CKG-K" class="CKG-K-c CKG-K-bd">TEAM K</li>
+							<li team="CKG-YBS" class="CKG-YBS-c CKG-YBS-bd">预备生</li>
+						</ul>
+				</div>
+			</div>
+			<div class="members">
+			<!-- <div id="members" class="mui-slider members"> -->
+				<!-- <div class="mui-slider-group"> -->
+					<div class="mui-slider-item teams">
+						<div class="group group-SNH">
+							<ul class="SNH-SII">
+							</ul>
+						
+							<ul class="SNH-NII">
+							</ul>
+
+							<ul class="SNH-HII">
+							</ul>
+
+							<ul class="SNH-X">
+							</ul>
+
+							<ul class="SNH-Ft">
+							</ul>
+
+							<ul class="SNH-YBS">							
+							</ul>
+					</div>
+						<div class="group group-BEJ">
+							<ul class="BEJ-B">
+							</ul>
+						
+							<ul class="BEJ-E">
+							</ul>
+
+							<ul class="BEJ-J">
+							</ul>
+
+							<ul class="BEJ-YBS">
+							</ul>
+						</div>
+						<div class="group group-GNZ">
+							<ul class="GNZ-G">
+							</ul>
+						
+							<ul class="GNZ-NIII">
+							</ul>
+
+							<ul class="GNZ-Z">
+							</ul>
+
+							<ul class="GNZ-YBS">
+							</ul>
+						</div>
+						<div class="group group-SHY">
+							<ul class="SHY-SIII">
+							</ul>
+						
+							<ul class="SHY-HIII">
+							</ul>
+						</div>
+						<div class="group group-CKG">
+							<ul class="CKG-C">
+							</ul>
+						
+							<ul class="CKG-K">
+							</ul>
+
+							<ul class="CKG-YBS">	
+							</ul>
+						</div>
+					</div>
+					
+				<!-- </div> -->
+			</div>
+		</div>
+	</div>
+	<div class="mask_inbox">
+		<div class="maskinfo">
+			<div class="upbox">
+				<h4>是否绑定微信？</h4>
+				<p>★投票期间绑定微信成功后不能解绑或更换！</p>
+			</div>
+			<div class="btns">
+				<button class="btnsback">取消</button>
+				<button class="btnsright">确定</button>
+			</div>
+		</div>
+	</div>
+<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/config.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/country.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/getUserInfo.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/bind.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>

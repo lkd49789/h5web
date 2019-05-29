@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SNH48 GROUP 新生招募</title>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Cache-Control" content="max-age=0">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <link rel="shortcut icon " type="images/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/rem.js"></script>
+</head>
+<body>
+    <div class="box">
+        <div class="ot_return">
+			<a href="index.html">〈 返回</a>
+		</div>
+        <img src="images/ot_top.jpg" alt="">
+        <div class="info_con">
+			<img src="images/otbg_t.png" alt="">
+			<div class="ot_con">
+				<div class="b_bt">
+					<img src="images/ot_bt3.png" alt="">
+				</div>
+				<div class="faq_con">
+					<div class="faq_icon"><img src="images/faq_q_icon.png" alt=""></div>
+					<div class="faq_q">
+						请问SNH48 GROUP 联合招募何时开始何时截止报名？
+					</div>
+					<div class="faq_icon"><img src="images/faq_a_icon.png" alt=""></div>
+					<div class="faq_a">
+						SNH48 GROUP 联合招募自2019年1月19日起至2019年3月20日截止。
+					</div>
+					
+					<div class="faq_icon"><img src="images/faq_q_icon.png" alt=""></div>
+					<div class="faq_q">
+						请问SNH48 GROUP 联合招募的需求是？
+					</div>
+					<div class="faq_icon"><img src="images/faq_a_icon.png" alt=""></div>
+					<div class="faq_a">
+						13-22周岁，拥有梦想的女生（优秀者条件可适当放宽），未与任何经纪公司签约，并能与我方经纪公司签约入选后，可以正常出席SNH48 GROUP的剧院公演，国内外各类演出, 电影、电视剧和网络综艺节目的拍摄，广告代言等各类演艺和商业活动。SNH48 GROUP海外练习生招募年龄为16-18周岁。
+					</div>
+					
+					<div class="faq_icon"><img src="images/faq_q_icon.png" alt=""></div>
+					<div class="faq_q">
+						请问我如何获知是否通过SNH48 GROUP 联合招募海选？
+					</div>
+					<div class="faq_icon"><img src="images/faq_a_icon.png" alt=""></div>
+					<div class="faq_a">
+						SNH48 GROUP海选报名将于2019年1月19日起至2019年3月20日结束，海选截止报名后，陆续通过电话及邮件对合格的面试者进行合格通知。如您未收到邮件或电话，则代表未通过此次海选。
+					</div>
+					
+					<div class="faq_icon"><img src="images/faq_q_icon.png" alt=""></div>
+					<div class="faq_q">
+						如果我没有收到报名确认邮件怎么办？
+					</div>
+					<div class="faq_icon"><img src="images/faq_a_icon.png" alt=""></div>
+					<div class="faq_a">
+						报名确认邮件可能会被系统误认为垃圾邮件，请仔细查收！亦可利用此次招募专题中的确认邮件重发功能重发确认邮件，建议在重发邮件的时候使用与先前不同的邮件地址。
+					</div>
+					
+					<div class="faq_icon"><img src="images/faq_q_icon.png" alt=""></div>
+					<div class="faq_q">
+						请问SNH48 GROUP 联合招募复试及终试将于何时在何地进行？
+					</div>
+					<div class="faq_icon"><img src="images/faq_a_icon.png" alt=""></div>
+					<div class="faq_a">
+						SNH48 GROUP 联合招募复试确切时间请随时留意SNH48官方网站。
+					</div>
+					
+					<div class="faq_icon"><img src="images/faq_q_icon.png" alt=""></div>
+					<div class="faq_q">
+						收到报名确认邮件是乱码怎么办？
+					</div>
+					<div class="faq_icon"><img src="images/faq_a_icon.png" alt=""></div>
+					<div class="faq_a">
+						您的邮箱显示页面对utf-8编码不支持或显示错误，建议您使用确认邮件重发功能，重新发送确认邮件，请使用不同的邮箱。
+					</div>
+					
+				</div>
+				
+				<div class="footer">
+					<img src="images/footer.png" alt="">
+				</div>
+			</div>
+		</div>
+		
+    </div>
+
+    <script>
+
+    </script>
+</body>
+</html>

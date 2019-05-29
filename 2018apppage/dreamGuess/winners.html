@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>获奖名单</title>
+	<link href="css/common.css" rel="stylesheet" />
+	<style>
+		*{margin:0;padding: 0;}
+		html,body{
+			width: 100%;
+			height: 100%;
+		}
+		body{
+			width: 100%;
+			max-width: 640px;
+			background-color: #181461;
+			position:relative;
+			margin:0 auto;
+		}
+		section{
+			width: 100%;
+			min-height: 100%;
+			height: auto;
+			position: relative;
+			background: url(img/bg.jpg)no-repeat center top #181461;
+			background-size:cover;
+		}
+		
+		.topbox{
+			width: 100%;
+			text-align: center;
+			padding-top: 8%;
+		}
+		.headbox{
+			position: relative;
+			width: 6rem;
+			height: 6rem;
+			left: 50%;
+			margin-left: -3rem;
+		}
+		.headbox .avatar{
+			display: block;
+			width: 100%;
+			height: 100%;
+			border-radius: 100%;
+			border:1px solid #fed530;
+			background-position: center top;
+			background-repeat: no-repeat;
+			background-color: #fff;
+			background-size: cover;
+		}
+		.crown{
+		    position: absolute;
+		    width: 2rem;
+		    right: -0.3rem;
+		    top: -0.8rem;
+		}
+		.topbox .username{
+			color: #fff;
+			text-align: center;
+			font-size: 1.2rem;
+			margin-top:1rem;
+		}
+		.topbox .time{
+			color: #c4c4c4;
+			text-align: center;
+			font-size: 1rem;
+		}
+		.winnersList{
+			padding: 3% 3% 5% 3%;
+		}
+		.winnersList li{
+			width: 100%;
+			height: 3.5rem;
+			line-height: 3.5rem;
+			color: #fff;
+			padding: 2.5% 0;
+		}
+		.wleft{
+			width: 45%;
+			height: 3.8rem;
+			float:left;
+			overflow: hidden;
+			text-overflow:ellipsis;
+			white-space: nowrap;
+		}
+		.wleft .avatar{
+			display: block;
+			width: 3.5rem;
+			height: 3.5rem;
+			border-radius: 100%;
+			border:1px solid #fff;
+			background-position: center top;
+			background-repeat: no-repeat;
+			background-color: #fff;
+			background-size: cover;
+			float: left;
+		}
+		.wleft .username{
+			line-height: 3.5rem;
+			font-size: 1rem;
+			margin-left: 1rem;
+		}
+		.winnersList .time{
+			width: 55%;
+			color: #c4c4c4;
+			font-size: 0.8rem;
+			line-height: 3.5rem;
+			float: left;
+    		text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<div class="topbox">
+			<div class="headbox">
+				<span class="avatar"></span>
+				<img src="img/icon_crown.png" class="crown">
+			</div>
+			<p class="username"></p>
+			<p class="time"></p>
+		</div>
+		<ul class="winnersList">
+			<!-- <li>
+				<div class="wleft">
+					<span class="avatar"></span>
+					<span class="username">我是李舒白我是李舒白我是李舒白</span>	
+				</div>
+				<div class="time">2018.06.02 14点22分30秒04毫秒</div>
+			</li> -->
+		</ul>
+	</section>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+	var guessId = GetQueryString('guessId');
+
+	$(function(){
+		init();
+	})
+
+	function init(){
+		getWinnerList();
+	}
+
+	function getWinnerList(){
+		main.getWinnerList(guessId,function(dt){
+			if(dt.status==200){
+				if(dt.content.length==0 || dt.content==""){
+					$('section').html('<p style="font-size:1.3ren;text-align:center;color:#fff;">本期无人中奖</p>');
+				}else{
+					var topInfo = dt.content[0];
+					$('.headbox .avatar').css('background-image','url('+topInfo.avatarUrl+')');
+					$('.topbox .username').html(topInfo.nickName);
+					$('.topbox .time').html(topInfo.time);
+					var html=[];
+					$.each(dt.content,function(index,dl){
+						if(index>0){
+							html.push('<li>');
+							html.push('<div class="wleft">');
+							html.push('<span class="avatar" style="background-image:url('+dl.avatarUrl+')"></span>');
+							html.push('<span class="username">'+dl.nickName+'</span>');
+							html.push('</div>');
+							html.push('<div class="time">'+dl.time+'</div>');
+							html.push('</li>')
+						}
+					})
+					$('.winnersList').append(html.join(""));
+				}
+			}else{
+				main.alert(dt.message);
+			}
+		})
+	}
+</script>
+</html>

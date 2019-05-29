@@ -1,0 +1,154 @@
+[v-cloak] {
+    display: none !important;
+} 
+body{
+    max-width: 640px;
+    margin:0 auto;
+    position: relative;
+    font-size: 1.5rem;
+}
+#app{
+    min-height: 100%;
+    box-sizing: border-box;
+}
+button{
+    border: 0;
+}
+/*title 图片*/
+.title img{
+    width: 100%;
+}
+.title .title2{
+    margin-top: -15rem;
+}
+/*tab*/
+.tabWrap{
+    display: flex;
+    padding: 3rem 1rem 4rem;
+    background: url('../img/tab_bg.jpg') no-repeat;
+    background-size:100% 100%; 
+    justify-content: center; /*1*/
+    margin: -1px 0;
+}
+.tabWrap .tab{
+    width: 33.33%;
+    background: none;
+}
+.tabWrap .tab img{
+    width: 90%;
+    margin: 0 5%;
+    max-height: 36px;
+}
+/*主体内容视频等*/
+.contentWrap{
+    background: url('../img/bg.jpg') no-repeat;
+    background-size:100% 100%; 
+    padding: 0 1.25rem 1.42rem;
+    overflow: hidden;
+    min-height:300px;
+}
+.content{
+    padding:1.25rem;
+    background: #f2f4fd;
+    border-radius:.5rem; 
+}
+.content_item{
+    border-radius: .3rem;
+    overflow: hidden;
+    margin-top: 1.42rem;
+}
+.content_item:first-child{
+    margin-top: 0;
+}
+.content_item_top{
+    background: #fff;
+    position: relative;
+}
+.content_item_top .play{
+    width: 14%;
+    position: absolute;
+    left: 43%;
+    top: 30%;
+}
+.content_item_top video{
+    width: 100%;
+    vertical-align: middle;
+}
+.content_item_bottom{
+    background: #fff;
+    padding: 1rem 1.4rem;
+    box-sizing: border-box;
+}
+.callWrap{
+    display: flex;
+    justify-content: space-between;
+    color: #525252;
+    font-size: 1.2rem;
+    margin-top: .6rem;
+}
+.callWrap_left{
+    display: flex;
+    align-items: center;
+}
+.callWrap_left .call_active{
+    color: #ffa728;
+}
+.callWrap_left img{
+    width: 1.3rem;
+    margin-right:3px;
+}
+.callWrap_left div{
+    display: flex;
+    align-items: center;
+}
+.callWrap_left div:first-child{
+    margin-right: 2.2rem;
+}
+
+/*规则*/
+.ruleWrap{
+    position: fixed;
+    width:100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .4);
+}
+.ruleWrap .rule{
+    position: absolute;
+    width:90%;
+    height: 60%;
+    left: 5%;
+    background: #FFF;
+    border-radius: .5rem;
+    padding: 1.4rem 1.2rem;
+    top: 10%;
+    box-sizing: border-box;
+    font-size: 1.4rem;
+}
+.ruleWrap .rule>.scroll{
+    height: 100%;
+    overflow-y: scroll;
+}
+.rule p{
+    margin-bottom: .6rem;
+}
+.rule .color{
+    color: #df8900;
+}
+.rule .last{
+    display: flex;
+}
+.rule .last .x{
+    font-size: 2rem;
+    margin-right: 3px;
+}
+.ruleWrap .ruleClose{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top:77%;
+}
+.ruleWrap .ruleClose img{
+    width: 3.8rem;
+}

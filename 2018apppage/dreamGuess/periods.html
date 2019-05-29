@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>星梦演播厅竞猜</title>
+	<link href="css/common.css" rel="stylesheet" />
+	<style>
+		*{margin:0;padding: 0;}
+		html,body{
+			width: 100%;
+			height: 100%;
+		}
+		body{
+			width: 100%;
+			max-width: 640px;
+			background-color: #181461;
+			position:relative;
+			margin:0 auto;
+		}
+		section{
+			width: 100%;
+			min-height: 100%;
+			height: auto;
+			position: relative;
+			background: url(img/bg.jpg)no-repeat center top #181461;
+			background-size:cover;
+		}
+		.perList{
+			padding: 5% 5% 10% 5%;
+		}
+		.perList li{
+			font-size: 1.3rem;
+			color: #ff80d8;
+			width: 100%;
+			height: 7.5rem;
+			line-height: 7.5rem;
+			text-align: center;
+			background: url(img/bigbg.png)no-repeat 0 0;
+			background-size: 100% 100%;
+			letter-spacing: 2px;
+			margin-bottom:2%;
+		}
+		.trans{
+			opacity: 0.4;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<ul class="perList">
+			<!-- <li>第一期竞猜</li>
+			<li class="trans">第二期竞猜</li>
+			<li class="trans">第三期竞猜</li>
+			<li class="trans">第四期竞猜</li>
+			<li class="trans">第五期竞猜</li>
+			<li class="trans">第六期竞猜</li> -->
+		</ul>
+	</section>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+	$(function(){
+		init();
+	})
+	function init(){
+		getPastList()
+		addListeners();
+	}
+	function addListeners(){
+
+		$('.perList').on('click','.linkbtn',function(){
+			var guessId = $(this).attr('guessId');
+			main.hrefTo('index.html?guessId='+guessId);
+		})
+	}
+
+	function getPastList(){
+		main.getPastList(function(dt){
+			if(dt.status==200){
+				var html=[];
+
+				$.each(dt.content,function(index,value){
+					var text;
+					//console.log(index)
+					if(index==1 || index=="1"){
+						text="第一期竞猜"
+					}else if(index==2 || index=="2"){
+						text="第二期竞猜"
+					}else if(index==3 || index=="3"){
+						text="第三期竞猜"
+					}else if(index==4 || index=="4"){
+						text="第四期竞猜"
+					}else if(index==5 || index=="5"){
+						text="第五期竞猜"
+					}else{
+						text="第六期竞猜"
+					}
+					
+					if(value==1 || value=="1"){
+						html.push('<li class="trans" guessId='+index+'>'+text+'</li>');
+					}else{
+						html.push('<li class="linkbtn" guessId='+index+'>'+text+'</li>');
+					}
+
+				})
+				$('.perList').append(html.join(""));
+			}else{
+				main.alert(dt.message);
+			}
+		})
+	}
+</script>
+</html>

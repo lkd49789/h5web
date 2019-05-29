@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>分享页</title>
+    <link href="../../common/css/common.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/share.css">
+</head>
+<body>
+    <div id="app">
+        <div class="title">
+            <img src="./img/share_title.png" alt="">
+        </div>
+        <div class="content">
+            <p>被冰雪冰封的孤岛，名为十洲的国家，如传说般存在的神秘东方古国，与世隔绝，拥有独立文明……SNH48 TEAM NII第三套全新原创公演<em>《时之卷》</em>，延续《重生计划》拓展宇宙宽度，以亚洲元素作为核心概念，着力打造东方古国——十洲。公元二零一九年五月十日正式上演，公演宇宙计划未完待续……</p>
+            <p><em>5月10日22:00 - 5月17日12:00，</em>期间通过本次活动为你最喜欢的《时之卷》公演曲目点赞，投稿评论发表你的感想或点评，袋王将会从投稿中选出写得最好最用心的<em>1位</em>聚聚奖励<em>3天的开屏页使用权，6名</em>聚聚各<em>500鸡腿奖励</em>！快来为你喜爱的新公演曲目打call成为点评“神七”吧~</p>
+            <div class="text">
+                <div class="x">*</div>
+                <div>
+                    活动最终解释权归口袋48所有。
+                </div>
+            </div>
+        </div>
+        <div class="btn">
+            <div><img src="./img/share_btn.png" alt="" @click="downLoadPocketApp()"></div>
+        </div>
+    </div>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<!-- <script src="../../common/js/vue.js"></script> -->
+<script src='https://cdn.bootcss.com/vue/2.6.10/vue.js'></script>
+<script src="../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script>
+    var app=new Vue({
+        el:"#app",
+        methods:{
+            downLoadPocketApp:function(){
+                downLoadPocketApp()
+            }
+        }
+    })
+</script>
+</html>

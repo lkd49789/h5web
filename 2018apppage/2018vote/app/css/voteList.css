@@ -1,0 +1,371 @@
+
+
+html,body { width: 100%; height: 100%; font-family: "微软雅黑";}
+
+html{font-size:10px}
+@media screen and (max-width:320px){html{font-size:9px}}
+@media screen and (min-width:321px) and (max-width:375px){html{font-size:11px}}
+@media screen and (min-width:376px) and (max-width:414px){html{font-size:13px}}
+@media screen and (min-width:415px) and (max-width:639px){html{font-size:18px}}
+@media screen and (min-width:640px) and (max-width:719px){html{font-size:20px}}
+@media screen and (min-width:720px) and (max-width:749px){html{font-size:22.5px}}
+@media screen and (min-width:750px) and (max-width:799px){html{font-size:25.5px}}
+@media screen and (min-width:800px){html{font-size:25px}}
+
+
+.vote-container{
+	position: relative;
+    padding: 1rem 0 0.5rem 0;
+    background: #fff;
+    border-bottom: 1px solid #D2D2D2;
+    
+}
+.mui-table-view:before{
+	height: 0;
+}
+.vote-title{
+	padding: 0 1rem;
+}
+.vote-cell{
+	position: relative;
+    margin: -11px 0;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    padding:15px 0;
+}
+.vote-avatar img {   
+    width:80%;  
+    transform: translateY(-10%);
+}
+.vote-avatar {
+    width:7rem;
+    height: 7rem;
+    padding:1rem 0;
+    vertical-align: middle;
+    /*position: relative;*/
+    display: inline-block;
+    border-radius: 50%;
+    border: 2px solid #6A78C7;
+    text-align:center;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.vote-content{
+	/*position: relative;*/
+  	display: inline-block;
+    padding:1rem 0;
+    vertical-align: middle;
+    left: 0.8rem;
+}
+
+
+.vote-name{
+	display: block;
+	margin: 0.5rem 0;
+	color: #6A78C7;
+	font-weight: 400;
+	position: relative;
+}
+/*.vote-name::after{
+	content: "LV.5";
+	position: absolute;
+	padding: 0.2rem 0.3rem;
+	background: #5B6BC2;
+	color: #fff;
+	border-radius: 5px;
+	font-size: 0.8rem;
+}*/
+.vote-num{
+	font-size: 1rem;
+	position: relative;
+}
+.vote-num span{
+/*	font-size:0.rem;*/
+	color:#5C6BC2 ;
+	margin: 0 5px;
+	font-weight: 400;
+}
+
+.mui-icon-arrowdown:before{
+	content: "";
+	background: url(../images/voteListArrow.png) no-repeat 0 0;
+	background-size: 100% 100%;
+	width: 2rem;
+	height: 1rem;
+	position: absolute;
+	top:5px;
+	transition: all 1s;
+}
+/*激活button*/
+.vote-input{
+	margin: 2rem 0;
+}
+input[type="text"]{
+	background-color: #ECECEC;
+	color: #A0A0A0;
+	height: 45px;
+	border: none;
+	border-radius: 5px;
+	/*font-family: "微软雅黑";*/
+	font-size: 1.4rem;
+}
+input[type="button"]{
+	width: 100%;
+    height: 45px;
+    background-color: #5B6BC2;
+    border-radius: 3px;
+    outline: 0;
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 5px;
+    /*font-family: "微软雅黑";*/
+}
+
+
+/*激活记录*/
+.actTitle{
+	font-weight: 600;
+	margin: 0.5rem 0 0 0;
+	padding: 1rem;
+	color: #000;
+}
+.voteList{
+	position: relative;
+    padding: 1rem;
+    padding-top: 0;
+    height:30rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.voteList li{
+	color: #A3A3A3;
+	width: 100%;
+	background: #efeff4;
+	overflow: hidden;
+	height: 25px;
+	line-height: 25px;
+}
+.mui-table-view:before{
+	height: 0;
+}
+.mui-table-view:after{
+	height: 0;
+}
+.voteList .time{
+	width: 35%;
+}
+.voteList .form{
+	width: 18%;
+}
+.voteList .piao{
+	width: 28%;
+    text-align: right!important;
+}
+.voteList .mername{
+	width: 15%;
+}
+.voteList li span{
+	float: left;
+	font-size: 0.9rem;
+	height: 25px;
+	line-height: 25px;
+}
+.voteList li i{
+	color: #5B6BC2;
+	text-align: right;	
+	display: inline-block;
+	font-size: 0.9rem;
+}
+.voteList span:nth-child(2){
+	
+}
+.voteList span:nth-child(3){
+	margin: 0 1%;
+
+	text-align: right;
+}
+.voteList span:nth-child(4){
+	text-align: left;
+}
+.voteList span:nth-child(4) i{
+	text-align: right;
+	margin-right: 0.2rem;
+}
+.voteList span:last-child{
+	float: right;
+}
+.mui-scroll{
+	padding: 1rem;
+}
+
+
+/*成员面板*/
+
+.memberNumList{
+	margin-top: 2rem;
+	display: none;
+}
+.vote-title{
+	padding: 0 1rem;
+    color: #000;
+    font-weight: 600;
+}
+.mui-control-content {
+	background-color: white;
+	min-height:10rem;
+}
+
+.mui-control-content .mui-loading {
+	margin-top: 50px;
+}
+.mui-segmented-control{
+	z-index: 211;
+	background: #fff;
+}
+.item{
+	display: none;
+}
+.active{
+	display: block;
+}
+.title{
+	position: relative;
+	bottom: auto;
+	width: 100%;
+    border: 0;
+    border-radius: 0;
+    z-index: 211;
+	background: #fff;
+	font-size: 15px;
+    font-weight: 400;
+    display: table;
+    overflow: hidden;
+    table-layout: fixed;
+}
+/*.mui-col-xs-4 {
+    width: 27.333333%;
+    margin: 0 3%;
+}*/
+.mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-object {
+    width: 90%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    /*border: 2px solid #93CEEC;*/
+    margin: 5%;
+}
+.avatar-box{
+	width: 6.5rem;
+    height: 6.5rem;
+    vertical-align: middle;
+    /* position: relative; */
+    display: inline-block;
+    border-radius: 50%;
+    /*border: 2px solid #6A78C7;*/
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+.avatar-box img{
+	width: 80%;
+    transform: translateY(5%);
+}
+.mui-table-view-cell p{
+	font-size: 1.2rem;
+	color: #2F2F2F;
+}
+.memberNumList .mui-table-view-cell p:nth-child(2){
+	position: relative;
+	font-size: 1.2rem;	
+}
+.memberNumList .mui-table-view-cell p.bgn::after{
+	background: #93CEEC;
+}
+.teamsize{
+	/*position: absolute;
+	right:4px;
+	top: -2px;*/
+	width: 1.3rem;
+    height: 1.3rem;
+    border: none;
+    font-size:8px;
+    line-height: 1.3rem;
+    padding: 1px;
+    border-radius: 1rem;
+    text-align: center;
+    vertical-align: text-top;
+    display: inline-block;
+    margin-left: 5px;
+}
+/*.teamsize{
+	font-size: 1.1rem!important;
+}*/
+.memberNumList .mui-table-view-cell p:nth-child(3){
+	font-size: 1rem;
+	margin: 4% 0;
+}
+.memberNumList .mui-table-view-cell i{
+	font-size: 1rem;
+	margin:0 3%;
+}
+.voteBtn{
+	width: 74%;
+	background: #5B6BC2;
+	border-radius:20px;
+	color: #fff;
+	height: 26px;
+	line-height: 26px;
+	font-size: 1.1rem;
+	margin:8% 13% 2%;
+}
+.memberNumList .mui-table-view:after{
+	height: 0;
+}
+
+
+
+
+.rotate::before{
+	transform: rotate(180deg);
+}
+
+.mui-pull-caption{
+	font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

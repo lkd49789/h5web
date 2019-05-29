@@ -1,0 +1,303 @@
+*{margin:0;padding: 0}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+body{
+	max-width: 640px;
+	margin:0 auto;
+	background-color: #74b9f7;
+}
+section{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background: url(../img/bg.jpg)no-repeat center top #74b9f7;
+	background-size:cover;
+	position: relative;
+}
+button{
+	outline: none;
+}
+
+/*头像*/
+.headbox{
+	width: 100%;
+	text-align: center;
+	padding-top: 4%;
+}
+.headboximg{
+	width: 11rem;
+	height:11rem;
+	position: relative;
+	left:50%;
+	margin-left: -5.5rem;
+}
+.headboximg img{
+	width: 100%;
+}
+.avatar{
+    width: 7rem;
+    height: 7rem;
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+   	border-radius: 100%;
+   	background-repeat: no-repeat;
+   	background-position: center top;
+   	background-size: cover;
+}
+.title{
+	color: #e3e8fe;
+	font-size: 1rem;
+	margin-top: -2%;
+	letter-spacing:2px;
+}
+.namebox{
+	text-align: center;
+	margin-top:-2%;
+	display: none;
+}
+.namebox span{
+	font-size: 1.3rem;
+	color:#fefefe;
+	vertical-align: middle;
+}
+.namebox em{
+	font-size: 1rem;
+	border-radius: 3px;
+	padding: 0 0.5rem;
+	margin-left:0.5rem;
+	color: #fff;
+}
+.zhu{
+	width: 100%;
+	text-align: center;
+	color:#fff;
+	font-size: 1rem;
+	position: absolute;
+	bottom: 2%;
+}
+
+/*按钮投票*/
+.btnsbox{
+	margin-top: 9%;
+	/*display: none;*/
+}
+.integralbtn,.chickenbox{
+	width: 76%;
+	padding: 4% 0;
+	text-align: center;
+	border-radius: 10px;
+	margin-left: 12%;
+	margin-bottom: 6%;
+}
+.integralbtn{
+	background: -webkit-linear-gradient(left, #f8768d , #ff97aa); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(right, #f8768d , #ff97aa); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(right, #f8768d , #ff97aa); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to right, #f8768d , #ff97aa); /* 标准的语法 */
+}
+.chickenbox{
+	background: -webkit-linear-gradient(left, #9b66fd , #eea3ff); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(right, #9b66fd , #eea3ff); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(right, #9b66fd , #eea3ff); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to right, #9b66fd , #eea3ff); /* 标准的语法 */
+}
+.integralbtn p:first-child,.chickenbox p:first-child{
+	color: #fff;
+	font-size: 1.2rem;
+}
+.integralbtn p:last-child,.chickenbox p:last-child{
+	color: #fee7eb;
+	font-size: 1rem;
+}
+.mymoney,.myintegral{
+	font-size: 1rem;
+}
+
+.loaded{
+	text-align: center;
+	color:#fff;
+	font-size: 1.2rem;
+	font-weight: bold;
+	display: none;
+}
+.goload{
+	text-align: center;
+	color:#fff;
+	font-size: 1.1rem;
+	text-decoration: underline;
+	display: none;
+}
+
+.nohave{
+	opacity: 0.5;
+}
+
+
+/*输入投票模块*/
+.votebox{
+	margin-top: 12%;
+	display: none;
+}
+.myassets{
+	text-align: center;
+	color:#e5ecff;
+	font-size: 1rem;
+	margin-bottom: 2%;
+}
+.myassets em{
+	font-size: 1rem;
+}
+.votenum{
+	width: 76%;
+	margin-left: 12%;
+	border-radius: 10px;
+	border: 1px solid #fff;
+	text-align: center;
+	padding: 3% 0;
+	font-size: 1.2rem;
+	color:#fff;
+	background-color: transparent;
+	outline: none;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #e5ecff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #e5ecff;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #e5ecff;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #e5ecff;
+}
+.total{
+	text-align: center;
+	color:#fff;
+	margin-top:2%;
+	font-size: 1.2rem;
+}
+.totalnum,.iftype{
+	font-size: 1.2rem;
+}
+.vote_confirm{
+	width: 76%;
+	margin-left: 12%;
+	border-radius: 10px;
+	text-align: center;
+	padding: 3% 0;
+	font-size: 1.2rem;
+	color:#fff;
+	background: -webkit-linear-gradient(left, #9b66fd , #eea3ff); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(right, #9b66fd , #eea3ff); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(right, #9b66fd , #eea3ff); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to right, #9b66fd , #eea3ff); /* 标准的语法 */
+	outline: none;
+	border: none;
+	margin-top: 8%;
+}
+
+
+/*是否投票弹框*/
+.mask_inbox{
+	width: 100%;
+	height: 100%;
+	max-width: 640px;
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+	background-color: rgba(0,0,0,.4);
+	display: none; 
+}
+.mask,.prompt,.chickbox,.successbox{
+	width: 80%;
+	background-color:#fff;
+	border-radius: 8px;
+	position: absolute;
+	left: 10%;
+	top: 33%;
+	 display: none; 
+}
+.mask_inbox{
+	text-align: center;
+}
+.mask h4{
+	font-size: 1.3rem;
+}
+.mask p{
+	font-size: 1.3rem;
+}
+.upbox{
+	padding: 10% 0;
+	border-bottom: 1px solid #c4c4c4;
+}
+.btns button{
+	background: transparent;
+	border:0;
+	width: 47%;
+	color:#2774ff;
+	font-size: 1.3rem;
+	padding: 4% 0;
+	display: inline-block;
+}
+.btns button:first-child{
+	border-right: 1px solid #c4c4c4;
+}
+
+.upbox p{
+	font-size: 1.3rem;
+}
+.know{
+	color:#2774ff;
+	font-size: 1.3rem;
+	padding: 4% 0;
+}
+.icon_succes{
+	width: 15%;
+	margin-bottom: 2%;
+}
+
+
+
+
+.addsec{
+	display: none;
+}
+
+
+
+/*颜色*/
+.SII_color{color:#46a8ff;}
+.NII_color{color:#9e57b4;}
+.HII_color{color:#f8941d;}
+.X_color{color:#B1D61B;}
+.XII_color{color:#03C070;}
+.B_color{color:#EB4F74;}
+.E_color{color:#0CC8C3;}
+.J_color{color:#006ab7;}
+.G_color{color:#9FBF40;}
+.NIII_color{color:#FFE249;}
+.Z_color{color:#ea627c;}
+.SIII_color{color:#e60895;}
+.HIII_color{color:#4d008c;}
+
+
+.SII_bg{background-color:#46a8ff;}
+.NII_bg{background-color:#9e57b4;}
+.HII_bg{background-color:#f8941d;}
+.X_bg{background-color:#B1D61B;}
+.XII_bg{background-color:#03C070;}
+.B_bg{background-color:#EB4F74;}
+.E_bg{background-color:#0CC8C3;}
+.J_bg{background-color:#006ab7;}
+.G_bg{background-color:#9FBF40;}
+.NIII_bg{background-color:#FFE249;}
+.Z_bg{background-color:#ea627c;}
+.SIII_bg{background-color:#e60895;}
+.HIII_bg{background-color:#4d008c;}

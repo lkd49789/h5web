@@ -1,0 +1,186 @@
+var app = new Vue({
+    el:'#app',
+    data:{
+        content:'',
+        timer:null, /*定时器 */
+        phoneTimer:null, /*手机号定时器 */
+        time:{   /* 时间 */
+            hours:0,
+            minutes:0,
+            seconds:0
+        },
+        status:4,   /*0 未中标 1 中标 2 失标 3中标已付款 4压根没有进行竞拍 默认4  5竞拍结束*/  
+        payShow:false, /*支付窗口 */
+        showpop:0, /*弹框 */
+        yesPay:0, /*是否可以付款 */
+        phone:false,    /*是否绑定手机号  默认没false */
+        finish:false,
+        tips:'',
+        request:false  /*是否在进行请求数据 */
+    },
+    mounted:function(){
+        var that = this; 
+        if(that.getUserInfo()){
+            that.phoneInterval()
+            that.phoneTimer = setInterval(function(){
+                that.phoneInterval()
+            },2000)
+        }
+        that.getList()
+        var dataInterval = setInterval(function(){
+            if(localStorage.getItem('refresh') == 1){
+                that.getList()
+            }else{
+                clearInterval(dataInterval)
+            }
+        },2000)
+    },
+    methods:{
+       // 定时器
+       phoneInterval:function(){
+            var that = this;
+            var obj = JSON.parse(that.getUserInfo())
+            if(obj.userInfo.bindInfo == [] || obj.userInfo.bindInfo[0].bindType != 'MOBILE'){
+                that.showpop = 2;
+            }else{
+                that.phone = true;
+                clearInterval(that.phoneTimer);
+            }
+       },
+        /*绑定手机号 */
+        bang:function(){
+            if(isFromAndroid()){
+                _openNativeModule('login/inputphone?PhoneType=2')
+            }else if(isFromIphone()){
+                _openNativeModule('login/bindphone')
+            }
+        },
+        _openNativeModule:function(link) {
+            dsBridge.call("snhOpenRouterPage",link)
+        },
+        /*获取用户信息 */
+        getUserInfo:function() {
+           return dsBridge.call("snhUserInfo");
+        },
+        /*获取竞拍信息 */
+        getList:function(){
+            var that = this; 
+            if(!that.request){
+                that.request = true;
+                main.getList(function(data){
+                    that.request = false
+                    if(data.status == 200){
+                        that.content = data.content;
+                        document.title = data.content.goodsDescribe;
+                        that.status = that.content.auctionStatus;
+                        if(!that.content.auctionPrice || that.content.auctionPrice == 0){
+                            that.status = 4;    
+                        }
+                        // that.status = 2; 
+                        // console.log(new Date().getTime())
+                        /*根据日期判断 */
+                        that.interval(that.content.endAt);
+                        localStorage.setItem('refresh',0)
+                    }else{
+                        alert(data.message)
+                    }
+                })
+            }
+        },
+        /*支付 */
+        pay:function(what){
+            var that = this;
+            if(what){
+                main.Alipay(that.content.goodsId,function(data){
+                    if(data.status == 200){
+                        dsBridge.call("snhAliWebPay",data.content, function(block){
+                            that.payShow = false;
+                            that.tips = block;
+                            that.showpop = 1;
+                            that.getList()
+                        });
+                    }else{
+                        that.tips = data.message;
+                        that.showpop = 1;
+                    }
+                })
+            }else{
+                main.wxpay(that.content.goodsId,function(data){
+                    if(data.status == 200){
+                        dsBridge.call("snhWeChatWebPay",data.content, function(block){
+                            that.payShow = false;
+                            that.tips = block;
+                            that.showpop = 1;
+                            that.getList()
+                      });
+                    }else{
+                        that.tips = data.message;
+                        that.showpop = 1;
+                    }
+                })
+            }
+        },
+        payClick:function(){
+            this.payShow = true;
+        },
+        /*循环定时器 */
+        interval:function(end){
+            var that = this;
+            if(end < new Date().getTime() && that.status == 1 && parseInt(end)+(30*60*1000)>new Date().getTime()){
+                that.yesPay = 1
+                end = parseInt(end) +(30*60*1000)
+            }
+            that.timer = setInterval(function(){
+                if(end < new Date().getTime()){
+                    that.yesPay = 0
+                    if(that.status == 0 || that.status == 4){
+                        that.status = 5;
+                    }else if(that.status == 1){
+                        that.status = 2;
+                    }
+                    clearInterval(that.timer)    
+                }else{
+                    that.countDown(end,new Date().getTime()) 
+                }
+            },1000)
+        },
+        /*倒计时 */
+        countDown:function(end,presentTime){
+            var date = end - presentTime 
+            var hours    = Math.floor(date/ 1000 / 60 / 60) ;
+            var minutes   = Math.floor(date / 1000 /60  - (60 * hours));
+            var seconds   = Math.floor(date/ 1000  - (60 * 60 * hours) - (60 * minutes));
+            var time = "倒计时"+(hours +"时"+minutes+"分"+seconds+"秒");
+            this.time.hours = hours;
+            this.time.minutes = minutes;
+            this.time.seconds = seconds;
+        },
+        /*获取url参数*/
+        getUrlParam(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+            var r = window.location.search.substr(1).match(reg); //匹配目标参数
+            if (r != null) return decodeURI(r[2]);
+            return null; //返回参数值
+        },
+        /*跳转方法 */
+        gotoPage:function(_url){
+            if(!this.phone){
+                this.showpop = 2;
+                return false;
+            }
+            var url = _url
+            if(url.indexOf("http://")>=0 ||url.indexOf("https://")>=0){
+
+            }else{
+                url = CONFIG.geturl()+url
+            }
+            if(checkFromNew()){
+                snhOpenNewWebview(url)
+            }else if(checkFromOld()){
+                window.web.gotoDetail(url);
+            }else{
+                window.location.href = url
+            }         
+        },
+    }
+})

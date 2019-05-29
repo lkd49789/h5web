@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>投票记录</title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/common_mobile.css"/>
+    <link href="css/voteList.css" rel="stylesheet"/>
+</head>
+    
+<body>
+	<section id="vue-votelist">
+		<div class="vote-container"> 
+			<div class="vote-title"> 
+				<div class="vote-cell">
+					<div class="vote-avatar"><img class="teamn" src="" /></div>
+					<div class="vote-content">
+						<div class="mui-clearfix">
+							<span class="vote-name"></span>
+							<span class="vote-position"></span>
+						</div>
+						<p class="vote-num">当前投票权<span class="vote_num"></span>票</span><span class="mui-icon mui-icon-arrowdown"></span></p>
+					</div>
+				</div>
+				<p class="v-tip">★如果您在投票官网上https://vote.48.cn为成员进行了投票，请在“绑定丝瓜账号”的页面中进行账号绑定，投票记录将会进行累加，如果不绑定，则分开计算投票记录。</p>
+			</div>
+			
+			<div class="memberNumList">
+				<p class="vote-title">已投票成员<span>(最多显示前5位)</span></p>
+				<ul class="mui-table-view mui-grid-view">
+			        <li class="mui-table-view-cell mui-media mui-col-xs-4" v-for="vts in voteSums">
+						<div class="avatar-box {{vts.group_id}}-{{vts.team_name}}-bd"><img v-bind:src="vts.photoimage"/></div>
+						<p>{{vts.memberName}}<span class="teamsize {{vts.group_id}}-{{vts.team_name}}-bg">{{vts.team_name}}</span></p>
+						<p>已投<i>{{vts.totalVoteNum}}</i>票</p>
+						<div class="voteBtn" v-bind:sid="vts.sid" @click="hrefTo(vts.sid)">投票</div>
+			        </li>
+			        <!-- <li class="mui-table-view-cell mui-media mui-col-xs-4">
+						<img class="SNH-s-bd mui-media-object" src="images/hd.jpg"> 
+						<p class="SNH-s-bd-memberName">陈观慧<span class="teamsize">NIII</span></p>
+						<p>已投<i>365.5</i>票</p>
+						<div class="voteBtn">投票</div>
+					</li> -->
+				</ul>
+
+			</div>	
+
+		</div>
+		
+		<p class="actTitle">投票记录</p>
+		<div class="voteList">		
+			<div id="pullrefresh" class="mui-content mui-scroll-wrapper">	
+				<div class="mui-scroll">
+					<ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+						<!-- <span></span>
+						<span id=""></span>
+						<span id=""><i></i>票</span> -->
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+	</section>
+			
+			
+</body>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/mui.pullToRefresh.js"></script>
+	<script src="js/mui.pullToRefresh.material.js"></script>
+	<script src="js/config.js" type="text/javascript" charset="utf-8"></script>	
+	<script src="js/getUserInfo.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/votehistory.js"></script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

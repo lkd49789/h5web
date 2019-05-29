@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>最佳表现奖投票</title>
+	<link href="../common/css/common.css" rel="stylesheet" />
+	<link href="css/member.css" rel="stylesheet" />
+	<link href="css/index.css" rel="stylesheet" />
+</head>
+<body>
+	<section class="sec">
+		<div class="headbox">
+			<div class="headboximg">
+				<img src="img/headbox.png">
+				<span class="avatar"></span>
+			</div>
+			<p class="title">选择一位你认为表现最佳的成员吧</p>
+			<p class="namebox"><span></span><em></em><p>
+		</div>
+		<div class="btnsbox">
+			<div class="integralbtn nohave" box="0">
+				<p>使用积分为她投票 每票50积分</p>
+				<p>我的积分：<span class="myintegral"></span></p>
+			</div>
+			<div class="chickenbox nohave" box="1">
+				<p>使用鸡腿为她投票 每票50鸡腿</p>
+				<p>我的鸡腿：<span class="mymoney"></span></p>
+			</div>
+		</div>
+		<!-- 输入投票box部分 -->
+		<div class="votebox">
+			<p class="myassets"></p>
+			<input type="tel" name="votenum" placeholder="请输入要投的票数" class="votenum" id="input"/>
+			<p class="total">每票50<em class="iftype"></em> 总计 <span class="totalnum">0</span><em class="iftype"></em></p>
+			<button class="vote_confirm">确认投票</button>
+		</div>
+		<p class="goload"></p>
+		<p class="loaded"></p>
+		<p class="zhu">本次投票使用区块链技术将你的投票结果永久固化在链上</p>
+	</section>
+	<!--弹框 -->
+	<div class="mask_inbox">
+		<!-- 是否投票弹框 -->
+		<div class="mask">
+			<div class="upbox">
+				<h4></h4>
+				<p></p>
+			</div>
+			<div class="btns">
+				<button class="btnsback">取消</button>
+				<button class="btnsright">确定</button>
+			</div>
+		</div>
+		<!-- 没有选择完全弹框 -->
+		<div class="prompt">
+			<div class="upbox">
+				<p>先选择成员才能投票哦</p>
+			</div>
+			<div class="know">去选择</div>
+		</div>
+		<!-- 鸡腿不足弹框 -->
+		<div class="chickbox">
+			<div class="upbox">
+				<p>鸡腿/积分不足</p>
+			</div>
+			<div class="know">去充值</div>
+		</div>
+		<!-- 投票成功 -->
+		<div class="successbox">
+			<div class="upbox">
+				<img src="img/icon_succes.png" class="icon_succes">
+				<p>投票成功</p>
+			</div>
+			<div class="know">确定</div>
+		</div>
+	</div>
+</body>
+<script src="https://h5.48.cn/common/js/jquery.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/index.js"></script>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>梦想演播厅</title>
+	<link href="css/common.css" rel="stylesheet" />
+	<link href="css/allmember.css" rel="stylesheet" />
+</head>
+<body>
+	<section>
+		<p class="tit">星梦演播厅成员列表
+			<img src="img/icon_choose.png" class="icon_choose">
+			<ol class="groupList">
+				<li id="ALL">全团</li>
+				<li id="SNH">SNH48</li>
+				<li id="GNZ">GNZ48</li>
+				<li id="BEJ">BEJ48</li>
+				<li id="SHY">SHY48</li>
+				<li id="CKG">CKG48</li>
+			</ol>
+		</p>
+		<div class="listsbox">
+			<ul class="teamList">
+				<!-- <li>
+					<p class="teamtit"><em class="cbar SII-bg"></em>SNH48 TEAM SII (22人)<img src="img/arrow-down.png" class="arrow"></p>
+					<ul class="merList">
+						<li>
+							<span class="avatar"></span>
+							<p class="mer_name">许杨玉琢玉琢<em class="SII-bg">SII</em></p>
+						</li>
+						<li>
+							<span class="avatar"></span>
+							<p class="mer_name">许杨玉琢玉琢<em class="SII-bg">SII</em></p>
+						</li>
+						<li>
+							<span class="avatar"></span>
+							<p class="mer_name">许杨玉琢玉琢<em class="SII-bg">SII</em></p>
+						</li>
+					</ul>
+				</li> -->
+				
+			</ul>
+		</div>
+		<div class="icon_backbtn"><img src="img/btn-back.png"></div>
+	</section>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+	var memberId = null;
+	var allmerList = null;
+	main.getMemberLists('../../memberPage/member_mapping.json',function(dt){
+		allmerList = dt;
+	})
+
+	
+
+	$('.listsbox').on('click','.teamtit',function(){
+		$(this).siblings().slideToggle();
+		$(this).children('.arrow').toggleClass("rotate");
+	})
+
+	$('.icon_choose').click(function(){
+		$('.groupList').slideToggle();
+	})
+	//分团筛选
+	$(".groupList").on("click","li",function(index,dt){
+		var id = $(this).attr("id");
+		if(id=="ALL"){
+			$('.teamList>li').show();
+		}else{
+			$.each($('.teamList>li'),function(index,dd){
+				if($(dd).attr('gipid')==id){
+					$(dd).show();
+				}else{
+					$(dd).hide();
+				}
+			})
+		}
+		
+		$('.groupList').hide();
+	})
+
+	//点击进入详情页
+	$('.teamList').on('click','.merList li',function(){
+		var sid = $(this).attr('sid');
+		for (var key in allmerList) {
+			if(key==sid){
+				memberId = allmerList[key].memberId;
+				main.hrefTo('detail.html?memberId='+memberId);
+			}
+		}
+		
+	})
+
+	$('.icon_backbtn').click(function(){
+		window.history.back();
+	})
+
+	var allData = []//所有数据
+	var allTeamData = [];//队伍数据列表
+	//所有成员
+	main.allMember(function(dl){
+		//console.log(dl.content.jsonUrl);
+		if(dl.status==200){
+			var _url;
+			if(isFromMobile()){
+				_url = dl.content.jsonUrl;
+			}else{
+				_url = 'js/vote_member.json';
+			}
+			main.getMemberLists(_url,function(data){
+				
+				var dt = data.rows;
+	            allData = [];
+	            var prev_g = "";//上一个分团
+	            var prev_t = "101";//上个队伍 tid
+	            var c_g = ['全团'];//分团临时数组
+	            var c_t = [];//分队临时数组
+	            
+	            for (var i = 0; i < dt.length; i++) {
+	              //取所有分团名字
+	              if (dt[i].gname != prev_g) {
+	                prev_g = dt[i].gname
+	                c_g.push(prev_g)
+	              }
+
+	              //取所有队伍列表数据
+	              if (dt[i].tid == prev_t) {
+	                c_t.push(dt[i])
+
+	              } else {
+	                allTeamData.push(c_t);
+	                c_t = [];
+	                c_t.push(dt[i])
+	                
+	              }
+	              prev_t = dt[i].tid
+
+	              if (i == dt.length - 1) {
+	                allTeamData.push(c_t);
+	                
+	              }
+	            }
+	            /*console.log("team----"+allTeamData)*/
+	            merAllList()
+
+			})
+
+		}else{
+			main.alert(dl.message);
+		}
+	})
+	var prev_team = ""
+	function merAllList(){
+		var html = [];
+		$.each(allTeamData,function(index,dd){
+			/*console.log(JSON.stringify(dd))*/
+			/*console.log(allTeamData);*/
+			if(dd[0].tname != prev_team){
+				html.push('<li gipid='+dd[0].gname+'>');
+				if(dd[0].tname=="预备生"){
+					html.push('<p class="teamtit"><em class="cbar" style="background-color:#'+dd[0].tcolor+'"></em>'+dd[0].gname+'48 '+dd[0].tname+' ('+dd.length+'人)<img src="img/arrow-down.png" class="arrow"></p>');
+				}else{
+					html.push('<p class="teamtit"><em class="cbar" style="background-color:#'+dd[0].tcolor+'"></em>'+dd[0].gname+'48 TEAM '+dd[0].tname+' ('+dd.length+'人)<img src="img/arrow-down.png" class="arrow"></p>');
+				}
+				html.push('<ul class="merList">');
+				
+				prev_team = dd[0].tname;
+			}
+			
+			$.each(dd,function(i,item){
+				html.push('<li sid='+item.sid+'>');
+				html.push('<span class="avatar" style="background-image:url(https://vote.48.cn/resource/img/member/zp_'+item.sid+'.jpg);border:1px solid #'+item.tcolor+'"></span>');
+				html.push('<p class="mer_name">'+item.sname+'<em style="background-color:#'+item.tcolor+'">'+item.tname+'</em></p>');
+				html.push('</li>');
+			});
+
+			html.push('</ul>');
+			html.push('</li>');
+		})
+		$('.teamList').append(html.join(""));
+	}
+
+</script>
+</html>

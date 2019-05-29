@@ -1,0 +1,418 @@
+*{margin:0;padding: 0}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+body{
+	max-width: 640px;
+	margin: 0 auto;
+	position: relative;
+	background-color: #272d69;
+	background:url(../img/field_bg.jpg)no-repeat center bottom;
+	background-size: cover;
+	position: relative;
+	background-attachment: fixed;
+	-webkit-background-attachment: fixed;
+	-o-background-attachment: fixed;
+	-moz-background-attachment: fixed;
+	-ms-background-attachment: fixed;
+}
+section{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	/* background:url(../img/field_bg.jpg)no-repeat center bottom;
+	background-size: cover;
+	background-attachment: fixed; */
+}
+button{
+	outline: none;
+}
+.loadingbox{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	max-width: 640px;
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+	 background-color: rgba(0,0,0,.4); 
+	display: none;
+	z-index: 9999;
+}
+.earth{
+	width: 26%;
+	margin-left: 37%;
+	margin-top: 55%;
+}
+.loadingbox p{
+	color:#fff;
+	text-align: center;
+	margin-top: 5%;
+	font-size: 1.2rem;
+}
+
+.total{
+	position: absolute;
+	right: 0;
+	top: 0.7rem;
+	background-color: #ff879c;
+	color:#fff;
+	padding: 0.5rem 1rem;
+	border-top-left-radius: 18px;
+	border-bottom-left-radius: 18px;
+	font-size: 1.1rem;
+	display: none;
+}
+
+.regionbox{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	text-align: center;
+	overflow: auto;
+	/*padding-bottom: 4rem;*/
+	/*display: none;*/
+}
+.regionbox::-webkit-scrollbar {
+    display: none;
+}
+.regionList{
+	position: relative;
+	width:26rem;
+	left:50%;
+	margin-left: -13rem;
+}
+.libox{
+	width: 13rem;
+	height: 13rem;
+	background:url(../img/chunk.png)no-repeat center center;
+	background-size: 100%;
+	position: absolute;
+}
+.mylibox{
+	background:url(../img/chunk_blue.png)no-repeat center center;
+	background-size: 100%;
+}
+.libox p{
+	text-align: center;
+	color:#fff;
+}
+.libox .manyper{
+	text-align: center;
+	color:#fff;
+    height: 3rem;
+    font-size: 1.2rem;
+}
+.seatof{
+	font-size: 1.1rem;
+    padding-top: 2rem;
+}
+.mylibox .seatof{
+	padding-top: 1.7rem;
+}
+.manyper h4{
+	font-size: 1.3rem;
+	line-height: 3rem;
+}
+.myper h4{
+	line-height: initial;
+}
+.mylibox .myper{
+	height: 5rem;
+}
+.date,.time{
+	font-size: 1rem;
+}
+.box1{
+	top: 0rem;
+	left:0rem;
+}
+.box2{
+	top: 4rem;
+	right:0rem;
+}
+.box3{
+	top: 15.5rem;
+	right:0rem;
+}
+.box4{
+	top: 19.5rem;
+	left:0rem;
+}
+.box5{
+	top: 31rem;
+	left:0rem;
+}
+.box6{
+	top: 35rem;
+	right:0rem;
+}
+
+.fieldbtns,.fieldbtns_my{
+	height: 3rem;
+	padding-bottom: 1rem;
+	text-align: center;
+	display: none;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    max-width: 640px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+
+}
+.fieldbtns button,.fieldbtns_my button{
+	width: 40%;
+	color:#fff;
+	border-radius: 8px;
+	border:none;
+	height: 3rem;
+    line-height: 3rem;
+	font-size: 1.1rem;
+}
+.lookbtn,.backup{
+	background: -webkit-linear-gradient(left, #f8758d , #ff99ab); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(right, #f8758d , #ff99ab); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(right, #f8758d , #ff99ab); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to right, #f8758d , #ff99ab); /* 标准的语法 */
+	margin-right: 2%;
+}
+.testbtn,.getself{
+	background: -webkit-linear-gradient(left, #9a65fd , #efa4ff); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(right, #9a65fd , #efa4ff); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(right, #9a65fd , #efa4ff); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to right, #9a65fd , #efa4ff); /* 标准的语法 */
+	margin-left: 2%;
+}
+.testbtn{
+	display: none;
+}
+.mymsgs span{
+	display: block;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 100%;
+	border:1px solid #fff;
+	margin-left: 1.5rem;
+	float: left;
+}
+.myper p{
+	font-size: 1rem;
+}
+.mymsgs div{
+	float: left;
+    margin-left: 0.5rem;
+}
+.other p{
+	color: #262563;
+}
+
+
+/*弹窗*/
+.mask{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	max-width: 640px;
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+	background-color: rgba(0,0,0,.5);
+	display: none;
+}
+
+/*获取自己ID弹窗*/
+.myidbox,.blockInfobox,.chunkInfobox,.chunkMyinfo,.inputbox,.message{
+	width: 80%;
+	margin-left: 10%;
+	padding: 8% 0;
+	background-color: #122c7c;
+	border-radius: 5px;
+	position: relative;
+	margin-top: 40%;
+	background: url(../img/smallbg.png)no-repeat center top;
+	background-size: cover;
+}
+.myidbox h4,.blockInfobox h4,.chunkInfobox h4,.chunkMyinfo h4,.inputbox h4,.message h4{
+	color:#acbffb;
+	font-size: 1.3rem;
+	text-align: center;
+}
+.myidnum,.curbox,.node{
+	width: 80%;
+	background-color: #122158;
+	border-radius: 3px;
+	color:#fff;
+	text-align: center;
+	padding:4% 0;
+	font-size: 1.3rem;
+	margin:9% 0 3% 10%;
+	word-wrap:break-word ;
+}
+.myidnum{
+	font-size: 1.1rem;
+}
+.myidbox p,.blockInfobox p{
+	width: 80%;
+	margin-left: 10%;
+	text-align: center;
+	font-size: 1.2rem;
+	color:#acbffb;
+	margin-bottom: 12%;
+}
+.myidbtns,.inputbtns{
+	text-align: center;
+}
+.myidbtns button{
+	width: 40%;
+	border:none;
+	padding: 3% 0;
+	color: #fff;
+	font-size: 1.2rem;
+	border-radius: 5px;
+}
+.myidbtns .closebtn,.inputbtns .inputback{
+	background: -webkit-linear-gradient(left, #7878fa , #78bdfb); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(right, #7878fa , #78bdfb); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(right, #7878fa , #78bdfb); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to right, #7878fa , #78bdfb); /* 标准的语法 */
+	margin-right: 1%;
+}
+.myidbtns .copybtn,.inputbtns .mertest{
+	background: -webkit-linear-gradient(left, #7387fe , #e7a0f9); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(right, #7387fe , #e7a0f9); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(right, #7387fe , #e7a0f9); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to right, #7387fe , #e7a0f9); /* 标准的语法 */
+	margin-left: 1%
+}
+
+
+/*输入投票ID弹窗*/
+/*.inputbox{
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 50%;
+}*/
+.idnum{
+	width: 100%;
+	text-align: center;
+	background-color: #122158;
+	color:#fff;
+	font-size: 1.3rem;
+	padding: 7% 0;
+	border:none;
+	border-radius: 5px;
+}
+
+/*input textarea（placeholder的颜色） */
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #fff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #fff;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #fff;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #fff;
+}
+
+.inputbtns button{
+	width: 45%;
+	border:none;
+	padding: 3% 0;
+	color: #fff;
+	font-size: 1.2rem;
+	border-radius: 5px;
+	margin-top: 9%;
+}
+
+
+/*区块信息弹窗*/
+.blockInfobox .close,.chunkInfobox .close,.chunkMyinfo .close,.message .close{
+	width: 80%;
+	margin-left:10%;
+	border:none;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 1.2rem;
+	padding: 3% 0; 
+	background: -webkit-linear-gradient(left, #9965fd , #e7a0f9); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(right, #9965fd , #e7a0f9); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(right, #9965fd , #e7a0f9); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to right, #9965fd , #e7a0f9); /* 标准的语法 */
+}
+
+.message h4{
+	padding: 3rem 0;
+}
+.tip {
+	    color: #fff;
+    font-size: 1rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    display: none;
+}
+/*对应区块信息弹窗*/
+.node{
+	margin-top: 4%;
+}
+.node h5{
+	color:#fff;
+	font-size: 1.3rem;
+}
+.node p{
+	color: #acbffb;
+	font-size: 1rem;
+}
+.chunkname,.chunktx{
+	font-size: 1rem;
+	color: #fff;
+	text-align: center;
+	margin-bottom: 1%;
+}
+.chunktime{
+	font-size: 1rem;
+	color: #acbffb;
+	text-align: center;
+	margin-bottom: 5%;
+}
+
+/*我自己对应区块信息弹窗*/
+.mychunktx{
+	font-size: 1.3rem;
+	color: #fff;
+	text-align: center;
+	margin-bottom: 1%;
+	margin-top: 4%;
+}
+.mychunktx b{
+	color: #fa7990;
+	font-weight: normal;
+}
+
+.list-nomal{
+	display: none;
+}
+
+.list-my{
+	display: none;
+}
+
+.list-othor{
+	display: none;
+}
+
+.logo{
+	 position: absolute;
+    left: 0;
+    width: 50%;
+    top: 25%;
+}

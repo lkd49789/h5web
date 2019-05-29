@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SNH48 GROUP 新生招募</title>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Cache-Control" content="max-age=0">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <link rel="shortcut icon " type="images/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/fileuploader.css">
+    <script src="js/rem.js"></script>
+    <style type="text/css">
+            label, input.txt, .address{text-align: left;}
+            label, input.txt, .area{margin-left: 4%;}
+            .area{width: 65%;}
+            .area li{margin: 0; display: block;}
+			.titlebox,.citybox{width: 40%;}
+			.titlebox .labels,.citybox .labels{margin: 0;}
+        </style>
+    </style>
+</head>
+<body>
+    <div class="box">
+		<div class="ot_return">
+			<a href="index.html">〈 返回</a>
+		</div>
+        <img src="images/ot_top.jpg" alt="">
+        <div class="info_con">
+			<img src="images/otbg_t.png" alt="">
+            <form id="postform">
+                <input type="hidden" name="from_type" value="微信报名" />
+                <div class="b_bt">
+					<img src="images/ot_bt1.png">
+				</div>
+                <div class="form">
+                    <ul>
+                        <li><div class="row"><label>姓名</label><input type="text" name="name" id="name" class="txt" placeholder="输入你的姓名"></div></li>
+                        <li><div class="row"><label>民族</label><input type="text" name="nation" id="nation" placeholder="输入你的民族" class="txt"></div></li>
+                        <li><div class="row"><label>身份证</label><input type="text"  name="identity" id="identity" placeholder="（或海外护照）" class="txt"></div></li>
+                        <li><div class="row"><label>出生年月</label><input type="date" name="birthday" id="birthday" placeholder="请选择" class="txt" ></div></li>
+                        <li><div class="row"><label>身高<span>(CM)</span></label><input type="number" name="height" id="height" placeholder="输入你的身高" class="txt"></div></li>
+                        <li><div class="row"><label>体重<span>(KG)</span></label><input type="number" name="weight" id="weight" placeholder="输入你的体重" class="txt"></div></li>
+                        <li><div class="row"><label>邮箱</label><input type="email" name="email" id="email" placeholder="输入你的Email" class="txt"></div></li>
+                        <li><div class="row"><label>本人手机</label><input type="tel" name="phone_own" id="phone_own" placeholder="输入你的手机号码" class="txt"></div></li>
+                        <li><div class="row"><label>监护人手机</label><input type="tel" name="phone_guardian" id="phone_guardian" placeholder="输入监护人手机号码" class="txt"></div></li>
+                        <li><div class="row"><label>新浪微博网址</label><input type="web" name="weibo_url" id="weibo_url" placeholder="输入新浪微博网址" class="txt"></div></li>
+						<li>
+                            <div class="row fs-address"><label>报名团体</label>
+                                <ul class="area titlebox">
+                                    <li><label class="labels"><input name="resident1" type="radio" value="SNH48" />  SNH48</label></li>
+                                    <li><label class="labels"><input name="resident1" type="radio" value="BEJ48"/>  BEJ48</label></li>
+                                    <li><label class="labels"><input name="resident1" type="radio" value="GNZ48"/>  GNZ48</label></li>
+                                    <li><label class="labels"><input name="resident1" type="radio" value="LXS"/>海外练习生</label></li>
+                                </ul>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="row fs-address"><label>复试赛区</label>
+                                <ul class="area citybox">
+                                    <li><label class="labels"><input name="area1" type="radio" value="上海" />  上海</label></li>
+                                    <li><label class="labels"><input name="area1" type="radio" value="北京" />  北京</label></li>
+                                    <li><label class="labels"><input name="area1" type="radio" value="广州" />  广州</label></li>
+                                </ul>
+                            </div>
+                        
+                        </li>
+                        <li>
+                            <div class="row">
+                                <label class="title-address">家庭住址</label>
+                                <div class="address">
+                                    <select name="live_province" id="live_province">
+                                    </select>
+                                    <select name="live_city" id="live_city">
+                                    </select>
+                                    <textarea type="inputarea" name="address" id="address" placeholder="详细地址" class="addr"></textarea>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dash">
+                                <span class="area-t">＊非中国大陆地区填写</span>
+                                <div class="row">
+                                    <label>联系电话</label><input type="tel" name="phone_contact" id="phone_contact" placeholder="输入你的电话号码" class="txt">
+                                </div>
+                                <div class="row">
+                                    <label>家庭住址</label><input type="text" name="address_non_prc" id="address_non_prc" placeholder="输入你的家庭住址" class="txt">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+							<div class="up_pho_bt">
+								上传照片<span><a href="javascript:openTestPho()"><div class="icon">?</div> 报名照参考范例</a></span>
+							</div>
+                            <div class="row">
+                                <label class="idr idr2">身份证件图</label>
+                                <div class="input_wrapper">
+                                    <span class="upl">立即上传</span>
+                                    <input type="file" class="image" name="file1" onchange="previewImage(1)" id="upload_id">
+                                </div>
+                                <div class="thumb01" id="idcard_show" style="display:none;"></div>
+            <span class="hint01">
+              （未成年报名者请上传户口本，非中国大陆地区报名者请上传护照）
+            </span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row">
+                                <div class="la" id="upload_bust">
+                                    <!-- <img src="images/phint.png" alt="" class="phint"> -->
+                                    <label class="photo">上半身正面1~3张</label>
+                                    <div class="input_wrapper" >
+                                        <span class="upl">立即上传</span>
+                                        <input type="file" class="image" name="file2" onchange="previewImage(2)">
+                                    </div>
+                                    <br>
+                                    <div class="thumb" style="display:none;"></div>
+                                    <div class="thumb" style="display:none;"></div>
+                                    <div class="thumb" style="display:none;"></div>
+                                </div>
+                                <br>
+                                <div class="la" id="upload_full">
+                                    <label class="photo">单人全身照1~3张</label>
+                                    <div class="input_wrapper" >
+                                        <span class="upl">立即上传</span>
+                                        <input type="file" class="image" name="file3" onchange="previewImage(3)">
+                                    </div><br>
+                                    <div class="thumb" style="display:none;"></div>
+                                    <div class="thumb" style="display:none;"></div>
+                                    <div class="thumb" style="display:none;"></div>
+                                </div>
+                            </div>
+							<div class="input_bz">
+								请上传您本人的素颜正面照 ，若上传艺术照，写真照，COSPLAY照或妆容过浓者一律取消报名资格， 请注意照片附件大小在1Mb以内，以免上传等待时间过长，照片格式限制为： jpg / gif / png / bmp
+							</div>
+                        </li>
+                        <li>
+							<div class="row"><label>才艺视频</label><input type="text" id="video_url" placeholder="填写视频链接(非必填)" class="txt" name="videoUrl"></div>
+							<div class="input_bz">
+								可贴入腾讯视频、秒拍、抖音、B站的视频链接
+							</div>
+						</li>
+                        <li><div class="row big-row"><label>演出经验</label><input type="text" id="experience" placeholder="填写演出经验简介(非必填)" class="txt" name="experience"></div></li>
+                        <input type="hidden"  name="group_id" value="SNH">
+                        <input type="hidden"  name="period" value="GROUP_12">
+                        <div class="submit-box">
+                            <a href="javascript:;" id="submit_btn" class="join_btn">
+								<img src="images/submit.png" alt="">
+							</a>
+                        </div>
+                        <input type="hidden"  name="area" value="" id="tcity">
+                        <input type="hidden"  name="resident" value="" id="ttitle">
+                    </ul>
+                </div>
+				<div class="war">报名确认邮件可能会被系统误认为垃圾邮件，请仔细查收。</div>
+				<div class="footer">
+					<img src="images/footer.png" alt="">
+				</div>
+            </form>
+        </div>
+    </div>
+	
+	<div class="t_pho_plan" style="display: none;">
+		<div class="tbt">
+			<img src="images/test_pho_bt.png" alt="">
+		</div>
+		<img src="images/test_pho.png" class="t_pho" alt="">
+		<a href='javascript:layer.closeAll();' class='close_btn'>X</a>
+	</div>
+	
+    <script src="../resource/js/jquery.min.js"></script>
+    <script src="../resource/js/layer/mobile/layer.js"></script>
+    <script src="../resource/js/common.js"></script>
+    <script src="../resource/js/pcas.js"></script>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script src="js/wx.js"></script>
+    <script src="js/wxshare.js"></script>
+    <script src="js/info.js"></script>
+	
+	<script src="js/layer_mobile/layer.js"></script>
+	<link rel="stylesheet" href="js/layer_mobile/need/layer.css">
+	<script>
+		function openTestPho(){
+			layer.open({
+			  type:1,
+			  style:'background-color:transparent;font-size:100%;width:84%;',
+			  anim: 'up',
+			  shade:.7,
+			  shadeClose: false,
+			  content: "<div class='t_pho_plan'>" + $(".t_pho_plan").html() + "</div>"
+			});
+		}
+	</script>
+</body>
+</html>

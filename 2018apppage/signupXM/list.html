@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>星梦演播厅 Studio 48</title>
+	<link href="css/common.css" rel="stylesheet" />
+	<link href="css/mui.min.css" rel="stylesheet"/>
+	<link href="css/list.css" rel="stylesheet" />
+</head>
+<body>
+	<section>
+		<ul class="tabs">
+			<li val="1"><span class="tabActive">最新报名</span></li>
+			<li val="2"><span>助力排行</span></li>
+			<li val="3"><span>各队助力名单</span></li>
+		</ul>
+		<div class="content">
+			<div class="allList1">
+				<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll mui-scroll1">
+						<ul class="mui-table-view mui-table-view-chevron List1">
+							<!-- <li>
+								<div class="m_msg">
+									<span class="avatar avatar_new"></span>
+									<div class="r_msg">
+										<p class="p1">陈问言<em class="team NII-bg">NII</em></p>
+										<p class="time">2018.04.19 11:23</p>
+									</div>
+								</div>
+								<p class="text">大家好，我是SNH48 TEAN NII的成员陈问言 ,请大家多多指教!</p>
+								<div class="vidbox">
+									<div class="video">
+										<video class="bofang" src='https://mp4.48.cn/2017b50/480/47.mp4' preload="load" controls="controls" webkit-playsinline></video>
+									</div>
+									<div class="qu" style="background-image:url(img/v_default.png)">
+										<img src="img/play.png" class="play">
+									</div>
+								</div>
+								<button class="helpbtn">为她助力</button>
+							</li> -->
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="allList2" style="display:none;">
+				<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll mui-scroll2">
+						<ul class="mui-table-view mui-table-view-chevron List2">
+							<!-- <li>
+								<div class="m_msg">
+									<span class="avatar"></span>
+									陈问言<em class="team NII-bg">NII</em>
+									<span class="rank">1</span>
+								</div>
+								<p class="text">大家好，我是SNH48 TEAN NII的成员陈问言 ,请大家多多指教!</p>
+								<div class="vidbox">
+									<div class="video">
+										<video class="bofang" src='https://mp4.48.cn/2017b50/480/47.mp4' preload="load" controls="controls" webkit-playsinline></video>
+									</div>
+									<div class="qu" style="background-image:url(img/v_default.png)">
+										<img src="img/play.png" class="play">
+									</div>
+								</div>
+								<button class="helpbtn">为她助力</button>
+							</li> -->
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="allList3" style="display:none;">
+				<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll mui-scroll3">
+						<ul class="mui-table-view mui-table-view-chevron List3">
+							<!-- <li>
+								<p class="teamName">Team SII<img src="img/icon_down.png" class="iconupdown"></p>
+								<div class="nameList">
+									<span>张语格</span>
+									<span>莫寒</span>
+									<span>陈观慧</span>
+									<span>袁雨桢</span>
+									<span>张语格</span>
+									<span>莫寒</span>
+									<span>陈观慧</span>
+									<span>袁雨桢</span>
+								</div>
+								
+							</li> -->
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="myright">我的助力权：<em></em></div>
+		<div class="maskbox">
+			<!-- 提示去绑定 -->
+			<div class="mask1">
+				<div class="upbox">
+					<p>你还未绑定手机号<br/>请先去绑定后参加助力</p>
+				</div>
+				<div class="knowbtn">知道了</div>
+			</div>
+			<!-- 验证手机号 -->
+			<div class="mask2">
+				<p class="tit">当前绑定的手机号</p>
+				<p class="phone"></p>	
+				<div class="tokenbox">
+					<input type="text" name="token" value placeholder="输入验证码" class="token">
+					<button class="tokenbtn">发送验证码</button>
+				</div>
+				<p class="notice">验证码不正确，请重试/手机号码格式不正确</p>
+				<div class="btns">
+					<button class="btnsback">返回</button>
+					<button class="btnsright">验证手机号</button>
+				</div>
+			</div>	
+		</div>
+	</section>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="js/mui.min.js" ></script>
+<!-- <script src="js/mui.pullToRefresh.js" ></script>
+<script src="js/mui.pullToRefresh.material.js" ></script> -->
+<script src="js/main.js" ></script>
+<script src="js/list.js" ></script>
+</html>

@@ -1,0 +1,106 @@
+html,
+body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	background: #141b4e no-repeat;
+	background-size: 100%;
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+header {
+	position: relative;
+	width: 100%;
+	height: 30%;
+}
+
+header img {
+	height: 100%;
+	width: 100%;
+}
+
+input {
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+}
+
+textarea {
+    border: 0;
+    color: #fbb611;
+    font-size: 1.3rem;
+    position: absolute;
+    width: 80%;
+    height: 75%;
+    left: 10%;
+    top: 10%;
+    padding: 1rem;
+    background: none;
+
+}
+textarea::placeholder{
+    color: #fbb611;
+}
+.btn-primary{
+	padding-top: 2.5%;
+	padding-bottom: 2.5%;
+	font-size: 1.5rem;
+	background: #141c4d;
+	color: #ffba0c;
+	border: 1px #ffba0c solid;
+	margin-left: 8%;
+	border-radius: 11px;
+	position: relative;
+}
+.btn-primary option{
+	text-align: center;
+	width:1px;
+	height: 1px;
+	
+}
+.provincelist{width: 50%;}
+
+.btn-primary:hover{
+	background-color: rgba(0,0,0,0) !important;
+   border-color: #ffba0c;
+}
+.btn-primary span{
+	position: absolute;
+    left: 0;
+    width: 100%;
+    background: #141c4d;
+    height: 100%;
+    top: 0;
+    line-height: 4rem;
+    border-radius: 50%;
+    display: block;
+    pointer-events:none;
+}
+.btn-default{
+	font-size: 1.5rem;
+	background: #ce960f;
+	color: #FFFFFF;
+	border: 2px #dab727 solid;
+	margin-left: 3%;
+	border-radius: 11px;
+}
+.text-box{
+	color: #818291;
+	margin-top: 7%;
+}
+.text-box p{
+	font-size: 1.2rem;
+}
+.sed-text{
+	margin-top: 7%;
+}
+.form-control{
+	width: 91%;
+    position: absolute;
+    bottom: 1%;
+}

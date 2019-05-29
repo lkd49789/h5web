@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>成员信息投票</title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+     <link rel="stylesheet" type="text/css" href="css/common_mobile.css"/>
+    <link href="css/memberInfo.css" rel="stylesheet"/>
+</head>
+    
+<body>
+	<div id="memberInfo">
+		<section>
+			<div class="memberInfo">
+				<div><img v-bind:src="infors.sid | Avata" /></div>
+				<div>
+					<ul>
+						<li>姓名：<i>{{ infors.sname }}</i>&nbsp;&nbsp;&nbsp;&nbsp;<i>{{infors.pinyin}}</i></li>
+						<li>昵称：<i>{{infors.nickname}}</i></li>
+						<li>所属队伍：<i>{{infors.gname}}&nbsp;Team {{infors.tname}}</i></li>
+						<li class="memBlood">血型：<i>{{infors.blood_type}}</i>&nbsp;&nbsp;&nbsp;&nbsp;身高：<i>{{infors.height}}cm</i></li>
+					</ul>
+				</div>
+				<div class={{infors.gid}}></div>
+			</div>
+			<div class="skill">
+				<dl>
+					<dt>个人特长和兴趣爱好：</dt>
+				</dl>
+			</div>
+		</section>
+		
+		<h4>{{ infors.sname }}的身世</h4>
+		<section class="memberHistory">
+			<ul>
+				<li>生日：<i>{{infors.birth_day}}</i></li>
+				<li>星座：<i>{{infors.star_sign_12}}</i></li>
+				<li>出生地：<i>{{infors.birth_place}}</i></li>
+			</ul>
+			
+		</section>
+	
+		<h4>{{ infors.sname }}的编年史</h4>
+		<section class="memberList">
+			<!--<li>2013.11.11加入SNH48TeamN队（TeamNII）</li>
+			<li>2014.07.26 SNH48第一届总选举第四名</li>
+			<li>2015.07.25 SNH48第二届总选举第二名</li>-->	
+		</section>
+	
+	
+	<form action="">
+		<h3>当前投票权<span class="votenum"></span>票</h3>
+		<input type="number" placeholder="请输入投票数量" v-model="submitText"/>
+		<input type="button" value="投票" v-on:click="submitTodo()" id="submitTicket"/>
+	</form>
+</div>
+
+</body>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/config.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/getUserInfo.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/member.js"></script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

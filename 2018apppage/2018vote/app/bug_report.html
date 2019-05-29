@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>故障申诉</title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+   	<link rel="stylesheet" type="text/css" href="css/common_mobile.css"/>
+   	 <link rel="stylesheet" type="text/css" href="css/fileuploader.css">
+   	 <link rel="stylesheet" href="css/postinfo.css">
+    <link href="css/faultApply.css" rel="stylesheet"/>
+</head>
+    
+<body>
+	<div class="layer">
+		<!--<img src="images/loading.gif" alt="" />-->
+		<p></p>
+	</div>
+	
+	<section>
+			<div class="fault-option">
+				<!-- <h3>故障类型</h3>
+				<select class="mui-btn mui-btn-block" id="selected">
+					<option value="投票券激活流程中故障">投票券激活流程中故障</option>
+                    <option value="投票流程中故障">投票流程中故障</option>
+                    <option value="购买电子券流程中故障">购买电子券流程中故障</option>
+                    <option value="其他故障" selected="selected">其他故障</option>
+				</select> -->
+					
+				<div class="reason">
+					<textarea id="textarea" rows="4" placeholder="我在投票过程中出现了问题" class="content" max-length="200"></textarea>
+					<p class="count-content"><span>0</span>/200</p>
+				</div>
+			</div>
+			<input type="number" name="" id="" placeholder="请输入您的联系电话" class="tel"/>
+			
+				
+		<form method="POST" action="" id="postform" enctype="multipart/form-data" name="upload_form">
+			<div class="newinfocontrols"> 
+				<h3>故障截图</h3>
+				<div id="preview" class="bug_img_list"></div>
+                <div id="addimg" class="bug_addimg">
+                	<input class="tempimg_file" type="file" onchange="previewImage(this)" style="opacity:0;width:80px;height:80px;" />
+                </div>
+			</div>
+		</form>
+	
+		<input type="button" name="" id="" value="提交" class="applyBtn"/>
+		
+		<a href="###" link="bug_history.html" class="hrefTo">故障查询>></a>
+		<footer>
+		 	<p>上海丝芭文化传媒有限公司版权所有</p>
+		 	<p>Copyright 2016 ©SNH48 All Rights Reserved.</p>
+		</footer>
+	</section>
+			
+			
+</body>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/config.js" type="text/javascript" charset="utf-8"></script>	
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/bugreport.js"></script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

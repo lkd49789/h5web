@@ -1,0 +1,220 @@
+*{margin:0;padding: 0;}
+html,body{
+	width: 100%;
+	height: 100%;
+	background-color: #6850c1;
+}
+body{
+	width: 100%;
+	max-width: 640px;
+	margin:0 auto;
+	position:relative;
+}
+button,input{
+	border:none;
+	outline: none;
+}
+section{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background:url(../img/bg-my.jpg)no-repeat center top;
+	background-size: cover;
+}
+
+.mui-scroll-wrapper{
+}
+.mui-pull-bottom-tips{
+	text-align: center;
+}
+.mui-pull-loading{
+	font-size: 1.2rem;
+	color: #d4cccc;
+}
+.mui-content{
+	 background: transparent; 
+}
+.mui-table-view:before,.mui-table-view:after{
+	height: 0;
+}
+
+.tips{
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	padding-top: 2rem !important;
+}
+.tips p{
+	text-align: center;
+	color: #000;
+	font-size: 1.3rem;
+}
+.total{
+	color: #8165e7;
+	font-size: 1.6rem;
+}
+.banner{
+	width: 100%;
+}
+.listbox{
+	padding: 1rem 3% 1rem 3%;
+}
+
+.nohave{text-align: center;}
+
+
+/*列表*/
+.lists{
+	    min-height: 40rem;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.lists li:last-child{
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.lists li{
+	background-color: #fff;
+	padding: 1rem 3%;
+}
+.names{
+	vertical-align: middle;
+	color: #000;
+}
+.names,.ranknum,.username,.mername{
+	font-size: 1.1rem;
+}
+
+.username{
+	color: #8165e7;
+}
+.mername{
+	color:#ee699c;
+}
+
+.text{
+	font-size: 1.2rem;
+	color: #000;
+}
+
+.icons{
+	text-align: right;
+	margin-bottom: 0;
+}
+.icon_msg img,.icon_msging img{
+	width: 1.6rem;
+	margin-right: 0.5rem;
+	margin-left:1rem;
+}
+.icon_like img{
+	width: 1.5rem;
+	margin-right: 0.5rem;
+}
+.icon_like,.icon_msg,.icon_msging{
+	font-size: 1rem;
+}
+
+/*浮层*/
+.mask{
+	width: 100%;
+	height: 100%;
+	max-width: 640px;
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+	background-color: rgba(0,0,0,.5);
+	z-index: 3;
+	display: none;
+}
+/*查看表白弹框*/
+.lookconf-box{
+	width: 86%;
+	position: absolute;
+	left:7%;
+	top: 30%;
+	background-color: #fff;
+	padding: 7% 5%;
+	border-radius: 8px;
+	display: none;
+}
+.conftext{
+	color: #1d1d1d;
+	font-size: 1.2rem;
+	background-color: #f7f7f7;
+	border-radius: 5px;
+	padding: 5% 4%;
+	font-weight: bolder;
+}
+.closebtn{
+	position: absolute;
+    width: 4%;
+    right: 5%;
+    top: 10%;
+}
+
+
+
+/*成员版回复留言*/
+.replymsg-box{
+	width: 86%;
+	position: absolute;
+	left:7%;
+	top: 10%;
+	background-color: #fff;
+	padding: 7% 5%;
+	border-radius: 8px;
+	display: none;
+}
+.replymsg-box .title{
+	text-align: center;
+	font-size: 1.3rem;
+	color: #000;
+	margin-bottom: 2rem;
+}
+.replymsg-box .text{
+	padding: 0;
+	color: #000;
+	font-weight: bolder;
+}
+.replytxt p{
+	color: #000;
+}
+.repmsg{
+	border:0;
+	background-color: #f7f7f7;
+	font-size: 1.2rem;
+}
+.textareabox{
+	position: relative;
+}
+.textareabox textarea{
+	margin-bottom: 0;
+	background-color: #eee;
+}
+.counter{
+	position: absolute;
+    right: 2%;
+    bottom: 10%;
+    font-size: 1rem;
+    color:#8a8484;
+}
+.rep_completebtn{
+	width: 50%;
+	display: block;
+	background-color: #ed5d94;
+	color: #fff;
+	margin-left:25%;
+	height: 3.2rem;
+	border-radius: 2rem;
+	margin-top: 1rem;
+	font-size: 1.3rem;
+	letter-spacing: 2px;
+}
+.rep_closebtn{
+	position: absolute;
+    width: 4%;
+    right: 5%;
+    top: 4%;
+}
