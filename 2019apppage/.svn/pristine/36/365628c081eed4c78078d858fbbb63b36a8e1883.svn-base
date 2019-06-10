@@ -1,0 +1,44 @@
+[v-cloak] {
+    display: none !important;
+} 
+body{
+    max-width: 640px;
+    margin:0 auto;
+    font-size: 1.5rem;
+    background: #f6f6f6;
+    padding: .83rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+#app{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            background: #fff;
+            padding: 1.6rem;
+            border-radius: .5rem;
+}
+li{
+    border-bottom: 1px solid #f0f0f0;
+    padding: .83rem .5rem;
+}
+li:last-child{
+    border-bottom: 0;
+}
+input{
+    border: 0;
+    font-size: 1.5rem;
+    width:80%;
+    height: 2.2rem;
+    line-height: 2.2rem;
+}
+label{
+    width: 20%;
+    display: inline-block;
+}
+.btn{
+    width: 100%;
+    padding: 2.08rem 0;
+}
+.btn img{
+    width: 100%;
+}

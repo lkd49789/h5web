@@ -40,8 +40,10 @@ var app=new Vue({
             },
             created:function(){
               var that = this;
-              if(!dsBridge.call("snhUserInfo")){
-                that.$parent.showpop = 1
+              if(checkFromApp()){
+                if(!dsBridge.call("snhUserInfo")){
+                  that.$parent.showpop = 1;
+                }
               }
               main.homePage(function(data){
                 if(data.status == 200){
@@ -101,24 +103,29 @@ var app=new Vue({
                 columns:2,/*列数 */
                 arr:[], /*高度数组 */
                 i:0, /*循环 */
-                available:true, /*防止多次触底请求 */
-                dataList:[]
+                available:false, /*防止多次触底请求 */
+                dataList:[],
+                oldLen:0  /*上一次的长度 */
 
               }
             },
             created:function(){
-              if(!dsBridge.call("snhUserInfo")){
-                this.$parent.showpop = 1
+              if(checkFromApp()){
+                if(!dsBridge.call("snhUserInfo")){
+                  that.$parent.showpop = 1
+                }
               }
             },
             mounted:function(){
               this.reunderstanding()
               /*触底加载 */
-              window.addEventListener('scroll',this.handleScroll,true)
+              this.$refs.flex.addEventListener('scroll',this.handleScroll,false)
+              var height3 = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+              this.$refs.flex.style.height = height3 +'px'
             },
             destroyed:function(){
               /*解除触底加载 */
-              window.removeEventListener('scroll',this.handleScroll,true)   
+              // window.removeEventListener('scroll',this.handleScroll,true)   
             },
             methods:{
             /*跳转 */
@@ -129,7 +136,7 @@ var app=new Vue({
               imgLoad:function(items,len){  
                 var newImg=new Image();
                 var that=this;
-                if(that.list[that.i].previewImg.length>0){
+                if(that.list[that.i].previewImg.length > 0){
                   newImg.src='https://source.48.cn'+that.list[that.i].previewImg[0].imgUrl;
                 }else{
                   newImg.src='';
@@ -173,36 +180,48 @@ var app=new Vue({
                   // 5- 修改最小列的高度
                   // 最小列的高度 = 当前自己的高度 + 拼接过来的高度 + 间隙的高度
                   this.arr[index] = this.arr[index] + items[i].offsetHeight ;
+
                 }
-                items[i].style.opacity = '1'
+                items[i].style.opacity = '1';
+
+                /*判断是否该触底加载 */
+                if(i == this.list.length - 1 && this.list.length - this.oldLen >= 8 && this.list.length >= 8){
+                  this.available = true;
+                }
+
                 this.i+=1;
                 if(this.i<len){
                   this.imgLoad(items,len)
                 }
               },
               handleScroll:function(){
-                // 获取滚轮位置
-               var height1 = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+                var that = this;
                // 文档高度
-               var height2 = document.body.scrollHeight || document.documentElement.scrollHeight;
+              //  var height2 = document.body.scrollHeight || document.documentElement.scrollHeight;
+              //数组中最高的那一个
+               var height2 = Math.max.apply(Math,this.arr);
+                //动态设置高度 撑开flex
+                that.$refs.know.style.height = height2 +'px';
                // 可视区域
                var height3 = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-               if(height3 + height1 >= height2 - 10 && this.available){
-                this.available = false;
-                  var that = this;
+               // 获取滚轮位置
+              //  var height1 = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+               var height1 = that.$refs.flex.scrollTop;
+               if(height3 + height1 >= height2 && this.available){
+                 this.available = false;
                   main.getReunderstanding(that.list[that.i-1].createAt,function(data){
-                    that.available = true;
                     if(JSON.stringify(data.content).length == 2){
-                      that.available = false;
                       return false;
                     }
                     if(data.status == 200){
+                      that.oldLen = that.list.length;
+                      /*处理对象 转化为数组 */
                       for(index in data.content){
-                        that.list.push(data.content[index])                    
+                        that.list.push(data.content[index]);           
                       }
                       that.$nextTick(function(){
                         var box = this.$refs.know.children;
-                            this.imgLoad(box,box.length) 
+                            this.imgLoad(box,box.length);
                       })
                       
                     }else{

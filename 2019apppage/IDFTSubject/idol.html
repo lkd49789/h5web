@@ -65,8 +65,8 @@
 
             </div>
             <div class="my_center">
-                <p class="my_center_title"><b>我的任务</b></p>
-                <div v-if="content.myTasks.length<=0" style="text-align: center;font-size: 1.4rem">暂无数据</div>
+                <p class="my_center_title"><b>我的任务</b><span class="b" @click="gotoPage('IDFTsignup/index.html')">积分和升级规则 <em></em> </span></p>
+                <div v-if="content.myTasks.length <= 0" style="text-align: center;font-size: 1.4rem">暂无数据</div>
                 <p v-for="(item,index) in content.myTasks"><span @click="gotoPage('production.html')"><em v-text="item.proName"></em><em v-if="item.proName.indexOf('个人作品') >= 0" class="em">设置作品平台<em class="bor"></em></em></span><span v-color="item.integral"><em v-if="item.integral.indexOf('积分') > 0">+</em><em v-text="item.integral"></em></span></p>
             </div>
             <div class="my_bottom" v-if="content.mvpInfo">

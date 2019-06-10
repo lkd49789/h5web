@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>公演MVP排行</title>
+    <link href="../../common/css/common.css" rel="stylesheet" />
+</head>
+<style>
+    [v-cloak] {
+        display: none !important;
+    }
+    body{
+        max-width: 640px;
+        margin:0 auto;
+        background: #f6f6f6;
+    }
+    #app{
+        min-height: 100%;
+        box-sizing: border-box;
+        font-size: 1.3rem;
+    }
+    .titleDiv{
+        background: #fff;
+    }
+    .title{
+        margin:0 .83rem;
+        line-height: 2.75rem;
+        border-bottom: 1px solid #f5f5f5;
+    }
+    ul{
+        background: #fff;
+    }
+    ul li{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 .83rem 0 1.25rem;
+        line-height: 5.75rem;
+        height: 5.75rem;
+        border-bottom: 1px solid #f5f5f5;
+    }
+    li .left{
+        display: flex;   
+        align-items: center;     
+    }
+    li .left .num{
+        font-size: 1.4rem;
+    }
+    li .left .head{
+        border-radius: 50%;
+        width: 3.33rem;
+        height: 3.33rem;
+        margin: 0 .75rem;
+        overflow: hidden;
+    }
+    li .left .head img{
+        width: 100%;
+        display: block;
+    }
+    li .left .name{
+        font-size: 1.6rem;
+        color: #1d1d1d;
+    }
+</style>
+<body>
+    <div id="app">
+        <div class="titleDiv"><p class="title" v-if="content.liveTime" v-text="content.liveTime + content.teamName + content.liveName"></p></div>
+        <ul v-cloak>
+            <li v-for="(item,index) in content.memberRankInfoList">
+                <div class="left">
+                    <b class="num" v-text="item.rankId"></b>
+                    <div class="head"><img :src="'https://source.48.cn'+item.baseUserInfo.avatar" alt=""></div>
+                    <span  class="name" v-text="item.baseUserInfo.nickname"></span>
+                </div>
+                <div class="right"><b v-text="item.ticketNum"></b>票</div>
+            </li>
+        </ul>
+    </div>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<!-- <script src="../../common/js/vue.js"></script> -->
+<script src='https://cdn.bootcss.com/vue/2.6.10/vue.js'></script>
+<script src="../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script>
+    var app = new Vue({
+        el:"#app",
+        data:{
+            content:[]
+        },
+        mounted:function(){
+            var id = this.getUrlParam('?infoId')
+            var that = this;
+            main.getIdolMVPDetail(id,function(data){
+                data.content.liveTime = that.dateFormat(parseInt(data.content.liveTime));
+                that.content = data.content;
+                console.log(data)
+            })
+        },
+        methods:{
+            /*获取url参数*/
+            getUrlParam(name) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+                var r = window.location.search.substr(1).match(reg); //匹配目标参数
+                if (r != null) return decodeURI(r[2]);
+                return null; //返回参数值
+            },
+            dateFormat:function(time) {
+                var date=new Date(parseInt(time));
+                var year=date.getFullYear();
+                /* 在日期格式中，月份是从0开始的，因此要加0
+                * 使用三元表达式在小于10的前面加0，以达到格式统一  如 09:11:05
+                * */
+                var month= date.getMonth()+1<10 ? "0"+(date.getMonth()+1) : date.getMonth()+1;
+                var day=date.getDate()<10 ? "0"+date.getDate() : date.getDate();
+                var hours=date.getHours()<10 ? "0"+date.getHours() : date.getHours();
+                var minutes=date.getMinutes()<10 ? "0"+date.getMinutes() : date.getMinutes();
+                var seconds=date.getSeconds()<10 ? "0"+date.getSeconds() : date.getSeconds();
+                // 拼接
+                return year+"-"+month+"-"+day+" "+hours+":"+minutes+":"+seconds;
+            }
+        }
+    })
+</script>
+</html>

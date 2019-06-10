@@ -3,7 +3,8 @@
     //web端测试（用户信息）
     var webUserInfo = {
         "appid":"27422",                                //用户ID
-        "apptoken":"",                //验证Token
+        "apptoken":"8PjDbnEhlga0069YMkBERXt6hUBLUTDCma00V7D+cot9enS+h09f91V8m9AdpvQ26+Wxxl4jNtw=",                //验证Token
+        //"apptoken":"dq4+d56rez35wLb3+X33imzoH99x4ykoNIkvMjqCUNnmhFrji/DQhhppYWQHWOKoNiJ2WyzCZXLbvFekSECJvw==",
         "uname":"nicker",                                 //用户昵称
         "avata":"avata",                                    //头像地址
         "dev_cd":"dev_cd"                        //设备号
@@ -37,7 +38,7 @@
     //获取成员分数
     data.getScores = function(succ){
         $.ajax({
-            url:  CONFIG.getLink()+"api/activity/v1/myIntegral",
+            url:  CONFIG.getLink()+"api/idft/v1/myIntegral",
             type: "POST", 
             dataType: "json",
             contentType: 'application/json',
@@ -56,7 +57,7 @@
     //获取成员信息
     data.getMemInfo = function(succ){
         $.ajax({
-            url:  CONFIG.getLink()+"/api/idft/v1/apply",
+            url:  CONFIG.getLink()+"api/idft/v1/apply",
             type: "POST", 
             dataType: "json",
             contentType: 'application/json',
@@ -73,7 +74,7 @@
         });
     }
     //提交报名/放弃报名
-    data.submit = function(_info,succ){
+    data.submit = function(_code,_info,succ){
         
         $.ajax({
             url:  CONFIG.getLink()+"api/idft/v1/submit",
@@ -83,7 +84,10 @@
             beforeSend: function (request) {
                  request.setRequestHeader("token", main.getAppUserInfo().apptoken);
             },
-            data:JSON.stringify({applyInfo:_info}),
+            data:JSON.stringify({
+                code:_code,
+                applyInfo:_info
+            }),
             success: function (data) { 
                 succ(data)
             }, 

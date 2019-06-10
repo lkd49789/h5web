@@ -218,7 +218,8 @@ body{
     border-radius: 1rem;
 }
 .bor{
-    transform: rotateZ(45deg);
+    -webkit-transform: rotateZ(45deg);
+            transform: rotateZ(45deg);
     width: .5rem;
     height: .5rem;
     border: 1px solid #ff867b;
@@ -455,4 +456,19 @@ body{
 }
 .my_btn .my_barWrap{
     height: 6.7rem;
+}
+
+/*规则*/
+.b{
+    color: #c4c4c4;
+    font-size: 1.3rem;
+}
+.b em{
+    display: inline-block;
+    border-right:1px solid #c4c4c4;
+    border-top:1px solid #c4c4c4;
+    -webkit-transform: rotateZ(45deg);
+            transform: rotateZ(45deg);
+    width:.5rem;
+    height:.5rem;
 }

@@ -17,13 +17,10 @@
             <div :class="['tab_item',{'tab_active':who == 'know'}]" @click="tabClick(2)">重新认识下</div>
             <span class="border" :style="'left:'+left"></span>
         </div>
-        <!-- <keep-alive include="know"> -->
-            <!-- 将缓存name为know的组件 -->
-            <component :is="who"></component>
-        <!-- </keep-alive> -->
+        <component :is="who"></component>
         <!-- 弹框 -->
         <div class="mask" v-if="showpop!=0" v-cloak>
-            <!-- 充值 -->
+            <!--  -->
             <div class="no-money" v-if="showpop == 1">
                 <p><b>请登录</b></p>
                 <span style="background: url('./img/btn1.png') no-repeat left top/100% 100%" @click="_openNativeModule('login/phone')">登录</span>
@@ -84,23 +81,25 @@
 
     <!--重新认识下页面-->
     <template id="knowPage">
-        <div class="know" ref="know">
-            <div class="know_itemWrap" v-for="(item,index) in list" :key="index" >
-                <div class="know_item" @click="openNativeModule(item.postId)">
-                    <img class="img" v-if='item.previewImg[0]' :src="'https://source.48.cn'+item.previewImg[0].imgUrl" alt="图片">
-                    <p class="title"><b v-html="item.previewText"></b></p>
-                    <div class="user">
-                        <div class="head">
-                            <img :src="'https://source.48.cn'+item.user.avatar" alt="">
-                            <span v-text="item.user.nickname"></span>
-                        </div>
-                        <div class="user_right">
-                            <img class="fire" src="./img/fans/fire.jpg" alt="热度">
-                            <span v-text="item.hotCount"></span>
+        <div class="flex" ref="flex">
+            <div class="know" ref="know">
+                <div class="know_itemWrap" v-for="(item,index) in list" :key="index" >
+                    <div class="know_item" @click="openNativeModule(item.postId)">
+                        <img class="img" v-if='item.previewImg[0]' :src="'https://source.48.cn'+item.previewImg[0].imgUrl" alt="图片">
+                        <p class="title"><b v-html="item.previewText"></b></p>
+                        <div class="user">
+                            <div class="head">
+                                <img :src="'https://source.48.cn'+item.user.avatar" alt="">
+                                <span v-text="item.user.nickname"></span>
+                            </div>
+                            <div class="user_right">
+                                <img class="fire" src="./img/fans/fire.jpg" alt="热度">
+                                <span v-text="item.hotCount"></span>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>        
+                </div>        
+            </div>
         </div>
     </template>
     

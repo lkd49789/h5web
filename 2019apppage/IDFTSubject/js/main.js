@@ -1,8 +1,8 @@
 (function(data){
     //web端测试（用户信息）
     var webUserInfo = {
-        "appid":"27422",                                //用户ID
-        "apptoken":"",                //验证Token
+        "appid":"27422",                                //用户ID          
+        "apptoken":"",
         "uname":"nicker",                                 //用户昵称
         "avata":"avata",                                    //头像地址
         "dev_cd":"dev_cd",                        //设备号
@@ -26,7 +26,7 @@
         }
         var appUserInfo = {
             "appid":u_info.userInfo.userId,             //用户ID
-            "apptoken":u_info.token,                                             //验证Token
+            "apptoken":u_info.token,                                             //验证Token                                             //验证Token
             "uname":nickname,             //用户昵称
             "avatar":u_info.userInfo.avatar,             //头像地址
             "device":dev_cd                                                //设备号
@@ -183,7 +183,7 @@
                 succ(data)
             }, 
             error: function (jqXHR, textStatus, errorThrown) { 
-                alert("重新认识下",jqXHR);
+                alert("周详情",jqXHR);
             } 
         });
     };
@@ -193,7 +193,7 @@
             url:  CONFIG.getLink()+"api/idft/v1/replyKnow",
             type: "POST", 
             contentType: "application/json; charset=utf-8",
-            data:JSON.stringify({"limit": 0, "nextId": 0,"rankId": 0,"limit":8,"ctime":ctime}),
+            data:JSON.stringify({"nextId": 0,"rankId": 0,"limit":8,"ctime":ctime}),
             beforeSend: function (request) {
                 request.setRequestHeader("token", main.getAppUserInfo().apptoken);
             },

@@ -1,0 +1,181 @@
+(function(data){
+    //web端测试（用户信息）
+    var webUserInfo = {
+        "appid":"27422",                                //用户ID
+        // "apptoken":"/SV7Ugtmu4Z5guu5cvq4gU7vsflc3NDuUsd/TPS44h3MnwXEeZbAIg==",                //验证Token
+        "apptoken":"/bLUxOczw5iVpLurcROspvzEN/WoH/AH+VPLxllA+bgje4D4A9LTE4Uc+ngo2jxtmXMlsU2SvrtsRpIMvI8csbrDxtl85Z2a",                //验证Token
+        "uname":"nicker",                                 //用户昵称
+        "avata":"avata",                                    //头像地址
+        "dev_cd":"dev_cd",                        //设备号
+        "bindInfo":"bindInfo"
+    }
+
+    //口袋用户信息
+    if(checkFromNew()){
+        var u_info = JSON.parse(dsBridge.call("snhUserInfo"))
+        var nickname = '';
+        if(isFromAndroid()){
+            nickname = u_info.userInfo.nickName
+        }else{
+            nickname = u_info.userInfo.nickname
+        }
+        var appUserInfo = {
+            "appid":u_info.userInfo.userId,             //用户ID
+            "apptoken":u_info.token,                                             //验证Token
+            "uname":nickname,                         //用户昵称
+            "avata":u_info.userInfo.avatar,             //头像地址
+            "dev_cd":u_info.IMEI                                                //设备号
+        }
+    }else if(checkFromOld()){
+        var appUserInfo = {
+            "appid":window.web.getLoginUserId(),             //用户ID
+            "apptoken":window.web.getAccessToken(),         //验证Token
+            "uname":window.web.getLoginUserNickName(),       //用户昵称
+            "avata":window.web.getLoginUserPic(),            //头像地址
+            "dev_cd":(window.web.getPhoneIMEI().length <3) ? window.web.getLoginUserId() :  window.web.getPhoneIMEI()   //设备号
+        }
+    }
+    //获取用户信息
+    data.getAppUserInfo = function(){
+        if(checkFromApp()){
+            return appUserInfo;
+        }else{           
+            return webUserInfo;
+        }
+    }
+    /*成员 */
+     //我的信息
+     data.getIdolMy = function(succ){
+        $.ajax({
+            url:  CONFIG.getLink()+"api/idft/v1/myInfo",
+            type: "POST", 
+            contentType: "application/json; charset=utf-8",
+            beforeSend: function (request) {
+                request.setRequestHeader("token", main.getAppUserInfo().apptoken);
+            },
+            success: function (data) { 
+                succ(data)
+            }, 
+            error: function (jqXHR, textStatus, errorThrown) { 
+                alert("我的信息",jqXHR);
+            } 
+        });
+    };
+
+    //积分榜
+    data.getIdolIntegral = function(type,succ){
+        $.ajax({
+            url:  CONFIG.getLink()+"api/idft/v1/integralRank",
+            type: "POST", 
+            contentType: "application/json; charset=utf-8",
+            data:JSON.stringify({"type":type}),
+            beforeSend: function (request) {
+                request.setRequestHeader("token", main.getAppUserInfo().apptoken);
+            },
+            success: function (data) { 
+                succ(data)
+            }, 
+            error: function (jqXHR, textStatus, errorThrown) { 
+              alert("积分榜",jqXHR);
+            } 
+        });
+    };
+    //公演MVP
+    data.getIdolMVP = function(succ){
+        $.ajax({
+            url:  CONFIG.getLink()+"api/idft/v1/mvpEvents",
+            type: "POST", 
+            contentType: "application/json; charset=utf-8",
+            beforeSend: function (request) {
+                request.setRequestHeader("token", main.getAppUserInfo().apptoken);
+            },
+            success: function (data) { 
+                succ(data)
+            }, 
+            error: function (jqXHR, textStatus, errorThrown) { 
+                alert("公演MVP",jqXHR);
+            } 
+        });
+    };
+    //公演MVP榜-场次排名详情
+    data.getIdolMVPDetail = function(infoId,succ){
+        $.ajax({
+            url:  CONFIG.getLink()+"/api/idft/v1/mvpEventDetail",
+            type: "POST", 
+            contentType: "application/json; charset=utf-8",
+            data:JSON.stringify({"infoId":infoId}),
+            beforeSend: function (request) {
+                request.setRequestHeader("token", main.getAppUserInfo().apptoken);
+            },
+            success: function (data) { 
+                succ(data)
+            }, 
+            error: function (jqXHR, textStatus, errorThrown) { 
+                alert("公演MVP",jqXHR);
+            } 
+        });
+    };
+     /*成员end */
+
+
+     /*粉丝 *
+        首页 */
+    data.homePage = function(succ){
+        $.ajax({
+            url:  CONFIG.getLink2()+"api/v1/melee/rank/idftMeleeRank",
+            type: "POST", 
+            contentType: "application/json; charset=utf-8",
+            beforeSend: function (request) {
+                request.setRequestHeader("token", main.getAppUserInfo().apptoken);
+            },
+            success: function (data) { 
+                succ(data)
+            }, 
+            error: function (jqXHR, textStatus, errorThrown) { 
+                alert("粉丝首页",jqXHR);
+            } 
+        });
+    };
+
+    /*周详情 */
+    data.getMeleeWeekRank= function(rankId,succ){
+        $.ajax({
+            url:  CONFIG.getLink2()+"api/v1/melee/rank/getMeleeWeekRank",
+            type: "POST", 
+            contentType: "application/json; charset=utf-8",
+            data:JSON.stringify({"limit": 500, "nextId": 0,"rankId": rankId}),
+            beforeSend: function (request) {
+                request.setRequestHeader("token", main.getAppUserInfo().apptoken);
+            },
+            success: function (data) { 
+                succ(data)
+            }, 
+            error: function (jqXHR, textStatus, errorThrown) { 
+                alert("重新认识下",jqXHR);
+            } 
+        });
+    };
+    /*重新认识下 */
+    data.getReunderstanding = function(ctime,succ){
+        $.ajax({
+            url:  CONFIG.getLink()+"api/idft/v1/replyKnow",
+            type: "POST", 
+            contentType: "application/json; charset=utf-8",
+            data:JSON.stringify({"limit": 0, "nextId": 0,"rankId": 0,"limit":20,"ctime":ctime}),
+            beforeSend: function (request) {
+                request.setRequestHeader("token", main.getAppUserInfo().apptoken);
+            },
+            success: function (data) { 
+                succ(data)
+            }, 
+            error: function (jqXHR, textStatus, errorThrown) { 
+                alert("重新认识下",jqXHR);
+            } 
+        });
+    };
+
+
+     /*粉丝end */
+
+    
+}(window.main = {}))

@@ -26,4 +26,3 @@
     }
 }(window.CONFIG = {}));
 
-

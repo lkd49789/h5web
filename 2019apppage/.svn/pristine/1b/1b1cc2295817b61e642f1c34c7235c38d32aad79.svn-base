@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>声情并茂</title>
+    <link href="../../common/css/common.css" rel="stylesheet" />
+    <link href="./css/popbox.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="banner"><img src="./img/banner.png" alt=""></div>
+        <div class="content">
+            <div class="title-wrap"><img src="./img/title.png" alt=""></div>
+            <ul>
+                <li class="item" v-for="(item,index) in list" :key="index">
+                    <img src="./img/item_bg.png" alt="">
+                    <div class="pos">
+                        <audio ref="audio" :src="item.voiceUrl"></audio>
+                        <div class="musicBtn-wrap" v-if="item.listen" @click="listen('play',index)">
+                            <p v-text="item.time"></p>
+                            <div class="imgbtn">
+                                <div v-if="!item.loading">
+                                    <img v-if="item.play" src="./img/play.png" alt="">
+                                    <img v-if="!item.play" src="./img/pause.png" alt="">
+                                </div>
+                                <div v-if="item.loading">
+                                    <img class="loading" src="./img/loading.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-wrap">
+                            <button :class="{'stop':item.listen}" @click="listen('listen',index)">
+                                <span v-if="!item.listen">收听</span>
+                                <span v-else>停止</span>
+                            </button>
+                            <button @click="vote(item.voiceId)">投票</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="botttom">
+            <p>投票时间6月6日-6月12日</p>
+            <div class="rule">
+                <span>我的投票机会 <em v-text="num"></em> 次</span>
+                <span @click="rule">投票规则<em class="em"></em></span>
+            </div>
+        </div>
+
+        <!-- 弹框 -->
+        <div class="mask" v-if="showpop != 0" v-cloak>
+            <div class="no-money" v-if="showpop == 1">
+                <p :class="{'left':text.indexOf('投票规则')>=0}" ><b v-html="text"></b></p>
+                <span style="background: url('./img/btn2.png') no-repeat left top/100% 100%" @click="showpop = 0">知道了</span>
+            </div>
+            <!-- 登陆 -->
+            <div class="no-money" v-if="showpop == 2">
+                <p><b>{{text}}</b></p>
+                <span style="background: url('./img/btn2.png') no-repeat left top/100% 100%" @click="loginOrPhone()">登录</span>
+            </div>
+            <!-- 绑定手机号 -->
+            <div class="no-money" v-if="showpop == 3">
+                <p><b>你还未绑定手机，请先去绑定手机再进行投票。</b></p>
+                <span style="background: url('./img/btn1.png') no-repeat left top/100% 100%" v-on:click="showpop = 0">知道了</span>
+                <span style="background: url('./img/btn2.png') no-repeat left top/100% 100%" v-on:click="bang()" >去绑定</span>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<script src="../../common/js/vue.js"></script>
+<!-- <script src='https://cdn.bootcss.com/vue/2.6.10/vue.js'></script> -->
+<script src="../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/index.js"></script>
+</html>

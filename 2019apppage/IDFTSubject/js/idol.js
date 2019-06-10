@@ -31,9 +31,7 @@ var app=new Vue({
                 var that=this;
                 main.getIdolMy(function(data){
                     if(data.status == 200){
-                        if(data.content.integrals >= 100000 && data.content.integralRank >= 15){
-                            that.btnShow = true
-                        }
+                        that.btnShow = data.content.showButton;
                         if(data.content.integrals < 20000){
                             that.width = data.content.integrals / 20000 * 100 + '%';
                          }
@@ -51,21 +49,8 @@ var app=new Vue({
                 imgError:function(src){
                     this.content.starInfo.starAvatar = "https://source.48.cn/"+src;
                 },
-                /*跳转方法 */
                 gotoPage:function(_url){
-                    var url = _url
-                    if(url.indexOf("http://")>=0 || url.indexOf("https://")>=0){
-                        
-                    }else{
-                        url = CONFIG.geturl()+url
-                    }
-                    if(checkFromNew()){
-                        snhOpenNewWebview(url)
-                    }else if(checkFromOld()){
-                        window.web.gotoDetail(url);
-                    }else{
-                        window.location.href = url
-                    }         
+                    this.$parent.gotoPage(_url)
                 }
             }
         },
@@ -158,24 +143,28 @@ var app=new Vue({
                 },
                 /*跳转方法 */
                 gotoPage:function(_url){
-                    var url = _url
-                    if(url.indexOf("http://")>=0 ||url.indexOf("https://")>=0){
-                        
-                    }else{
-                        url = CONFIG.geturl()+url
-                    }
-                    if(checkFromNew()){
-                        snhOpenNewWebview(url)
-                    }else if(checkFromOld()){
-                        window.web.gotoDetail(url);
-                    }else{
-                        window.location.href = url
-                    }         
+                    this.$parent.gotoPage(_url)     
                 }
             }
         }
     },
     methods:{
+        /*跳转方法 */
+        gotoPage:function(_url){
+            var url = _url
+            if(url.indexOf("http://")>=0 || url.indexOf("https://")>=0){
+                
+            }else{
+                url = CONFIG.geturl()+url
+            }
+            if(checkFromNew()){
+                snhOpenNewWebview(url)
+            }else if(checkFromOld()){
+                window.web.gotoDetail(url);
+            }else{
+                window.location.href = url
+            }         
+        },
         /*tab切换 */
         tabClick:function(index){
             this.left = index * 33.33 - 16.66 +"%"

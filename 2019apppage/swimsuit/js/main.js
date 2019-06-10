@@ -3,7 +3,8 @@
     //web端测试（用户信息）
     var webUserInfo = {
         "appid":"27422",                                //用户ID
-        "apptoken":"xVMRXOKLBnLy/gsX7FFZ8ZQG4B6UWNfZzCoCvNUhddPvtD6UpldHGyIaUfdHkt0kQ069dkqYOOCuIJ4j2hJLTJGYqBgqKBuv",  
+        // "apptoken":"xVMRXOKLBnLy/gsX7FFZ8ZQG4B6UWNfZzCoCvNUhddPvtD6UpldHGyIaUfdHkt0kQ069dkqYOOCuIJ4j2hJLTJGYqBgqKBuv",  
+        "apptoken":"UnXB6inKsnu0Do3fdTrUw56/LWFccz4CqZsZWOcO36DsrJmh2+gRketRrjp9p48gIXf7iIyO5nOT89FXWLyFImiOtJdbeoCvWNZgi55k3cKYykgq/ahup7KYM1DiYpqs",  
         "uname":"nicker",                                 //用户昵称
         "avata":"avata",                                    //头像地址
         "dev_cd":"dev_cd"                        //设备号
@@ -27,7 +28,7 @@
         var appUserInfo = {
             "appid":u_info.userInfo.userId,             //用户ID
             // "apptoken":u_info.token,                                             //验证Token
-        "apptoken":"xVMRXOKLBnLy/gsX7FFZ8ZQG4B6UWNfZzCoCvNUhddPvtD6UpldHGyIaUfdHkt0kQ069dkqYOOCuIJ4j2hJLTJGYqBgqKBuv", 
+        "apptoken":"UnXB6inKsnu0Do3fdTrUw56/LWFccz4CqZsZWOcO36DsrJmh2+gRketRrjp9p48gIXf7iIyO5nOT89FXWLyFImiOtJdbeoCvWNZgi55k3cKYykgq/ahup7KYM1DiYpqs", 
             "uname":nickname,             //用户昵称
             "avatar":u_info.userInfo.avatar,             //头像地址
             "device":dev_cd                                                //设备号
