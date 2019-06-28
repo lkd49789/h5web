@@ -5,7 +5,7 @@ var app =new Vue({
         bannerArr:[],
         banner:true,
         showpop:0,
-        videoArr:['2773','2759'] /*视频数组 从头添加视频ID*/
+        videoArr:['2892','2851','2796','2773','2759'] /*视频数组 从头添加视频ID*/
     },
     created:function(){
         if(checkFromApp()){
@@ -22,18 +22,21 @@ var app =new Vue({
                 if(that.content.bannerImages.indexOf(',')<0){
                     that.banner = true;
                 }else{
-                    that.bannerArr = that.content.bannerImages.split(',').map(function(item,index){
-                        item = 'https://source.48.cn'+item
-                        return item;
-                    })
-                    that.banner = false;
+                    that.bannerArr = that.content.bannerImages.split(',').map(function(item,index){return 'https://source.48.cn'+item;})
+                    /*防止提前开启拍卖 视频ID顺序错误*/
+                    if(that.bannerArr.length != that.videoArr.length){
+                        for(var i = 0;i<Math.abs(that.bannerArr.length - that.videoArr.length);i++){
+                            that.bannerArr.length>that.videoArr.length?that.videoArr.unshift(''):that.videoArr.shift();
+                        }    
+                    }
                     /**开启轮播 */
                     that.$nextTick(function(){
                         var gallery = mui('.mui-slider');
                             gallery.slider({
-                            interval:5000//自动轮播周期，若为0则不自动播放，默认为0；
-                        });
+                                interval:5000//自动轮播周期，若为0则不自动播放，默认为0；
+                            });
                     })
+                    that.banner = false;
                 }
             }else{
                 alert(data.message)

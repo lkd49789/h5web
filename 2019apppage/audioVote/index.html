@@ -45,7 +45,7 @@
             </ul>
         </div>
         <div class="botttom">
-            <p>投票时间6月6日-6月12日</p>
+            <p>投票时间6月7日-6月13日</p>
             <div class="rule">
                 <span>我的投票机会 <em v-text="num"></em> 次</span>
                 <span @click="rule">投票规则<em class="em"></em></span>
@@ -61,7 +61,7 @@
             <!-- 登陆 -->
             <div class="no-money" v-if="showpop == 2">
                 <p><b>{{text}}</b></p>
-                <span style="background: url('./img/btn2.png') no-repeat left top/100% 100%" @click="loginOrPhone()">登录</span>
+                <span style="background: url('./img/btn2.png') no-repeat left top/100% 100%" @click="_openNativeModule('login/phone')">登录</span>
             </div>
             <!-- 绑定手机号 -->
             <div class="no-money" v-if="showpop == 3">

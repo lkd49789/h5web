@@ -2,11 +2,9 @@
 (function(data) {
     //正式接口
     
-    // var LINK_URL = "https://pocketapi.48.cn/idft/";
-    var LINK_URL = "http://101.71.63.240/app-activity";
+    var LINK_URL = "http://101.71.63.240/app-activity/";
     //测试
     var URL_PATH = "https://h5.48.cn/2019apppage/audioVote/"    //项目地址
-    // var URL_PATH = "http://192.168.0.107/h5web/2019apppage/swimsuit/"   //项目地址
     var ASSETS_URL = "https://source.48.cn/"
 
     data.geturl = function(){//项目地址

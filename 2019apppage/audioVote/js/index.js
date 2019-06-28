@@ -15,7 +15,7 @@ var app = new Vue({
         if(checkFromApp()){
             if(!dsBridge.call("snhUserInfo")){
                 /*没登录的操作*/
-                _this.popbox('请登陆',2);
+                _this.popbox('请登录',2);
             }else{
                 /*没手机号*/
                 if(_this.getUserInfo()){
@@ -193,18 +193,6 @@ var app = new Vue({
         /*获取用户信息 */
         getUserInfo:function() {
             return dsBridge.call("snhUserInfo");
-        },
-        /*绑定手机号 */
-        loginOrPhone:function(){
-            if(this.text == '请绑定手机号'){
-                _openNativeModule('login/phone');
-            }else{
-                if(isFromAndroid()){
-                    _openNativeModule('login/inputphone?PhoneType=1');
-                }else if(isFromIphone()){
-                    _openNativeModule('login/bindphone');
-                }
-            }
-        },
+        }
     }
 })

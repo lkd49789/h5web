@@ -1,0 +1,105 @@
+[v-cloak] {
+    display: none !important;
+} 
+button{
+    border: 0;
+}
+body{
+    max-width: 640px;
+    margin:0 auto;
+    position: relative;
+    font-size: 1.5rem;
+}
+#app{
+    min-height: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background: #fff;
+    background: url('../img/bg.jpg') no-repeat 0 0/100% 100%; 
+    overflow: hidden;
+    padding: 0 .83rem;
+    position: relative;
+}
+.banner{
+    margin: .8rem -.83rem;
+}
+.banner img{
+    width: 100%;
+}
+.text{
+    background: rgba(0, 0, 21, .1);
+    border: 1px solid #38387e;
+    border-radius: .8rem;
+    padding:.6rem 1rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.text img{
+    width: 100%;
+}
+
+li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+.left{
+    display: flex;
+    align-items: center;
+}
+.left .head{
+    border: 1px solid #4c4c9a;
+    border-radius: 50%;
+    width: 4.17rem;
+    height: 4.17rem;
+    overflow: hidden;
+    margin:0 1rem;
+}
+.left .head img{
+    width: 100%;
+}
+.left .icon{
+    height: .92rem;
+    margin-left: .42rem;
+}
+.left .name{
+    color: #fff;
+    white-space: nowrap;
+}
+.left .num{
+    color: #fff;
+}
+li:nth-child(1) .left .num{
+    color: #ffeb5b;
+}   
+li:nth-child(2) .left .num{
+    color: #3fcfae;
+}   
+li:nth-child(3) .left .num{
+    color: #847bf5;
+}   
+.right{
+    display: flex;
+    align-items: center;
+}
+.right .num{
+    color: #3fcfae;
+    padding-right: 1rem;
+}
+.imgbtn img{
+    width: 2.42rem;
+}
+.content{
+    padding-bottom: 2rem;
+}
+.loading{
+    -webkit-animation: rotate 2s linear infinite;
+            animation: rotate 2s linear infinite;
+}
+@-webkit-keyframes rotate{from{-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+    to{-webkit-transform: rotate(359deg);transform: rotate(359deg)}
+}
+@keyframes rotate{from{-webkit-transform: rotate(0deg);transform: rotate(0deg)}
+    to{-webkit-transform: rotate(359deg);transform: rotate(359deg)}
+}

@@ -1,0 +1,83 @@
+(function(data) {
+ //vip/detail 跳转vip短链接
+    //web端测试（用户信息）
+    var webUserInfo = {
+        "appid":"27422",                                //用户ID
+        "apptoken":"",  
+        "uname":"nicker",                                 //用户昵称
+        "avata":"avata",                                    //头像地址
+        "dev_cd":"dev_cd"                        //设备号
+    }
+    
+    //口袋用户信息
+    if(checkFromNew()){
+        var app_info = JSON.parse(dsBridge.call("snhAppInfo"))
+        
+        var dev_cd;
+        if(app_info.phoneSystemVersion){
+            dev_cd = app_info.phoneSystemVersion+";"+app_info.phoneName+";"+app_info.version + ";"+app_info.build
+        }else{
+            dev_cd = app_info.osType+";"+app_info.osVersion+";"+app_info.deviceName+";"+app_info.appVersion +";"+app_info.appBuild
+        }
+        var u_info = JSON.parse(dsBridge.call("snhUserInfo"))
+        var nickname = u_info.userInfo.nickname
+        if(nickname == null || nickname == undefined){
+            nickname = u_info.userInfo.nickName
+        }
+        var appUserInfo = {
+            "appid":u_info.userInfo.userId,             //用户ID
+            "apptoken":u_info.token,                                             //验证Token
+            "uname":nickname,             //用户昵称
+            "avatar":u_info.userInfo.avatar,             //头像地址
+            "device":dev_cd                                                //设备号
+        }
+    }
+    //获取用户信息
+    data.getAppUserInfo = function(){
+        if(checkFromApp()){
+            return appUserInfo;
+        }else{
+            
+            return webUserInfo;
+        }
+    }
+
+    //获取音频
+    data.getMusic = function (succ) {
+        $.ajax({
+            url: CONFIG.getLink() + "/api/activity/voice/v1/voiceIndex",
+            type: "POST",
+            dataType: "json",
+            beforeSend: function (request) {
+                request.setRequestHeader("token", main.getAppUserInfo().apptoken);
+            },
+            success: function (data) {
+                succ(data)
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert("error",jqXHR);
+            }
+        });
+    }
+
+    //投票
+    data.vote = function (num,succ) {
+        $.ajax({
+            url: CONFIG.getLink() + "/api/activity/voice/v1/voiceSave",
+            type: "POST",
+            dataType: "json",
+            contentType:'application/json',
+            data:JSON.stringify({"voiceId": num}),
+            beforeSend: function (request) {
+                request.setRequestHeader("token", main.getAppUserInfo().apptoken);
+            },
+            success: function (data) {
+                succ(data)
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert("error",jqXHR);
+            }
+        });
+    }
+    
+}(window.main = {}));

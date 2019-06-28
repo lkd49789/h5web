@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>声情并茂</title>
+    <link href="../../common/css/common.css" rel="stylesheet" />
+    <link href="./css/popbox.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/result.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="banner"><img src="./img/result_banner.png" alt=""></div>
+        <div class="text">
+            <img src="./img/text.png" alt="">
+        </div>
+        <div class="content">
+            <ul>
+                <li v-for="(item,index) in list" :key="index">
+                    <div class="left">
+                        <span class="num"><b v-text="item.rank"></b></span>
+                        <div class="head">
+                            <img :src="item.headUrl" alt="">
+                        </div>
+                        <span class="name"  v-text="item.name"></span>
+                        <img class="icon" :src="item.iconUrl" alt="">
+                    </div>
+                    <div class="right">
+                        <audio ref="audio" :src="item.voiceUrl"></audio>
+                        <div class="num"><span v-text="item.num"></span>票</div>
+                        <div class="imgbtn">
+                            <div>
+                                <div v-if="!item.listen"  @click="listen('listen',index)">
+                                    <img src="./img/result_listen.jpg" alt="">
+                                </div>
+                                <div v-else  @click="listen('play',index)">
+                                    <div v-if="!item.loading">
+                                        <img v-if="item.play" src="./img/result_play.jpg" alt="">
+                                        <img v-if="!item.play" src="./img/result_pause.jpg" alt="">
+                                    </div>
+                                    <img v-else class="loading" src="./img/loading.png" alt="">
+                                </div>
+                            </div>
+                            <!-- <div v-else>
+                                <img class="loading" src="./img/loading.png" alt="">
+                            </div> -->
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- 弹框 -->
+        <div class="mask" v-if="showpop != 0" v-cloak>
+                <div class="no-money" v-if="showpop == 1">
+                    <p :class="{'left':text.indexOf('投票规则')>=0}" ><b v-html="text"></b></p>
+                    <span style="background: url('./img/btn2.png') no-repeat left top/100% 100%" @click="showpop = 0">知道了</span>
+                </div>
+                <!-- 登陆 -->
+                <div class="no-money" v-if="showpop == 2">
+                    <p><b>{{text}}</b></p>
+                    <span style="background: url('./img/btn2.png') no-repeat left top/100% 100%" @click="_openNativeModule('login/phone')">登录</span>
+                </div>
+                <!-- 绑定手机号 -->
+                <div class="no-money" v-if="showpop == 3">
+                    <p><b>你还未绑定手机，请先去绑定手机再进行投票。</b></p>
+                    <span style="background: url('./img/btn1.png') no-repeat left top/100% 100%" v-on:click="showpop = 0">知道了</span>
+                    <span style="background: url('./img/btn2.png') no-repeat left top/100% 100%" v-on:click="bang()" >去绑定</span>
+                </div>
+            </div>
+    </div>
+</body>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="https://h5.48.cn/common/js/dsbridge.js"></script>
+<!-- <script src="../../common/js/vue.js"></script> -->
+<script src='https://cdn.bootcss.com/vue/2.6.10/vue.js'></script>
+<script src="../../common/js/common_v1.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/result.js"></script>
+</html>

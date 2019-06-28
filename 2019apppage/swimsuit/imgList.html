@@ -191,14 +191,15 @@
                 _openNativeModule('vip/detail')
             }else if(that.tips.indexOf('只有1次免费领取机会') >= 0 || that.tips.indexOf('是否确认花费50鸡腿') >= 0){
                 if(that.btnClick){
-                    /*领取*/
-                    if(that.vip && !that.useVip){
-                        that.tips = '免费电子档领取成功';
-                    }else{
-                        that.tips = '购买成功';
-                    }
                     that.btnClick = false;
                     main.buyImg(that.goodsId,function(data){
+                        that.btnClick = true;
+                        /*领取*/
+                        if(that.vip && !that.useVip){
+                            that.tips = '免费电子档领取成功';
+                        }else{
+                            that.tips = '购买成功';
+                        }
                         if(data.status == 200){
                             that.poxText2 = '完成';
                             that.showpop = 3;
@@ -213,7 +214,6 @@
                             that.poxText2 = '确认';
                             that.showpop = 3;
                         }
-                        that.btnClick = true;
                     })
                 }
             }else{

@@ -26,8 +26,7 @@
         }
         var appUserInfo = {
             "appid":u_info.userInfo.userId,             //用户ID
-            // "apptoken":u_info.token,                                             //验证Token
-            "apptoken":"BcPemYiH2cysDVg23VO3QJjVl2qSTZ98nqm9lbQFGvxtLp1X9eEokNBP32cTwxzm6Uz8uRE4HxXQcQBd2j/ARg==",
+            "apptoken":u_info.token,                                             //验证Token
             "uname":nickname,             //用户昵称
             "avatar":u_info.userInfo.avatar,             //头像地址
             "device":dev_cd                                                //设备号
